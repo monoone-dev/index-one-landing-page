@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you refer to Murmur in your work, please cite it using the metadata below."
+type: software
+title: "Murmur"
+abstract: >-
+  Murmur is a local-first macOS app that records meetings, transcribes them on-device
+  with Whisper, writes structured notes as plain Markdown, and answers questions across
+  everything recorded. AI can run on the Mac or, after explicit consent, through
+  redacted cloud providers.
+authors:
+  - alias: "JakubGawr"
+    website: "https://github.com/JakubGawr"
+  - alias: "Lukas9315"
+    website: "https://github.com/Lukas9315"
+url: "https://murmurnotes.io"
+repository-artifact: "https://github.com/murmur-io/murmur-notes/releases"
+keywords:
+  - macos
+  - meeting notes
+  - transcription
+  - whisper
+  - on-device ai
+  - local-first
+  - obsidian
+  - model context protocol

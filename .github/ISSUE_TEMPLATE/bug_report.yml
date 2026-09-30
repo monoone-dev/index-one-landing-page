@@ -1,0 +1,145 @@
+name: Bug report
+description: Something in Murmur is broken or behaves unexpectedly.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a problem.
+
+        > [!WARNING]
+        > **Issues are public.** Do not paste transcripts, notes, meeting titles, attendee names, audio, or screenshots that show real content. Do not include API keys, account or share-link passwords, or your MCP token. Describe the problem with made-up content instead.
+
+        Found a **security** problem? Don't file it here — use [private vulnerability reporting](https://github.com/murmur-io/murmur-notes/security/advisories/new).
+
+  - type: input
+    id: murmur-version
+    attributes:
+      label: Murmur version
+      description: Settings → About.
+      placeholder: "2.8.0"
+    validations:
+      required: true
+
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      description: Apple menu → About This Mac.
+      placeholder: "15.6"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: chip
+    attributes:
+      label: Mac
+      options:
+        - Apple Silicon (M1 or later)
+        - Intel
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Where does the problem show up?
+      options:
+        - Install, launch or update
+        - Recording or system audio
+        - Transcription or live captions
+        - Notes written after a meeting
+        - Asking questions (during a meeting or across the vault)
+        - Notes editor
+        - Workspaces, dashboards, tasks or reminders
+        - Locking, Touch ID or encryption
+        - Obsidian export
+        - MCP server
+        - Imports (Notion, Obsidian, Apple Notes) or documents
+        - Sharing, account or Shared Brain
+        - Settings
+        - Something else
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ai-connection
+    attributes:
+      label: AI connection for notes
+      description: Settings → AI & Models. Only matters if the problem involves notes or answers.
+      options:
+        - Not relevant
+        - Murmur Brain (on-device)
+        - Ollama (local)
+        - Claude Code
+        - Codex
+        - Anthropic API
+        - Kong AI Gateway
+        - Not sure
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you do, step by step? Use made-up content.
+      placeholder: |
+        1. Start a recording from the recorder bar
+        2. Play audio in a video call
+        3. Press Stop
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead
+      description: Include the exact text of any error message.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often
+      options:
+        - Every time
+        - Sometimes
+        - Happened once
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!IMPORTANT]
+        > **Do not attach the diagnostics bundle here.** It holds no note text, but it can contain file paths from your Mac that include your macOS user name. Tick the box below if you have one, and we will ask for it privately if we need it.
+
+  - type: checkboxes
+    id: diagnostics
+    attributes:
+      label: Diagnostics (optional)
+      description: For crashes and hangs — Settings → Developer → Developer mode → Logs → **Save diagnostics bundle**.
+      options:
+        - label: I have a diagnostics bundle and can share it privately if asked.
+          required: false
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and this is not a duplicate.
+          required: true
+        - label: This report contains no real meeting content, names, keys or tokens.
+          required: true

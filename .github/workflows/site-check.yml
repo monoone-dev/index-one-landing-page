@@ -1,0 +1,136 @@
+name: Site check
+
+on:
+  pull_request:
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  structural:
+    name: private links, secrets, sizes
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Refuse private links, secrets, symlinks, oversize files, a broken MCP example and AI attribution
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          if [ -n "${HEAD_SHA:-}" ]; then
+            { printf '%s\n' "$PR_TITLE"; git log --format=%B "$BASE_SHA..$HEAD_SHA"; } > "$RUNNER_TEMP/messages.txt"
+            export COMMIT_MESSAGES_FILE="$RUNNER_TEMP/messages.txt"
+          fi
+          python3 - <<'PY'
+          import os
+          import pathlib
+          import re
+          import stat
+          import sys
+
+          root = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else ".")
+          MAX_FILE_BYTES = 50 * 1024 * 1024
+          BINARY = {".png", ".jpg", ".jpeg", ".mp4", ".webm", ".woff2"}
+          PRIVATE_LINK = re.compile(
+              r"(?<![A-Za-z0-9_.-])murmur-io/mu[r]mur(?:-server)?(?:\.git)?(?![-A-Za-z0-9_])"
+              r"|murmur-io\.github\.io/mu[r]mur(?![-A-Za-z0-9_])",
+              re.I)
+          SECRETS = [
+              (re.compile(r"-----BEGIN [A-Z0-9 ]*PRIVATE KEY-----"), "a PEM private key"),
+              (re.compile(r"sk-(?:ant|proj)-[A-Za-z0-9_-]{20,}"), "a model-provider API key"),
+              (re.compile(r"gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}"), "a GitHub token"),
+              (re.compile(r"AKIA[0-9A-Z]{16}"), "an AWS access key"),
+              (re.compile(r"xox[abprs]-[A-Za-z0-9-]{10,}"), "a Slack token"),
+              (re.compile(r"AIza[0-9A-Za-z_-]{35}"), "a Google API key"),
+          ]
+          HOME_DIR = re.compile(r"/Users/(?!demo\b)[a-z]", re.I)
+          AI_ATTRIBUTION = re.compile(
+              r"^\s*co-author[e]d-by:.*(?:claude|anthropic|openai|chatgpt|gpt-|codex|copilot|gemini|cursor|\bai\b)|generated with",
+              re.I | re.M)
+          MCP_NEEDLES = ['>"type"<', '>"http"<', '>"Authorization"<', "Bearer"]
+          problems = []
+
+
+          def report(path, msg):
+              problems.append(f"::error file={path}::{msg}")
+
+
+          for dirpath, dirnames, filenames in os.walk(root):
+              here = pathlib.Path(dirpath)
+              if here == root:
+                  dirnames[:] = [d for d in dirnames if d != ".git"]
+              for d in list(dirnames):
+                  if (here / d).is_symlink():
+                      report((here / d).relative_to(root), "symlinked directory")
+                      dirnames.remove(d)
+              for name in filenames:
+                  p = here / name
+                  rel = p.relative_to(root).as_posix()
+                  st = os.lstat(p)
+                  if stat.S_ISLNK(st.st_mode):
+                      report(rel, "symlink")
+                      continue
+                  if not re.fullmatch(r"[A-Za-z0-9._/-]+", rel):
+                      report(rel.encode("unicode_escape").decode(), "unsafe characters in the path")
+                      continue
+                  if st.st_size > MAX_FILE_BYTES:
+                      report(rel, "file is larger than 50 MB")
+                      continue
+                  data = p.read_bytes()
+                  if p.suffix.lower() in BINARY:
+                      text = "\n".join(s.decode("ascii") for s in re.findall(rb"[\x20-\x7e]{8,}", data))
+                  else:
+                      text = data.decode("utf-8", "replace")
+                      if HOME_DIR.search(text):
+                          report(rel, "a real home-directory path")
+                  for n, line in enumerate(text.splitlines(), 1):
+                      hit = PRIVATE_LINK.search(line)
+                      if hit:
+                          report(rel, f"line {n}: link to a private repository ({hit.group(0)})")
+                  for pattern, label in SECRETS:
+                      if pattern.search(text):
+                          report(rel, f"contains {label}")
+
+          docs = root / "site" / "docs.html"
+          if docs.is_file():
+              text, blocks = docs.read_text(errors="replace"), []
+              rest = text
+              while '<pre class="code-block">' in rest:
+                  after = rest.split('<pre class="code-block">', 1)[1]
+                  if "</pre>" not in after:
+                      blocks = []
+                      break
+                  block, rest = after.split("</pre>", 1)
+                  if "mcpServers" in block:
+                      blocks.append(block)
+              if len(blocks) != 1:
+                  report("site/docs.html", f"must document exactly one mcpServers code block; found {len(blocks)}")
+              else:
+                  for needle in MCP_NEEDLES:
+                      if needle not in blocks[0]:
+                          report("site/docs.html", f"the MCP example is missing {needle}; copy what Murmur's Copy config emits")
+
+          messages = os.environ.get("COMMIT_MESSAGES_FILE")
+          if messages:
+              for n, line in enumerate(pathlib.Path(messages).read_text(errors="replace").splitlines(), 1):
+                  if AI_ATTRIBUTION.search(line):
+                      report("commit messages", f"line {n}: AI attribution ({line.strip()[:60]})")
+
+          cname = root / "site" / "CNAME"
+          if not (root / "site" / "index.html").is_file():
+              report("site/index.html", "missing")
+          if not cname.is_file() or cname.read_text(errors="replace").strip() != "murmurnotes.io":
+              report("site/CNAME", "must exist and contain exactly murmurnotes.io")
+
+          print("\n".join(problems) if problems else "site check: no private links, secrets, symlinks or oversize files")
+          sys.exit(1 if problems else 0)
+          PY

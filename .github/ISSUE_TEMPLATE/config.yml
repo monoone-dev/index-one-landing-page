@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://murmurnotes.io/docs.html
+    about: Setup, features, settings and shortcuts.
+  - name: Known limitations
+    url: https://murmurnotes.io/docs.html#known-limitations
+    about: What is not shipped yet, or only works on a signed build.
+  - name: Ask a question
+    url: https://github.com/murmur-io/murmur-notes/discussions/categories/q-a
+    about: How-to questions go to Discussions, not issues.
+  - name: Report a security vulnerability
+    url: https://github.com/murmur-io/murmur-notes/security/advisories/new
+    about: Report privately. Never file security problems as public issues.

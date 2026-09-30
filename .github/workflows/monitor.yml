@@ -1,0 +1,63 @@
+name: Monitor
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  live:
+    name: site and latest release are public
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: murmurnotes.io answers over HTTPS
+        run: |
+          set -euo pipefail
+          for url in https://murmurnotes.io/ https://murmurnotes.io/docs.html https://murmurnotes.io/assets/banner.png; do
+            code="$(curl -sS -o /dev/null -w '%{http_code}' --retry 3 --retry-all-errors --max-time 20 "$url" || true)"
+            echo "$url -> $code"
+            if [ "$code" != 200 ]; then echo "::error::$url returned $code"; exit 1; fi
+          done
+          page="$(curl -fsS --retry 3 --max-time 20 https://murmurnotes.io/)"
+          if ! printf '%s' "$page" | grep -q 'https://github.com/murmur-io/murmur-notes/releases/latest'; then
+            echo "::error::the landing page no longer links the murmur-notes latest release"; exit 1
+          fi
+          redirect="$(curl -sS -o /dev/null -w '%{http_code} %{redirect_url}' --max-time 20 http://murmurnotes.io/ || true)"
+          echo "http://murmurnotes.io/ -> $redirect"
+          case "$redirect" in
+            301\ https://murmurnotes.io/*) ;;
+            *) echo "::warning::plain HTTP does not redirect to HTTPS ($redirect); check Enforce HTTPS in the Pages settings" ;;
+          esac
+
+      - name: The latest release is public (what installed apps ask)
+        run: |
+          set -euo pipefail
+          web="$(curl -sS -o /dev/null -w '%{http_code} %{redirect_url}' --max-time 20 https://github.com/murmur-io/murmur-notes/releases/latest || true)"
+          echo "github.com releases/latest -> $web"
+          case "$web" in
+            302\ https://github.com/murmur-io/murmur-notes/releases/tag/v*) ;;
+            *) echo "::error::murmur-notes has no public latest release ($web)"; exit 1 ;;
+          esac
+          body="$(mktemp)"
+          code="$(curl -sS -o "$body" -w '%{http_code}' --retry 2 --max-time 20 -H 'Accept: application/vnd.github+json' https://api.github.com/repos/murmur-io/murmur-notes/releases/latest || true)"
+          echo "api.github.com releases/latest (unauthenticated) -> $code"
+          if [ "$code" = 200 ]; then
+            python3 - "$body" "${web##*/}" <<'PY'
+          import json, sys
+          release = json.load(open(sys.argv[1]))
+          tag, web_tag = release.get("tag_name"), sys.argv[2]
+          dmgs = [a["name"] for a in release.get("assets", []) if a["name"].endswith(".dmg")]
+          print(f"latest: {tag}, DMG assets: {dmgs}")
+          if tag != web_tag:
+              sys.exit(f"::error::the API says {tag} but the web page says {web_tag}")
+          if not dmgs:
+              sys.exit(f"::error::the latest release {tag} has no DMG attached")
+          PY
+          elif [ "$code" = 403 ] || [ "$code" = 429 ]; then
+            echo "::warning::the unauthenticated API is rate-limited on this runner ($code); the web check above already proved the release is public"
+          else
+            echo "::error::unauthenticated releases/latest returned $code"; exit 1
+          fi

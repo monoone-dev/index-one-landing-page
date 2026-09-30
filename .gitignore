@@ -1,0 +1,7 @@
+.DS_Store
+*.dmg
+*.dmg.sha256
+*.zip
+node_modules/
+.env
+.env.*

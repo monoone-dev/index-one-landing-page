@@ -1,0 +1,65 @@
+name: Feature request
+description: Suggest something new, or a change to how Murmur works.
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. Please search [existing issues](https://github.com/murmur-io/murmur-notes/issues?q=is%3Aissue+label%3Aenhancement) first — a thumbs-up on an existing request helps us prioritize.
+
+        > [!NOTE]
+        > Issues are public. Use made-up examples, not real meeting content.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do, and what gets in the way today?
+      placeholder: "After a weekly meeting I want to…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like
+      description: How could Murmur solve it? Describe the result, not necessarily the design.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Recording and transcription
+        - Notes and answers
+        - Notes editor
+        - Workspaces, dashboards, tasks or reminders
+        - Privacy, locking or encryption
+        - Obsidian or MCP
+        - Imports or documents
+        - Sharing or Shared Brain
+        - Something else
+    validations:
+      required: true
+
+  - type: dropdown
+    id: privacy
+    attributes:
+      label: Would it need to send data off your Mac?
+      description: Murmur is local-first; this helps us see what the idea costs in privacy.
+      options:
+        - "No"
+        - Yes, but only with my explicit consent
+        - Not sure
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Workarounds you use today (optional)
+    validations:
+      required: false
