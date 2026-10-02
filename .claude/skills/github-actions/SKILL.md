@@ -1,6 +1,6 @@
 ---
 name: github-actions
-description: Author and maintain GitHub Actions workflows for this repo (Nuxt 4 + npm static site in site/) — ubuntu runner, Node from site/.nvmrc with the npm cache, SHA-pinned actions resolved live, least-privilege permissions, concurrency, timeouts and secrets by name. Use whenever the user wants to write or change a workflow, tune CI runtime/caching, pin or bump actions, or change the GitHub Pages deploy.
+description: Author and maintain GitHub Actions workflows for this repo (Nuxt 4 + npm static site at the repo root) — ubuntu runner, Node from .nvmrc with the npm cache, SHA-pinned actions resolved live, least-privilege permissions, concurrency, timeouts and secrets by name. Use whenever the user wants to write or change a workflow, tune CI runtime/caching, pin or bump actions, or change the GitHub Pages deploy.
 ---
 
 # /github-actions — workflow best practices for this repo
@@ -9,8 +9,8 @@ Three workflows:
 
 - `.github/workflows/site-check.yml` — the PR gate (conventions, structural, build). To change *what*
   is checked, see `/ci-maintenance`.
-- `.github/workflows/pages.yml` — on every push to `main` that touches `site/`, reruns `site-check`,
-  generates the site and deploys `site/.output/public` to GitHub Pages at `index-one.io`.
+- `.github/workflows/pages.yml` — on every push to `main` that touches the site (`app/`, `i18n/`, `public/`, `server/`, config or lockfile), reruns `site-check`,
+  generates the site and deploys `.output/public` to GitHub Pages at `index-one.io`.
 - `.github/workflows/monitor.yml` — daily: the live pages, `og-image.png`, `robots.txt`,
   `sitemap.xml` and the latest public release answer.
 
@@ -26,8 +26,8 @@ Three workflows:
 6. **No new third-party action without the user's approval.**
 7. **Secrets by name only** (`${{ secrets.NAME }}`). Never echo them. Untrusted values (PR title,
    branch name) go through `env:`, never straight into `run:`.
-8. **Toolchain from the repo:** Node from `site/.nvmrc` (`node-version-file`), `cache: npm` with
-   `cache-dependency-path: site/package-lock.json`, always `npm ci`.
+8. **Toolchain from the repo:** Node from `.nvmrc` (`node-version-file`), `cache: npm` with
+   `cache-dependency-path: package-lock.json`, always `npm ci`.
 9. **`persist-credentials: false`** on every checkout.
 
 ## Pin an action to a real SHA
@@ -51,6 +51,6 @@ command -v actionlint >/dev/null && actionlint || echo "(install actionlint to l
 
 - The site is fully static: every page in every language is prerendered, plus `/sitemap.xml`.
   Anything new must be static too — no request-time server routes.
-- `site/public/CNAME` must stay exactly `index-one.io` (the structural check enforces it).
-- Reproduce the deploy build locally: `cd site && npm ci && npm run generate`, then serve
+- `public/CNAME` must stay exactly `index-one.io` (the structural check enforces it).
+- Reproduce the deploy build locally: `npm ci && npm run generate`, then serve
   `.output/public` with a server that maps `/path/` to `path/index.html`.

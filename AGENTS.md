@@ -1,6 +1,6 @@
 # Working in this repository
 
-This is `monoone-dev/index-one-landing-page`, IndexOne's public repository: the website (`site/`),
+This is `monoone-dev/index-one-landing-page`, IndexOne's public repository: the website (the Nuxt app at the repo root),
 the user docs, the skill pack, the release notes and the downloads. IndexOne is made by the MonoOne
 organization; its AI assistant is called Ivy. Everything committed or pushed here is public at once,
 and stays public.
@@ -18,7 +18,7 @@ Rules for every person and every coding agent working here:
 - **Pull requests only.** Never push to `main`. Every pull request needs the approval of @JakubGawr.
 - **Maintainers run their privacy check before every push.** It is kept outside this repository.
   If you cannot run it, do not push; ask a maintainer.
-- **Green before push.** `npm run typecheck` and `npm run generate` pass in `site/`, and the
+- **Green before push.** `npm run typecheck` and `npm run generate` pass at the repo root, and the
   `site-check` checks pass (the `ci-maintenance` skill).
 - **Brand names.** `IndexOne`, `MonoOne` and `Ivy`, never split or translated (the `site-content` skill).
 - **Nothing private.** No links to private repositories, no source code, and no names, email

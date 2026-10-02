@@ -33,7 +33,7 @@ IndexOne's public home. The app's source code is not public and is not here.
 | --- | --- |
 | [Releases](https://github.com/monoone-dev/index-one-landing-page/releases) | The signed, notarized DMG of every release, with its notes |
 | [`release-notes/`](release-notes/) | The same release notes, as Markdown |
-| [`site/`](site/) | The website at [index-one.io](https://index-one.io) — Nuxt, statically generated |
+| [`app/`](app/), [`i18n/`](i18n/), [`public/`](public/), [`server/`](server/) | The website at [index-one.io](https://index-one.io) — Nuxt, statically generated |
 | [`docs/use-with-your-agent.md`](docs/use-with-your-agent.md) | Using IndexOne with your own AI agent |
 | [`vault-skills/`](vault-skills/README.md) | The skill pack for Claude Code |
 | Issues and Discussions | Bug reports, ideas and questions |
@@ -171,7 +171,7 @@ A sharing account is not deleted by uninstalling; see
 
 ## Working on the website
 
-`site/` is a [Nuxt](https://nuxt.com) 4 app in TypeScript with [Nuxt UI](https://ui.nuxt.com),
+The website is a [Nuxt](https://nuxt.com) 4 app in TypeScript with [Nuxt UI](https://ui.nuxt.com),
 [Nuxt i18n](https://i18n.nuxtjs.org) and SCSS, generated to static HTML so every word is in the
 served markup. It is published in English (`/`), Polish (`/pl/`), Spanish (`/es/`), Italian
 (`/it/`), French (`/fr/`), Portuguese (`/pt/`), German (`/de/`), Simplified Chinese (`/zh/`) and
@@ -180,22 +180,21 @@ browser's language and the choice is kept in a first-party cookie. The colour mo
 system until the visitor picks one.
 
 ```bash
-cd site
 npm ci
 npm run dev        # http://localhost:3000
-npm run generate   # static output in site/.output/public
+npm run generate   # static output in .output/public
 npm run typecheck
 ```
 
 | Path | What it holds |
 | --- | --- |
-| `site/i18n/content/` | All page copy, one typed file per language (`en.ts` is the source; `types.ts` keeps the others complete) |
-| `site/app/data/` | What doesn't get translated: links, icons, screenshots, the comparison's yes/no values |
-| `site/app/components/` | One component per section |
-| `site/app/assets/scss/` | Fonts, the Studio / Paper / Minimalist skins and base styles |
-| `site/app/composables/usePageSeo.ts` | Meta tags, Open Graph and JSON-LD; `hreflang` and canonical come from Nuxt i18n |
-| `site/server/routes/sitemap.xml.ts` | The sitemap, with every language as an alternate |
-| `site/public/` | Static files served as they are: `docs.html` (English only), screenshots, fonts, icons, `robots.txt`, `CNAME` |
+| `i18n/content/` | All page copy, one typed file per language (`en.ts` is the source; `types.ts` keeps the others complete) |
+| `app/data/` | What doesn't get translated: links, icons, screenshots, the comparison's yes/no values |
+| `app/components/` | One component per section |
+| `app/assets/scss/` | Fonts, the Studio / Paper / Minimalist skins and base styles |
+| `app/composables/usePageSeo.ts` | Meta tags, Open Graph and JSON-LD; `hreflang` and canonical come from Nuxt i18n |
+| `server/routes/sitemap.xml.ts` | The sitemap, with every language as an alternate |
+| `public/` | Static files served as they are: `docs.html` (English only), screenshots, fonts, icons, `robots.txt`, `CNAME` |
 
 The site makes no third-party requests: fonts and icons are bundled, and there is no analytics.
 CI ([`site-check.yml`](.github/workflows/site-check.yml)) builds the site and refuses external
@@ -229,7 +228,7 @@ IndexOne is made by **[MonoOne](https://github.com/monoone-dev)**. See [AUTHORS.
   this repository.
 - The app, the IndexOne name and logo, the screenshots and the promo video are © 2026 MonoOne, all
   rights reserved. The app is free to download and use.
-- Fonts in `site/public/assets/fonts/` are under the SIL Open Font License 1.1; each family's licence
+- Fonts in `public/assets/fonts/` are under the SIL Open Font License 1.1; each family's licence
   sits next to it.
 - Versions 2.8.0 and earlier were originally published under the GNU AGPL-3.0 while their source code
   was public; their release notes say so.
