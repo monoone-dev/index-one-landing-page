@@ -1,5 +1,5 @@
 name: Bug report
-description: Something in Murmur is broken or behaves unexpectedly.
+description: Something in IndexOne is broken or behaves unexpectedly.
 title: "[Bug]: "
 labels: ["bug", "needs-triage"]
 body:
@@ -11,12 +11,12 @@ body:
         > [!WARNING]
         > **Issues are public.** Do not paste transcripts, notes, meeting titles, attendee names, audio, or screenshots that show real content. Do not include API keys, account or share-link passwords, or your MCP token. Describe the problem with made-up content instead.
 
-        Found a **security** problem? Don't file it here — use [private vulnerability reporting](https://github.com/murmur-io/murmur-notes/security/advisories/new).
+        Found a **security** problem? Don't file it here — use [private vulnerability reporting](https://github.com/monoone-dev/index-one-landing-page/security/advisories/new).
 
   - type: input
-    id: murmur-version
+    id: index-one-version
     attributes:
-      label: Murmur version
+      label: IndexOne version
       description: Settings → About.
       placeholder: "2.8.0"
     validations:
@@ -58,7 +58,7 @@ body:
         - Obsidian export
         - MCP server
         - Imports (Notion, Obsidian, Apple Notes) or documents
-        - Sharing, account or Shared Brain
+        - Sharing, account or Shared Ivy
         - Settings
         - Something else
     validations:
@@ -71,7 +71,7 @@ body:
       description: Settings → AI & Models. Only matters if the problem involves notes or answers.
       options:
         - Not relevant
-        - Murmur Brain (on-device)
+        - Ivy (on-device)
         - Ollama (local)
         - Claude Code
         - Codex

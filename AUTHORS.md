@@ -1,11 +1,7 @@
 # Authors
 
-Murmur is designed and built by:
+IndexOne is designed and built by **[MonoOne](https://github.com/monoone-dev)**.
 
-- **[@JakubGawr](https://github.com/JakubGawr)**
-- **Lucas — [@Lukas9315](https://github.com/Lukas9315)**
+"MonoOne" in this repository's copyright and licence notices means that organization.
 
-"The Murmur authors" in this repository's copyright and licence notices means the people listed
-here.
-
-To cite Murmur, use [CITATION.cff](CITATION.cff) (GitHub's "Cite this repository" button reads it).
+To cite IndexOne, use [CITATION.cff](CITATION.cff) (GitHub's "Cite this repository" button reads it).
