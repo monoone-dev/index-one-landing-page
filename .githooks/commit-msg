@@ -1,0 +1,4 @@
+#!/bin/sh
+# Conventional Commits + no AI attribution (site/commitlint.config.mjs)
+msg="$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
+cd site && exec npx --no-install commitlint --edit "$msg"

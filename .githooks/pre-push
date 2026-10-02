@@ -1,0 +1,3 @@
+#!/bin/sh
+# Branch must be <type>/<kebab-slug> (validate-branch-name in site/package.json)
+cd site && exec npx --no-install validate-branch-name

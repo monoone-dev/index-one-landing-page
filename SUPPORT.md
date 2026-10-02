@@ -1,26 +1,26 @@
-# Getting help with Murmur
+# Getting help with IndexOne
 
 ## Start with the docs
 
-- [Documentation](https://murmurnotes.io/docs.html) — setup, every feature, settings and shortcuts.
-- [Your first recording](https://murmurnotes.io/docs.html#first-recording)
-- [What never leaves your Mac](https://murmurnotes.io/docs.html#data-flow)
-- [Known limitations](https://murmurnotes.io/docs.html#known-limitations) — what is not shipped yet,
+- [Documentation](https://index-one.io/docs.html) — setup, every feature, settings and shortcuts.
+- [Your first recording](https://index-one.io/docs.html#first-recording)
+- [What never leaves your Mac](https://index-one.io/docs.html#data-flow)
+- [Known limitations](https://index-one.io/docs.html#known-limitations) — what is not shipped yet,
   or only works on a signed build.
-- [Use Murmur with your own AI agent](docs/use-with-your-agent.md)
+- [Use IndexOne with your own AI agent](docs/use-with-your-agent.md)
 - [FAQ in the README](README.md#faq)
 
 ## Where to ask
 
 | You want to… | Go to |
 | --- | --- |
-| Report something that is broken | [Bug report](https://github.com/murmur-io/murmur-notes/issues/new?template=bug_report.yml) |
-| Suggest a feature or an improvement | [Feature request](https://github.com/murmur-io/murmur-notes/issues/new?template=feature_request.yml) |
-| Ask how to do something | [Discussions → Q&A](https://github.com/murmur-io/murmur-notes/discussions/categories/q-a) |
-| Report a security problem | [Private vulnerability report](https://github.com/murmur-io/murmur-notes/security/advisories/new) — never a public issue. See [SECURITY.md](SECURITY.md). |
+| Report something that is broken | [Bug report](https://github.com/monoone-dev/index-one-landing-page/issues/new?template=bug_report.yml) |
+| Suggest a feature or an improvement | [Feature request](https://github.com/monoone-dev/index-one-landing-page/issues/new?template=feature_request.yml) |
+| Ask how to do something | [Discussions → Q&A](https://github.com/monoone-dev/index-one-landing-page/discussions/categories/q-a) |
+| Report a security problem | [Private vulnerability report](https://github.com/monoone-dev/index-one-landing-page/security/advisories/new) — never a public issue. See [SECURITY.md](SECURITY.md). |
 | Fix a typo on the website or in the docs | A pull request — see [CONTRIBUTING.md](CONTRIBUTING.md). |
 
-Before opening an issue, search the [existing issues](https://github.com/murmur-io/murmur-notes/issues?q=is%3Aissue)
+Before opening an issue, search the [existing issues](https://github.com/monoone-dev/index-one-landing-page/issues?q=is%3Aissue)
 — someone may have reported it already. A thumbs-up on an existing issue helps us prioritize.
 
 ## Keep your meetings out of public issues
@@ -37,18 +37,18 @@ ask for a private channel.
 
 ## Information that helps
 
-- **Murmur version** — Settings → About.
+- **IndexOne version** — Settings → About.
 - **macOS version** — Apple menu → About This Mac.
 - **Your Mac** — Apple Silicon (M1 or later) or Intel.
-- **The AI connection** you use for notes (Murmur Brain on-device, Ollama, Claude Code, Codex,
+- **The AI connection** you use for notes (Ivy on-device, Ollama, Claude Code, Codex,
   Anthropic API or Kong AI Gateway), if the problem involves notes or answers.
 - **The exact text** of any error message.
 
 ### The diagnostics bundle — keep it private
 
-For crashes and hangs, Murmur can export its log as one file: Settings → Developer → turn on
+For crashes and hangs, IndexOne can export its log as one file: Settings → Developer → turn on
 **Developer mode**, open **Logs**, choose **Save diagnostics bundle**. The file,
-`murmur-diagnostics.txt`, is saved in `~/Library/Application Support/MeetNotes/`.
+`index-one-diagnostics.txt`, is saved in `~/Library/Application Support/MeetNotes/`.
 
 The log holds stage names, counts and errors — never note text, transcripts, titles or keys — but it
 **can contain file paths from your Mac, and those include your macOS user name**. So:
@@ -60,12 +60,12 @@ The log holds stage names, counts and errors — never note text, transcripts, t
 
 ## Deleting a sharing account
 
-Uninstalling Murmur does not delete a sharing account, and the app has no button for it yet. Start a
-[Q&A discussion](https://github.com/murmur-io/murmur-notes/discussions/categories/q-a) titled
+Uninstalling IndexOne does not delete a sharing account, and the app has no button for it yet. Start a
+[Q&A discussion](https://github.com/monoone-dev/index-one-landing-page/discussions/categories/q-a) titled
 "Account deletion" with no personal details in it, and we will reply with a private way to confirm the
 account is yours.
 
 ## Response times
 
-Murmur is made by a small team. We read every issue, but we can't promise a response time or support
+IndexOne is made by a small team. We read every issue, but we can't promise a response time or support
 for anything other than the latest release.

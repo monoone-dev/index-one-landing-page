@@ -1,6 +1,6 @@
 # Security policy
 
-Murmur's privacy promise depends on its security, so we take reports seriously and are grateful for
+IndexOne's privacy promise depends on its security, so we take reports seriously and are grateful for
 them.
 
 ## Reporting a vulnerability
@@ -9,14 +9,14 @@ them.
 
 Report it privately through GitHub:
 
-1. Go to the [Security tab](https://github.com/murmur-io/murmur-notes/security) of this repository.
+1. Go to the [Security tab](https://github.com/monoone-dev/index-one-landing-page/security) of this repository.
 2. Choose **Report a vulnerability**
-   ([direct link](https://github.com/murmur-io/murmur-notes/security/advisories/new)).
+   ([direct link](https://github.com/monoone-dev/index-one-landing-page/security/advisories/new)).
 3. Describe the issue. Only you and the maintainers can see the report.
 
 Please include:
 
-- the Murmur version (Settings → About) and macOS version, and whether the Mac is Apple Silicon or Intel;
+- the IndexOne version (Settings → About) and macOS version, and whether the Mac is Apple Silicon or Intel;
 - what an attacker can do, and what they need first (local access, a shared screen, a malicious link…);
 - steps to reproduce, ideally with a minimal proof of concept;
 - whether you have told anyone else.
@@ -46,14 +46,14 @@ the problem still reproduces.
 
 In scope:
 
-- **The Murmur macOS app** — for example: content from a locked Workspace or folder becoming readable
+- **The IndexOne macOS app** — for example: content from a locked Workspace or folder becoming readable
   without unlocking (in the app, search, the graph, the MCP server, exports or the audio player);
   meeting text reaching a cloud provider without consent or without redaction; the local MCP server
   being reachable from another machine or without its token; key material in logs; signature or
   notarization problems with a published DMG.
-- **Sharing** — the end-to-end encryption of shared notes, share links and the Shared Brain, and the
+- **Sharing** — the end-to-end encryption of shared notes, share links and Shared Ivy, and the
   account sign-in; for example, the relay or a third party being able to read shared content.
-- **This repository and [murmurnotes.io](https://murmurnotes.io)** — for example, a way to change what
+- **This repository and [index-one.io](https://index-one.io)** — for example, a way to change what
   a visitor downloads.
 
 Out of scope:
@@ -69,10 +69,10 @@ Every release is signed with an Apple Developer ID and notarized by Apple. To ch
 installing:
 
 ```bash
-spctl -a -vvv -t open --context context:primary-signature ~/Downloads/Murmur-<version>.dmg
-xcrun stapler validate ~/Downloads/Murmur-<version>.dmg
+spctl -a -vvv -t open --context context:primary-signature ~/Downloads/Index-One-<version>.dmg
+xcrun stapler validate ~/Downloads/Index-One-<version>.dmg
 ```
 
-`spctl` should report `accepted` and `source=Notarized Developer ID`. Only download Murmur from this
-repository's [Releases page](https://github.com/murmur-io/murmur-notes/releases) or from
-[murmurnotes.io](https://murmurnotes.io).
+`spctl` should report `accepted` and `source=Notarized Developer ID`. Only download IndexOne from this
+repository's [Releases page](https://github.com/monoone-dev/index-one-landing-page/releases) or from
+[index-one.io](https://index-one.io).

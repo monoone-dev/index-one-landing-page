@@ -1,0 +1,221 @@
+@use 'sass:meta';
+@use 'sass:map';
+@use 'palette' as *;
+
+$status-light: (
+  live-text: #d9532e,
+  safe-text: #1f9d4d,
+  safe-soft: rgb(31 157 77 / 0.13),
+  warn-text: #b9791f,
+  warn-soft: rgb(185 121 31 / 0.12),
+  shadow-sm: (0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)),
+  shadow-md: (0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)),
+);
+
+$status-dark: (
+  live-text: #ff7a5c,
+  safe-text: #4ade80,
+  safe-soft: rgb(74 222 128 / 0.14),
+  warn-text: #f5b14c,
+  warn-soft: rgb(245 177 76 / 0.14),
+  shadow-sm: (0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3)),
+  shadow-md: (0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3)),
+);
+
+$skins: (
+  studio: (
+    base: (
+      font: ('Figtree', -apple-system, BlinkMacSystemFont, system-ui, sans-serif),
+      font-display: var(--font),
+      font-mono: ('JetBrains Mono', 'SF Mono', ui-monospace, Menlo, monospace),
+      radius: 0.75rem,
+      btn-radius: var(--round-md),
+    ),
+    light: map.merge($status-light, (
+      surface-base: mist(50),
+      surface-raised: oklch(100% 0 0),
+      surface-solid: oklch(100% 0 0),
+      surface-overlay: mist(50),
+      surface-hover: mist(100),
+      text-primary: mist(900),
+      text-secondary: mist(600),
+      text-muted: mist(500),
+      accent: sky(500),
+      accent-hover: sky(600),
+      accent-text: sky(700),
+      text-on-accent: oklch(1 0 0),
+      accent-soft: color-mix(in oklch, #{sky(500)} 10%, transparent),
+      accent-ring: color-mix(in oklch, #{sky(500)} 45%, transparent),
+      border: mist(200),
+      border-subtle: color-mix(in oklch, #{mist(200)} 70%, transparent),
+      aurora-field: (
+        radial-gradient(48% 42% at 8% 10%, oklch(74.6% 0.16 232.661 / 0.22), transparent 60%),
+        radial-gradient(36% 32% at 26% 0%, oklch(82.8% 0.111 230.318 / 0.18), transparent 62%),
+        radial-gradient(42% 40% at 4% 90%, oklch(90.1% 0.058 230.902 / 0.2), transparent 62%)
+      ),
+    )),
+    dark: map.merge($status-dark, (
+      surface-base: mist(900),
+      surface-raised: color-mix(in oklch, #{mist(900)} 50%, #{mist(800)}),
+      surface-solid: mist(950),
+      surface-overlay: mist(800),
+      surface-hover: color-mix(in oklch, #{mist(700)} 60%, #{mist(800)}),
+      text-primary: mist(50),
+      text-secondary: mist(300),
+      text-muted: mist(400),
+      accent: sky(400),
+      accent-hover: color-mix(in oklch, #{sky(400)} 85%, white),
+      accent-text: sky(400),
+      text-on-accent: mist(950),
+      accent-soft: color-mix(in oklch, #{sky(400)} 12%, transparent),
+      accent-ring: color-mix(in oklch, #{sky(400)} 45%, transparent),
+      border: mist(800),
+      border-subtle: color-mix(in oklch, #{mist(800)} 70%, transparent),
+      aurora-field: (
+        radial-gradient(40% 46% at 4% 8%, oklch(74.6% 0.16 232.661 / 0.14), transparent 58%),
+        radial-gradient(38% 42% at 3% 94%, oklch(50% 0.134 242.749 / 0.16), transparent 60%)
+      ),
+    )),
+  ),
+  paper: (
+    base: (
+      font: ('DM Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif),
+      font-display: ('Source Serif 4', ui-serif, 'New York', Georgia, serif),
+      font-mono: (ui-monospace, 'SF Mono', SFMono-Regular, Menlo, monospace),
+      radius: 0.625rem,
+      btn-radius: var(--round-pill),
+      aurora-field: none,
+    ),
+    light: map.merge($status-light, (
+      surface-base: parchment(100),
+      surface-raised: parchment(50),
+      surface-solid: parchment(50),
+      surface-overlay: parchment(50),
+      surface-hover: parchment(200),
+      text-primary: parchment(900),
+      text-secondary: parchment(700),
+      text-muted: parchment(600),
+      accent: clay(700),
+      accent-hover: clay(800),
+      accent-text: color-mix(in srgb, #{clay(700)} 80%, #{parchment(900)}),
+      text-on-accent: oklch(1 0 0),
+      accent-soft: color-mix(in oklch, #{clay(500)} 12%, transparent),
+      accent-ring: color-mix(in oklch, #{clay(500)} 35%, transparent),
+      border: parchment(300),
+      border-subtle: parchment(200),
+    )),
+    dark: map.merge($status-dark, (
+      surface-base: parchment(900),
+      surface-raised: parchment(800),
+      surface-solid: parchment(950),
+      surface-overlay: parchment(800),
+      surface-hover: color-mix(in oklch, #{parchment(700)} 45%, transparent),
+      text-primary: parchment(100),
+      text-secondary: parchment(300),
+      text-muted: parchment(400),
+      accent: clay(500),
+      accent-hover: clay(400),
+      accent-text: clay(300),
+      text-on-accent: parchment(950),
+      accent-soft: color-mix(in oklch, #{clay(500)} 20%, transparent),
+      accent-ring: color-mix(in oklch, #{clay(500)} 45%, transparent),
+      border: parchment(700),
+      border-subtle: color-mix(in oklch, #{parchment(700)} 60%, transparent),
+    )),
+  ),
+  minimalist: (
+    base: (
+      font: ('Geist', -apple-system, BlinkMacSystemFont, system-ui, sans-serif),
+      font-display: var(--font),
+      font-mono: ('Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace),
+      radius: 0.625rem,
+      btn-radius: var(--round-lg),
+      aurora-field: none,
+    ),
+    light: map.merge($status-light, (
+      surface-base: oklch(1 0 0),
+      surface-raised: oklch(1 0 0),
+      surface-solid: oklch(1 0 0),
+      surface-overlay: oklch(1 0 0),
+      surface-hover: oklch(0.97 0 0),
+      text-primary: oklch(0.145 0 0),
+      text-secondary: oklch(0.556 0 0),
+      text-muted: oklch(0.556 0 0),
+      accent: oklch(0.205 0 0),
+      accent-hover: color-mix(in oklch, oklch(0.205 0 0) 90%, transparent),
+      accent-text: oklch(0.205 0 0),
+      text-on-accent: oklch(0.985 0 0),
+      accent-soft: oklch(0.97 0 0),
+      accent-ring: oklch(0.708 0 0 / 50%),
+      border: oklch(0.922 0 0),
+      border-subtle: oklch(0.922 0 0),
+    )),
+    dark: map.merge($status-dark, (
+      surface-base: oklch(0.145 0 0),
+      surface-raised: oklch(0.205 0 0),
+      surface-solid: oklch(0.205 0 0),
+      surface-overlay: oklch(0.205 0 0),
+      surface-hover: oklch(0.269 0 0),
+      text-primary: oklch(0.985 0 0),
+      text-secondary: oklch(0.708 0 0),
+      text-muted: oklch(0.708 0 0),
+      accent: oklch(0.922 0 0),
+      accent-hover: color-mix(in oklch, oklch(0.922 0 0) 90%, transparent),
+      accent-text: oklch(0.922 0 0),
+      text-on-accent: oklch(0.205 0 0),
+      accent-soft: oklch(0.269 0 0),
+      accent-ring: oklch(0.556 0 0 / 50%),
+      border: oklch(1 0 0 / 10%),
+      border-subtle: oklch(1 0 0 / 10%),
+    )),
+  ),
+);
+
+@mixin tokens($map) {
+  @each $name, $value in $map {
+    --#{$name}: #{meta.inspect($value)};
+  }
+}
+
+@mixin nuxt-ui-bridge {
+  --ui-primary: var(--accent);
+  --ui-bg: var(--surface-base);
+  --ui-bg-muted: var(--surface-hover);
+  --ui-bg-elevated: var(--surface-overlay);
+  --ui-bg-accented: var(--surface-hover);
+  --ui-bg-inverted: var(--text-primary);
+  --ui-text: var(--text-secondary);
+  --ui-text-dimmed: var(--text-muted);
+  --ui-text-muted: var(--text-muted);
+  --ui-text-toned: var(--text-secondary);
+  --ui-text-highlighted: var(--text-primary);
+  --ui-text-inverted: var(--surface-base);
+  --ui-border: var(--border);
+  --ui-border-muted: var(--border-subtle);
+  --ui-border-accented: var(--border);
+  --ui-border-inverted: var(--text-primary);
+  --ui-radius: calc(var(--radius) * 0.5);
+}
+
+@mixin skin-selector($skin, $mode) {
+  $attr: '';
+  $dark: '';
+  @if $skin != studio { $attr: '[data-skin="#{$skin}"]'; }
+  @if $mode == dark { $dark: '.dark'; }
+  html:root#{$attr}#{$dark} {
+    @content;
+  }
+}
+
+@each $skin, $def in $skins {
+  @include skin-selector($skin, light) {
+    color-scheme: light;
+    @include tokens(map.get($def, base));
+    @include tokens(map.get($def, light));
+    @include nuxt-ui-bridge;
+  }
+  @include skin-selector($skin, dark) {
+    color-scheme: dark;
+    @include tokens(map.get($def, dark));
+  }
+}

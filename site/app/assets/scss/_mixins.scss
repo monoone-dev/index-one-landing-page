@@ -1,0 +1,26 @@
+@use 'sass:map';
+
+$breakpoints: (
+  xs: 460px,
+  sm: 640px,
+  md: 820px,
+  lg: 940px,
+);
+
+@mixin below($name) {
+  @media (max-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+@mixin coarse-pointer {
+  @media (pointer: coarse) {
+    @content;
+  }
+}

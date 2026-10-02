@@ -9,6 +9,48 @@ permissions:
   contents: read
 
 jobs:
+  conventions:
+    name: Conventional Commits
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: site/.nvmrc
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install dependencies
+        working-directory: site
+        run: npm ci --ignore-scripts
+
+      - name: Branch name
+        working-directory: site
+        env:
+          BRANCH: ${{ github.head_ref }}
+        run: npx --no-install validate-branch-name -t "$BRANCH"
+
+      - name: Commit messages
+        working-directory: site
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: npx --no-install commitlint --from "$BASE" --to "$HEAD"
+
+      - name: PR title
+        working-directory: site
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+        run: printf '%s\n' "$TITLE" | npx --no-install commitlint
+
   structural:
     name: private links, secrets, sizes
     runs-on: ubuntu-latest
@@ -39,10 +81,12 @@ jobs:
 
           root = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else ".")
           MAX_FILE_BYTES = 50 * 1024 * 1024
-          BINARY = {".png", ".jpg", ".jpeg", ".mp4", ".webm", ".woff2"}
+          BINARY = {".png", ".jpg", ".jpeg", ".webp", ".ico", ".mp4", ".webm", ".woff2"}
+          GENERATED = {".git", "node_modules", ".nuxt", ".output", ".data", "dist"}
           PRIVATE_LINK = re.compile(
               r"(?<![A-Za-z0-9_.-])murmur-io/mu[r]mur(?:-server)?(?:\.git)?(?![-A-Za-z0-9_])"
-              r"|murmur-io\.github\.io/mu[r]mur(?![-A-Za-z0-9_])",
+              r"|murmur-io\.github\.io/mu[r]mur(?![-A-Za-z0-9_])"
+              r"|(?<![A-Za-z0-9_.-])monoone-dev/index-on[e](?:-server)?(?:\.git)?(?![-A-Za-z0-9_])",
               re.I)
           SECRETS = [
               (re.compile(r"-----BEGIN [A-Z0-9 ]*PRIVATE KEY-----"), "a PEM private key"),
@@ -66,13 +110,14 @@ jobs:
 
           for dirpath, dirnames, filenames in os.walk(root):
               here = pathlib.Path(dirpath)
-              if here == root:
-                  dirnames[:] = [d for d in dirnames if d != ".git"]
+              dirnames[:] = [d for d in dirnames if d not in GENERATED]
               for d in list(dirnames):
                   if (here / d).is_symlink():
                       report((here / d).relative_to(root), "symlinked directory")
                       dirnames.remove(d)
               for name in filenames:
+                  if name in GENERATED:
+                      continue
                   p = here / name
                   rel = p.relative_to(root).as_posix()
                   st = os.lstat(p)
@@ -100,7 +145,7 @@ jobs:
                       if pattern.search(text):
                           report(rel, f"contains {label}")
 
-          docs = root / "site" / "docs.html"
+          docs = root / "site" / "public" / "docs.html"
           if docs.is_file():
               text, blocks = docs.read_text(errors="replace"), []
               rest = text
@@ -113,11 +158,11 @@ jobs:
                   if "mcpServers" in block:
                       blocks.append(block)
               if len(blocks) != 1:
-                  report("site/docs.html", f"must document exactly one mcpServers code block; found {len(blocks)}")
+                  report("site/public/docs.html", f"must document exactly one mcpServers code block; found {len(blocks)}")
               else:
                   for needle in MCP_NEEDLES:
                       if needle not in blocks[0]:
-                          report("site/docs.html", f"the MCP example is missing {needle}; copy what Murmur's Copy config emits")
+                          report("site/public/docs.html", f"the MCP example is missing {needle}; copy what the app's Copy config emits")
 
           messages = os.environ.get("COMMIT_MESSAGES_FILE")
           if messages:
@@ -125,12 +170,88 @@ jobs:
                   if AI_ATTRIBUTION.search(line):
                       report("commit messages", f"line {n}: AI attribution ({line.strip()[:60]})")
 
-          cname = root / "site" / "CNAME"
-          if not (root / "site" / "index.html").is_file():
-              report("site/index.html", "missing")
-          if not cname.is_file() or cname.read_text(errors="replace").strip() != "murmurnotes.io":
-              report("site/CNAME", "must exist and contain exactly murmurnotes.io")
+          cname = root / "site" / "public" / "CNAME"
+          if not (root / "site" / "app" / "pages" / "index.vue").is_file():
+              report("site/app/pages/index.vue", "missing")
+          if not cname.is_file() or cname.read_text(errors="replace").strip() != "index-one.io":
+              report("site/public/CNAME", "must exist and contain exactly index-one.io")
 
           print("\n".join(problems) if problems else "site check: no private links, secrets, symlinks or oversize files")
+          sys.exit(1 if problems else 0)
+          PY
+
+  build:
+    name: generated site is static, first-party and indexable
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: site/.nvmrc
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install dependencies
+        working-directory: site
+        run: npm ci
+
+      - name: Type-check
+        working-directory: site
+        run: npm run typecheck
+
+      - name: Generate the static site
+        working-directory: site
+        run: npm run generate
+
+      - name: Refuse third-party requests, data URIs and missing SEO tags
+        run: |
+          python3 - site/.output/public <<'PY'
+          import pathlib
+          import re
+          import sys
+
+          out = pathlib.Path(sys.argv[1])
+          problems = []
+          ASSET_ATTR = re.compile(r'<(?:script|link|img|source|video|iframe)\b[^>]*?\b(?:src|href|poster)="(https?:)?//', re.I)
+          pages = sorted([out / "docs.html", *out.glob("**/index.html")])
+          for page in pages:
+              text = page.read_text(errors="replace")
+              if ASSET_ATTR.search(re.sub(r'<link\b[^>]*\brel="(?:canonical|alternate)"[^>]*>', "", text)):
+                  problems.append(f"{page.relative_to(out)}: loads an asset from another host")
+              if "data:" in re.sub(r'data-[a-z-]+=', "", text):
+                  problems.append(f"{page.relative_to(out)}: contains a data: URI")
+              if len(re.findall(r"<h1\b", text)) != 1:
+                  problems.append(f"{page.relative_to(out)}: must have exactly one <h1>")
+              for needle in ['rel="canonical"', 'name="description"', 'property="og:image"', 'name="twitter:card"']:
+                  if needle not in text:
+                      problems.append(f"{page.relative_to(out)}: missing {needle}")
+          home = (out / "index.html").read_text(errors="replace")
+          if 'application/ld+json' not in home:
+              problems.append("index.html: missing JSON-LD structured data")
+          for css in out.glob("_nuxt/*.css"):
+              if "data:" in css.read_text(errors="replace"):
+                  problems.append(f"{css.name}: contains a data: URI")
+          for js in out.glob("_nuxt/*.js"):
+              if re.search(r"fonts\.(?:googleapis|gstatic)\.com", js.read_text(errors="replace")):
+                  problems.append(f"{js.name}: references a third-party font host")
+          for locale in ["", "pl/", "es/", "it/", "fr/", "pt/", "de/", "zh/", "ja/"]:
+              for page in ["", "features/", "privacy/", "pricing/"]:
+                  path = f"{locale}{page}index.html"
+                  if not (out / path).is_file():
+                      problems.append(f"{path}: missing from the generated site")
+                  elif 'hreflang="x-default"' not in (out / path).read_text(errors="replace"):
+                      problems.append(f"{path}: missing hreflang alternates")
+          if '"_i18n' in "".join(js.read_text(errors="replace") for js in out.glob("_nuxt/*.js")) and (out / "_i18n").exists():
+              problems.append("_i18n: locale messages are fetched at runtime; keep them bundled")
+          for required in ["CNAME", "robots.txt", "sitemap.xml", "og-image.png", "docs.html"]:
+              if not (out / required).is_file():
+                  problems.append(f"{required}: missing from the generated site")
+          print("\n".join(f"::error::{p}" for p in problems) if problems else "build check: static, first-party, indexable")
           sys.exit(1 if problems else 0)
           PY

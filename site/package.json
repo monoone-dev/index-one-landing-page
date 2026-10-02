@@ -1,0 +1,41 @@
+{
+  "name": "index-one-site",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "npx serve .output/public",
+    "typecheck": "nuxt typecheck",
+    "postinstall": "git config core.hooksPath .githooks 2>/dev/null || true; nuxt prepare",
+    "lint:commits": "commitlint --from origin/main --to HEAD",
+    "lint:branch": "validate-branch-name"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^4.11.3",
+    "@nuxtjs/i18n": "^10.6.0",
+    "nuxt": "^4.5.2",
+    "tailwindcss": "^4.3.3",
+    "vue": "^3.5.43",
+    "vue-router": "^5.3.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.3",
+    "@commitlint/config-conventional": "^21.2.3",
+    "@iconify-json/circle-flags": "^1.2.12",
+    "@iconify-json/lucide": "^1.2.138",
+    "@iconify-json/simple-icons": "^1.2.98",
+    "sass-embedded": "^1.105.1",
+    "typescript": "~6.0.3",
+    "validate-branch-name": "^1.3.2",
+    "vue-tsc": "^3.3.12"
+  },
+  "validate-branch-name": {
+    "pattern": "^(main|dependabot/.+|release/.+|(feat|fix|refactor|chore|docs|test|perf|ci|build|style|revert)/[a-z0-9._-]+)$",
+    "errorMsg": "Branch must be <type>/<kebab-slug>, e.g. feat/index-one-nuxt-site (types: feat fix refactor chore docs test perf ci build style revert). Rename it with: git branch -m <type>/<slug>"
+  }
+}

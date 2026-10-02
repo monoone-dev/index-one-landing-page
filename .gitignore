@@ -5,3 +5,8 @@
 node_modules/
 .env
 .env.*
+.nuxt/
+.output/
+.data/
+dist
+.claude/worktrees/

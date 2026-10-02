@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none" role="img" aria-labelledby="ivy-title ivy-description">
+  <title id="ivy-title">Ivy</title>
+  <desc id="ivy-description">A centered, translucent three-lobed blue mark on a softly rounded, pale app-icon tile.</desc>
+  <defs>
+    <linearGradient id="ivy-tile" x1="100" y1="64" x2="420" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F1F6FC"/>
+    </linearGradient>
+    <filter id="ivy-shadow" x="0" y="0" width="512" height="512" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#64748B" flood-opacity=".20"/>
+    </filter>
+    <linearGradient id="ivy-top" x1="501" y1="306" x2="829" y2="565" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0066FF"/>
+      <stop offset=".42" stop-color="#60A5FA"/>
+      <stop offset=".77" stop-color="#A5DCFB"/>
+      <stop offset="1" stop-color="#D9F3FF" stop-opacity=".84"/>
+    </linearGradient>
+    <linearGradient id="ivy-left" x1="426" y1="778" x2="561" y2="481" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0064FF"/>
+      <stop offset=".4" stop-color="#2588FF"/>
+      <stop offset="1" stop-color="#A6D9FF" stop-opacity=".9"/>
+    </linearGradient>
+    <linearGradient id="ivy-right" x1="677" y1="598" x2="917" y2="759" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7DD3FC" stop-opacity=".94"/>
+      <stop offset=".52" stop-color="#A9DDFB" stop-opacity=".88"/>
+      <stop offset="1" stop-color="#D4EBFF" stop-opacity=".82"/>
+    </linearGradient>
+    <linearGradient id="ivy-center" x1="560" y1="477" x2="669" y2="677" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EFF8FF" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#BFDBFE" stop-opacity=".52"/>
+    </linearGradient>
+    <linearGradient id="ivy-rear" x1="481" y1="388" x2="485" y2="503" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA" stop-opacity=".78"/>
+      <stop offset="1" stop-color="#BAE6FD" stop-opacity=".56"/>
+    </linearGradient>
+    <linearGradient id="ivy-fold" x1="600" y1="720" x2="687" y2="785" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7DC4FB" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#D3EEFF" stop-opacity=".58"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#ivy-tile)" filter="url(#ivy-shadow)" d="M184 64H328C405 64 448 107 448 184V328C448 405 405 448 328 448H184C107 448 64 405 64 328V184C64 107 107 64 184 64Z"/>
+  <path stroke="#FFFFFF" stroke-opacity=".75" stroke-width="1" d="M184 64.5H328C404.7 64.5 447.5 107.3 447.5 184V328C447.5 404.7 404.7 447.5 328 447.5H184C107.3 447.5 64.5 404.7 64.5 328V184C64.5 107.3 107.3 64.5 184 64.5Z"/>
+  <g transform="translate(256 256) scale(.38) translate(-628.5 -530.5)">
+  <path fill="url(#ivy-rear)" d="M484 376C477 422 460 462 435 500C464 481 494 470 529 473C502 449 482 422 484 376Z"/>
+  <path fill="url(#ivy-top)" d="M484 376C494 306 552 249 626 249C695 247 750 295 769 357C786 413 800 465 834 510C853 536 878 560 902 584C875 563 839 550 801 539C698 511 598 474 529 473C500 447 482 417 484 376Z"/>
+  <path fill="url(#ivy-left)" d="M529 473C493 470 463 480 435 500C374 540 322 592 323 667C322 743 376 805 449 805C493 806 536 781 578 748C599 732 617 714 634 697C617 655 604 606 587 564C571 524 552 491 529 473Z"/>
+  <path fill="url(#ivy-center)" d="M529 473C598 474 698 511 801 539C752 562 696 635 634 697C617 655 604 606 587 564C571 524 552 491 529 473Z"/>
+  <path fill="url(#ivy-fold)" d="M578 748C599 732 617 714 634 697C649 734 668 764 697 784C659 764 619 755 578 748Z"/>
+  <path fill="url(#ivy-right)" d="M634 697C696 635 752 562 801 539C839 550 875 563 902 584C924 606 934 636 934 667C934 747 868 812 786 812C752 812 722 802 697 784C668 764 649 734 634 697Z"/>
+  <path d="M435 500C463 480 493 470 529 473C598 474 698 511 801 539C839 550 875 563 902 584M529 473C552 491 571 524 587 564C604 606 617 655 634 697C649 734 668 764 697 784M578 748C599 732 617 714 634 697C696 635 752 562 801 539" stroke="#FFFFFF" stroke-opacity=".68" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
