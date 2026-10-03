@@ -9,16 +9,16 @@ description: Change what the IndexOne website says or shows — page copy in any
 
 | What | Where |
 | --- | --- |
-| All visible text, per language | `site/i18n/content/{en,pl,es,it,fr,pt,de,zh,ja}.ts` (typed by `types.ts`) |
-| What is not translated: links, icons, screenshots, comparison values | `site/app/data/shared.ts`, `site/app/data/site.ts` |
-| Languages, default, browser detection | `i18n` block in `site/nuxt.config.ts`; flags in `site/app/data/site.ts` |
-| Language picker (flag button) | `site/app/components/LanguageSelect.vue` |
-| Pages | `site/app/pages/{index,features,privacy,pricing}.vue`; one component per section in `site/app/components/` |
-| SEO: meta, Open Graph, JSON-LD | `site/app/composables/usePageSeo.ts`; `hreflang` and canonical come from `@nuxtjs/i18n` |
-| Sitemap | `site/server/routes/sitemap.xml.ts` |
-| IndexOne and Ivy icons (theme-aware inline SVG) | `site/app/components/BrandIcon.vue`; tile colours in `--icon-*` in `site/app/assets/scss/_base.scss`; source files in `site/public/assets/{icon,logo,ivy}.svg` |
-| Skins (Studio / Paper / Minimalist) and light/dark tokens | `site/app/assets/scss/_themes.scss`, `site/app/app.config.ts` |
-| Documentation (English only, static) | `site/public/docs.html` |
+| All visible text, per language | `i18n/content/{en,pl,es,it,fr,pt,de,zh,ja}.ts` (typed by `types.ts`) |
+| What is not translated: links, icons, screenshots, comparison values | `app/data/shared.ts`, `app/data/site.ts` |
+| Languages, default, browser detection | `i18n` block in `nuxt.config.ts`; flags in `app/data/site.ts` |
+| Language picker (flag button) | `app/components/LanguageSelect.vue` |
+| Pages | `app/pages/{index,features,privacy,pricing}.vue`; one component per section in `app/components/` |
+| SEO: meta, Open Graph, JSON-LD | `app/composables/usePageSeo.ts`; `hreflang` and canonical come from `@nuxtjs/i18n` |
+| Sitemap | `server/routes/sitemap.xml.ts` |
+| IndexOne and Ivy icons (theme-aware inline SVG) | `app/components/BrandIcon.vue`; tile colours in `--icon-*` in `app/assets/scss/_base.scss`; source files in `public/assets/{icon,logo,ivy}.svg` |
+| Skins (Studio / Paper / Minimalist) and light/dark tokens | `app/assets/scss/_themes.scss`, `app/app.config.ts` |
+| Documentation (English only, static) | `public/docs.html` |
 
 ## Content rules
 
@@ -43,9 +43,9 @@ description: Change what the IndexOne website says or shows — page copy in any
 - Do not use `|`, `@`, `{` or `}` in copy except the existing placeholders (`{download}`, `{year}`, …).
 - Chinese is Simplified (`zh` → `zh-CN`); Japanese headings break at phrase boundaries
   (`word-break: auto-phrase`) and CJK headings drop negative letter-spacing.
-- Adding a language: a content file, an entry in `locales` in `site/nuxt.config.ts` and in
-  `site/server/routes/sitemap.xml.ts`, a flag in `flags` (`i-circle-flags-<country>`), the
-  `@nuxt/ui/locale` mapping in `site/app/app.vue`, and the language list in the `build` check.
+- Adding a language: a content file, an entry in `locales` in `nuxt.config.ts` and in
+  `server/routes/sitemap.xml.ts`, a flag in `flags` (`i-circle-flags-<country>`), the
+  `@nuxt/ui/locale` mapping in `app/app.vue`, and the language list in the `build` check.
 
 ## Logos
 
@@ -55,6 +55,6 @@ ids prefixed with `useId()` so two copies on a page do not collide, and read the
 
 ## Verify
 
-`npm run typecheck && npm run generate` in `site/`, then check the pages in light and dark mode at
+`npm run typecheck && npm run generate` at the repo root, then check the pages in light and dark mode at
 375px and desktop width, with no horizontal scroll — in every language (German and Polish words are
 the longest).

@@ -8,7 +8,7 @@ What you can change with a pull request:
 
 | Path | What it is |
 | --- | --- |
-| `site/` | The website at [index-one.io](https://index-one.io): a Nuxt app for the home page (`site/app/`) and static files in `site/public/`, including `docs.html`. |
+| `app/`, `i18n/`, `public/`, `server/` | The website at [index-one.io](https://index-one.io): a Nuxt app at the repository root — pages and components in `app/`, copy in `i18n/`, static files in `public/` (including `docs.html`). |
 | `docs/` | Guides in Markdown. |
 | `README.md`, `SUPPORT.md`, `SECURITY.md` | The repository's own pages. |
 | `release-notes/` | The text of each release. Maintainers write these when they publish a version. |
@@ -22,9 +22,9 @@ release, and a pull request against them would be overwritten. Open an
 
 1. Fork the repository and create a branch named `<type>/<short-description>`, for example
    `docs/fix-mcp-snippet` or `fix/site-footer-link`.
-2. Make the change. To preview the website, run `npm ci` and `npm run dev` in `site/` and open
+2. Make the change. To preview the website, run `npm ci` and `npm run dev` at the repo root and open
    <http://localhost:3000>; `npm run generate` builds the static site that gets deployed.
-3. Run `npm install` in `site/` once; it wires the git hooks that check branch names and commit
+3. Run `npm install` at the repo root once; it wires the git hooks that check branch names and commit
    messages. Commit using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/):
    `<type>(<scope>): <subject>`, at most 100 characters, for example
    `docs(site): correct the ollama setup steps` (the subject is all lowercase). Common types: `docs`, `fix`, `feat`, `chore`, `ci`.
@@ -34,7 +34,7 @@ release, and a pull request against them would be overwritten. Open an
 
 The **Site check** workflow runs on every pull request. It refuses links to private repositories,
 secret-shaped strings (keys and tokens), symlinks, files over 50 MB, a broken MCP example in
-`site/public/docs.html` and AI co-author or "generated with" lines in commit messages. It also
+`public/docs.html` and AI co-author or "generated with" lines in commit messages. It also
 builds the site and refuses third-party assets, `data:` URIs and missing SEO tags in the output. Every pull request
 needs the approval of a code owner, [@JakubGawr](https://github.com/JakubGawr) or [@Lukas9315](https://github.com/Lukas9315),
 who also run an additional privacy and secret check before approving; if it flags your change, we'll tell you what to change.
@@ -45,7 +45,7 @@ who also run an additional privacy and secret check before approving; if it flag
   screenshots or commit messages. Use made-up examples.
 - **No tracking and no third-party requests.** The website loads nothing from other servers: no
   analytics, no web fonts from a CDN, no external scripts, no `fetch` calls. Fonts are self-hosted in
-  `site/public/assets/fonts/`, and icons are bundled at build time.
+  `public/assets/fonts/`, and icons are bundled at build time.
 - **Claims must be true of the shipped app.** If you describe a feature, say which version has it.
   IndexOne is free to use but it is not open source, so please don't describe it that way.
 - **Commit identity.** Commits are public forever. Use your GitHub noreply address

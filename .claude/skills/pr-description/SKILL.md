@@ -8,12 +8,12 @@ description: Name the branch, write the commit messages and the PR title/body fo
 Everything follows [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/).
 It is enforced, not just documented:
 
-- **Locally** — git hooks in `.githooks/` (wired by `npm install` in `site/` via `core.hooksPath`):
-  `commit-msg` runs commitlint (`site/commitlint.config.mjs`), `pre-commit` and `pre-push` run
-  `validate-branch-name` (pattern in `site/package.json`).
+- **Locally** — git hooks in `.githooks/` (wired by `npm install` at the repo root via `core.hooksPath`):
+  `commit-msg` runs commitlint (`commitlint.config.mjs`), `pre-commit` and `pre-push` run
+  `validate-branch-name` (pattern in `package.json`).
 - **In CI** — the `Conventional Commits` job in `site-check.yml` checks the branch name, every commit
   in the PR and the PR title. The `structural` job refuses AI attribution in commit messages too.
-- Check by hand, from `site/`: `npm run lint:branch`, `npm run lint:commits`,
+- Check by hand, from the repo root: `npm run lint:branch`, `npm run lint:commits`,
   `echo "<title>" | npx --no-install commitlint`.
 
 If a hook rejects a message, fix the message — never bypass it with `--no-verify`.

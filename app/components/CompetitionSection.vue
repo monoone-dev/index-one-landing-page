@@ -52,6 +52,9 @@ const icon: Partial<Record<Support, string>> = { yes: 'i-lucide-check', partial:
   border-radius: var(--round-lg);
 
   &__scroll {
+    // Contains the absolutely positioned .sr-only labels; without it WebKit lets them
+    // escape the scroller and widen the page on mobile once the reveal transform is gone.
+    position: relative;
     overflow-x: auto;
   }
 

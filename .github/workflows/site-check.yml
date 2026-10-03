@@ -24,29 +24,25 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version-file: site/.nvmrc
+          node-version-file: .nvmrc
           cache: npm
-          cache-dependency-path: site/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        working-directory: site
         run: npm ci --ignore-scripts
 
       - name: Branch name
-        working-directory: site
         env:
           BRANCH: ${{ github.head_ref }}
         run: npx --no-install validate-branch-name -t "$BRANCH"
 
       - name: Commit messages
-        working-directory: site
         env:
           BASE: ${{ github.event.pull_request.base.sha }}
           HEAD: ${{ github.event.pull_request.head.sha }}
         run: npx --no-install commitlint --from "$BASE" --to "$HEAD"
 
       - name: PR title
-        working-directory: site
         env:
           TITLE: ${{ github.event.pull_request.title }}
         run: printf '%s\n' "$TITLE" | npx --no-install commitlint
@@ -145,7 +141,7 @@ jobs:
                       if pattern.search(text):
                           report(rel, f"contains {label}")
 
-          docs = root / "site" / "public" / "docs.html"
+          docs = root / "public" / "docs.html"
           if docs.is_file():
               text, blocks = docs.read_text(errors="replace"), []
               rest = text
@@ -158,11 +154,11 @@ jobs:
                   if "mcpServers" in block:
                       blocks.append(block)
               if len(blocks) != 1:
-                  report("site/public/docs.html", f"must document exactly one mcpServers code block; found {len(blocks)}")
+                  report("public/docs.html", f"must document exactly one mcpServers code block; found {len(blocks)}")
               else:
                   for needle in MCP_NEEDLES:
                       if needle not in blocks[0]:
-                          report("site/public/docs.html", f"the MCP example is missing {needle}; copy what the app's Copy config emits")
+                          report("public/docs.html", f"the MCP example is missing {needle}; copy what the app's Copy config emits")
 
           messages = os.environ.get("COMMIT_MESSAGES_FILE")
           if messages:
@@ -170,11 +166,11 @@ jobs:
                   if AI_ATTRIBUTION.search(line):
                       report("commit messages", f"line {n}: AI attribution ({line.strip()[:60]})")
 
-          cname = root / "site" / "public" / "CNAME"
-          if not (root / "site" / "app" / "pages" / "index.vue").is_file():
-              report("site/app/pages/index.vue", "missing")
+          cname = root / "public" / "CNAME"
+          if not (root / "app" / "pages" / "index.vue").is_file():
+              report("app/pages/index.vue", "missing")
           if not cname.is_file() or cname.read_text(errors="replace").strip() != "index-one.io":
-              report("site/public/CNAME", "must exist and contain exactly index-one.io")
+              report("public/CNAME", "must exist and contain exactly index-one.io")
 
           print("\n".join(problems) if problems else "site check: no private links, secrets, symlinks or oversize files")
           sys.exit(1 if problems else 0)
@@ -193,25 +189,22 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version-file: site/.nvmrc
+          node-version-file: .nvmrc
           cache: npm
-          cache-dependency-path: site/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        working-directory: site
         run: npm ci
 
       - name: Type-check
-        working-directory: site
         run: npm run typecheck
 
       - name: Generate the static site
-        working-directory: site
         run: npm run generate
 
       - name: Refuse third-party requests, data URIs and missing SEO tags
         run: |
-          python3 - site/.output/public <<'PY'
+          python3 - .output/public <<'PY'
           import pathlib
           import re
           import sys
