@@ -21,6 +21,11 @@ const content: SiteContent = {
       title: 'IndexOneの料金とObsidian・Notionなどとの比較',
       description: 'IndexOneはアーリーアクセス期間中は無料です。録音、デバイス上のAI、暗号化、Markdownの観点で、Obsidian、Notion、Evernote、Bear、Amieと比較できます。',
     },
+    changelog: {
+      breadcrumb: '更新履歴',
+      title: '更新履歴 — IndexOne 各リリースの変更点',
+      description: 'macOS 版 IndexOne のすべてのリリースを新しい順に。新機能、修正、ダウンロード、各バージョンのリリース日を掲載しています。',
+    },
     ogImageAlt: 'IndexOne — Ivy搭載、macOS向けローカルファーストの議事録アプリ',
   },
   common: {
@@ -38,7 +43,7 @@ const content: SiteContent = {
     faq: 'よくある質問',
     docs: 'ドキュメント',
     github: 'GitHub',
-    releaseNotes: 'リリースノート',
+    changelog: '更新履歴',
     download: 'ダウンロード',
   },
   theme: {
@@ -457,6 +462,15 @@ const content: SiteContent = {
         answer: 'いいえ。アプリは無料でダウンロードして使えますが、ソースコードは公開していません。バージョン2.8.0以前は、ソースコードが公開されていた当時、GNU AGPL-3.0のもとで公開されていました。',
       },
     ],
+  },
+  changelog: {
+    eyebrow: '更新履歴',
+    title: 'IndexOne の新機能',
+    lead: 'macOS アプリのすべてのリリースを新しい順に掲載しています。最新版をダウンロードするか、GitHub ですべてのビルドとチェックサムを確認できます。',
+    download: '最新版をダウンロード',
+    github: 'GitHub のすべてのリリース',
+    latest: '最新',
+    englishNote: 'リリースノートは英語で公開しています。',
   },
   cta: {
     title: '会議にIvyを。主導権はあなたのMacに。',

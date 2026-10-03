@@ -234,7 +234,7 @@ jobs:
               if re.search(r"fonts\.(?:googleapis|gstatic)\.com", js.read_text(errors="replace")):
                   problems.append(f"{js.name}: references a third-party font host")
           for locale in ["", "pl/", "es/", "it/", "fr/", "pt/", "de/", "zh/", "ja/"]:
-              for page in ["", "features/", "privacy/", "pricing/"]:
+              for page in ["", "features/", "privacy/", "pricing/", "changelog/"]:
                   path = f"{locale}{page}index.html"
                   if not (out / path).is_file():
                       problems.append(f"{path}: missing from the generated site")

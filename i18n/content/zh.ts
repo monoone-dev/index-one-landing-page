@@ -21,6 +21,11 @@ const content: SiteContent = {
       title: 'IndexOne 价格，以及与 Obsidian、Notion 等的对比',
       description: 'IndexOne 在抢先体验期间免费。从录音、设备端 AI、加密和 Markdown 等方面，将它与 Obsidian、Notion、Evernote、Bear 和 Amie 逐项对比。',
     },
+    changelog: {
+      breadcrumb: '更新日志',
+      title: '更新日志 — IndexOne 每个版本的新变化',
+      description: 'IndexOne macOS 版的每个版本，最新的在前：新功能、修复和下载，并注明每个版本的发布日期。',
+    },
     ogImageAlt: 'IndexOne — 本地优先的 macOS 会议笔记，内置 Ivy',
   },
   common: {
@@ -38,7 +43,7 @@ const content: SiteContent = {
     faq: '常见问题',
     docs: '文档',
     github: 'GitHub',
-    releaseNotes: '更新日志',
+    changelog: '更新日志',
     download: '下载',
   },
   theme: {
@@ -457,6 +462,15 @@ const content: SiteContent = {
         answer: '不开源。本应用可免费下载和使用，但源代码并未公开。2.8.0 及更早的版本在源代码公开期间，最初是以 GNU AGPL-3.0 许可证发布的。',
       },
     ],
+  },
+  changelog: {
+    eyebrow: '更新日志',
+    title: 'IndexOne 有哪些新变化',
+    lead: 'macOS 应用的每个版本，最新的在前。下载最新版本，或在 GitHub 上查看所有构建和校验和。',
+    download: '下载最新版本',
+    github: 'GitHub 上的所有版本',
+    latest: '最新',
+    englishNote: '更新说明以英文发布。',
   },
   cta: {
     title: '让 Ivy 走进你的会议——掌控权留在你的 Mac 上。',
