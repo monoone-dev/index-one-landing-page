@@ -67,6 +67,6 @@ The same shape as a commit header (it becomes the squash commit): `<type>(<scope
   **Screenshot** for a visible UI change, **Additional comments** only for what a reviewer must know
   (a skipped check, a follow-up, a product decision). Never paste test logs.
 - No attribution footer (see above).
-- Every pull request needs the approval of @JakubGawr.
+- Every pull request needs the approval of a code owner, @JakubGawr or @Lukas9315.
 
 Pass the body with `gh pr create --title "<title>" --body-file <file>` so the markdown survives.

@@ -15,7 +15,8 @@ Rules for every person and every coding agent working here:
   `.github/pull_request_template.md`. Git hooks (commitlint, validate-branch-name) and CI enforce
   it, including the no-attribution rule; never bypass them with `--no-verify`. Details: the
   `pr-description` skill.
-- **Pull requests only.** Never push to `main`. Every pull request needs the approval of @JakubGawr.
+- **Pull requests only.** Never push to `main`. Every pull request needs the approval
+  of a code owner, @JakubGawr or @Lukas9315.
 - **Maintainers run their privacy check before every push.** It is kept outside this repository.
   If you cannot run it, do not push; ask a maintainer.
 - **Green before push.** `npm run typecheck` and `npm run generate` pass in `site/`, and the
