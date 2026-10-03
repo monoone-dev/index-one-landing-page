@@ -114,7 +114,7 @@ export function softwareApplicationSchema(extra: Record<string, unknown> = {}) {
     'applicationSubCategory': 'Meeting notes and transcription',
     'operatingSystem': `macOS ${site.minMacOS} or later`,
     'downloadUrl': site.links.download,
-    'releaseNotes': site.links.releases,
+    'releaseNotes': absoluteUrl('/changelog/'),
     'isAccessibleForFree': true,
     'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'USD' },
     'publisher': { '@id': organizationId },

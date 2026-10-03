@@ -36,6 +36,7 @@ export interface SiteContent {
     features: PageMeta & { breadcrumb: string }
     privacy: PageMeta & { breadcrumb: string }
     pricing: PageMeta & { breadcrumb: string }
+    changelog: PageMeta & { breadcrumb: string }
     ogImageAlt: string
   }
   common: {
@@ -53,7 +54,7 @@ export interface SiteContent {
     faq: string
     docs: string
     github: string
-    releaseNotes: string
+    changelog: string
     download: string
   }
   theme: {
@@ -135,6 +136,15 @@ export interface SiteContent {
     title: string
     leadHtml: string
     items: { question: string, answer: string }[]
+  }
+  changelog: {
+    eyebrow: string
+    title: string
+    lead: string
+    download: string
+    github: string
+    latest: string
+    englishNote: string
   }
   cta: {
     title: string

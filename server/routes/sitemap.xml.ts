@@ -10,7 +10,7 @@ const locales = [
   { code: 'zh', language: 'zh-CN' },
   { code: 'ja', language: 'ja-JP' },
 ]
-const pages = ['/', '/features/', '/privacy/', '/pricing/']
+const pages = ['/', '/features/', '/privacy/', '/pricing/', '/changelog/']
 
 const url = (code: string, page: string) => `${base}${code === 'en' ? page : `/${code}${page}`}`
 

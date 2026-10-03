@@ -21,6 +21,11 @@ const content: SiteContent = {
       title: 'Preços do IndexOne e comparação com Obsidian, Notion e outros',
       description: 'O IndexOne é gratuito no acesso antecipado. Compare com Obsidian, Notion, Evernote, Bear e Amie em gravação, IA no dispositivo, criptografia e Markdown.',
     },
+    changelog: {
+      breadcrumb: 'Novidades',
+      title: 'Novidades — o que muda em cada versão do IndexOne',
+      description: 'Cada versão do IndexOne para macOS, da mais recente para a mais antiga: novos recursos, correções e downloads, com a data de cada versão.',
+    },
     ogImageAlt: 'IndexOne — notas de reunião local-first para macOS, com Ivy',
   },
   common: {
@@ -38,7 +43,7 @@ const content: SiteContent = {
     faq: 'Perguntas frequentes',
     docs: 'Documentação',
     github: 'GitHub',
-    releaseNotes: 'Notas de versão',
+    changelog: 'Novidades',
     download: 'Baixar',
   },
   theme: {
@@ -457,6 +462,15 @@ const content: SiteContent = {
         answer: 'Não. O app é gratuito para baixar e usar, mas o código-fonte não é público. As versões 2.8.0 e anteriores foram publicadas originalmente sob a GNU AGPL-3.0, enquanto o código-fonte delas era público.',
       },
     ],
+  },
+  changelog: {
+    eyebrow: 'Novidades',
+    title: 'Novidades do IndexOne',
+    lead: 'Cada versão do app para macOS, da mais recente para a mais antiga. Baixe a versão mais recente ou veja todas as compilações e checksums no GitHub.',
+    download: 'Baixar a mais recente',
+    github: 'Todas as versões no GitHub',
+    latest: 'Mais recente',
+    englishNote: 'As notas de versão são publicadas em inglês.',
   },
   cta: {
     title: 'Leve a Ivy às suas reuniões — e mantenha o controle no seu Mac.',

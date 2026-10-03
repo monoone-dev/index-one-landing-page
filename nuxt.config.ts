@@ -12,7 +12,7 @@ const locales = [
   { code: 'ja', language: 'ja-JP', name: '日本語', file: localeFile },
 ]
 
-const pages = ['/', '/features/', '/privacy/', '/pricing/']
+const pages = ['/', '/features/', '/privacy/', '/pricing/', '/changelog/']
 const localizedRoutes = locales.flatMap(({ code }) =>
   pages.map(page => (code === 'en' ? page : `/${code}${page}`)),
 )

@@ -13,7 +13,8 @@ description: Change what the IndexOne website says or shows — page copy in any
 | What is not translated: links, icons, screenshots, comparison values | `app/data/shared.ts`, `app/data/site.ts` |
 | Languages, default, browser detection | `i18n` block in `nuxt.config.ts`; flags in `app/data/site.ts` |
 | Language picker (flag button) | `app/components/LanguageSelect.vue` |
-| Pages | `app/pages/{index,features,privacy,pricing}.vue`; one component per section in `app/components/` |
+| Pages | `app/pages/{index,features,privacy,pricing,changelog}.vue`; one component per section in `app/components/` |
+| Changelog entries (English only) | `release-notes/vX.Y.Z.md`, turned into HTML at build time by `modules/release-notes.ts`; each file starts with `*Originally released on YYYY-MM-DD.*` |
 | SEO: meta, Open Graph, JSON-LD | `app/composables/usePageSeo.ts`; `hreflang` and canonical come from `@nuxtjs/i18n` |
 | Sitemap | `server/routes/sitemap.xml.ts` |
 | IndexOne and Ivy icons (theme-aware inline SVG) | `app/components/BrandIcon.vue`; tile colours in `--icon-*` in `app/assets/scss/_base.scss`; source files in `public/assets/{icon,logo,ivy}.svg` |
