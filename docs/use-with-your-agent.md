@@ -2,7 +2,7 @@
 
 Index One records your meetings, transcribes them on-device, and writes clean Markdown notes into
 your Obsidian vault. If you already run **Claude Code** (or any MCP/Skills-capable agent) over
-that vault as a "second brain", Index One is designed to be a good citizen inside it — it writes
+that vault as a "second ivy", Index One is designed to be a good citizen inside it — it writes
 plain, owned Markdown, and it ships a local, read-only server your agent can query directly.
 
 This guide gets your agent cooperating with Index One in about five minutes.
