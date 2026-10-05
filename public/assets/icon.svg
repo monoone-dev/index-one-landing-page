@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1039" height="1039" viewBox="106.5 92 1039 1039" role="img" aria-labelledby="title description">
-<title id="title">Index One</title>
-<desc id="description">Index One symbol: a rounded light tile and three folded blue vector planes, without a wordmark.</desc>
+<title id="title">IndexOne</title>
+<desc id="description">IndexOne symbol: a rounded light tile and three folded blue vector planes, without a wordmark.</desc>
 <defs>
  <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff"/><stop offset=".55" stop-color="#f8fbff"/><stop offset="1" stop-color="#f0f5fa"/></linearGradient>
  <linearGradient id="rear" gradientUnits="userSpaceOnUse" x1="587" y1="300" x2="838" y2="465"><stop stop-color="#258aff"/><stop offset=".52" stop-color="#acd3ff"/><stop offset="1" stop-color="#eff7ff"/></linearGradient>

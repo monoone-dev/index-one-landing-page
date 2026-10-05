@@ -1,11 +1,11 @@
 ---
 name: index-one-mcp
-description: Query Index One's local read-only MCP server for gated, indexed knowledge — semantic + full-text search over meetings and notes, entity dossiers, structured transcripts, open-commitment rollups, and typed note-folder database queries. Prefer this over grepping raw vault files. Use when you need to find, retrieve, or cross-reference meeting/note content that Index One has indexed. Read-only, loopback-only, excludes sealed content.
+description: Query IndexOne's local read-only MCP server for gated, indexed knowledge — semantic + full-text search over meetings and notes, entity dossiers, structured transcripts, open-commitment rollups, and typed note-folder database queries. Prefer this over grepping raw vault files. Use when you need to find, retrieve, or cross-reference meeting/note content that IndexOne has indexed. Read-only, loopback-only, excludes sealed content.
 ---
 
-# Querying Index One's local MCP server
+# Querying IndexOne's local MCP server
 
-Index One runs a **local, read-only MCP server** over its indexed store. Prefer it over grepping
+IndexOne runs a **local, read-only MCP server** over its indexed store. Prefer it over grepping
 raw vault files whenever you need to **find or retrieve** meeting/note content, because it gives
 you what a file grep can't:
 
@@ -32,7 +32,7 @@ you what a file grep can't:
 
 ### Getting the config (no guessing the token)
 
-The user copies a ready-made config from Index One: **Settings → Privacy & Integrations → Local server for
+The user copies a ready-made config from IndexOne: **Settings → Privacy & Integrations → Local server for
 Claude → Copy config**. That block already contains the correct token. It looks like:
 
 ```json
@@ -61,7 +61,7 @@ Every tool returns text; every tool excludes sealed-and-not-unlocked content.
 
 2. **`search_semantic`** — `{ query }` — meaning-based search fused with full-text; finds
    relevant content even without the exact words. Falls back to keyword-only (and says so) when
-   semantic search is disabled in Index One settings.
+   semantic search is disabled in IndexOne settings.
    *e.g.* `search_semantic({ "query": "who is unhappy about the roadmap" })`.
 
 3. **`get_meeting`** — `{ meetingId, transcriptFormat? }` — a meeting's AI note plus its full
@@ -163,4 +163,4 @@ Every tool returns text; every tool excludes sealed-and-not-unlocked content.
   returns no results from any tool. If you know something exists but can't find it, it may be
   locked — don't work around the gate.
 - **Loopback only, no egress.** The server is `127.0.0.1` only and makes no cloud calls; every
-  answer is computed on-device from Index One's local database.
+  answer is computed on-device from IndexOne's local database.
