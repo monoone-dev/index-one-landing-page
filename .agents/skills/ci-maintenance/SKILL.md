@@ -18,7 +18,7 @@ npm run generate       # prerenders every page in every language into .output/pu
 | Job | What it refuses |
 | --- | --- |
 | `Conventional Commits` | a bad branch name, commit message or PR title (see `/pr-description`) |
-| `structural` | private-repo links, secrets, home-directory paths, symlinks, files over 50 MB, a broken MCP example in `docs.html`, AI attribution in commit messages, a wrong `CNAME` |
+| `structural` | private-repo links, secrets, home-directory paths, symlinks, files over 50 MB, a broken MCP example in `docs.html`, AI attribution in commit messages, a wrong `CNAME`, a skill mirror that differs from the shared skills (`npm run lint:skills`) |
 | `build` | type errors; generated pages that load assets from another host, contain `data:` URIs, miss SEO tags or `hreflang`, or a missing language page; runtime-fetched locale messages |
 
 Run them locally before every push and before `gh pr create`; never claim green from a run you did
