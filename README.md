@@ -68,7 +68,7 @@ The full feature list is on [index-one.io](https://index-one.io/#features) and i
 
 ## Install
 
-1. Download `Index-One-<version>.dmg` from the
+1. Download `IndexOne-<version>.dmg` from the
    [latest release](https://github.com/monoone-dev/index-one-landing-page/releases/latest).
 2. Open the DMG and drag **IndexOne** into **Applications**.
 3. Open it from Applications and confirm **Open** when macOS asks.
@@ -82,9 +82,9 @@ if it happens again.
 <summary>Verify a download (optional)</summary>
 
 ```bash
-spctl -a -vvv -t open --context context:primary-signature ~/Downloads/Index-One-<version>.dmg
-xcrun stapler validate ~/Downloads/Index-One-<version>.dmg
-codesign -dv --verbose=2 "/Applications/Index One.app" 2>&1 | grep -E "Authority|TeamIdentifier"
+spctl -a -vvv -t open --context context:primary-signature ~/Downloads/IndexOne-<version>.dmg
+xcrun stapler validate ~/Downloads/IndexOne-<version>.dmg
+codesign -dv --verbose=2 "/Applications/IndexOne.app" 2>&1 | grep -E "Authority|TeamIdentifier"
 ```
 
 Expect `accepted` and `source=Notarized Developer ID`; the TeamIdentifier should read `BVF778E5QD`.
@@ -160,7 +160,7 @@ library.
 
 ## Uninstall
 
-1. Quit IndexOne and move `/Applications/Index One.app` to the Trash. Your library stays.
+1. Quit IndexOne and move `/Applications/IndexOne.app` to the Trash. Your library stays.
 2. To remove your data too, delete `~/Library/Application Support/MeetNotes/` — **this permanently
    deletes every recording, transcript and note**, locked folders included — then delete the
    `com.meetnotes.app` items in Keychain Access.
