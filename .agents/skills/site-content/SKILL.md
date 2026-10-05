@@ -24,8 +24,8 @@ description: Change what the IndexOne website says or shows — page copy in any
 ## Content rules
 
 - **Brand names.** `IndexOne`, `MonoOne` and `Ivy` — one word, never translated, never with a space.
-  Ivy is a proper name: no article ("ask Ivy", not "ask the Ivy"), pronoun "it". Exceptions are real
-  file names of the shipped app (`/Applications/Index One.app`, `Index-One-<version>.dmg`).
+  Ivy is a proper name: no article ("ask Ivy", not "ask the Ivy"), pronoun "it". The shipped app
+  files follow the same rule (`/Applications/IndexOne.app`, `IndexOne-<version>.dmg`).
 - **No personal names.** No people, authors, founders or team members — on the page, in alt text or
   in metadata. Authorship is MonoOne.
 - **Nothing private.** Link only public repositories and public sites; never internal paths or

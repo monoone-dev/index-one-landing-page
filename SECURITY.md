@@ -69,8 +69,8 @@ Every release is signed with an Apple Developer ID and notarized by Apple. To ch
 installing:
 
 ```bash
-spctl -a -vvv -t open --context context:primary-signature ~/Downloads/Index-One-<version>.dmg
-xcrun stapler validate ~/Downloads/Index-One-<version>.dmg
+spctl -a -vvv -t open --context context:primary-signature ~/Downloads/IndexOne-<version>.dmg
+xcrun stapler validate ~/Downloads/IndexOne-<version>.dmg
 ```
 
 `spctl` should report `accepted` and `source=Notarized Developer ID`. Only download IndexOne from this
