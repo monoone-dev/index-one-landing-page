@@ -32,7 +32,9 @@ Rules for every person and every coding agent working here:
 ## Skills
 
 Shared runbooks live in `.agents/skills/` and are mirrored for Claude Code in `.claude/skills/`.
-Keep the two copies identical.
+Edit `.agents/skills` and copy the change to `.claude/skills` in the same commit. The mirror is a
+real copy, not symlinks, because the site checks refuse symlinks. `npm run lint:skills` (also the
+`structural` job in CI) fails when the two trees differ.
 
 | Skill | Use it to |
 | --- | --- |

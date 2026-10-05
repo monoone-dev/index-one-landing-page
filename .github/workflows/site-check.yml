@@ -58,6 +58,9 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
+      - name: The Claude Code skill mirror matches the shared skills
+        run: diff -r .agents/skills .claude/skills
+
       - name: Refuse private links, secrets, symlinks, oversize files, a broken MCP example and AI attribution
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}

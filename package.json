@@ -13,7 +13,8 @@
     "typecheck": "nuxt typecheck",
     "postinstall": "git config core.hooksPath .githooks 2>/dev/null || true; nuxt prepare",
     "lint:commits": "commitlint --from origin/main --to HEAD",
-    "lint:branch": "validate-branch-name"
+    "lint:branch": "validate-branch-name",
+    "lint:skills": "diff -r .agents/skills .claude/skills"
   },
   "dependencies": {
     "@nuxt/ui": "^4.11.3",
