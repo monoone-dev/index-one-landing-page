@@ -70,17 +70,33 @@ export default defineNuxtModule({
     })
     nuxt.options.alias['#release-notes'] = template.dst
 
+    // The newest version on its own, so pages that only need its number don't bundle every note.
+    const latest = addTemplate({
+      filename: 'release-latest.mjs',
+      getContents: () => {
+        const [newest] = readNotes(dir)
+        if (!newest) throw new Error('release-notes/: no notes found')
+        const { tag, date } = newest
+        return `export default ${JSON.stringify({ tag, date })}\n`
+      },
+    })
+    nuxt.options.alias['#release-latest'] = latest.dst
+
     addTypeTemplate({
       filename: 'types/release-notes.d.ts',
       getContents: () => `declare module '#release-notes' {
   const notes: { tag: string, date: string, html: string }[]
   export default notes
 }
+declare module '#release-latest' {
+  const latest: { tag: string, date: string }
+  export default latest
+}
 `,
     })
 
     nuxt.hook('builder:watch', async (_event, path) => {
-      if (path.includes('release-notes/')) await updateTemplates({ filter: t => t.filename === 'release-notes.mjs' })
+      if (path.includes('release-notes/')) await updateTemplates({ filter: t => ['release-notes.mjs', 'release-latest.mjs'].includes(t.filename) })
     })
   },
 })
