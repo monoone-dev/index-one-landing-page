@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/assets/icon.svg" alt="IndexOne" width="128" height="128">
+</p>
+
 # IndexOne
 
 **Local-first meeting notes for macOS, with Ivy.** IndexOne records your calls, transcribes them on
@@ -221,7 +225,8 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
 ## Authors and license
 
-IndexOne is made by **[MonoOne](https://github.com/monoone-dev)**. See [AUTHORS.md](AUTHORS.md) and
+<a href="https://monoone.dev"><img src="https://monoone.dev/favicon.svg" alt="MonoOne" width="20" height="20" align="absmiddle"></a>
+IndexOne is made by **[MonoOne](https://monoone.dev)** ([GitHub](https://github.com/monoone-dev)). See [AUTHORS.md](AUTHORS.md) and
 [CITATION.cff](CITATION.cff).
 
 - Documentation, release notes and website text: [CC BY 4.0](LICENSE) — credit "MonoOne" and link to
