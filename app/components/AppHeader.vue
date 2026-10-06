@@ -12,7 +12,6 @@ const links = computed(() => [
   { label: c.value.nav.compare, to: to('/pricing#compare') },
   { label: c.value.nav.changelog, to: to('/changelog') },
   { label: c.value.nav.docs, to: site.links.docs, external: true },
-  { label: c.value.nav.github, to: site.links.repo, external: true },
 ])
 
 const language = useLanguageMenu()
@@ -22,7 +21,7 @@ const menuItems = computed<DropdownMenuItem[][]>(() => [links.value.map(link => 
 
 // On phones the language, theme and download buttons live in the menu instead of the header.
 const mobileMenuItems = computed<DropdownMenuItem[][]>(() => [
-  ...menuItems.value,
+  [...menuItems.value[0]!, { label: c.value.nav.github, icon: 'i-simple-icons-github', to: site.links.repo, external: true }],
   [
     { label: c.value.common.language, icon: language.icon.value, children: language.items.value },
     { label: c.value.theme.label, icon: 'i-lucide-palette', children: theme.items.value },
@@ -53,6 +52,7 @@ const mobileMenuItems = computed<DropdownMenuItem[][]>(() => [
           </template>
         </UDropdownMenu>
         <div class="nav__desktop-only">
+          <UButton :to="site.links.repo" external color="neutral" variant="ghost" icon="i-simple-icons-github" :aria-label="c.hero.githubAria" />
           <LanguageSelect />
           <ThemeMenu />
           <UButton :to="site.links.download" external icon="i-lucide-arrow-down-to-line" :label="c.nav.download" />
