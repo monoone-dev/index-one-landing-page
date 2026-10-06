@@ -1,3 +1,4 @@
+import latest from '#release-latest'
 import { absoluteUrl, site } from '~/data/site'
 
 export interface PageSeo {
@@ -114,6 +115,8 @@ export function softwareApplicationSchema(extra: Record<string, unknown> = {}) {
     'applicationSubCategory': 'Meeting notes and transcription',
     'operatingSystem': `macOS ${site.minMacOS} or later`,
     'downloadUrl': site.links.download,
+    'softwareVersion': latest.tag.slice(1),
+    'datePublished': latest.date,
     'releaseNotes': absoluteUrl('/changelog/'),
     'isAccessibleForFree': true,
     'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'USD' },
