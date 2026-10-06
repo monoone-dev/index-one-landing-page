@@ -41,18 +41,18 @@ export const providers: { id: ProviderId, leaves: boolean }[] = [
   { id: 'gateway', leaves: true },
 ]
 
-export const privacyShot = shot('settings-privacy', 1600, 1111)
+export const privacyShot = shot('settings-privacy', 1600, 1112)
 
 export const features: { id: FeatureId, shot: Screenshot }[] = [
   { id: 'workspaces', shot: shot('hero-spaces', 1600, 1000) },
-  { id: 'dashboards', shot: shot('dashboard', 1600, 955) },
+  { id: 'dashboards', shot: shot('dashboard', 1600, 956) },
   { id: 'imports', shot: shot('settings-imports', 1600, 1000) },
   { id: 'ivy', shot: shot('record-ivy', 1600, 1000) },
-  { id: 'ask', shot: shot('ask', 1600, 866) },
+  { id: 'ask', shot: shot('ask', 1600, 867) },
   { id: 'transcription', shot: shot('transcript', 1600, 1000) },
   { id: 'memory', shot: shot('ivy-graph', 1600, 1200) },
-  { id: 'receipts', shot: shot('detail-receipts', 1600, 911) },
-  { id: 'markdown', shot: shot('detail-note', 1600, 1111) },
+  { id: 'receipts', shot: shot('detail-receipts', 1600, 912) },
+  { id: 'markdown', shot: shot('detail-note', 1600, 1112) },
   { id: 'notes', shot: shot('notes-editor-ivy-menu', 1600, 1000) },
   { id: 'shared-ivy', shot: shot('shared-ivys', 1600, 800) },
 ]

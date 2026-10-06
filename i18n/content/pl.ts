@@ -9,7 +9,7 @@ const content: SiteContent = {
     features: {
       breadcrumb: 'Funkcje',
       title: 'Funkcje — IndexOne, notatki ze spotkań na macOS',
-      description: 'Workspaces, dashboardy, importy, Ivy na spotkaniach, pytania do całego sejfu, transkrypcja dwóch strumieni, dowody, eksport do Markdown i Shared Ivy.',
+      description: 'Workspaces, projekty, importy, Ivy na spotkaniach, pytania do całego sejfu, transkrypcja dwóch strumieni, dowody, eksport do Markdown i Shared Ivy.',
     },
     privacy: {
       breadcrumb: 'Prywatność',
@@ -68,7 +68,7 @@ const content: SiteContent = {
     download: 'Pobierz na macOS',
     privacyCta: 'Zobacz, jak działa prywatność',
     note: 'Podpisany i notaryzowany · macOS 13.4+ · Apple Silicon i Intel · Twoje notatki zostają w Markdown, na własność',
-    videoLabel: '90-sekundowa prezentacja IndexOne: nagrywane spotkanie i notatka pisana równolegle, notatka utworzona po spotkaniu i wyciągnięte z niej punkty, oś czasu mówców, pytanie zadane Ivy o cały sejf i odpowiedź ze źródłami, graf wiedzy, pasek Workspaces i wyszukiwanie na urządzeniu, tablica na żywo, People oraz Workspace, który nie chce się otworzyć, bo jest zapieczętowany',
+    videoLabel: '90-sekundowa prezentacja IndexOne: nagrywane spotkanie i notatka pisana równolegle, notatka utworzona po spotkaniu i wyciągnięte z niej punkty, oś czasu mówców, pytanie zadane Ivy o cały sejf i odpowiedź ze źródłami, graf wiedzy, pasek Workspaces i wyszukiwanie na urządzeniu, projekt, People oraz Workspace, który nie chce się otworzyć, bo jest zapieczętowany',
     play: 'Obejrzyj 90-sekundową prezentację',
   },
   trust: {
@@ -92,7 +92,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Każde twierdzenie ma swój dowód',
-        body: 'Każda poparta linijka notatki prowadzi do sekundy nagrania, z której pochodzi, razem z mówcą i poziomem pewności. Linijki bez pokrycia nie dostają dowodu, więc widzisz, co jest zweryfikowane.',
+        body: 'Każda poparta linijka notatki prowadzi do sekundy nagrania, z której pochodzi, razem z mówcą. Linijki bez pokrycia nie dostają dowodu, więc widzisz, co jest zweryfikowane.',
         link: 'Dowody',
       },
       'security': {
@@ -181,47 +181,47 @@ const content: SiteContent = {
     },
     leavesYes: 'Tylko po zgodzie, po przejściu przez firewall redakcyjny',
     leavesNo: 'Nie',
-    shotAlt: 'Ustawienia prywatności IndexOne, które prostym językiem mówią, co zostaje usunięte, zanim jakikolwiek tekst wyjdzie, którzy dostawcy działają w chmurze i że przetwarzanie w chmurze jest wyłączone, dopóki raz na nie nie pozwolisz',
+    shotAlt: 'Ustawienia prywatności IndexOne, które prostym językiem mówią, co zostaje usunięte, zanim jakikolwiek tekst wyjdzie, którzy dostawcy działają w chmurze i czy przetwarzanie w chmurze zostało dozwolone',
     footnote: 'IndexOne mówi prostym językiem, co dokładnie opuszcza Twojego Maca — a każde wywołanie chmurowego AI jest zapisywane i pokazywane Ci z powrotem. Twoje spotkania zostają na urządzeniu, chyba że sam to zmienisz. Jeden wybór modelu obowiązuje we wszystkich miejscach z AI i zawsze przyjmuje wpisany ręcznie identyfikator modelu — więc zadziała nawet model wydany po tej wersji aplikacji.',
   },
   features: {
     eyebrow: 'Co dostajesz',
     title: 'Narzędzie do spotkań, które naprawdę pamięta.',
-    lead: 'Jeden zaszyfrowany magazyn, trzy sposoby korzystania — aplikacja, lokalny serwer MCP i wyeksportowane pliki Markdown. Jedno drzewo mieści wszystko, tablice są zbudowane na nim, a Ivy czyta to wszystko.',
+    lead: 'Jeden zaszyfrowany magazyn, trzy sposoby korzystania — aplikacja, lokalny serwer MCP i wyeksportowane pliki Markdown. Jedno drzewo mieści wszystko, projekty są zbudowane na nim, a Ivy czyta to wszystko.',
     items: {
       'workspaces': {
         eyebrow: 'Workspaces',
         title: 'Jedno drzewo na wszystko',
         body: 'Jedno drzewo — <b>Workspaces › foldery › Twoje nagrania i notatki</b> — w jednym pasku bocznym, który zwija się do wąskiej szyny, gdy potrzebujesz miejsca. Zablokuj Workspace, a wszystko w środku zostanie zapieczętowane razem z nim.',
         points: [
-          'Nagrania, notatki, zadania i tablice trafiają w to samo miejsce',
+          'Nagrania, notatki, zadania i projekty trafiają w to samo miejsce',
           'Zapieczętowany Workspace pokazuje tylko swoją nazwę — żadnych liczników, żadnej zawartości',
           'Poproś Ivy, żeby odłożyła zabłąkane nagranie na miejsce',
           'Usunięte przez pomyłkę? Kosz trzyma je przez 30 dni — albo tak długo, jak ustawisz, maksymalnie rok',
         ],
-        alt: 'Pasek boczny Workspaces: jedno drzewo Workspaces i folderów z nagraniami, notatkami i tablicami, z zablokowanym Workspace na dole',
+        alt: 'Pasek boczny Workspaces: jedno drzewo Workspaces i folderów z nagraniami, notatkami i projektami, z zablokowanym Workspace na dole',
       },
       'dashboards': {
-        eyebrow: 'Dashboardy',
-        title: 'Tablice, które składasz sam',
-        body: 'Przeciągnij na tablicę notatki, nagrania, dokumenty, osoby, rejestry obietnic i przypomnienia, a potem czytaj ją przez soczewki <b>Brief / Overview / Commitments / Sources / People</b>. Przypnij <b>żywą odpowiedź</b> — pytanie, które aplikacja stale aktualizuje i ukrywa w chwili, gdy jej źródła przestają być dostępne. Możesz też zapytać samą tablicę — odpowiedź opiera się wyłącznie na tym, co na niej jest.',
+        eyebrow: 'Projekty',
+        title: 'Projekty, które składasz sam',
+        body: 'Zbierz w projekcie notatki, nagrania, dokumenty, osoby, rejestry obietnic i przypomnienia, a potem czytaj go przez soczewki <b>Brief / Overview / Commitments / Sources / People</b>. Przypnij <b>żywą odpowiedź</b> — zapisane pytanie, którego ostatnia odpowiedź jest przechowywana z datą jej udzielenia, odświeżana na Twoje żądanie i ukrywana w chwili, gdy jej źródła przestają być dostępne. Możesz też zapytać sam projekt — odpowiedź opiera się wyłącznie na tym, co w nim jest.',
         points: [
           'Siedem rodzajów kafelków — notatka, nagranie, dokument, osoba, rejestr obietnic, lista przypomnień lub żywa odpowiedź',
           'Pięć soczewek na tych samych kafelkach — bez żadnych kopii',
-          'Tablica sama określa swoje granice: co może czytać i co z tego wywnioskowała',
+          'Projekt sam określa swoje granice: co może czytać i co z tego wywnioskował',
         ],
-        alt: 'Tablica w soczewce Brief: przypięta żywa odpowiedź, to, co wymaga uwagi, i najnowsze dowody, które za tym stoją',
+        alt: 'Projekt w soczewce Brief: zapisana odpowiedź na przypięte pytanie, to, co wymaga uwagi, i najnowsze dowody, które za tym stoją',
       },
       'imports': {
         eyebrow: 'Importy',
         title: 'Przenieś swoje dotychczasowe notatki',
-        body: 'Settings → Imports wczytuje <b>eksport z Notion</b>, <b>sejf Obsidian</b> albo <b>Apple Notes</b>. Całkowicie offline — bez konta, bez klucza, bez połączenia z siecią. Każdy import zaczyna się od próby na sucho, więc widzisz, co zostanie zapisane, zanim cokolwiek się zapisze.',
+        body: 'Settings → Imports wczytuje <b>eksport z Notion</b>, <b>sejf Obsidian</b>, <b>Apple Notes</b>, folder <b>plików Markdown</b> albo <b>kopię zapasową IndexOne</b>. Całkowicie offline — bez konta, bez klucza, bez połączenia z siecią. Każdy import zaczyna się od próby na sucho, więc widzisz, co zostanie zapisane, zanim cokolwiek się zapisze.',
         points: [
-          'Trzy źródła: eksport z Notion, sejf Obsidian, Apple Notes',
+          'Pięć źródeł: eksport z Notion, sejf Obsidian, Apple Notes, folder plików Markdown, kopia zapasowa IndexOne',
           'Najpierw próba na sucho — nic nie jest zapisywane, dopóki nie dasz znaku',
           'Zaimportowane notatki trafiają do osobnego, nazwanego folderu, a Ivy czyta je jak wszystko inne',
         ],
-        alt: 'Settings → Imports: Notion, Obsidian i Apple Notes, z informacją, że wszystko dzieje się na tym Macu i nic nie jest wysyłane',
+        alt: 'Settings → Imports: Notion, Obsidian, Apple Notes, pliki Markdown i kopia zapasowa IndexOne, z informacją, że wszystko dzieje się na tym Macu i nic nie jest wysyłane',
       },
       'ivy': {
         eyebrow: 'Ivy',
@@ -272,10 +272,10 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Dowody',
         title: 'Każde twierdzenie prowadzi do nagrania.',
-        body: 'Notatki IndexOne nie wymagają ślepego zaufania. Każda linijka oparta na tym, co faktycznie padło, ma swój dowód — kliknij, a przeskoczysz dokładnie do tej sekundy nagrania, z mówcą i poziomem pewności. Parafrazy i linijki bez pokrycia go nie dostają, więc od razu widzisz, co jest zweryfikowane.',
+        body: 'Notatki IndexOne nie wymagają ślepego zaufania. Każda linijka oparta na tym, co faktycznie padło, ma swój dowód — kliknij, a przeskoczysz dokładnie do tej sekundy nagrania, z mówcą. Parafrazy i linijki bez pokrycia go nie dostają, więc od razu widzisz, co jest zweryfikowane.',
         points: [
           'Kliknij twierdzenie i usłysz, skąd dokładnie pochodzi',
-          'Mówca i pewność rozpoznawania mowy (ASR) przy każdym dowodzie',
+          'Mówca i dokładna sekunda przy każdym dowodzie',
           'Siedem gotowych dokumentów z każdego spotkania jednym kliknięciem — e-mail z podsumowaniem, rejestr decyzji, zgłoszenie, podsumowanie 1:1, standup, podsumowanie sprzedażowe, notatki z rekrutacji',
           'Zapieczętowane foldery nigdy nie zdradzają czasu ani mówcy',
         ],
@@ -335,7 +335,7 @@ const content: SiteContent = {
           'Wyszukiwanie semantyczne i automatyczny graf wiedzy',
           'Samodzielne notatki z edytorem wspieranym przez Ivy',
           'Udostępnianie z szyfrowaniem end-to-end, z uprawnieniami View only / Can edit dla każdego dokumentu (wymaga konta)',
-          'Workspaces, konfigurowalne dashboardy i import offline z Notion / Obsidian / Apple Notes',
+          'Workspaces, konfigurowalne projekty i import offline z Notion / Obsidian / Apple Notes / Markdown',
           'Zaszyfrowane linki do udostępniania z datą wygaśnięcia, opcjonalnym hasłem i limitem otwarć',
           'Blokada Touch ID dla każdego Workspace i folderu, z szyfrowaniem AES-256',
           'Automatyczne ponowne blokowanie przy udostępnianiu ekranu',

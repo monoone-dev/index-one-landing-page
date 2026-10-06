@@ -9,7 +9,7 @@ const content: SiteContent = {
     features: {
       breadcrumb: 'Funktionen',
       title: 'Funktionen — IndexOne, Meeting-Notizen für macOS',
-      description: 'Workspaces, Dashboards, Importe, Ivy im Meeting, Fragen an deinen Vault, Zwei-Spur-Transkription, Belege, Markdown-Export und Shared Ivy – alle Funktionen.',
+      description: 'Workspaces, Projekte, Importe, Ivy im Meeting, Fragen an deinen Vault, Zwei-Spur-Transkription, Belege, Markdown-Export und Shared Ivy – alle Funktionen.',
     },
     privacy: {
       breadcrumb: 'Datenschutz',
@@ -68,7 +68,7 @@ const content: SiteContent = {
     download: 'Für macOS laden',
     privacyCta: 'So funktioniert der Datenschutz',
     note: 'Signiert und notarisiert · macOS 13.4+ · Apple Silicon und Intel · deine Notizen bleiben Markdown, das dir gehört',
-    videoLabel: 'Eine 90-Sekunden-Tour durch IndexOne: ein Meeting wird aufgenommen, während daneben eine Notiz entsteht, die danach geschriebene Notiz und die Punkte, die sie herauszieht, die Sprecher-Zeitleiste, eine Frage an Ivy über den ganzen Vault mit Antwort samt Quellen, der Wissensgraph, die Workspaces-Leiste und die Suche auf dem Gerät, ein Live-Board, People und ein Workspace, der sich nicht öffnet, weil er versiegelt ist',
+    videoLabel: 'Eine 90-Sekunden-Tour durch IndexOne: ein Meeting wird aufgenommen, während daneben eine Notiz entsteht, die danach geschriebene Notiz und die Punkte, die sie herauszieht, die Sprecher-Zeitleiste, eine Frage an Ivy über den ganzen Vault mit Antwort samt Quellen, der Wissensgraph, die Workspaces-Leiste und die Suche auf dem Gerät, ein Projekt, People und ein Workspace, der sich nicht öffnet, weil er versiegelt ist',
     play: 'Die 90-Sekunden-Tour ansehen',
   },
   trust: {
@@ -92,7 +92,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Für jede Aussage gibt es einen Beleg',
-        body: 'Jede belegte Zeile einer Notiz verlinkt auf die Sekunde Audio, aus der sie stammt – mit Sprecher und Konfidenz. Zeilen ohne Beleg bekommen keinen, so siehst du, was verifiziert ist.',
+        body: 'Jede belegte Zeile einer Notiz verlinkt auf die Sekunde Audio, aus der sie stammt – mit Sprecher. Zeilen ohne Beleg bekommen keinen, so siehst du, was verifiziert ist.',
         link: 'Belege',
       },
       'security': {
@@ -181,47 +181,47 @@ const content: SiteContent = {
     },
     leavesYes: 'Nur nach Zustimmung; mit Schwärzungs-Firewall',
     leavesNo: 'Nein',
-    shotAlt: 'Die Datenschutzeinstellungen von IndexOne: in klarer Sprache, was entfernt wird, bevor Text das Gerät verlässt, welche Anbieter Cloud sind und dass Cloud-Verarbeitung aus ist, bis du sie einmal erlaubst',
+    shotAlt: 'Die Datenschutzeinstellungen von IndexOne: in klarer Sprache, was entfernt wird, bevor Text das Gerät verlässt, welche Anbieter Cloud sind und ob Cloud-Verarbeitung erlaubt wurde',
     footnote: 'IndexOne sagt dir in klarer Sprache, was genau deinen Mac verlässt – und jeder Cloud-KI-Aufruf wird protokolliert und dir angezeigt. Deine Meetings bleiben auf dem Gerät, solange du nicht zustimmst. Eine einzige Modellauswahl gilt für alle KI-Funktionen und akzeptiert immer auch eine selbst eingetippte Modell-ID – so funktioniert sogar ein Modell, das nach diesem Build erschienen ist.',
   },
   features: {
     eyebrow: 'Was du bekommst',
     title: 'Ein Meeting-Tool, das sich wirklich erinnert.',
-    lead: 'Ein verschlüsselter Speicher, drei Wege, ihn zu nutzen – die App, ein lokaler MCP-Server und deine exportierten Markdown-Dateien. Ein Baum hält alles zusammen, Boards sitzen darauf, und Ivy liest alles davon.',
+    lead: 'Ein verschlüsselter Speicher, drei Wege, ihn zu nutzen – die App, ein lokaler MCP-Server und deine exportierten Markdown-Dateien. Ein Baum hält alles zusammen, Projekte sitzen darauf, und Ivy liest alles davon.',
     items: {
       'workspaces': {
         eyebrow: 'Workspaces',
         title: 'Ein Baum für alles',
         body: 'Ein einziger Baum – <b>Workspaces › Ordner › deine Aufnahmen und Notizen</b> – in einer Seitenleiste, die sich zu einer schmalen Leiste einklappt, wenn du Platz brauchst. Sperr einen Workspace, und alles darin wird mit ihm versiegelt.',
         points: [
-          'Aufnahmen, Notizen, Aufgaben und Boards landen am selben Ort',
+          'Aufnahmen, Notizen, Aufgaben und Projekte landen am selben Ort',
           'Ein versiegelter Workspace zeigt seinen Namen und sonst nichts – keine Zahlen, keine Inhalte',
           'Lass Ivy eine verirrte Aufnahme für dich einsortieren',
           'Versehentlich gelöscht? Der Papierkorb hebt es 30 Tage auf – oder so lange du willst, bis zu einem Jahr',
         ],
-        alt: 'Die Workspaces-Seitenleiste: ein Baum aus Workspaces und Ordnern mit Aufnahmen, Notizen und Boards, unten ein gesperrter Workspace',
+        alt: 'Die Workspaces-Seitenleiste: ein Baum aus Workspaces und Ordnern mit Aufnahmen, Notizen und Projekten, unten ein gesperrter Workspace',
       },
       'dashboards': {
-        eyebrow: 'Dashboards',
-        title: 'Boards, die du selbst zusammenstellst',
-        body: 'Zieh Notizen, Aufnahmen, Dokumente, Personen, Zusagenlisten und Erinnerungen auf ein Board und lies es durch die Linsen <b>Brief / Overview / Commitments / Sources / People</b>. Pinne eine <b>lebendige Antwort</b> an – eine Frage, die die App aktuell hält und zurückzieht, sobald ihre Quellen nicht mehr lesbar sind. Du kannst ein Board auch direkt fragen, gestützt nur auf das, was darauf liegt.',
+        eyebrow: 'Projekte',
+        title: 'Projekte, die du selbst zusammenstellst',
+        body: 'Zieh Notizen, Aufnahmen, Dokumente, Personen, Zusagenlisten und Erinnerungen in ein Projekt und lies es durch die Linsen <b>Brief / Overview / Commitments / Sources / People</b>. Pinne eine <b>lebendige Antwort</b> an – eine gespeicherte Frage, deren letzte Antwort mit ihrem Datum aufbewahrt, auf Wunsch neu beantwortet und zurückgezogen wird, sobald ihre Quellen nicht mehr lesbar sind. Du kannst ein Projekt auch direkt fragen, gestützt nur auf das, was darin liegt.',
         points: [
           'Sieben Kachelarten – eine Notiz, eine Aufnahme, ein Dokument, eine Person, eine Zusagenliste, eine Erinnerungsliste oder eine lebendige Antwort',
           'Fünf Linsen auf dieselben Kacheln – von nichts gibt es eine zweite Kopie',
-          'Ein Board benennt seine eigene Grenze: was es lesen kann und was es abgeleitet hat',
+          'Ein Projekt benennt seine eigene Grenze: was es lesen kann und was es abgeleitet hat',
         ],
-        alt: 'Ein Board in der Brief-Linse: eine angepinnte lebendige Antwort, was Aufmerksamkeit braucht, und die aktuellen Belege dahinter',
+        alt: 'Ein Projekt in der Brief-Linse: die gespeicherte Antwort auf eine angepinnte Frage, was Aufmerksamkeit braucht, und die aktuellen Belege dahinter',
       },
       'imports': {
         eyebrow: 'Importe',
         title: 'Bring deine bestehenden Notizen mit',
-        body: 'Settings → Imports holt einen <b>Notion-Export</b>, einen <b>Obsidian-Vault</b> oder <b>Apple Notes</b> herein. Komplett offline – kein Konto, kein Schlüssel, keine Netzwerkanfrage. Jeder Import läuft zuerst als Probelauf, damit du siehst, was er schreiben würde, bevor er irgendetwas schreibt.',
+        body: 'Settings → Imports holt einen <b>Notion-Export</b>, einen <b>Obsidian-Vault</b>, <b>Apple Notes</b>, einen Ordner mit <b>Markdown-Dateien</b> oder ein <b>IndexOne-Backup</b> herein. Komplett offline – kein Konto, kein Schlüssel, keine Netzwerkanfrage. Jeder Import läuft zuerst als Probelauf, damit du siehst, was er schreiben würde, bevor er irgendetwas schreibt.',
         points: [
-          'Drei Quellen: ein Notion-Export, ein Obsidian-Vault, Apple Notes',
+          'Fünf Quellen: ein Notion-Export, ein Obsidian-Vault, Apple Notes, ein Ordner mit Markdown-Dateien, ein IndexOne-Backup',
           'Erst der Probelauf – geschrieben wird erst, wenn du es sagst',
           'Importierte Notizen landen in einem eigenen benannten Ordner, und Ivy liest sie wie alles andere',
         ],
-        alt: 'Settings → Imports: Notion, Obsidian und Apple Notes, mit dem Hinweis, dass alles auf diesem Mac passiert und nichts hochgeladen wird',
+        alt: 'Settings → Imports: Notion, Obsidian, Apple Notes, Markdown-Dateien und IndexOne-Backup, mit dem Hinweis, dass alles auf diesem Mac passiert und nichts hochgeladen wird',
       },
       'ivy': {
         eyebrow: 'Ivy',
@@ -272,10 +272,10 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Belege',
         title: 'Jede Aussage führt zurück zur Aufnahme.',
-        body: 'Die Notizen von IndexOne verlangen kein blindes Vertrauen. Jede Zeile, die sich auf tatsächlich Gesagtes stützt, trägt einen Beleg – ein Klick springt direkt zu dieser Sekunde Audio, mit Sprecher und Konfidenz. Umschriebene oder unbelegte Zeilen bekommen keinen, so siehst du auf einen Blick, was verifiziert ist.',
+        body: 'Die Notizen von IndexOne verlangen kein blindes Vertrauen. Jede Zeile, die sich auf tatsächlich Gesagtes stützt, trägt einen Beleg – ein Klick springt direkt zu dieser Sekunde Audio, mit Sprecher. Umschriebene oder unbelegte Zeilen bekommen keinen, so siehst du auf einen Blick, was verifiziert ist.',
         points: [
           'Klick auf eine Aussage und hör genau, woher sie kommt',
-          'Sprecher und ASR-Konfidenz auf jedem Beleg',
+          'Sprecher und genaue Sekunde auf jedem Beleg',
           'Sieben Ein-Klick-Ergebnisse aus jedem Meeting – Follow-up-Mail, Entscheidungsprotokoll, Ticket, 1:1-Rückblick, Standup, Sales-Rückblick, Interview-Notizen',
           'Versiegelte Ordner verraten nie Zeitpunkte oder Sprecher',
         ],
@@ -335,7 +335,7 @@ const content: SiteContent = {
           'Semantische Suche und der automatische Wissensgraph',
           'Eigenständige Notizen mit einem Editor, den Ivy unterstützt',
           'Ende-zu-Ende-verschlüsseltes Teilen mit View only / Can edit pro Dokument (Konto erforderlich)',
-          'Workspaces, frei kombinierbare Dashboards und Offline-Import aus Notion / Obsidian / Apple Notes',
+          'Workspaces, frei kombinierbare Projekte und Offline-Import aus Notion / Obsidian / Apple Notes / Markdown',
           'Verschlüsselte Freigabelinks mit Ablaufdatum, optionalem Passwort und Begrenzung der Aufrufe',
           'Touch-ID-Sperre pro Workspace und pro Ordner mit AES-256-Verschlüsselung',
           'Automatisches Wiedersperren bei Bildschirmfreigabe',

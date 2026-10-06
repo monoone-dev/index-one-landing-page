@@ -9,7 +9,7 @@ const content: SiteContent = {
     features: {
       breadcrumb: 'Features',
       title: 'Features — IndexOne meeting notes for macOS',
-      description: 'Workspaces, dashboards, imports, Ivy in meetings, Ask your vault, dual-stream transcription, receipts, Markdown export and Shared Ivy — every IndexOne feature.',
+      description: 'Workspaces, projects, imports, Ivy in meetings, Ask your vault, dual-stream transcription, receipts, Markdown export and Shared Ivy — every IndexOne feature.',
     },
     privacy: {
       breadcrumb: 'Privacy',
@@ -68,7 +68,7 @@ const content: SiteContent = {
     download: 'Download for macOS',
     privacyCta: 'See how privacy works',
     note: 'Signed and notarized · macOS 13.4+ · Apple Silicon and Intel · your notes stay Markdown you own',
-    videoLabel: 'A 90-second tour of IndexOne: a meeting being recorded while a note is typed alongside it, the note written afterwards and the items it pulls out, the speaker timeline, a question asked of Ivy across the whole vault and answered with sources, the knowledge graph, the Workspaces rail and on-device search, a live board, People, and a Workspace refusing to open because it is sealed',
+    videoLabel: 'A 90-second tour of IndexOne: a meeting being recorded while a note is typed alongside it, the note written afterwards and the items it pulls out, the speaker timeline, a question asked of Ivy across the whole vault and answered with sources, the knowledge graph, the Workspaces rail and on-device search, a project, People, and a Workspace refusing to open because it is sealed',
     play: 'Watch the 90-second tour',
   },
   trust: {
@@ -92,7 +92,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Every claim has a receipt',
-        body: 'Each grounded line in a note links to the second of audio it came from, with the speaker and confidence. Lines without evidence get no receipt, so you see what is verified.',
+        body: 'Each grounded line in a note links to the second of audio it came from, with the speaker. Lines without evidence get no receipt, so you see what is verified.',
         link: 'Receipts',
       },
       'security': {
@@ -181,47 +181,47 @@ const content: SiteContent = {
     },
     leavesYes: 'Only after consent; redaction firewall applied',
     leavesNo: 'No',
-    shotAlt: 'IndexOne privacy settings, stating in plain language what is removed before any text leaves, which providers are cloud, and that cloud processing is off until you allow it once',
+    shotAlt: 'IndexOne privacy settings, stating in plain language what is removed before any text leaves, which providers are cloud, and whether cloud processing has been allowed',
     footnote: 'IndexOne tells you, in plain language, exactly what leaves your Mac — and every cloud AI call is logged and shown back to you. Your meetings stay on-device unless you opt in. One model picker is used across every AI surface, and it always accepts a model id you type yourself — so a model released after this build still works.',
   },
   features: {
     eyebrow: 'What you get',
     title: 'A meeting tool that actually remembers.',
-    lead: 'One encrypted store, three ways to use it — the app, a local MCP server, and your exported Markdown files. One tree holds everything, boards sit on top of it, and Ivy reads all of it.',
+    lead: 'One encrypted store, three ways to use it — the app, a local MCP server, and your exported Markdown files. One tree holds everything, projects sit on top of it, and Ivy reads all of it.',
     items: {
       'workspaces': {
         eyebrow: 'Workspaces',
         title: 'One tree for everything',
         body: 'A single tree — <b>Workspaces › folders › your recordings and notes</b> — in one sidebar that collapses to a rail when you want the room. Lock a Workspace and everything inside it is sealed with it.',
         points: [
-          'Recordings, notes, tasks and boards file into the same place',
+          'Recordings, notes, tasks and projects file into the same place',
           'A sealed Workspace shows its name and nothing else — no counts, no contents',
           'Ask Ivy to file a stray recording for you',
           'Deleted by mistake? Trash keeps it for 30 days — or however long you set, up to a year',
         ],
-        alt: 'The Workspaces sidebar: one tree of Workspaces and folders holding recordings, notes and boards, with a locked Workspace at the bottom',
+        alt: 'The Workspaces sidebar: one tree of Workspaces and folders holding recordings, notes and projects, with a locked Workspace at the bottom',
       },
       'dashboards': {
-        eyebrow: 'Dashboards',
-        title: 'Boards you compose',
-        body: 'Pull notes, recordings, documents, people, promise ledgers and reminders onto a board, then read it through <b>Brief / Overview / Commitments / Sources / People</b> lenses. Pin a <b>living answer</b> — a question the app keeps up to date, and withholds the moment its sources stop being readable. You can ask a board directly, grounded only in what\'s on it.',
+        eyebrow: 'Projects',
+        title: 'Projects you compose',
+        body: 'Pull notes, recordings, documents, people, promise ledgers and reminders into a project, then read it through <b>Brief / Overview / Commitments / Sources / People</b> lenses. Pin a <b>living answer</b> — a saved question whose last answer is kept with the date it was given, re-answered when you ask, and withheld the moment its sources stop being readable. You can ask a project directly, grounded only in what\'s in it.',
         points: [
           'Seven kinds of tile — a note, a recording, a document, a person, a promise ledger, a reminders list, or a living answer',
           'Five lenses over the same tiles — no second copy of anything',
-          'A board states its own boundary: what it can read, and what it derived',
+          'A project states its own boundary: what it can read, and what it derived',
         ],
-        alt: 'A board in its Brief lens: a pinned living answer, what needs attention, and the recent evidence behind it',
+        alt: 'A project in its Brief lens: the saved answer to a pinned question, what needs attention, and the recent evidence behind it',
       },
       'imports': {
         eyebrow: 'Imports',
         title: 'Bring your existing notes',
-        body: 'Settings → Imports pulls in a <b>Notion export</b>, an <b>Obsidian vault</b>, or <b>Apple Notes</b>. Entirely offline — no account, no key, no network call. Every import is a dry run first, so you see what it would write before it writes anything.',
+        body: 'Settings → Imports pulls in a <b>Notion export</b>, an <b>Obsidian vault</b>, <b>Apple Notes</b>, a folder of <b>Markdown files</b>, or an <b>IndexOne backup</b>. Entirely offline — no account, no key, no network call. Every import is a dry run first, so you see what it would write before it writes anything.',
         points: [
-          'Three sources: a Notion export, an Obsidian vault, Apple Notes',
+          'Five sources: a Notion export, an Obsidian vault, Apple Notes, a folder of Markdown files, an IndexOne backup',
           'Dry run first — nothing is written until you say so',
           'Imported notes land in their own named folder, and Ivy reads them like everything else',
         ],
-        alt: 'Settings → Imports: Notion, Obsidian and Apple Notes, with the note that everything happens on this Mac and nothing is uploaded',
+        alt: 'Settings → Imports: Notion, Obsidian, Apple Notes, Markdown files and IndexOne backup, with the note that everything happens on this Mac and nothing is uploaded',
       },
       'ivy': {
         eyebrow: 'Ivy',
@@ -272,10 +272,10 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Receipts',
         title: 'Every claim traces back to the tape.',
-        body: 'IndexOne\'s notes don\'t ask you to trust them. Each line that\'s grounded in what was actually said carries a receipt — click it to jump straight to that second of audio, with the speaker and confidence. Paraphrased or unsupported lines get none, so you can see at a glance what\'s verified.',
+        body: 'IndexOne\'s notes don\'t ask you to trust them. Each line that\'s grounded in what was actually said carries a receipt — click it to jump straight to that second of audio, with the speaker. Paraphrased or unsupported lines get none, so you can see at a glance what\'s verified.',
         points: [
           'Click a claim, hear exactly where it came from',
-          'Speaker and ASR confidence on every receipt',
+          'The speaker and the exact second on every receipt',
           'Seven one-click artifacts from any meeting — follow-up email, decision log, work ticket, 1:1 recap, standup, sales recap, interview notes',
           'Sealed folders leak no timing or speaker, ever',
         ],
@@ -335,7 +335,7 @@ const content: SiteContent = {
           'Semantic search and the automatic knowledge graph',
           'Standalone notes with an Ivy-assisted editor',
           'End-to-end encrypted sharing with per-document View only / Can edit (account required)',
-          'Workspaces, composable dashboards, and offline Notion / Obsidian / Apple Notes import',
+          'Workspaces, composable projects, and offline Notion / Obsidian / Apple Notes / Markdown import',
           'Encrypted share links with an expiry, an optional password and an open-count cap',
           'Per-Workspace and per-folder Touch ID lock with AES-256 encryption',
           'Screen-share auto-relock',
