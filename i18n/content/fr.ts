@@ -9,7 +9,7 @@ const content: SiteContent = {
     features: {
       breadcrumb: 'Fonctionnalités',
       title: 'Fonctionnalités — notes de réunion IndexOne pour macOS',
-      description: 'Workspaces, tableaux de bord, imports, Ivy en réunion, questions à votre coffre, transcription double flux, preuves, export Markdown et Shared Ivy.',
+      description: 'Workspaces, projets, imports, Ivy en réunion, questions à votre coffre, transcription double flux, preuves, export Markdown et Shared Ivy.',
     },
     privacy: {
       breadcrumb: 'Confidentialité',
@@ -68,7 +68,7 @@ const content: SiteContent = {
     download: 'Télécharger pour macOS',
     privacyCta: 'Comprendre la confidentialité',
     note: 'Signée et notariée · macOS 13.4+ · Apple Silicon et Intel · vos notes restent en Markdown, et elles vous appartiennent',
-    videoLabel: 'Une visite de 90 secondes d’IndexOne : une réunion enregistrée pendant qu’une note est saisie à côté, la note rédigée ensuite et les éléments qu’elle en extrait, la chronologie des intervenants, une question posée à Ivy sur tout le coffre et sa réponse sourcée, le graphe de connaissances, la barre des Workspaces et la recherche sur l’appareil, un tableau en direct, la vue Personnes, et un Workspace qui refuse de s’ouvrir parce qu’il est scellé',
+    videoLabel: 'Une visite de 90 secondes d’IndexOne : une réunion enregistrée pendant qu’une note est saisie à côté, la note rédigée ensuite et les éléments qu’elle en extrait, la chronologie des intervenants, une question posée à Ivy sur tout le coffre et sa réponse sourcée, le graphe de connaissances, la barre des Workspaces et la recherche sur l’appareil, un projet, la vue Personnes, et un Workspace qui refuse de s’ouvrir parce qu’il est scellé',
     play: 'Voir la visite de 90 secondes',
   },
   trust: {
@@ -92,7 +92,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Chaque affirmation a sa preuve',
-        body: 'Chaque ligne étayée d’une note renvoie à la seconde d’audio dont elle provient, avec l’intervenant et le niveau de confiance. Les lignes sans preuve n’en reçoivent pas : vous voyez ce qui est vérifié.',
+        body: 'Chaque ligne étayée d’une note renvoie à la seconde d’audio dont elle provient, avec l’intervenant. Les lignes sans preuve n’en reçoivent pas : vous voyez ce qui est vérifié.',
         link: 'Les preuves',
       },
       'security': {
@@ -181,47 +181,47 @@ const content: SiteContent = {
     },
     leavesYes: 'Seulement après consentement, pare-feu d’anonymisation appliqué',
     leavesNo: 'Non',
-    shotAlt: 'Les réglages de confidentialité d’IndexOne, qui indiquent en langage clair ce qui est retiré avant que le moindre texte ne sorte, quels fournisseurs sont dans le cloud, et que le traitement cloud reste désactivé jusqu’à votre accord',
+    shotAlt: 'Les réglages de confidentialité d’IndexOne, qui indiquent en langage clair ce qui est retiré avant que le moindre texte ne sorte, quels fournisseurs sont dans le cloud, et si le traitement cloud a été autorisé',
     footnote: 'IndexOne vous dit, en langage clair, exactement ce qui quitte votre Mac — et chaque appel à une IA cloud est journalisé et vous est présenté. Vos réunions restent sur l’appareil, sauf si vous l’autorisez. Un seul sélecteur de modèle sert pour toutes les fonctions d’IA, et il accepte toujours un identifiant de modèle saisi à la main — un modèle sorti après cette version fonctionne donc aussi.',
   },
   features: {
     eyebrow: 'Ce que vous obtenez',
     title: 'Un outil de réunion qui se souvient vraiment.',
-    lead: 'Un seul espace chiffré, trois façons de l’utiliser — l’app, un serveur MCP local et vos fichiers Markdown exportés. Une seule arborescence contient tout, les tableaux s’appuient dessus, et Ivy lit l’ensemble.',
+    lead: 'Un seul espace chiffré, trois façons de l’utiliser — l’app, un serveur MCP local et vos fichiers Markdown exportés. Une seule arborescence contient tout, les projets s’appuient dessus, et Ivy lit l’ensemble.',
     items: {
       'workspaces': {
         eyebrow: 'Workspaces',
         title: 'Une seule arborescence pour tout',
         body: 'Une arborescence unique — <b>Workspaces › dossiers › vos enregistrements et notes</b> — dans une barre latérale qui se replie en rail quand vous voulez de la place. Verrouillez un Workspace et tout ce qu’il contient est scellé avec lui.',
         points: [
-          'Enregistrements, notes, tâches et tableaux se rangent au même endroit',
+          'Enregistrements, notes, tâches et projets se rangent au même endroit',
           'Un Workspace scellé affiche son nom et rien d’autre — ni compteurs, ni contenu',
           'Demandez à Ivy de ranger un enregistrement égaré à votre place',
           'Supprimé par erreur ? La corbeille le garde 30 jours — ou la durée de votre choix, jusqu’à un an',
         ],
-        alt: 'La barre latérale des Workspaces : une arborescence de Workspaces et de dossiers contenant enregistrements, notes et tableaux, avec un Workspace verrouillé en bas',
+        alt: 'La barre latérale des Workspaces : une arborescence de Workspaces et de dossiers contenant enregistrements, notes et projets, avec un Workspace verrouillé en bas',
       },
       'dashboards': {
-        eyebrow: 'Tableaux de bord',
-        title: 'Des tableaux que vous composez',
-        body: 'Placez des notes, enregistrements, documents, personnes, registres d’engagements et rappels sur un tableau, puis lisez-le à travers les vues <b>Brief / Overview / Commitments / Sources / People</b>. Épinglez une <b>réponse vivante</b> — une question que l’app tient à jour, et qu’elle retire dès que ses sources ne sont plus lisibles. Vous pouvez aussi interroger un tableau directement, uniquement à partir de ce qu’il contient.',
+        eyebrow: 'Projets',
+        title: 'Des projets que vous composez',
+        body: 'Rassemblez des notes, enregistrements, documents, personnes, registres d’engagements et rappels dans un projet, puis lisez-le à travers les vues <b>Brief / Overview / Commitments / Sources / People</b>. Épinglez une <b>réponse vivante</b> — une question enregistrée dont la dernière réponse est conservée avec sa date, mise à jour quand vous le demandez, et retirée dès que ses sources ne sont plus lisibles. Vous pouvez aussi interroger un projet directement, uniquement à partir de ce qu’il contient.',
         points: [
           'Sept types de tuiles — une note, un enregistrement, un document, une personne, un registre d’engagements, une liste de rappels ou une réponse vivante',
           'Cinq vues sur les mêmes tuiles — sans jamais rien dupliquer',
-          'Un tableau affiche ses propres limites : ce qu’il peut lire, et ce qu’il en a déduit',
+          'Un projet affiche ses propres limites : ce qu’il peut lire, et ce qu’il en a déduit',
         ],
-        alt: 'Un tableau dans sa vue Brief : une réponse vivante épinglée, ce qui demande votre attention et les preuves récentes qui l’appuient',
+        alt: 'Un projet dans sa vue Brief : la réponse enregistrée à une question épinglée, ce qui demande votre attention et les preuves récentes qui l’appuient',
       },
       'imports': {
         eyebrow: 'Imports',
         title: 'Apportez vos notes existantes',
-        body: 'Settings → Imports récupère un <b>export Notion</b>, un <b>coffre Obsidian</b> ou <b>Apple Notes</b>. Entièrement hors ligne — sans compte, sans clé, sans appel réseau. Chaque import commence par une simulation, pour voir ce qu’il écrirait avant qu’il n’écrive quoi que ce soit.',
+        body: 'Settings → Imports récupère un <b>export Notion</b>, un <b>coffre Obsidian</b>, <b>Apple Notes</b>, un dossier de <b>fichiers Markdown</b> ou une <b>sauvegarde IndexOne</b>. Entièrement hors ligne — sans compte, sans clé, sans appel réseau. Chaque import commence par une simulation, pour voir ce qu’il écrirait avant qu’il n’écrive quoi que ce soit.',
         points: [
-          'Trois sources : un export Notion, un coffre Obsidian, Apple Notes',
+          'Cinq sources : un export Notion, un coffre Obsidian, Apple Notes, un dossier de fichiers Markdown, une sauvegarde IndexOne',
           'Simulation d’abord — rien n’est écrit tant que vous ne validez pas',
           'Les notes importées arrivent dans leur propre dossier nommé, et Ivy les lit comme tout le reste',
         ],
-        alt: 'Settings → Imports : Notion, Obsidian et Apple Notes, avec la mention que tout se passe sur ce Mac et que rien n’est envoyé',
+        alt: 'Settings → Imports : Notion, Obsidian, Apple Notes, fichiers Markdown et sauvegarde IndexOne, avec la mention que tout se passe sur ce Mac et que rien n’est envoyé',
       },
       'ivy': {
         eyebrow: 'Ivy',
@@ -272,10 +272,10 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Preuves',
         title: 'Chaque affirmation remonte à l’enregistrement.',
-        body: 'Les notes d’IndexOne ne vous demandent pas de leur faire confiance. Chaque ligne fondée sur ce qui a réellement été dit porte une preuve — cliquez dessus pour aller directement à la seconde d’audio correspondante, avec l’intervenant et le niveau de confiance. Les lignes paraphrasées ou non étayées n’en ont pas : vous voyez d’un coup d’œil ce qui est vérifié.',
+        body: 'Les notes d’IndexOne ne vous demandent pas de leur faire confiance. Chaque ligne fondée sur ce qui a réellement été dit porte une preuve — cliquez dessus pour aller directement à la seconde d’audio correspondante, avec l’intervenant. Les lignes paraphrasées ou non étayées n’en ont pas : vous voyez d’un coup d’œil ce qui est vérifié.',
         points: [
           'Cliquez sur une affirmation, écoutez exactement d’où elle vient',
-          'Intervenant et confiance de la reconnaissance vocale sur chaque preuve',
+          'Intervenant et seconde exacte sur chaque preuve',
           'Sept documents en un clic à partir de n’importe quelle réunion — e-mail de suivi, journal des décisions, ticket, compte rendu de 1:1, standup, récap commercial, notes d’entretien',
           'Les dossiers scellés ne laissent jamais fuiter ni horodatage ni intervenant',
         ],
@@ -335,7 +335,7 @@ const content: SiteContent = {
           'Recherche sémantique et graphe de connaissances automatique',
           'Notes indépendantes avec un éditeur assisté par Ivy',
           'Partage chiffré de bout en bout avec View only / Can edit par document (compte requis)',
-          'Workspaces, tableaux de bord composables et import hors ligne depuis Notion / Obsidian / Apple Notes',
+          'Workspaces, projets composables et import hors ligne depuis Notion / Obsidian / Apple Notes / Markdown',
           'Liens de partage chiffrés avec date d’expiration, mot de passe optionnel et nombre d’ouvertures limité',
           'Verrouillage Touch ID par Workspace et par dossier avec chiffrement AES-256',
           'Reverrouillage automatique lors d’un partage d’écran',

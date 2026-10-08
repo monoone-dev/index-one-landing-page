@@ -9,7 +9,7 @@ const content: SiteContent = {
     features: {
       breadcrumb: '功能',
       title: '功能一览 — IndexOne macOS 会议笔记',
-      description: 'Workspaces、看板、导入、会中 Ivy、向整个知识库提问、双音轨转写、出处凭证、Markdown 导出与 Shared Ivy——IndexOne 的全部功能都在这里。',
+      description: 'Workspaces、项目、导入、会中 Ivy、向整个知识库提问、双音轨转写、出处凭证、Markdown 导出与 Shared Ivy——IndexOne 的全部功能都在这里。',
     },
     privacy: {
       breadcrumb: '隐私',
@@ -68,7 +68,7 @@ const content: SiteContent = {
     download: '下载 macOS 版',
     privacyCta: '了解隐私机制',
     note: '已签名并通过公证 · macOS 13.4+ · 支持 Apple Silicon 和 Intel · 笔记始终是属于你的 Markdown',
-    videoLabel: 'IndexOne 90 秒导览：一边录制会议一边在旁记笔记；会后整理的笔记及从中提取的要点；发言人时间线；向 Ivy 提出跨整个知识库的问题并获得附带出处的回答；知识图谱；Workspaces 侧栏与设备端搜索；实时看板；People；以及一个因已加密封存而拒绝打开的 Workspace',
+    videoLabel: 'IndexOne 90 秒导览：一边录制会议一边在旁记笔记；会后整理的笔记及从中提取的要点；发言人时间线；向 Ivy 提出跨整个知识库的问题并获得附带出处的回答；知识图谱；Workspaces 侧栏与设备端搜索；项目；People；以及一个因已加密封存而拒绝打开的 Workspace',
     play: '观看 90 秒导览',
   },
   trust: {
@@ -92,7 +92,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: '每条结论都有凭证',
-        body: '笔记中每一行有据可查的内容，都链接到它所对应的那一秒音频，并标明发言人和置信度。缺乏证据的内容不会获得凭证，哪些已经核实一目了然。',
+        body: '笔记中每一行有据可查的内容，都链接到它所对应的那一秒音频，并标明发言人。缺乏证据的内容不会获得凭证，哪些已经核实一目了然。',
         link: '出处凭证',
       },
       'security': {
@@ -181,47 +181,47 @@ const content: SiteContent = {
     },
     leavesYes: '仅在你同意后，且经过脱敏防火墙处理',
     leavesNo: '不会',
-    shotAlt: 'IndexOne 隐私设置：用平实的语言说明文本外发前会移除哪些内容、哪些服务商属于云端，以及云端处理在你首次允许前始终关闭',
+    shotAlt: 'IndexOne 隐私设置：用平实的语言说明文本外发前会移除哪些内容、哪些服务商属于云端，以及云端处理是否已获允许',
     footnote: 'IndexOne 用平实的语言告诉你，究竟有什么会离开你的 Mac——每一次云端 AI 调用都会被记录并展示给你。除非你主动选择，你的会议始终留在设备上。所有 AI 功能共用同一个模型选择器，而且它始终接受你手动输入的模型 ID——即使是在本版本之后发布的模型，也照样可用。',
   },
   features: {
     eyebrow: '你将获得',
     title: '真正记得住的会议工具。',
-    lead: '一个加密存储，三种使用方式——应用本身、本地 MCP 服务器，以及你导出的 Markdown 文件。一棵树容纳一切，看板建立在它之上，而 Ivy 能读懂其中的全部内容。',
+    lead: '一个加密存储，三种使用方式——应用本身、本地 MCP 服务器，以及你导出的 Markdown 文件。一棵树容纳一切，项目建立在它之上，而 Ivy 能读懂其中的全部内容。',
     items: {
       'workspaces': {
         eyebrow: 'Workspaces',
         title: '一棵树，装下一切',
         body: '一棵完整的树——<b>Workspaces › 文件夹 › 你的录音与笔记</b>——尽在一个侧边栏中，需要更多空间时可收起为窄栏。锁定一个 Workspace，其中的一切都会随之封存。',
         points: [
-          '录音、笔记、任务和看板都归档在同一个地方',
+          '录音、笔记、任务和项目都归档在同一个地方',
           '已封存的 Workspace 只显示名称——没有数量，也没有内容',
           '让 Ivy 帮你把零散的录音归档',
           '误删了？回收站会保留 30 天——也可以自行设置，最长一年',
         ],
-        alt: 'Workspaces 侧边栏：由 Workspaces 和文件夹组成的一棵树，收纳着录音、笔记和看板，底部是一个已锁定的 Workspace',
+        alt: 'Workspaces 侧边栏：由 Workspaces 和文件夹组成的一棵树，收纳着录音、笔记和项目，底部是一个已锁定的 Workspace',
       },
       'dashboards': {
-        eyebrow: '看板',
-        title: '由你组合的看板',
-        body: '把笔记、录音、文档、人员、承诺台账和提醒事项拖到看板上，再通过 <b>Brief / Overview / Commitments / Sources / People</b> 视角来查看。还可以固定一个<b>实时答案</b>——由应用持续更新的问题，一旦其出处变得不可读取，便会立即隐藏。你也可以直接向看板提问，回答只依据看板上的内容。',
+        eyebrow: '项目',
+        title: '由你组合的项目',
+        body: '把笔记、录音、文档、人员、承诺台账和提醒事项汇集到项目中，再通过 <b>Brief / Overview / Commitments / Sources / People</b> 视角来查看。还可以固定一个<b>实时答案</b>——一个已保存的问题，其最近一次回答连同回答日期一起保留，可按你的要求重新回答，一旦其出处变得不可读取，便会立即隐藏。你也可以直接向项目提问，回答只依据项目中的内容。',
         points: [
           '七种卡片——笔记、录音、文档、人员、承诺台账、提醒列表或实时答案',
           '同一组卡片，五种视角——任何内容都无需复制第二份',
-          '看板会标明自身边界：它能读取什么，又推导出了什么',
+          '项目会标明自身边界：它能读取什么，又推导出了什么',
         ],
-        alt: 'Brief 视角下的看板：一个已固定的实时答案、需要关注的事项，以及背后的最新证据',
+        alt: 'Brief 视角下的项目：一个已固定问题的已保存答案、需要关注的事项，以及背后的最新证据',
       },
       'imports': {
         eyebrow: '导入',
         title: '带上你已有的笔记',
-        body: '在 Settings → Imports（设置 → 导入）中，可导入 <b>Notion 导出文件</b>、<b>Obsidian 知识库</b>或 <b>Apple Notes</b>。全程离线——无需账号，无需密钥，不发起任何网络请求。每次导入都会先进行一次试运行，让你在写入任何内容之前就看到它将写入什么。',
+        body: '在 Settings → Imports（设置 → 导入）中，可导入 <b>Notion 导出文件</b>、<b>Obsidian 知识库</b>、<b>Apple Notes</b>、<b>Markdown 文件</b>文件夹或 <b>IndexOne 备份</b>。全程离线——无需账号，无需密钥，不发起任何网络请求。每次导入都会先进行一次试运行，让你在写入任何内容之前就看到它将写入什么。',
         points: [
-          '三种来源：Notion 导出文件、Obsidian 知识库、Apple Notes',
+          '五种来源：Notion 导出文件、Obsidian 知识库、Apple Notes、Markdown 文件夹、IndexOne 备份',
           '先试运行——在你确认之前，不会写入任何内容',
           '导入的笔记会放进各自命名的文件夹，Ivy 会像读取其他内容一样读取它们',
         ],
-        alt: 'Settings → Imports：Notion、Obsidian 和 Apple Notes，并注明一切都在这台 Mac 上完成，不会上传任何内容',
+        alt: 'Settings → Imports：Notion、Obsidian、Apple Notes、Markdown 文件和 IndexOne 备份，并注明一切都在这台 Mac 上完成，不会上传任何内容',
       },
       'ivy': {
         eyebrow: 'Ivy',
@@ -272,10 +272,10 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: '出处凭证',
         title: '每条结论都能追溯到原始录音。',
-        body: 'IndexOne 的笔记不要求你盲目信任。凡是基于实际发言内容的每一行，都带有一条凭证——点击即可直接跳到那一秒的音频，并显示发言人和置信度。转述或缺乏依据的内容不会获得凭证，哪些已经核实一眼便知。',
+        body: 'IndexOne 的笔记不要求你盲目信任。凡是基于实际发言内容的每一行，都带有一条凭证——点击即可直接跳到那一秒的音频，并显示发言人。转述或缺乏依据的内容不会获得凭证，哪些已经核实一眼便知。',
         points: [
           '点击一条结论，就能听到它的确切出处',
-          '每条凭证都标有发言人和语音识别置信度',
+          '每条凭证都标有发言人和精确到秒的时间',
           '任何会议都可一键生成七种成果——跟进邮件、决策日志、工作工单、一对一回顾、站会纪要、销售回顾、面试记录',
           '已封存的文件夹绝不会泄露任何时间或发言人信息',
         ],
@@ -335,7 +335,7 @@ const content: SiteContent = {
           '语义搜索与自动生成的知识图谱',
           '独立笔记，配备 Ivy 辅助编辑器',
           '端到端加密共享，可按文档设置 View only / Can edit（需要账号）',
-          'Workspaces、可组合的看板，以及离线导入 Notion / Obsidian / Apple Notes',
+          'Workspaces、可组合的项目，以及离线导入 Notion / Obsidian / Apple Notes / Markdown',
           '加密分享链接，可设置有效期、可选密码和打开次数上限',
           '按 Workspace 和文件夹设置 Touch ID 锁，采用 AES-256 加密',
           '屏幕共享时自动重新锁定',

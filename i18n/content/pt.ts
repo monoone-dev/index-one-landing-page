@@ -9,7 +9,7 @@ const content: SiteContent = {
     features: {
       breadcrumb: 'Recursos',
       title: 'Recursos — notas de reunião IndexOne para macOS',
-      description: 'Workspaces, painéis, importações, Ivy nas reuniões, perguntas ao acervo, transcrição em dois canais, recibos, Markdown e Shared Ivy: tudo do IndexOne.',
+      description: 'Workspaces, projetos, importações, Ivy nas reuniões, perguntas ao acervo, transcrição em dois canais, recibos, Markdown e Shared Ivy: tudo do IndexOne.',
     },
     privacy: {
       breadcrumb: 'Privacidade',
@@ -68,7 +68,7 @@ const content: SiteContent = {
     download: 'Baixar para macOS',
     privacyCta: 'Veja como funciona a privacidade',
     note: 'Assinado e notarizado · macOS 13.4+ · Apple Silicon e Intel · suas notas continuam em Markdown, e são suas',
-    videoLabel: 'Um tour de 90 segundos pelo IndexOne: uma reunião sendo gravada enquanto uma nota é digitada ao lado, a nota escrita depois e os itens que ela extrai, a linha do tempo de quem fala, uma pergunta feita à Ivy sobre todo o acervo e respondida com fontes, o grafo de conhecimento, a barra de Workspaces e a busca no dispositivo, um painel ao vivo, Pessoas, e um Workspace que se recusa a abrir porque está selado',
+    videoLabel: 'Um tour de 90 segundos pelo IndexOne: uma reunião sendo gravada enquanto uma nota é digitada ao lado, a nota escrita depois e os itens que ela extrai, a linha do tempo de quem fala, uma pergunta feita à Ivy sobre todo o acervo e respondida com fontes, o grafo de conhecimento, a barra de Workspaces e a busca no dispositivo, um projeto, Pessoas, e um Workspace que se recusa a abrir porque está selado',
     play: 'Assista ao tour de 90 segundos',
   },
   trust: {
@@ -92,7 +92,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Toda afirmação tem um recibo',
-        body: 'Cada linha embasada de uma nota leva ao segundo exato do áudio de onde veio, com quem falou e o nível de confiança. Linhas sem evidência ficam sem recibo, então você vê o que está verificado.',
+        body: 'Cada linha embasada de uma nota leva ao segundo exato do áudio de onde veio, com quem falou. Linhas sem evidência ficam sem recibo, então você vê o que está verificado.',
         link: 'Recibos',
       },
       'security': {
@@ -181,47 +181,47 @@ const content: SiteContent = {
     },
     leavesYes: 'Só após consentimento, com o firewall de anonimização aplicado',
     leavesNo: 'Não',
-    shotAlt: 'Configurações de privacidade do IndexOne, explicando em linguagem simples o que é removido antes de qualquer texto sair, quais provedores são na nuvem e que o processamento na nuvem fica desligado até você permitir uma vez',
+    shotAlt: 'Configurações de privacidade do IndexOne, explicando em linguagem simples o que é removido antes de qualquer texto sair, quais provedores são na nuvem e se o processamento na nuvem foi permitido',
     footnote: 'O IndexOne diz, em linguagem simples, exatamente o que sai do seu Mac — e cada chamada de IA na nuvem é registrada e mostrada para você. Suas reuniões ficam no dispositivo, a menos que você ative a nuvem. Um único seletor de modelo é usado em todos os recursos de IA, e ele sempre aceita um ID de modelo digitado por você — então um modelo lançado depois desta versão continua funcionando.',
   },
   features: {
     eyebrow: 'O que você ganha',
     title: 'Uma ferramenta de reuniões que realmente lembra.',
-    lead: 'Um armazenamento criptografado, três formas de usar — o app, um servidor MCP local e seus arquivos Markdown exportados. Uma árvore guarda tudo, os painéis ficam por cima dela, e a Ivy lê tudo.',
+    lead: 'Um armazenamento criptografado, três formas de usar — o app, um servidor MCP local e seus arquivos Markdown exportados. Uma árvore guarda tudo, os projetos ficam por cima dela, e a Ivy lê tudo.',
     items: {
       'workspaces': {
         eyebrow: 'Workspaces',
         title: 'Uma árvore para tudo',
         body: 'Uma única árvore — <b>Workspaces › pastas › suas gravações e notas</b> — em uma barra lateral que se recolhe em uma faixa estreita quando você quer mais espaço. Bloqueie um Workspace e tudo o que está dentro dele é selado junto.',
         points: [
-          'Gravações, notas, tarefas e painéis ficam guardados no mesmo lugar',
+          'Gravações, notas, tarefas e projetos ficam guardados no mesmo lugar',
           'Um Workspace selado mostra o nome e mais nada — sem contagens, sem conteúdo',
           'Peça à Ivy para arquivar uma gravação perdida para você',
           'Apagou sem querer? A lixeira guarda por 30 dias — ou pelo tempo que você definir, até um ano',
         ],
-        alt: 'A barra lateral de Workspaces: uma árvore de Workspaces e pastas com gravações, notas e painéis, e um Workspace bloqueado no final',
+        alt: 'A barra lateral de Workspaces: uma árvore de Workspaces e pastas com gravações, notas e projetos, e um Workspace bloqueado no final',
       },
       'dashboards': {
-        eyebrow: 'Painéis',
-        title: 'Painéis que você monta',
-        body: 'Traga notas, gravações, documentos, pessoas, registros de compromissos e lembretes para um painel e leia tudo pelas lentes <b>Brief / Overview / Commitments / Sources / People</b>. Fixe uma <b>resposta viva</b> — uma pergunta que o app mantém atualizada e que é ocultada assim que as fontes deixam de ser legíveis. Você pode fazer perguntas diretamente a um painel, com respostas baseadas só no que está nele.',
+        eyebrow: 'Projetos',
+        title: 'Projetos que você monta',
+        body: 'Traga notas, gravações, documentos, pessoas, registros de compromissos e lembretes para um projeto e leia tudo pelas lentes <b>Brief / Overview / Commitments / Sources / People</b>. Fixe uma <b>resposta viva</b> — uma pergunta salva cuja última resposta fica guardada com a data, é respondida de novo quando você pede e é ocultada assim que as fontes deixam de ser legíveis. Você pode fazer perguntas diretamente a um projeto, com respostas baseadas só no que está nele.',
         points: [
           'Sete tipos de bloco — uma nota, uma gravação, um documento, uma pessoa, um registro de compromissos, uma lista de lembretes ou uma resposta viva',
           'Cinco lentes sobre os mesmos blocos — sem cópia de nada',
-          'Um painel declara os próprios limites: o que ele pode ler e o que ele deduziu',
+          'Um projeto declara os próprios limites: o que ele pode ler e o que ele deduziu',
         ],
-        alt: 'Um painel na lente Brief: uma resposta viva fixada, o que precisa de atenção e as evidências recentes por trás disso',
+        alt: 'Um projeto na lente Brief: a resposta salva a uma pergunta fixada, o que precisa de atenção e as evidências recentes por trás disso',
       },
       'imports': {
         eyebrow: 'Importações',
         title: 'Traga as notas que você já tem',
-        body: 'Settings → Imports traz uma <b>exportação do Notion</b>, um <b>vault do Obsidian</b> ou o <b>Apple Notes</b>. Tudo offline — sem conta, sem chave, sem chamada de rede. Toda importação começa como simulação, para você ver o que ela gravaria antes de gravar qualquer coisa.',
+        body: 'Settings → Imports traz uma <b>exportação do Notion</b>, um <b>vault do Obsidian</b>, o <b>Apple Notes</b>, uma pasta de <b>arquivos Markdown</b> ou um <b>backup do IndexOne</b>. Tudo offline — sem conta, sem chave, sem chamada de rede. Toda importação começa como simulação, para você ver o que ela gravaria antes de gravar qualquer coisa.',
         points: [
-          'Três fontes: uma exportação do Notion, um vault do Obsidian e o Apple Notes',
+          'Cinco fontes: uma exportação do Notion, um vault do Obsidian, o Apple Notes, uma pasta de arquivos Markdown e um backup do IndexOne',
           'Simulação primeiro — nada é gravado até você confirmar',
           'As notas importadas ficam em uma pasta própria com nome, e a Ivy as lê como todo o resto',
         ],
-        alt: 'Settings → Imports: Notion, Obsidian e Apple Notes, com o aviso de que tudo acontece neste Mac e nada é enviado',
+        alt: 'Settings → Imports: Notion, Obsidian, Apple Notes, arquivos Markdown e backup do IndexOne, com o aviso de que tudo acontece neste Mac e nada é enviado',
       },
       'ivy': {
         eyebrow: 'Ivy',
@@ -272,10 +272,10 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Recibos',
         title: 'Toda afirmação leva de volta à gravação.',
-        body: 'As notas do IndexOne não pedem que você confie nelas. Cada linha baseada no que foi realmente dito traz um recibo — clique nele para ir direto àquele segundo do áudio, com quem falou e o nível de confiança. Linhas parafraseadas ou sem embasamento ficam sem recibo, então você vê de relance o que está verificado.',
+        body: 'As notas do IndexOne não pedem que você confie nelas. Cada linha baseada no que foi realmente dito traz um recibo — clique nele para ir direto àquele segundo do áudio, com quem falou. Linhas parafraseadas ou sem embasamento ficam sem recibo, então você vê de relance o que está verificado.',
         points: [
           'Clique em uma afirmação e ouça exatamente de onde ela veio',
-          'Quem falou e a confiança do ASR em cada recibo',
+          'Quem falou e o segundo exato em cada recibo',
           'Sete documentos com um clique a partir de qualquer reunião — e-mail de follow-up, registro de decisões, ticket de trabalho, resumo de 1:1, standup, resumo de vendas, notas de entrevista',
           'Pastas seladas nunca vazam horários nem quem falou',
         ],
@@ -335,7 +335,7 @@ const content: SiteContent = {
           'Busca semântica e grafo de conhecimento automático',
           'Notas avulsas com editor assistido pela Ivy',
           'Compartilhamento com criptografia de ponta a ponta e permissões View only / Can edit por documento (exige conta)',
-          'Workspaces, painéis configuráveis e importação offline do Notion / Obsidian / Apple Notes',
+          'Workspaces, projetos configuráveis e importação offline do Notion / Obsidian / Apple Notes / Markdown',
           'Links de compartilhamento criptografados com validade, senha opcional e limite de aberturas',
           'Bloqueio com Touch ID por Workspace e por pasta, com criptografia AES-256',
           'Rebloqueio automático ao compartilhar a tela',
