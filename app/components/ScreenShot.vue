@@ -6,14 +6,13 @@ defineProps<{ shot: Screenshot, alt: string }>()
 
 <template>
   <figure class="shot">
-    <img
-      :src="shot.src"
+    <ThemeImage
+      :dark="shot.src"
+      :light="shot.light"
       :width="shot.width"
       :height="shot.height"
       :alt="alt"
-      loading="lazy"
-      decoding="async"
-    >
+    />
   </figure>
 </template>
 
@@ -26,11 +25,5 @@ defineProps<{ shot: Screenshot, alt: string }>()
   border-radius: var(--round-lg);
   background: var(--surface-solid);
   box-shadow: var(--shadow-md);
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
 }
 </style>
