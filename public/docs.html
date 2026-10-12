@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IndexOne documentation — setup, privacy, Ivy and integrations</title>
+  <meta name="docs-version" content="3.4.0" />
   <meta name="description" content="IndexOne docs: how recording, on-device Ivy, notes, the knowledge graph, the lock model and integrations work — all local-first on your Mac." />
   <meta name="theme-color" content="#0ea5e9" />
   <link rel="canonical" href="https://index-one.io/docs.html" />
@@ -534,6 +535,13 @@
     .doc-title-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
 
     .docs-content { min-width: 0; max-width: 760px; }
+    .docs-version {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-bottom: 22px;
+      padding: 8px 14px; border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
+      background: var(--surface-raised); color: var(--text-secondary); font-size: 13.5px;
+    }
+    .docs-version b { color: var(--text-primary); font-family: var(--font-mono); font-weight: 600; }
+    .docs-version a { margin-left: auto; color: var(--accent-text); font-weight: 600; }
     .doc-panel { display: none; }
     .doc-panel.active { display: block; }
     .doc-panel .eyebrow { display: block; margin-bottom: 10px; }
@@ -725,17 +733,20 @@
         <div class="docs-group">
           <div class="docs-group-title">Organizing your work</div>
           <a class="docs-nav-link" data-doc="spaces"><span class="dot"></span>Workspaces</a>
-          <a class="docs-nav-link" data-doc="dashboards"><span class="dot"></span>Dashboards</a>
+          <a class="docs-nav-link" data-doc="dashboards"><span class="dot"></span>Projects</a>
           <a class="docs-nav-link" data-doc="imports"><span class="dot"></span>Imports</a>
           <a class="docs-nav-link" data-doc="tasks"><span class="dot"></span>Tasks &amp; reminders</a>
         </div>
         <div class="docs-group">
           <div class="docs-group-title">Core capabilities</div>
           <a class="docs-nav-link" data-doc="capture"><span class="dot"></span>Capture &amp; transcription</a>
+          <a class="docs-nav-link" data-doc="translation"><span class="dot"></span>Meeting translation</a>
           <a class="docs-nav-link" data-doc="ivy"><span class="dot"></span>On-device Ivy</a>
           <a class="docs-nav-link" data-doc="ivy-capabilities"><span class="dot"></span>What Ivy can do</a>
+          <a class="docs-nav-link" data-doc="ivy-page"><span class="dot"></span>Ivy&rsquo;s knowledge, briefs &amp; audit</a>
           <a class="docs-nav-link" data-doc="receipts"><span class="dot"></span>Receipts</a>
           <a class="docs-nav-link" data-doc="notes-graph"><span class="dot"></span>Notes, graph &amp; MCP</a>
+          <a class="docs-nav-link" data-doc="analytics"><span class="dot"></span>Analytics</a>
           <a class="docs-nav-link" data-doc="notes-editor"><span class="dot"></span>Standalone notes &amp; the Ivy menu</a>
         </div>
         <div class="docs-group">
@@ -745,7 +756,7 @@
         <div class="docs-group">
           <div class="docs-group-title">Integrations</div>
           <a class="docs-nav-link" data-doc="providers"><span class="dot"></span>AI providers</a>
-          <a class="docs-nav-link" data-doc="integrations-apps"><span class="dot"></span>Obsidian, MCP, Reminders &amp; file ingestion</a>
+          <a class="docs-nav-link" data-doc="integrations-apps"><span class="dot"></span>MCP, Reminders &amp; file ingestion</a>
         </div>
         <div class="docs-group">
           <div class="docs-group-title">Configuration</div>
@@ -757,6 +768,7 @@
         <div class="docs-group">
           <div class="docs-group-title">Privacy &amp; security</div>
           <a class="docs-nav-link" data-doc="data-flow"><span class="dot"></span>What never leaves your Mac</a>
+          <a class="docs-nav-link" data-doc="protection"><span class="dot"></span>Touch ID protection</a>
           <a class="docs-nav-link" data-doc="lock-model"><span class="dot"></span>The lock model</a>
           <a class="docs-nav-link" data-doc="redaction-firewall"><span class="dot"></span>Redaction firewall &amp; cloud egress</a>
           <a class="docs-nav-link" data-doc="known-limitations"><span class="dot"></span>Known limitations</a>
@@ -766,16 +778,22 @@
 
       <div class="docs-content">
 
-        <article class="doc-panel active" id="doc-welcome" data-keywords="welcome overview intro getting started local-first obsidian">
+        <!-- The app version these docs were checked against. Bump it, and the date, whenever the docs are revised for a release. -->
+        <p class="docs-version" id="docsVersion" data-docs-version="3.4.0">
+          <span>Written for IndexOne <b>3.4.0</b>, released 12&nbsp;October&nbsp;2026.</span>
+          <a href="./changelog/">Release notes →</a>
+        </p>
+
+        <article class="doc-panel active" id="doc-welcome" data-keywords="welcome overview intro getting started local-first markdown languages">
           <span class="eyebrow">Getting started</span>
           <h1>Welcome to IndexOne</h1>
-          <p class="lede">IndexOne records your meetings, transcribes and reasons over them entirely on your Mac, and turns each one into a clean note you own — as plain Markdown, inside your own Obsidian vault.</p>
+          <p class="lede">IndexOne records your meetings, transcribes and reasons over them entirely on your Mac, and turns each one into a clean note you own and can take with you as plain Markdown.</p>
           <div class="doc-body">
             <p>Three ideas run through everything in these docs:</p>
             <ul>
               <li><b>Local-first.</b> Recording, transcription and Ivy, the reasoning layer, are designed to work with no network at all. Cloud providers are opt-in, clearly labelled, and pass through a redaction firewall.</li>
-              <li><b>One source of truth.</b> An encrypted SQLite database is canonical. The app UI, a local read-only MCP server, and your exported Markdown files are three thin readers over the same store — never three diverging copies.</li>
-              <li><b>Yours to keep.</b> Every note is also plain <code>.md</code> with YAML front-matter and <code>[[wikilinks]]</code>. No proprietary format, ever.</li>
+              <li><b>One source of truth.</b> An encrypted SQLite database is canonical. The app and a local read-only MCP server are two readers over the same store — never two diverging copies.</li>
+              <li><b>Yours to keep.</b> Any note or meeting can be copied or saved as plain Markdown (or a PDF), and a backup writes everything as <code>.md</code> files with YAML front-matter and <code>[[wikilinks]]</code>. No proprietary format, ever.</li>
             </ul>
           </div>
           <div class="doc-pager">
@@ -794,14 +812,16 @@
               <li>Join or start a call, then press <b>Record</b>. IndexOne captures your mic and the other side's system audio as two separate streams.</li>
               <li>Talk normally. Live captions appear as you speak, merged into a <b>Me / Others</b> transcript by wall-clock.</li>
               <li>Press <b>Stop</b> and choose <b>Create the note now</b> or <b>Process later</b> — the same choice is in the app, the floating bar and the menu-bar tray. Whisper, on your Mac, finishes the transcript, and Ivy writes a structured note — summary, decisions, action items, quotes.</li>
-              <li>Find it later in the app, in your Obsidian vault as a plain <code>.md</code> file, or ask about it through the local MCP server.</li>
+              <li>Find it later in the app, ask Ivy about it, or reach it from another app through the local MCP server. <b>Copy Markdown</b>, <b>Save Markdown…</b> and <b>Save as PDF</b> in the note's <b>More</b> menu take a copy with you.</li>
             </ol>
             <div class="doc-card">
               <h3>No account, no API key</h3>
-              <p>Recording and transcription need nothing but a one-time Whisper model download, which IndexOne handles for you. Notes are written by <b>Claude Code</b> out of the box &mdash; a local CLI that reaches the cloud, and only after you consent once. To keep everything on the Mac, download an on-device model in <b>Settings &rarr; AI &amp; Models</b>.</p>
+              <p>Recording and transcription need nothing but a one-time Whisper model download, which IndexOne handles for you. Notes are written by <b>Claude Code</b> out of the box &mdash; a local CLI that reaches the cloud, and only after you consent once. To keep everything on the Mac, choose <b>Fully local</b> in <b>Settings &rarr; AI Models</b> and download an on-device model.</p>
             </div>
             <h2 id="process-later">Process later</h2>
-            <p>A recording you choose to process later stays on this Mac in a queue. Process one, or everything at once, whenever you like; if a recording can't be processed, the queue says why. Stopping a long recording no longer holds up the app while the note is written.</p>
+            <p>A recording you choose to process later stays on this Mac in the <b>Processing queue</b> (<b>Browse &rarr; Processing queue</b>). <b>Process now</b> handles one, <b>Process all</b> handles everything; a recording that can't be processed says why and offers <b>Retry</b> or <b>Remove</b>. Stopping a long recording does not hold up the app while the note is written.</p>
+            <h2 id="app-language">The app's language</h2>
+            <p>IndexOne is available in English, Polish, German, Spanish, French, Italian, Portuguese, Chinese and Japanese. By default it follows the language of macOS and falls back to English; change it in <b>Settings &rarr; Appearance &rarr; Language</b>. The translations are machine-generated and have not yet been reviewed by native speakers.</p>
           </div>
           <div class="doc-pager">
             <a class="prev" data-doc-link="welcome"><span class="pager-label">Back</span><span class="pager-title">← Welcome to IndexOne</span></a>
@@ -815,11 +835,13 @@
           <p class="lede">Murmur is now IndexOne. Version 3.0 installs as <b>IndexOne.app</b> next to Murmur.app and opens the same library.</p>
           <div class="doc-body">
             <h2 id="same-library">The same library, a new name</h2>
-            <p>Your notes, recordings, folders, settings and Keychain keys stay where they are. The two apps can't run at the same time; once IndexOne has started, you can delete Murmur.app. Nothing in your Obsidian vault is moved.</p>
+            <p>Your notes, recordings, folders, settings and Keychain keys stay where they are. The two apps can't run at the same time; once IndexOne has started, you can delete Murmur.app.</p>
             <h2 id="ivy-engine-migration">The Ivy engine migration</h2>
             <p>After the update a notice asks for a one-time migration, also found in <b>Settings &rarr; About &rarr; Ivy engine migration</b>. It copies your keys in the Keychain to the names the new engine uses and updates notes that still use the old format. Your text stays the same, and <b>Settings &rarr; Health Check</b> shows when the migration is done.</p>
             <h2 id="backup-first">A backup first, if you want one</h2>
-            <p>Before migrating you can save a backup: every note, transcript, document and image as <code>.md</code> files in an <code>index-one.backup</code> folder you choose. It is optional. Locked folders are always left out of a backup and stay locked through the migration — they still open only with Touch ID. See <a href="javascript:void(0)" data-doc-link="backups" style="color:var(--accent-text); font-weight:600;">Backups &amp; Health Check</a>.</p>
+            <p>Before migrating you can save a backup: every note, transcript, document and image as <code>.md</code> files in an <code>index-one.backup</code> folder you choose. It is optional. Locked folders are always left out of a backup and stay locked through the migration — they still open only with Touch ID or your Mac password. See <a href="javascript:void(0)" data-doc-link="backups" style="color:var(--accent-text); font-weight:600;">Backups &amp; Health Check</a>.</p>
+            <h2 id="obsidian-export-removed">Obsidian export, since 3.3</h2>
+            <p>IndexOne no longer writes notes into an Obsidian vault. If you used the export, the vault's notes were moved into IndexOne once, and the vault itself is left alone. Importing from Obsidian is still available in <b>Settings &rarr; Imports</b>, and a <a href="javascript:void(0)" data-doc-link="backups" style="color:var(--accent-text); font-weight:600;">backup</a> writes everything as plain Markdown whenever you want a copy outside the app.</p>
             <h2 id="sharing-sign-in">Signing in to sharing again</h2>
             <p>If you use a sharing account, sign in with your password once after the update; from then on Touch ID unlocks sharing. Links and shared notes from earlier versions keep opening, and what you share now still opens for people on an earlier version.</p>
           </div>
@@ -829,20 +851,24 @@
           </div>
         </article>
 
-        <article class="doc-panel" id="doc-spaces" data-keywords="workspaces spaces hierarchy folders projects tree sidebar rail browse filing move organize lock sealed workspace space recordings notes tasks boards">
+        <article class="doc-panel" id="doc-spaces" data-keywords="workspaces spaces hierarchy folders projects tree sidebar rail browse inbox shared trash restore filing automatic filing smart organize move organize lock sealed workspace space recordings notes tasks">
           <span class="eyebrow">Organizing your work</span>
           <h2 class="doc-title">Workspaces</h2>
           <p class="lede">One tree for everything you record and everything you write. Workspaces replaced the two separate folder systems IndexOne used to have.</p>
           <div class="doc-body">
             <h2 id="one-tree">One tree, four kinds of thing</h2>
-            <p>A <b>Workspace</b> holds folders; a folder holds your recordings, notes, tasks and boards. There is no second hierarchy to keep in sync, and nothing belongs to "notes" instead of to a project. Move a recording into a folder and its note, its tasks and its board all sit beside it.</p>
-            <h2 id="rail-and-panel">The rail and the panel</h2>
-            <p>A slim icon rail is always on the left: <b>Search</b> (⌘K), <b>Ask</b>, <b>Workspaces</b>, <b>Shared</b>, <b>Browse</b>, and at the bottom <b>Capture</b>, <b>Quick note</b> (⌘N) and <b>Settings</b>. Switch on Developer mode and a <b>Logs</b> group joins them. Beside the rail, one contextual panel switches between the Workspaces tree and a flat <b>Browse</b> view that lists everything by kind — meetings, notes, tasks, boards, reminders — plus Ivy, Analytics, Graph and People.</p>
+            <p>A <b>Workspace</b> holds folders; a folder holds your recordings, notes, tasks and projects. There is no second hierarchy to keep in sync, and nothing belongs to "notes" instead of to a project. Move a recording into a folder and its note and its tasks sit beside it.</p>
+            <h2 id="rail-and-panel">The rail and the sidebar</h2>
+            <p>A slim icon rail is always on the left. At the top: <b>Search</b> (⌘K), <b>Smart organize</b> and <b>Browse</b>. At the bottom: <b>Ask Ivy</b>, <b>Settings</b>, and your account avatar, which opens <b>Settings &rarr; Account</b>.</p>
+            <p>Beside the rail, the sidebar holds the <b>Inbox</b> (everything not yet filed), your <b>Workspaces</b> and what is <b>Shared</b> with you. Its footer shows how many protected items are unlocked, with <b>Lock all</b>, and the <b>Capture</b>, <b>Quick note</b> and <b>+</b> buttons (new note, new project, new reminder). With the sidebar collapsed, Capture and Quick note move to the rail. Switch on developer mode and a <b>Developer mode</b> group with the logs joins the sidebar.</p>
+            <p><b>Browse</b> lists everything by kind: <b>Meetings</b>, <b>Processing queue</b>, <b>Notes</b>, <b>Tasks</b>, <b>Projects</b> and <b>Reminders</b>; <a href="javascript:void(0)" data-doc-link="ivy-page" style="color:var(--accent-text); font-weight:600;">Ivy</a>; <a href="javascript:void(0)" data-doc-link="analytics" style="color:var(--accent-text); font-weight:600;">Analytics</a>, <b>Graph</b> and <b>People</b>; and the <b>Trash</b>.</p>
             <h2 id="filing">Filing, by hand or by rule</h2>
             <p>Drag an item where it belongs, or use <b>Smart organize</b>: describe in your own words how the library should be arranged, and it plans the whole reorganization — creating, renaming and moving folders, Workspaces and Projects. Every change is shown in a preview, only what you accept is applied, and one click undoes it.</p>
-            <p>After a reorganization, new notes and recordings follow the same rules: first as suggestions you review, then automatically once you turn that on in <b>Settings &rarr; Notes</b>.</p>
+            <p>After a reorganization, new notes and recordings follow the same rules: first as suggestions you review, then automatically. <b>Settings &rarr; Notes &rarr; Automatic filing</b> chooses how: <b>Rules only</b>, or <b>Rules then ask the model</b> when no rule fits.</p>
+            <h2 id="trash">The Trash</h2>
+            <p>Deleted items go to <b>Browse &rarr; Trash</b> first. <b>Restore</b> puts one back, <b>Delete for good</b> removes it, and <b>Empty Trash</b> removes everything. The Trash keeps items for 30 days by default; choose 7, 14, 30, 60 or 90 days. Items from a protected folder need it unlocked first.</p>
             <h2 id="locking-a-workspace">Locking a Workspace</h2>
-            <p>Lock a Workspace and everything inside it is sealed with it — recordings, notes, transcripts, timelines and audio. A sealed Workspace still shows its <b>name</b>, because that is what you need in order to unlock it, and nothing else: no counts, no children, no items, not even totals.</p>
+            <p>Protect a Workspace with <a href="javascript:void(0)" data-doc-link="protection" style="color:var(--accent-text); font-weight:600;">Touch ID</a> and everything inside it is sealed with it — recordings, notes, transcripts, timelines and audio. A sealed Workspace still shows its <b>name</b>, because that is what you need in order to unlock it, and nothing else: no counts, no children, no items, not even totals.</p>
             <div class="callout security">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
               <p>A Workspace lock cascades by locking each child folder in its own right, so every gate described on the <a href="javascript:void(0)" data-doc-link="lock-model" style="color:var(--accent-text); font-weight:600;">lock model</a> page applies to a Workspace unchanged — including the search index, the graph and the local server.</p>
@@ -850,23 +876,23 @@
           </div>
           <div class="doc-pager">
             <a class="prev" data-doc-link="upgrading"><span class="pager-label">Back</span><span class="pager-title">← Updating to IndexOne 3.0</span></a>
-            <a class="next" data-doc-link="dashboards"><span class="pager-label">Next</span><span class="pager-title">Dashboards →</span></a>
+            <a class="next" data-doc-link="dashboards"><span class="pager-label">Next</span><span class="pager-title">Projects →</span></a>
           </div>
         </article>
 
-        <article class="doc-panel" id="doc-dashboards" data-keywords="dashboards boards tiles lenses brief overview commitments sources people living answer drift numbers pulse promises reminders compose ask a board">
+        <article class="doc-panel" id="doc-dashboards" data-keywords="projects dashboards boards tiles lenses brief overview commitments sources people living answer drift numbers pulse promises reminders compose ask a board">
           <span class="eyebrow">Organizing your work</span>
-          <h2 class="doc-title">Dashboards</h2>
-          <p class="lede">A board is a handful of things you care about, pulled onto one page — and then read through whichever lens you need.</p>
+          <h2 class="doc-title">Projects</h2>
+          <p class="lede">A project is a handful of things you care about, pulled onto one page — and then read through whichever lens you need. (Before 3.1 projects were called dashboards or boards.)</p>
           <div class="doc-body">
             <h2 id="tiles">Seven kinds of tile</h2>
-            <p>Put a <b>note</b>, a <b>recording</b>, a <b>document</b> or a <b>person</b> on a board directly. Or add a derived tile: a <b>reminders</b> list, a <b>promise ledger</b>, or a <b>living answer</b>.</p>
+            <p>Create one with <b>+ &rarr; New project</b>, or use <b>Add to project</b> on an item. Put a <b>note</b>, a <b>recording</b>, a <b>document</b> or a <b>person</b> on a project directly. Or add a derived tile: a <b>reminders</b> list, a <b>promise ledger</b>, or a <b>living answer</b>.</p>
             <h2 id="living-answers">Living answers</h2>
-            <p>A living answer is a question the board keeps up to date — it shows the answer, and when it was last answered. If any source it drew on stops being readable (you locked the Workspace, or left the organization that shared it), the tile <b>withholds the answer</b> rather than serving a stale one from a source you can no longer see.</p>
+            <p>A living answer is a question the project keeps up to date — it shows the answer, and when it was last answered. If any source it drew on stops being readable (you locked the Workspace, or left the organization that shared it), the tile <b>withholds the answer</b> rather than serving a stale one from a source you can no longer see.</p>
             <h2 id="lenses">Five lenses, one set of tiles</h2>
-            <p><b>Brief</b> is the summary read: the pinned answer, what needs attention, the recent evidence. <b>Overview</b> shows the tiles themselves. <b>Commitments</b> collects every promise and reminder the board can resolve. <b>Sources</b> lists the material it can actually read. <b>People</b> groups it by who is involved. No lens keeps a second copy of anything.</p>
-            <h2 id="ask-a-board">Ask a board</h2>
-            <p>You can ask a board a question directly, and the answer is grounded <i>only</i> in what is on it. Each board also states its own boundary — how many sources it can read, and how many views it derived from them — so you can tell the difference between "nothing to report" and "I can't see the material".</p>
+            <p><b>Brief</b> is the summary read: the pinned answer, what needs attention, the recent evidence. <b>Overview</b> shows the tiles themselves. <b>Commitments</b> collects every promise and reminder the project can resolve. <b>Sources</b> lists the material it can actually read. <b>People</b> groups it by who is involved. No lens keeps a second copy of anything.</p>
+            <h2 id="ask-a-board">Ask a project</h2>
+            <p>You can ask a project a question directly, and the answer is grounded <i>only</i> in what is on it. Each project also states its own boundary — how many sources it can read, and how many views it derived from them — so you can tell the difference between "nothing to report" and "I can't see the material".</p>
           </div>
           <div class="doc-pager">
             <a class="prev" data-doc-link="spaces"><span class="pager-label">Back</span><span class="pager-title">← Workspaces</span></a>
@@ -881,7 +907,7 @@
           <div class="doc-body">
             <h2 id="three-sources">Four sources</h2>
             <p><b>Notion</b> — export your <b>Notion</b> workspace as <i>Markdown &amp; CSV</i> with "Create folders for subpages" on, then point IndexOne at the <code>.zip</code> or the unpacked folder. <b>Obsidian</b> — point it at the vault folder. <b>Apple Notes</b> — IndexOne reads them through macOS, which will ask your permission the first time. <b>Any folder of Markdown</b> — point it at a folder of loose <code>.md</code> files.</p>
-            <p>An IndexOne backup is restored from the same place: see <a href="javascript:void(0)" data-doc-link="backups" style="color:var(--accent-text); font-weight:600;">Backups &amp; Health Check</a>.</p>
+            <p>A fifth tab, <b>IndexOne backup</b>, restores a backup from the same place: see <a href="javascript:void(0)" data-doc-link="backups" style="color:var(--accent-text); font-weight:600;">Backups &amp; Health Check</a>.</p>
             <h2 id="offline">Entirely offline</h2>
             <p>Every import runs on your Mac. Nothing is uploaded, and no provider is contacted — importing does not touch the cloud settings at all.</p>
             <h2 id="dry-run">Dry run first</h2>
@@ -890,7 +916,7 @@
             <p>Imported notes are ordinary notes: filed in a folder, searchable, <code>[[linkable]]</code>, part of the same Ivy index, and covered by the same lock. Find it all in <b>Settings → Imports</b>.</p>
           </div>
           <div class="doc-pager">
-            <a class="prev" data-doc-link="dashboards"><span class="pager-label">Back</span><span class="pager-title">← Dashboards</span></a>
+            <a class="prev" data-doc-link="dashboards"><span class="pager-label">Back</span><span class="pager-title">← Projects</span></a>
             <a class="next" data-doc-link="tasks"><span class="pager-label">Next</span><span class="pager-title">Tasks &amp; reminders →</span></a>
           </div>
         </article>
@@ -924,11 +950,12 @@
             <p>Transcription runs fully on-device via <code>whisper.cpp</code> with Metal acceleration. Pick a model from <code>tiny</code> to <code>large-v3</code> &mdash; including the faster turbo build and quantized variants &mdash; or just pick a rung: <b>Light</b>, <b>Balanced</b>, <b>Sharp</b> or <b>Maximum</b>. IndexOne picks a sensible default for your Mac. Speaker diarization and voice-activity detection are optional on top.</p>
             <ul>
               <li>Live captions while you talk, not just after the call ends</li>
-              <li>A floating recorder bar you can trigger from any app</li>
+              <li>A floating recorder bar you can trigger from any app, drag by any part and close</li>
+              <li>An optional <b>voice trigger</b>: say "start recording" to begin hands-free (<b>Settings &rarr; Audio &amp; Capture</b>)</li>
               <li>Segments land straight in the encrypted SQLite store as the single source of truth</li>
             </ul>
             <h2 id="live-caption-engine">The live-caption engine</h2>
-            <p>Live captions run on Whisper by default. If you want them lighter, Settings offers a second engine you download once (about 600 MB, CPU-only). Either way the <b>saved</b> transcript is always Whisper's &mdash; the caption engine only changes what you see while you are still talking.</p>
+            <p>Live captions run on Whisper by default. If you want them lighter, <b>Settings &rarr; Transcription &rarr; Live caption engine</b> offers Parakeet, a second engine you download once (about 600 MB, CPU-only). Either way the <b>saved</b> transcript is always Whisper's &mdash; the caption engine only changes what you see while you are still talking.</p>
             <p>During the call, live captions (and the live <code>@ivy</code> context) follow <b>your microphone</b>. The other side's audio is captured in parallel the whole time and folded into the full <b>Me / Others</b> transcript once you stop.</p>
             <h2 id="when-capture-goes-wrong">When capture goes wrong</h2>
             <p>If the system-audio helper dies mid-recording, IndexOne says so on screen instead of quietly continuing with your microphone alone &mdash; a half-recorded call you know about beats a clean-looking one that is missing the other side. And a recording whose transcription failed offers <b>Transcribe again</b> rather than stranding the audio.</p>
@@ -936,11 +963,34 @@
           </div>
           <div class="doc-pager">
             <a class="prev" data-doc-link="tasks"><span class="pager-label">Back</span><span class="pager-title">← Tasks &amp; reminders</span></a>
+            <a class="next" data-doc-link="translation"><span class="pager-label">Next</span><span class="pager-title">Meeting translation →</span></a>
+          </div>
+        </article>
+
+        <article class="doc-panel" id="doc-translation" data-keywords="translation translate transcript note live captions languages show original re-translate outdated">
+          <span class="eyebrow">Core capabilities</span>
+          <h2 class="doc-title">Meeting translation</h2>
+          <p class="lede">Translate a meeting's transcript and note — or its live captions — and keep the original right next to it.</p>
+          <div class="doc-body">
+            <h2 id="translate-a-meeting">Translate a meeting</h2>
+            <p>A meeting's transcript and note can be translated into English, Polish, German, Spanish, French, Italian, Portuguese, Ukrainian, Dutch, Chinese or Japanese. The original is never changed: a switch above the text moves between the original and each translation, and in a translated transcript <b>Show original</b> puts the original line under each translated one. Translations are read-only.</p>
+            <ul>
+              <li>Translations are saved with the meeting, and can be deleted one language at a time.</li>
+              <li>When the original changes, its translation is marked as outdated; <b>Re-translate</b> brings it up to date.</li>
+              <li>Translations are protected and unlocked together with their folder, like the rest of the meeting.</li>
+              <li>Translation uses the AI engine chosen for notes, with the same privacy settings and redaction.</li>
+            </ul>
+            <h2 id="live-translation">Live translation</h2>
+            <p>During a recording, choose a language next to <b>Translate</b> and the live captions are translated line by line, each translation under its original line. After the recording, the final transcript is translated automatically.</p>
+            <p>Live translation needs a cloud engine for <b>Live during meetings</b>. With an on-device live model it shows as unavailable while you record, and the transcript is translated after the recording instead.</p>
+          </div>
+          <div class="doc-pager">
+            <a class="prev" data-doc-link="capture"><span class="pager-label">Back</span><span class="pager-title">← Capture &amp; transcription</span></a>
             <a class="next" data-doc-link="ivy"><span class="pager-label">Next</span><span class="pager-title">On-device Ivy →</span></a>
           </div>
         </article>
 
-        <article class="doc-panel" id="doc-ivy" data-keywords="ivy ask wake phrase citations grounded reasoning bielik qwen ollama claude">
+        <article class="doc-panel" id="doc-ivy" data-keywords="ivy ask wake phrase citations grounded reasoning bielik qwen ollama claude codex kong recording name masking proactive hints">
           <span class="eyebrow">Core capabilities</span>
           <h2 class="doc-title doc-title--ivy"><svg class="brand-icon" width="36" height="36" viewBox="64 64 384 384" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><linearGradient id="ivy0-ivy-tile" x1="100" y1="64" x2="420" y2="448" gradientUnits="userSpaceOnUse"><stop style="stop-color: var(--icon-tile-from)"/><stop offset="1" style="stop-color: var(--icon-tile-to)"/></linearGradient><linearGradient id="ivy0-ivy-top" x1="501" y1="306" x2="829" y2="565" gradientUnits="userSpaceOnUse"><stop stop-color="#0066FF"/><stop offset=".42" stop-color="#60A5FA"/><stop offset=".77" stop-color="#A5DCFB"/><stop offset="1" stop-color="#D9F3FF" stop-opacity=".84"/></linearGradient><linearGradient id="ivy0-ivy-left" x1="426" y1="778" x2="561" y2="481" gradientUnits="userSpaceOnUse"><stop stop-color="#0064FF"/><stop offset=".4" stop-color="#2588FF"/><stop offset="1" stop-color="#A6D9FF" stop-opacity=".9"/></linearGradient><linearGradient id="ivy0-ivy-right" x1="677" y1="598" x2="917" y2="759" gradientUnits="userSpaceOnUse"><stop stop-color="#7DD3FC" stop-opacity=".94"/><stop offset=".52" stop-color="#A9DDFB" stop-opacity=".88"/><stop offset="1" stop-color="#D4EBFF" stop-opacity=".82"/></linearGradient><linearGradient id="ivy0-ivy-center" x1="560" y1="477" x2="669" y2="677" gradientUnits="userSpaceOnUse"><stop stop-color="#EFF8FF" stop-opacity=".8"/><stop offset="1" stop-color="#BFDBFE" stop-opacity=".52"/></linearGradient><linearGradient id="ivy0-ivy-rear" x1="481" y1="388" x2="485" y2="503" gradientUnits="userSpaceOnUse"><stop stop-color="#60A5FA" stop-opacity=".78"/><stop offset="1" stop-color="#BAE6FD" stop-opacity=".56"/></linearGradient><linearGradient id="ivy0-ivy-fold" x1="600" y1="720" x2="687" y2="785" gradientUnits="userSpaceOnUse"><stop stop-color="#7DC4FB" stop-opacity=".72"/><stop offset="1" stop-color="#D3EEFF" stop-opacity=".58"/></linearGradient></defs><path fill="url(#ivy0-ivy-tile)" d="M184 64H328C405 64 448 107 448 184V328C448 405 405 448 328 448H184C107 448 64 405 64 328V184C64 107 107 64 184 64Z"/><path class="brand-icon__edge" stroke-width="1" d="M184 64.5H328C404.7 64.5 447.5 107.3 447.5 184V328C447.5 404.7 404.7 447.5 328 447.5H184C107.3 447.5 64.5 404.7 64.5 328V184C64.5 107.3 107.3 64.5 184 64.5Z"/><g transform="translate(256 256) scale(.38) translate(-628.5 -530.5)"><path fill="url(#ivy0-ivy-rear)" d="M484 376C477 422 460 462 435 500C464 481 494 470 529 473C502 449 482 422 484 376Z"/><path fill="url(#ivy0-ivy-top)" d="M484 376C494 306 552 249 626 249C695 247 750 295 769 357C786 413 800 465 834 510C853 536 878 560 902 584C875 563 839 550 801 539C698 511 598 474 529 473C500 447 482 417 484 376Z"/><path fill="url(#ivy0-ivy-left)" d="M529 473C493 470 463 480 435 500C374 540 322 592 323 667C322 743 376 805 449 805C493 806 536 781 578 748C599 732 617 714 634 697C617 655 604 606 587 564C571 524 552 491 529 473Z"/><path fill="url(#ivy0-ivy-center)" d="M529 473C598 474 698 511 801 539C752 562 696 635 634 697C617 655 604 606 587 564C571 524 552 491 529 473Z"/><path fill="url(#ivy0-ivy-fold)" d="M578 748C599 732 617 714 634 697C649 734 668 764 697 784C659 764 619 755 578 748Z"/><path fill="url(#ivy0-ivy-right)" d="M634 697C696 635 752 562 801 539C839 550 875 563 902 584C924 606 934 636 934 667C934 747 868 812 786 812C752 812 722 802 697 784C668 764 649 734 634 697Z"/><path d="M435 500C463 480 493 470 529 473C598 474 698 511 801 539C839 550 875 563 902 584M529 473C552 491 571 524 587 564C604 606 617 655 634 697C649 734 668 764 697 784M578 748C599 732 617 714 634 697C696 635 752 562 801 539" stroke="#FFFFFF" stroke-opacity=".68" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></g></svg><span>On-device Ivy</span></h2>
           <p class="lede">A reasoning model runs locally over a semantic index of everything you've recorded — answering questions live, mid-meeting, with sources.</p>
@@ -949,39 +999,35 @@
             <h2 id="pluggable-providers">Pluggable providers</h2>
             <p>The reasoning layer is one trait behind a swappable provider seam:</p>
             <ul>
-              <li><b>On-device</b> (Bielik-11B, Qwen via Metal) — fully local, once you download a model in Settings &rarr; AI &amp; Models</li>
-              <li><b>Ollama</b> — fully local, your own models</li>
-              <li><b>Claude Code / Anthropic / any OpenAI-compatible gateway</b> — cloud-bound text passes a redaction firewall first</li>
+              <li><b>On-device</b> (Qwen3 or Bielik, via Metal) — fully local, once you download a model in Settings &rarr; AI Models</li>
+              <li><b>Ollama on this Mac</b> — fully local, your own models</li>
+              <li><b>Claude Code / Codex / Anthropic API / Kong AI Gateway / a remote Ollama server</b> — cloud-bound text passes a redaction firewall first</li>
             </ul>
             <div class="callout security">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
               <p>Cloud egress is <b>opt-in and fail-closed</b>: nothing leaves the Mac until you explicitly enable a cloud provider, and even then only redacted text goes out.</p>
             </div>
+            <h2 id="ivy-while-recording">Ivy while you record</h2>
+            <p>Ask, note, project and meeting chats answer while a recording is running. To keep the transcript up to date, at most two questions run at a time, and an on-device model or a model server on this Mac is paused for the recording; Ivy says so instead of failing. Search inside Ask falls back to keyword search while the on-device search model is paused.</p>
+            <p>On-device name masking can't run next to live transcription. If it is on, Ivy stops before sending anything and offers <b>Send without name masking</b> for that one question, or <b>Ask after the recording</b>. Nothing is sent unmasked without your choice.</p>
+            <h2 id="proactive-hints">Proactive Ivy hints</h2>
+            <p>Opt in under <b>Settings &rarr; Ivy &rarr; Live during meetings</b> and Ivy shows a recall card during a call when something said links to an earlier meeting or note — worked out on the Mac, at most one card every two minutes.</p>
           </div>
           <div class="doc-pager">
-            <a class="prev" data-doc-link="capture"><span class="pager-label">Back</span><span class="pager-title">← Capture &amp; transcription</span></a>
+            <a class="prev" data-doc-link="translation"><span class="pager-label">Back</span><span class="pager-title">← Meeting translation</span></a>
             <a class="next" data-doc-link="ivy-capabilities"><span class="pager-label">Next</span><span class="pager-title">What Ivy can do →</span></a>
           </div>
         </article>
 
-        <article class="doc-panel" id="doc-ivy-capabilities" data-keywords="ivy capabilities recipes meeting recipes tools tiers escalation connectors web search calendar jira slack gated tool registry save note reminder propose note action ask">
+        <article class="doc-panel" id="doc-ivy-capabilities" data-keywords="ivy capabilities meeting more menu re-summarize template tools tiers escalation connectors web search calendar jira slack gated tool registry save note reminder propose note action ask">
           <span class="eyebrow">Core capabilities</span>
           <h2 class="doc-title doc-title--ivy"><svg class="brand-icon" width="36" height="36" viewBox="64 64 384 384" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><linearGradient id="ivy1-ivy-tile" x1="100" y1="64" x2="420" y2="448" gradientUnits="userSpaceOnUse"><stop style="stop-color: var(--icon-tile-from)"/><stop offset="1" style="stop-color: var(--icon-tile-to)"/></linearGradient><linearGradient id="ivy1-ivy-top" x1="501" y1="306" x2="829" y2="565" gradientUnits="userSpaceOnUse"><stop stop-color="#0066FF"/><stop offset=".42" stop-color="#60A5FA"/><stop offset=".77" stop-color="#A5DCFB"/><stop offset="1" stop-color="#D9F3FF" stop-opacity=".84"/></linearGradient><linearGradient id="ivy1-ivy-left" x1="426" y1="778" x2="561" y2="481" gradientUnits="userSpaceOnUse"><stop stop-color="#0064FF"/><stop offset=".4" stop-color="#2588FF"/><stop offset="1" stop-color="#A6D9FF" stop-opacity=".9"/></linearGradient><linearGradient id="ivy1-ivy-right" x1="677" y1="598" x2="917" y2="759" gradientUnits="userSpaceOnUse"><stop stop-color="#7DD3FC" stop-opacity=".94"/><stop offset=".52" stop-color="#A9DDFB" stop-opacity=".88"/><stop offset="1" stop-color="#D4EBFF" stop-opacity=".82"/></linearGradient><linearGradient id="ivy1-ivy-center" x1="560" y1="477" x2="669" y2="677" gradientUnits="userSpaceOnUse"><stop stop-color="#EFF8FF" stop-opacity=".8"/><stop offset="1" stop-color="#BFDBFE" stop-opacity=".52"/></linearGradient><linearGradient id="ivy1-ivy-rear" x1="481" y1="388" x2="485" y2="503" gradientUnits="userSpaceOnUse"><stop stop-color="#60A5FA" stop-opacity=".78"/><stop offset="1" stop-color="#BAE6FD" stop-opacity=".56"/></linearGradient><linearGradient id="ivy1-ivy-fold" x1="600" y1="720" x2="687" y2="785" gradientUnits="userSpaceOnUse"><stop stop-color="#7DC4FB" stop-opacity=".72"/><stop offset="1" stop-color="#D3EEFF" stop-opacity=".58"/></linearGradient></defs><path fill="url(#ivy1-ivy-tile)" d="M184 64H328C405 64 448 107 448 184V328C448 405 405 448 328 448H184C107 448 64 405 64 328V184C64 107 107 64 184 64Z"/><path class="brand-icon__edge" stroke-width="1" d="M184 64.5H328C404.7 64.5 447.5 107.3 447.5 184V328C447.5 404.7 404.7 447.5 328 447.5H184C107.3 447.5 64.5 404.7 64.5 328V184C64.5 107.3 107.3 64.5 184 64.5Z"/><g transform="translate(256 256) scale(.38) translate(-628.5 -530.5)"><path fill="url(#ivy1-ivy-rear)" d="M484 376C477 422 460 462 435 500C464 481 494 470 529 473C502 449 482 422 484 376Z"/><path fill="url(#ivy1-ivy-top)" d="M484 376C494 306 552 249 626 249C695 247 750 295 769 357C786 413 800 465 834 510C853 536 878 560 902 584C875 563 839 550 801 539C698 511 598 474 529 473C500 447 482 417 484 376Z"/><path fill="url(#ivy1-ivy-left)" d="M529 473C493 470 463 480 435 500C374 540 322 592 323 667C322 743 376 805 449 805C493 806 536 781 578 748C599 732 617 714 634 697C617 655 604 606 587 564C571 524 552 491 529 473Z"/><path fill="url(#ivy1-ivy-center)" d="M529 473C598 474 698 511 801 539C752 562 696 635 634 697C617 655 604 606 587 564C571 524 552 491 529 473Z"/><path fill="url(#ivy1-ivy-fold)" d="M578 748C599 732 617 714 634 697C649 734 668 764 697 784C659 764 619 755 578 748Z"/><path fill="url(#ivy1-ivy-right)" d="M634 697C696 635 752 562 801 539C839 550 875 563 902 584C924 606 934 636 934 667C934 747 868 812 786 812C752 812 722 802 697 784C668 764 649 734 634 697Z"/><path d="M435 500C463 480 493 470 529 473C598 474 698 511 801 539C839 550 875 563 902 584M529 473C552 491 571 524 587 564C604 606 617 655 634 697C649 734 668 764 697 784M578 748C599 732 617 714 634 697C696 635 752 562 801 539" stroke="#FFFFFF" stroke-opacity=".68" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></g></svg><span>What Ivy can do</span></h2>
-          <p class="lede">Three different surfaces — Meeting Recipes, the Ivy menu, and Ask — all run through one gated tool registry underneath. Here's exactly what it can reach, and what it can't.</p>
+          <p class="lede">The Ivy menu, Ask and the meeting tools all run through one gated tool registry underneath. Here's exactly what it can reach, and what it can't.</p>
           <div class="doc-body">
-            <h2 id="meeting-recipes">Meeting Recipes — one-click artifacts</h2>
-            <p>On any meeting, a row of quick chips turns the transcript into a specific, ready-to-use artifact — strictly grounded in that one meeting, never invented:</p>
-            <ul>
-              <li><b>Follow-up email</b> — context, decisions, and a per-attendee action list, uncertain items flagged</li>
-              <li><b>Decision log</b> — only the decisions made, who owns each one, and the rationale if stated</li>
-              <li><b>Work ticket</b> — the top action item as a title, description, and acceptance criteria</li>
-              <li><b>1:1 recap</b> — wins, blockers, feedback, and next steps</li>
-              <li><b>Standup notes</b> — per-person Done / Doing / Blockers</li>
-              <li><b>Sales recap</b> — pain points, objections, buying signals, and a deal-risk note</li>
-              <li><b>Interview notes</b> — strengths, concerns, and a hire / no-hire lean grounded only in what was said</li>
-            </ul>
+            <h2 id="meeting-tools">On a meeting</h2>
+            <p>A meeting's <b>More</b> menu offers <b>Re-summarize</b>, <b>Choose note template</b>, <b>Convert to note</b>, <b>New reminder</b>, <b>Link people &amp; projects</b>, <b>Move…</b> and <b>Protect…</b>, and takes a copy with you: <b>Copy Markdown</b>, <b>Save Markdown…</b>, <b>Save as PDF</b>, <b>Save audio…</b> and <b>Export master (mic/system)…</b>. Summary styles and your own templates live in <b>Settings &rarr; Notes</b>.</p>
             <h2 id="the-ivy-menu-recap">The Ivy menu — 19 actions on any selection</h2>
-            <p>Select text anywhere in the note editor and run one of nineteen actions, grouped as <b>Edit</b> (Refine, Fix grammar, Shorten, Expand, Simplify, Change tone, Translate), <b>Structure</b> (Bullet points, Table, Key points), <b>From Ivy</b> (Enhance context, Find related, Link entities, Fact-check, Ask about this), <b>Extract</b> (Action items, Decisions), and <b>Create</b> (Draft follow-up, Spin-off note) — full details on the <a href="javascript:void(0)" data-doc-link="notes-editor" style="color:var(--accent-text); font-weight:600;">Standalone notes &amp; the Ivy menu</a> page.</p>
+            <p>Select text anywhere in the note editor and run one of nineteen actions, grouped as <b>Edit</b> (Refine, Fix grammar, Shorten, Expand, Simplify, Change tone, Translate), <b>Structure</b> (Bullet points, Table, Key points), <b>From your Ivy</b> (Enhance context, Find related, Link entities, Fact-check, Ask about this), <b>Extract</b> (Action items, Decisions), and <b>Create</b> (Draft follow-up, Spin-off note) — full details on the <a href="javascript:void(0)" data-doc-link="notes-editor" style="color:var(--accent-text); font-weight:600;">Standalone notes &amp; the Ivy menu</a> page.</p>
             <h2 id="ask-tiered-tools">Ask — a tiered, gated tool-use loop</h2>
             <p>Behind the wake phrase and Ask Your Vault sits one agentic loop: the model decides which tools to call, grounds its answer in what they return, and falls back to a deterministic, no-tools answer if it can't converge. Which tools it's even allowed to reach is enforced by code, not by trusting the prompt — a tier can't be talked into reaching a higher one:</p>
             <div class="tier-list">
@@ -1015,7 +1061,7 @@
                   <span class="tool-pill">slack_search</span>
                   <span class="tool-pill">notion_search</span>
                   <span class="tool-pill">clickup_search</span>
-                  <span class="tool-pill">org_brain_search</span>
+                  <span class="tool-pill">org_ivy_search</span>
                   <span class="tool-plus">plus any MCP server you connect</span>
                 </div>
               </div>
@@ -1034,6 +1080,29 @@
           </div>
           <div class="doc-pager">
             <a class="prev" data-doc-link="ivy"><span class="pager-label">Back</span><span class="pager-title">← On-device Ivy</span></a>
+            <a class="next" data-doc-link="ivy-page"><span class="pager-label">Next</span><span class="pager-title">Ivy&rsquo;s knowledge, briefs &amp; audit →</span></a>
+          </div>
+        </article>
+
+        <article class="doc-panel" id="doc-ivy-page" data-keywords="ivy page knowledge sources documents notes connections graph memory facts forget scheduled briefs digest vault audit contradictions stale broken links orphans ask conversation history">
+          <span class="eyebrow">Core capabilities</span>
+          <h2 class="doc-title">Ivy's knowledge, briefs &amp; audit</h2>
+          <p class="lede">Browse &rarr; Ivy shows everything your assistant can reason over, what it remembers about you, and the work it does on a schedule.</p>
+          <div class="doc-body">
+            <h2 id="knowledge-sources">Knowledge sources</h2>
+            <p>The top of the page counts the meetings, documents and notes Ivy can read, and links to <b>Ask</b>. Choose a folder and use <b>Add document</b> or <b>Add note</b> to give it more; see <a href="javascript:void(0)" data-doc-link="integrations-apps" style="color:var(--accent-text); font-weight:600;">file ingestion</a> for what a document can be. <b>Connections</b> and the <b>Full Ivy graph</b> show how it all links together.</p>
+            <h2 id="memory">What Ivy knows about you</h2>
+            <p>With <b>Cross-meeting memory</b> on (<b>Settings &rarr; Ivy</b>), Ivy keeps short facts about you that it learns across meetings. Each is listed here with <b>Forget</b>. Turn the memory off and nothing new is kept.</p>
+            <h2 id="scheduled-briefs">Scheduled briefs</h2>
+            <p>A brief is a recurring digest of your recent meetings, proposed for your review. Give it a <b>Name</b>, a <b>Day</b> (Daily or a weekday), a <b>Time</b>, how far to <b>Look back</b> (1–90 days) and an optional <b>Focus</b>, then <b>Schedule brief</b>. Each schedule can be paused, resumed or deleted.</p>
+            <p>A finished brief waits as pending until you <b>Save as note</b> or <b>Dismiss</b> it; click its header to open its schedules. Briefs read only unlocked content.</p>
+            <h2 id="vault-audit">Vault audit</h2>
+            <p><b>Audit now</b> looks for contradictions, stale notes, broken links, unlinked mentions and orphans, and lists them for your review. <b>Explain (AI)</b> asks your AI provider why a finding matters, with the usual redaction; <b>Accept</b> applies the fix and <b>Dismiss</b> hides it. Nothing changes until you accept. Turn on the <b>Weekly vault audit</b> in <b>Settings &rarr; Ivy</b> to run it every week.</p>
+            <h2 id="ask-page">The Ask page</h2>
+            <p><b>Ask Ivy</b> on the rail opens a full-page chat over your whole library, with its conversation history, <b>New chat</b>, and <b>Scope to a note or meeting…</b> to narrow a question to one item.</p>
+          </div>
+          <div class="doc-pager">
+            <a class="prev" data-doc-link="ivy-capabilities"><span class="pager-label">Back</span><span class="pager-title">← What Ivy can do</span></a>
             <a class="next" data-doc-link="receipts"><span class="pager-label">Next</span><span class="pager-title">Receipts →</span></a>
           </div>
         </article>
@@ -1053,7 +1122,7 @@
             </div>
           </div>
           <div class="doc-pager">
-            <a class="prev" data-doc-link="ivy-capabilities"><span class="pager-label">Back</span><span class="pager-title">← What Ivy can do</span></a>
+            <a class="prev" data-doc-link="ivy-page"><span class="pager-label">Back</span><span class="pager-title">← Ivy&rsquo;s knowledge, briefs &amp; audit</span></a>
             <a class="next" data-doc-link="notes-graph"><span class="pager-label">Next</span><span class="pager-title">Notes, graph &amp; MCP →</span></a>
           </div>
         </article>
@@ -1064,32 +1133,56 @@
           <p class="lede">Every call becomes a structured note. People and projects are extracted automatically into a knowledge graph — and everything is reachable from outside the app too.</p>
           <div class="doc-body">
             <h2 id="structured-notes-graph">Structured notes &amp; the auto graph</h2>
-            <p>Notes carry a summary, decisions, action items and quotes, exported as atomic Markdown with front-matter and <code>[[wikilinks]]</code>. Entities mentioned across meetings are extracted into a graph automatically, so you can open a person or project and see every related meeting — entity dossiers, related meetings, and weekly digests included.</p>
+            <p>Notes carry a summary, decisions, action items and quotes, with <code>[[wikilinks]]</code> between them. Entities mentioned across meetings are extracted into a graph automatically, so you can open a person or project and see every related meeting. <b>Browse &rarr; Graph</b> draws it, with search, a filter by kind and sorting by <b>Most mentioned</b> or <b>Name</b>; <b>Browse &rarr; People</b> lists everyone it found.</p>
             <h2 id="local-mcp-server">A local, read-only MCP server</h2>
-            <p>IndexOne exposes an MCP server on <code>127.0.0.1:8765</code> so Claude Desktop or Claude Code can query your notes directly — read-only, and it respects the lock model: a sealed, locked meeting is invisible to it too. Setup, the config snippet, and every other integration point live on the <a href="javascript:void(0)" data-doc-link="integrations-apps" style="color:var(--accent-text); font-weight:600;">Obsidian, MCP, Reminders &amp; file ingestion</a> page.</p>
+            <p>IndexOne exposes an MCP server on <code>127.0.0.1:8765</code> so Claude Desktop or Claude Code can query your notes directly — read-only, and it respects the lock model: a sealed, locked meeting is invisible to it too. Setup, the config snippet, and every other integration point live on the <a href="javascript:void(0)" data-doc-link="integrations-apps" style="color:var(--accent-text); font-weight:600;">MCP, Reminders &amp; file ingestion</a> page.</p>
           </div>
           <div class="doc-pager">
             <a class="prev" data-doc-link="receipts"><span class="pager-label">Back</span><span class="pager-title">← Receipts</span></a>
+            <a class="next" data-doc-link="analytics"><span class="pager-label">Next</span><span class="pager-title">Analytics →</span></a>
+          </div>
+        </article>
+
+        <article class="doc-panel" id="doc-analytics" data-keywords="analytics insights statistics meetings time activity topic threads weekly digest what leaves this mac cloud calls tokens ledger">
+          <span class="eyebrow">Core capabilities</span>
+          <h2 class="doc-title">Analytics</h2>
+          <p class="lede">Browse &rarr; Analytics: how much you meet, what you talk about, and exactly what has left this Mac.</p>
+          <div class="doc-body">
+            <h2 id="activity">Your meetings in numbers</h2>
+            <p>Total meetings, total time, this week and the average length; an <b>Activity</b> chart for the last 30 days; meetings by status; the longest session, notes created, and how long you have been recording. <b>Topic threads</b> follow subjects that come back across meetings.</p>
+            <h2 id="weekly-digest">Weekly digest</h2>
+            <p>Pick 7 or 30 days and <b>Generate digest</b> for a written summary of that period, made by your AI provider with the usual redaction.</p>
+            <h2 id="what-leaves">What leaves this Mac</h2>
+            <p>The ledger behind the <a href="javascript:void(0)" data-doc-link="redaction-firewall" style="color:var(--accent-text); font-weight:600;">redaction firewall</a>, over 7, 30 or 90 days: the number of cloud calls, the tokens sent, what was removed first (emails, card numbers, phone numbers, names), a breakdown by model and by day, and the most recent calls. A call sent without name masking is flagged as <b>Names not masked</b>.</p>
+          </div>
+          <div class="doc-pager">
+            <a class="prev" data-doc-link="notes-graph"><span class="pager-label">Back</span><span class="pager-title">← Notes, graph &amp; MCP</span></a>
             <a class="next" data-doc-link="notes-editor"><span class="pager-label">Next</span><span class="pager-title">Standalone notes &amp; the Ivy menu →</span></a>
           </div>
         </article>
 
-        <article class="doc-panel" id="doc-notes-editor" data-keywords="notes editor formatting bar toolbar dock headings h6 indent ask ivy ivy menu refine shorten tone translate fact-check folders tags properties markdown pro recipes automations roadmap">
+        <article class="doc-panel" id="doc-notes-editor" data-keywords="notes editor paste markdown lock read-only preview tab formatting bar toolbar dock headings h6 indent ask ivy ivy menu refine shorten tone translate fact-check folders tags properties markdown pro recipes automations roadmap">
           <span class="eyebrow">Core capabilities</span>
           <h2 class="doc-title doc-title--ivy"><svg class="brand-icon" width="36" height="36" viewBox="64 64 384 384" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><linearGradient id="ivy2-ivy-tile" x1="100" y1="64" x2="420" y2="448" gradientUnits="userSpaceOnUse"><stop style="stop-color: var(--icon-tile-from)"/><stop offset="1" style="stop-color: var(--icon-tile-to)"/></linearGradient><linearGradient id="ivy2-ivy-top" x1="501" y1="306" x2="829" y2="565" gradientUnits="userSpaceOnUse"><stop stop-color="#0066FF"/><stop offset=".42" stop-color="#60A5FA"/><stop offset=".77" stop-color="#A5DCFB"/><stop offset="1" stop-color="#D9F3FF" stop-opacity=".84"/></linearGradient><linearGradient id="ivy2-ivy-left" x1="426" y1="778" x2="561" y2="481" gradientUnits="userSpaceOnUse"><stop stop-color="#0064FF"/><stop offset=".4" stop-color="#2588FF"/><stop offset="1" stop-color="#A6D9FF" stop-opacity=".9"/></linearGradient><linearGradient id="ivy2-ivy-right" x1="677" y1="598" x2="917" y2="759" gradientUnits="userSpaceOnUse"><stop stop-color="#7DD3FC" stop-opacity=".94"/><stop offset=".52" stop-color="#A9DDFB" stop-opacity=".88"/><stop offset="1" stop-color="#D4EBFF" stop-opacity=".82"/></linearGradient><linearGradient id="ivy2-ivy-center" x1="560" y1="477" x2="669" y2="677" gradientUnits="userSpaceOnUse"><stop stop-color="#EFF8FF" stop-opacity=".8"/><stop offset="1" stop-color="#BFDBFE" stop-opacity=".52"/></linearGradient><linearGradient id="ivy2-ivy-rear" x1="481" y1="388" x2="485" y2="503" gradientUnits="userSpaceOnUse"><stop stop-color="#60A5FA" stop-opacity=".78"/><stop offset="1" stop-color="#BAE6FD" stop-opacity=".56"/></linearGradient><linearGradient id="ivy2-ivy-fold" x1="600" y1="720" x2="687" y2="785" gradientUnits="userSpaceOnUse"><stop stop-color="#7DC4FB" stop-opacity=".72"/><stop offset="1" stop-color="#D3EEFF" stop-opacity=".58"/></linearGradient></defs><path fill="url(#ivy2-ivy-tile)" d="M184 64H328C405 64 448 107 448 184V328C448 405 405 448 328 448H184C107 448 64 405 64 328V184C64 107 107 64 184 64Z"/><path class="brand-icon__edge" stroke-width="1" d="M184 64.5H328C404.7 64.5 447.5 107.3 447.5 184V328C447.5 404.7 404.7 447.5 328 447.5H184C107.3 447.5 64.5 404.7 64.5 328V184C64.5 107.3 107.3 64.5 184 64.5Z"/><g transform="translate(256 256) scale(.38) translate(-628.5 -530.5)"><path fill="url(#ivy2-ivy-rear)" d="M484 376C477 422 460 462 435 500C464 481 494 470 529 473C502 449 482 422 484 376Z"/><path fill="url(#ivy2-ivy-top)" d="M484 376C494 306 552 249 626 249C695 247 750 295 769 357C786 413 800 465 834 510C853 536 878 560 902 584C875 563 839 550 801 539C698 511 598 474 529 473C500 447 482 417 484 376Z"/><path fill="url(#ivy2-ivy-left)" d="M529 473C493 470 463 480 435 500C374 540 322 592 323 667C322 743 376 805 449 805C493 806 536 781 578 748C599 732 617 714 634 697C617 655 604 606 587 564C571 524 552 491 529 473Z"/><path fill="url(#ivy2-ivy-center)" d="M529 473C598 474 698 511 801 539C752 562 696 635 634 697C617 655 604 606 587 564C571 524 552 491 529 473Z"/><path fill="url(#ivy2-ivy-fold)" d="M578 748C599 732 617 714 634 697C649 734 668 764 697 784C659 764 619 755 578 748Z"/><path fill="url(#ivy2-ivy-right)" d="M634 697C696 635 752 562 801 539C839 550 875 563 902 584C924 606 934 636 934 667C934 747 868 812 786 812C752 812 722 802 697 784C668 764 649 734 634 697Z"/><path d="M435 500C463 480 493 470 529 473C598 474 698 511 801 539C839 550 875 563 902 584M529 473C552 491 571 524 587 564C604 606 617 655 634 697C649 734 668 764 697 784M578 748C599 732 617 714 634 697C696 635 752 562 801 539" stroke="#FFFFFF" stroke-opacity=".68" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></g></svg><span>Standalone notes &amp; the Ivy menu</span></h2>
           <p class="lede">Not just meeting notes — a full Markdown editor for anything you write, backed by Ivy and the same encrypted store.</p>
           <div class="doc-body">
             <h2 id="a-full-editor">A full editor, not just meeting notes</h2>
-            <p>IndexOne's note editor works with folders like the meeting notes it generates — and any YAML front-matter a note already carries round-trips untouched — but you can open a blank note and write anything. It's the same encrypted SQLite store, the same per-folder Touch ID lock, and the same Markdown export underneath.</p>
+            <p>IndexOne's note editor works with folders like the meeting notes it generates — and any YAML front-matter a note already carries round-trips untouched — but you can open a blank note and write anything. It's the same encrypted SQLite store and the same Touch ID protection underneath.</p>
+            <ul>
+              <li><b>Paste anything.</b> Rich text you paste — tables, images, long documents — is turned into Markdown and shown formatted right where you type.</li>
+              <li><b>Tab</b> indents list items and moves between table cells; in plain fields it stays an ordinary Tab.</li>
+              <li><b>Preview</b> opens straight away, without waiting for the note to save.</li>
+              <li><b>Lock</b> in the note's <b>More</b> menu makes it read-only, shown as "Locked — read-only" with a padlock, until you switch it off. This is separate from <a href="javascript:void(0)" data-doc-link="protection" style="color:var(--accent-text); font-weight:600;">Touch ID protection</a>.</li>
+            </ul>
             <h2 id="the-ivy-menu">The Ivy command menu</h2>
-            <p>Select any passage and a command menu appears with nineteen actions one keystroke away — <b>Refine</b>, <b>Shorten</b>, <b>Change tone</b>, <b>Translate</b>, <b>Fact-check</b>, or just type what you want done. Every action is grounded in your own meetings and notes, not the model's guesses.</p>
+            <p>Select any passage and an <b>Ask Ivy</b> button appears beside it (or press <code>⌘J</code>), with nineteen actions one keystroke away — <b>Refine</b>, <b>Shorten</b>, <b>Change tone</b>, <b>Translate</b>, <b>Fact-check</b>, or just type what you want done. Every action is grounded in your own meetings and notes, not the model's guesses.</p>
             <ul>
               <li>Nineteen Ivy actions, one keystroke away</li>
               <li>Grounded in your own meetings &amp; notes via the same retrieval as Ask Your Vault</li>
-              <li>Same encrypted store, same Touch ID lock, same Markdown export</li>
+              <li>Turn single actions or whole groups off in <b>Settings &rarr; Ivy &rarr; Note assistant</b></li>
             </ul>
             <h2 id="formatting-bar">The formatting bar</h2>
-            <p>In <b>Settings &rarr; Editor</b>, choose where the formatting bar sits: in the top bar, or as a floating dock at the bottom of the note. Headings live in one <b>Headings</b> menu, from H1 to H6; the bar also inserts a new-section template and increases or decreases the indent. <b>Ask Ivy</b> is the icon at the bar's far right, the same in notes and meeting notes, and selecting text shows the Ask Ivy button beside the selection.</p>
+            <p>In <b>Settings &rarr; Appearance &rarr; Formatting toolbar</b>, choose where the formatting bar sits: in the <b>Top bar</b>, or as a floating <b>Dock</b> at the bottom of the note. Headings live in one <b>Headings</b> menu, from H1 to H6; the bar also inserts a new-section template and increases or decreases the indent. <b>Ask Ivy</b> is the icon at the bar's far right, the same in notes and meeting notes, and selecting text shows the Ask Ivy button beside the selection.</p>
             <h2 id="custom-recipes">Custom recipes &amp; automations<span class="pro-badge">Pro</span></h2>
             <p>Build automations on top of your notes and action items — your own recipes for what should happen once a meeting ends, instead of doing it by hand every time.</p>
             <div class="callout roadmap">
@@ -1098,12 +1191,12 @@
             </div>
           </div>
           <div class="doc-pager">
-            <a class="prev" data-doc-link="notes-graph"><span class="pager-label">Back</span><span class="pager-title">← Notes, graph &amp; MCP</span></a>
+            <a class="prev" data-doc-link="analytics"><span class="pager-label">Back</span><span class="pager-title">← Analytics</span></a>
             <a class="next" data-doc-link="shared-ivy"><span class="pager-label">Next</span><span class="pager-title">Shared Ivy →</span></a>
           </div>
         </article>
 
-        <article class="doc-panel" id="doc-shared-ivy" data-keywords="shared ivy org organization e2ee sync team collaboration ciphertext wrapped keys public keys pro backup iphone multi-device roadmap">
+        <article class="doc-panel" id="doc-shared-ivy" data-keywords="shared ivy sharing account password reset recovery phrase change password org organization e2ee sync team collaboration ciphertext wrapped keys public keys pro backup iphone multi-device roadmap">
           <span class="eyebrow">Collaboration</span>
           <h2 class="doc-title doc-title--ivy"><svg class="brand-icon" width="36" height="36" viewBox="64 64 384 384" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><linearGradient id="ivy3-ivy-tile" x1="100" y1="64" x2="420" y2="448" gradientUnits="userSpaceOnUse"><stop style="stop-color: var(--icon-tile-from)"/><stop offset="1" style="stop-color: var(--icon-tile-to)"/></linearGradient><linearGradient id="ivy3-ivy-top" x1="501" y1="306" x2="829" y2="565" gradientUnits="userSpaceOnUse"><stop stop-color="#0066FF"/><stop offset=".42" stop-color="#60A5FA"/><stop offset=".77" stop-color="#A5DCFB"/><stop offset="1" stop-color="#D9F3FF" stop-opacity=".84"/></linearGradient><linearGradient id="ivy3-ivy-left" x1="426" y1="778" x2="561" y2="481" gradientUnits="userSpaceOnUse"><stop stop-color="#0064FF"/><stop offset=".4" stop-color="#2588FF"/><stop offset="1" stop-color="#A6D9FF" stop-opacity=".9"/></linearGradient><linearGradient id="ivy3-ivy-right" x1="677" y1="598" x2="917" y2="759" gradientUnits="userSpaceOnUse"><stop stop-color="#7DD3FC" stop-opacity=".94"/><stop offset=".52" stop-color="#A9DDFB" stop-opacity=".88"/><stop offset="1" stop-color="#D4EBFF" stop-opacity=".82"/></linearGradient><linearGradient id="ivy3-ivy-center" x1="560" y1="477" x2="669" y2="677" gradientUnits="userSpaceOnUse"><stop stop-color="#EFF8FF" stop-opacity=".8"/><stop offset="1" stop-color="#BFDBFE" stop-opacity=".52"/></linearGradient><linearGradient id="ivy3-ivy-rear" x1="481" y1="388" x2="485" y2="503" gradientUnits="userSpaceOnUse"><stop stop-color="#60A5FA" stop-opacity=".78"/><stop offset="1" stop-color="#BAE6FD" stop-opacity=".56"/></linearGradient><linearGradient id="ivy3-ivy-fold" x1="600" y1="720" x2="687" y2="785" gradientUnits="userSpaceOnUse"><stop stop-color="#7DC4FB" stop-opacity=".72"/><stop offset="1" stop-color="#D3EEFF" stop-opacity=".58"/></linearGradient></defs><path fill="url(#ivy3-ivy-tile)" d="M184 64H328C405 64 448 107 448 184V328C448 405 405 448 328 448H184C107 448 64 405 64 328V184C64 107 107 64 184 64Z"/><path class="brand-icon__edge" stroke-width="1" d="M184 64.5H328C404.7 64.5 447.5 107.3 447.5 184V328C447.5 404.7 404.7 447.5 328 447.5H184C107.3 447.5 64.5 404.7 64.5 328V184C64.5 107.3 107.3 64.5 184 64.5Z"/><g transform="translate(256 256) scale(.38) translate(-628.5 -530.5)"><path fill="url(#ivy3-ivy-rear)" d="M484 376C477 422 460 462 435 500C464 481 494 470 529 473C502 449 482 422 484 376Z"/><path fill="url(#ivy3-ivy-top)" d="M484 376C494 306 552 249 626 249C695 247 750 295 769 357C786 413 800 465 834 510C853 536 878 560 902 584C875 563 839 550 801 539C698 511 598 474 529 473C500 447 482 417 484 376Z"/><path fill="url(#ivy3-ivy-left)" d="M529 473C493 470 463 480 435 500C374 540 322 592 323 667C322 743 376 805 449 805C493 806 536 781 578 748C599 732 617 714 634 697C617 655 604 606 587 564C571 524 552 491 529 473Z"/><path fill="url(#ivy3-ivy-center)" d="M529 473C598 474 698 511 801 539C752 562 696 635 634 697C617 655 604 606 587 564C571 524 552 491 529 473Z"/><path fill="url(#ivy3-ivy-fold)" d="M578 748C599 732 617 714 634 697C649 734 668 764 697 784C659 764 619 755 578 748Z"/><path fill="url(#ivy3-ivy-right)" d="M634 697C696 635 752 562 801 539C839 550 875 563 902 584C924 606 934 636 934 667C934 747 868 812 786 812C752 812 722 802 697 784C668 764 649 734 634 697Z"/><path d="M435 500C463 480 493 470 529 473C598 474 698 511 801 539C839 550 875 563 902 584M529 473C552 491 571 524 587 564C604 606 617 655 634 697C649 734 668 764 697 784M578 748C599 732 617 714 634 697C696 635 752 562 801 539" stroke="#FFFFFF" stroke-opacity=".68" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></g></svg><span>Shared Ivy</span></h2>
           <p class="lede">Work as a team on notes and meeting summaries, still end-to-end encrypted — the server never sees plaintext.</p>
@@ -1116,6 +1209,14 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2Z"/><path d="M9 21h6"/></svg>
               <p>Shared Ivy is an <b>opt-in</b> tier — IndexOne is fully usable with no account at all, and org sharing is free today.</p>
             </div>
+            <h2 id="sharing-account">Your sharing account</h2>
+            <p>Sharing needs a sharing account, managed in <b>Settings &rarr; Account</b>. After you sign in once with your password, Touch ID unlocks it. Protected items can't be shared.</p>
+            <ul>
+              <li><b>Forgot password?</b> on the sign-in screen resets the password with your recovery phrase. Your account key and every share stay as they are.</li>
+              <li><b>Change password</b> in Settings &rarr; Account keeps your account key, your shares and your saved recovery phrase.</li>
+              <li>When a password reset is requested for your account, a notice shows the date it takes effect and a button to cancel it — also while sharing is locked, with your current password.</li>
+              <li>An account without a recovery phrase can be reset too. The app first explains what that removes: it takes effect after 7 days, notes on this Mac stay, shares in either direction can no longer be opened, and your organizations freeze. You confirm it explicitly.</li>
+            </ul>
             <h2 id="sync-and-backup">Sync &amp; cloud backup<span class="pro-badge">Pro</span></h2>
             <p>Pro extends the same end-to-end-encrypted design to your own devices: notes and meetings kept in sync across your Macs and iPhone, plus a zero-knowledge encrypted backup of your vault you can restore from if you lose a device — without giving up the local-first design the Free plan already has.</p>
             <div class="callout roadmap">
@@ -1129,17 +1230,19 @@
           </div>
         </article>
 
-        <article class="doc-panel" id="doc-providers" data-keywords="providers integrations ai bielik qwen ollama claude code anthropic api key gateway litellm kong portkey vllm openai-compatible pro managed ivy low latency roadmap">
+        <article class="doc-panel" id="doc-providers" data-keywords="providers integrations ai posture cloud hybrid fully local bielik qwen ollama remote claude code codex openai anthropic api key gateway kong openai-compatible pro managed ivy low latency roadmap">
           <span class="eyebrow">Integrations</span>
           <h2 class="doc-title">AI providers</h2>
           <p class="lede">The reasoning layer behind Ivy in meetings, Ask Your Vault, and note-writing is one trait behind a swappable provider seam — pick what runs where.</p>
           <div class="doc-body">
             <h2 id="on-device-default">On-device</h2>
-            <p>Bielik-11B or Qwen, running locally via Metal. No account, no API key, no network call. Nothing is bundled with the app — pick a model in <b>Settings &rarr; AI &amp; Models</b> and IndexOne downloads it once (1.1&ndash;9 GB depending on the model); from then on Ivy, Ask and note-writing can all run with the network off.</p>
+            <p>Qwen3 or Bielik, running locally via Metal: Qwen3 1.7B, Bielik 1.5B v3, Qwen3 4B Instruct 2507, Bielik 4.5B v3, Bielik 11B v3 and Qwen3 14B. No account, no API key, no network call. Nothing is bundled with the app — pick a model in <b>Settings &rarr; AI Models</b> and IndexOne downloads it once (about 1.1&ndash;9.7 GB depending on the model); from then on Ivy, Ask and note-writing can all run with the network off. If you used a model that has since been retired, the app offers to switch.</p>
+            <h2 id="ai-posture">Where your AI runs</h2>
+            <p><b>Settings &rarr; AI Models</b> starts with one choice: <b>Cloud</b>, <b>Hybrid</b>, <b>Fully local</b> or <b>Custom</b>. Then pick your default engine, its model and, where the engine supports it, the reasoning effort. <b>What runs where</b> shows the result, and <b>Advanced</b> lets meeting notes, Ask &amp; assistant, and Live during meetings each use a different engine.</p>
             <h2 id="what-ships-as-default">What IndexOne uses out of the box</h2>
             <p><b>Claude Code</b> is the default summarizer &mdash; a local CLI that reaches the cloud. Nothing is sent until you consent once, and what it sends is redacted first. If you would rather nothing left at all, download an on-device model or point IndexOne at Ollama, and set that as your provider.</p>
             <h2 id="ollama-integration">Ollama</h2>
-            <p>Point IndexOne at your own local Ollama models. Still fully local — no meeting text ever leaves the Mac with this provider either.</p>
+            <p>Point IndexOne at your own Ollama models. Ollama on this Mac is fully local — no meeting text leaves the Mac. Ollama on another machine counts as a cloud provider: it needs the same consent, and text is redacted before it is sent.</p>
             <h2 id="cloud-providers-opt-in">Cloud providers (opt-in)</h2>
             <div class="doc-table">
               <div class="scroll">
@@ -1147,9 +1250,10 @@
                   <thead><tr><th>Provider</th><th>Setup</th><th>Notes</th></tr></thead>
                   <tbody>
                     <tr><td>Claude Code</td><td>Local CLI, no key to paste</td><td>The default cloud summarizer, if you opt in</td></tr>
-                    <tr><td>Codex</td><td>OpenAI's CLI, no key to paste</td><td>Run tool-free: no ambient config, an empty tool registry, and a deny-everything hook before any tool call</td></tr>
+                    <tr><td>OpenAI (via the Codex CLI)</td><td>Sign in with <code>codex login</code>, no key to paste</td><td>Codex CLI 0.146, 0.160 and 0.162. Run tool-free: no ambient config, an empty tool registry, and a deny-everything hook before any tool call</td></tr>
                     <tr><td>Anthropic API</td><td>Bring your own key, stored in Keychain</td><td>Direct HTTPS to Anthropic</td></tr>
-                    <tr><td>AI Gateway</td><td>Any OpenAI-compatible endpoint</td><td>LiteLLM, Kong, Portkey, vLLM, or your own</td></tr>
+                    <tr><td>Kong AI Gateway</td><td>An OpenAI-compatible endpoint</td><td>Your organization's gateway</td></tr>
+                    <tr><td>Ollama (remote server)</td><td>The server's address</td><td>Treated as cloud: consent and redaction apply</td></tr>
                   </tbody>
                 </table>
               </div>
@@ -1164,19 +1268,19 @@
           </div>
           <div class="doc-pager">
             <a class="prev" data-doc-link="shared-ivy"><span class="pager-label">Back</span><span class="pager-title">← Shared Ivy</span></a>
-            <a class="next" data-doc-link="integrations-apps"><span class="pager-label">Next</span><span class="pager-title">Obsidian, MCP, Reminders &amp; file ingestion →</span></a>
+            <a class="next" data-doc-link="integrations-apps"><span class="pager-label">Next</span><span class="pager-title">MCP, Reminders &amp; file ingestion →</span></a>
           </div>
         </article>
 
-        <article class="doc-panel" id="doc-integrations-apps" data-keywords="obsidian mcp claude desktop code apple reminders pdf office word web pages images ingestion vault wikilinks canvas">
+        <article class="doc-panel" id="doc-integrations-apps" data-keywords="obsidian markdown copy save mcp claude desktop code local server apple reminders pdf office word web pages images ingestion wikilinks">
           <span class="eyebrow">Integrations</span>
-          <h2 class="doc-title">Obsidian, MCP, Reminders &amp; file ingestion</h2>
+          <h2 class="doc-title">MCP, Reminders &amp; file ingestion</h2>
           <p class="lede">IndexOne plugs into the tools you already use instead of asking you to live inside a new one.</p>
           <div class="doc-body">
-            <h2 id="your-obsidian-vault">Your Obsidian vault</h2>
-            <p>Every note is exported as atomic Markdown straight into your vault — YAML front-matter, <code>[[wikilinks]]</code>, <code>obsidian://</code> block-refs, and an optional canvas board. They're plain files you own, editable in Obsidian or anything else that reads Markdown.</p>
+            <h2 id="your-obsidian-vault">Obsidian and other Markdown apps</h2>
+            <p>IndexOne no longer writes into an Obsidian vault (the export was removed in 3.3). To work on your notes elsewhere, use <b>Copy Markdown</b> or <b>Save Markdown…</b> on a note, or a <a href="javascript:void(0)" data-doc-link="backups" style="color:var(--accent-text); font-weight:600;">backup</a>, which writes everything as plain <code>.md</code> files with front-matter and <code>[[wikilinks]]</code>. Bringing notes <i>in</i> from an Obsidian vault still works through <a href="javascript:void(0)" data-doc-link="imports" style="color:var(--accent-text); font-weight:600;">Imports</a>.</p>
             <h2 id="mcp-setup">A local, read-only MCP server</h2>
-            <p>IndexOne exposes an MCP server on <code>127.0.0.1:8765</code> so Claude Desktop or Claude Code can query your notes directly. It's read-only, and it respects the lock model exactly like the app — a sealed, locked meeting is invisible to it too. Twenty tools cover your meetings and their transcripts, imported documents and their outlines, semantic search, open commitments, entity dossiers, the entity list, note folders, your <b>Workspaces</b> hierarchy, your <b>boards</b>, your shared <b>tasks</b>, and your Shared Ivy.</p>
+            <p>IndexOne exposes an MCP server on <code>127.0.0.1:8765</code> so Claude Desktop or Claude Code can query your notes directly. It's read-only, and it respects the lock model exactly like the app — a sealed, locked meeting is invisible to it too. Twenty tools cover your meetings and their transcripts, imported documents and their outlines, semantic search, open commitments, entity dossiers, the entity list, note folders, your <b>Workspaces</b> hierarchy, your <b>projects</b>, your shared <b>tasks</b>, and your Shared Ivy.</p>
             <div class="code-label">claude_desktop_config.json</div>
             <pre class="code-block"><span class="c">// Point Claude Desktop at your local IndexOne MCP server</span>
 {
@@ -1188,7 +1292,7 @@
     }
   }
 }</pre>
-            <p>The bearer token is required by default. IndexOne shows the finished block, with your own token already in it, in <b>Settings → Privacy &amp; Integrations</b> — copy it from there rather than retyping this one.</p>
+            <p>The bearer token is required by default. IndexOne shows the finished block, with your own token already in it, in <b>Settings → Connectors → Local server for Claude</b> — copy it from there rather than retyping this one.</p>
             <p>Running Claude Code or another agent over your vault? The <a href="https://github.com/monoone-dev/index-one-landing-page/blob/main/docs/use-with-your-agent.md" style="color:var(--accent-text); font-weight:600;">agent guide</a> and the <a href="https://github.com/monoone-dev/index-one-landing-page/tree/main/vault-skills" style="color:var(--accent-text); font-weight:600;">skill pack</a> teach it IndexOne's note conventions and every MCP tool, so it queries the server instead of grepping files.</p>
             <h2 id="apple-reminders">Apple Reminders</h2>
             <p>Action items extracted from a meeting note can push straight into Apple Reminders, so follow-ups don't have to live only inside IndexOne.</p>
@@ -1201,26 +1305,27 @@
           </div>
         </article>
 
-        <article class="doc-panel" id="doc-settings" data-keywords="settings configuration editor backups health check appearance theme accent sidebar studio paper minimalist skin audio transcription diarization voice trigger wake phrase connectors privacy memory facts obsidian storage notes subfolders sharing organizations">
+        <article class="doc-panel" id="doc-settings" data-keywords="settings configuration search language appearance theme accent formatting toolbar studio paper minimalist skin audio transcription parakeet diarization voice trigger wake phrase notes templates glossary automatic filing ai models ivy note assistant search index vault audit memory facts connectors local server privacy security app lock update check imports backups health check storage sharing account organizations about">
           <span class="eyebrow">Configuration</span>
           <h2 class="doc-title">Settings &amp; configuration</h2>
-          <p class="lede">Settings opens as a modal over the app, not a pane beside it. Eighteen sections, in the six groups you'll find them under — every one of them real.</p>
+          <p class="lede">Settings opens as a modal over the app, not a pane beside it. Seventeen sections, in the order you'll find them.</p>
           <div class="doc-body">
-            <h2 id="appearance">Appearance &amp; General</h2>
-            <p><b>Appearance</b> — a theme (Studio, Paper or Minimalist), the mode (Light / Dark / System — the same switch this docs site uses) and an accent color. <b>Editor</b> — where the note editor's formatting bar sits. <b>General</b> — your vault folder, note subfolders and the first-run setup.</p>
+            <p>A <b>Search</b> box above the section list finds any setting by name.</p>
+            <h2 id="appearance">General &amp; Appearance</h2>
+            <p><b>General</b> — <b>Run setup again</b> to repeat the first-run setup. <b>Appearance</b> — the app <b>Language</b> (System by default; changing it reloads the window), the <b>Theme</b> (Studio, Paper or Minimalist), <b>Light &amp; dark</b> (Light, Dark or System — the same switch this docs site uses), the <b>Accent color</b> (the theme's own, Blue, Teal, Green, Orange or Pink) and where the note editor's <b>Formatting toolbar</b> sits (Top bar or Dock).</p>
             <h2 id="capture">Capture</h2>
-            <p><b>Transcription</b> — language, quality, and the on-device model picker. <b>Audio &amp; Capture</b> — input device, capturing system audio, smart speech detection, high-fidelity masters, splitting "Others" into individual speakers, recognising speakers across meetings, echo removal, and the <b>voice trigger</b> behind the in-meeting wake phrase. <b>Storage</b> — disk usage, an auto-delete policy for old recordings, and a manual "Free up space now".</p>
-            <h2 id="intelligence">Intelligence</h2>
-            <p><b>Notes</b> — summary style, action-item language, automatic thematic subfolders, and whether new items follow your Smart organize rules. <b>AI &amp; Models</b> — pick a provider and download an on-device model; see <a href="javascript:void(0)" data-doc-link="providers" style="color:var(--accent-text); font-weight:600;">AI providers</a>. <b>Connectors</b> — web search, Jira, Slack, Notion and ClickUp; see <a href="javascript:void(0)" data-doc-link="ivy-capabilities" style="color:var(--accent-text); font-weight:600;">What Ivy can do</a>.</p>
+            <p><b>Audio &amp; Capture</b> — the microphone, capturing system audio, smart speech detection, keeping high-fidelity masters, splitting "Others" into individual speakers, recognising speakers across meetings (with <b>Forget</b> / <b>Forget all</b> for stored voiceprints), removing speaker echo, and the <b>Voice trigger</b> that starts a recording when you say "start recording". <b>Transcription</b> — the language (Auto-detect or one of eight), a model tier (Light, Balanced, Sharp, Maximum, or <b>Show every size</b>), the <b>Live caption engine</b> (Whisper or Parakeet) and a <b>Custom model file</b>. <b>Storage</b> — a storage limit, automatically deleting old recordings, and <b>Free up space now</b>.</p>
+            <h2 id="intelligence">Notes &amp; AI</h2>
+            <p><b>Notes</b> — the summary style (Standard, Brief, Detailed, Action-focused, or one of your own templates), <b>Custom templates</b>, whether Ivy enhances or appends to <b>Your typed notes</b>, the notes language, a <b>Workspace glossary</b>, <b>Flag potentially unsupported claims</b>, and <b>Automatic filing</b>. <b>AI Models</b> — where your AI runs and which engine; see <a href="javascript:void(0)" data-doc-link="providers" style="color:var(--accent-text); font-weight:600;">AI providers</a>. <b>Ivy</b> — the in-meeting voice assistant and proactive hints, the <b>Note assistant</b> actions, the semantic <b>Search index</b> (a multilingual model of about 470 MB, and <b>Re-index notes</b>), the <b>Weekly vault audit</b>, <b>Cross-meeting memory</b> ("Remember facts about you") and how long the on-device model stays loaded; see <a href="javascript:void(0)" data-doc-link="ivy-page" style="color:var(--accent-text); font-weight:600;">Ivy's page</a>. <b>Connectors</b> — web search, Jira, Slack, Notion and ClickUp, and the <b>Local server for Claude</b>; see <a href="javascript:void(0)" data-doc-link="ivy-capabilities" style="color:var(--accent-text); font-weight:600;">What Ivy can do</a>.</p>
             <h2 id="sharing-and-organizations">Sharing</h2>
-            <p><b>Account</b> — your sharing account, share links and incoming shares. <b>Organization</b> — the organizations you belong to for <a href="javascript:void(0)" data-doc-link="shared-ivy" style="color:var(--accent-text); font-weight:600;">Shared Ivy</a>.</p>
-            <h2 id="privacy-and-vault">Privacy &amp; Vault</h2>
-            <p><b>Privacy &amp; Integrations</b> — the redaction firewall, cloud-processing consent, locked folders, the local server for other apps, "Remember facts about you", and <b>Check for updates on launch</b>. <b>Obsidian</b> — your vault path and export options. <b>Imports</b> — Notion, Obsidian, Apple Notes, folders of Markdown and restorable backups. <b>Backups</b> — save everything to an <code>index-one.backup</code> folder; see <a href="javascript:void(0)" data-doc-link="backups" style="color:var(--accent-text); font-weight:600;">Backups &amp; Health Check</a>.</p>
+            <p><b>Account</b> — your sharing account, Touch ID unlock, <b>Change password</b>, a pending-reset notice and incoming shares; see <a href="javascript:void(0)" data-doc-link="shared-ivy" style="color:var(--accent-text); font-weight:600;">Shared Ivy</a>. <b>Organization</b> — the organizations you belong to.</p>
+            <h2 id="privacy-and-vault">Privacy &amp; Data</h2>
+            <p><b>Privacy &amp; Security</b> — the <a href="javascript:void(0)" data-doc-link="protection" style="color:var(--accent-text); font-weight:600;">App lock</a>, what is removed before text leaves (and name masking), cloud processing consent, <b>Images in notes</b>, locked folders, and the <b>Update check</b>. <b>Imports</b> — Notion, Obsidian, Markdown files, an IndexOne backup and Apple Notes. <b>Backups</b> — save everything to an <code>index-one.backup</code> folder; see <a href="javascript:void(0)" data-doc-link="backups" style="color:var(--accent-text); font-weight:600;">Backups &amp; Health Check</a>.</p>
             <h2 id="developer-and-about">Health Check, Developer &amp; About</h2>
-            <p><b>Health Check</b> — whether the database, vault, models, AI provider, the Ivy engine migration and the connection for other apps are working. <b>Developer</b> — developer mode, the app log and the diagnostics bundle; see <a href="javascript:void(0)" data-doc-link="diagnostics" style="color:var(--accent-text); font-weight:600;">Developer mode &amp; diagnostics</a>. <b>About</b> — the version you are running, the update check, and the Ivy engine migration.</p>
+            <p><b>Health Check</b> — whether every part of IndexOne is working, grouped as Needs attention, Working and Optional. <b>Developer</b> — developer mode and the app log; see <a href="javascript:void(0)" data-doc-link="diagnostics" style="color:var(--accent-text); font-weight:600;">Developer mode &amp; diagnostics</a>. <b>About</b> — the version you are running, <b>Software update</b>, the Ivy engine migration and the open-source models IndexOne uses.</p>
           </div>
           <div class="doc-pager">
-            <a class="prev" data-doc-link="integrations-apps"><span class="pager-label">Back</span><span class="pager-title">← Obsidian, MCP, Reminders &amp; file ingestion</span></a>
+            <a class="prev" data-doc-link="integrations-apps"><span class="pager-label">Back</span><span class="pager-title">← MCP, Reminders &amp; file ingestion</span></a>
             <a class="next" data-doc-link="backups"><span class="pager-label">Next</span><span class="pager-title">Backups &amp; Health Check →</span></a>
           </div>
         </article>
@@ -1231,11 +1336,11 @@
           <p class="lede">Keep a copy of everything as plain Markdown, and see at a glance whether every part of IndexOne is working.</p>
           <div class="doc-body">
             <h2 id="backups">Backups</h2>
-            <p><b>Settings &rarr; Backups</b> saves everything to an <code>index-one.backup</code> folder you choose, at any time: every note, transcript, document and image as <code>.md</code> files. It shows progress while it runs and lists your earlier backups. Locked folders are always left out and stay locked.</p>
+            <p><b>Settings &rarr; Backups</b> saves everything to an <code>index-one.backup</code> folder you choose, at any time: every note, transcript, document and image as <code>.md</code> files. Leave <b>Restorable in IndexOne</b> on to be able to bring it back later. It shows progress while it runs and lists your earlier backups. Locked folders are always left out and stay locked.</p>
             <h2 id="restoring">Restoring a backup</h2>
             <p>A restorable backup brings back the same Spaces, Projects, folders, notes and meetings through <b>Settings &rarr; Imports</b>, with the same dry run as every other <a href="javascript:void(0)" data-doc-link="imports" style="color:var(--accent-text); font-weight:600;">import</a>.</p>
             <h2 id="health-check">Health Check</h2>
-            <p><b>Settings &rarr; Health Check</b> lists the database, the vault, the models, the AI provider, the Ivy engine migration and the connection for other apps, each with its state. When the microphone, screen and system audio, or calendar is not allowed, its row offers <b>Allow</b> or <b>Open System Settings</b>.</p>
+            <p><b>Settings &rarr; Health Check</b> groups its results as <b>Needs attention</b>, <b>Working</b> and <b>Optional</b>. It checks the encrypted database, the Ivy engine keys, the AI provider for notes, the connection for other apps, the sharing account, microphone access, screen &amp; system audio recording, calendar access, and the speech-to-text, on-device Ivy, semantic search and name-redaction models. When a permission is missing, its row offers <b>Allow</b> or <b>Open System Settings</b>.</p>
           </div>
           <div class="doc-pager">
             <a class="prev" data-doc-link="settings"><span class="pager-label">Back</span><span class="pager-title">← Settings &amp; configuration</span></a>
@@ -1243,31 +1348,34 @@
           </div>
         </article>
 
-        <article class="doc-panel" id="doc-shortcuts" data-keywords="keyboard shortcuts global shortcut floating bar bold italic heading slash menu ask ivy escape">
+        <article class="doc-panel" id="doc-shortcuts" data-keywords="keyboard shortcuts global shortcut floating bar quick search bold italic strikethrough checklist heading tab slash menu ask ivy cmd j escape">
           <span class="eyebrow">Configuration</span>
           <h2 class="doc-title">Keyboard shortcuts</h2>
           <p class="lede">A short, real list — IndexOne keeps global shortcuts to exactly one, on purpose.</p>
           <div class="doc-body">
             <h2 id="global">Global</h2>
-            <p><code>⌘⇧R</code> toggles the floating recorder bar from anywhere on the Mac — the only shortcut IndexOne registers system-wide, and the only one that works while another app is in front.</p>
+            <p><code>⌘⇧R</code> toggles the floating recorder bar from anywhere on the Mac — the only shortcut IndexOne registers system-wide, and the only one that works while another app is in front. It is also in the menu-bar menu as <b>Recorder bar</b>.</p>
             <h2 id="in-the-app">In the app</h2>
             <ul>
-              <li><code>⌘K</code> — search</li>
-              <li><code>⌘N</code> — new note</li>
-              <li><code>⌘T</code> — new tab</li>
+              <li><code>⌘K</code> — quick search, with a <b>Search</b> and an <b>Ask Ivy</b> mode</li>
+              <li><code>⌘N</code> or <code>⌘T</code> — create in Workspaces, with Note preselected (the <b>Quick note</b> button opens a blank note straight away)</li>
               <li><code>⌘W</code> — close the current tab</li>
-              <li><code>Esc</code> — dismiss whatever is open</li>
-              <li><code>⌘R</code> — on the record screen, starts and stops the recording</li>
+              <li><code>Esc</code> — dismiss whatever is open; in the logs and transcript search boxes, a second <code>Esc</code> leaves the box</li>
+              <li><code>⌘R</code> — on the Capture screen, starts a recording, or stops it and creates the note now</li>
+              <li><code>⌘↩</code> — confirms the destination in the move picker</li>
             </ul>
             <h2 id="in-the-note-editor">In the note editor</h2>
             <ul>
               <li><code>⌘B</code> / <code>⌘I</code> — bold / italic</li>
+              <li><code>⌘⇧X</code> — strikethrough</li>
+              <li><code>⌘⇧9</code> — checklist item</li>
               <li><code>⌘1</code> / <code>⌘2</code> / <code>⌘3</code> — heading levels 1 / 2 / 3</li>
-              <li><code>/</code> at the start of a line — opens the slash command menu, including an "Ask Ivy" entry</li>
-              <li><code>Esc</code> — closes the slash menu or an open link picker</li>
+              <li><code>Tab</code> / <code>⇧Tab</code> — indent or outdent a list item; move between table cells</li>
+              <li><code>/</code> at the start of a line — opens the slash command menu, including an "Ask Ivy" entry; the arrow keys move, <code>↩</code> or <code>Tab</code> inserts</li>
+              <li><code>Esc</code> — closes the slash menu, an open link picker or the selection bubble</li>
             </ul>
             <h2 id="selecting-text">Selecting text</h2>
-            <p>No shortcut needed here by design: select any passage and the <a href="javascript:void(0)" data-doc-link="notes-editor" style="color:var(--accent-text); font-weight:600;">Ivy menu</a> bubble appears on its own, ready for one of its nineteen actions.</p>
+            <p>Select any passage and an <b>Ask Ivy</b> button appears beside it; <code>⌘J</code> opens it from the keyboard, in notes and meeting notes alike. It leads to the <a href="javascript:void(0)" data-doc-link="notes-editor" style="color:var(--accent-text); font-weight:600;">Ivy menu</a>’s nineteen actions, which you can trim in <b>Settings &rarr; Ivy &rarr; Note assistant</b>.</p>
           </div>
           <div class="doc-pager">
             <a class="prev" data-doc-link="backups"><span class="pager-label">Back</span><span class="pager-title">← Backups &amp; Health Check</span></a>
@@ -1281,13 +1389,13 @@
           <p class="lede">Off by default. Switch it on when something has gone wrong and you want to see &mdash; or send &mdash; what the app actually did.</p>
           <div class="doc-body">
             <h2 id="developer-mode">Developer mode</h2>
-            <p>In <b>Settings &rarr; Developer</b>, turning on developer mode adds a <b>Logs</b> group to the rail. It changes nothing about how the app records, transcribes or reasons &mdash; it only makes the log readable from inside the app instead of hunting for a file.</p>
+            <p>In <b>Settings &rarr; Developer</b>, turning on developer mode adds a <b>Developer mode</b> group with the <b>Logs</b> to the sidebar. It changes nothing about how the app records, transcribes or reasons &mdash; it only makes the log readable from inside the app instead of hunting for a file.</p>
             <h2 id="the-app-log">The app log</h2>
-            <p>A plain, readable list of what the app has been doing: stage names, counts, durations and errors. Click a row and it expands into the whole entry. The log holds IDs and stage names, never your note text, transcript segments, titles or keys &mdash; a debug log is not allowed to become the leak the rest of the app prevents.</p>
+            <p>A plain, readable list of what the app has been doing: stage names, counts, durations and errors. Click a row and it expands into the whole entry. Switch between the <b>Current</b> and the <b>Previous</b> session, filter by <b>Errors</b>, <b>Warnings</b>, <b>Info</b> or <b>Debug</b>, and use <b>Auto-refresh</b>, <b>Copy</b>, <b>Reveal in Finder</b> or <b>Clear</b>. The log holds IDs and stage names, never your note text, transcript segments, titles or keys &mdash; a debug log is not allowed to become the leak the rest of the app prevents.</p>
             <h2 id="retention">Kept for a week, and capped</h2>
-            <p>Entries older than <b>seven days</b> are deleted, and the log is bounded in size as well (16 MB) so a long or noisy session cannot quietly fill the disk. Both limits apply on their own &mdash; whichever is reached first.</p>
+            <p>The viewer shows the last <b>24 hours</b>; older entries stay in the log file only. The file itself drops entries older than <b>seven days</b>, and is bounded in size as well (16 MB) so a long or noisy session cannot quietly fill the disk &mdash; whichever limit is reached first.</p>
             <h2 id="diagnostics-bundle">The diagnostics bundle</h2>
-            <p>One button exports the log as a single file. It can contain file paths from your Mac, and those paths include your macOS user name &mdash; so <b>do not attach it to a public issue</b>. When you <a href="https://github.com/monoone-dev/index-one-landing-page/issues/new/choose" style="color:var(--accent-text); font-weight:600;">report a bug</a>, describe the problem there; if we need the bundle, we will ask for it privately. The file is yours, it leaves the Mac only because you chose to send it, and nothing about it is automatic.</p>
+            <p><b>Save diagnostics bundle</b> on the Logs page exports the log as a single file, saved next to the logs. It can contain file paths from your Mac, and those paths include your macOS user name &mdash; so <b>do not attach it to a public issue</b>. When you <a href="https://github.com/monoone-dev/index-one-landing-page/issues/new/choose" style="color:var(--accent-text); font-weight:600;">report a bug</a>, describe the problem there; if we need the bundle, we will ask for it privately. The file is yours, it leaves the Mac only because you chose to send it, and nothing about it is automatic.</p>
           </div>
           <div class="doc-pager">
             <a class="prev" data-doc-link="shortcuts"><span class="pager-label">Back</span><span class="pager-title">← Keyboard shortcuts</span></a>
@@ -1309,10 +1417,11 @@
               <li>Every encryption key — the SQLCipher DEK and every folder's content key</li>
             </ul>
             <h2 id="leaves-by-default">Leaves by default — one call, none of your content</h2>
-            <p>At launch IndexOne asks GitHub whether a newer version of the app exists. The request says which version of IndexOne you are running, because that is how it asks the question — and nothing else: no meetings, no notes, no account. It is recorded in the same ledger as every other call that leaves the Mac, and you can switch it off in <b>Settings &rarr; Privacy &rarr; Check for updates on launch</b>.</p>
+            <p>At launch IndexOne asks GitHub whether a newer version of the app exists. The request says which version of IndexOne you are running, because that is how it asks the question — and nothing else: no meetings, no notes, no account. It is recorded in the same ledger as every other call that leaves the Mac, and you can switch it off in <b>Settings &rarr; Privacy &amp; Security &rarr; Update check</b>.</p>
             <h2 id="only-with-opt-in">Only leaves if you opt in</h2>
             <p>The only thing that ever carries your <b>content</b> off the Mac is meeting text sent to a cloud provider you've explicitly enabled — and even then, only <b>after</b> the redaction firewall scrubs emails, card-like numbers and phone numbers &mdash; and people's names too, if you have turned on name masking. See <a href="javascript:void(0)" data-doc-link="redaction-firewall" style="color:var(--accent-text); font-weight:600;">Redaction firewall &amp; cloud egress</a> for the full provider-by-provider breakdown and <a href="javascript:void(0)" data-doc-link="providers" style="color:var(--accent-text); font-weight:600;">AI providers</a> for how to configure one.</p>
-            <p><b>Images in a note.</b> When you Ask Ivy about a note with images, their text is recognized on this Mac. An image itself is sent to a cloud model only after a separate consent, given for images on their own.</p>
+            <p><b>Images in a note.</b> When you Ask Ivy about a note with images, their text is recognized on this Mac. An image itself is sent to a cloud model only after a separate consent, given for images on their own (<b>Settings &rarr; Privacy &amp; Security &rarr; Images in notes</b>).</p>
+            <p><b>See for yourself.</b> <a href="javascript:void(0)" data-doc-link="analytics" style="color:var(--accent-text); font-weight:600;">Analytics</a> has a <b>What leaves this Mac</b> panel: every cloud call over the last 7, 30 or 90 days, the tokens sent, what the firewall removed, and a flag on any call sent without name masking.</p>
             <div class="callout security">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
               <p>The app itself is <b>signed &amp; notarized</b> for macOS — Gatekeeper verifies it before it ever runs, the same bar every trusted Mac app has to clear.</p>
@@ -1320,6 +1429,35 @@
           </div>
           <div class="doc-pager">
             <a class="prev" data-doc-link="diagnostics"><span class="pager-label">Back</span><span class="pager-title">← Developer mode &amp; diagnostics</span></a>
+            <a class="next" data-doc-link="protection"><span class="pager-label">Next</span><span class="pager-title">Touch ID protection →</span></a>
+          </div>
+        </article>
+
+        <article class="doc-panel" id="doc-protection" data-keywords="touch id protect protection lock unlock relock lock all app lock lock after screen sharing mac password inactivity encrypted folders notes meetings workspaces projects">
+          <span class="eyebrow">Privacy &amp; security</span>
+          <h2 class="doc-title">Touch ID protection</h2>
+          <p class="lede">Protect a folder, project, Workspace, note or meeting with Touch ID — or lock the whole app.</p>
+          <div class="doc-body">
+            <h2 id="protect-an-item">Protect an item</h2>
+            <p>Choose <b>Protect…</b> in the menu of a folder, project, Workspace, note or meeting. The <b>Protect</b> side panel turns on <b>Require Touch ID or your Mac password</b> and sets <b>Lock again after inactivity</b>: never, or after 1, 5, 15 minutes or an hour. <b>Lock now</b> locks it straight away. The item's contents are encrypted and hidden until you unlock it; see <a href="javascript:void(0)" data-doc-link="lock-model" style="color:var(--accent-text); font-weight:600;">the lock model</a> for how.</p>
+            <ul>
+              <li>Notes that aren't in a folder can't be protected — file them first.</li>
+              <li>Protected items can't be shared.</li>
+              <li>Removing protection (<b>Protection…</b> &rarr; <b>Remove protection</b>) asks for Touch ID again.</li>
+            </ul>
+            <h2 id="unlocking">Unlocking</h2>
+            <p>Every locked folder, note and meeting opens through the same unlock screen: <b>Unlock</b>, then Touch ID or your Mac password. Progress and errors stay on the item you are unlocking, and a failed attempt says what happened — "Touch ID was cancelled", for example — instead of showing a technical error.</p>
+            <h2 id="relocking">Locking again</h2>
+            <p>The sidebar footer shows how many protected items are unlocked, with <b>Lock all</b>. Locking a folder also locks everything inside it, even if only part of it was open, and every list, title and view that showed its contents is refreshed so nothing protected stays visible.</p>
+            <h2 id="app-lock">App lock</h2>
+            <p>In <b>Settings &rarr; Privacy &amp; Security &rarr; App lock</b>, turn on <b>Require Touch ID or your Mac password to open IndexOne</b>. Choose when it locks — immediately, or after 1, 5, 15 minutes or an hour of inactivity — and whether it locks as soon as screen sharing starts; <b>Lock now</b> locks it at once. A locked app shows only "IndexOne is locked". Locking the app also locks every protected item you had open, and masks the titles of protected tabs.</p>
+            <div class="callout security">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+              <p>A note's <b>Lock</b> switch is something else: it only makes the note read-only, and encrypts nothing.</p>
+            </div>
+          </div>
+          <div class="doc-pager">
+            <a class="prev" data-doc-link="data-flow"><span class="pager-label">Back</span><span class="pager-title">← What never leaves your Mac</span></a>
             <a class="next" data-doc-link="lock-model"><span class="pager-label">Next</span><span class="pager-title">The lock model →</span></a>
           </div>
         </article>
@@ -1330,7 +1468,7 @@
           <p class="lede">A per-folder lock is a second, independent encryption layer on top of the whole-database encryption — and every read path respects it.</p>
           <div class="doc-body">
             <h2 id="two-layers">Two layers, not one</h2>
-            <p>The entire SQLite database is SQLCipher-encrypted at rest. On top of that, locking a folder wraps its notes, transcripts, timelines and audio in a per-folder AES-256-GCM content key, itself wrapped by a master key released only by <b>Touch ID</b>.</p>
+            <p>The entire SQLite database is SQLCipher-encrypted at rest. On top of that, locking a folder wraps its notes, transcripts, timelines and audio in a per-folder AES-256-GCM content key, itself wrapped by a master key released only by <b>Touch ID or your Mac password</b>. How to protect an item, unlock it and lock it again is on the <a href="javascript:void(0)" data-doc-link="protection" style="color:var(--accent-text); font-weight:600;">Touch ID protection</a> page.</p>
             <h2 id="verify-before-destroy">Verify-before-destroy</h2>
             <p>Sealing never trusts the ciphertext blind: IndexOne decrypts what it just wrote and checks it's byte-identical <b>before</b> it ever blanks the plaintext. A crash mid-seal can never destroy the only copy of your content.</p>
             <div class="doc-table">
@@ -1350,7 +1488,7 @@
             <p>A watcher can auto-relock sealed folders and wipe the cached key the moment screen sharing is detected — so a shared screen can't spill private notes. Unlocking is session-scoped and reversible: a Touch ID prompt unwraps the content key for that session only; relocking (manual, or automatic) blanks the decrypted copies again without touching the sealed data underneath.</p>
           </div>
           <div class="doc-pager">
-            <a class="prev" data-doc-link="data-flow"><span class="pager-label">Back</span><span class="pager-title">← What never leaves your Mac</span></a>
+            <a class="prev" data-doc-link="protection"><span class="pager-label">Back</span><span class="pager-title">← Touch ID protection</span></a>
             <a class="next" data-doc-link="redaction-firewall"><span class="pager-label">Next</span><span class="pager-title">Redaction firewall &amp; cloud egress →</span></a>
           </div>
         </article>
@@ -1369,16 +1507,17 @@
                   <thead><tr><th>Ivy / provider</th><th>Where it runs</th><th>Does meeting text leave your Mac?</th></tr></thead>
                   <tbody>
                     <tr><td>On-device Ivy (Bielik / Qwen)</td><td>Fully local</td><td>No</td></tr>
-                    <tr><td>Ollama</td><td>Fully local</td><td>No</td></tr>
+                    <tr><td>Ollama on this Mac</td><td>Fully local</td><td>No</td></tr>
+                    <tr><td>Ollama on another server</td><td>Over the network</td><td>Redacted only</td></tr>
                     <tr><td>Claude Code (default summarizer)</td><td>Local CLI → cloud</td><td>Redacted only</td></tr>
-                    <tr><td>Codex (OpenAI&rsquo;s CLI, run tool-free)</td><td>Local CLI &rarr; cloud</td><td>Redacted only</td></tr>
+                    <tr><td>OpenAI via the Codex CLI (run tool-free)</td><td>Local CLI &rarr; cloud</td><td>Redacted only</td></tr>
                     <tr><td>Anthropic API (bring your own key)</td><td>Direct HTTPS</td><td>Redacted only</td></tr>
-                    <tr><td>AI Gateway (OpenAI-compatible endpoint)</td><td>Direct HTTPS</td><td>Redacted only</td></tr>
+                    <tr><td>Kong AI Gateway (OpenAI-compatible)</td><td>Direct HTTPS</td><td>Redacted only</td></tr>
                   </tbody>
                 </table>
               </div>
             </div>
-            <p>Every cloud AI call is logged and shown back to you in plain language — what left the Mac and when — a running ledger, not a one-time toggle you forget about.</p>
+            <p>Every cloud AI call is logged and shown back to you in plain language — what left the Mac and when — a running ledger in <a href="javascript:void(0)" data-doc-link="analytics" style="color:var(--accent-text); font-weight:600;">Analytics</a> &rarr; <b>What leaves this Mac</b>, not a one-time toggle you forget about.</p>
           </div>
           <div class="doc-pager">
             <a class="prev" data-doc-link="lock-model"><span class="pager-label">Back</span><span class="pager-title">← The lock model</span></a>

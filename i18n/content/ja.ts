@@ -471,6 +471,13 @@ const content: SiteContent = {
     github: 'GitHub のすべてのリリース',
     latest: '最新',
     englishNote: 'リリースノートは英語で公開しています。',
+    versions: 'バージョン',
+    filterLabel: 'リリースを表示',
+    filters: { all: 'すべて', features: '新機能', fixes: '修正' },
+    kinds: { major: 'メジャーリリース', minor: '新機能', patch: '修正' },
+    count: { other: '{count} 件のリリース' },
+    showOlder: '以前のリリースを表示',
+    empty: 'この種類のリリースはありません。',
   },
   cta: {
     title: '会議にIvyを。主導権はあなたのMacに。',

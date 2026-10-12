@@ -471,6 +471,13 @@ const content: SiteContent = {
     github: 'GitHub 上的所有版本',
     latest: '最新',
     englishNote: '更新说明以英文发布。',
+    versions: '版本',
+    filterLabel: '显示版本',
+    filters: { all: '全部', features: '新功能', fixes: '修复' },
+    kinds: { major: '重大版本', minor: '新功能', patch: '修复' },
+    count: { other: '{count} 个版本' },
+    showOlder: '显示更早的版本',
+    empty: '没有此类版本。',
   },
   cta: {
     title: '让 Ivy 走进你的会议——掌控权留在你的 Mac 上。',

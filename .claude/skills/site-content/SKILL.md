@@ -20,6 +20,7 @@ description: Change what the IndexOne website says or shows — page copy in any
 | IndexOne and Ivy icons (theme-aware inline SVG) | `app/components/BrandIcon.vue`; tile colours in `--icon-*` in `app/assets/scss/_base.scss`; source files in `public/assets/{icon,logo,ivy}.svg` |
 | Skins (Studio / Paper / Minimalist) and light/dark tokens | `app/assets/scss/_themes.scss`, `app/app.config.ts` |
 | Documentation (English only, static) | `public/docs.html` |
+| The app version the documentation describes | `<meta name="docs-version">` and the `docs-version` line at the top of `public/docs.html` |
 
 ## Content rules
 
@@ -34,6 +35,10 @@ description: Change what the IndexOne website says or shows — page copy in any
   when a feature can send data (opt-in cloud AI, end-to-end encrypted sharing, the update check).
 - **Competitor facts** come from the vendor's own pages, with the month they were checked; mark what
   cannot be verified as "Not stated" instead of guessing.
+- **Docs name their version.** `public/docs.html` says which IndexOne release it was checked
+  against, in the `docs-version` meta tag and the line above the articles (version and release
+  date). Check the docs against that release of the app, then bump all three together; never bump
+  the version without checking.
 - Short sentences, no marketing superlatives. In-app UI labels ("Settings → Privacy") stay in English.
 - **No third-party requests.** No analytics, no CDN fonts or scripts, no runtime `fetch`, no `data:` URIs.
 

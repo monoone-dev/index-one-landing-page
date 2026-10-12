@@ -471,6 +471,13 @@ const content: SiteContent = {
     github: 'All releases on GitHub',
     latest: 'Latest',
     englishNote: 'Release notes are published in English.',
+    versions: 'Versions',
+    filterLabel: 'Show releases',
+    filters: { all: 'All', features: 'Features', fixes: 'Fixes' },
+    kinds: { major: 'Major release', minor: 'Feature release', patch: 'Fix release' },
+    count: { one: '{count} release', other: '{count} releases' },
+    showOlder: 'Show older releases',
+    empty: 'No releases of this kind.',
   },
   cta: {
     title: 'Bring Ivy to your meetings — keep control on your Mac.',
