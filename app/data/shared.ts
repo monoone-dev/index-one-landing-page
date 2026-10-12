@@ -3,13 +3,14 @@ import { site } from './site'
 
 export interface Screenshot {
   src: string
+  light: string
   width: number
   height: number
 }
 
 export type Support = 'yes' | 'partial' | 'no' | 'unknown' | 'info'
 
-const shot = (name: string, width: number, height: number): Screenshot => ({ src: `/assets/screens/${name}.webp`, width, height })
+const shot = (name: string, width: number, height: number): Screenshot => ({ src: `/assets/screens/${name}.webp`, light: `/assets/screens/${name}-light.webp`, width, height })
 
 export const trustIcons = ['i-lucide-lock', 'i-lucide-shield', 'i-lucide-eye-off', 'i-lucide-file-text'] as const
 
