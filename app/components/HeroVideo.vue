@@ -180,7 +180,7 @@ onBeforeUnmount(() => {
   box-shadow: var(--shadow-md);
 
   &__player,
-  &__poster {
+  > .hero-video__poster {
     position: absolute;
     inset: 0;
     width: 100%;
