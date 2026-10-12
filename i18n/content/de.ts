@@ -471,6 +471,13 @@ const content: SiteContent = {
     github: 'Alle Versionen auf GitHub',
     latest: 'Aktuell',
     englishNote: 'Die Versionshinweise erscheinen auf Englisch.',
+    versions: 'Versionen',
+    filterLabel: 'Versionen anzeigen',
+    filters: { all: 'Alle', features: 'Neuerungen', fixes: 'Fehlerbehebungen' },
+    kinds: { major: 'Hauptversion', minor: 'Neuerungen', patch: 'Fehlerbehebungen' },
+    count: { one: '{count} Version', other: '{count} Versionen' },
+    showOlder: 'Ältere Versionen anzeigen',
+    empty: 'Keine Versionen dieser Art.',
   },
   cta: {
     title: 'Hol Ivy in deine Meetings – und behalte die Kontrolle auf deinem Mac.',

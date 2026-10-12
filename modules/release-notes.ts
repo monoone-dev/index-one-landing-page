@@ -9,9 +9,14 @@ const releaseDates: Record<string, string> = {
 
 const datePattern = /^\*Originally released on (\d{4}-\d{2}-\d{2})\.\*\s*/
 
+export type ReleaseKind = 'major' | 'minor' | 'patch'
+
 export interface ReleaseNote {
   tag: string
   date: string
+  kind: ReleaseKind
+  /** The note's opening paragraph, shown under the version title; null when it starts with a heading. */
+  summary: string | null
   html: string
 }
 
@@ -42,6 +47,11 @@ const compareTags = (a: string, b: string) => {
   return 0
 }
 
+const kindOf = (tag: string): ReleaseKind => {
+  const [, minor, patch] = tag.slice(1).split('.').map(Number)
+  return patch ? 'patch' : minor ? 'minor' : 'major'
+}
+
 function readNotes(dir: string): ReleaseNote[] {
   return readdirSync(dir)
     .filter(name => /^v\d+\.\d+\.\d+\.md$/.test(name))
@@ -53,7 +63,11 @@ function readNotes(dir: string): ReleaseNote[] {
       source = source.replace(datePattern, '')
       const tokens = marked.lexer(source)
       shiftHeadings(tokens)
-      return { tag, date, html: marked.parser(tokens) }
+      const lead = tokens.findIndex(t => t.type !== 'space')
+      const summary = tokens[lead]?.type === 'paragraph'
+        ? marked.parser(tokens.splice(lead, 1)).trim().replace(/^<p>|<\/p>$/g, '')
+        : null
+      return { tag, date, kind: kindOf(tag), summary, html: marked.parser(tokens) }
     })
     .sort((a, b) => compareTags(a.tag, b.tag))
 }
@@ -85,7 +99,7 @@ export default defineNuxtModule({
     addTypeTemplate({
       filename: 'types/release-notes.d.ts',
       getContents: () => `declare module '#release-notes' {
-  const notes: { tag: string, date: string, html: string }[]
+  const notes: { tag: string, date: string, kind: 'major' | 'minor' | 'patch', summary: string | null, html: string }[]
   export default notes
 }
 declare module '#release-latest' {

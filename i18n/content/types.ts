@@ -145,6 +145,14 @@ export interface SiteContent {
     github: string
     latest: string
     englishNote: string
+    versions: string
+    filterLabel: string
+    filters: Record<'all' | 'features' | 'fixes', string>
+    kinds: Record<'major' | 'minor' | 'patch', string>
+    /** Plural forms by Intl.PluralRules category, with a {count} placeholder. */
+    count: Partial<Record<Intl.LDMLPluralRule, string>> & { other: string }
+    showOlder: string
+    empty: string
   }
   cta: {
     title: string
