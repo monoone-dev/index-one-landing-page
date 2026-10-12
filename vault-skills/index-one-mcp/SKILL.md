@@ -1,13 +1,13 @@
 ---
 name: index-one-mcp
-description: Query IndexOne's local read-only MCP server for gated, indexed knowledge — semantic + full-text search over meetings and notes, entity dossiers, structured transcripts, open-commitment rollups, and typed note-folder database queries. Prefer this over grepping raw vault files. Use when you need to find, retrieve, or cross-reference meeting/note content that IndexOne has indexed. Read-only, loopback-only, excludes sealed content.
+description: Query IndexOne's local read-only MCP server for gated, indexed knowledge — semantic + full-text search over meetings and notes, entity dossiers, structured transcripts, open-commitment rollups, and typed note-folder database queries. Use when you need to find, retrieve, or cross-reference meeting/note content that IndexOne has indexed. Read-only, loopback-only, excludes sealed content.
 ---
 
 # Querying IndexOne's local MCP server
 
-IndexOne runs a **local, read-only MCP server** over its indexed store. Prefer it over grepping
-raw vault files whenever you need to **find or retrieve** meeting/note content, because it gives
-you what a file grep can't:
+IndexOne runs a **local, read-only MCP server** over its indexed store. IndexOne keeps its notes
+inside its own encrypted vault, not as loose files, so this server is how an agent **finds or
+retrieves** meeting/note content. It gives you:
 
 - **Semantic + full-text retrieval** (meaning-based search fused with keyword search), not just
   literal string matching.
@@ -156,9 +156,8 @@ Every tool returns text; every tool excludes sealed-and-not-unlocked content.
 
 ## Limits — know these before you rely on it
 
-- **Read-only.** There is no write, create, edit, or delete tool. To change a note, edit the
-  vault file (following the `index-one-vault` skill's coexistence rules) — the MCP server never
-  mutates anything.
+- **Read-only.** There is no write, create, edit, or delete tool. Changes to a note happen in the
+  IndexOne app — the MCP server never mutates anything.
 - **Sealed content is invisible.** A locked-and-not-session-unlocked meeting or note-folder
   returns no results from any tool. If you know something exists but can't find it, it may be
   locked — don't work around the gate.
