@@ -8,6 +8,8 @@ on:
       - "i18n/**"
       - "public/**"
       - "server/**"
+      - "release-notes/**"
+      - "modules/**"
       - "nuxt.config.ts"
       - "package.json"
       - "package-lock.json"
