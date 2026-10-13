@@ -275,7 +275,7 @@ const content: SiteContent = {
         body: 'Notatki IndexOne nie wymagają ślepego zaufania. Każda linijka oparta na tym, co faktycznie padło, ma swój dowód — kliknij, a przeskoczysz dokładnie do tej sekundy nagrania, z mówcą. Parafrazy i linijki bez pokrycia go nie dostają, więc od razu widzisz, co jest zweryfikowane.',
         points: [
           'Kliknij twierdzenie i usłysz, skąd dokładnie pochodzi',
-          'Mówca i dokładna sekunda przy każdym dowodzie',
+          'Przy każdym dowodzie: kto mówił i w której dokładnie sekundzie',
           'Siedem gotowych dokumentów z każdego spotkania jednym kliknięciem — e-mail z podsumowaniem, rejestr decyzji, zgłoszenie, podsumowanie 1:1, standup, podsumowanie sprzedażowe, notatki z rekrutacji',
           'Zapieczętowane foldery nigdy nie zdradzają czasu ani mówcy',
         ],
@@ -351,7 +351,7 @@ const content: SiteContent = {
         points: [
           'Wszystko z planu Free',
           'Synchronizacja z szyfrowaniem end-to-end między Twoimi Macami i iPhone’em',
-          'Zaszyfrowana kopia zapasowa w chmurze typu zero-knowledge',
+          'Zaszyfrowana kopia zapasowa w chmurze',
           'Opcjonalna zarządzana Ivy o niskich opóźnieniach (po redakcji)',
           'Własne przepisy i automatyzacje',
         ],

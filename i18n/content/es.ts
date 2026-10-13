@@ -351,7 +351,7 @@ const content: SiteContent = {
         points: [
           'Todo lo incluido en Free',
           'Sincronización con cifrado de extremo a extremo entre tus Mac y tu iPhone',
-          'Copia de seguridad cifrada en la nube de conocimiento cero',
+          'Copia de seguridad cifrada en la nube',
           'Ivy gestionado de baja latencia, opcional (con anonimización)',
           'Recetas y automatizaciones personalizadas',
         ],

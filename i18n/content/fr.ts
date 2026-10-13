@@ -351,7 +351,7 @@ const content: SiteContent = {
         points: [
           'Tout ce qu’inclut Free',
           'Synchronisation chiffrée de bout en bout entre vos Mac et votre iPhone',
-          'Sauvegarde cloud chiffrée à divulgation nulle',
+          'Sauvegarde cloud chiffrée',
           'Ivy gérée à faible latence, en option (anonymisée)',
           'Recettes et automatisations personnalisées',
         ],

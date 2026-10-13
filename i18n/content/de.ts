@@ -351,7 +351,7 @@ const content: SiteContent = {
         points: [
           'Alles aus Free',
           'Ende-zu-Ende-verschlüsselter Sync zwischen deinen Macs und deinem iPhone',
-          'Zero-Knowledge-verschlüsseltes Cloud-Backup',
+          'Verschlüsseltes Cloud-Backup',
           'Optional verwaltetes Ivy mit niedriger Latenz (geschwärzt)',
           'Eigene Rezepte und Automationen',
         ],
