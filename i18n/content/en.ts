@@ -351,7 +351,7 @@ const content: SiteContent = {
         points: [
           'Everything in Free',
           'End-to-end encrypted sync across your Macs and iPhone',
-          'Zero-knowledge encrypted cloud backup',
+          'Encrypted cloud backup',
           'Optional low-latency managed Ivy (redacted)',
           'Custom recipes and automations',
         ],

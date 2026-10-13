@@ -351,7 +351,7 @@ const content: SiteContent = {
         points: [
           '包含 Free 版的全部功能',
           '在你的多台 Mac 和 iPhone 之间端到端加密同步',
-          '零知识加密云备份',
+          '加密云备份',
           '可选的低延迟托管 Ivy（经脱敏）',
           '自定义配方与自动化',
         ],

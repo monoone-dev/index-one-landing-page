@@ -351,7 +351,7 @@ const content: SiteContent = {
         points: [
           'Tudo do Free',
           'Sincronização com criptografia de ponta a ponta entre seus Macs e o iPhone',
-          'Backup na nuvem criptografado com conhecimento zero',
+          'Backup na nuvem criptografado',
           'Ivy gerenciada de baixa latência, opcional (com anonimização)',
           'Receitas e automações personalizadas',
         ],
