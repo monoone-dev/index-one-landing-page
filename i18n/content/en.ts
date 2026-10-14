@@ -18,7 +18,7 @@ const content: SiteContent = {
     },
     pricing: {
       breadcrumb: 'Pricing',
-      title: 'IndexOne pricing — and how it compares with Obsidian, Notion and others',
+      title: 'IndexOne pricing — compared with Obsidian, Notion and others',
       description: 'IndexOne is free during early access. Compare it with Obsidian, Notion, Evernote, Bear and Amie on recording, on-device AI, encryption and Markdown.',
     },
     changelog: {

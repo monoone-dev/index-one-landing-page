@@ -85,8 +85,10 @@ export default defineNuxtModule({
     nuxt.options.alias['#release-notes'] = template.dst
 
     // The newest version on its own, so pages that only need its number don't bundle every note.
+    // Written to disk so the Nitro sitemap route can import it too.
     const latest = addTemplate({
       filename: 'release-latest.mjs',
+      write: true,
       getContents: () => {
         const [newest] = readNotes(dir)
         if (!newest) throw new Error('release-notes/: no notes found')
@@ -107,7 +109,7 @@ declare module '#release-latest' {
   export default latest
 }
 `,
-    })
+    }, { nuxt: true, nitro: true })
 
     nuxt.hook('builder:watch', async (_event, path) => {
       if (path.includes('release-notes/')) await updateTemplates({ filter: t => ['release-notes.mjs', 'release-latest.mjs'].includes(t.filename) })

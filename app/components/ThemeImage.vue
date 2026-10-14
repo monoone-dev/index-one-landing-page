@@ -1,7 +1,8 @@
 <script setup lang="ts">
 type Mode = 'light' | 'dark'
 
-const props = defineProps<{ dark: string, light: string, width: number, height: number, alt: string }>()
+// `priority` marks an above-the-fold image (the LCP candidate): fetched at once, not lazily.
+const props = defineProps<{ dark: string, light: string, width: number, height: number, alt: string, priority?: boolean }>()
 const colorMode = useColorMode()
 const root = useTemplateRef('root')
 const active = ref<Mode>()
@@ -49,7 +50,8 @@ onBeforeUnmount(() => { revision++ })
       :height="height"
       :alt="alt"
       :aria-hidden="previous === mode ? true : undefined"
-      loading="lazy"
+      :loading="priority ? 'eager' : 'lazy'"
+      :fetchpriority="priority ? 'high' : undefined"
       decoding="async"
       @animationend="previous = undefined"
     >
