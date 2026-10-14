@@ -1,3 +1,5 @@
+import latest from '#release-latest'
+
 const base = 'https://index-one.io'
 const locales = [
   { code: 'en', language: 'en-US' },
@@ -20,7 +22,9 @@ export default defineEventHandler((event) => {
       .map(l => `    <xhtml:link rel="alternate" hreflang="${l.language}" href="${url(l.code, page)}"/>`)
       .concat(`    <xhtml:link rel="alternate" hreflang="x-default" href="${url('en', page)}"/>`)
       .join('\n')
-    return `  <url>\n    <loc>${url(code, page)}</loc>\n${alternates}\n  </url>`
+    // Only the changelog has a date that is known to be true: the newest release.
+    const lastmod = page === '/changelog/' ? `\n    <lastmod>${latest.date}</lastmod>` : ''
+    return `  <url>\n    <loc>${url(code, page)}</loc>${lastmod}\n${alternates}\n  </url>`
   }))
   entries.push(`  <url>\n    <loc>${base}/docs.html</loc>\n  </url>`)
   setHeader(event, 'content-type', 'application/xml; charset=utf-8')

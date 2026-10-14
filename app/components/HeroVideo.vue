@@ -162,6 +162,7 @@ onBeforeUnmount(() => {
       :height="1080"
       alt=""
       aria-hidden="true"
+      priority
     />
     <button v-if="!started" class="hero-video__play" type="button" aria-controls="hero-video" @click="play">
       <span class="hero-video__disc"><UIcon name="i-lucide-play" /></span>
