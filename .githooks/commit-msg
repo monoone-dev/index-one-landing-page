@@ -1,3 +1,2 @@
 #!/bin/sh
-# Conventional Commits + no AI attribution (commitlint.config.mjs)
 exec npx --no-install commitlint --edit "$1"
