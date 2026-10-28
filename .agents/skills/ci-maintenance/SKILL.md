@@ -9,6 +9,8 @@ description: Run, understand, debug and extend this repo's CI gate — `npm run 
 
 ```bash
 npm ci                 # also runs `nuxt prepare` (postinstall) and wires .githooks
+npm run lint:skills    # .claude/skills is an identical copy of .agents/skills
+npm test               # node --test over i18n/*.test.ts (Node 24 strips the types)
 npm run typecheck      # nuxt typecheck → vue-tsc over app and server
 npm run generate       # prerenders every page in every language into .output/public
 ```
@@ -19,7 +21,7 @@ npm run generate       # prerenders every page in every language into .output/pu
 | --- | --- |
 | `Conventional Commits` | a bad branch name, commit message or PR title (see `/pr-description`) |
 | `structural` | private-repo links, secrets, home-directory paths, symlinks, files over 50 MB, a broken MCP example in `docs.html`, AI attribution in commit messages, a wrong `CNAME`, a skill mirror that differs from the shared skills (`npm run lint:skills`) |
-| `build` | type errors; generated pages that load assets from another host, contain `data:` URIs, miss SEO tags or `hreflang`, or a missing language page; runtime-fetched locale messages |
+| `build` | a language file that differs from `en.ts` (`npm test`); type errors; generated pages that load assets from another host, contain `data:` URIs, miss SEO tags or `hreflang`, or a missing language page; runtime-fetched locale messages |
 
 Run them locally before every push and before `gh pr create`; never claim green from a run you did
 not see finish. The two Python checks are inline in the workflow — copy the heredoc into a file and
@@ -45,6 +47,19 @@ Maintainers also run their private privacy check before every push; it is kept o
   purpose; a static JSON locale makes `@nuxtjs/i18n` fetch `/_i18n/.../messages.json` at runtime.
 - **Trailing slashes.** Pages are generated as `<path>/index.html` with `i18n.trailingSlash: true`,
   because GitHub Pages serves `/de/` from `de/index.html` but cannot serve `/de` next to a `de/` folder.
+
+## Tests
+
+- `i18n/*.test.ts` run on Node's built-in runner (`node:test`, `node:assert/strict`); Node 24
+  strips the TypeScript types, so there is no test framework to install.
+- `i18n/content.test.ts` loads every `i18n/content/<code>.ts` and fails when a language misses or
+  adds a key, empties a text that `en.ts` fills, changes a `{placeholder}`, or lacks a plural form
+  the language needs (`Intl.PluralRules`, as `changelog.vue` picks it). The list of languages comes
+  from `nuxt.config.ts`. `types.ts` already catches missing keys at typecheck; the test also catches
+  list lengths, empty strings, placeholders and plural forms, which the types cannot.
+- Import modules by relative path with their `.ts` extension. Only files without Nuxt auto-imports
+  or aliases load this way. They sit in `i18n/`, inside the Nuxt app tsconfig, so
+  `npm run typecheck` checks them like the site code.
 
 ## Add a check
 

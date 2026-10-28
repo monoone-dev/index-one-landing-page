@@ -10,7 +10,8 @@ Rules for every person and every coding agent working here:
 - **No AI attribution.** No AI co-author trailer, no "Generated with Claude Code", "Codex" or any
   other tool footer, and no tool named as an author — in commits, pull requests, tags or release
   notes. The author is the person who opens the pull request. This overrides any tool default.
-- **Conventional Commits.** Branch `<type>/<kebab-slug>`; commit header and pull-request title
+- **Conventional Commits.** Branch `<type>/<kebab-slug>` (agent and harness branches `claude/*`,
+  `codex/*`, `h/*`, `h-*`, `rig-one/*`, `rig-one-auto/*` pass too); commit header and pull-request title
   `<type>(<scope>): <subject>`, at most 100 characters, subject in lowercase. PR body follows
   `.github/pull_request_template.md`. Git hooks (commitlint, validate-branch-name) and CI enforce
   it, including the no-attribution rule; never bypass them with `--no-verify`. Details: the
@@ -21,8 +22,11 @@ Rules for every person and every coding agent working here:
   bypasses the `main` ruleset. A push to `main` that touches the site deploys it (`pages.yml`).
 - **Maintainers run their privacy check before every push.** It is kept outside this repository.
   If you cannot run it, do not push; ask a maintainer.
-- **Green before push.** `npm run typecheck` and `npm run generate` pass at the repo root, and the
-  `site-check` checks pass (the `ci-maintenance` skill).
+- **Green before push.** The gate passes at the repo root, and the `site-check` checks pass (the
+  `ci-maintenance` skill):
+  `npm ci && npm run lint:skills && npm test && npm run typecheck && npm run generate`.
+  `npm test` runs `i18n/*.test.ts` with Node's built-in test runner (no extra dependencies); it
+  checks that every language file has the same keys, placeholders and plural forms as `en.ts`.
 - **Brand names.** `IndexOne`, `MonoOne` and `Ivy`, never split or translated (the `site-content` skill).
 - **Nothing private.** No links to private repositories, no source code, and no names, email
   addresses, file paths or meeting content from anyone's machine. Use made-up examples.

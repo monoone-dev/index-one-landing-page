@@ -199,6 +199,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Every language file matches en
+        run: npm test
+
       - name: Type-check
         run: npm run typecheck
 
