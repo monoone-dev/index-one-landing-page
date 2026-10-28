@@ -24,9 +24,11 @@ Types: `feat` `fix` `refactor` `chore` `docs` `test` `perf` `ci` `build` `style`
 
 `<type>/<kebab-slug>` — lowercase, digits, `.`, `_`, `-`; no session hashes.
 Examples: `feat/pricing-comparison`, `fix/header-logo-dark-mode`, `ci/pin-actions`.
-Only `dependabot/*` and `release/<version>` are exempt.
-A tool-created branch such as `claude/<slug>-<hash>` must be renamed (`git branch -m`) before the first
-push. If it is already pushed with an open PR, rename it on GitHub
+`dependabot/*` and `release/<version>` are exempt. So are the branches coding agents and harnesses
+create on their own, so their commits and pushes are never blocked: `claude/*`, `codex/*`, `h/*`,
+`h-*`, `rig-one/*`, `rig-one-auto/*`, `rig-one-auto-staging/*`, `rig-one-base/*`.
+`<type>/<kebab-slug>` is still the convention: when you open a PR by hand from a tool branch, rename
+it first (`git branch -m <type>/<slug>`), or, once pushed with an open PR, on GitHub
 (`gh api -X POST repos/<owner>/<repo>/branches/<old>/rename -f new_name=<new>`); the PR follows.
 
 ## Commit message

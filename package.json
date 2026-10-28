@@ -38,7 +38,7 @@
     "vue-tsc": "^3.3.12"
   },
   "validate-branch-name": {
-    "pattern": "^(main|dependabot/.+|release/.+|(feat|fix|refactor|chore|docs|test|perf|ci|build|style|revert)/[a-z0-9._-]+)$",
+    "pattern": "^(main|dependabot/.+|release/.+|(feat|fix|refactor|chore|docs|test|perf|ci|build|style|revert)/[a-z0-9._-]+|(claude|codex|h|rig-one|rig-one-auto|rig-one-auto-staging|rig-one-base)/.+|h-[a-z0-9._-]+)$",
     "errorMsg": "Branch must be <type>/<kebab-slug>, e.g. feat/index-one-nuxt-site (types: feat fix refactor chore docs test perf ci build style revert). Rename it with: git branch -m <type>/<slug>"
   }
 }

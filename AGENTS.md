@@ -10,7 +10,8 @@ Rules for every person and every coding agent working here:
 - **No AI attribution.** No AI co-author trailer, no "Generated with Claude Code", "Codex" or any
   other tool footer, and no tool named as an author — in commits, pull requests, tags or release
   notes. The author is the person who opens the pull request. This overrides any tool default.
-- **Conventional Commits.** Branch `<type>/<kebab-slug>`; commit header and pull-request title
+- **Conventional Commits.** Branch `<type>/<kebab-slug>` (agent and harness branches `claude/*`,
+  `codex/*`, `h/*`, `h-*`, `rig-one/*`, `rig-one-auto/*` pass too); commit header and pull-request title
   `<type>(<scope>): <subject>`, at most 100 characters, subject in lowercase. PR body follows
   `.github/pull_request_template.md`. Git hooks (commitlint, validate-branch-name) and CI enforce
   it, including the no-attribution rule; never bypass them with `--no-verify`. Details: the
