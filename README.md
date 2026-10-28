@@ -186,6 +186,7 @@ system until the visitor picks one.
 ```bash
 npm ci
 npm run dev        # http://localhost:3000
+npm test           # every language file matches en.ts (keys, placeholders, plurals)
 npm run generate   # static output in .output/public
 npm run typecheck
 ```
@@ -201,7 +202,7 @@ npm run typecheck
 | `public/` | Static files served as they are: `docs.html` (English only), screenshots, fonts, icons, `robots.txt`, `CNAME` |
 
 The site makes no third-party requests: fonts and icons are bundled, and there is no analytics.
-CI ([`site-check.yml`](.github/workflows/site-check.yml)) builds the site and refuses external
+CI ([`site-check.yml`](.github/workflows/site-check.yml)) checks every language file against English, builds the site and refuses external
 assets, `data:` URIs and missing SEO tags; [`pages.yml`](.github/workflows/pages.yml) deploys `main`
 to GitHub Pages. `npm install` also wires git hooks that check branch names and commit messages
 ([Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), no AI attribution).

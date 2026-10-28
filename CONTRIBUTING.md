@@ -23,7 +23,8 @@ release, and a pull request against them would be overwritten. Open an
 1. Fork the repository and create a branch named `<type>/<short-description>`, for example
    `docs/fix-mcp-snippet` or `fix/site-footer-link`.
 2. Make the change. To preview the website, run `npm ci` and `npm run dev` at the repo root and open
-   <http://localhost:3000>; `npm run generate` builds the static site that gets deployed.
+   <http://localhost:3000>; `npm run generate` builds the static site that gets deployed. `npm test`
+   checks that every language file has the same keys as the English one.
 3. Run `npm install` at the repo root once; it wires the git hooks that check branch names and commit
    messages. Commit using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/):
    `<type>(<scope>): <subject>`, at most 100 characters, for example

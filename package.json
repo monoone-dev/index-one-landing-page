@@ -11,6 +11,7 @@
     "generate": "nuxt generate",
     "preview": "npx serve .output/public",
     "typecheck": "nuxt typecheck",
+    "test": "node --test \"i18n/*.test.ts\"",
     "postinstall": "git config core.hooksPath .githooks 2>/dev/null || true; nuxt prepare",
     "lint:commits": "commitlint --from origin/main --to HEAD",
     "lint:branch": "validate-branch-name",
