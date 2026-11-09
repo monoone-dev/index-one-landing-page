@@ -24,7 +24,7 @@ Rules for every person and every coding agent working here:
   If you cannot run it, do not push; ask a maintainer.
 - **Green before push.** The gate passes at the repo root, and the `site-check` checks pass (the
   `ci-maintenance` skill):
-  `npm ci && npm run lint:skills && npm test && npm run typecheck && npm run generate`.
+  `npm ci && npm test && npm run typecheck && npm run generate`.
   `npm test` runs `i18n/*.test.ts` with Node's built-in test runner (no extra dependencies); it
   checks that every language file has the same keys, placeholders and plural forms as `en.ts`.
 - **Brand names.** `IndexOne`, `MonoOne` and `Ivy`, never split or translated (the `site-content` skill).
@@ -37,10 +37,9 @@ Rules for every person and every coding agent working here:
 
 ## Skills
 
-Shared runbooks live in `.agents/skills/` and are mirrored for Claude Code in `.claude/skills/`.
-Edit `.agents/skills` and copy the change to `.claude/skills` in the same commit. The mirror is a
-real copy, not symlinks, because the site checks refuse symlinks. `npm run lint:skills` (also the
-`structural` job in CI) fails when the two trees differ.
+Shared runbooks live in `.agents/skills/`, the only copy. MonoOne works only through RigOne, which
+reads skills from there and supplies `AGENTS.md` to every agent; there is no `.claude/` or `.codex/`
+configuration in this repository.
 
 | Skill | Use it to |
 | --- | --- |
