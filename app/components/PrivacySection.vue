@@ -18,7 +18,7 @@ const c = useContent()
           v-for="card in privacyCards"
           :key="card.id"
           v-reveal
-          class="card"
+          class="card island"
           :class="{ 'card--safe': card.tone === 'safe', 'card--wide': card.wide }"
         >
           <span class="card__icon"><UIcon :name="card.icon" /></span>
@@ -27,7 +27,7 @@ const c = useContent()
         </li>
       </ul>
 
-      <div id="providers" v-reveal class="egress">
+      <div id="providers" v-reveal class="egress island">
         <div class="egress__scroll">
           <table>
             <caption class="sr-only">{{ c.privacy.tableCaption }}</caption>
@@ -68,7 +68,7 @@ const c = useContent()
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 36px 28px;
+  gap: var(--gap);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -83,8 +83,7 @@ const c = useContent()
 }
 
 .card {
-  padding-top: 22px;
-  border-top: 1px solid var(--border);
+  padding: 22px;
 
   &--wide {
     grid-column: 1 / -1;
@@ -96,13 +95,14 @@ const c = useContent()
     width: 40px;
     height: 40px;
     margin-bottom: 14px;
-    border-radius: var(--round-sm);
-    background: var(--surface-hover);
+    border-radius: 10px;
+    background: var(--accent-soft);
     color: var(--accent-text);
     font-size: 21px;
   }
 
   &--safe &__icon {
+    background: var(--safe-soft);
     color: var(--safe-text);
   }
 
@@ -118,10 +118,8 @@ const c = useContent()
 }
 
 .egress {
-  margin-top: 48px;
+  margin-top: calc(var(--gap) * 4);
   overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: var(--round-lg);
 
   &__scroll {
     overflow-x: auto;
@@ -134,14 +132,13 @@ const c = useContent()
   }
 
   thead th {
-    padding: 16px 20px;
+    padding: 10px 20px;
     border-bottom: 1px solid var(--border);
+    background: var(--surface-sunken);
     color: var(--text-muted);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    font-size: 12.5px;
+    font-weight: 500;
     text-align: left;
-    text-transform: uppercase;
   }
 
   tbody th,
@@ -172,7 +169,7 @@ const c = useContent()
   }
 
   &__shot {
-    padding: 32px 20px 0;
+    padding: 32px 28px 0;
   }
 
   &__foot {
@@ -188,10 +185,9 @@ const c = useContent()
   display: inline-flex;
   align-items: center;
   padding: 4px 10px;
-  border-radius: var(--round-pill);
-  font-family: var(--font-mono);
+  border-radius: 6px;
   font-size: 12.5px;
-  font-weight: 600;
+  font-weight: 500;
 
   &--no {
     background: var(--safe-soft);

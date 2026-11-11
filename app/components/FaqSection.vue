@@ -11,13 +11,14 @@ const items = computed(() => c.value.faq.items.map((f, i) => ({ label: f.questio
       <SectionHead id="faq-title" :level="level" :eyebrow="c.faq.eyebrow" :title="c.faq.title">
         <span v-html="c.faq.leadHtml" />
       </SectionHead>
+      <div v-reveal class="faq__list island">
       <UAccordion
-        v-reveal
         :items="items"
         type="multiple"
         :unmount-on-hide="false"
         :ui="{ trigger: 'text-base font-semibold text-highlighted py-4', body: 'text-[15px] text-toned pb-5' }"
       />
+      </div>
     </div>
   </section>
 </template>
@@ -25,6 +26,10 @@ const items = computed(() => c.value.faq.items.map((f, i) => ({ label: f.questio
 <style lang="scss" scoped>
 .faq {
   max-width: 780px;
+
+  &__list {
+    padding: 4px 20px;
+  }
 
   :deep(.section-head a) {
     color: var(--accent-text);

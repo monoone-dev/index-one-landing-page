@@ -65,7 +65,7 @@ body {
   margin: 0;
   font-family: var(--font);
   color: var(--text-primary);
-  background: var(--surface-base);
+  background: var(--sky-base);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -75,7 +75,7 @@ body {
     content: '';
     position: fixed;
     inset: 0;
-    background: var(--aurora-field);
+    background: var(--sky);
     pointer-events: none;
     z-index: 0;
   }
@@ -87,7 +87,7 @@ h3 {
   margin: 0;
   text-wrap: balance;
   font-family: var(--font-display);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   font-weight: 600;
   color: var(--text-primary);
 }
@@ -118,12 +118,9 @@ code {
 
 .eyebrow {
   display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent-text);
 
   &--safe {
     color: var(--safe-text);
@@ -138,9 +135,9 @@ code {
     padding: 64px 0;
   }
 
+  // Kept for markup that asks for it; on the sky a section needs no rule.
   &--ruled {
-    border-top: 1px solid var(--border-subtle);
-    border-bottom: 1px solid var(--border-subtle);
+    border: 0;
   }
 }
 
@@ -165,6 +162,24 @@ code {
     color: var(--text-secondary);
     font-size: clamp(16px, 1.8vw, 17px);
   }
+}
+
+// Surface building blocks: a white island, the glass frame around a featured one, and glass.
+.island {
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  box-shadow: var(--island-shadow);
+}
+
+.framed {
+  box-shadow: 0 0 0 var(--gap) var(--glass-frame), var(--pop);
+}
+
+.glass {
+  background: var(--glass);
+  -webkit-backdrop-filter: var(--glass-filter);
+  backdrop-filter: var(--glass-filter);
+  box-shadow: 0 0 0 1px var(--border);
 }
 
 .reveal {

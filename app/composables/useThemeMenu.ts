@@ -1,5 +1,4 @@
 import type { DropdownMenuItem } from '@nuxt/ui'
-import { skins, type Skin } from '~/composables/useSkin'
 
 const modes = [
   { value: 'light', icon: 'i-lucide-sun' },
@@ -7,23 +6,12 @@ const modes = [
   { value: 'system', icon: 'i-lucide-monitor' },
 ] as const
 
+/** Light, dark or system. Surface is the only skin, so the mode is the whole theme choice. */
 export function useThemeMenu() {
-  const { skin, setSkin } = useSkin()
   const colorMode = useColorMode()
   const c = useContent()
 
   const items = computed<DropdownMenuItem[][]>(() => [
-    [
-      { type: 'label', label: c.value.theme.skinsGroup },
-      ...skins.map(s => ({
-        type: 'checkbox' as const,
-        label: c.value.theme.skins[s.value].label,
-        description: c.value.theme.skins[s.value].description,
-        skin: s.value,
-        checked: skin.value === s.value,
-        onUpdateChecked: () => setSkin(s.value as Skin),
-      })),
-    ],
     [
       { type: 'label', label: c.value.theme.modesGroup },
       ...modes.map(m => ({
@@ -36,5 +24,7 @@ export function useThemeMenu() {
     ],
   ])
 
-  return { items, currentLabel: computed(() => c.value.theme.skins[skin.value].label) }
+  const current = computed(() => modes.find(m => m.value === colorMode.preference) ?? modes[2])
+
+  return { items, icon: computed(() => current.value.icon) }
 }

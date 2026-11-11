@@ -108,9 +108,8 @@ onBeforeUnmount(() => observer?.disconnect())
 
 <template>
   <main id="main" ref="root" class="changelog">
-    <div class="changelog__glow" aria-hidden="true" />
     <div class="layout">
-      <nav class="versions" aria-labelledby="versions-title">
+      <nav class="versions island" aria-labelledby="versions-title">
         <p id="versions-title" class="versions__title">
           {{ c.changelog.versions }}
         </p>
@@ -180,7 +179,7 @@ onBeforeUnmount(() => observer?.disconnect())
               <UBadge v-if="note === latest" color="primary" variant="subtle" size="sm" :label="c.changelog.latest" />
             </div>
             <span class="dot" aria-hidden="true" />
-            <article class="body" :aria-labelledby="note.tag" lang="en">
+            <article class="body island" :aria-labelledby="note.tag" lang="en">
               <h2 :id="note.tag" class="body__title" tabindex="-1">
                 IndexOne {{ note.tag.slice(1) }}
               </h2>
@@ -222,19 +221,6 @@ onBeforeUnmount(() => observer?.disconnect())
     padding: 40px 16px 64px;
   }
 
-  &__glow {
-    position: absolute;
-    top: -120px;
-    right: -10%;
-    z-index: -1;
-    width: 420px;
-    height: 420px;
-    border-radius: 50%;
-    background: var(--accent);
-    opacity: 0.16;
-    filter: blur(140px);
-    pointer-events: none;
-  }
 }
 
 .layout {
@@ -257,6 +243,7 @@ onBeforeUnmount(() => observer?.disconnect())
   display: grid;
   gap: 8px;
   max-height: calc(100vh - 120px);
+  padding: 12px 6px 12px 0;
   overflow-y: auto;
   overscroll-behavior: contain;
 
@@ -483,6 +470,11 @@ onBeforeUnmount(() => observer?.disconnect())
   justify-items: start;
   gap: 12px;
   min-width: 0;
+  padding: 24px 26px;
+
+  @include below(xs) {
+    padding: 20px;
+  }
 
   &__title {
     margin: 0;

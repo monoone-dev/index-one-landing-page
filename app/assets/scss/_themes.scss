@@ -1,180 +1,122 @@
-@use 'sass:meta';
-@use 'sass:map';
-@use 'palette' as *;
+// Surface — the one skin, shared with the IndexOne app: white islands on a painted sky, glass for
+// the bars, one 12 px radius for islands and controls, and IndexOne blue as the accent.
 
-$status-light: (
-  live-text: #d9532e,
-  safe-text: #1f9d4d,
-  safe-soft: rgb(31 157 77 / 0.13),
-  warn-text: #b9791f,
-  warn-soft: rgb(185 121 31 / 0.12),
-  shadow-sm: (0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)),
-  shadow-md: (0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)),
-);
+@mixin surface-light {
+  color-scheme: light;
 
-$status-dark: (
-  live-text: #ff7a5c,
-  safe-text: #4ade80,
-  safe-soft: rgb(74 222 128 / 0.14),
-  warn-text: #f5b14c,
-  warn-soft: rgb(245 177 76 / 0.14),
-  shadow-sm: (0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3)),
-  shadow-md: (0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3)),
-);
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, 'Segoe UI', sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --radius: 12px;
+  --btn-radius: var(--radius);
+  --gap: 8px;
+  --ease: cubic-bezier(0.32, 0.72, 0, 1);
 
-$skins: (
-  studio: (
-    base: (
-      font: ('Figtree', -apple-system, BlinkMacSystemFont, system-ui, sans-serif),
-      font-display: var(--font),
-      font-mono: ('JetBrains Mono', 'SF Mono', ui-monospace, Menlo, monospace),
-      radius: 0.75rem,
-      btn-radius: var(--round-md),
-    ),
-    light: map.merge($status-light, (
-      surface-base: mist(50),
-      surface-raised: oklch(100% 0 0),
-      surface-solid: oklch(100% 0 0),
-      surface-overlay: mist(50),
-      surface-hover: mist(100),
-      text-primary: mist(900),
-      text-secondary: mist(600),
-      text-muted: mist(500),
-      accent: sky(500),
-      accent-hover: sky(600),
-      accent-text: sky(700),
-      text-on-accent: oklch(1 0 0),
-      accent-soft: color-mix(in oklch, #{sky(500)} 10%, transparent),
-      accent-ring: color-mix(in oklch, #{sky(500)} 45%, transparent),
-      border: mist(200),
-      border-subtle: color-mix(in oklch, #{mist(200)} 70%, transparent),
-      aurora-field: (
-        radial-gradient(48% 42% at 8% 10%, oklch(74.6% 0.16 232.661 / 0.22), transparent 60%),
-        radial-gradient(36% 32% at 26% 0%, oklch(82.8% 0.111 230.318 / 0.18), transparent 62%),
-        radial-gradient(42% 40% at 4% 90%, oklch(90.1% 0.058 230.902 / 0.2), transparent 62%)
-      ),
-    )),
-    dark: map.merge($status-dark, (
-      surface-base: mist(900),
-      surface-raised: color-mix(in oklch, #{mist(900)} 50%, #{mist(800)}),
-      surface-solid: mist(950),
-      surface-overlay: mist(800),
-      surface-hover: color-mix(in oklch, #{mist(700)} 60%, #{mist(800)}),
-      text-primary: mist(50),
-      text-secondary: mist(300),
-      text-muted: mist(400),
-      accent: sky(400),
-      accent-hover: color-mix(in oklch, #{sky(400)} 85%, white),
-      accent-text: sky(400),
-      text-on-accent: mist(950),
-      accent-soft: color-mix(in oklch, #{sky(400)} 12%, transparent),
-      accent-ring: color-mix(in oklch, #{sky(400)} 45%, transparent),
-      border: mist(800),
-      border-subtle: color-mix(in oklch, #{mist(800)} 70%, transparent),
-      aurora-field: (
-        radial-gradient(40% 46% at 4% 8%, oklch(74.6% 0.16 232.661 / 0.14), transparent 58%),
-        radial-gradient(38% 42% at 3% 94%, oklch(50% 0.134 242.749 / 0.16), transparent 60%)
-      ),
-    )),
-  ),
-  paper: (
-    base: (
-      font: ('DM Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif),
-      font-display: ('Source Serif 4', ui-serif, 'New York', Georgia, serif),
-      font-mono: (ui-monospace, 'SF Mono', SFMono-Regular, Menlo, monospace),
-      radius: 0.625rem,
-      btn-radius: var(--round-pill),
-      aurora-field: none,
-    ),
-    light: map.merge($status-light, (
-      surface-base: parchment(100),
-      surface-raised: parchment(50),
-      surface-solid: parchment(50),
-      surface-overlay: parchment(50),
-      surface-hover: parchment(200),
-      text-primary: parchment(900),
-      text-secondary: parchment(700),
-      text-muted: parchment(600),
-      accent: clay(700),
-      accent-hover: clay(800),
-      accent-text: color-mix(in srgb, #{clay(700)} 80%, #{parchment(900)}),
-      text-on-accent: oklch(1 0 0),
-      accent-soft: color-mix(in oklch, #{clay(500)} 12%, transparent),
-      accent-ring: color-mix(in oklch, #{clay(500)} 35%, transparent),
-      border: parchment(300),
-      border-subtle: parchment(200),
-    )),
-    dark: map.merge($status-dark, (
-      surface-base: parchment(900),
-      surface-raised: parchment(800),
-      surface-solid: parchment(950),
-      surface-overlay: parchment(800),
-      surface-hover: color-mix(in oklch, #{parchment(700)} 45%, transparent),
-      text-primary: parchment(100),
-      text-secondary: parchment(300),
-      text-muted: parchment(400),
-      accent: clay(500),
-      accent-hover: clay(400),
-      accent-text: clay(300),
-      text-on-accent: parchment(950),
-      accent-soft: color-mix(in oklch, #{clay(500)} 20%, transparent),
-      accent-ring: color-mix(in oklch, #{clay(500)} 45%, transparent),
-      border: parchment(700),
-      border-subtle: color-mix(in oklch, #{parchment(700)} 60%, transparent),
-    )),
-  ),
-  minimalist: (
-    base: (
-      font: ('Geist', -apple-system, BlinkMacSystemFont, system-ui, sans-serif),
-      font-display: var(--font),
-      font-mono: ('Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace),
-      radius: 0.625rem,
-      btn-radius: var(--round-lg),
-      aurora-field: none,
-    ),
-    light: map.merge($status-light, (
-      surface-base: oklch(1 0 0),
-      surface-raised: oklch(1 0 0),
-      surface-solid: oklch(1 0 0),
-      surface-overlay: oklch(1 0 0),
-      surface-hover: oklch(0.97 0 0),
-      text-primary: oklch(0.145 0 0),
-      text-secondary: oklch(0.556 0 0),
-      text-muted: oklch(0.556 0 0),
-      accent: oklch(0.205 0 0),
-      accent-hover: color-mix(in oklch, oklch(0.205 0 0) 90%, transparent),
-      accent-text: oklch(0.205 0 0),
-      text-on-accent: oklch(0.985 0 0),
-      accent-soft: oklch(0.97 0 0),
-      accent-ring: oklch(0.708 0 0 / 50%),
-      border: oklch(0.922 0 0),
-      border-subtle: oklch(0.922 0 0),
-    )),
-    dark: map.merge($status-dark, (
-      surface-base: oklch(0.145 0 0),
-      surface-raised: oklch(0.205 0 0),
-      surface-solid: oklch(0.205 0 0),
-      surface-overlay: oklch(0.205 0 0),
-      surface-hover: oklch(0.269 0 0),
-      text-primary: oklch(0.985 0 0),
-      text-secondary: oklch(0.708 0 0),
-      text-muted: oklch(0.708 0 0),
-      accent: oklch(0.922 0 0),
-      accent-hover: color-mix(in oklch, oklch(0.922 0 0) 90%, transparent),
-      accent-text: oklch(0.922 0 0),
-      text-on-accent: oklch(0.205 0 0),
-      accent-soft: oklch(0.269 0 0),
-      accent-ring: oklch(0.556 0 0 / 50%),
-      border: oklch(1 0 0 / 10%),
-      border-subtle: oklch(1 0 0 / 10%),
-    )),
-  ),
-);
+  --surface-base: #ffffff;
+  --surface-raised: #ffffff;
+  --surface-solid: #ffffff;
+  --surface-overlay: #ffffff;
+  --surface-sunken: #f5f5f6;
+  --surface-hover: #f4f4f5;
+  --surface-active: #ececee;
+  --text-primary: #18181b;
+  --text-secondary: #4a4a52;
+  --text-muted: #63636a;
+  --border: rgb(24 24 27 / 0.08);
+  --border-subtle: rgb(24 24 27 / 0.08);
+  --border-strong: rgb(24 24 27 / 0.14);
+  --fill-1: rgb(24 24 27 / 0.04);
+  --fill-2: rgb(24 24 27 / 0.07);
 
-@mixin tokens($map) {
-  @each $name, $value in $map {
-    --#{$name}: #{meta.inspect($value)};
-  }
+  --accent: #0862f6;
+  --accent-hover: #0650cf;
+  --accent-text: #0756d8;
+  --text-on-accent: #ffffff;
+  --accent-soft: color-mix(in oklch, var(--accent) 10%, transparent);
+  --accent-ring: color-mix(in oklch, var(--accent) 34%, transparent);
+
+  --live: #ff7a5c;
+  --live-text: #a8401c;
+  --safe-text: #13733a;
+  --safe-soft: #e8f3ec;
+  --warn-text: #9a4f06;
+  --warn-soft: #faf0e2;
+  --ivy: #7a55e6;
+  --chart-teal: #0b7d71;
+  --chart-blue: #3b62d6;
+  --chart-violet: #8a5cd6;
+  --chart-amber: #c26a0a;
+  --chart-pink: #c2417a;
+  --chart-olive: #5f7d1f;
+
+  --shadow-sm: 0 1px 2px rgb(16 24 40 / 0.06);
+  --shadow-md: 0 2px 6px -1px rgb(16 24 40 / 0.08), 0 1px 2px rgb(16 24 40 / 0.05);
+  --island-shadow: 0 0 0 1px var(--border), 0 1px 3px rgb(28 40 72 / 0.06);
+  --pop: 0 0 0 1px rgb(24 24 27 / 0.06), 0 16px 40px -12px rgb(16 24 40 / 0.28);
+  --glass: rgb(255 255 255 / 0.6);
+  --glass-frame: rgb(255 255 255 / 0.55);
+  --glass-filter: blur(28px) saturate(1.6);
+  --sky-base: #b9cde3;
+  --sky:
+    radial-gradient(60% 50% at 85% 10%, rgb(255 255 255 / 0.9), transparent 70%),
+    radial-gradient(55% 60% at 100% 70%, rgb(89 116 196 / 0.55), transparent 70%),
+    radial-gradient(45% 45% at 70% 100%, rgb(141 120 214 / 0.45), transparent 70%),
+    radial-gradient(50% 55% at 0% 100%, color-mix(in oklch, var(--accent) 36%, transparent), transparent 72%),
+    radial-gradient(60% 60% at 10% 0%, rgb(158 199 214 / 0.8), transparent 70%),
+    linear-gradient(160deg, #cfe0e8 0%, #b9cde3 55%, #a9b6dc 100%);
+}
+
+@mixin surface-dark {
+  color-scheme: dark;
+
+  --surface-base: #1b1b1f;
+  --surface-raised: #1b1b1f;
+  --surface-solid: #1b1b1f;
+  --surface-overlay: #222227;
+  --surface-sunken: #141417;
+  --surface-hover: #24242a;
+  --surface-active: #2c2c33;
+  --text-primary: #f4f4f5;
+  --text-secondary: #c4c4cc;
+  --text-muted: #a1a1aa;
+  --border: rgb(255 255 255 / 0.08);
+  --border-subtle: rgb(255 255 255 / 0.08);
+  --border-strong: rgb(255 255 255 / 0.14);
+  --fill-1: rgb(255 255 255 / 0.05);
+  --fill-2: rgb(255 255 255 / 0.08);
+
+  --accent: #5ea2ff;
+  --accent-hover: #84b8ff;
+  --accent-text: #84b8ff;
+  --text-on-accent: #06142e;
+
+  --live-text: #ff7a5c;
+  --safe-text: #6ee7a0;
+  --safe-soft: rgb(74 222 128 / 0.14);
+  --warn-text: #f5b14c;
+  --warn-soft: rgb(245 177 76 / 0.14);
+  --ivy: #9d7bff;
+  --chart-teal: #2dd4bf;
+  --chart-blue: #7c9cff;
+  --chart-violet: #b794f6;
+  --chart-amber: #fbbf24;
+  --chart-pink: #f472b6;
+  --chart-olive: #a3c95c;
+
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3);
+  --shadow-md: 0 2px 6px -1px rgb(0 0 0 / 0.4), 0 1px 2px rgb(0 0 0 / 0.3);
+  --island-shadow: 0 0 0 1px rgb(255 255 255 / 0.06), 0 1px 3px rgb(0 0 0 / 0.3);
+  --pop: 0 0 0 1px rgb(255 255 255 / 0.08), 0 16px 40px -12px rgb(0 0 0 / 0.7);
+  --glass: rgb(20 20 26 / 0.46);
+  --glass-frame: rgb(255 255 255 / 0.12);
+  --glass-filter: blur(28px);
+  --sky-base: #14172c;
+  --sky:
+    radial-gradient(62% 70% at 4% 0%, color-mix(in oklch, var(--accent) 24%, transparent), transparent 74%),
+    radial-gradient(52% 60% at 92% 0%, rgb(84 104 196 / 0.26), transparent 74%),
+    radial-gradient(50% 62% at 0% 100%, color-mix(in oklch, var(--accent) 15%, transparent), transparent 74%),
+    radial-gradient(50% 55% at 100% 90%, rgb(118 76 190 / 0.22), transparent 74%),
+    linear-gradient(160deg, #12172a 0%, #14172c 55%, #1a172e 100%);
 }
 
 @mixin nuxt-ui-bridge {
@@ -190,32 +132,18 @@ $skins: (
   --ui-text-toned: var(--text-secondary);
   --ui-text-highlighted: var(--text-primary);
   --ui-text-inverted: var(--surface-base);
-  --ui-border: var(--border);
-  --ui-border-muted: var(--border-subtle);
-  --ui-border-accented: var(--border);
+  --ui-border: var(--border-strong);
+  --ui-border-muted: var(--border);
+  --ui-border-accented: var(--border-strong);
   --ui-border-inverted: var(--text-primary);
   --ui-radius: calc(var(--radius) * 0.5);
 }
 
-@mixin skin-selector($skin, $mode) {
-  $attr: '';
-  $dark: '';
-  @if $skin != studio { $attr: '[data-skin="#{$skin}"]'; }
-  @if $mode == dark { $dark: '.dark'; }
-  html:root#{$attr}#{$dark} {
-    @content;
-  }
+html:root {
+  @include surface-light;
+  @include nuxt-ui-bridge;
 }
 
-@each $skin, $def in $skins {
-  @include skin-selector($skin, light) {
-    color-scheme: light;
-    @include tokens(map.get($def, base));
-    @include tokens(map.get($def, light));
-    @include nuxt-ui-bridge;
-  }
-  @include skin-selector($skin, dark) {
-    color-scheme: dark;
-    @include tokens(map.get($def, dark));
-  }
+html:root.dark {
+  @include surface-dark;
 }

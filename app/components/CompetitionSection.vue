@@ -13,7 +13,7 @@ const icon: Partial<Record<Support, string>> = { yes: 'i-lucide-check', partial:
         {{ c.compare.lead }}
       </SectionHead>
 
-      <div v-reveal class="compare">
+      <div v-reveal class="compare island">
         <div class="compare__scroll" tabindex="0" role="region" aria-labelledby="compare-title">
           <table>
             <caption class="sr-only">{{ c.compare.caption }}</caption>
@@ -48,8 +48,6 @@ const icon: Partial<Record<Support, string>> = { yes: 'i-lucide-check', partial:
 <style lang="scss" scoped>
 .compare {
   overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: var(--round-lg);
 
   &__scroll {
     // Contains the absolutely positioned .sr-only labels; without it WebKit lets them
@@ -76,9 +74,10 @@ const icon: Partial<Record<Support, string>> = { yes: 'i-lucide-check', partial:
   thead th {
     border-top: 0;
     border-bottom: 1px solid var(--border);
-    color: var(--text-primary);
-    font-size: 14px;
-    font-weight: 700;
+    background: var(--surface-sunken);
+    color: var(--text-muted);
+    font-size: 12.5px;
+    font-weight: 500;
   }
 
   tbody tr:first-child > * {
@@ -92,7 +91,7 @@ const icon: Partial<Record<Support, string>> = { yes: 'i-lucide-check', partial:
   }
 
   &__us {
-    background: var(--accent-soft);
+    background: color-mix(in oklch, var(--accent) 5%, transparent);
   }
 
   thead &__us {
