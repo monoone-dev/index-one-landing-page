@@ -24,7 +24,7 @@ const mobileMenuItems = computed<DropdownMenuItem[][]>(() => [
   [...menuItems.value[0]!, { label: c.value.nav.github, icon: 'i-simple-icons-github', to: site.links.repo, external: true }],
   [
     { label: c.value.common.language, icon: language.icon.value, children: language.items.value },
-    { label: c.value.theme.label, icon: 'i-lucide-palette', children: theme.items.value },
+    { label: c.value.theme.label, icon: theme.icon.value, children: theme.items.value },
   ],
   [{ label: c.value.nav.download, icon: 'i-lucide-arrow-down-to-line', to: site.links.download, external: true }],
 ])
@@ -32,30 +32,31 @@ const mobileMenuItems = computed<DropdownMenuItem[][]>(() => [
 
 <template>
   <header class="nav">
-    <div class="wrap nav__inner">
-      <BrandMark />
-      <nav class="nav__links" :aria-label="c.common.primaryNav">
-        <NuxtLink v-for="link in links" :key="link.label" :to="link.to" :external="link.external" class="nav__link">
-          {{ link.label }}
-        </NuxtLink>
-      </nav>
-      <div class="nav__cta">
-        <UDropdownMenu :items="menuItems" :content="{ align: 'end' }" :ui="{ content: 'min-w-48' }">
-          <UButton color="neutral" variant="outline" icon="i-lucide-menu" :aria-label="c.common.primaryNav" class="nav__menu" />
-        </UDropdownMenu>
-        <UDropdownMenu :items="mobileMenuItems" :content="{ align: 'end' }" :ui="{ content: 'min-w-56' }">
-          <UButton color="neutral" variant="outline" icon="i-lucide-menu" :aria-label="c.common.primaryNav" class="nav__menu-mobile" />
+    <div class="wrap">
+      <div class="nav__inner glass">
+        <BrandMark />
+        <nav class="nav__links" :aria-label="c.common.primaryNav">
+          <NuxtLink v-for="link in links" :key="link.label" :to="link.to" :external="link.external" class="nav__link" :data-anchor="String(link.to).includes('#') || undefined">
+            {{ link.label }}
+          </NuxtLink>
+        </nav>
+        <div class="nav__cta">
+          <UDropdownMenu :items="menuItems" :content="{ align: 'end' }" :ui="{ content: 'min-w-48' }">
+            <UButton color="neutral" variant="outline" icon="i-lucide-menu" :aria-label="c.common.primaryNav" class="nav__menu" />
+          </UDropdownMenu>
+          <UDropdownMenu :items="mobileMenuItems" :content="{ align: 'end' }" :ui="{ content: 'min-w-56' }">
+            <UButton color="neutral" variant="outline" icon="i-lucide-menu" :aria-label="c.common.primaryNav" class="nav__menu-mobile" />
 
-          <template #item-leading="{ item }">
-            <SkinSwatch v-if="'skin' in item" :skin="item.skin" />
-            <UIcon v-else-if="item.icon" :name="item.icon" class="size-5 shrink-0" />
-          </template>
-        </UDropdownMenu>
-        <div class="nav__desktop-only">
-          <UButton :to="site.links.repo" external color="neutral" variant="ghost" icon="i-simple-icons-github" :aria-label="c.hero.githubAria" />
-          <LanguageSelect />
-          <ThemeMenu />
-          <UButton :to="site.links.download" external icon="i-lucide-arrow-down-to-line" :label="c.nav.download" />
+            <template #item-leading="{ item }">
+              <UIcon v-if="item.icon" :name="item.icon" class="size-5 shrink-0" />
+            </template>
+          </UDropdownMenu>
+          <div class="nav__desktop-only">
+            <UButton :to="site.links.repo" external color="neutral" variant="ghost" icon="i-simple-icons-github" :aria-label="c.hero.githubAria" />
+            <LanguageSelect />
+            <ThemeMenu />
+            <UButton :to="site.links.download" external icon="i-lucide-arrow-down-to-line" :label="c.nav.download" />
+          </div>
         </div>
       </div>
     </div>
@@ -65,27 +66,33 @@ const mobileMenuItems = computed<DropdownMenuItem[][]>(() => [
 <style lang="scss" scoped>
 @use '~/assets/scss/mixins' as *;
 
+// Surface's page bar: a glass strip floating over the sky, an island gap from the top.
 .nav {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: var(--surface-base);
-  border-bottom: 1px solid var(--border);
+  padding-top: var(--gap);
+
+  > .wrap {
+    padding: 0 calc(var(--gap) * 2);
+
+    @include below(xs) {
+      padding: 0 var(--gap);
+    }
+  }
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    height: 64px;
+    gap: 16px;
+    height: 56px;
+    padding: 0 8px 0 14px;
+    border-radius: var(--radius);
+    box-shadow: 0 0 0 1px var(--border), 0 14px 36px -18px rgb(16 24 40 / 0.35);
 
     > :first-child {
       flex: none;
-    }
-
-    @include below(xs) {
-      height: 56px;
-      padding: 0 16px;
     }
   }
 
@@ -94,24 +101,31 @@ const mobileMenuItems = computed<DropdownMenuItem[][]>(() => [
     flex: 1;
     align-items: center;
     justify-content: center;
-    gap: 22px;
+    gap: 2px;
     min-width: 0;
 
-    @media (max-width: 1380px) {
+    @include below(lg) {
       display: none;
     }
   }
 
   &__link {
-    padding: 10px 0;
+    padding: 7px 12px;
+    border-radius: 10px;
     color: var(--text-secondary);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     white-space: nowrap;
-    transition: color 0.15s;
+    transition: background 0.14s var(--ease), color 0.14s var(--ease);
 
-    &:hover,
-    &.router-link-exact-active {
+    &:hover {
+      background: var(--fill-2);
+      color: var(--text-primary);
+    }
+
+    // A link to a section of a page (Compare) is never the current page.
+    &.router-link-exact-active:not([data-anchor]) {
+      background: var(--fill-2);
       color: var(--text-primary);
     }
   }
@@ -120,11 +134,11 @@ const mobileMenuItems = computed<DropdownMenuItem[][]>(() => [
     display: flex;
     flex: none;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
   }
 
   &__menu {
-    @media (min-width: 1381px) {
+    @media (min-width: 941px) {
       display: none;
     }
 
@@ -142,7 +156,7 @@ const mobileMenuItems = computed<DropdownMenuItem[][]>(() => [
   &__desktop-only {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
 
     @include below(sm) {
       display: none;

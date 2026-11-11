@@ -21,9 +21,9 @@ defineProps<{ shot: Screenshot, alt: string }>()
   position: relative;
   margin: 0;
   overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: var(--round-lg);
+  border-radius: var(--radius);
   background: var(--surface-solid);
-  box-shadow: var(--shadow-md);
+  // Surface's glass frame: an island gap of frosted white around the window.
+  box-shadow: 0 0 0 var(--gap) var(--glass-frame), var(--pop);
 }
 </style>

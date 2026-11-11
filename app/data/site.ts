@@ -11,7 +11,7 @@ export const site = {
     'Record and transcribe meetings on your Mac, then ask Ivy, your AI, live or across every call. Local or redacted cloud AI; notes stay Markdown you own.',
   ogImage: '/og-image.png',
   ogImageAlt: 'IndexOne — local-first meeting notes for macOS, with Ivy',
-  themeColor: '#0ea5e9',
+  themeColor: '#0862f6',
   minMacOS: '13.4',
   links: {
     repo,

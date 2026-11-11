@@ -13,7 +13,7 @@ const c = useContent()
         {{ c.pricing.lead }}
       </SectionHead>
       <ul class="plans">
-        <li v-for="plan in plans" :key="plan.id" v-reveal class="plan" :class="{ 'plan--featured': plan.available, 'plan--soon': !plan.available }">
+        <li v-for="plan in plans" :key="plan.id" v-reveal class="plan island" :class="{ 'plan--featured framed': plan.available, 'plan--soon': !plan.available }">
           <span class="plan__badge" :class="plan.available ? 'plan__badge--now' : 'plan__badge--soon'">{{ c.pricing.plans[plan.id].badge }}</span>
           <component :is="sub" class="plan__name">{{ c.pricing.plans[plan.id].name }}</component>
           <p class="plan__price">
@@ -48,7 +48,7 @@ const c = useContent()
 .plans {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: calc(var(--gap) * 3);
   align-items: stretch;
   margin: 0;
   padding: 0;
@@ -65,16 +65,11 @@ const c = useContent()
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 32px 28px;
-  border: 1px solid var(--border);
-  border-radius: var(--round-xl);
+  padding: 28px 26px;
 
-  &--featured {
-    border-color: var(--accent-ring);
-  }
-
-  &--soon {
-    opacity: 0.85;
+  &--soon &__points li,
+  &--soon &__tagline {
+    color: var(--text-muted);
   }
 
   &__name {
@@ -83,27 +78,22 @@ const c = useContent()
 
   &__badge {
     position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 5px 13px;
-    border-radius: var(--round-pill);
-    font-family: var(--font-mono);
-    font-size: 11.5px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+    top: 26px;
+    right: 24px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
     white-space: nowrap;
 
     &--now {
-      background: var(--accent);
-      color: var(--text-on-accent);
+      background: var(--safe-soft);
+      color: var(--safe-text);
     }
 
     &--soon {
-      border: 1px solid var(--border);
-      background: var(--surface-solid);
-      color: var(--text-secondary);
+      background: var(--fill-1);
+      color: var(--text-muted);
     }
   }
 
@@ -115,8 +105,9 @@ const c = useContent()
   }
 
   &__amount {
-    font-size: 42px;
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-size: 40px;
+    font-weight: 600;
     letter-spacing: -0.04em;
   }
 
@@ -154,6 +145,10 @@ const c = useContent()
     width: 18px;
     height: 18px;
     margin-top: 2px;
+    color: var(--safe-text);
+  }
+
+  &--soon &__check {
     color: var(--text-muted);
   }
 }

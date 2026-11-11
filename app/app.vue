@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import * as uiLocales from '@nuxt/ui/locale'
-import { skinBootScript } from '~/composables/useSkin'
 import { site } from '~/data/site'
 
 const { locale } = useI18n()
@@ -15,7 +14,6 @@ useHead(() => ({
   htmlAttrs: { lang: localeHead.value.htmlAttrs?.lang },
   link: localeHead.value.link?.map(link => ({ ...link, href: withSlash(link.href) })),
   meta: localeHead.value.meta,
-  script: [{ innerHTML: skinBootScript, tagPosition: 'head', tagPriority: 'critical' }],
 }))
 
 const uiLocale = computed(() => {

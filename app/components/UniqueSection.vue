@@ -14,7 +14,7 @@ const highlighted = features.filter(f => highlightedFeatureIds.includes(f.id))
       </SectionHead>
 
       <ul class="unique">
-        <li v-for="item in differentiators" :key="item.id" v-reveal class="unique__item">
+        <li v-for="item in differentiators" :key="item.id" v-reveal class="unique__item island">
           <BrandIcon v-if="item.ivy" name="ivy" :size="40" class="unique__brand" />
           <span v-else class="unique__icon"><UIcon :name="item.icon" /></span>
           <h3>{{ c.unique.items[item.id].title }}</h3>
@@ -42,7 +42,7 @@ const highlighted = features.filter(f => highlightedFeatureIds.includes(f.id))
 .unique {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 36px 28px;
+  gap: var(--gap);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -58,8 +58,7 @@ const highlighted = features.filter(f => highlightedFeatureIds.includes(f.id))
   &__item {
     display: flex;
     flex-direction: column;
-    padding-top: 22px;
-    border-top: 1px solid var(--border);
+    padding: 22px;
 
     h3 {
       margin-bottom: 8px;
@@ -79,7 +78,7 @@ const highlighted = features.filter(f => highlightedFeatureIds.includes(f.id))
     width: 40px;
     height: 40px;
     margin-bottom: 14px;
-    border-radius: var(--round-sm);
+    border-radius: 10px;
     background: var(--accent-soft);
     color: var(--accent-text);
     font-size: 21px;

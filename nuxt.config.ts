@@ -73,10 +73,9 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', href: '/favicon-32.png', sizes: '32x32' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
         { rel: 'manifest', href: '/site.webmanifest' },
-        { rel: 'preload', as: 'font', type: 'font/woff2', href: '/assets/fonts/figtree.woff2', crossorigin: '' },
       ],
       meta: [
-        { name: 'theme-color', content: '#0ea5e9' },
+        { name: 'theme-color', content: '#0862f6' },
         { name: 'color-scheme', content: 'light dark' },
         { name: 'format-detection', content: 'telephone=no' },
       ],

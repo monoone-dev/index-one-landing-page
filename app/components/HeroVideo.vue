@@ -175,10 +175,9 @@ onBeforeUnmount(() => {
 .hero-video {
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: var(--round-lg);
+  border-radius: var(--radius);
   background: var(--surface-solid);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 0 0 var(--gap) var(--glass-frame), var(--pop);
 
   &__player,
   > .hero-video__poster {

@@ -22,6 +22,7 @@ const legal = computed(() => fill(c.value.footer.legalHtml, { year: 2026, author
 <template>
   <footer class="foot">
     <div class="wrap">
+      <div class="foot__panel glass">
       <div class="foot__inner">
         <BrandMark :size="26" />
         <nav class="foot__links" :aria-label="c.common.footerNav">
@@ -31,6 +32,7 @@ const legal = computed(() => fill(c.value.footer.legalHtml, { year: 2026, author
         </nav>
       </div>
       <p class="foot__legal" v-html="legal" />
+      </div>
     </div>
   </footer>
 </template>
@@ -41,8 +43,12 @@ const legal = computed(() => fill(c.value.footer.legalHtml, { year: 2026, author
 .foot {
   position: relative;
   z-index: 1;
-  padding: 44px 0 56px;
-  border-top: 1px solid var(--border-subtle);
+  padding: 48px 0 var(--gap);
+
+  &__panel {
+    padding: 28px 24px 22px;
+    border-radius: var(--radius);
+  }
 
   &__inner {
     display: flex;
@@ -74,7 +80,9 @@ const legal = computed(() => fill(c.value.footer.legalHtml, { year: 2026, author
   }
 
   &__legal {
-    margin-top: 24px;
+    margin-top: 22px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
     color: var(--text-muted);
     font-size: 13px;
     text-align: center;

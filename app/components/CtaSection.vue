@@ -9,7 +9,7 @@ const legacy = computed(() => fill(c.value.cta.legacyHtml, { download: site.link
 <template>
   <section class="section cta" aria-labelledby="cta-title">
     <div class="wrap">
-      <div v-reveal class="cta__card">
+      <div v-reveal class="cta__card island framed">
         <h2 id="cta-title">{{ c.cta.title }}</h2>
         <p>
           {{ c.cta.lead }}
@@ -31,8 +31,6 @@ const legacy = computed(() => fill(c.value.cta.legacyHtml, { download: site.link
 
   &__card {
     padding: 64px 32px;
-    border: 1px solid var(--border);
-    border-radius: var(--round-xl);
 
     h2 {
       margin-bottom: 16px;

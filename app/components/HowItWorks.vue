@@ -9,7 +9,7 @@ const c = useContent()
         {{ c.how.lead }}
       </SectionHead>
       <ol class="steps">
-        <li v-for="(step, i) in c.how.steps" :key="step.label" v-reveal class="steps__item">
+        <li v-for="(step, i) in c.how.steps" :key="step.label" v-reveal class="steps__item island">
           <span class="steps__n">
             <BrandIcon v-if="i === 1" name="ivy" :tile="false" :size="18" />
             {{ step.label }}
@@ -28,7 +28,7 @@ const c = useContent()
 .steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px 28px;
+  gap: var(--gap);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -38,8 +38,7 @@ const c = useContent()
   }
 
   &__item {
-    padding-top: 22px;
-    border-top: 1px solid var(--border);
+    padding: 22px;
 
     &:first-child .steps__n {
       color: var(--live-text);
@@ -60,11 +59,9 @@ const c = useContent()
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-family: var(--font-mono);
-    font-size: 12.5px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent-text);
   }
 }
 </style>
