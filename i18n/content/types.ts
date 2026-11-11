@@ -18,13 +18,13 @@ export interface FeatureCopy {
 
 export type FeatureId =
   | 'workspaces' | 'dashboards' | 'imports' | 'ivy' | 'ask' | 'transcription'
-  | 'memory' | 'receipts' | 'markdown' | 'notes' | 'shared-ivy'
+  | 'memory' | 'receipts' | 'markdown' | 'notes'
 
 export type DifferentiatorId = 'live' | 'capture' | 'receipts' | 'security' | 'locks' | 'markdown'
 
 export type PrivacyCardId = 'offline' | 'at-rest' | 'gated' | 'seals' | 'screen-share' | 'firewall' | 'update-check'
 
-export type ProviderId = 'on-device' | 'ollama' | 'claude-code' | 'codex' | 'anthropic' | 'gateway'
+export type ProviderId = 'on-device' | 'ivy-web' | 'claude-code' | 'codex'
 
 export type PlanId = 'free' | 'pro' | 'team'
 
@@ -102,7 +102,8 @@ export interface SiteContent {
     cards: Record<PrivacyCardId, Card>
     tableCaption: string
     tableHeaders: [string, string, string]
-    providers: Record<ProviderId, { name: string, note?: string, where: string }>
+    /** `leaves` overrides leavesYes / leavesNo for one provider. */
+    providers: Record<ProviderId, { name: string, note?: string, where: string, leaves?: string }>
     leavesYes: string
     leavesNo: string
     shotAlt: string

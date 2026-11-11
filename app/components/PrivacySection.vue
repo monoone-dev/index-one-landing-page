@@ -46,7 +46,7 @@ const c = useContent()
                 <td>{{ c.privacy.providers[p.id].where }}</td>
                 <td>
                   <span class="tag" :class="p.leaves ? 'tag--yes' : 'tag--no'">
-                    {{ p.leaves ? c.privacy.leavesYes : c.privacy.leavesNo }}
+                    {{ c.privacy.providers[p.id].leaves ?? (p.leaves ? c.privacy.leavesYes : c.privacy.leavesNo) }}
                   </span>
                 </td>
               </tr>

@@ -9,7 +9,7 @@ const content: SiteContent = {
     features: {
       breadcrumb: '功能',
       title: '功能一览 — IndexOne macOS 会议笔记',
-      description: 'Workspaces、项目、导入、会中 Ivy、向整个知识库提问、双音轨转写、出处凭证、Markdown 导出与 Shared Ivy——IndexOne 的全部功能都在这里。',
+      description: 'Workspaces、项目、导入、会中 Ivy、向整个知识库提问、双音轨转写、出处凭证与 Markdown 导出——IndexOne 的全部功能都在这里。',
     },
     privacy: {
       breadcrumb: '隐私',
@@ -82,7 +82,7 @@ const content: SiteContent = {
     items: {
       'live': {
         title: '会议进行中即可询问 Ivy，一切都留在你的 Mac 上',
-        body: '通话中输入或说出问题，即可获得基于你录制过的所有会议的回答，并附上可直接打开的来源；录音全程不中断。在设备上或通过本地 Ollama 运行 Ivy，会议文本不会离开你的 Mac；在你首次同意之前，云端 AI 始终保持关闭。',
+        body: '通话中输入或说出问题，即可获得基于你录制过的所有会议的回答，并附上可直接打开的来源；录音全程不中断。选择 Ivy on this Mac，会议文本不会离开你的 Mac；在你首次同意之前，Claude Code 和 Codex 始终保持关闭。',
         link: 'Ivy 如何工作',
       },
       'capture': {
@@ -96,8 +96,8 @@ const content: SiteContent = {
         link: '出处凭证',
       },
       'security': {
-        title: '无论存储在哪里，都已加密',
-        body: '你的整个资料库在 Mac 上使用 SQLCipher 加密。你分享的所有内容在上传前都会用 AES-256-GCM 封存，因此服务器只保存密文；登录采用 OPAQUE 协议，服务器永远不会知道你的密码。',
+        title: '在你的 Mac 上加密',
+        body: '你的整个资料库在 Mac 上使用 SQLCipher 加密。Personal 以及你所属的每个组织也会在这台 Mac 上保留一份加密副本，因此无需联网也能打开。',
         link: '安全与隐私',
       },
       'locks': {
@@ -138,11 +138,11 @@ const content: SiteContent = {
   privacy: {
     eyebrow: '安全与隐私',
     title: '隐私不是一个开关，而是整个架构。',
-    leadHtml: 'IndexOne 的设计让转写、搜索和设备端 Ivy 可以<b>完全不联网</b>运行——只要关掉唯一一项会主动联网的功能：启动时检查新版本。如果你选择云端 AI，数据外发之前还有同意确认和脱敏防火墙两道关卡。',
+    leadHtml: '在 On this Mac 空间中，转写、搜索和 Ivy on this Mac 可以<b>完全不联网</b>运行——只要关掉默认会主动联网的两项功能：启动时检查新版本，以及每天一次的匿名使用统计。如果你选择 Claude Code 或 Codex，数据外发之前还有同意确认和脱敏防火墙两道关卡。',
     cards: {
       'offline': {
         title: '数据不出设备',
-        body: '使用只需下载一次的设备端模型，或使用 Ollama，你的音频和文字稿都不会接触网络。推理全程在你的 Mac 上进行。',
+        body: '使用 Ivy on this Mac 和只需下载一次的模型，你的音频和文字稿都不会接触网络。推理全程在你的 Mac 上进行。',
       },
       'at-rest': {
         title: '双层静态加密',
@@ -165,24 +165,22 @@ const content: SiteContent = {
         body: '如果你选择启用云端摘要服务，邮箱地址、类似银行卡号的数字和电话号码都会先被清除——而且云端外发采用<b>默认拒绝（fail-closed）</b>机制，须经一次性同意才会放行。下载可选的姓名遮蔽模型后，人名也会被替换。',
       },
       'update-check': {
-        title: '我们默认发起的唯一一次请求',
-        body: '启动时，IndexOne 会向 GitHub 询问是否有新版本。请求中会带上你当前运行的版本号，因为只有这样才能提出这个问题——除此之外别无其他：没有会议，没有笔记，没有账号。你可以在 <b>Settings → Privacy</b>（设置 → 隐私）中关闭它。这是本页唯一一件未经你要求就会发生的事，也正因如此，我们把它写在这里。',
+        title: '我们默认发起的两项请求',
+        body: '启动时，IndexOne 会向 GitHub 询问是否有新版本；请求中只带上你当前运行的版本号，别无其他。此外，它每天会发送一条很小的匿名消息：随机安装 ID、应用和 macOS 版本、芯片类型、语言，以及你是否已登录——没有会议、笔记、录音或姓名。两者都可以在 <b>Settings → Privacy</b>（设置 → 隐私）中关闭。这是本页仅有的两件未经你要求就会发生的事，也正因如此，我们把它们写在这里。',
       },
     },
     tableCaption: '各 AI 服务商在哪里运行，以及会议文本是否会离开你的 Mac',
     tableHeaders: ['Ivy / 服务商', '运行位置', '会议文本会离开你的 Mac 吗？'],
     providers: {
-      'on-device': { name: '设备端 Ivy', note: 'Bielik / Qwen', where: '完全本地' },
-      'ollama': { name: 'Ollama', where: '完全本地' },
-      'claude-code': { name: 'Claude Code', note: '默认摘要工具', where: '本地 CLI → 云端' },
+      'on-device': { name: 'Ivy on this Mac', note: 'Bielik / Qwen', where: '完全本地' },
+      'ivy-web': { name: 'Ivy on the web', note: 'Personal 和组织', where: '网页版 IndexOne', leaves: '会——该空间本身就在网页端' },
+      'claude-code': { name: 'Claude Code', where: '本地 CLI → 云端' },
       'codex': { name: 'Codex', note: 'OpenAI 的 CLI，以无工具模式运行', where: '本地 CLI → 云端' },
-      'anthropic': { name: 'Anthropic API', note: '使用你自己的密钥', where: '直连 HTTPS' },
-      'gateway': { name: 'AI 网关', note: '任何兼容 OpenAI 的端点——LiteLLM、Kong、Portkey、vLLM 等', where: '直连 HTTPS' },
     },
     leavesYes: '仅在你同意后，且经过脱敏防火墙处理',
     leavesNo: '不会',
     shotAlt: 'IndexOne 隐私设置：用平实的语言说明文本外发前会移除哪些内容、哪些服务商属于云端，以及云端处理是否已获允许',
-    footnote: 'IndexOne 用平实的语言告诉你，究竟有什么会离开你的 Mac——每一次云端 AI 调用都会被记录并展示给你。除非你主动选择，你的会议始终留在设备上。所有 AI 功能共用同一个模型选择器，而且它始终接受你手动输入的模型 ID——即使是在本版本之后发布的模型，也照样可用。',
+    footnote: 'IndexOne 用平实的语言告诉你，究竟有什么会离开你的 Mac——每一次云端 AI 调用都会被记录并展示给你。每个空间只有一项 AI 选择，用于转写、笔记、提问、人物与主题、事实、翻译以及会中助手。在 On this Mac 空间中，除非你选择 Claude Code 或 Codex，会议始终留在你的 Mac 上。',
   },
   features: {
     eyebrow: '你将获得',
@@ -303,19 +301,6 @@ const content: SiteContent = {
         ],
         alt: '笔记编辑器中选中了一段文字，Ivy 命令菜单已打开，显示 Refine、Shorten、Change tone 等操作',
       },
-      'shared-ivy': {
-        eyebrow: 'Shared Ivy',
-        title: '团队协作，依然端到端加密。',
-        body: '把一份笔记或会议摘要发布到你所在组织的 Shared Ivy，你编辑时，它会为每位成员保持同步。所有内容在离开之前都已在你的 Mac 上加密封存——服务器上只存放密文、被包裹的密钥和公钥。',
-        points: [
-          '上传前使用组织内容密钥以 AES-256-GCM 加密封存',
-          '发布前先验证——与锁定文件夹遵循同样的严格流程',
-          '按文档设置权限——作者可为每份共享文档设为 <b>View only</b>（仅查看）或 <b>Can edit</b>（可编辑）',
-          '可同时加入多个组织——每个组织都有各自独立的加密信息流',
-          '共享<b>任务</b>——支持负责人、截止日期、子任务及同样的权限设置；任务存在于组织之内，因此需要登录账号',
-        ],
-        alt: 'Shared Ivy 视图：你所在组织与你共享的会议和笔记，每条都标明作者和所属组织',
-      },
     },
   },
   pricing: {
@@ -334,9 +319,8 @@ const content: SiteContent = {
           '会中 Ivy，以及向知识库提问',
           '语义搜索与自动生成的知识图谱',
           '独立笔记，配备 Ivy 辅助编辑器',
-          '端到端加密共享，可按文档设置 View only / Can edit（需要账号）',
+          '与网页版 IndexOne 共用的 Personal 空间和组织空间，每个都在你的 Mac 上保留加密副本（需要账号）',
           'Workspaces、可组合的项目，以及离线导入 Notion / Obsidian / Apple Notes / Markdown',
-          '加密分享链接，可设置有效期、可选密码和打开次数上限',
           '按 Workspace 和文件夹设置 Touch ID 锁，采用 AES-256 加密',
           '屏幕共享时自动重新锁定',
           '本地 MCP 服务器与 Markdown 导出',
@@ -392,7 +376,7 @@ const content: SiteContent = {
       },
       'local-ai': {
         criterion: 'AI 可完全在设备上运行',
-        cells: ['设备端 Ivy 或本地 Ollama', '无内置 AI；依赖社区插件', '仅限云端', '仅限云端', '无内置 AI', '仅限云端'],
+        cells: ['Ivy on this Mac', '无内置 AI；依赖社区插件', '仅限云端', '仅限云端', '无内置 AI', '仅限云端'],
       },
       'ask-all': {
         criterion: '跨所有历史会议和笔记提问',
@@ -408,7 +392,7 @@ const content: SiteContent = {
       },
       'encryption': {
         criterion: '由你掌控的加密',
-        cells: ['加密数据库、Touch ID 文件夹锁、端到端加密共享', '付费 Sync 服务提供端到端加密', '在 Notion 服务器上加密；非端到端', '仅可用密码短语加密选定文本', 'Pro 版可加密单条笔记', ''],
+        cells: ['加密数据库、Touch ID 文件夹锁，以及每个网页空间的加密本地副本', '付费 Sync 服务提供端到端加密', '在 Notion 服务器上加密；非端到端', '仅可用密码短语加密选定文本', 'Pro 版可加密单条笔记', ''],
       },
       'platforms': {
         criterion: '平台',
@@ -431,19 +415,19 @@ const content: SiteContent = {
       },
       {
         question: '我的音频会上传到云端吗？',
-        answer: '不会。转写始终在你的 Mac 上进行。只有经过脱敏的文本才可能外发，而且只会发送给你亲自选择并同意使用的云端 AI。',
+        answer: '在 On this Mac 空间中不会：转写通过 Whisper 在你的 Mac 上进行，只有经过脱敏的文本才可能外发，而且只会在你同意后发送给 Claude Code 或 Codex。Personal 空间和组织空间位于网页版 IndexOne，因此它们的录音也存储在那里。',
       },
       {
         question: 'Ivy 是什么？',
-        answer: 'Ivy 是 IndexOne 内置的 AI。你可以在会议中向它提问而无需停止录音，也可以在会后针对你录制和写下的全部内容提问。每个回答都会注明它所依据的会议和笔记。Ivy 可以完全在你的 Mac 上运行，也可以通过本地 Ollama 运行，或者在你明确同意后，通过经过脱敏的云端服务商运行。',
+        answer: 'Ivy 是 IndexOne 内置的 AI。你可以在会议中向它提问而无需停止录音，也可以在会后针对你录制和写下的全部内容提问。每个回答都会注明它所依据的会议和笔记。每个空间选择一种 AI：Ivy on this Mac、面向 Personal 和组织的 Ivy on the web，或在你明确同意后使用 Claude Code 或 Codex。',
       },
       {
         question: '需要联网吗？',
-        answer: '只需联网一次，用来下载 Whisper 模型。此后，录音、转写、搜索和设备端 Ivy 都可离线使用。云端 AI 连接、连接器和共享功能则需要联网。',
+        answer: '只需联网一次，用来下载 Whisper 模型。此后，录音、转写、搜索和 Ivy on this Mac 都可离线使用。Personal 空间和组织空间可以从加密副本离线打开，并在你重新联网后发送你的修改。Ivy on the web、Claude Code、Codex 和连接器需要联网。',
       },
       {
         question: '我需要 Claude Code 吗？',
-        answer: '只有当你保留它作为笔记撰写工具时才需要。你也可以改用 Codex、Anthropic API、兼容 OpenAI 的 AI 网关、本地 Ollama 或设备端模型。',
+        answer: '不需要。每个空间只有一项 AI 选择：Ivy on this Mac、Ivy on the web（Personal 和组织）、Claude Code 或 Codex。',
       },
       {
         question: '支持哪些语言？',

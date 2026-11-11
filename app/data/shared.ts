@@ -35,11 +35,9 @@ export const privacyCards: { id: PrivacyCardId, icon: string, tone?: 'safe', wid
 
 export const providers: { id: ProviderId, leaves: boolean }[] = [
   { id: 'on-device', leaves: false },
-  { id: 'ollama', leaves: false },
+  { id: 'ivy-web', leaves: true },
   { id: 'claude-code', leaves: true },
   { id: 'codex', leaves: true },
-  { id: 'anthropic', leaves: true },
-  { id: 'gateway', leaves: true },
 ]
 
 export const privacyShot = shot('settings-privacy', 1600, 1112)
@@ -55,10 +53,9 @@ export const features: { id: FeatureId, shot: Screenshot }[] = [
   { id: 'receipts', shot: shot('detail-receipts', 1600, 912) },
   { id: 'markdown', shot: shot('detail-note', 1600, 1112) },
   { id: 'notes', shot: shot('notes-editor-ivy-menu', 1600, 1000) },
-  { id: 'shared-ivy', shot: shot('shared-ivys', 1600, 800) },
 ]
 
-export const ivyFeatureIds: FeatureId[] = ['ivy', 'ask', 'notes', 'shared-ivy']
+export const ivyFeatureIds: FeatureId[] = ['ivy', 'ask', 'notes']
 
 export const highlightedFeatureIds: FeatureId[] = ['ivy', 'receipts']
 
