@@ -14,7 +14,7 @@ during the meeting and across everything you have ever recorded.
 [Release notes](https://github.com/monoone-dev/index-one-landing-page/releases) ·
 [Support](#support)
 
-macOS 13.4+ · Apple Silicon and Intel (universal) · signed and notarized · free during early access
+macOS 13.4+ · Apple Silicon only (M1 or later) · signed and notarized · free during early access
 
 ## Contents
 

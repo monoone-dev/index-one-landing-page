@@ -67,7 +67,7 @@ const content: SiteContent = {
     subHtml: 'IndexOne nagrywa Twoje rozmowy i transkrybuje je <b>na Twoim Macu</b>. Pytaj Ivy na żywo, w trakcie spotkania, i o wszystko, co do tej pory nagrałeś. Uruchamiaj AI lokalnie albo świadomie włącz <b>chmurowe AI po redakcji</b> — archiwum spotkań i tak zostaje na Twoim Macu.',
     download: 'Pobierz na macOS',
     privacyCta: 'Zobacz, jak działa prywatność',
-    note: 'Podpisany i notaryzowany · macOS 13.4+ · Apple Silicon i Intel · Twoje notatki zostają w Markdown, na własność',
+    note: 'Podpisany i notaryzowany · macOS 13.4+ · Apple Silicon (M1 lub nowszy) · Twoje notatki zostają w Markdown, na własność',
     videoLabel: '90-sekundowa prezentacja IndexOne: nagrywane spotkanie i notatka pisana równolegle, notatka utworzona po spotkaniu i wyciągnięte z niej punkty, oś czasu mówców, pytanie zadane Ivy o cały sejf i odpowiedź ze źródłami, graf wiedzy, pasek Workspaces i wyszukiwanie na urządzeniu, projekt, People oraz Workspace, który nie chce się otworzyć, bo jest zapieczętowany',
     play: 'Obejrzyj 90-sekundową prezentację',
   },
@@ -455,7 +455,7 @@ const content: SiteContent = {
       },
       {
         question: 'Czy działa ze słuchawkami i na Macach z procesorem Intel?',
-        answer: 'Tak i tak. Dźwięk drugiej strony jest pobierany z systemu, a nie z głośników, a aplikacja jest kompilacją uniwersalną. Duże modele na urządzeniu działają najlepiej na Apple Silicon.',
+        answer: 'Ze słuchawkami tak: dźwięk drugiej strony jest pobierany z systemu, a nie z głośników. Na Macach z procesorem Intel nie: IndexOne wymaga Maca z Apple Silicon (M1 lub nowszy).',
       },
       {
         question: 'Czy IndexOne jest open source?',
