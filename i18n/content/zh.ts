@@ -67,7 +67,7 @@ const content: SiteContent = {
     subHtml: 'IndexOne 录制你的通话，并<b>在你的 Mac 上</b>完成转写。会议进行中就能实时向 Ivy 提问，也能跨越你录下的所有内容检索。AI 可以在本地运行，也可以由你明确选择启用<b>经过脱敏的云端 AI</b>——你的会议档案始终留在你的 Mac 上。',
     download: '下载 macOS 版',
     privacyCta: '了解隐私机制',
-    note: '已签名并通过公证 · macOS 13.4+ · 支持 Apple Silicon 和 Intel · 笔记始终是属于你的 Markdown',
+    note: '已签名并通过公证 · macOS 13.4+ · 支持 Apple Silicon（M1 及更新机型）· 笔记始终是属于你的 Markdown',
     videoLabel: 'IndexOne 90 秒导览：一边录制会议一边在旁记笔记；会后整理的笔记及从中提取的要点；发言人时间线；向 Ivy 提出跨整个知识库的问题并获得附带出处的回答；知识图谱；Workspaces 侧栏与设备端搜索；项目；People；以及一个因已加密封存而拒绝打开的 Workspace',
     play: '观看 90 秒导览',
   },
@@ -455,7 +455,7 @@ const content: SiteContent = {
       },
       {
         question: '戴耳机能用吗？Intel Mac 上能用吗？',
-        answer: '都可以。对方的音频是从系统中采集的，而不是从扬声器录制，而且本应用是通用版本。大型设备端模型在 Apple Silicon 上运行效果最佳。',
+        answer: '戴耳机可以用：对方的音频是从系统中采集的，而不是从扬声器录制。Intel Mac 不支持：IndexOne 需要搭载 Apple Silicon（M1 及更新机型）的 Mac。',
       },
       {
         question: 'IndexOne 开源吗？',

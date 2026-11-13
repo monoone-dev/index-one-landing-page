@@ -67,7 +67,7 @@ const content: SiteContent = {
     subHtml: 'IndexOne nimmt deine Calls auf und transkribiert sie <b>auf deinem Mac</b>. Frag Ivy live, mitten im Meeting, und über alles, was du je aufgenommen hast. Lass die KI lokal laufen oder entscheide dich ausdrücklich für <b>geschwärzte Cloud-KI</b> – dein Meeting-Archiv bleibt auf deinem Mac.',
     download: 'Für macOS laden',
     privacyCta: 'So funktioniert der Datenschutz',
-    note: 'Signiert und notarisiert · macOS 13.4+ · Apple Silicon und Intel · deine Notizen bleiben Markdown, das dir gehört',
+    note: 'Signiert und notarisiert · macOS 13.4+ · Apple Silicon (M1 oder neuer) · deine Notizen bleiben Markdown, das dir gehört',
     videoLabel: 'Eine 90-Sekunden-Tour durch IndexOne: ein Meeting wird aufgenommen, während daneben eine Notiz entsteht, die danach geschriebene Notiz und die Punkte, die sie herauszieht, die Sprecher-Zeitleiste, eine Frage an Ivy über den ganzen Vault mit Antwort samt Quellen, der Wissensgraph, die Workspaces-Leiste und die Suche auf dem Gerät, ein Projekt, People und ein Workspace, der sich nicht öffnet, weil er versiegelt ist',
     play: 'Die 90-Sekunden-Tour ansehen',
   },
@@ -455,7 +455,7 @@ const content: SiteContent = {
       },
       {
         question: 'Funktioniert es mit Kopfhörern und auf Intel-Macs?',
-        answer: 'Ja, beides. Der Ton der Gegenseite wird vom System abgegriffen, nicht von deinen Lautsprechern, und die App ist ein Universal-Build. Große Modelle auf dem Gerät laufen am besten auf Apple Silicon.',
+        answer: 'Kopfhörer ja: Der Ton der Gegenseite wird vom System abgegriffen, nicht von deinen Lautsprechern. Intel-Macs nein: IndexOne braucht einen Mac mit Apple Silicon (M1 oder neuer).',
       },
       {
         question: 'Ist IndexOne Open Source?',

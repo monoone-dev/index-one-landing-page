@@ -67,7 +67,7 @@ const content: SiteContent = {
     subHtml: 'IndexOne enregistre vos appels et les transcrit <b>sur votre Mac</b>. Interrogez Ivy en direct, en pleine réunion, ou sur tout ce que vous avez enregistré. Faites tourner l’IA en local, ou activez explicitement une <b>IA cloud anonymisée</b> — vos archives de réunions restent sur votre Mac.',
     download: 'Télécharger pour macOS',
     privacyCta: 'Comprendre la confidentialité',
-    note: 'Signée et notariée · macOS 13.4+ · Apple Silicon et Intel · vos notes restent en Markdown, et elles vous appartiennent',
+    note: 'Signée et notariée · macOS 13.4+ · Apple Silicon (M1 ou plus récent) · vos notes restent en Markdown, et elles vous appartiennent',
     videoLabel: 'Une visite de 90 secondes d’IndexOne : une réunion enregistrée pendant qu’une note est saisie à côté, la note rédigée ensuite et les éléments qu’elle en extrait, la chronologie des intervenants, une question posée à Ivy sur tout le coffre et sa réponse sourcée, le graphe de connaissances, la barre des Workspaces et la recherche sur l’appareil, un projet, la vue Personnes, et un Workspace qui refuse de s’ouvrir parce qu’il est scellé',
     play: 'Voir la visite de 90 secondes',
   },
@@ -455,7 +455,7 @@ const content: SiteContent = {
       },
       {
         question: 'Est-ce que ça marche avec un casque et sur les Mac Intel ?',
-        answer: 'Oui dans les deux cas. L’audio de l’autre côté est capté depuis le système, pas depuis vos haut-parleurs, et l’app est une version universelle. Les grands modèles locaux tournent mieux sur Apple Silicon.',
+        answer: 'Avec un casque, oui : l’audio de l’autre côté est capté depuis le système, pas depuis vos haut-parleurs. Sur les Mac Intel, non : IndexOne nécessite un Mac Apple Silicon (M1 ou plus récent).',
       },
       {
         question: 'IndexOne est-il open source ?',

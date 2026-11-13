@@ -67,7 +67,7 @@ const content: SiteContent = {
     subHtml: 'IndexOne graba tus llamadas y las transcribe <b>en tu Mac</b>. Pregúntale a Ivy en directo, en plena reunión, y sobre todo lo que has grabado. Usa IA local o activa de forma explícita la <b>IA en la nube con datos anonimizados</b>: tu archivo de reuniones se queda en tu Mac.',
     download: 'Descargar para macOS',
     privacyCta: 'Descubre cómo funciona la privacidad',
-    note: 'Firmada y notarizada · macOS 13.4+ · Apple Silicon e Intel · tus notas siguen siendo Markdown y son tuyas',
+    note: 'Firmada y notarizada · macOS 13.4+ · Apple Silicon (M1 o posterior) · tus notas siguen siendo Markdown y son tuyas',
     videoLabel: 'Un recorrido de 90 segundos por IndexOne: una reunión grabándose mientras se escribe una nota al lado, la nota redactada después y los puntos que extrae, la línea de tiempo de los participantes, una pregunta a Ivy sobre toda la bóveda respondida con fuentes, el grafo de conocimiento, la barra de Workspaces y la búsqueda en el dispositivo, un proyecto, Personas y un Workspace que se niega a abrirse porque está sellado',
     play: 'Ver el recorrido de 90 segundos',
   },
@@ -455,7 +455,7 @@ const content: SiteContent = {
       },
       {
         question: '¿Funciona con auriculares y en Mac con Intel?',
-        answer: 'Sí, en ambos casos. El audio del otro lado se captura del sistema, no de tus altavoces, y la app es universal. Los modelos grandes en el dispositivo funcionan mejor en Apple Silicon.',
+        answer: 'Con auriculares, sí: el audio del otro lado se captura del sistema, no de tus altavoces. En Mac con Intel, no: IndexOne necesita un Mac con Apple Silicon (M1 o posterior).',
       },
       {
         question: '¿IndexOne es de código abierto?',

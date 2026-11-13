@@ -67,7 +67,7 @@ const content: SiteContent = {
     subHtml: 'IndexOneは通話を録音し、<b>あなたのMac上で</b>文字起こしします。会議の最中にもIvyへ質問でき、これまでに録音したすべての内容についても尋ねられます。AIはローカルで動かすことも、明示的に選んで<b>墨消し済みのクラウドAI</b>を使うこともできます。会議のアーカイブはずっとあなたのMacに残ります。',
     download: 'macOS版をダウンロード',
     privacyCta: 'プライバシーの仕組みを見る',
-    note: '署名・公証済み · macOS 13.4以降 · Apple SiliconとIntelに対応 · ノートはあなたのものであるMarkdownのまま',
+    note: '署名・公証済み · macOS 13.4以降 · Apple Silicon（M1以降）に対応 · ノートはあなたのものであるMarkdownのまま',
     videoLabel: 'IndexOneの90秒ツアー：ノートを横で入力しながら会議を録音する様子、会議後に書かれたノートとそこから抽出された項目、話者タイムライン、保管庫全体に対してIvyに質問し出典付きで回答を得る場面、ナレッジグラフ、Workspacesレールとデバイス上の検索、プロジェクト、People、そして封印されているため開くことを拒むWorkspace',
     play: '90秒ツアーを見る',
   },
@@ -455,7 +455,7 @@ const content: SiteContent = {
       },
       {
         question: 'ヘッドフォンやIntel Macでも使えますか？',
-        answer: 'どちらも使えます。相手側の音声はスピーカーからではなくシステムから取り込まれ、アプリはユニバーサルビルドです。大規模なデバイス上のモデルはApple Siliconで最も快適に動作します。',
+        answer: 'ヘッドフォンは使えます。相手側の音声はスピーカーからではなくシステムから取り込まれます。Intel Macには対応していません。IndexOneにはApple Silicon（M1以降）を搭載したMacが必要です。',
       },
       {
         question: 'IndexOneはオープンソースですか？',
