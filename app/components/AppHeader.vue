@@ -4,6 +4,7 @@ import { site } from '~/data/site'
 
 const c = useContent()
 const to = useLocalLink()
+const route = useRoute()
 
 const links = computed(() => [
   { label: c.value.nav.features, to: to('/features') },
@@ -11,13 +12,13 @@ const links = computed(() => [
   { label: c.value.nav.pricing, to: to('/pricing') },
   { label: c.value.nav.compare, to: to('/pricing#compare') },
   { label: c.value.nav.changelog, to: to('/changelog') },
-  { label: c.value.nav.docs, to: site.links.docs, external: true },
+  { label: c.value.nav.docs, to: site.links.docs },
 ])
 
 const language = useLanguageMenu()
 const theme = useThemeMenu()
 
-const menuItems = computed<DropdownMenuItem[][]>(() => [links.value.map(link => ({ label: link.label, to: link.to, external: link.external }))])
+const menuItems = computed<DropdownMenuItem[][]>(() => [links.value.map(link => ({ label: link.label, to: link.to }))])
 
 // On phones the language, theme and download buttons live in the menu instead of the header.
 const mobileMenuItems = computed<DropdownMenuItem[][]>(() => [
@@ -36,7 +37,7 @@ const mobileMenuItems = computed<DropdownMenuItem[][]>(() => [
       <div class="nav__inner glass">
         <BrandMark />
         <nav class="nav__links" :aria-label="c.common.primaryNav">
-          <NuxtLink v-for="link in links" :key="link.label" :to="link.to" :external="link.external" class="nav__link" :data-anchor="String(link.to).includes('#') || undefined">
+          <NuxtLink v-for="link in links" :key="link.label" :to="link.to" class="nav__link" :data-section="link.to === site.links.docs && route.path.startsWith(site.links.docs) || undefined" :data-anchor="String(link.to).includes('#') || undefined">
             {{ link.label }}
           </NuxtLink>
         </nav>
@@ -124,7 +125,9 @@ const mobileMenuItems = computed<DropdownMenuItem[][]>(() => [
     }
 
     // A link to a section of a page (Compare) is never the current page.
-    &.router-link-exact-active:not([data-anchor]) {
+    // Every docs page counts as Docs.
+    &.router-link-exact-active:not([data-anchor]),
+    &[data-section] {
       background: var(--fill-2);
       color: var(--text-primary);
     }

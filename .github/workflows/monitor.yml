@@ -16,7 +16,7 @@ jobs:
       - name: index-one.io answers over HTTPS
         run: |
           set -euo pipefail
-          for url in https://index-one.io/ https://index-one.io/features/ https://index-one.io/privacy/ https://index-one.io/pricing/ https://index-one.io/pl/ https://index-one.io/docs.html https://index-one.io/og-image.png https://index-one.io/robots.txt https://index-one.io/sitemap.xml; do
+          for url in https://index-one.io/ https://index-one.io/features/ https://index-one.io/privacy/ https://index-one.io/pricing/ https://index-one.io/pl/ https://index-one.io/docs/ https://index-one.io/docs.html https://index-one.io/og-image.png https://index-one.io/robots.txt https://index-one.io/sitemap.xml; do
             code="$(curl -sS -o /dev/null -w '%{http_code}' --retry 3 --retry-all-errors --max-time 20 "$url" || true)"
             echo "$url -> $code"
             if [ "$code" != 200 ]; then echo "::error::$url returned $code"; exit 1; fi

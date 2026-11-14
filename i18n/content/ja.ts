@@ -3,30 +3,30 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — Ivy搭載、Mac向けローカルファースト議事録',
-      description: 'Mac上で会議を録音・文字起こしし、AIのIvyに会議中でも過去のすべての通話についても質問できます。AIはローカルか墨消し済みのクラウドを選べ、ノートは自分のMarkdownのまま残ります。',
+      title: 'IndexOne — Ivy搭載、Mac向け議事録・文字起こしアプリ',
+      description: 'Mac上で会議を録音・文字起こしし、デバイス上のAI、Ivyに会議中でも過去の通話全体についても質問できます。個人でも組織でも使え、ノートはMarkdownで残ります。',
     },
     features: {
       breadcrumb: '機能',
-      title: '機能 — macOS向け議事録アプリ IndexOne',
-      description: 'Workspaces、プロジェクト、インポート、会議中のIvy、保管庫への質問、2系統の文字起こし、根拠リンク、Markdownエクスポート。IndexOneの全機能をご紹介。',
+      title: '機能 — Mac向け会議の文字起こし、Ivy、ノート',
+      description: 'Mac上での2系統の文字起こし、会議中のIvy、すべての会議への質問、根拠リンク、プロジェクト、プラグイン、ローカルAIサーバー、Markdownエクスポート。',
     },
     privacy: {
       breadcrumb: 'プライバシー',
-      title: 'プライバシーとセキュリティ — IndexOne',
-      description: 'デバイス上での文字起こし、SQLCipherによる保存時暗号化、Touch IDのフォルダーロック、墨消しファイアウォール、クラウドAI利用前の同意。Macから出るものをすべて明示します。',
+      title: 'IndexOneのプライバシー — デバイス上のAIとMacから出るもの',
+      description: 'デバイス上の文字起こしとAI、暗号化されたライブラリ、Touch IDのフォルダーロック、墨消しファイアウォール。どのAIを選ぶと何がいつ送られるかを明示します。',
     },
     pricing: {
       breadcrumb: '料金',
       title: 'IndexOneの料金とObsidian・Notionなどとの比較',
-      description: 'IndexOneはアーリーアクセス期間中は無料です。録音、デバイス上のAI、暗号化、Markdownの観点で、Obsidian、Notion、Evernote、Bear、Amieと比較できます。',
+      description: 'IndexOneはアーリーアクセス期間中は無料です。録音、文字起こし、デバイス上のAI、Markdownの観点で、Obsidian、Notion、Evernote、Bear、Amieと比較できます。',
     },
     changelog: {
       breadcrumb: '更新履歴',
-      title: '更新履歴 — IndexOne 各リリースの変更点',
-      description: 'macOS 版 IndexOne のすべてのリリースを新しい順に。新機能、修正、ダウンロード、各バージョンのリリース日を掲載しています。',
+      title: '更新履歴 — Mac版IndexOneのリリースノート',
+      description: 'Mac版IndexOneの全リリースのノートを新しい順に。Ivy、組織、プライバシーの新機能、修正、ダウンロード、各バージョンのリリース日を掲載しています。',
     },
-    ogImageAlt: 'IndexOne — Ivy搭載、macOS向けローカルファーストの議事録アプリ',
+    ogImageAlt: 'IndexOne — Ivy搭載、Mac向け議事録・文字起こしアプリ',
   },
   common: {
     skipToContent: '本文へスキップ',
@@ -64,7 +64,7 @@ const content: SiteContent = {
     githubAria: 'GitHub上のIndexOne',
     titleStrong: 'Ivyと一緒に議事録を——',
     titleSoft: 'どこで動かすかはあなたが決める。',
-    subHtml: 'IndexOneは通話を録音し、<b>あなたのMac上で</b>文字起こしします。会議の最中にもIvyへ質問でき、これまでに録音したすべての内容についても尋ねられます。AIはローカルで動かすことも、明示的に選んで<b>墨消し済みのクラウドAI</b>を使うこともできます。会議のアーカイブはずっとあなたのMacに残ります。',
+    subHtml: 'IndexOneは通話を録音し、<b>あなたのMac上で</b>文字起こしします。会議の最中にもIvyへ質問でき、これまでに録音したすべての内容についても尋ねられます。AIはMac上や自分のローカルAIサーバーで動かすことも、明示的に選んで<b>墨消し済みのクラウドAI</b>を使うこともできます。On this Macスペースでは、会議のアーカイブはずっとあなたのMacに残ります。',
     download: 'macOS版をダウンロード',
     privacyCta: 'プライバシーの仕組みを見る',
     note: '署名・公証済み · macOS 13.4以降 · Apple Silicon（M1以降）に対応 · ノートはあなたのものであるMarkdownのまま',
@@ -87,7 +87,7 @@ const content: SiteContent = {
       },
       'capture': {
         title: '通話の双方を、Mac上で文字起こし',
-        body: 'あなたのマイクと、他の参加者のシステム音声を2つのストリームとして取り込み、デバイス上のWhisperがMe / Othersの文字起こしにまとめます。クラウドでの文字起こしは一切ありません。',
+        body: 'あなたのマイクと、他の参加者のシステム音声を2つのストリームとして取り込み、デバイス上のWhisperがMe / Othersの文字起こしにまとめます。On this Macスペースでは、クラウドでの文字起こしは一切ありません。',
         link: '録音と文字起こし',
       },
       'receipts': {
@@ -107,7 +107,7 @@ const content: SiteContent = {
       },
       'markdown': {
         title: 'プレーンなMarkdownとローカルMCPサーバー',
-        body: 'ノートはウィキリンク付きのプレーンなMarkdownとしてObsidianの保管庫に保存されます。127.0.0.1で動く読み取り専用のMCPサーバーを通じて、Claudeなどのエージェントがノートを参照できます。',
+        body: 'ノートはウィキリンク付きのプレーンなMarkdownとしてObsidianの保管庫に保存されます。127.0.0.1で動く読み取り専用のMCPサーバーを通じて、Claudeなどのエージェントがノートを参照できます。どのスペースを読めるかはあなたが選びます。組織はオンにするまでオフのままです。',
         link: 'MarkdownとMCP',
       },
     },
@@ -138,7 +138,7 @@ const content: SiteContent = {
   privacy: {
     eyebrow: 'セキュリティとプライバシー',
     title: 'プライバシーは設定ではなく、設計そのものです。',
-    leadHtml: 'On this Macスペースでは、文字起こし、検索、Ivy on this Macが<b>ネットワークに一切つながらずに</b>動作します。必要なのは、初期設定で外部と通信する2つの機能、つまり起動時の新バージョン確認と1日1回の匿名の利用状況メッセージをオフにすることだけです。Claude CodeやCodexを選んだ場合も、その送信の手前には同意と墨消しファイアウォールが置かれます。',
+    leadHtml: 'On this Macスペースでは、文字起こし、検索、Ivy on this Macが<b>ネットワークに一切つながらずに</b>動作します。必要なのは、初期設定で外部と通信する2つの機能、つまり起動時の新バージョン確認と1日1回の利用状況メッセージをオフにすることだけです。Claude CodeやCodexを選んだ場合も、その送信の手前には同意と墨消しファイアウォールが置かれます。',
     cards: {
       'offline': {
         title: 'デバイスの外には何も出ない',
@@ -166,7 +166,7 @@ const content: SiteContent = {
       },
       'update-check': {
         title: '初期設定で行う2つの通信',
-        body: 'IndexOneは起動時に、新しいバージョンがあるかどうかをGitHubに問い合わせます。そのリクエストに含まれるのは現在のバージョンだけです。また1日に1回、小さな匿名メッセージを送ります。内容はランダムなインストールID、アプリとmacOSのバージョン、チップの種類、言語、サインインしているかどうかだけで、会議、ノート、録音、名前は含まれません。どちらも<b>Settings → Privacy</b>（設定 → プライバシー）でオフにできます。このページの中で、あなたが求めなくても行われるのはこの2つだけです。だからこそ、このページに記載しています。',
+        body: 'IndexOneは起動時に、新しいバージョンがあるかどうかをGitHubに問い合わせます。そのリクエストに含まれるのは現在のバージョンだけです。また1日に1回、小さな利用状況メッセージを送ります。内容はランダムなインストールID、アプリとmacOSのバージョン、チップの種類、言語、サインインしているかどうかだけで、会議、ノート、録音、名前は含まれません。匿名になるのはサインアウトしているときだけで、サインイン中はあなたのアカウントとともに送信されます。どちらも<b>Settings → Privacy</b>（設定 → プライバシー）でオフにできます。このページの中で、あなたが求めなくても行われるのはこの2つだけです。だからこそ、このページに記載しています。',
       },
     },
     tableCaption: '各AIプロバイダーの実行場所と、会議のテキストがMacの外に出るかどうか',
@@ -176,11 +176,12 @@ const content: SiteContent = {
       'ivy-web': { name: 'Ivy on the web', note: 'Personalと組織', where: 'Web版IndexOne', leaves: 'はい。スペース自体がWeb上にあります' },
       'claude-code': { name: 'Claude Code', where: 'ローカルCLI → クラウド' },
       'codex': { name: 'Codex', note: 'OpenAIのCLI、ツールなしで実行', where: 'ローカルCLI → クラウド' },
+      'local-server': { name: 'Local AI server', note: 'Ollama、LM Studio、oMLXなど', where: 'あなたのMacまたはネットワーク', leaves: 'このMac上のサーバーなら出ません。ネットワーク上の別の場所のサーバーへは、そのアドレスを確認した後にのみ、人名を伏せて送ります' },
     },
     leavesYes: '同意後のみ。墨消しファイアウォールを適用',
     leavesNo: 'いいえ',
     shotAlt: 'IndexOneのプライバシー設定。テキストが外に出る前に何が取り除かれるか、どのプロバイダーがクラウドか、そしてクラウド処理が許可されているかどうかを、わかりやすい言葉で示しています',
-    footnote: 'IndexOneは、Macから何が出ていくのかをわかりやすい言葉で正確にお伝えします。クラウドAIへの呼び出しはすべて記録され、あなたに表示されます。各スペースで選べるAIは1つだけで、文字起こし、ノート、質問、人物とトピック、事実、翻訳、会議中のアシスタントのすべてに使われます。On this Macスペースでは、Claude CodeかCodexを選ばない限り、会議はMacの中にとどまります。',
+    footnote: 'IndexOneは、Macから何が出ていくのかをわかりやすい言葉で正確にお伝えします。クラウドAIへの呼び出しはすべて記録され、あなたに表示されます。各スペースで選べるAIは1つで、Ivy on this Mac、Ivy on the web、Claude Code、Codex、または自分のローカルAIサーバーから選びます。On this Macスペースでは、Claude Code、Codex、またはネットワーク上の別の場所にあるローカルAIサーバーを選ばない限り、会議はMacの中にとどまります。',
   },
   features: {
     eyebrow: '機能',
@@ -240,6 +241,7 @@ const content: SiteContent = {
           '質問の範囲を1つのWorkspaceやフォルダーに絞り込めます。そのサブツリー全体が対象となり、外側は含まれません',
           '会話は記憶されます。保管庫、ノート、会議ごとのスレッドが保持され、それぞれの画面に履歴ブラウザーがあります',
           '参照したフォルダーのいずれかが読めなくなった瞬間、その会話は消えます',
+          '自分のモデルも使えます。ノートや回答をOllama、LM Studio、oMLX、llama.cpp、またはOpenAI互換の任意のサーバーで生成できます',
         ],
         alt: '何か月分もの会議を横断してIvyに質問し、1つの回答とその元になった会議の一覧が下に表示されている様子',
       },
@@ -298,6 +300,7 @@ const content: SiteContent = {
           'キー操作ひとつで使える19種類のIvyアクション',
           'モデルの推測ではなく、あなた自身の会議やノートに基づく結果',
           'スクリーンショットをノートに貼り付け可能。ローカルに保存され、Workspaceのロックにも従います',
+          'PluginsのIvy skillsが、クラウドのIvyによるノートと回答を導きます。Ivyウィンドウ、ノート、録音バーから選べます',
         ],
         alt: 'テキストを選択し、Refine、Shorten、Change toneなどのアクションを表示したIvyコマンドメニューを開いたノートエディター',
       },
@@ -319,11 +322,12 @@ const content: SiteContent = {
           '会議中のIvyと、保管庫への質問',
           'セマンティック検索と自動ナレッジグラフ',
           'Ivyがサポートするエディターで書く単独のノート',
-          'Web版IndexOneと共通のPersonalスペースと組織スペース。それぞれMac上に暗号化されたコピーを保持（アカウントが必要）',
+          'Web版IndexOneと共通のPersonalスペースと組織スペース。直接録音でき、ノートをフォルダーで整理でき、Mac上に暗号化されたコピーを保持（アカウントが必要）',
           'Workspaces、組み立て式プロジェクト、Notion / Obsidian / Apple Notes / Markdownのオフラインインポート',
           'Workspaceごと・フォルダーごとのTouch IDロックとAES-256暗号化',
           '画面共有時の自動再ロック',
           'ローカルMCPサーバーとMarkdownエクスポート',
+          'LanguagesやIvy skillsなどのプラグインを、必要な場所にインストール（アカウントが必要）',
         ],
         cta: 'macOS版をダウンロード',
       },
@@ -372,11 +376,11 @@ const content: SiteContent = {
       },
       'local-transcription': {
         criterion: 'デバイス上での文字起こし',
-        cells: ['デバイス上のWhisper。クラウドでの文字起こしなし', '文字起こし機能は内蔵なし', 'クラウド', 'クラウド', '文字起こしなし', 'クラウド'],
+        cells: ['On this Macスペースではデバイス上のWhisper', '文字起こし機能は内蔵なし', 'クラウド', 'クラウド', '文字起こしなし', 'クラウド'],
       },
       'local-ai': {
         criterion: '完全にデバイス上で動かせるAI',
-        cells: ['Ivy on this Mac', 'AIは内蔵なし。コミュニティプラグイン', 'クラウドのみ', 'クラウドのみ', 'AIは内蔵なし', 'クラウドのみ'],
+        cells: ['Ivy on this Mac、または自分のローカルAIサーバー', 'AIは内蔵なし。コミュニティプラグイン', 'クラウドのみ', 'クラウドのみ', 'AIは内蔵なし', 'クラウドのみ'],
       },
       'ask-all': {
         criterion: '過去のすべての会議とノートを横断して質問',
@@ -407,7 +411,7 @@ const content: SiteContent = {
   faq: {
     eyebrow: 'よくある質問',
     title: 'まず多く寄せられる質問。',
-    leadHtml: 'ここでは簡潔にお答えします。詳しくは<a href="/docs.html">ドキュメント</a>をご覧ください。',
+    leadHtml: 'ここでは簡潔にお答えします。詳しくは<a href="/docs/">ドキュメント</a>をご覧ください。',
     items: [
       {
         question: 'IndexOneは無料ですか？',
@@ -415,11 +419,11 @@ const content: SiteContent = {
       },
       {
         question: '音声はクラウドに送られますか？',
-        answer: 'On this Macスペースでは出ません。そこでは文字起こしはWhisperでMac上で行われ、外に出る可能性があるのは墨消し済みのテキストだけで、それも同意したうえでのClaude CodeかCodexに限られます。PersonalスペースとWeb組織スペースはWeb版IndexOne上にあるため、その録音もWeb上に保存されます。',
+        answer: 'On this Macスペースでは出ません。そこでは文字起こしはWhisperでMac上で行われます。外に出る可能性があるのはテキストだけです。墨消ししたうえで、同意後にClaude CodeかCodexへ。または人名を伏せたうえで、アドレスを確認した後にネットワーク上のローカルAIサーバーへ。PersonalスペースとWeb組織スペースはWeb版IndexOne上にあるため、その録音もWeb上に保存されます。',
       },
       {
         question: 'Ivyとは何ですか？',
-        answer: 'IvyはIndexOneに組み込まれたAIです。録音を止めずに会議中に質問することも、会議の後にこれまで録音し書いてきたすべてを対象に質問することもできます。どの回答にも、元になった会議やノートが示されます。各スペースでAIを1つ選びます。Ivy on this Mac、PersonalとWeb組織向けのIvy on the web、または明示的な同意のうえでClaude CodeかCodexです。',
+        answer: 'IvyはIndexOneに組み込まれたAIです。録音を止めずに会議中に質問することも、会議の後にこれまで録音し書いてきたすべてを対象に質問することもできます。どの回答にも、元になった会議やノートが示されます。各スペースでAIを1つ選びます。Ivy on this Mac、PersonalとWeb組織向けのIvy on the web、自分のローカルAIサーバー、または明示的な同意のうえでClaude CodeかCodexです。',
       },
       {
         question: 'インターネット接続は必要ですか？',
@@ -427,11 +431,11 @@ const content: SiteContent = {
       },
       {
         question: 'Claude Codeは必要ですか？',
-        answer: 'いいえ。各スペースで選べるAIは1つです。Ivy on this Mac、Ivy on the web（Personalと組織）、Claude Code、Codexのいずれかです。',
+        answer: 'いいえ。各スペースで選べるAIは1つです。Ivy on this Mac、Ivy on the web（Personalと組織）、Claude Code、Codex、またはOllama、LM Studio、oMLX、llama.cppなど自分のローカルAIサーバーのいずれかです。',
       },
       {
         question: 'どの言語に対応していますか？',
-        answer: 'Whisperは多くの言語を文字起こしできます。デバイス上のAIには、多言語対応のQwen3モデルか、ポーランド語ネイティブのBielikモデルを選べます。',
+        answer: 'Whisperは多くの言語を文字起こしできます。デバイス上のAIには、多言語対応のQwen3モデルか、ポーランド語ネイティブのBielikモデルを選べます。Languagesプラグインは、選んだ言語ですべてのノートを書き、2つ目の言語を追加でき、会議を後から翻訳し、名前や用語の用語集を管理します。',
       },
       {
         question: 'macOSが「画面とシステムオーディオの録音」の許可を求めるのはなぜですか？',

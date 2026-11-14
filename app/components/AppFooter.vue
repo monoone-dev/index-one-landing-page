@@ -10,7 +10,7 @@ const links = computed(() => [
   { label: c.value.nav.pricing, to: to('/pricing') },
   { label: c.value.nav.compare, to: to('/pricing#compare') },
   { label: c.value.nav.faq, to: to('/pricing#faq') },
-  { label: c.value.nav.docs, to: site.links.docs, external: true },
+  { label: c.value.nav.docs, to: site.links.docs },
   { label: c.value.nav.changelog, to: to('/changelog') },
   { label: c.value.nav.github, to: site.links.repo, external: true },
   { label: c.value.nav.download, to: site.links.download, external: true },

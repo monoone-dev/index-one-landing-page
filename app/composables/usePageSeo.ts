@@ -1,18 +1,29 @@
 import latest from '#release-latest'
 import { absoluteUrl, site } from '~/data/site'
 
+export interface Crumb {
+  name: string
+  path: string
+}
+
 export interface PageSeo {
   path: string
   title: string
   description: string
   breadcrumb?: string
+  /** Breadcrumbs between the home page and this page, for pages deeper than one level. */
+  trail?: Crumb[]
   schema?: Record<string, unknown>[]
 }
 
 export interface SeoInput {
   path: string
-  meta: () => { title: string, description: string, breadcrumb?: string }
+  meta: () => { title: string, description: string, breadcrumb?: string, trail?: Crumb[] }
   schema?: () => Record<string, unknown>[]
+  /** 'article' for documentation pages; everything else is a 'website' page. */
+  type?: 'website' | 'article'
+  /** A page-specific share image; the site's Open Graph image otherwise. */
+  image?: () => { src: string, width: number, height: number, alt: string } | undefined
 }
 
 export const stripTags = (html: string) => html.replace(/<[^>]+>/g, '')
@@ -24,7 +35,8 @@ export function usePageSeo(input: SeoInput) {
   const localePath = useLocalePath()
   const c = useContent()
   const { locale } = useI18n()
-  const image = absoluteUrl(site.ogImage)
+  const shareImage = () => input.image?.()
+  const image = () => absoluteUrl(shareImage()?.src ?? site.ogImage)
 
   useSeoMeta({
     title: () => input.meta().title,
@@ -32,21 +44,21 @@ export function usePageSeo(input: SeoInput) {
     robots: 'index, follow, max-image-preview:large',
     author: site.organization,
     applicationName: site.name,
-    ogType: 'website',
+    ogType: input.type ?? 'website',
     ogSiteName: site.name,
     ogUrl: () => absoluteUrl(localePath(input.path)),
     ogTitle: () => input.meta().title,
     ogDescription: () => input.meta().description,
     ogImage: image,
-    ogImageWidth: 1200,
-    ogImageHeight: 630,
-    ogImageType: 'image/png',
-    ogImageAlt: () => c.value.meta.ogImageAlt,
+    ogImageWidth: () => shareImage()?.width ?? 1200,
+    ogImageHeight: () => shareImage()?.height ?? 630,
+    ogImageType: () => (shareImage() ? 'image/webp' : 'image/png'),
+    ogImageAlt: () => shareImage()?.alt ?? c.value.meta.ogImageAlt,
     twitterCard: 'summary_large_image',
     twitterTitle: () => input.meta().title,
     twitterDescription: () => input.meta().description,
     twitterImage: image,
-    twitterImageAlt: () => c.value.meta.ogImageAlt,
+    twitterImageAlt: () => shareImage()?.alt ?? c.value.meta.ogImageAlt,
   })
 
   useHead(() => {
@@ -59,7 +71,7 @@ export function usePageSeo(input: SeoInput) {
           type: 'application/ld+json',
           innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
-            '@graph': buildGraph({ ...page, path: input.path, schema: input.schema?.() }, url, locale.value, absoluteUrl(localePath('/'))),
+            '@graph': buildGraph({ ...page, path: input.path, schema: input.schema?.() }, url, locale.value, absoluteUrl(localePath('/')), absoluteUrl),
           }),
         },
       ],
@@ -67,7 +79,7 @@ export function usePageSeo(input: SeoInput) {
   })
 }
 
-function buildGraph(page: PageSeo, url: string, language: string, homeUrl: string) {
+function buildGraph(page: PageSeo, url: string, language: string, homeUrl: string, toUrl: (path: string) => string) {
 
   const graph: Record<string, unknown>[] = [
     {
@@ -76,6 +88,7 @@ function buildGraph(page: PageSeo, url: string, language: string, homeUrl: strin
       'name': site.organization,
       'url': site.organizationUrl,
       'logo': absoluteUrl('/icon-512.png'),
+      'sameAs': [site.links.repo],
     },
     {
       '@type': 'WebPage',
@@ -84,19 +97,33 @@ function buildGraph(page: PageSeo, url: string, language: string, homeUrl: strin
       'name': page.title,
       'description': page.description,
       'inLanguage': language,
-      'isPartOf': { '@type': 'WebSite', '@id': absoluteUrl('/#website'), 'name': site.name, 'url': absoluteUrl('/') },
+      'isPartOf': { '@id': absoluteUrl('/#website') },
       'about': { '@id': appId },
+      'publisher': { '@id': organizationId },
+      ...(page.breadcrumb && { breadcrumb: { '@id': `${url}#breadcrumb` } }),
+    },
+    {
+      '@type': 'WebSite',
+      '@id': absoluteUrl('/#website'),
+      'name': site.name,
+      'url': absoluteUrl('/'),
+      'description': site.description,
+      'publisher': { '@id': organizationId },
+      'inLanguage': ['en-US', 'pl-PL', 'es-ES', 'it-IT', 'fr-FR', 'pt-BR', 'de-DE', 'zh-CN', 'ja-JP'],
     },
     ...(page.schema ?? []),
   ]
 
   if (page.breadcrumb) {
+    const crumbs = [
+      { name: site.name, item: homeUrl },
+      ...(page.trail ?? []).map(c => ({ name: c.name, item: toUrl(c.path) })),
+      { name: page.breadcrumb, item: url },
+    ]
     graph.push({
       '@type': 'BreadcrumbList',
-      'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': site.name, 'item': homeUrl },
-        { '@type': 'ListItem', 'position': 2, 'name': page.breadcrumb, 'item': url },
-      ],
+      '@id': `${url}#breadcrumb`,
+      'itemListElement': crumbs.map((c, i) => ({ '@type': 'ListItem', 'position': i + 1, 'name': c.name, 'item': c.item })),
     })
   }
 
@@ -114,10 +141,13 @@ export function softwareApplicationSchema(extra: Record<string, unknown> = {}) {
     'applicationCategory': 'BusinessApplication',
     'applicationSubCategory': 'Meeting notes and transcription',
     'operatingSystem': `macOS ${site.minMacOS} or later`,
+    'processorRequirements': 'Apple Silicon (M1 or later)',
     'downloadUrl': site.links.download,
     'softwareVersion': latest.tag.slice(1),
     'datePublished': latest.date,
+    'dateModified': latest.date,
     'releaseNotes': absoluteUrl('/changelog/'),
+    'softwareHelp': { '@type': 'CreativeWork', 'name': `${site.name} documentation`, 'url': absoluteUrl('/docs/') },
     'isAccessibleForFree': true,
     'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'USD' },
     'publisher': { '@id': organizationId },

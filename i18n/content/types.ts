@@ -24,7 +24,7 @@ export type DifferentiatorId = 'live' | 'capture' | 'receipts' | 'security' | 'l
 
 export type PrivacyCardId = 'offline' | 'at-rest' | 'gated' | 'seals' | 'screen-share' | 'firewall' | 'update-check'
 
-export type ProviderId = 'on-device' | 'ivy-web' | 'claude-code' | 'codex'
+export type ProviderId = 'on-device' | 'ivy-web' | 'claude-code' | 'codex' | 'local-server'
 
 export type PlanId = 'free' | 'pro' | 'team'
 

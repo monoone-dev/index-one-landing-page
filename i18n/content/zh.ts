@@ -3,30 +3,30 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — 本地优先的 macOS 会议笔记，内置 Ivy',
-      description: '在 Mac 上录制并转写会议，随时向你的 AI 助手 Ivy 提问，会中实时作答，也能跨越所有通话检索。可选本地 AI 或脱敏后的云端 AI，笔记始终是属于你的 Markdown。',
+      title: 'IndexOne — Mac 会议笔记与转写，内置 Ivy',
+      description: '在 Mac 上录制并转写会议，向设备端 AI 助手 Ivy 提问，会中实时作答，也能跨越所有通话检索。个人或整个组织都能用，笔记始终是你的 Markdown。',
     },
     features: {
       breadcrumb: '功能',
-      title: '功能一览 — IndexOne macOS 会议笔记',
-      description: 'Workspaces、项目、导入、会中 Ivy、向整个知识库提问、双音轨转写、出处凭证与 Markdown 导出——IndexOne 的全部功能都在这里。',
+      title: '功能一览 — IndexOne Mac 会议转写、Ivy 与笔记',
+      description: 'Mac 上的双音轨会议转写、会中 Ivy、跨所有会议提问、出处凭证、项目、插件、本地 AI 服务器与 Markdown 导出——IndexOne 的全部功能。',
     },
     privacy: {
       breadcrumb: '隐私',
-      title: '隐私与安全：哪些数据绝不离开你的 Mac — IndexOne',
-      description: '设备端转写、SQLCipher 静态加密、Touch ID 文件夹锁、脱敏防火墙，任何云端 AI 调用前都须经你同意。清楚看到究竟有什么可能离开你的 Mac。',
+      title: 'IndexOne 隐私 — 设备端 AI，以及哪些数据会离开 Mac',
+      description: '设备端转写与 AI、加密资料库、Touch ID 文件夹锁和脱敏防火墙。清楚看到每种 AI 选择会在何时发送什么，什么始终留在你的 Mac 上。',
     },
     pricing: {
       breadcrumb: '价格',
       title: 'IndexOne 价格，以及与 Obsidian、Notion 等的对比',
-      description: 'IndexOne 在抢先体验期间免费。从录音、设备端 AI、加密和 Markdown 等方面，将它与 Obsidian、Notion、Evernote、Bear 和 Amie 逐项对比。',
+      description: 'IndexOne 在抢先体验期间免费。从录音、转写、设备端 AI 和 Markdown 等方面，将它与 Obsidian、Notion、Evernote、Bear 和 Amie 逐项对比。',
     },
     changelog: {
       breadcrumb: '更新日志',
-      title: '更新日志 — IndexOne 每个版本的新变化',
-      description: 'IndexOne macOS 版的每个版本，最新的在前：新功能、修复和下载，并注明每个版本的发布日期。',
+      title: '更新日志 — IndexOne Mac 版发布说明',
+      description: 'IndexOne Mac 版每个版本的发布说明，最新的在前：Ivy、组织与隐私方面的新功能、修复和下载，并注明每个版本的发布日期。',
     },
-    ogImageAlt: 'IndexOne — 本地优先的 macOS 会议笔记，内置 Ivy',
+    ogImageAlt: 'IndexOne — Mac 会议笔记与转写，内置 Ivy',
   },
   common: {
     skipToContent: '跳到正文',
@@ -64,7 +64,7 @@ const content: SiteContent = {
     githubAria: 'GitHub 上的 IndexOne',
     titleStrong: '有 Ivy 相伴的会议笔记——',
     titleSoft: '在哪里运行，由你决定。',
-    subHtml: 'IndexOne 录制你的通话，并<b>在你的 Mac 上</b>完成转写。会议进行中就能实时向 Ivy 提问，也能跨越你录下的所有内容检索。AI 可以在本地运行，也可以由你明确选择启用<b>经过脱敏的云端 AI</b>——你的会议档案始终留在你的 Mac 上。',
+    subHtml: 'IndexOne 录制你的通话，并<b>在你的 Mac 上</b>完成转写。会议进行中就能实时向 Ivy 提问，也能跨越你录下的所有内容检索。AI 可以在 Mac 上或你自己的本地 AI 服务器上运行，也可以由你明确选择启用<b>经过脱敏的云端 AI</b>。在 On this Mac 空间中，你的会议档案始终留在你的 Mac 上。',
     download: '下载 macOS 版',
     privacyCta: '了解隐私机制',
     note: '已签名并通过公证 · macOS 13.4+ · 支持 Apple Silicon（M1 及更新机型）· 笔记始终是属于你的 Markdown',
@@ -87,7 +87,7 @@ const content: SiteContent = {
       },
       'capture': {
         title: '通话双方，都在你的 Mac 上转写',
-        body: '你的麦克风和其他参会者的系统音频分作两路音轨采集，再由设备端 Whisper 合并为 Me / Others 对照文字稿。全程没有任何云端转写。',
+        body: '你的麦克风和其他参会者的系统音频分作两路音轨采集，再由设备端 Whisper 合并为 Me / Others 对照文字稿。在 On this Mac 空间中，没有任何云端转写。',
         link: '采集与转写',
       },
       'receipts': {
@@ -107,7 +107,7 @@ const content: SiteContent = {
       },
       'markdown': {
         title: '纯 Markdown，外加本地 MCP 服务器',
-        body: '笔记以带 wikilink 的纯 Markdown 写入你的 Obsidian 知识库；运行在 127.0.0.1 上的只读 MCP 服务器，让 Claude 和其他智能体也能查询它们。',
+        body: '笔记以带 wikilink 的纯 Markdown 写入你的 Obsidian 知识库；运行在 127.0.0.1 上的只读 MCP 服务器，让 Claude 和其他智能体也能查询它们。由你决定它能读取哪些空间；组织默认关闭，直到你开启。',
         link: 'Markdown 与 MCP',
       },
     },
@@ -138,7 +138,7 @@ const content: SiteContent = {
   privacy: {
     eyebrow: '安全与隐私',
     title: '隐私不是一个开关，而是整个架构。',
-    leadHtml: '在 On this Mac 空间中，转写、搜索和 Ivy on this Mac 可以<b>完全不联网</b>运行——只要关掉默认会主动联网的两项功能：启动时检查新版本，以及每天一次的匿名使用统计。如果你选择 Claude Code 或 Codex，数据外发之前还有同意确认和脱敏防火墙两道关卡。',
+    leadHtml: '在 On this Mac 空间中，转写、搜索和 Ivy on this Mac 可以<b>完全不联网</b>运行——只要关掉默认会主动联网的两项功能：启动时检查新版本，以及每天一次的使用统计。如果你选择 Claude Code 或 Codex，数据外发之前还有同意确认和脱敏防火墙两道关卡。',
     cards: {
       'offline': {
         title: '数据不出设备',
@@ -166,7 +166,7 @@ const content: SiteContent = {
       },
       'update-check': {
         title: '我们默认发起的两项请求',
-        body: '启动时，IndexOne 会向 GitHub 询问是否有新版本；请求中只带上你当前运行的版本号，别无其他。此外，它每天会发送一条很小的匿名消息：随机安装 ID、应用和 macOS 版本、芯片类型、语言，以及你是否已登录——没有会议、笔记、录音或姓名。两者都可以在 <b>Settings → Privacy</b>（设置 → 隐私）中关闭。这是本页仅有的两件未经你要求就会发生的事，也正因如此，我们把它们写在这里。',
+        body: '启动时，IndexOne 会向 GitHub 询问是否有新版本；请求中只带上你当前运行的版本号，别无其他。此外，它每天会发送一条很小的使用统计消息：随机安装 ID、应用和 macOS 版本、芯片类型、语言，以及你是否已登录——没有会议、笔记、录音或姓名。仅在你未登录时它才是匿名的；登录后，它会随你的账号一起发送。两者都可以在 <b>Settings → Privacy</b>（设置 → 隐私）中关闭。这是本页仅有的两件未经你要求就会发生的事，也正因如此，我们把它们写在这里。',
       },
     },
     tableCaption: '各 AI 服务商在哪里运行，以及会议文本是否会离开你的 Mac',
@@ -176,11 +176,12 @@ const content: SiteContent = {
       'ivy-web': { name: 'Ivy on the web', note: 'Personal 和组织', where: '网页版 IndexOne', leaves: '会——该空间本身就在网页端' },
       'claude-code': { name: 'Claude Code', where: '本地 CLI → 云端' },
       'codex': { name: 'Codex', note: 'OpenAI 的 CLI，以无工具模式运行', where: '本地 CLI → 云端' },
+      'local-server': { name: 'Local AI server', note: 'Ollama、LM Studio、oMLX 等', where: '你的 Mac 或你的网络', leaves: '服务器在本机时不会。网络中其他位置的服务器，须你确认其地址后才使用，且会先遮蔽人名' },
     },
     leavesYes: '仅在你同意后，且经过脱敏防火墙处理',
     leavesNo: '不会',
     shotAlt: 'IndexOne 隐私设置：用平实的语言说明文本外发前会移除哪些内容、哪些服务商属于云端，以及云端处理是否已获允许',
-    footnote: 'IndexOne 用平实的语言告诉你，究竟有什么会离开你的 Mac——每一次云端 AI 调用都会被记录并展示给你。每个空间只有一项 AI 选择，用于转写、笔记、提问、人物与主题、事实、翻译以及会中助手。在 On this Mac 空间中，除非你选择 Claude Code 或 Codex，会议始终留在你的 Mac 上。',
+    footnote: 'IndexOne 用平实的语言告诉你，究竟有什么会离开你的 Mac——每一次云端 AI 调用都会被记录并展示给你。每个空间只有一项 AI 选择：Ivy on this Mac、Ivy on the web、Claude Code、Codex，或你自己的本地 AI 服务器。在 On this Mac 空间中，除非你选择 Claude Code、Codex 或网络中其他位置的本地 AI 服务器，会议始终留在你的 Mac 上。',
   },
   features: {
     eyebrow: '你将获得',
@@ -240,6 +241,7 @@ const content: SiteContent = {
           '可将问题限定在某个 Workspace 或文件夹——涵盖整个子树，范围之外一概不涉及',
           '对话会被记住——知识库、笔记和会议的对话线程都会保留，每处都有历史记录浏览器',
           '一旦对话所依据的任何文件夹变得不可读取，该对话会立即消失',
+          '使用你自己的模型：笔记和回答可以来自 Ollama、LM Studio、oMLX、llama.cpp 或任何兼容 OpenAI 的服务器',
         ],
         alt: '向 Ivy 提出跨越数月会议的问题并得到一个答案，下方列出其所依据的会议',
       },
@@ -298,6 +300,7 @@ const content: SiteContent = {
           '十九种 Ivy 操作，一键即达',
           '依据你自己的会议和笔记，而不是模型的猜测',
           '可将截图粘贴进笔记；截图保存在本地，并遵循所在 Workspace 的锁定状态',
+          'Plugins 页面中的 Ivy skills 可引导云端 Ivy 生成的笔记和回答——在 Ivy 窗口、笔记或录音栏中选择',
         ],
         alt: '笔记编辑器中选中了一段文字，Ivy 命令菜单已打开，显示 Refine、Shorten、Change tone 等操作',
       },
@@ -319,11 +322,12 @@ const content: SiteContent = {
           '会中 Ivy，以及向知识库提问',
           '语义搜索与自动生成的知识图谱',
           '独立笔记，配备 Ivy 辅助编辑器',
-          '与网页版 IndexOne 共用的 Personal 空间和组织空间，每个都在你的 Mac 上保留加密副本（需要账号）',
+          '与网页版 IndexOne 共用的 Personal 空间和组织空间：可直接录音到其中、用文件夹整理笔记，并在你的 Mac 上保留加密副本（需要账号）',
           'Workspaces、可组合的项目，以及离线导入 Notion / Obsidian / Apple Notes / Markdown',
           '按 Workspace 和文件夹设置 Touch ID 锁，采用 AES-256 加密',
           '屏幕共享时自动重新锁定',
           '本地 MCP 服务器与 Markdown 导出',
+          'Languages、Ivy skills 等插件，安装在你需要的地方（需要账号）',
         ],
         cta: '下载 macOS 版',
       },
@@ -372,11 +376,11 @@ const content: SiteContent = {
       },
       'local-transcription': {
         criterion: '在设备上转写',
-        cells: ['设备端 Whisper；无云端转写', '无内置转写', '云端', '云端', '不支持转写', '云端'],
+        cells: ['On this Mac 空间中使用设备端 Whisper', '无内置转写', '云端', '云端', '不支持转写', '云端'],
       },
       'local-ai': {
         criterion: 'AI 可完全在设备上运行',
-        cells: ['Ivy on this Mac', '无内置 AI；依赖社区插件', '仅限云端', '仅限云端', '无内置 AI', '仅限云端'],
+        cells: ['Ivy on this Mac 或你自己的本地 AI 服务器', '无内置 AI；依赖社区插件', '仅限云端', '仅限云端', '无内置 AI', '仅限云端'],
       },
       'ask-all': {
         criterion: '跨所有历史会议和笔记提问',
@@ -407,7 +411,7 @@ const content: SiteContent = {
   faq: {
     eyebrow: '常见问题',
     title: '大家最先会问的问题。',
-    leadHtml: '这里是简短回答；详细内容请查看<a href="/docs.html">文档</a>。',
+    leadHtml: '这里是简短回答；详细内容请查看<a href="/docs/">文档</a>。',
     items: [
       {
         question: 'IndexOne 免费吗？',
@@ -415,11 +419,11 @@ const content: SiteContent = {
       },
       {
         question: '我的音频会上传到云端吗？',
-        answer: '在 On this Mac 空间中不会：转写通过 Whisper 在你的 Mac 上进行，只有经过脱敏的文本才可能外发，而且只会在你同意后发送给 Claude Code 或 Codex。Personal 空间和组织空间位于网页版 IndexOne，因此它们的录音也存储在那里。',
+        answer: '在 On this Mac 空间中不会：转写通过 Whisper 在你的 Mac 上进行。只有文本可能外发：经过脱敏、在你同意后发送给 Claude Code 或 Codex；或在遮蔽人名、经你确认地址后，发送给你网络中的本地 AI 服务器。Personal 空间和组织空间位于网页版 IndexOne，因此它们的录音也存储在那里。',
       },
       {
         question: 'Ivy 是什么？',
-        answer: 'Ivy 是 IndexOne 内置的 AI。你可以在会议中向它提问而无需停止录音，也可以在会后针对你录制和写下的全部内容提问。每个回答都会注明它所依据的会议和笔记。每个空间选择一种 AI：Ivy on this Mac、面向 Personal 和组织的 Ivy on the web，或在你明确同意后使用 Claude Code 或 Codex。',
+        answer: 'Ivy 是 IndexOne 内置的 AI。你可以在会议中向它提问而无需停止录音，也可以在会后针对你录制和写下的全部内容提问。每个回答都会注明它所依据的会议和笔记。每个空间选择一种 AI：Ivy on this Mac、面向 Personal 和组织的 Ivy on the web、你自己的本地 AI 服务器，或在你明确同意后使用 Claude Code 或 Codex。',
       },
       {
         question: '需要联网吗？',
@@ -427,11 +431,11 @@ const content: SiteContent = {
       },
       {
         question: '我需要 Claude Code 吗？',
-        answer: '不需要。每个空间只有一项 AI 选择：Ivy on this Mac、Ivy on the web（Personal 和组织）、Claude Code 或 Codex。',
+        answer: '不需要。每个空间只有一项 AI 选择：Ivy on this Mac、Ivy on the web（Personal 和组织）、Claude Code、Codex，或你自己的本地 AI 服务器，如 Ollama、LM Studio、oMLX 或 llama.cpp。',
       },
       {
         question: '支持哪些语言？',
-        answer: 'Whisper 可以转写多种语言。设备端 AI 方面，你可以选择支持多语言的 Qwen3 模型，或以波兰语为母语训练的 Bielik 模型。',
+        answer: 'Whisper 可以转写多种语言。设备端 AI 方面，你可以选择支持多语言的 Qwen3 模型，或以波兰语为母语训练的 Bielik 模型。Languages 插件会用你选择的语言撰写每条笔记，可添加第二语言，也能事后翻译会议，并维护人名和术语词汇表。',
       },
       {
         question: '为什么 macOS 会请求“屏幕与系统录音”权限？',

@@ -1,0 +1,43 @@
+{
+  "$comment": "The docs' table of contents, in reading order. `version` and `released` name the IndexOne release every page was checked against; bump them only after checking the pages against that release. `updated` is the day the pages were last revised.",
+  "version": "3.19.0",
+  "released": "2026-11-14",
+  "updated": "2026-11-14",
+  "groups": [
+    {
+      "title": "Getting started",
+      "icon": "i-lucide-rocket",
+      "pages": ["welcome", "install-and-updates", "first-recording"]
+    },
+    {
+      "title": "Organizing your work",
+      "icon": "i-lucide-folder-tree",
+      "pages": ["workspaces", "organizations", "projects", "tasks-and-reminders", "imports-and-export"]
+    },
+    {
+      "title": "Recording and notes",
+      "icon": "i-lucide-mic",
+      "pages": ["recording", "screen-recording", "notes", "languages", "receipts"]
+    },
+    {
+      "title": "Ivy",
+      "icon": "i-lucide-sparkles",
+      "pages": ["ivy", "ivy-tools", "ivy-skills", "graph-and-analytics"]
+    },
+    {
+      "title": "AI and integrations",
+      "icon": "i-lucide-plug",
+      "pages": ["ai-models", "local-ai-server", "plugins", "mcp"]
+    },
+    {
+      "title": "Settings and help",
+      "icon": "i-lucide-settings",
+      "pages": ["settings", "storage", "backups", "shortcuts", "diagnostics", "feedback"]
+    },
+    {
+      "title": "Privacy and security",
+      "icon": "i-lucide-shield-check",
+      "pages": ["data-flow", "app-lock", "lock-model", "redaction", "known-limitations"]
+    }
+  ]
+}

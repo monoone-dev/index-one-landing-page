@@ -1,10 +1,10 @@
 blank_issues_enabled: false
 contact_links:
   - name: Documentation
-    url: https://index-one.io/docs.html
+    url: https://index-one.io/docs/
     about: Setup, features, settings and shortcuts.
   - name: Known limitations
-    url: https://index-one.io/docs.html#known-limitations
+    url: https://index-one.io/docs/known-limitations/
     about: What is not shipped yet, or only works on a signed build.
   - name: Ask a question
     url: https://github.com/monoone-dev/index-one-landing-page/discussions/categories/q-a

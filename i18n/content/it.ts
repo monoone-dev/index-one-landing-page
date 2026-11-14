@@ -3,30 +3,30 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — note delle riunioni local-first per macOS, con Ivy',
-      description: 'Registra e trascrivi le riunioni sul tuo Mac, poi chiedi a Ivy, la tua AI, in diretta o su tutte le call. AI locale o cloud anonimizzato; note in Markdown tue.',
+      title: 'IndexOne — note e trascrizione di riunioni su Mac, con Ivy',
+      description: 'Registra e trascrivi le riunioni sul tuo Mac, poi chiedi a Ivy, l’AI sul dispositivo, in diretta o su tutte le call. Per te o per la tua organizzazione.',
     },
     features: {
       breadcrumb: 'Funzionalità',
-      title: 'Funzionalità — IndexOne, note delle riunioni per macOS',
-      description: 'Workspace, progetti, importazioni, Ivy in riunione, domande al vault, trascrizione a doppio flusso, prove ed export Markdown: tutto IndexOne.',
+      title: 'Funzioni — trascrizione, Ivy e note delle riunioni su Mac',
+      description: 'Trascrizione a doppio flusso sul Mac, Ivy durante le call, domande su tutte le riunioni, prove, progetti, plugin, server AI locali ed export Markdown.',
     },
     privacy: {
       breadcrumb: 'Privacy',
-      title: 'Privacy e sicurezza: cosa non lascia mai il Mac — IndexOne',
-      description: 'Trascrizione sul dispositivo, SQLCipher, cartelle bloccate con Touch ID, firewall di anonimizzazione e consenso prima del cloud. Ecco cosa può lasciare il Mac.',
+      title: 'Privacy di IndexOne — AI locale e cosa lascia il tuo Mac',
+      description: 'Trascrizione e AI sul dispositivo, libreria cifrata, cartelle bloccate con Touch ID e firewall di anonimizzazione. Scopri cosa invia ogni AI, e quando.',
     },
     pricing: {
       breadcrumb: 'Prezzi',
       title: 'Prezzi di IndexOne e confronto con Obsidian, Notion e altri',
-      description: 'IndexOne è gratuito durante l’accesso anticipato. Confrontalo con Obsidian, Notion, Evernote, Bear e Amie su registrazione, AI locale, crittografia e Markdown.',
+      description: 'IndexOne è gratuito nell’accesso anticipato. Confrontalo con Obsidian, Notion, Evernote, Bear e Amie su registrazione, trascrizione, AI locale e Markdown.',
     },
     changelog: {
       breadcrumb: 'Novità',
-      title: 'Novità — cosa cambia in ogni versione di IndexOne',
-      description: 'Ogni versione di IndexOne per macOS, dalla più recente: nuove funzioni, correzioni e download, con la data di uscita di ciascuna.',
+      title: 'Novità di IndexOne — note di rilascio dell’app per Mac',
+      description: 'Le note di ogni versione di IndexOne per Mac, dalla più recente: novità per Ivy, organizzazioni e privacy, correzioni, download e date di uscita.',
     },
-    ogImageAlt: 'IndexOne — note delle riunioni local-first per macOS, con Ivy',
+    ogImageAlt: 'IndexOne — note e trascrizione di riunioni su Mac, con Ivy',
   },
   common: {
     skipToContent: 'Vai al contenuto',
@@ -64,7 +64,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne su GitHub',
     titleStrong: 'Note delle riunioni con Ivy —',
     titleSoft: 'e decidi tu dove gira.',
-    subHtml: 'IndexOne registra le tue call e le trascrive <b>sul tuo Mac</b>. Chiedi a Ivy in diretta, a riunione in corso, e su tutto ciò che hai registrato. Usa l’AI in locale oppure scegli esplicitamente l’<b>AI cloud con anonimizzazione</b>: l’archivio delle tue riunioni resta sul tuo Mac.',
+    subHtml: 'IndexOne registra le tue call e le trascrive <b>sul tuo Mac</b>. Chiedi a Ivy in diretta, a riunione in corso, e su tutto ciò che hai registrato. Usa l’AI sul Mac o sul tuo server AI locale, oppure scegli esplicitamente l’<b>AI cloud con anonimizzazione</b>. Nello spazio On this Mac l’archivio delle tue riunioni resta sul tuo Mac.',
     download: 'Scarica per macOS',
     privacyCta: 'Scopri come funziona la privacy',
     note: 'Firmata e notarizzata · macOS 13.4+ · Apple Silicon (M1 o successivi) · le tue note restano in Markdown, e sono tue',
@@ -87,7 +87,7 @@ const content: SiteContent = {
       },
       'capture': {
         title: 'Entrambi i lati della call, trascritti sul tuo Mac',
-        body: 'Il tuo microfono e l’audio di sistema degli altri partecipanti vengono acquisiti come due flussi e uniti in una trascrizione Me / Others da Whisper sul dispositivo. Nessuna trascrizione nel cloud.',
+        body: 'Il tuo microfono e l’audio di sistema degli altri partecipanti vengono acquisiti come due flussi e uniti in una trascrizione Me / Others da Whisper sul dispositivo. Nello spazio On this Mac non c’è trascrizione nel cloud.',
         link: 'Acquisizione e trascrizione',
       },
       'receipts': {
@@ -107,7 +107,7 @@ const content: SiteContent = {
       },
       'markdown': {
         title: 'Markdown semplice e un server MCP locale',
-        body: 'Le note finiscono nel tuo vault Obsidian come Markdown semplice con wikilink, e un server MCP in sola lettura su 127.0.0.1 permette a Claude e ad altri agenti di interrogarle.',
+        body: 'Le note finiscono nel tuo vault Obsidian come Markdown semplice con wikilink, e un server MCP in sola lettura su 127.0.0.1 permette a Claude e ad altri agenti di interrogarle. Scegli tu quali spazi può leggere; le organizzazioni restano spente finché non le attivi.',
         link: 'Markdown e MCP',
       },
     },
@@ -138,7 +138,7 @@ const content: SiteContent = {
   privacy: {
     eyebrow: 'Sicurezza e privacy',
     title: 'La privacy non è un’impostazione. È l’architettura.',
-    leadHtml: 'Nello spazio On this Mac, trascrizione, ricerca e Ivy on this Mac possono funzionare <b>senza alcuna rete</b>, una volta disattivate le due cose che si collegano all’esterno di default: il controllo di una nuova versione all’avvio e un messaggio anonimo giornaliero sull’uso. Se scegli Claude Code o Codex, davanti a quell’uscita ci sono il consenso e un firewall di anonimizzazione.',
+    leadHtml: 'Nello spazio On this Mac, trascrizione, ricerca e Ivy on this Mac possono funzionare <b>senza alcuna rete</b>, una volta disattivate le due cose che si collegano all’esterno di default: il controllo di una nuova versione all’avvio e un messaggio giornaliero sull’uso. Se scegli Claude Code o Codex, davanti a quell’uscita ci sono il consenso e un firewall di anonimizzazione.',
     cards: {
       'offline': {
         title: 'Niente lascia il dispositivo',
@@ -166,7 +166,7 @@ const content: SiteContent = {
       },
       'update-check': {
         title: 'Le due chiamate che facciamo di default',
-        body: 'All’avvio IndexOne chiede a GitHub se esiste una versione più recente; la richiesta indica quale versione stai usando, e nient’altro. Una volta al giorno invia anche un piccolo messaggio anonimo: un ID di installazione casuale, le versioni dell’app e di macOS, il tipo di chip, la lingua e se hai effettuato l’accesso — niente riunioni, note, registrazioni o nomi. Puoi disattivare l’una e l’altro in <b>Settings → Privacy</b>. Sono le uniche cose in questa pagina che succedono senza che tu le chieda, ed è proprio per questo che sono in questa pagina.',
+        body: 'All’avvio IndexOne chiede a GitHub se esiste una versione più recente; la richiesta indica quale versione stai usando, e nient’altro. Una volta al giorno invia anche un piccolo messaggio sull’uso: un ID di installazione casuale, le versioni dell’app e di macOS, il tipo di chip, la lingua e se hai effettuato l’accesso — niente riunioni, note, registrazioni o nomi. È anonimo solo quando non hai effettuato l’accesso; se hai effettuato l’accesso, viene inviato con il tuo account. Puoi disattivare l’una e l’altro in <b>Settings → Privacy</b>. Sono le uniche cose in questa pagina che succedono senza che tu le chieda, ed è proprio per questo che sono in questa pagina.',
       },
     },
     tableCaption: 'Dove gira ogni provider di AI e se il testo delle riunioni lascia il tuo Mac',
@@ -176,11 +176,12 @@ const content: SiteContent = {
       'ivy-web': { name: 'Ivy on the web', note: 'Personal e organizzazioni', where: 'IndexOne sul web', leaves: 'Sì: lo spazio stesso è sul web' },
       'claude-code': { name: 'Claude Code', where: 'CLI locale → cloud' },
       'codex': { name: 'Codex', note: 'la CLI di OpenAI, eseguita senza strumenti', where: 'CLI locale → cloud' },
+      'local-server': { name: 'Local AI server', note: 'Ollama, LM Studio, oMLX e altri', where: 'Il tuo Mac o la tua rete', leaves: 'No con un server su questo Mac. Verso un server altrove nella tua rete solo dopo che ne confermi l’indirizzo; i nomi vengono prima mascherati' },
     },
     leavesYes: 'Solo dopo il consenso, con firewall di anonimizzazione',
     leavesNo: 'No',
     shotAlt: 'Le impostazioni privacy di IndexOne, che spiegano in parole semplici cosa viene rimosso prima che un testo esca, quali provider sono cloud e se l’elaborazione cloud è stata autorizzata',
-    footnote: 'IndexOne ti dice in parole semplici esattamente cosa lascia il tuo Mac, e ogni chiamata all’AI cloud viene registrata e mostrata a te. Ogni spazio ha una sola scelta di AI, usata per trascrizione, note, domande, persone e argomenti, fatti, traduzione e l’assistente in riunione. Nello spazio On this Mac le riunioni restano sul tuo Mac, a meno che tu non scelga Claude Code o Codex.',
+    footnote: 'IndexOne ti dice in parole semplici esattamente cosa lascia il tuo Mac, e ogni chiamata all’AI cloud viene registrata e mostrata a te. Ogni spazio ha una sola scelta di AI: Ivy on this Mac, Ivy on the web, Claude Code, Codex o il tuo server AI locale. Nello spazio On this Mac le riunioni restano sul tuo Mac, a meno che tu non scelga Claude Code, Codex o un server AI locale altrove nella tua rete.',
   },
   features: {
     eyebrow: 'Cosa ottieni',
@@ -240,6 +241,7 @@ const content: SiteContent = {
           'Limita una domanda a un Workspace o a una cartella: tutto il sottoalbero, e niente al di fuori',
           'Le conversazioni vengono ricordate: i thread su vault, note e riunioni restano, con una cronologia consultabile in ciascuna sezione',
           'Una conversazione sparisce nell’istante in cui una cartella da cui ha attinto non è più leggibile',
+          'Il tuo modello: note e risposte possono arrivare da Ollama, LM Studio, oMLX, llama.cpp o qualsiasi server compatibile con OpenAI',
         ],
         alt: 'Una domanda a Ivy su mesi di riunioni con un’unica risposta, e sotto l’elenco delle riunioni da cui è tratta',
       },
@@ -298,6 +300,7 @@ const content: SiteContent = {
           'Diciannove azioni di Ivy, a un tasto di distanza',
           'Basate sulle tue riunioni e note, non sulle supposizioni del modello',
           'Incolla screenshot nelle note: restano in locale e seguono il blocco del Workspace',
+          'Le Ivy skills della schermata Plugins guidano note e risposte di Ivy nel cloud: sceglile dalla finestra di Ivy, da una nota o dalla barra di registrazione',
         ],
         alt: 'L’editor di note con un testo selezionato e il menu dei comandi di Ivy aperto, con Refine, Shorten, Change tone e altre azioni',
       },
@@ -319,11 +322,12 @@ const content: SiteContent = {
           'Ivy nelle riunioni, più le domande al vault',
           'Ricerca semantica e grafo della conoscenza automatico',
           'Note autonome con un editor assistito da Ivy',
-          'Gli stessi spazi Personal e delle organizzazioni di IndexOne sul web, ognuno con una copia cifrata sul tuo Mac (account richiesto)',
+          'Gli stessi spazi Personal e delle organizzazioni di IndexOne sul web: registra direttamente lì, organizza le note in cartelle e tieni una copia cifrata sul tuo Mac (account richiesto)',
           'Workspace, progetti componibili e importazione offline da Notion / Obsidian / Apple Notes / Markdown',
           'Blocco con Touch ID per Workspace e per cartella, con crittografia AES-256',
           'Riblocco automatico durante la condivisione schermo',
           'Server MCP locale ed export in Markdown',
+          'Plugin come Languages e Ivy skills, installati dove ti servono (account richiesto)',
         ],
         cta: 'Scarica per macOS',
       },
@@ -372,11 +376,11 @@ const content: SiteContent = {
       },
       'local-transcription': {
         criterion: 'Trascrizione sul tuo dispositivo',
-        cells: ['Whisper sul dispositivo; nessuna trascrizione cloud', 'Nessuna trascrizione integrata', 'Cloud', 'Cloud', 'Nessuna trascrizione', 'Cloud'],
+        cells: ['Whisper sul dispositivo nello spazio On this Mac', 'Nessuna trascrizione integrata', 'Cloud', 'Cloud', 'Nessuna trascrizione', 'Cloud'],
       },
       'local-ai': {
         criterion: 'AI che può girare interamente sul tuo dispositivo',
-        cells: ['Ivy on this Mac', 'Nessuna AI integrata; plugin della community', 'Solo cloud', 'Solo cloud', 'Nessuna AI integrata', 'Solo cloud'],
+        cells: ['Ivy on this Mac o il tuo server AI locale', 'Nessuna AI integrata; plugin della community', 'Solo cloud', 'Solo cloud', 'Nessuna AI integrata', 'Solo cloud'],
       },
       'ask-all': {
         criterion: 'Domande su tutte le riunioni e note passate',
@@ -407,7 +411,7 @@ const content: SiteContent = {
   faq: {
     eyebrow: 'FAQ',
     title: 'Le prime domande che ci fanno.',
-    leadHtml: 'Qui trovi risposte brevi; la <a href="/docs.html">documentazione</a> contiene i dettagli.',
+    leadHtml: 'Qui trovi risposte brevi; la <a href="/docs/">documentazione</a> contiene i dettagli.',
     items: [
       {
         question: 'IndexOne è gratuito?',
@@ -415,11 +419,11 @@ const content: SiteContent = {
       },
       {
         question: 'Il mio audio finisce nel cloud?',
-        answer: 'Non nello spazio On this Mac: lì la trascrizione avviene sul tuo Mac con Whisper, e può uscire solo testo anonimizzato, verso Claude Code o Codex dopo il tuo consenso. Gli spazi Personal e delle organizzazioni stanno su IndexOne sul web, quindi le loro registrazioni sono conservate lì.',
+        answer: 'Non nello spazio On this Mac: lì la trascrizione avviene sul tuo Mac con Whisper. Può uscire solo testo: anonimizzato, verso Claude Code o Codex dopo il tuo consenso, oppure con i nomi mascherati, verso un server AI locale nella tua rete dopo che ne hai confermato l’indirizzo. Gli spazi Personal e delle organizzazioni stanno su IndexOne sul web, quindi le loro registrazioni sono conservate lì.',
       },
       {
         question: 'Cos’è Ivy?',
-        answer: 'Ivy è l’AI dentro IndexOne. Interrogala durante una riunione senza fermare la registrazione, oppure dopo, su tutto ciò che hai registrato e scritto. Ogni risposta cita le riunioni e le note da cui proviene. Ogni spazio sceglie una AI: Ivy on this Mac, Ivy on the web per Personal e le organizzazioni, oppure Claude Code o Codex dopo un consenso esplicito.',
+        answer: 'Ivy è l’AI dentro IndexOne. Interrogala durante una riunione senza fermare la registrazione, oppure dopo, su tutto ciò che hai registrato e scritto. Ogni risposta cita le riunioni e le note da cui proviene. Ogni spazio sceglie una AI: Ivy on this Mac, Ivy on the web per Personal e le organizzazioni, il tuo server AI locale, oppure Claude Code o Codex dopo un consenso esplicito.',
       },
       {
         question: 'Mi serve una connessione a internet?',
@@ -427,11 +431,11 @@ const content: SiteContent = {
       },
       {
         question: 'Mi serve Claude Code?',
-        answer: 'No. Ogni spazio ha una sola scelta di AI: Ivy on this Mac, Ivy on the web (Personal e organizzazioni), Claude Code o Codex.',
+        answer: 'No. Ogni spazio ha una sola scelta di AI: Ivy on this Mac, Ivy on the web (Personal e organizzazioni), Claude Code, Codex o il tuo server AI locale, come Ollama, LM Studio, oMLX o llama.cpp.',
       },
       {
         question: 'Quali lingue supporta?',
-        answer: 'Whisper trascrive moltissime lingue. Per l’AI sul dispositivo puoi scegliere i modelli multilingue Qwen3 o i modelli Bielik, nativi in polacco.',
+        answer: 'Whisper trascrive moltissime lingue. Per l’AI sul dispositivo puoi scegliere i modelli multilingue Qwen3 o i modelli Bielik, nativi in polacco. Il plugin Languages scrive ogni nota nella lingua che scegli, può aggiungere una seconda lingua, traduce le riunioni in seguito e tiene un glossario di nomi e termini.',
       },
       {
         question: 'Perché macOS chiede l’accesso a Registrazione schermo e audio di sistema?',
