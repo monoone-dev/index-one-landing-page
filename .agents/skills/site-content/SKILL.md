@@ -13,14 +13,16 @@ description: Change what the IndexOne website says or shows — page copy in any
 | What is not translated: links, icons, screenshots, comparison values | `app/data/shared.ts`, `app/data/site.ts` |
 | Languages, default, browser detection | `i18n` block in `nuxt.config.ts`; flags in `app/data/site.ts` |
 | Language picker (flag button) | `app/components/LanguageSelect.vue` |
-| Pages | `app/pages/{index,features,privacy,pricing,changelog}.vue`; one component per section in `app/components/` |
+| Pages | `app/pages/{index,features,privacy,pricing,changelog}.vue` and `app/pages/docs/`; one component per section in `app/components/` |
 | Changelog entries (English only) | `release-notes/vX.Y.Z.md`, turned into HTML at build time by `modules/release-notes.ts`; each file starts with `*Originally released on YYYY-MM-DD.*` |
 | SEO: meta, Open Graph, JSON-LD | `app/composables/usePageSeo.ts`; `hreflang` and canonical come from `@nuxtjs/i18n` |
 | Sitemap | `server/routes/sitemap.xml.ts` |
 | IndexOne and Ivy icons (theme-aware inline SVG) | `app/components/BrandIcon.vue`; tile colours in `--icon-*` in `app/assets/scss/_base.scss`; source files in `public/assets/{icon,logo,ivy}.svg` |
-| Skins (Studio / Paper / Minimalist) and light/dark tokens | `app/assets/scss/_themes.scss`, `app/app.config.ts` |
-| Documentation (English only, static) | `public/docs.html` |
-| The app version the documentation describes | `<meta name="docs-version">` and the `docs-version` line at the top of `public/docs.html` |
+| The Surface skin and light/dark tokens | `app/assets/scss/_themes.scss`, `app/app.config.ts` |
+| Documentation (English only) | `user-docs/<slug>.md`, one page per topic, built into `/docs/<slug>/` by `modules/user-docs.ts`; order and groups in `user-docs/nav.json` |
+| Docs screenshots | `![alt](shot:<name> "caption")` in a page; `<name>.webp` + `<name>-light.webp` in `public/assets/docs/` or `public/assets/screens/` (from the app's screenshot harness, never a real library) |
+| The app version the documentation describes | `version`, `released` and `updated` in `user-docs/nav.json` |
+| Old `docs.html#topic` links | `public/docs.html` forwards them to `/docs/<slug>/`; add a line there when a page is renamed |
 
 ## Content rules
 
@@ -35,10 +37,14 @@ description: Change what the IndexOne website says or shows — page copy in any
   when a feature can send data (opt-in cloud AI, end-to-end encrypted sharing, the update check).
 - **Competitor facts** come from the vendor's own pages, with the month they were checked; mark what
   cannot be verified as "Not stated" instead of guessing.
-- **Docs name their version.** `public/docs.html` says which IndexOne release it was checked
-  against, in the `docs-version` meta tag and the line above the articles (version and release
-  date). Check the docs against that release of the app, then bump all three together; never bump
-  the version without checking.
+- **Docs name their version.** `user-docs/nav.json` says which IndexOne release the pages were
+  checked against (`version`, `released`) and when they were last revised (`updated`, also the
+  sitemap's `lastmod`). Check the pages against that release of the app, then bump them together;
+  never bump the version without checking.
+- **Docs pages** have front matter `title` (≤ 40 characters), `description` (120–155 characters, the
+  search snippet) and `keywords`; the first paragraph is the lede; headings start at `##`; no inline
+  HTML. The build fails on an unknown `shot:` name, a link to a missing `/docs/` page, or a page
+  missing from `nav.json`.
 - Short sentences, no marketing superlatives. In-app UI labels ("Settings → Privacy") stay in English.
 - **No third-party requests.** No analytics, no CDN fonts or scripts, no runtime `fetch`, no `data:` URIs.
 

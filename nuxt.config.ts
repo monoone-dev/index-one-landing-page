@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs'
+
 const localeFile = { path: 'bundled.ts', cache: false }
 
 const locales = [
@@ -16,6 +18,10 @@ const pages = ['/', '/features/', '/privacy/', '/pricing/', '/changelog/']
 const localizedRoutes = locales.flatMap(({ code }) =>
   pages.map(page => (code === 'en' ? page : `/${code}${page}`)),
 )
+
+// The documentation is English only: /docs/ and one page per entry in user-docs/nav.json.
+const docsNav = JSON.parse(readFileSync(new URL('./user-docs/nav.json', import.meta.url), 'utf8')) as { groups: { pages: string[] }[] }
+const docsRoutes = ['/docs/', ...docsNav.groups.flatMap(g => g.pages.map(slug => `/docs/${slug}/`))]
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-10-01',
@@ -93,7 +99,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: [...localizedRoutes, '/sitemap.xml'],
+      routes: [...localizedRoutes, ...docsRoutes, '/sitemap.xml'],
       crawlLinks: false,
       failOnError: true,
     },

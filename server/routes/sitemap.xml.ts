@@ -1,4 +1,5 @@
 import latest from '#release-latest'
+import docs from '../../user-docs/nav.json'
 
 const base = 'https://index-one.io'
 const locales = [
@@ -14,6 +15,8 @@ const locales = [
 ]
 const pages = ['/', '/features/', '/privacy/', '/pricing/', '/changelog/']
 
+const docsPages = () => ['/docs/', ...docs.groups.flatMap(g => g.pages.map(slug => `/docs/${slug}/`))]
+
 const url = (code: string, page: string) => `${base}${code === 'en' ? page : `/${code}${page}`}`
 
 export default defineEventHandler((event) => {
@@ -26,7 +29,10 @@ export default defineEventHandler((event) => {
     const lastmod = page === '/changelog/' ? `\n    <lastmod>${latest.date}</lastmod>` : ''
     return `  <url>\n    <loc>${url(code, page)}</loc>${lastmod}\n${alternates}\n  </url>`
   }))
-  entries.push(`  <url>\n    <loc>${base}/docs.html</loc>\n  </url>`)
+  // The documentation is English only: no alternates, and the day its pages were last revised.
+  for (const page of docsPages()) {
+    entries.push(`  <url>\n    <loc>${base}${page}</loc>\n    <lastmod>${docs.updated}</lastmod>\n  </url>`)
+  }
   setHeader(event, 'content-type', 'application/xml; charset=utf-8')
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${entries.join('\n')}\n</urlset>\n`
 })

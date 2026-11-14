@@ -6,11 +6,11 @@ export const site = {
   organization: 'MonoOne',
   organizationUrl: 'https://github.com/monoone-dev',
   url: 'https://index-one.io',
-  title: 'IndexOne — local-first meeting notes for macOS, with Ivy',
+  title: 'IndexOne — meeting notes and transcription for Mac, with Ivy',
   description:
-    'Record and transcribe meetings on your Mac, then ask Ivy, your AI, live or across every call. Local or redacted cloud AI; notes stay Markdown you own.',
+    'Record and transcribe meetings on your Mac, then ask Ivy, its on-device AI, live or across every call. For you alone or your whole organization.',
   ogImage: '/og-image.png',
-  ogImageAlt: 'IndexOne — local-first meeting notes for macOS, with Ivy',
+  ogImageAlt: 'IndexOne — meeting notes and transcription for Mac, with Ivy',
   themeColor: '#0862f6',
   minMacOS: '13.4',
   links: {
@@ -20,7 +20,7 @@ export const site = {
     discussions: `${repo}/discussions`,
     authors: `${repo}/blob/main/AUTHORS.md`,
     license: `${repo}/blob/main/LICENSE`,
-    docs: '/docs.html',
+    docs: '/docs/',
   },
 } as const
 

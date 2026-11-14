@@ -3,30 +3,30 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — local-first meeting notes for macOS, with Ivy',
-      description: 'Record and transcribe meetings on your Mac, then ask Ivy, your AI, live or across every call. Local or redacted cloud AI; notes stay Markdown you own.',
+      title: 'IndexOne — meeting notes and transcription for Mac, with Ivy',
+      description: 'Record and transcribe meetings on your Mac, then ask Ivy, its on-device AI, live or across every call. For you alone or your whole organization.',
     },
     features: {
       breadcrumb: 'Features',
-      title: 'Features — IndexOne meeting notes for macOS',
-      description: 'Workspaces, projects, imports, Ivy in meetings, Ask your vault, dual-stream transcription, receipts and Markdown export — every IndexOne feature.',
+      title: 'Features — meeting transcription, Ivy and notes for Mac',
+      description: 'Two-stream meeting transcription on your Mac, Ivy during calls, Ask across every meeting, receipts, projects, plugins, local AI servers and Markdown.',
     },
     privacy: {
       breadcrumb: 'Privacy',
-      title: 'Privacy and security — what never leaves your Mac | IndexOne',
-      description: 'On-device transcription, SQLCipher at rest, Touch ID folder locks, a redaction firewall and consent before any cloud AI. See exactly what can leave your Mac.',
+      title: 'IndexOne privacy — on-device AI and what leaves your Mac',
+      description: 'On-device transcription and AI, an encrypted library, Touch ID folder locks and a redaction firewall. See what each AI choice sends, and when.',
     },
     pricing: {
       breadcrumb: 'Pricing',
       title: 'IndexOne pricing — compared with Obsidian, Notion and others',
-      description: 'IndexOne is free during early access. Compare it with Obsidian, Notion, Evernote, Bear and Amie on recording, on-device AI, encryption and Markdown.',
+      description: 'IndexOne is free during early access. Compare it with Obsidian, Notion, Evernote, Bear and Amie on recording, transcription, on-device AI and Markdown.',
     },
     changelog: {
       breadcrumb: 'Changelog',
-      title: 'Changelog — what\'s new in each IndexOne release',
-      description: 'Every IndexOne release for macOS, newest first: new features, fixes and downloads, with the date each version shipped.',
+      title: 'IndexOne changelog — release notes for the Mac app',
+      description: 'Release notes for every IndexOne version for Mac, newest first: new features for Ivy, organizations and privacy, fixes, downloads and release dates.',
     },
-    ogImageAlt: 'IndexOne — local-first meeting notes for macOS, with Ivy',
+    ogImageAlt: 'IndexOne — meeting notes and transcription for Mac, with Ivy',
   },
   common: {
     skipToContent: 'Skip to content',
@@ -64,7 +64,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne on GitHub',
     titleStrong: 'Meeting notes with Ivy —',
     titleSoft: 'and you decide where it runs.',
-    subHtml: 'IndexOne records your calls and transcribes them <b>on your Mac</b>. Ask Ivy live, mid-meeting, and across everything you have recorded. Run AI locally, or explicitly opt into <b>redacted cloud AI</b> — your meeting archive stays on your Mac.',
+    subHtml: 'IndexOne records your calls and transcribes them <b>on your Mac</b>. Ask Ivy live, mid-meeting, and across everything you have recorded. Run AI on your Mac or your own local AI server, or explicitly opt into <b>redacted cloud AI</b>. In the On this Mac space, your meeting archive stays on your Mac.',
     download: 'Download for macOS',
     privacyCta: 'See how privacy works',
     note: 'Signed and notarized · macOS 13.4+ · Apple Silicon (M1 or later) · your notes stay Markdown you own',
@@ -87,7 +87,7 @@ const content: SiteContent = {
       },
       'capture': {
         title: 'Both sides of the call, transcribed on your Mac',
-        body: 'Your mic and the other participants\' system audio are captured as two streams and merged into a Me / Others transcript by on-device Whisper. There is no cloud transcription.',
+        body: 'Your mic and the other participants\' system audio are captured as two streams and merged into a Me / Others transcript by on-device Whisper. In the On this Mac space there is no cloud transcription.',
         link: 'Capture and transcription',
       },
       'receipts': {
@@ -107,7 +107,7 @@ const content: SiteContent = {
       },
       'markdown': {
         title: 'Plain Markdown and a local MCP server',
-        body: 'Notes land in your Obsidian vault as plain Markdown with wikilinks, and a read-only MCP server on 127.0.0.1 lets Claude and other agents query them.',
+        body: 'Notes land in your Obsidian vault as plain Markdown with wikilinks, and a read-only MCP server on 127.0.0.1 lets Claude and other agents query them. You choose which workspaces it can read; organizations are off until you turn them on.',
         link: 'Markdown and MCP',
       },
     },
@@ -138,7 +138,7 @@ const content: SiteContent = {
   privacy: {
     eyebrow: 'Security & Privacy',
     title: 'Privacy isn\'t a setting. It\'s the architecture.',
-    leadHtml: 'In the On this Mac space, transcription, search and Ivy on this Mac can run <b>with no network at all</b> — once you switch off the two things that reach out by default: a launch-time check for a new version and a daily anonymous usage message. If you choose Claude Code or Codex, consent and a redaction firewall sit in front of that egress.',
+    leadHtml: 'In the On this Mac space, transcription, search and Ivy on this Mac can run <b>with no network at all</b> — once you switch off the two things that reach out by default: a launch-time check for a new version and a daily usage message. If you choose Claude Code or Codex, consent and a redaction firewall sit in front of that egress.',
     cards: {
       'offline': {
         title: 'Nothing leaves the device',
@@ -166,7 +166,7 @@ const content: SiteContent = {
       },
       'update-check': {
         title: 'The two calls we make by default',
-        body: 'At launch IndexOne asks GitHub whether a newer version exists; the request says which version you are running, and nothing else. Once a day it also sends one small anonymous message: a random install ID, the app and macOS versions, the chip type, the language and whether you are signed in — no meetings, notes, recordings or names. Switch off either one in <b>Settings → Privacy</b>. They are the only things on this page that happen without you asking, which is exactly why they are on this page.',
+        body: 'At launch IndexOne asks GitHub whether a newer version exists; the request says which version you are running, and nothing else. Once a day it also sends one small usage message: a random install ID, the app and macOS versions, the chip type, the language and whether you are signed in — no meetings, notes, recordings or names. It is anonymous only while you are signed out; when you are signed in, it is sent with your account. Switch off either one in <b>Settings → Privacy</b>. They are the only things on this page that happen without you asking, which is exactly why they are on this page.',
       },
     },
     tableCaption: 'Where each AI provider runs, and whether meeting text leaves your Mac',
@@ -176,11 +176,12 @@ const content: SiteContent = {
       'ivy-web': { name: 'Ivy on the web', note: 'Personal and organizations', where: 'IndexOne on the web', leaves: 'Yes — the space itself lives on the web' },
       'claude-code': { name: 'Claude Code', where: 'Local CLI → cloud' },
       'codex': { name: 'Codex', note: 'OpenAI\'s CLI, run tool-free', where: 'Local CLI → cloud' },
+      'local-server': { name: 'Local AI server', note: 'Ollama, LM Studio, oMLX and others', where: 'Your Mac or your network', leaves: 'Not with a server on this Mac. A server elsewhere on your network only after you confirm its address; names are masked first' },
     },
     leavesYes: 'Only after consent; redaction firewall applied',
     leavesNo: 'No',
     shotAlt: 'IndexOne privacy settings, stating in plain language what is removed before any text leaves, which providers are cloud, and whether cloud processing has been allowed',
-    footnote: 'IndexOne tells you, in plain language, exactly what leaves your Mac — and every cloud AI call is logged and shown back to you. Each space has one AI choice, used for transcription, notes, Ask, people and topics, facts, translation and the in-meeting assistant. In the On this Mac space, meetings stay on your Mac unless you choose Claude Code or Codex.',
+    footnote: 'IndexOne tells you, in plain language, exactly what leaves your Mac — and every cloud AI call is logged and shown back to you. Each space has one AI choice: Ivy on this Mac, Ivy on the web, Claude Code, Codex or your own local AI server. In the On this Mac space, meetings stay on your Mac unless you choose Claude Code, Codex or a local AI server elsewhere on your network.',
   },
   features: {
     eyebrow: 'What you get',
@@ -240,6 +241,7 @@ const content: SiteContent = {
           'Narrow a question to one Workspace or folder — the whole subtree, and nothing outside it',
           'Conversations are remembered — vault, note and meeting threads persist, with a history browser on each surface',
           'A conversation disappears the instant any folder it drew on stops being readable',
+          'Bring your own model: notes and answers can come from Ollama, LM Studio, oMLX, llama.cpp or any OpenAI-compatible server',
         ],
         alt: 'Asking Ivy across months of meetings and getting one answer, with the meetings it was drawn from listed underneath',
       },
@@ -298,6 +300,7 @@ const content: SiteContent = {
           'Nineteen Ivy actions, one keystroke away',
           'Grounded in your own meetings and notes, not the model\'s guesses',
           'Paste screenshots into notes; they stay local and follow the Workspace\'s lock',
+          'Ivy skills from the Plugins screen guide notes and answers written by Ivy in the cloud — pick them in the Ivy window, a note or the recording bar',
         ],
         alt: 'The note editor with a text selection and the Ivy command menu open, showing Refine, Shorten, Change tone and more actions',
       },
@@ -319,11 +322,12 @@ const content: SiteContent = {
           'Ivy in meetings, plus Ask your vault',
           'Semantic search and the automatic knowledge graph',
           'Standalone notes with an Ivy-assisted editor',
-          'Personal and organization spaces, the same as on IndexOne on the web, each with an encrypted copy on your Mac (account required)',
+          'Personal and organization spaces, the same as on IndexOne on the web: record straight into them, file notes in folders, and keep an encrypted copy on your Mac (account required)',
           'Workspaces, composable projects, and offline Notion / Obsidian / Apple Notes / Markdown import',
           'Per-Workspace and per-folder Touch ID lock with AES-256 encryption',
           'Screen-share auto-relock',
           'Local MCP server and Markdown export',
+          'Plugins such as Languages and Ivy skills, installed where you want them (account required)',
         ],
         cta: 'Download for macOS',
       },
@@ -372,11 +376,11 @@ const content: SiteContent = {
       },
       'local-transcription': {
         criterion: 'Transcription on your device',
-        cells: ['On-device Whisper; no cloud transcription', 'No built-in transcription', 'Cloud', 'Cloud', 'No transcription', 'Cloud'],
+        cells: ['On-device Whisper in the On this Mac space', 'No built-in transcription', 'Cloud', 'Cloud', 'No transcription', 'Cloud'],
       },
       'local-ai': {
         criterion: 'AI that can run fully on your device',
-        cells: ['Ivy on this Mac', 'No built-in AI; community plugins', 'Cloud only', 'Cloud only', 'No built-in AI', 'Cloud only'],
+        cells: ['Ivy on this Mac, or your own local AI server', 'No built-in AI; community plugins', 'Cloud only', 'Cloud only', 'No built-in AI', 'Cloud only'],
       },
       'ask-all': {
         criterion: 'Ask across every past meeting and note',
@@ -407,7 +411,7 @@ const content: SiteContent = {
   faq: {
     eyebrow: 'FAQ',
     title: 'Questions people ask first.',
-    leadHtml: 'Short answers here; the <a href="/docs.html">documentation</a> has the details.',
+    leadHtml: 'Short answers here; the <a href="/docs/">documentation</a> has the details.',
     items: [
       {
         question: 'Is IndexOne free?',
@@ -415,11 +419,11 @@ const content: SiteContent = {
       },
       {
         question: 'Does my audio go to the cloud?',
-        answer: 'Not in the On this Mac space: there, transcription runs on your Mac with Whisper, and only redacted text can leave, to Claude Code or Codex once you consent. Personal and organization spaces live on IndexOne on the web, so their recordings are stored there.',
+        answer: 'Not in the On this Mac space: there, transcription runs on your Mac with Whisper. Only text can leave: redacted, to Claude Code or Codex once you consent, or with names masked, to a local AI server elsewhere on your network once you confirm its address. Personal and organization spaces live on IndexOne on the web, so their recordings are stored there.',
       },
       {
         question: 'What is Ivy?',
-        answer: 'Ivy is the AI inside IndexOne. Ask it during a meeting without stopping the recording, or afterwards across everything you have recorded and written. Every answer cites the meetings and notes it came from. Each space picks one AI: Ivy on this Mac, Ivy on the web for Personal and organizations, or Claude Code or Codex after explicit consent.',
+        answer: 'Ivy is the AI inside IndexOne. Ask it during a meeting without stopping the recording, or afterwards across everything you have recorded and written. Every answer cites the meetings and notes it came from. Each space picks one AI: Ivy on this Mac, Ivy on the web for Personal and organizations, your own local AI server, or Claude Code or Codex after explicit consent.',
       },
       {
         question: 'Do I need an internet connection?',
@@ -427,11 +431,11 @@ const content: SiteContent = {
       },
       {
         question: 'Do I need Claude Code?',
-        answer: 'No. Each space has one AI choice: Ivy on this Mac, Ivy on the web (Personal and organizations), Claude Code or Codex.',
+        answer: 'No. Each space has one AI choice: Ivy on this Mac, Ivy on the web (Personal and organizations), Claude Code, Codex, or your own local AI server such as Ollama, LM Studio, oMLX or llama.cpp.',
       },
       {
         question: 'Which languages does it support?',
-        answer: 'Whisper transcribes many languages. For on-device AI you can choose multilingual Qwen3 models or Polish-native Bielik models.',
+        answer: 'Whisper transcribes many languages. For on-device AI you can choose multilingual Qwen3 models or Polish-native Bielik models. The Languages plugin writes every note in the language you choose, can add a second language, translates meetings later and keeps a glossary of names and terms.',
       },
       {
         question: 'Why does macOS ask for Screen & System Audio Recording?',

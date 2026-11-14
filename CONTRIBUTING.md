@@ -35,7 +35,7 @@ release, and a pull request against them would be overwritten. Open an
 
 The **Site check** workflow runs on every pull request. It refuses links to private repositories,
 secret-shaped strings (keys and tokens), symlinks, files over 50 MB, a broken MCP example in
-`public/docs.html` and AI co-author or "generated with" lines in commit messages. It also
+`user-docs/mcp.md` and AI co-author or "generated with" lines in commit messages. It also
 builds the site and refuses third-party assets, `data:` URIs and missing SEO tags in the output. Every pull request
 needs the approval of a code owner, [@JakubGawr](https://github.com/JakubGawr) or [@Lukas9315](https://github.com/Lukas9315),
 who also run an additional privacy and secret check before approving; if it flags your change, we'll tell you what to change.

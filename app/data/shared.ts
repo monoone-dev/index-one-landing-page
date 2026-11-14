@@ -38,6 +38,7 @@ export const providers: { id: ProviderId, leaves: boolean }[] = [
   { id: 'ivy-web', leaves: true },
   { id: 'claude-code', leaves: true },
   { id: 'codex', leaves: true },
+  { id: 'local-server', leaves: true },
 ]
 
 export const privacyShot = shot('settings-privacy', 1600, 1112)

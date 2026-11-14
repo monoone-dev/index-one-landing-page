@@ -96,7 +96,7 @@ jobs:
           AI_ATTRIBUTION = re.compile(
               r"^\s*co-author[e]d-by:.*(?:claude|anthropic|openai|chatgpt|gpt-|codex|copilot|gemini|cursor|\bai\b)|generated with",
               re.I | re.M)
-          MCP_NEEDLES = ['>"type"<', '>"http"<', '>"Authorization"<', "Bearer"]
+          MCP_NEEDLES = ['"type"', '"http"', '"Authorization"', "Bearer"]
           problems = []
 
 
@@ -120,7 +120,7 @@ jobs:
                   if stat.S_ISLNK(st.st_mode):
                       report(rel, "symlink")
                       continue
-                  if not re.fullmatch(r"[A-Za-z0-9._/-]+", rel):
+                  if not re.fullmatch(r"[A-Za-z0-9._/\[\]-]+", rel):  # [] for Nuxt dynamic routes
                       report(rel.encode("unicode_escape").decode(), "unsafe characters in the path")
                       continue
                   if st.st_size > MAX_FILE_BYTES:
@@ -141,24 +141,18 @@ jobs:
                       if pattern.search(text):
                           report(rel, f"contains {label}")
 
-          docs = root / "public" / "docs.html"
+          docs = root / "user-docs" / "mcp.md"
           if docs.is_file():
-              text, blocks = docs.read_text(errors="replace"), []
-              rest = text
-              while '<pre class="code-block">' in rest:
-                  after = rest.split('<pre class="code-block">', 1)[1]
-                  if "</pre>" not in after:
-                      blocks = []
-                      break
-                  block, rest = after.split("</pre>", 1)
-                  if "mcpServers" in block:
-                      blocks.append(block)
+              text = docs.read_text(errors="replace")
+              blocks = [b for b in re.findall(r"```[a-z]*\n(.*?)```", text, re.S) if "mcpServers" in b]
               if len(blocks) != 1:
-                  report("public/docs.html", f"must document exactly one mcpServers code block; found {len(blocks)}")
+                  report("user-docs/mcp.md", f"must document exactly one mcpServers code block; found {len(blocks)}")
               else:
                   for needle in MCP_NEEDLES:
                       if needle not in blocks[0]:
-                          report("public/docs.html", f"the MCP example is missing {needle}; copy what the app's Copy config emits")
+                          report("user-docs/mcp.md", f"the MCP example is missing {needle}; copy what the app's Copy config emits")
+          else:
+              report("user-docs/mcp.md", "missing; it documents the local MCP server")
 
           messages = os.environ.get("COMMIT_MESSAGES_FILE")
           if messages:
@@ -245,7 +239,7 @@ jobs:
                       problems.append(f"{path}: missing hreflang alternates")
           if '"_i18n' in "".join(js.read_text(errors="replace") for js in out.glob("_nuxt/*.js")) and (out / "_i18n").exists():
               problems.append("_i18n: locale messages are fetched at runtime; keep them bundled")
-          for required in ["CNAME", "robots.txt", "sitemap.xml", "og-image.png", "docs.html"]:
+          for required in ["CNAME", "robots.txt", "sitemap.xml", "og-image.png", "docs.html", "docs/index.html"]:
               if not (out / required).is_file():
                   problems.append(f"{required}: missing from the generated site")
           print("\n".join(f"::error::{p}" for p in problems) if problems else "build check: static, first-party, indexable")

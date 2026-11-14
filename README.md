@@ -10,7 +10,7 @@ during the meeting and across everything you have ever recorded.
 
 [Download for macOS](https://github.com/monoone-dev/index-one-landing-page/releases/latest) ·
 [index-one.io](https://index-one.io) ·
-[Documentation](https://index-one.io/docs.html) ·
+[Documentation](https://index-one.io/docs/) ·
 [Release notes](https://github.com/monoone-dev/index-one-landing-page/releases) ·
 [Support](#support)
 
@@ -68,7 +68,7 @@ sharing through Shared Ivy.
 | Anthropic API (your key, in the Keychain), Kong or another OpenAI-compatible gateway | Direct HTTPS | Only after consent; redacted first |
 
 The full feature list is on [index-one.io](https://index-one.io/#features) and in the
-[documentation](https://index-one.io/docs.html).
+[documentation](https://index-one.io/docs/).
 
 ## Install
 
@@ -100,7 +100,7 @@ folder.
 **Permissions.** macOS asks for each one the first time it is needed: Microphone and Screen & System
 Audio Recording (first recording — audio only, never your screen), Calendars, Reminders,
 Automation → Notes (Apple Notes import) and Touch ID (unlocking a locked folder). Details:
-[Your first recording](https://index-one.io/docs.html#first-recording).
+[Your first recording](https://index-one.io/docs/first-recording/).
 
 **Updates.** At launch the app asks GitHub whether a newer release exists; the request carries only
 the app version. Turn it off in **Settings → Privacy & Integrations**. The app never installs
@@ -123,10 +123,10 @@ Recording, transcription, search and on-device Ivy work with no network connecti
 The database is encrypted with SQLCipher. Any Workspace or folder can also be locked with
 AES-256-GCM under a key only Touch ID or your login password releases; a locked folder is invisible
 to the app, search, the graph, MCP and the audio player until unlocked. More:
-[What never leaves your Mac](https://index-one.io/docs.html#data-flow) ·
-[The lock model](https://index-one.io/docs.html#lock-model) ·
-[Redaction firewall](https://index-one.io/docs.html#redaction-firewall) ·
-[Known limitations](https://index-one.io/docs.html#known-limitations)
+[What never leaves your Mac](https://index-one.io/docs/data-flow/) ·
+[The lock model](https://index-one.io/docs/lock-model/) ·
+[Redaction firewall](https://index-one.io/docs/redaction/) ·
+[Known limitations](https://index-one.io/docs/known-limitations/)
 
 ## Obsidian, MCP and your own agent
 
@@ -196,10 +196,11 @@ npm run typecheck
 | `i18n/content/` | All page copy, one typed file per language (`en.ts` is the source; `types.ts` keeps the others complete) |
 | `app/data/` | What doesn't get translated: links, icons, screenshots, the comparison's yes/no values |
 | `app/components/` | One component per section |
-| `app/assets/scss/` | Fonts, the Studio / Paper / Minimalist skins and base styles |
+| `app/assets/scss/` | The Surface skin (light and dark), base styles and the docs' text styles |
 | `app/composables/usePageSeo.ts` | Meta tags, Open Graph and JSON-LD; `hreflang` and canonical come from Nuxt i18n |
 | `server/routes/sitemap.xml.ts` | The sitemap, with every language as an alternate |
-| `public/` | Static files served as they are: `docs.html` (English only), screenshots, fonts, icons, `robots.txt`, `CNAME` |
+| `user-docs/` | The documentation (English only): one Markdown page per topic, ordered by `nav.json`, built into `/docs/` by `modules/user-docs.ts` |
+| `public/` | Static files served as they are: screenshots (`assets/screens/`, `assets/docs/`), fonts, icons, `robots.txt`, `CNAME`, and `docs.html`, which forwards old links to `/docs/` |
 
 The site makes no third-party requests: fonts and icons are bundled, and there is no analytics.
 CI ([`site-check.yml`](.github/workflows/site-check.yml)) checks every language file against English, builds the site and refuses external
@@ -211,7 +212,7 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
 ## Support
 
-- **Docs first:** [index-one.io/docs.html](https://index-one.io/docs.html).
+- **Docs first:** [index-one.io/docs](https://index-one.io/docs/).
 - **Bug:** [open a bug report](https://github.com/monoone-dev/index-one-landing-page/issues/new?template=bug_report.yml)
   with your app version (Settings → About), macOS version and Mac type.
 - **Idea:** [suggest a feature](https://github.com/monoone-dev/index-one-landing-page/issues/new?template=feature_request.yml).
