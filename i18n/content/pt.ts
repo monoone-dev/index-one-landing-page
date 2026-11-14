@@ -9,7 +9,7 @@ const content: SiteContent = {
     features: {
       breadcrumb: 'Recursos',
       title: 'Recursos — notas de reunião IndexOne para macOS',
-      description: 'Workspaces, projetos, importações, Ivy nas reuniões, perguntas ao acervo, transcrição em dois canais, recibos, Markdown e Shared Ivy: tudo do IndexOne.',
+      description: 'Workspaces, projetos, importações, Ivy nas reuniões, perguntas ao acervo, transcrição em dois canais, recibos e Markdown: tudo do IndexOne.',
     },
     privacy: {
       breadcrumb: 'Privacidade',
@@ -82,7 +82,7 @@ const content: SiteContent = {
     items: {
       'live': {
         title: 'Pergunte à Ivy no meio da reunião — e mantenha tudo no seu Mac',
-        body: 'Digite ou fale uma pergunta no meio da chamada e receba uma resposta baseada em todas as reuniões que você gravou, com fontes que você pode abrir; a gravação nunca pausa. Rode a Ivy no dispositivo ou por um Ollama local, e nenhum texto de reunião sai do seu Mac; a IA na nuvem fica desligada até você consentir uma vez.',
+        body: 'Digite ou fale uma pergunta no meio da chamada e receba uma resposta baseada em todas as reuniões que você gravou, com fontes que você pode abrir; a gravação nunca pausa. Escolha Ivy on this Mac e nenhum texto de reunião sai do seu Mac; o Claude Code e o Codex ficam desligados até você consentir uma vez.',
         link: 'Como a Ivy funciona',
       },
       'capture': {
@@ -96,8 +96,8 @@ const content: SiteContent = {
         link: 'Recibos',
       },
       'security': {
-        title: 'Criptografado onde quer que esteja guardado',
-        body: 'Toda a sua biblioteca é criptografada com SQLCipher no Mac. Tudo o que você compartilha é selado com AES-256-GCM antes do envio, então o servidor só guarda texto cifrado — e o login usa OPAQUE, então ele nunca conhece a sua senha.',
+        title: 'Criptografado no seu Mac',
+        body: 'Toda a sua biblioteca é criptografada com SQLCipher no Mac. Personal e cada organização de que você faz parte também guardam aqui uma cópia criptografada, então abrem sem conexão de rede.',
         link: 'Segurança e privacidade',
       },
       'locks': {
@@ -138,11 +138,11 @@ const content: SiteContent = {
   privacy: {
     eyebrow: 'Segurança e privacidade',
     title: 'Privacidade não é uma configuração. É a arquitetura.',
-    leadHtml: 'O IndexOne foi projetado para que a transcrição, a busca e a Ivy no dispositivo funcionem <b>sem nenhuma rede</b> — depois que você desligar a única coisa que se conecta para fora: uma verificação de nova versão ao abrir o app. Se você escolher IA na nuvem, o consentimento e um firewall de anonimização ficam na frente dessa saída de dados.',
+    leadHtml: 'No espaço On this Mac, a transcrição, a busca e a Ivy on this Mac podem funcionar <b>sem nenhuma rede</b> — depois que você desligar as duas coisas que se conectam para fora por padrão: uma verificação de nova versão ao abrir o app e uma mensagem diária anônima de uso. Se você escolher o Claude Code ou o Codex, o consentimento e um firewall de anonimização ficam na frente dessa saída de dados.',
     cards: {
       'offline': {
         title: 'Nada sai do dispositivo',
-        body: 'Com um modelo no dispositivo, baixado uma única vez, ou com o Ollama, seus áudios e transcrições nunca tocam a rede. O raciocínio acontece no seu Mac.',
+        body: 'Com a Ivy on this Mac e um modelo baixado uma única vez, seus áudios e transcrições nunca tocam a rede. O raciocínio acontece no seu Mac.',
       },
       'at-rest': {
         title: 'Duas camadas de criptografia em repouso',
@@ -165,24 +165,22 @@ const content: SiteContent = {
         body: 'Se um dia você ativar um resumidor na nuvem, e-mails, números parecidos com cartões e números de telefone são removidos antes — e a saída para a nuvem é <b>fail-closed</b> (bloqueada por padrão), protegida por um consentimento único. Baixe o modelo opcional de mascaramento de nomes e os nomes das pessoas também são substituídos.',
       },
       'update-check': {
-        title: 'A única chamada que fazemos por padrão',
-        body: 'Ao abrir, o IndexOne pergunta ao GitHub se existe uma versão mais nova. A requisição informa qual versão você está usando, porque é assim que a pergunta é feita — e nada mais: nada de reuniões, notas ou conta. Você pode desligar isso em <b>Settings → Privacy</b>. É a única coisa nesta página que acontece sem você pedir, e é exatamente por isso que ela está nesta página.',
+        title: 'As duas chamadas que fazemos por padrão',
+        body: 'Ao abrir, o IndexOne pergunta ao GitHub se existe uma versão mais nova; a requisição informa qual versão você está usando, e nada mais. Uma vez por dia, ele também envia uma pequena mensagem anônima: um ID de instalação aleatório, as versões do app e do macOS, o tipo de chip, o idioma e se você está conectado — nada de reuniões, notas, gravações ou nomes. Você pode desligar qualquer uma delas em <b>Settings → Privacy</b>. São as únicas coisas nesta página que acontecem sem você pedir, e é exatamente por isso que elas estão nesta página.',
       },
     },
     tableCaption: 'Onde cada provedor de IA roda e se o texto das reuniões sai do seu Mac',
     tableHeaders: ['Ivy / provedor', 'Onde roda', 'O texto das reuniões sai do seu Mac?'],
     providers: {
-      'on-device': { name: 'Ivy no dispositivo', note: 'Bielik / Qwen', where: 'Totalmente local' },
-      'ollama': { name: 'Ollama', where: 'Totalmente local' },
-      'claude-code': { name: 'Claude Code', note: 'resumidor padrão', where: 'CLI local → nuvem' },
+      'on-device': { name: 'Ivy on this Mac', note: 'Bielik / Qwen', where: 'Totalmente local' },
+      'ivy-web': { name: 'Ivy on the web', note: 'Personal e organizações', where: 'IndexOne na web', leaves: 'Sim — o próprio espaço fica na web' },
+      'claude-code': { name: 'Claude Code', where: 'CLI local → nuvem' },
       'codex': { name: 'Codex', note: 'a CLI da OpenAI, rodando sem ferramentas', where: 'CLI local → nuvem' },
-      'anthropic': { name: 'Anthropic API', note: 'use sua própria chave', where: 'HTTPS direto' },
-      'gateway': { name: 'AI Gateway', note: 'qualquer endpoint compatível com OpenAI — LiteLLM, Kong, Portkey, vLLM…', where: 'HTTPS direto' },
     },
     leavesYes: 'Só após consentimento, com o firewall de anonimização aplicado',
     leavesNo: 'Não',
     shotAlt: 'Configurações de privacidade do IndexOne, explicando em linguagem simples o que é removido antes de qualquer texto sair, quais provedores são na nuvem e se o processamento na nuvem foi permitido',
-    footnote: 'O IndexOne diz, em linguagem simples, exatamente o que sai do seu Mac — e cada chamada de IA na nuvem é registrada e mostrada para você. Suas reuniões ficam no dispositivo, a menos que você ative a nuvem. Um único seletor de modelo é usado em todos os recursos de IA, e ele sempre aceita um ID de modelo digitado por você — então um modelo lançado depois desta versão continua funcionando.',
+    footnote: 'O IndexOne diz, em linguagem simples, exatamente o que sai do seu Mac — e cada chamada de IA na nuvem é registrada e mostrada para você. Cada espaço tem uma única escolha de IA, usada para transcrição, notas, perguntas, pessoas e temas, fatos, tradução e o assistente durante a reunião. No espaço On this Mac, as reuniões ficam no seu Mac, a menos que você escolha o Claude Code ou o Codex.',
   },
   features: {
     eyebrow: 'O que você ganha',
@@ -303,19 +301,6 @@ const content: SiteContent = {
         ],
         alt: 'O editor de notas com um trecho selecionado e o menu de comandos da Ivy aberto, mostrando Refine, Shorten, Change tone e outras ações',
       },
-      'shared-ivy': {
-        eyebrow: 'Shared Ivy',
-        title: 'Trabalhe em equipe, ainda com criptografia de ponta a ponta.',
-        body: 'Publique uma nota ou um resumo de reunião no Shared Ivy da sua organização e ele fica sincronizado para todos os membros enquanto você edita. Tudo é selado no seu Mac antes de sair — o servidor só armazena texto cifrado, chaves protegidas e chaves públicas.',
-        points: [
-          'Selado com AES-256-GCM sob uma chave de conteúdo da organização antes do envio',
-          'Verificação antes de publicar — a mesma disciplina do bloqueio de pastas',
-          'Permissões por documento — o autor define <b>View only</b> (só visualização) ou <b>Can edit</b> (pode editar) em cada documento compartilhado',
-          'Participe de mais de uma organização — cada uma tem seu próprio feed criptografado',
-          '<b>Tarefas</b> compartilhadas — responsáveis, prazos, subtarefas e as mesmas permissões; as tarefas vivem dentro de uma organização, então exigem uma conta conectada',
-        ],
-        alt: 'A tela do Shared Ivy: reuniões e notas que suas organizações compartilharam com você, cada uma com o autor e a organização',
-      },
     },
   },
   pricing: {
@@ -334,9 +319,8 @@ const content: SiteContent = {
           'Ivy nas reuniões, e perguntas ao seu acervo',
           'Busca semântica e grafo de conhecimento automático',
           'Notas avulsas com editor assistido pela Ivy',
-          'Compartilhamento com criptografia de ponta a ponta e permissões View only / Can edit por documento (exige conta)',
+          'Os mesmos espaços Personal e de organizações do IndexOne na web, cada um com uma cópia criptografada no seu Mac (exige conta)',
           'Workspaces, projetos configuráveis e importação offline do Notion / Obsidian / Apple Notes / Markdown',
-          'Links de compartilhamento criptografados com validade, senha opcional e limite de aberturas',
           'Bloqueio com Touch ID por Workspace e por pasta, com criptografia AES-256',
           'Rebloqueio automático ao compartilhar a tela',
           'Servidor MCP local e exportação em Markdown',
@@ -392,7 +376,7 @@ const content: SiteContent = {
       },
       'local-ai': {
         criterion: 'IA que pode rodar totalmente no seu dispositivo',
-        cells: ['Ivy no dispositivo ou um Ollama local', 'Sem IA integrada; plugins da comunidade', 'Só na nuvem', 'Só na nuvem', 'Sem IA integrada', 'Só na nuvem'],
+        cells: ['Ivy on this Mac', 'Sem IA integrada; plugins da comunidade', 'Só na nuvem', 'Só na nuvem', 'Sem IA integrada', 'Só na nuvem'],
       },
       'ask-all': {
         criterion: 'Perguntas sobre todas as reuniões e notas anteriores',
@@ -408,7 +392,7 @@ const content: SiteContent = {
       },
       'encryption': {
         criterion: 'Criptografia sob seu controle',
-        cells: ['Banco de dados criptografado, pastas bloqueadas com Touch ID, compartilhamento com criptografia de ponta a ponta', 'Criptografia de ponta a ponta no Sync pago', 'Criptografado nos servidores do Notion; não é de ponta a ponta', 'Senha só para trechos de texto selecionados', 'Notas individuais, com Pro', ''],
+        cells: ['Banco de dados criptografado, pastas bloqueadas com Touch ID, uma cópia local criptografada de cada espaço da web', 'Criptografia de ponta a ponta no Sync pago', 'Criptografado nos servidores do Notion; não é de ponta a ponta', 'Senha só para trechos de texto selecionados', 'Notas individuais, com Pro', ''],
       },
       'platforms': {
         criterion: 'Plataformas',
@@ -431,19 +415,19 @@ const content: SiteContent = {
       },
       {
         question: 'Meu áudio vai para a nuvem?',
-        answer: 'Não. A transcrição sempre roda no seu Mac. Só texto anonimizado pode sair, e apenas para uma IA na nuvem que você escolheu e autorizou.',
+        answer: 'Não no espaço On this Mac: lá a transcrição roda no seu Mac com o Whisper, e só texto anonimizado pode sair, para o Claude Code ou o Codex depois que você consentir. Os espaços Personal e de organizações ficam no IndexOne na web, então as gravações deles são guardadas lá.',
       },
       {
         question: 'O que é a Ivy?',
-        answer: 'A Ivy é a IA do IndexOne. Pergunte a ela durante uma reunião sem parar a gravação, ou depois, sobre tudo o que você gravou e escreveu. Cada resposta cita as reuniões e notas de onde veio. A Ivy pode rodar totalmente no seu Mac, por um Ollama local ou — após consentimento explícito — por um provedor na nuvem com anonimização.',
+        answer: 'A Ivy é a IA do IndexOne. Pergunte a ela durante uma reunião sem parar a gravação, ou depois, sobre tudo o que você gravou e escreveu. Cada resposta cita as reuniões e notas de onde veio. Cada espaço escolhe uma IA: Ivy on this Mac, Ivy on the web para Personal e organizações, ou o Claude Code ou o Codex após consentimento explícito.',
       },
       {
         question: 'Preciso de conexão com a internet?',
-        answer: 'Uma vez, para baixar um modelo do Whisper. Depois disso, gravação, transcrição, busca e a Ivy no dispositivo funcionam offline. Conexões com IA na nuvem, conectores e compartilhamento precisam de internet.',
+        answer: 'Uma vez, para baixar um modelo do Whisper. Depois disso, gravação, transcrição, busca e a Ivy on this Mac funcionam offline. Os espaços Personal e de organizações abrem offline a partir da cópia criptografada e enviam suas edições quando você volta a ficar online. Ivy on the web, Claude Code, Codex e conectores precisam de internet.',
       },
       {
         question: 'Preciso do Claude Code?',
-        answer: 'Só se você mantiver o Claude Code como redator das notas. Em vez dele, você pode escolher o Codex, a Anthropic API, um AI gateway compatível com OpenAI, um Ollama local ou um modelo no dispositivo.',
+        answer: 'Não. Cada espaço tem uma única escolha de IA: Ivy on this Mac, Ivy on the web (Personal e organizações), Claude Code ou Codex.',
       },
       {
         question: 'Quais idiomas são suportados?',
