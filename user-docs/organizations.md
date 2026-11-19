@@ -6,6 +6,9 @@ keywords: organizations, personal, account, sign in, invite, roles, spaces, fold
 
 Personal and organizations are the places that live in your IndexOne account. Personal is just for you; an organization is shared with a team. Both are the same ones you see on IndexOne on the web, and both open on your Mac with the same screens as On this Mac.
 
+
+For the forthcoming cloud offer, see [Plans and billing](/docs/plans-and-billing/). Standard cloud content is stored and processed on servers readable by the operator, not end-to-end encrypted. Local Mac locks do not change that boundary. Pattern masking is not complete anonymization.
+
 ## Signing in
 
 On this Mac needs no account. To use Personal and organizations, sign in to an IndexOne account in Settings › Account, or choose **Sign in to open your workspaces** in the space switcher. Anyone can create an account with an email address.

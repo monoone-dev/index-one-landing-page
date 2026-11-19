@@ -2,7 +2,6 @@
 import { site } from '~/data/site'
 
 const c = useContent()
-const to = useLocalLink()
 </script>
 
 <template>
@@ -22,7 +21,7 @@ const to = useLocalLink()
         <p class="hero__sub" v-html="c.hero.subHtml" />
         <div class="hero__actions">
           <UButton :to="site.links.download" external size="xl" icon="i-lucide-arrow-down-to-line" :label="c.hero.download" />
-          <UButton :to="to('/privacy')" size="xl" color="neutral" variant="outline" :label="c.hero.privacyCta" />
+          <UButton :to="site.links.web" external size="xl" color="neutral" variant="outline" :label="c.offer.web" />
         </div>
         <p class="hero__note">
           <UIcon name="i-lucide-check" class="hero__note-icon" />

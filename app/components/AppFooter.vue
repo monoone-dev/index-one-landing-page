@@ -2,13 +2,15 @@
 import { site } from '~/data/site'
 
 const c = useContent()
+const route = useRoute()
+const isPricing = computed(() => /\/pricing\/?$/.test(route.path))
 const to = useLocalLink()
 
 const links = computed(() => [
   { label: c.value.nav.features, to: to('/features') },
   { label: c.value.nav.privacy, to: to('/privacy') },
   { label: c.value.nav.pricing, to: to('/pricing') },
-  { label: c.value.nav.compare, to: to('/pricing#compare') },
+  { label: c.value.offer.web, to: site.links.web },
   { label: c.value.nav.faq, to: to('/pricing#faq') },
   { label: c.value.nav.docs, to: site.links.docs },
   { label: c.value.nav.changelog, to: to('/changelog') },
@@ -31,6 +33,7 @@ const legal = computed(() => fill(c.value.footer.legalHtml, { year: 2026, author
           </NuxtLink>
         </nav>
       </div>
+      <p class="foot__legal"><NuxtLink to="/docs/plans-and-billing/">{{ c.offer.docs }}</NuxtLink><template v-if="!isPricing"> · {{ c.offer.status }}</template></p>
       <p class="foot__legal" v-html="legal" />
       </div>
     </div>

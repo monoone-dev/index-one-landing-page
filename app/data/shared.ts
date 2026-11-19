@@ -62,8 +62,8 @@ export const highlightedFeatureIds: FeatureId[] = ['ivy', 'receipts']
 
 export const plans: { id: PlanId, available: boolean, href: string }[] = [
   { id: 'free', available: true, href: site.links.download },
-  { id: 'pro', available: false, href: site.links.repo },
-  { id: 'team', available: false, href: site.links.discussions },
+  { id: 'personal', available: false, href: '/docs/plans-and-billing/' },
+  { id: 'team', available: false, href: '/docs/plans-and-billing/' },
 ]
 
 export const competitors = ['IndexOne', 'Obsidian', 'Notion', 'Evernote', 'Bear', 'Amie'] as const
