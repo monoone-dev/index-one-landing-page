@@ -137,7 +137,7 @@ const content: SiteContent = {
   },
   privacy: {
     lifecycle: {
-      "title": "Cykl życia danych · zapowiedź oferty chmurowej",
+      "title": "Cykl życia danych · plany chmurowe",
       "items": [
         {
           "title": "Jak długo przechowywane są dane?",
@@ -325,7 +325,7 @@ const content: SiteContent = {
   },
   offer: {
     "web": "Otwórz web",
-    "status": "Planowana oferta chmurowa. Zakup i aktywacja próby nie są tutaj dostępne. Lokalne funkcje Mac pozostają dostępne.",
+    "status": "Plany chmurowe są w sprzedaży. Zaloguj się w aplikacji web, aby kupić plan, uruchomić próbę lub zarządzać subskrypcją. Lokalne funkcje Mac pozostają dostępne.",
     "monthly": "Miesięcznie, w PLN",
     "tax": "Personal zawiera podatek. Team: cena netto, minimum 2 miejsca = 150 PLN netto/mies. Przy VAT 23%: 184,50 PLN razem (92,25 za miejsce). Podatek może być inny; aplikacja musi pokazać końcową kwotę przed zakupem.",
     "trialTitle": "Jedna próba chmury",
@@ -370,7 +370,7 @@ const content: SiteContent = {
         },
         "personal": {
             "name": "Personal",
-            "badge": "Planowany",
+            "badge": "Dostępny",
             "price": "49 PLN",
             "per": "brutto / miesiąc",
             "tagline": "Dla osobistej przestrzeni w chmurze.",
@@ -380,11 +380,11 @@ const content: SiteContent = {
                 "20 GB",
                 "1.2M Ivy · 5 h ASR"
             ],
-            "cta": "Plany i rozliczenia · dokumentacja po angielsku"
+            "cta": "Kup w aplikacji web"
         },
         "team": {
             "name": "Team",
-            "badge": "Planowany",
+            "badge": "Dostępny",
             "price": "75 PLN",
             "per": "netto / miejsce / miesiąc",
             "tagline": "Dla organizacji, od dwóch miejsc.",
@@ -394,7 +394,7 @@ const content: SiteContent = {
                 "50 GB · na miejsce",
                 "2.5M Ivy · 10 h ASR"
             ],
-            "cta": "Plany i rozliczenia · dokumentacja po angielsku"
+            "cta": "Kup w aplikacji web"
         }
     }
 },

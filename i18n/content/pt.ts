@@ -137,7 +137,7 @@ const content: SiteContent = {
   },
   privacy: {
     lifecycle: {
-      "title": "Ciclo de vida dos dados · futura oferta na nuvem",
+      "title": "Ciclo de vida dos dados · planos na nuvem",
       "items": [
         {
           "title": "Durante quanto tempo são guardados os dados?",
@@ -325,7 +325,7 @@ const content: SiteContent = {
   },
   offer: {
     "web": "Abrir aplicação web",
-    "status": "Oferta de nuvem prevista. Compra e ativação da avaliação ainda indisponíveis aqui. As funções locais do Mac continuam disponíveis.",
+    "status": "Os planos na nuvem estão à venda. Entre no app web para comprar um plano, ativar o teste ou gerenciar sua assinatura. Os recursos locais do Mac continuam disponíveis.",
     "monthly": "Mensal, em PLN",
     "tax": "Personal inclui impostos. Team sem impostos: mínimo 2 lugares = 150 PLN líquidos/mês. Com IVA de 23%: 184,50 PLN no total (92,25 por lugar). O imposto pode variar; a aplicação deve mostrar o total antes da compra.",
     "trialTitle": "Uma avaliação da nuvem",
@@ -370,7 +370,7 @@ const content: SiteContent = {
         },
         "personal": {
             "name": "Personal",
-            "badge": "Previsto",
+            "badge": "Disponível",
             "price": "49 PLN",
             "per": "impostos incluídos / mês",
             "tagline": "Para seu espaço pessoal na nuvem.",
@@ -380,11 +380,11 @@ const content: SiteContent = {
                 "20 GB",
                 "1.2M Ivy · 5 h ASR"
             ],
-            "cta": "Planos e cobrança · documentação em inglês"
+            "cta": "Comprar no app web"
         },
         "team": {
             "name": "Team",
-            "badge": "Previsto",
+            "badge": "Disponível",
             "price": "75 PLN",
             "per": "líquidos / lugar / mês",
             "tagline": "Para organizações, a partir de dois lugares.",
@@ -394,7 +394,7 @@ const content: SiteContent = {
                 "50 GB · por lugar",
                 "2.5M Ivy · 10 h ASR"
             ],
-            "cta": "Planos e cobrança · documentação em inglês"
+            "cta": "Comprar no app web"
         }
     }
 },

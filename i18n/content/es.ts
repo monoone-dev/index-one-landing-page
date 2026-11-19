@@ -137,7 +137,7 @@ const content: SiteContent = {
   },
   privacy: {
     lifecycle: {
-      "title": "Ciclo de vida de los datos · próxima oferta en la nube",
+      "title": "Ciclo de vida de los datos · planes en la nube",
       "items": [
         {
           "title": "¿Cuánto tiempo se guardan los datos?",
@@ -325,7 +325,7 @@ const content: SiteContent = {
   },
   offer: {
     "web": "Abrir aplicación web",
-    "status": "Oferta de nube prevista. La compra y activación de la prueba aún no están disponibles aquí. Las funciones locales de Mac siguen disponibles.",
+    "status": "Los planes en la nube ya están a la venta. Inicia sesión en la app web para comprar un plan, activar la prueba o gestionar tu suscripción. Las funciones locales de Mac siguen disponibles.",
     "monthly": "Mensual, en PLN",
     "tax": "Personal incluye impuestos. Team sin impuestos: mínimo 2 plazas = 150 PLN netos/mes. Con IVA del 23%: 184,50 PLN en total (92,25 por plaza). El impuesto puede variar; la aplicación debe mostrar el total antes de comprar.",
     "trialTitle": "Una prueba de nube",
@@ -370,7 +370,7 @@ const content: SiteContent = {
         },
         "personal": {
             "name": "Personal",
-            "badge": "Previsto",
+            "badge": "Disponible",
             "price": "49 PLN",
             "per": "impuestos incluidos / mes",
             "tagline": "Para tu espacio personal en nube.",
@@ -380,11 +380,11 @@ const content: SiteContent = {
                 "20 GB",
                 "1.2M Ivy · 5 h ASR"
             ],
-            "cta": "Planes y facturación · documentación en inglés"
+            "cta": "Comprar en la app web"
         },
         "team": {
             "name": "Team",
-            "badge": "Previsto",
+            "badge": "Disponible",
             "price": "75 PLN",
             "per": "netos / plaza / mes",
             "tagline": "Para organizaciones, desde dos plazas.",
@@ -394,7 +394,7 @@ const content: SiteContent = {
                 "50 GB · por plaza",
                 "2.5M Ivy · 10 h ASR"
             ],
-            "cta": "Planes y facturación · documentación en inglés"
+            "cta": "Comprar en la app web"
         }
     }
 },

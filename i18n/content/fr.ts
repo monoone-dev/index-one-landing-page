@@ -137,7 +137,7 @@ const content: SiteContent = {
   },
   privacy: {
     lifecycle: {
-      "title": "Cycle de vie des données · future offre cloud",
+      "title": "Cycle de vie des données · offres cloud",
       "items": [
         {
           "title": "Combien de temps les données sont-elles conservées ?",
@@ -325,7 +325,7 @@ const content: SiteContent = {
   },
   offer: {
     "web": "Ouvrir le web",
-    "status": "Offre cloud prévue. Achat et activation de l’essai indisponibles ici pour le moment. Les fonctions locales Mac restent disponibles.",
+    "status": "Les offres cloud sont disponibles. Connectez-vous à l’app web pour acheter une offre, activer l’essai ou gérer votre abonnement. Les fonctions locales sur Mac restent disponibles.",
     "monthly": "Par mois, en PLN",
     "tax": "Personal TTC. Team HT : minimum 2 places = 150 PLN HT/mois. Avec TVA à 23% : 184,50 PLN au total (92,25 par place). La taxe peut varier ; l’application doit afficher le total avant achat.",
     "trialTitle": "Un essai cloud",
@@ -370,7 +370,7 @@ const content: SiteContent = {
         },
         "personal": {
             "name": "Personal",
-            "badge": "Prévu",
+            "badge": "Disponible",
             "price": "49 PLN",
             "per": "TTC / mois",
             "tagline": "Pour votre espace cloud personnel.",
@@ -380,11 +380,11 @@ const content: SiteContent = {
                 "20 GB",
                 "1.2M Ivy · 5 h ASR"
             ],
-            "cta": "Offre et facturation · documentation en anglais"
+            "cta": "Acheter dans l’app web"
         },
         "team": {
             "name": "Team",
-            "badge": "Prévu",
+            "badge": "Disponible",
             "price": "75 PLN",
             "per": "HT / place / mois",
             "tagline": "Pour une organisation, dès deux places.",
@@ -394,7 +394,7 @@ const content: SiteContent = {
                 "50 GB · par place",
                 "2.5M Ivy · 10 h ASR"
             ],
-            "cta": "Offre et facturation · documentation en anglais"
+            "cta": "Acheter dans l’app web"
         }
     }
 },
