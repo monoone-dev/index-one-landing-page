@@ -50,7 +50,7 @@ usePageSeo({
       <h1>How IndexOne works</h1>
       <p class="hero__lead">
         Record and transcribe meetings on your Mac, ask Ivy about them, work with your team in organizations,
-        and choose which AI runs where. Every page here describes the app as it ships.
+        and choose which AI runs where. Release documentation describes the shipped app. Plans and billing is a clearly marked preview of the forthcoming cloud offer.
       </p>
       <p class="hero__version">
         <UIcon name="i-lucide-badge-check" class="size-4 shrink-0" />

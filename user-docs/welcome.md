@@ -6,6 +6,9 @@ keywords: welcome, overview, getting started, local-first, on this mac, personal
 
 IndexOne records your meetings, transcribes them and writes a clean note from each one. Out of the box this all happens on your Mac, and your notes can leave the app as plain Markdown whenever you want them.
 
+
+For the forthcoming cloud offer, see [Plans and billing](/docs/plans-and-billing/). Standard cloud content is stored and processed on servers readable by the operator, not end-to-end encrypted. Local Mac locks do not change that boundary. Pattern masking is not complete anonymization.
+
 ## Three places your work lives
 
 The space switcher at the top of the sidebar picks where you work. There are three kinds of place, and each one says in a short line where its notes live.

@@ -19,7 +19,7 @@ const content: SiteContent = {
     pricing: {
       breadcrumb: 'Preise',
       title: 'IndexOne: Preise und Vergleich mit Obsidian, Notion & Co.',
-      description: 'IndexOne ist im Early Access kostenlos. Vergleiche es mit Obsidian, Notion, Evernote, Bear und Amie: Aufnahme, Transkription, lokale KI und Markdown.',
+      description: 'IndexOne ist auf dem Mac kostenlos; optionale Cloud-Pläne ab 49 PLN/Monat. Vergleiche es mit Obsidian, Notion, Evernote, Bear und Amie: Aufnahme, Transkription, lokale KI und Markdown.',
     },
     changelog: {
       breadcrumb: 'Änderungen',
@@ -136,6 +136,23 @@ const content: SiteContent = {
     ],
   },
   privacy: {
+    lifecycle: {
+      "title": "Datenlebenszyklus · Vorschau des Cloud-Angebots",
+      "items": [
+        {
+          "title": "Wie lange bleiben Daten gespeichert?",
+          "body": "Cloud-Audio bleibt standardmäßig 30 Tage gespeichert; für Personal und Team sind bis zu 90 Tage innerhalb des Speicherlimits geplant. Notizen, Transkripte und gewöhnliche Dateien bleiben innerhalb des Speicherlimits, bis ihr Eigentümer sie löscht."
+        },
+        {
+          "title": "Was passiert bei einem Downgrade?",
+          "body": "Eine Kündigung wirkt zum Ende des bezahlten Zeitraums. Lesen, Exportieren und Löschen bleiben mit Zugriffsberechtigung verfügbar."
+        },
+        {
+          "title": "Wer behält Organisationsdaten, wenn ich gehe?",
+          "body": "Organisationsinhalte bleiben bei der Organisation. Nach Austritt oder Entzug des Zugriffs kannst du sie nicht mehr lesen oder exportieren."
+        }
+      ]
+    },
     eyebrow: 'Sicherheit & Datenschutz',
     title: 'Datenschutz ist keine Einstellung. Er ist die Architektur.',
     leadHtml: 'Im Bereich On this Mac können Transkription, Suche und Ivy on this Mac <b>ganz ohne Netzwerk</b> laufen – sobald du die zwei Dinge abschaltest, die standardmäßig nach außen gehen: die Prüfung auf eine neue Version beim Start und eine tägliche Nutzungsmeldung. Wenn du Claude Code oder Codex wählst, stehen Zustimmung und eine Schwärzungs-Firewall vor diesem Datenabfluss.',
@@ -306,60 +323,81 @@ const content: SiteContent = {
       },
     },
   },
+  offer: {
+    "web": "Web-App öffnen",
+    "status": "Geplantes Cloud-Angebot. Kauf und Testaktivierung sind hier noch nicht verfügbar. Lokale Mac-Funktionen bleiben verfügbar.",
+    "monthly": "Monatlich in PLN",
+    "tax": "Personal inklusive Steuer. Team ohne Steuer: mindestens 2 Plätze = 150 PLN netto/Monat. Bei 23% MwSt.: insgesamt 184,50 PLN (92,25 pro Platz). Die Steuer kann abweichen; die App muss vor dem Kauf den Endbetrag zeigen.",
+    "trialTitle": "Ein Cloud-Test",
+    "trial": "Aktiviere einmalig eine Testphase ohne Karte pro verifiziertem persönlichen Konto: 60 berechnete Minuten Cloud-Transkription und 100.000 Ivy-Einheiten, gültig für 30 Tage. Jede Aufnahme darf bis zu 30 Minuten dauern.",
+    "meterTitle": "So wird Transkription berechnet",
+    "meter": "Cloud-Transkription berechnet mindestens 20 Minuten pro Aufnahme, sodass fünfzehn 2-Minuten-Aufnahmen alle fünf Stunden von Personal verbrauchen. Lokale Transkription und vorhandene Transkripte verbrauchen dieses Kontingent nicht.",
+    "privacyTitle": "Lokal und Cloud",
+    "privacy": "Lokale Mac-Verarbeitung bleibt auf dem Mac. Standard-Cloud speichert und verarbeitet Inhalte auf für den Betreiber lesbaren Servern, ohne Ende-zu-Ende-Verschlüsselung. Mustermaskierung ist keine vollständige Anonymisierung. Ein Plan gewährt keinen Zugriff auf private Bereiche.",
+    "after": "Nach dem Test bleiben Notizen, Bearbeitung, normale Suche, Sync, Lesen und Export im Speicherlimit Free. Nur neue kostenintensive Cloud-KI und ASR benötigen Budget.",
+    "team": "Personal und jede Organisation haben eigene Abos und Guthaben. Team: 2,25 Mio. interaktive Ivy-Einheiten und 250.000 Automationseinheiten pro Platz; Automationen teilen einen Pool. ASR pro Platz, Speicher gemeinsam. Plätze ändern keine Zugriffsrechte. Bis zu 2 kostenlose Organisationen mit je 5 Mitgliedern teilen den Kontospeicher des Gründers, ohne weiteren Test.",
+    "lifecycle": "Cloud-Audio: standardmäßig 30 Tage; Free 7/14/30, bezahlt auch 90. Papierkorb: 30 Tage. Kündigung löscht keine Inhalte; bezahlte Rechte bis Periodenende. Bei Überschreitung nach Downgrade: Lesen/Export und 90 Tage Schutz. Audio vor Ablauf exportieren.",
+    "docs": "Pläne und Abrechnung · englische Dokumentation",
+    "comparison": "Pläne vergleichen",
+    "local": "Lokale Mac-Werkzeuge",
+    "basics": "Cloud-Notizen und Sync",
+    "ivy": "Cloud-Ivy-Einheiten / Monat",
+    "asr": "Berechnetes Cloud-ASR / Monat",
+    "storage": "Cloud-Speicher",
+    "included": "Enthalten",
+    "once": "Ein Test",
+    "seat": "pro Platz",
+    "unit": "Ivy-Einheiten sind ein Verarbeitungsbudget, keine rohen Modelltoken oder garantierte Antwortzahl. GB = eine Milliarde Bytes."
+},
   pricing: {
-    eyebrow: 'Preise',
-    title: 'Kostenlos im Early Access.',
-    lead: 'Lokale Aufnahme, Transkription, Notizen und Markdown-Exporte brauchen weder Konto noch Zahlung. Preise und Verfügbarkeit nach dem Early Access werden separat bekannt gegeben.',
-    plans: {
-      free: {
-        name: 'Free',
-        badge: 'Jetzt verfügbar',
-        price: '$0',
-        per: '/ Early Access',
-        tagline: 'Lokale Aufnahme, Transkription, Notizen und Exporte.',
-        points: [
-          'Unbegrenzte Aufnahme und Transkription auf dem Gerät',
-          'Ivy im Meeting, dazu Fragen an deinen Vault',
-          'Semantische Suche und der automatische Wissensgraph',
-          'Eigenständige Notizen mit einem Editor, den Ivy unterstützt',
-          'Personal- und Organisationsbereiche wie bei IndexOne im Web: direkt hinein aufnehmen, Notizen in Ordnern ablegen, mit verschlüsselter Kopie auf deinem Mac (Konto erforderlich)',
-          'Workspaces, frei kombinierbare Projekte und Offline-Import aus Notion / Obsidian / Apple Notes / Markdown',
-          'Touch-ID-Sperre pro Workspace und pro Ordner mit AES-256-Verschlüsselung',
-          'Automatisches Wiedersperren bei Bildschirmfreigabe',
-          'Lokaler MCP-Server und Markdown-Export',
-          'Plugins wie Languages und Ivy skills, installiert dort, wo du sie brauchst (Konto erforderlich)',
-        ],
-        cta: 'Für macOS laden',
-      },
-      pro: {
-        name: 'Pro',
-        badge: 'Demnächst',
-        price: 'Geplant',
-        tagline: 'Preise und Verfügbarkeit folgen.',
-        points: [
-          'Alles aus Free',
-          'Ende-zu-Ende-verschlüsselter Sync zwischen deinen Macs und deinem iPhone',
-          'Verschlüsseltes Cloud-Backup',
-          'Optional verwaltetes Ivy mit niedriger Latenz (geschwärzt)',
-          'Eigene Rezepte und Automationen',
-        ],
-        cta: 'Auf GitHub folgen',
-      },
-      team: {
-        name: 'Team',
-        badge: 'Demnächst',
-        price: 'Geplant',
-        tagline: 'Preise und Verfügbarkeit folgen.',
-        points: [
-          'Alles aus Pro',
-          'SSO und SCIM-Provisionierung',
-          'Sicherheitsrichtlinien, Aufbewahrung und Audit-Log',
-          'Priorisierter Support und SLA',
-        ],
-        cta: 'Sprich mit uns',
-      },
-    },
-  },
+    "eyebrow": "Monatlich in PLN",
+    "title": "Wähle den Ort für deine Arbeit.",
+    "lead": "Free auf dem Mac. Optionale Cloud mit klaren Grenzen.",
+    "plans": {
+        "free": {
+            "name": "Free",
+            "badge": "Auf Mac verfügbar",
+            "price": "0 PLN",
+            "per": "Monatlich in PLN",
+            "tagline": "Lokal ohne Planlimit; Hardwaregrenzen gelten.",
+            "points": [
+                "Lokale Mac-Werkzeuge",
+                "Cloud-Notizen und Sync",
+                "1 GB",
+                "Ein Test"
+            ],
+            "cta": ""
+        },
+        "personal": {
+            "name": "Personal",
+            "badge": "Geplant",
+            "price": "49 PLN",
+            "per": "inkl. Steuer / Monat",
+            "tagline": "Für deinen persönlichen Cloud-Bereich.",
+            "points": [
+                "Lokale Mac-Werkzeuge",
+                "Cloud-Notizen und Sync",
+                "20 GB",
+                "1.2M Ivy · 5 h ASR"
+            ],
+            "cta": "Pläne und Abrechnung · englische Dokumentation"
+        },
+        "team": {
+            "name": "Team",
+            "badge": "Geplant",
+            "price": "75 PLN",
+            "per": "netto / Platz / Monat",
+            "tagline": "Für Organisationen ab zwei Plätzen.",
+            "points": [
+                "Lokale Mac-Werkzeuge",
+                "Cloud-Notizen und Sync",
+                "50 GB · pro Platz",
+                "2.5M Ivy · 10 h ASR"
+            ],
+            "cta": "Pläne und Abrechnung · englische Dokumentation"
+        }
+    }
+},
   compare: {
     eyebrow: 'Wettbewerb',
     title: 'IndexOne im Vergleich.',
@@ -404,7 +442,7 @@ const content: SiteContent = {
       },
       'price': {
         criterion: 'Preis',
-        cells: ['Kostenlos im Early Access', 'Kostenlos; Sync ab $4/Monat bei jährlicher Zahlung', 'Kostenlos; KI und Meeting-Notizen erfordern Business, $20/Monat bei jährlicher Zahlung', 'Kostenlos bis 50 Notizen; Starter $99/Jahr', 'Kostenlos; Pro $29.99/Jahr', 'Kostenlos mit 25 Notiz-Credits; Pro ab €20/Monat bei jährlicher Zahlung'],
+        cells: ['Kostenlos auf dem Mac; Cloud Personal 49 PLN/Monat, Team 75 PLN netto pro Platz', 'Kostenlos; Sync ab $4/Monat bei jährlicher Zahlung', 'Kostenlos; KI und Meeting-Notizen erfordern Business, $20/Monat bei jährlicher Zahlung', 'Kostenlos bis 50 Notizen; Starter $99/Jahr', 'Kostenlos; Pro $29.99/Jahr', 'Kostenlos mit 25 Notiz-Credits; Pro ab €20/Monat bei jährlicher Zahlung'],
       },
     },
   },
@@ -415,7 +453,7 @@ const content: SiteContent = {
     items: [
       {
         question: 'Ist IndexOne kostenlos?',
-        answer: 'Ja, während des Early Access. Lokale Aufnahme, Transkription, Notizen und Exporte brauchen weder Konto noch Zahlung. Preise nach dem Early Access werden separat bekannt gegeben.',
+        answer: 'Ja, auf dem Mac. Lokale Aufnahme, Transkription, Notizen und Exporte brauchen weder Konto noch Zahlung. Optionale Cloud-Pläne (Personal 49 PLN/Monat, Team 75 PLN netto pro Platz) bringen Cloud-Transkription, Ivy in der Cloud und mehr Speicher.',
       },
       {
         question: 'Geht mein Audio in die Cloud?',
@@ -479,5 +517,29 @@ const content: SiteContent = {
     legalHtml: 'macOS-first · Ivy auf dem Gerät · local-first · gebaut mit Tauri, Angular und Rust · kostenlos für macOS · © {year} <a href="{authors}">MonoOne</a> · Text <a href="{license}">CC BY 4.0</a>',
   },
 }
+
+// The published offer is a preview; release history remains unchanged.
+content.pricing.plans.free.cta = content.hero.download
+content.hero.subHtml = content.pricing.lead + ' ' + content.pricing.plans.free.tagline
+content.unique.eyebrow = content.nav.features
+content.unique.title = content.features.title
+content.unique.lead = content.pricing.lead
+content.features.lead = content.pricing.lead
+content.cta.compare = content.offer.comparison
+content.cta.lead = content.pricing.lead
+content.meta.home.description = content.pricing.lead
+content.meta.features.description = content.pricing.lead + ' ' + content.offer.local
+content.meta.privacy.description = content.offer.privacy
+content.meta.pricing.title = 'IndexOne — Free / Personal / Team'
+content.meta.pricing.description = content.pricing.lead + ' 49 PLN / 75 PLN. ' + content.offer.status
+content.faq.items[0] = { question: "Was bleibt nach der Testphase im Free-Plan enthalten?", answer: content.offer.after }
+content.faq.items.push(
+  { question: content.offer.trialTitle, answer: content.offer.trial },
+  { question: content.offer.meterTitle, answer: content.offer.meter },
+  { question: content.offer.privacyTitle, answer: content.offer.privacy },
+  { question: "Wer bezahlt Team?", answer: content.offer.team },
+  ...content.privacy.lifecycle.items.map(item => ({ question: item.title, answer: item.body })),
+)
+content.compare.rows.price.cells[0] = 'Free · Personal 49 PLN · Team 75 PLN'
 
 export default content

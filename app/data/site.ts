@@ -15,6 +15,7 @@ export const site = {
   minMacOS: '13.4',
   links: {
     repo,
+    web: 'https://app.index-one.io/',
     download: `${repo}/releases/latest`,
     releases: `${repo}/releases`,
     discussions: `${repo}/discussions`,

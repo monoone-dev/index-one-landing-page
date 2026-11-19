@@ -19,7 +19,7 @@ const content: SiteContent = {
     pricing: {
       breadcrumb: 'Pricing',
       title: 'IndexOne pricing — compared with Obsidian, Notion and others',
-      description: 'IndexOne is free during early access. Compare it with Obsidian, Notion, Evernote, Bear and Amie on recording, transcription, on-device AI and Markdown.',
+      description: 'IndexOne is free on the Mac; optional cloud plans start at 49 PLN/month. Compare it with Obsidian, Notion, Evernote, Bear and Amie on recording, transcription, on-device AI and Markdown.',
     },
     changelog: {
       breadcrumb: 'Changelog',
@@ -136,6 +136,23 @@ const content: SiteContent = {
     ],
   },
   privacy: {
+    lifecycle: {
+      "title": "Data lifecycle · forthcoming cloud offer",
+      "items": [
+        {
+          "title": "How long is data kept?",
+          "body": "Cloud audio defaults to 30 days, with up to 90 days planned for Personal and Team within storage limits. Notes, transcripts and ordinary files stay until their owner deletes them, within storage limits."
+        },
+        {
+          "title": "What happens after a downgrade?",
+          "body": "Cancellation takes effect at the end of the paid period. Read, export and delete remain available for content you can access."
+        },
+        {
+          "title": "Who keeps organization data when I leave?",
+          "body": "Organization content stays with the organization. Leaving or losing access removes your ability to read or export it."
+        }
+      ]
+    },
     eyebrow: 'Security & Privacy',
     title: 'Privacy isn\'t a setting. It\'s the architecture.',
     leadHtml: 'In the On this Mac space, transcription, search and Ivy on this Mac can run <b>with no network at all</b> — once you switch off the two things that reach out by default: a launch-time check for a new version and a daily usage message. If you choose Claude Code or Codex, consent and a redaction firewall sit in front of that egress.',
@@ -306,60 +323,81 @@ const content: SiteContent = {
       },
     },
   },
+  offer: {
+    "web": "Open web app",
+    "status": "Planned cloud offer. Purchases and trial activation are not available here. Local Mac features remain available.",
+    "monthly": "Monthly, in PLN",
+    "tax": "Personal includes tax. Team excludes tax: minimum 2 seats = 150 PLN net/month. At 23% VAT: 184.50 PLN total (92.25 per seat). Your tax may differ; the app must show the final total before purchase.",
+    "trialTitle": "One cloud trial",
+    "trial": "Explicitly activate one card-free trial per verified personal account: 60 billed minutes of cloud transcription and 100,000 Ivy units, valid for 30 days. Each recording can be up to 30 minutes long.",
+    "meterTitle": "How transcription is counted",
+    "meter": "Cloud transcription counts at least 20 minutes per recording, so fifteen 2-minute recordings use all five hours of Personal. Local transcription and existing transcripts use none of this allowance.",
+    "privacyTitle": "Local and cloud are different",
+    "privacy": "Local Mac processing stays on your Mac. Standard account cloud stores and processes content on servers readable by the operator; it is not end-to-end encrypted. Pattern masking is not full anonymization. Paid plans never grant access to private spaces.",
+    "after": "After the trial, basic notes, editing, ordinary search, sync, reading and export remain Free within storage limits. Only new costly cloud AI and ASR need a budget.",
+    "team": "Personal and each organization have separate subscriptions and balances. Team has 2.25 million interactive Ivy units plus 250,000 automation units per seat; automation units form a shared pool. ASR is per seat; storage is shared. A seat does not change access rights. Free organizations: up to 2 with 5 members each, sharing the founder’s account storage, without an extra trial.",
+    "lifecycle": "Cloud audio: 30 days by default; Free can choose 7/14/30 days, paid plans also 90. Trash: 30 days. Canceling does not delete content; paid rights last to period end. Over-quota downgrades preserve reading/export with 90 days of protection. Export audio before its retention expires.",
+    "docs": "Plans and billing · English docs",
+    "comparison": "Compare the plans",
+    "local": "Local Mac tools",
+    "basics": "Basic cloud notes and sync",
+    "ivy": "Cloud Ivy units / month",
+    "asr": "Billed cloud ASR / month",
+    "storage": "Cloud storage",
+    "included": "Included",
+    "once": "One trial",
+    "seat": "per seat",
+    "unit": "Ivy units are a processing budget, not raw model tokens or a guaranteed number of answers. GB = 1 billion bytes."
+},
   pricing: {
-    eyebrow: 'Pricing',
-    title: 'Free during early access.',
-    lead: 'Local recording, transcription, notes and Markdown exports need no account or payment. Pricing and availability beyond early access will be announced separately.',
-    plans: {
-      free: {
-        name: 'Free',
-        badge: 'Available now',
-        price: '$0',
-        per: '/ early access',
-        tagline: 'Local recording, transcription, notes and exports.',
-        points: [
-          'Unlimited on-device recording and transcription',
-          'Ivy in meetings, plus Ask your vault',
-          'Semantic search and the automatic knowledge graph',
-          'Standalone notes with an Ivy-assisted editor',
-          'Personal and organization spaces, the same as on IndexOne on the web: record straight into them, file notes in folders, and keep an encrypted copy on your Mac (account required)',
-          'Workspaces, composable projects, and offline Notion / Obsidian / Apple Notes / Markdown import',
-          'Per-Workspace and per-folder Touch ID lock with AES-256 encryption',
-          'Screen-share auto-relock',
-          'Local MCP server and Markdown export',
-          'Plugins such as Languages and Ivy skills, installed where you want them (account required)',
-        ],
-        cta: 'Download for macOS',
-      },
-      pro: {
-        name: 'Pro',
-        badge: 'Coming soon',
-        price: 'Planned',
-        tagline: 'Pricing and availability to be announced.',
-        points: [
-          'Everything in Free',
-          'End-to-end encrypted sync across your Macs and iPhone',
-          'Encrypted cloud backup',
-          'Optional low-latency managed Ivy (redacted)',
-          'Custom recipes and automations',
-        ],
-        cta: 'Follow on GitHub',
-      },
-      team: {
-        name: 'Team',
-        badge: 'Coming soon',
-        price: 'Planned',
-        tagline: 'Pricing and availability to be announced.',
-        points: [
-          'Everything in Pro',
-          'SSO and SCIM provisioning',
-          'Security policy, retention and audit log',
-          'Priority support and SLA',
-        ],
-        cta: 'Talk to us',
-      },
-    },
-  },
+    "eyebrow": "Monthly, in PLN",
+    "title": "Choose where your work lives.",
+    "lead": "Free on your Mac. Optional cloud with clear limits.",
+    "plans": {
+        "free": {
+            "name": "Free",
+            "badge": "Available on Mac",
+            "price": "0 PLN",
+            "per": "Monthly, in PLN",
+            "tagline": "Local work without a plan limit; hardware limits still apply.",
+            "points": [
+                "Local Mac tools",
+                "Basic cloud notes and sync",
+                "1 GB",
+                "One trial"
+            ],
+            "cta": ""
+        },
+        "personal": {
+            "name": "Personal",
+            "badge": "Planned",
+            "price": "49 PLN",
+            "per": "tax included / month",
+            "tagline": "For your personal cloud workspace.",
+            "points": [
+                "Local Mac tools",
+                "Basic cloud notes and sync",
+                "20 GB",
+                "1.2M Ivy · 5 h ASR"
+            ],
+            "cta": "Plans and billing · English docs"
+        },
+        "team": {
+            "name": "Team",
+            "badge": "Planned",
+            "price": "75 PLN",
+            "per": "net / seat / month",
+            "tagline": "For an organization, from two seats.",
+            "points": [
+                "Local Mac tools",
+                "Basic cloud notes and sync",
+                "50 GB · per seat",
+                "2.5M Ivy · 10 h ASR"
+            ],
+            "cta": "Plans and billing · English docs"
+        }
+    }
+},
   compare: {
     eyebrow: 'Competition',
     title: 'How IndexOne compares.',
@@ -404,7 +442,7 @@ const content: SiteContent = {
       },
       'price': {
         criterion: 'Price',
-        cells: ['Free during early access', 'Free; Sync from $4/month billed yearly', 'Free; AI and meeting notes need Business, $20/month billed yearly', 'Free up to 50 notes; Starter $99/year', 'Free; Pro $29.99/year', 'Free with 25 note credits; Pro from €20/month billed yearly'],
+        cells: ['Free on the Mac; cloud Personal 49 PLN/month, Team 75 PLN net per seat', 'Free; Sync from $4/month billed yearly', 'Free; AI and meeting notes need Business, $20/month billed yearly', 'Free up to 50 notes; Starter $99/year', 'Free; Pro $29.99/year', 'Free with 25 note credits; Pro from €20/month billed yearly'],
       },
     },
   },
@@ -415,7 +453,7 @@ const content: SiteContent = {
     items: [
       {
         question: 'Is IndexOne free?',
-        answer: 'Yes, during early access. Local recording, transcription, notes and exports need no account and no payment. Pricing beyond early access will be announced separately.',
+        answer: 'Yes, on the Mac. Local recording, transcription, notes and exports need no account and no payment. Optional cloud plans (Personal 49 PLN/month, Team 75 PLN net per seat) add cloud transcription, Ivy in the cloud and more storage.',
       },
       {
         question: 'Does my audio go to the cloud?',
@@ -479,5 +517,29 @@ const content: SiteContent = {
     legalHtml: 'macOS-first · on-device Ivy · local-first · built with Tauri, Angular and Rust · free for macOS · © {year} <a href="{authors}">MonoOne</a> · text <a href="{license}">CC BY 4.0</a>',
   },
 }
+
+// The published offer is a preview; release history remains unchanged.
+content.pricing.plans.free.cta = content.hero.download
+content.hero.subHtml = content.pricing.lead + ' ' + content.pricing.plans.free.tagline
+content.unique.eyebrow = content.nav.features
+content.unique.title = content.features.title
+content.unique.lead = content.pricing.lead
+content.features.lead = content.pricing.lead
+content.cta.compare = content.offer.comparison
+content.cta.lead = content.pricing.lead
+content.meta.home.description = content.pricing.lead
+content.meta.features.description = content.pricing.lead + ' ' + content.offer.local
+content.meta.privacy.description = content.offer.privacy
+content.meta.pricing.title = 'IndexOne — Free / Personal / Team'
+content.meta.pricing.description = content.pricing.lead + ' 49 PLN / 75 PLN. ' + content.offer.status
+content.faq.items[0] = { question: "What stays Free after the trial?", answer: content.offer.after }
+content.faq.items.push(
+  { question: content.offer.trialTitle, answer: content.offer.trial },
+  { question: content.offer.meterTitle, answer: content.offer.meter },
+  { question: content.offer.privacyTitle, answer: content.offer.privacy },
+  { question: "Who pays for Team?", answer: content.offer.team },
+  ...content.privacy.lifecycle.items.map(item => ({ question: item.title, answer: item.body })),
+)
+content.compare.rows.price.cells[0] = 'Free · Personal 49 PLN · Team 75 PLN'
 
 export default content

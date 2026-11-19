@@ -149,7 +149,6 @@ export function softwareApplicationSchema(extra: Record<string, unknown> = {}) {
     'releaseNotes': absoluteUrl('/changelog/'),
     'softwareHelp': { '@type': 'CreativeWork', 'name': `${site.name} documentation`, 'url': absoluteUrl('/docs/') },
     'isAccessibleForFree': true,
-    'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'USD' },
     'publisher': { '@id': organizationId },
     ...extra,
   }

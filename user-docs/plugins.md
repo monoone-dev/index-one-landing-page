@@ -45,7 +45,7 @@ All three are free.
 | --- | --- | --- |
 | Screen recording | For you or an organization, on the Mac and the web | Records your screen with a meeting and adds frames from it to the note. Until it is installed, the screen recording controls are hidden. On the Mac, voice + screen needs macOS 14 or later. See [Screen recording](/docs/screen-recording/). |
 | Languages | For you or an organization, on the Mac and the web | Writes notes in the language you choose, adds a second language, translates meetings later and keeps a glossary. See [Languages](/docs/languages/). |
-| Meeting bot | Organizations only; runs on IndexOne on the web | A bot that joins Google Meet calls for the organization. You can install it from the Mac, but it works on the web. |
+| Meeting bot | Organizations only; runs on IndexOne on the web | Not available in the launch offer. A listing is not confirmation of a ready meeting bot. |
 
 ## Plugin settings stay in Settings
 

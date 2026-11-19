@@ -26,7 +26,7 @@ export type PrivacyCardId = 'offline' | 'at-rest' | 'gated' | 'seals' | 'screen-
 
 export type ProviderId = 'on-device' | 'ivy-web' | 'claude-code' | 'codex' | 'local-server'
 
-export type PlanId = 'free' | 'pro' | 'team'
+export type PlanId = 'free' | 'personal' | 'team'
 
 export type ComparisonRowId = 'capture' | 'local-transcription' | 'local-ai' | 'ask-all' | 'local-data' | 'markdown' | 'encryption' | 'platforms' | 'price'
 
@@ -96,6 +96,7 @@ export interface SiteContent {
     steps: [Card & { label: string }, Card & { label: string }, Card & { label: string }]
   }
   privacy: {
+    lifecycle: { title: string; items: [Card, Card, Card] }
     eyebrow: string
     title: string
     leadHtml: string
@@ -114,6 +115,32 @@ export interface SiteContent {
     title: string
     lead: string
     items: Record<FeatureId, FeatureCopy>
+  }
+  offer: {
+    web: string
+    status: string
+    monthly: string
+    tax: string
+    trialTitle: string
+    trial: string
+    meterTitle: string
+    meter: string
+    privacyTitle: string
+    privacy: string
+    after: string
+    team: string
+    lifecycle: string
+    docs: string
+    comparison: string
+    local: string
+    basics: string
+    ivy: string
+    asr: string
+    storage: string
+    included: string
+    once: string
+    seat: string
+    unit: string
   }
   pricing: {
     eyebrow: string
