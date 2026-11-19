@@ -12,8 +12,8 @@ The cloud plans below follow catalog **2026-11-15.v1**. Buy a plan, start the tr
 | --- | --- | --- | --- |
 | Monthly price | 0 PLN | 49 PLN including tax | 75 PLN excluding tax per seat, minimum 2 |
 | Basic cloud notes, editing, search, sync, reading and export | Included | Included | Included, subject to access rights |
-| Cloud Ivy | One trial | 1.2 million units/month | 2.5 million units/seat/month |
-| Billed cloud transcription | One trial | 5 hours/month | 10 hours/seat/month |
+| Cloud Ivy | 200,000 units/month, plus one trial | 1.2 million units/month | 2.5 million units/seat/month |
+| Billed cloud transcription | 2 hours/month, plus one trial | 10 hours/month | 15 hours/seat/month |
 | Cloud storage | 1 GB | 20 GB | 50 GB × paid seats, shared |
 
 Team starts at 150 PLN net per month. At an illustrative 23% VAT rate, this is 92.25 PLN per seat and 184.50 PLN for two. Your applicable tax can differ. The application must show seats, tax and the final total before any purchase. No annual plans, other currencies, paid add-ons or meeting bot are offered at launch.
@@ -24,11 +24,11 @@ Ivy units measure a processing budget, not raw model tokens or a guaranteed numb
 
 The trial is once per verified personal account, without a card: explicitly activate 60 billed minutes of ASR and 100,000 Ivy units, valid for 30 days. Each trial recording can contain at most 30 actual minutes. Organizations, seat rotation and address changes do not grant another trial. Activation depends on trial availability.
 
-When the trial expires or is spent, ordinary notes, editing, search, sync, reading and export remain Free within storage limits. Only new costly cloud processing needs more budget.
+When the trial expires or is spent, the Free monthly allowance continues: 200,000 Ivy units and 2 hours of cloud transcription each calendar month (UTC), for personal accounts. Ordinary notes, editing, search, sync, reading and export remain Free within storage limits.
 
 ## Minimum transcription charge
 
-Each distinct cloud ASR recording/job bills at least **20 minutes**, then actual duration in seconds. A 2-minute recording uses 20 minutes; a 21-minute recording uses 21. Fifteen separate 2-minute files consume all five hours of Personal.
+Each distinct cloud ASR recording/job bills at least **20 minutes**, then actual duration in seconds. A 2-minute recording uses 20 minutes; a 21-minute recording uses 21. Thirty separate 2-minute files consume all ten hours of Personal.
 
 Retries of the same job do not bill the minimum again. Deliberately reprocessing with another model is a new job requiring confirmation. Local transcription and uploading a completed transcript do not consume cloud ASR.
 

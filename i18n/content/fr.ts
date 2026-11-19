@@ -331,7 +331,7 @@ const content: SiteContent = {
     "trialTitle": "Un essai cloud",
     "trial": "Activez explicitement un seul essai sans carte par compte personnel vérifié : 60 minutes facturées de transcription cloud et 100 000 unités Ivy, valables 30 jours. Chaque enregistrement peut durer jusqu’à 30 minutes.",
     "meterTitle": "Calcul de la transcription",
-    "meter": "La transcription cloud compte au moins 20 minutes par enregistrement : quinze enregistrements de 2 minutes consomment les cinq heures de Personal. La transcription locale et les transcriptions existantes ne consomment pas ce quota.",
+    "meter": "La transcription cloud compte au moins 20 minutes par enregistrement : trente enregistrements de 2 minutes consomment les dix heures de Personal. La transcription locale et les transcriptions existantes ne consomment pas ce quota.",
     "privacyTitle": "Local et cloud",
     "privacy": "Le traitement local Mac reste sur le Mac. Le cloud standard stocke et traite les contenus sur des serveurs lisibles par l’opérateur, sans chiffrement de bout en bout. Le masquage de motifs n’est pas une anonymisation complète. Un abonnement ne donne pas accès aux espaces privés.",
     "after": "Après l’essai, notes, édition, recherche classique, sync, lecture et export restent Free dans la limite du stockage. Seuls les nouveaux traitements cloud coûteux IA et ASR demandent un budget.",
@@ -364,7 +364,7 @@ const content: SiteContent = {
                 "Outils Mac locaux",
                 "Notes cloud et synchronisation",
                 "1 GB",
-                "Un essai"
+                "200k Ivy · 2 h ASR"
             ],
             "cta": ""
         },
@@ -378,7 +378,7 @@ const content: SiteContent = {
                 "Outils Mac locaux",
                 "Notes cloud et synchronisation",
                 "20 GB",
-                "1.2M Ivy · 5 h ASR"
+                "1.2M Ivy · 10 h ASR"
             ],
             "cta": "Acheter dans l’app web"
         },
@@ -392,7 +392,7 @@ const content: SiteContent = {
                 "Outils Mac locaux",
                 "Notes cloud et synchronisation",
                 "50 GB · par place",
-                "2.5M Ivy · 10 h ASR"
+                "2.5M Ivy · 15 h ASR"
             ],
             "cta": "Acheter dans l’app web"
         }

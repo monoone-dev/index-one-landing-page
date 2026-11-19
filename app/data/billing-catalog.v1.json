@@ -33,8 +33,8 @@
       },
       "minSeats": 1,
       "limits": {
-        "ivyUnits": 0,
-        "asrMs": 0,
+        "ivyUnits": 200000,
+        "asrMs": 7200000,
         "storageBytes": 1000000000
       },
       "automationIvyUnitsPerSeat": 0,
@@ -61,7 +61,7 @@
       "minSeats": 1,
       "limits": {
         "ivyUnits": 1200000,
-        "asrMs": 18000000,
+        "asrMs": 36000000,
         "storageBytes": 20000000000
       },
       "automationIvyUnitsPerSeat": 0,
@@ -89,7 +89,7 @@
       "minSeats": 2,
       "limits": {
         "ivyUnits": 2500000,
-        "asrMs": 36000000,
+        "asrMs": 54000000,
         "storageBytes": 50000000000
       },
       "automationIvyUnitsPerSeat": 250000,

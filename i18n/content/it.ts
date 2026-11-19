@@ -331,7 +331,7 @@ const content: SiteContent = {
     "trialTitle": "Una prova cloud",
     "trial": "Attiva esplicitamente una sola prova senza carta per account personale verificato: 60 minuti fatturati di trascrizione cloud e 100.000 unità Ivy, validi per 30 giorni. Ogni registrazione può durare fino a 30 minuti.",
     "meterTitle": "Calcolo della trascrizione",
-    "meter": "La trascrizione cloud conta almeno 20 minuti per registrazione, quindi quindici registrazioni da 2 minuti consumano tutte le cinque ore di Personal. La trascrizione locale e le trascrizioni esistenti non consumano questa quota.",
+    "meter": "La trascrizione cloud conta almeno 20 minuti per registrazione, quindi trenta registrazioni da 2 minuti consumano tutte le dieci ore di Personal. La trascrizione locale e le trascrizioni esistenti non consumano questa quota.",
     "privacyTitle": "Locale e cloud",
     "privacy": "L’elaborazione locale Mac resta sul Mac. Il cloud standard memorizza ed elabora contenuti su server leggibili dall’operatore, senza crittografia end-to-end. Mascherare schemi non è anonimizzazione completa. Un piano non concede accesso a spazi privati.",
     "after": "Dopo la prova, note, modifica, ricerca ordinaria, sync, lettura ed esportazione restano Free entro lo spazio disponibile. Solo nuove attività costose IA e ASR cloud richiedono budget.",
@@ -364,7 +364,7 @@ const content: SiteContent = {
                 "Strumenti Mac locali",
                 "Note cloud e sincronizzazione",
                 "1 GB",
-                "Una prova"
+                "200k Ivy · 2 h ASR"
             ],
             "cta": ""
         },
@@ -378,7 +378,7 @@ const content: SiteContent = {
                 "Strumenti Mac locali",
                 "Note cloud e sincronizzazione",
                 "20 GB",
-                "1.2M Ivy · 5 h ASR"
+                "1.2M Ivy · 10 h ASR"
             ],
             "cta": "Acquista nell’app web"
         },
@@ -392,7 +392,7 @@ const content: SiteContent = {
                 "Strumenti Mac locali",
                 "Note cloud e sincronizzazione",
                 "50 GB · per posto",
-                "2.5M Ivy · 10 h ASR"
+                "2.5M Ivy · 15 h ASR"
             ],
             "cta": "Acquista nell’app web"
         }
