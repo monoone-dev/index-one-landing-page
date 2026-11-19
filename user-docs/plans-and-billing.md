@@ -1,10 +1,10 @@
 ---
 title: Plans and billing
-description: Compare the planned Free, Personal and Team cloud allowances, the one-time trial, transcription billing, storage and export in IndexOne.
+description: Compare the Free, Personal and Team cloud allowances, the one-time trial, transcription billing, storage and export in IndexOne.
 keywords: pricing, plans, billing, trial, ASR, storage, cancellation, export, retention
 ---
 
-The cloud offer below is a preview of catalog **2026-11-15.v1**, not a feature of the documented Mac release. Purchases, trial activation and paid-plan management are not available on this website. Local Mac recording, transcription, Ivy, vault tools, MCP and export remain free without a plan quota, subject to hardware limits.
+The cloud plans below follow catalog **2026-11-15.v1**. Buy a plan, start the trial and manage your subscription in the [web app](https://app.index-one.io/) after signing in; payment runs through Stripe Checkout. Local Mac recording, transcription, Ivy, vault tools, MCP and export remain free without a plan quota, subject to hardware limits.
 
 ## Monthly plans in PLN
 
@@ -22,7 +22,7 @@ Ivy units measure a processing budget, not raw model tokens or a guaranteed numb
 
 ## One explicit trial
 
-The planned trial is once per verified personal account, without a card: explicitly activate 60 billed minutes of ASR and 100,000 Ivy units, valid for 30 days. Each trial recording can contain at most 30 actual minutes. Organizations, seat rotation and address changes do not grant another trial. Activation depends on trial availability.
+The trial is once per verified personal account, without a card: explicitly activate 60 billed minutes of ASR and 100,000 Ivy units, valid for 30 days. Each trial recording can contain at most 30 actual minutes. Organizations, seat rotation and address changes do not grant another trial. Activation depends on trial availability.
 
 When the trial expires or is spent, ordinary notes, editing, search, sync, reading and export remain Free within storage limits. Only new costly cloud processing needs more budget.
 
@@ -46,7 +46,7 @@ Cloud audio defaults to 30 days. Free may choose 7, 14 or 30 days; paid plans al
 
 Canceling preserves paid rights until the paid period ends. A failed renewal has a 14-day grace period under the billing contract. After downgrade, exceeding storage restricts new growth while reading, export and deletion remain available, with 90 days of downgrade protection. Billing does not automatically delete content. Existing accepted work and drafts must be preserved.
 
-There is no purchase or cancellation form here. Plan management will live in the authenticated application after rollout. Seller details, final terms, applicable taxes, support and refund policy must be confirmed before checkout is enabled; this preview does not promise refunds or an SLA. For current support, use [public discussions](https://github.com/monoone-dev/index-one-landing-page/discussions) without posting personal meeting content.
+Purchases, invoices, the payment method and cancellation are managed in the web app, which opens Stripe Checkout and the Stripe customer portal. Stripe shows the final price with tax before you pay. No SLA is promised. For current support, use [public discussions](https://github.com/monoone-dev/index-one-landing-page/discussions) without posting personal meeting content.
 
 ## Platforms and privacy
 

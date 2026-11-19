@@ -137,7 +137,7 @@ const content: SiteContent = {
   },
   privacy: {
     lifecycle: {
-      "title": "Ciclo di vita dei dati · futura offerta cloud",
+      "title": "Ciclo di vita dei dati · piani cloud",
       "items": [
         {
           "title": "Per quanto tempo vengono conservati i dati?",
@@ -325,7 +325,7 @@ const content: SiteContent = {
   },
   offer: {
     "web": "Apri app web",
-    "status": "Offerta cloud prevista. Acquisto e attivazione della prova non ancora disponibili qui. Le funzioni locali Mac restano disponibili.",
+    "status": "I piani cloud sono disponibili. Accedi all’app web per acquistare un piano, attivare la prova o gestire l’abbonamento. Le funzioni locali su Mac restano disponibili.",
     "monthly": "Mensile, in PLN",
     "tax": "Personal include le imposte. Team al netto: minimo 2 posti = 150 PLN netti/mese. Con IVA al 23%: 184,50 PLN totali (92,25 per posto). Le imposte possono variare; l’app deve mostrare il totale prima dell’acquisto.",
     "trialTitle": "Una prova cloud",
@@ -370,7 +370,7 @@ const content: SiteContent = {
         },
         "personal": {
             "name": "Personal",
-            "badge": "Previsto",
+            "badge": "Disponibile",
             "price": "49 PLN",
             "per": "imposte incluse / mese",
             "tagline": "Per il tuo spazio cloud personale.",
@@ -380,11 +380,11 @@ const content: SiteContent = {
                 "20 GB",
                 "1.2M Ivy · 5 h ASR"
             ],
-            "cta": "Piani e fatturazione · documentazione inglese"
+            "cta": "Acquista nell’app web"
         },
         "team": {
             "name": "Team",
-            "badge": "Previsto",
+            "badge": "Disponibile",
             "price": "75 PLN",
             "per": "netti / posto / mese",
             "tagline": "Per organizzazioni, da due posti.",
@@ -394,7 +394,7 @@ const content: SiteContent = {
                 "50 GB · per posto",
                 "2.5M Ivy · 10 h ASR"
             ],
-            "cta": "Piani e fatturazione · documentazione inglese"
+            "cta": "Acquista nell’app web"
         }
     }
 },

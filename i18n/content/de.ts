@@ -137,7 +137,7 @@ const content: SiteContent = {
   },
   privacy: {
     lifecycle: {
-      "title": "Datenlebenszyklus · Vorschau des Cloud-Angebots",
+      "title": "Datenlebenszyklus · Cloud-Pläne",
       "items": [
         {
           "title": "Wie lange bleiben Daten gespeichert?",
@@ -325,7 +325,7 @@ const content: SiteContent = {
   },
   offer: {
     "web": "Web-App öffnen",
-    "status": "Geplantes Cloud-Angebot. Kauf und Testaktivierung sind hier noch nicht verfügbar. Lokale Mac-Funktionen bleiben verfügbar.",
+    "status": "Cloud-Pläne sind erhältlich. Melde dich in der Web-App an, um einen Plan zu kaufen, die Testphase zu starten oder dein Abo zu verwalten. Lokale Mac-Funktionen bleiben verfügbar.",
     "monthly": "Monatlich in PLN",
     "tax": "Personal inklusive Steuer. Team ohne Steuer: mindestens 2 Plätze = 150 PLN netto/Monat. Bei 23% MwSt.: insgesamt 184,50 PLN (92,25 pro Platz). Die Steuer kann abweichen; die App muss vor dem Kauf den Endbetrag zeigen.",
     "trialTitle": "Ein Cloud-Test",
@@ -370,7 +370,7 @@ const content: SiteContent = {
         },
         "personal": {
             "name": "Personal",
-            "badge": "Geplant",
+            "badge": "Verfügbar",
             "price": "49 PLN",
             "per": "inkl. Steuer / Monat",
             "tagline": "Für deinen persönlichen Cloud-Bereich.",
@@ -380,11 +380,11 @@ const content: SiteContent = {
                 "20 GB",
                 "1.2M Ivy · 5 h ASR"
             ],
-            "cta": "Pläne und Abrechnung · englische Dokumentation"
+            "cta": "In der Web-App kaufen"
         },
         "team": {
             "name": "Team",
-            "badge": "Geplant",
+            "badge": "Verfügbar",
             "price": "75 PLN",
             "per": "netto / Platz / Monat",
             "tagline": "Für Organisationen ab zwei Plätzen.",
@@ -394,7 +394,7 @@ const content: SiteContent = {
                 "50 GB · pro Platz",
                 "2.5M Ivy · 10 h ASR"
             ],
-            "cta": "Pläne und Abrechnung · englische Dokumentation"
+            "cta": "In der Web-App kaufen"
         }
     }
 },

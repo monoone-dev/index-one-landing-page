@@ -137,7 +137,7 @@ const content: SiteContent = {
   },
   privacy: {
     lifecycle: {
-      "title": "数据生命周期 · 即将推出的云端方案",
+      "title": "数据生命周期 · 云端方案",
       "items": [
         {
           "title": "数据会保留多久？",
@@ -325,7 +325,7 @@ const content: SiteContent = {
   },
   offer: {
     "web": "打开网页版",
-    "status": "规划中的云端方案。此处尚不提供购买或试用激活。Mac 本地功能仍可使用。",
+    "status": "云端方案现已开售。登录网页版即可购买方案、开始试用或管理订阅。Mac 本地功能仍可使用。",
     "monthly": "按月，以 PLN 计价",
     "tax": "Personal 含税。Team 不含税：至少 2 个席位，每月共 150 PLN（税前）。按 23% 增值税计算，总计 184.50 PLN（每席位 92.25）。实际税率可能不同；购买前应用必须显示最终总额。",
     "trialTitle": "一次云端试用",
@@ -370,7 +370,7 @@ const content: SiteContent = {
         },
         "personal": {
             "name": "Personal",
-            "badge": "规划中",
+            "badge": "现已推出",
             "price": "49 PLN",
             "per": "含税 / 月",
             "tagline": "适用于个人云端空间。",
@@ -380,11 +380,11 @@ const content: SiteContent = {
                 "20 GB",
                 "1.2M Ivy · 5 h ASR"
             ],
-            "cta": "方案与计费 · 英文文档"
+            "cta": "在网页版购买"
         },
         "team": {
             "name": "Team",
-            "badge": "规划中",
+            "badge": "现已推出",
             "price": "75 PLN",
             "per": "税前 / 席位 / 月",
             "tagline": "适用于组织，至少两个席位。",
@@ -394,7 +394,7 @@ const content: SiteContent = {
                 "50 GB · 每席位",
                 "2.5M Ivy · 10 h ASR"
             ],
-            "cta": "方案与计费 · 英文文档"
+            "cta": "在网页版购买"
         }
     }
 },

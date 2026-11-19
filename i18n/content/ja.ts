@@ -137,7 +137,7 @@ const content: SiteContent = {
   },
   privacy: {
     lifecycle: {
-      "title": "データのライフサイクル · 今後のクラウドプラン",
+      "title": "データのライフサイクル · クラウドプラン",
       "items": [
         {
           "title": "データはいつまで保存されますか？",
@@ -325,7 +325,7 @@ const content: SiteContent = {
   },
   offer: {
     "web": "Web アプリを開く",
-    "status": "提供予定のクラウドプランです。ここでは購入や試用開始はまだできません。Mac のローカル機能は利用できます。",
+    "status": "クラウドプランを販売中です。プランの購入、トライアルの開始、サブスクリプションの管理はWebアプリにサインインして行えます。Macのローカル機能は引き続き利用できます。",
     "monthly": "月額・PLN 表示",
     "tax": "Personal は税込。Team は税別で最低 2 席、月額合計 150 PLN（税別）。VAT 23% の場合は合計 184.50 PLN（1 席 92.25）。税率は異なる場合があり、購入前にアプリで最終金額を表示する必要があります。",
     "trialTitle": "クラウドを一度試す",
@@ -370,7 +370,7 @@ const content: SiteContent = {
         },
         "personal": {
             "name": "Personal",
-            "badge": "提供予定",
+            "badge": "提供中",
             "price": "49 PLN",
             "per": "税込 / 月",
             "tagline": "個人のクラウドスペース向け。",
@@ -380,11 +380,11 @@ const content: SiteContent = {
                 "20 GB",
                 "1.2M Ivy · 5 h ASR"
             ],
-            "cta": "プランと請求 · 英語の文書"
+            "cta": "Webアプリで購入"
         },
         "team": {
             "name": "Team",
-            "badge": "提供予定",
+            "badge": "提供中",
             "price": "75 PLN",
             "per": "税別 / 席 / 月",
             "tagline": "組織向け、最低 2 席から。",
@@ -394,7 +394,7 @@ const content: SiteContent = {
                 "50 GB · 1 席あたり",
                 "2.5M Ivy · 10 h ASR"
             ],
-            "cta": "プランと請求 · 英語の文書"
+            "cta": "Webアプリで購入"
         }
     }
 },

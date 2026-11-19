@@ -137,7 +137,7 @@ const content: SiteContent = {
   },
   privacy: {
     lifecycle: {
-      "title": "Data lifecycle · forthcoming cloud offer",
+      "title": "Data lifecycle · cloud plans",
       "items": [
         {
           "title": "How long is data kept?",
@@ -325,7 +325,7 @@ const content: SiteContent = {
   },
   offer: {
     "web": "Open web app",
-    "status": "Planned cloud offer. Purchases and trial activation are not available here. Local Mac features remain available.",
+    "status": "Cloud plans are on sale. Sign in to the web app to buy a plan, start the trial or manage your subscription. Local Mac features remain available.",
     "monthly": "Monthly, in PLN",
     "tax": "Personal includes tax. Team excludes tax: minimum 2 seats = 150 PLN net/month. At 23% VAT: 184.50 PLN total (92.25 per seat). Your tax may differ; the app must show the final total before purchase.",
     "trialTitle": "One cloud trial",
@@ -370,7 +370,7 @@ const content: SiteContent = {
         },
         "personal": {
             "name": "Personal",
-            "badge": "Planned",
+            "badge": "Available",
             "price": "49 PLN",
             "per": "tax included / month",
             "tagline": "For your personal cloud workspace.",
@@ -380,11 +380,11 @@ const content: SiteContent = {
                 "20 GB",
                 "1.2M Ivy · 5 h ASR"
             ],
-            "cta": "Plans and billing · English docs"
+            "cta": "Buy in the web app"
         },
         "team": {
             "name": "Team",
-            "badge": "Planned",
+            "badge": "Available",
             "price": "75 PLN",
             "per": "net / seat / month",
             "tagline": "For an organization, from two seats.",
@@ -394,7 +394,7 @@ const content: SiteContent = {
                 "50 GB · per seat",
                 "2.5M Ivy · 10 h ASR"
             ],
-            "cta": "Plans and billing · English docs"
+            "cta": "Buy in the web app"
         }
     }
 },
