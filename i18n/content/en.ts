@@ -331,7 +331,7 @@ const content: SiteContent = {
     "trialTitle": "One cloud trial",
     "trial": "Explicitly activate one card-free trial per verified personal account: 60 billed minutes of cloud transcription and 100,000 Ivy units, valid for 30 days. Each recording can be up to 30 minutes long.",
     "meterTitle": "How transcription is counted",
-    "meter": "Cloud transcription counts at least 20 minutes per recording, so fifteen 2-minute recordings use all five hours of Personal. Local transcription and existing transcripts use none of this allowance.",
+    "meter": "Cloud transcription counts at least 20 minutes per recording, so thirty 2-minute recordings use all ten hours of Personal. Local transcription and existing transcripts use none of this allowance.",
     "privacyTitle": "Local and cloud are different",
     "privacy": "Local Mac processing stays on your Mac. Standard account cloud stores and processes content on servers readable by the operator; it is not end-to-end encrypted. Pattern masking is not full anonymization. Paid plans never grant access to private spaces.",
     "after": "After the trial, basic notes, editing, ordinary search, sync, reading and export remain Free within storage limits. Only new costly cloud AI and ASR need a budget.",
@@ -364,7 +364,7 @@ const content: SiteContent = {
                 "Local Mac tools",
                 "Basic cloud notes and sync",
                 "1 GB",
-                "One trial"
+                "200k Ivy · 2 h ASR"
             ],
             "cta": ""
         },
@@ -378,7 +378,7 @@ const content: SiteContent = {
                 "Local Mac tools",
                 "Basic cloud notes and sync",
                 "20 GB",
-                "1.2M Ivy · 5 h ASR"
+                "1.2M Ivy · 10 h ASR"
             ],
             "cta": "Buy in the web app"
         },
@@ -392,7 +392,7 @@ const content: SiteContent = {
                 "Local Mac tools",
                 "Basic cloud notes and sync",
                 "50 GB · per seat",
-                "2.5M Ivy · 10 h ASR"
+                "2.5M Ivy · 15 h ASR"
             ],
             "cta": "Buy in the web app"
         }

@@ -331,7 +331,7 @@ const content: SiteContent = {
     "trialTitle": "Uma avaliação da nuvem",
     "trial": "Ative explicitamente um único teste sem cartão por conta pessoal verificada: 60 minutos faturados de transcrição na nuvem e 100.000 unidades Ivy, válidos por 30 dias. Cada gravação pode durar até 30 minutos.",
     "meterTitle": "Como a transcrição é contada",
-    "meter": "A transcrição na nuvem conta pelo menos 20 minutos por gravação, pelo que quinze gravações de 2 minutos consomem as cinco horas de Personal. A transcrição local e as transcrições existentes não consomem esta quota.",
+    "meter": "A transcrição na nuvem conta pelo menos 20 minutos por gravação, pelo que trinta gravações de 2 minutos consomem as dez horas de Personal. A transcrição local e as transcrições existentes não consomem esta quota.",
     "privacyTitle": "Local e nuvem",
     "privacy": "O processamento local do Mac fica no Mac. A nuvem padrão armazena e processa conteúdo em servidores legíveis pelo operador, sem criptografia de ponta a ponta. Mascarar padrões não é anonimização completa. Um plano não concede acesso a espaços privados.",
     "after": "Após a avaliação, notas, edição, busca comum, sincronização, leitura e exportação continuam Free dentro do limite de armazenamento. Só novas tarefas caras de IA e ASR na nuvem exigem orçamento.",
@@ -364,7 +364,7 @@ const content: SiteContent = {
                 "Ferramentas locais do Mac",
                 "Notas básicas e sincronização na nuvem",
                 "1 GB",
-                "Uma avaliação"
+                "200k Ivy · 2 h ASR"
             ],
             "cta": ""
         },
@@ -378,7 +378,7 @@ const content: SiteContent = {
                 "Ferramentas locais do Mac",
                 "Notas básicas e sincronização na nuvem",
                 "20 GB",
-                "1.2M Ivy · 5 h ASR"
+                "1.2M Ivy · 10 h ASR"
             ],
             "cta": "Comprar no app web"
         },
@@ -392,7 +392,7 @@ const content: SiteContent = {
                 "Ferramentas locais do Mac",
                 "Notas básicas e sincronização na nuvem",
                 "50 GB · por lugar",
-                "2.5M Ivy · 10 h ASR"
+                "2.5M Ivy · 15 h ASR"
             ],
             "cta": "Comprar no app web"
         }

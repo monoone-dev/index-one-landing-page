@@ -331,7 +331,7 @@ const content: SiteContent = {
     "trialTitle": "Ein Cloud-Test",
     "trial": "Aktiviere einmalig eine Testphase ohne Karte pro verifiziertem persönlichen Konto: 60 berechnete Minuten Cloud-Transkription und 100.000 Ivy-Einheiten, gültig für 30 Tage. Jede Aufnahme darf bis zu 30 Minuten dauern.",
     "meterTitle": "So wird Transkription berechnet",
-    "meter": "Cloud-Transkription berechnet mindestens 20 Minuten pro Aufnahme, sodass fünfzehn 2-Minuten-Aufnahmen alle fünf Stunden von Personal verbrauchen. Lokale Transkription und vorhandene Transkripte verbrauchen dieses Kontingent nicht.",
+    "meter": "Cloud-Transkription berechnet mindestens 20 Minuten pro Aufnahme, sodass dreißig 2-Minuten-Aufnahmen alle zehn Stunden von Personal verbrauchen. Lokale Transkription und vorhandene Transkripte verbrauchen dieses Kontingent nicht.",
     "privacyTitle": "Lokal und Cloud",
     "privacy": "Lokale Mac-Verarbeitung bleibt auf dem Mac. Standard-Cloud speichert und verarbeitet Inhalte auf für den Betreiber lesbaren Servern, ohne Ende-zu-Ende-Verschlüsselung. Mustermaskierung ist keine vollständige Anonymisierung. Ein Plan gewährt keinen Zugriff auf private Bereiche.",
     "after": "Nach dem Test bleiben Notizen, Bearbeitung, normale Suche, Sync, Lesen und Export im Speicherlimit Free. Nur neue kostenintensive Cloud-KI und ASR benötigen Budget.",
@@ -364,7 +364,7 @@ const content: SiteContent = {
                 "Lokale Mac-Werkzeuge",
                 "Cloud-Notizen und Sync",
                 "1 GB",
-                "Ein Test"
+                "200k Ivy · 2 h ASR"
             ],
             "cta": ""
         },
@@ -378,7 +378,7 @@ const content: SiteContent = {
                 "Lokale Mac-Werkzeuge",
                 "Cloud-Notizen und Sync",
                 "20 GB",
-                "1.2M Ivy · 5 h ASR"
+                "1.2M Ivy · 10 h ASR"
             ],
             "cta": "In der Web-App kaufen"
         },
@@ -392,7 +392,7 @@ const content: SiteContent = {
                 "Lokale Mac-Werkzeuge",
                 "Cloud-Notizen und Sync",
                 "50 GB · pro Platz",
-                "2.5M Ivy · 10 h ASR"
+                "2.5M Ivy · 15 h ASR"
             ],
             "cta": "In der Web-App kaufen"
         }

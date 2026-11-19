@@ -331,7 +331,7 @@ const content: SiteContent = {
     "trialTitle": "Jedna próba chmury",
     "trial": "Świadomie aktywuj jedną próbę bez karty na zweryfikowane konto osobiste: 60 naliczanych minut transkrypcji w chmurze i 100 000 jednostek Ivy, ważne 30 dni. Każde nagranie może trwać do 30 minut.",
     "meterTitle": "Jak liczymy transkrypcję",
-    "meter": "Transkrypcja w chmurze nalicza minimum 20 minut na nagranie, więc piętnaście nagrań po 2 minuty zużywa całe pięć godzin Personal. Lokalna transkrypcja i gotowe transkrypcje nie zużywają tego limitu.",
+    "meter": "Transkrypcja w chmurze nalicza minimum 20 minut na nagranie, więc trzydzieści nagrań po 2 minuty zużywa całe dziesięć godzin Personal. Lokalna transkrypcja i gotowe transkrypcje nie zużywają tego limitu.",
     "privacyTitle": "Lokalnie i w chmurze",
     "privacy": "Lokalne przetwarzanie Mac zostaje na Macu. Standardowa chmura konta zapisuje i przetwarza treść na serwerach dostępnych operatorowi; nie jest szyfrowana end-to-end. Maskowanie wzorców nie oznacza pełnej anonimizacji. Plan nie daje dostępu do prywatnych przestrzeni.",
     "after": "Po próbie podstawowe notatki, edycja, zwykłe wyszukiwanie, sync, odczyt i eksport pozostają Free w limicie miejsca. Tylko nowe kosztowne AI i ASR w chmurze wymagają budżetu.",
@@ -364,7 +364,7 @@ const content: SiteContent = {
                 "Lokalne narzędzia Mac",
                 "Podstawowe notatki i sync w chmurze",
                 "1 GB",
-                "Jedna próba"
+                "200k Ivy · 2 h ASR"
             ],
             "cta": ""
         },
@@ -378,7 +378,7 @@ const content: SiteContent = {
                 "Lokalne narzędzia Mac",
                 "Podstawowe notatki i sync w chmurze",
                 "20 GB",
-                "1.2M Ivy · 5 h ASR"
+                "1.2M Ivy · 10 h ASR"
             ],
             "cta": "Kup w aplikacji web"
         },
@@ -392,7 +392,7 @@ const content: SiteContent = {
                 "Lokalne narzędzia Mac",
                 "Podstawowe notatki i sync w chmurze",
                 "50 GB · na miejsce",
-                "2.5M Ivy · 10 h ASR"
+                "2.5M Ivy · 15 h ASR"
             ],
             "cta": "Kup w aplikacji web"
         }
