@@ -325,17 +325,17 @@ const content: SiteContent = {
   },
   offer: {
     "web": "Ouvrir le web",
-    "status": "Les offres cloud sont disponibles. Connectez-vous à l’app web pour acheter une offre, activer l’essai ou gérer votre abonnement. Les fonctions locales sur Mac restent disponibles.",
+    "status": "Les offres cloud sont disponibles. Connectez-vous à l’app web pour acheter une offre ou gérer votre abonnement. Les fonctions locales sur Mac restent disponibles.",
     "monthly": "Par mois, en PLN",
     "tax": "Personal TTC. Team HT : minimum 2 places = 150 PLN HT/mois. Avec TVA à 23% : 184,50 PLN au total (92,25 par place). La taxe peut varier ; l’application doit afficher le total avant achat.",
-    "trialTitle": "Un essai cloud",
-    "trial": "Activez explicitement un seul essai sans carte par compte personnel vérifié : 60 minutes facturées de transcription cloud et 100 000 unités Ivy, valables 30 jours. Chaque enregistrement peut durer jusqu’à 30 minutes.",
+    "trialTitle": "Gratuit chaque mois",
+    "trial": "Chaque compte personnel gratuit reçoit chaque mois civil (UTC) 200 000 unités Ivy et 2 heures de transcription cloud, sans carte. Les fonctions locales sur Mac n’ont pas de limite d’offre.",
     "meterTitle": "Calcul de la transcription",
     "meter": "La transcription cloud compte au moins 20 minutes par enregistrement : trente enregistrements de 2 minutes consomment les dix heures de Personal. La transcription locale et les transcriptions existantes ne consomment pas ce quota.",
     "privacyTitle": "Local et cloud",
     "privacy": "Le traitement local Mac reste sur le Mac. Le cloud standard stocke et traite les contenus sur des serveurs lisibles par l’opérateur, sans chiffrement de bout en bout. Le masquage de motifs n’est pas une anonymisation complète. Un abonnement ne donne pas accès aux espaces privés.",
-    "after": "Après l’essai, notes, édition, recherche classique, sync, lecture et export restent Free dans la limite du stockage. Seuls les nouveaux traitements cloud coûteux IA et ASR demandent un budget.",
-    "team": "Personal et chaque organisation ont des abonnements et soldes distincts. Team : 2,25 millions d’unités Ivy interactives et 250 000 d’automatisation par place, ces dernières dans un pool commun. ASR par place, stockage partagé. Une place ne change pas les droits. Jusqu’à 2 organisations gratuites de 5 membres partagent le stockage du compte fondateur, sans nouvel essai.",
+    "after": "Free comprend les notes de base, l’édition, la recherche ordinaire, la synchronisation, la lecture et l’export dans la limite de 1 Go, ainsi que le quota cloud mensuel. Les offres payantes ajoutent plus d’IA, de transcription et de stockage cloud.",
+    "team": "Personal et chaque organisation ont des abonnements et soldes distincts. Team : 2,25 millions d’unités Ivy interactives et 250 000 d’automatisation par place, ces dernières dans un pool commun. ASR par place, stockage partagé. Une place ne change pas les droits. Jusqu’à 2 organisations gratuites de 5 membres partagent le stockage du compte fondateur.",
     "lifecycle": "Audio cloud : 30 jours par défaut ; Free 7/14/30, payant aussi 90. Corbeille : 30 jours. Résilier ne supprime pas les contenus ; droits payants jusqu’à la fin de période. Dépassement après réduction : lecture/export et 90 jours de protection. Exportez l’audio avant expiration.",
     "docs": "Offre et facturation · documentation en anglais",
     "comparison": "Comparer les offres",
@@ -532,7 +532,7 @@ content.meta.features.description = content.pricing.lead + ' ' + content.offer.l
 content.meta.privacy.description = content.offer.privacy
 content.meta.pricing.title = 'IndexOne — Free / Personal / Team'
 content.meta.pricing.description = content.pricing.lead + ' 49 PLN / 75 PLN. ' + content.offer.status
-content.faq.items[0] = { question: "Que reste-t-il dans Free après la période d’essai ?", answer: content.offer.after }
+content.faq.items[0] = { question: "Que comprend Free ?", answer: content.offer.after }
 content.faq.items.push(
   { question: content.offer.trialTitle, answer: content.offer.trial },
   { question: content.offer.meterTitle, answer: content.offer.meter },

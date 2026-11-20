@@ -325,17 +325,17 @@ const content: SiteContent = {
   },
   offer: {
     "web": "Web-App öffnen",
-    "status": "Cloud-Pläne sind erhältlich. Melde dich in der Web-App an, um einen Plan zu kaufen, die Testphase zu starten oder dein Abo zu verwalten. Lokale Mac-Funktionen bleiben verfügbar.",
+    "status": "Cloud-Pläne sind erhältlich. Melde dich in der Web-App an, um einen Plan zu kaufen oder dein Abo zu verwalten. Lokale Mac-Funktionen bleiben verfügbar.",
     "monthly": "Monatlich in PLN",
     "tax": "Personal inklusive Steuer. Team ohne Steuer: mindestens 2 Plätze = 150 PLN netto/Monat. Bei 23% MwSt.: insgesamt 184,50 PLN (92,25 pro Platz). Die Steuer kann abweichen; die App muss vor dem Kauf den Endbetrag zeigen.",
-    "trialTitle": "Ein Cloud-Test",
-    "trial": "Aktiviere einmalig eine Testphase ohne Karte pro verifiziertem persönlichen Konto: 60 berechnete Minuten Cloud-Transkription und 100.000 Ivy-Einheiten, gültig für 30 Tage. Jede Aufnahme darf bis zu 30 Minuten dauern.",
+    "trialTitle": "Jeden Monat kostenlos",
+    "trial": "Jedes kostenlose persönliche Konto erhält pro Kalendermonat (UTC) 200.000 Ivy-Einheiten und 2 Stunden Cloud-Transkription, ohne Karte. Lokale Mac-Funktionen haben kein Planlimit.",
     "meterTitle": "So wird Transkription berechnet",
     "meter": "Cloud-Transkription berechnet mindestens 20 Minuten pro Aufnahme, sodass dreißig 2-Minuten-Aufnahmen alle zehn Stunden von Personal verbrauchen. Lokale Transkription und vorhandene Transkripte verbrauchen dieses Kontingent nicht.",
     "privacyTitle": "Lokal und Cloud",
     "privacy": "Lokale Mac-Verarbeitung bleibt auf dem Mac. Standard-Cloud speichert und verarbeitet Inhalte auf für den Betreiber lesbaren Servern, ohne Ende-zu-Ende-Verschlüsselung. Mustermaskierung ist keine vollständige Anonymisierung. Ein Plan gewährt keinen Zugriff auf private Bereiche.",
-    "after": "Nach dem Test bleiben Notizen, Bearbeitung, normale Suche, Sync, Lesen und Export im Speicherlimit Free. Nur neue kostenintensive Cloud-KI und ASR benötigen Budget.",
-    "team": "Personal und jede Organisation haben eigene Abos und Guthaben. Team: 2,25 Mio. interaktive Ivy-Einheiten und 250.000 Automationseinheiten pro Platz; Automationen teilen einen Pool. ASR pro Platz, Speicher gemeinsam. Plätze ändern keine Zugriffsrechte. Bis zu 2 kostenlose Organisationen mit je 5 Mitgliedern teilen den Kontospeicher des Gründers, ohne weiteren Test.",
+    "after": "Free umfasst einfache Notizen, Bearbeitung, normale Suche, Synchronisierung, Lesen und Export innerhalb von 1 GB sowie das monatliche Cloud-Kontingent. Bezahlte Pläne bieten mehr Cloud-KI, Transkription und Speicher.",
+    "team": "Personal und jede Organisation haben eigene Abos und Guthaben. Team: 2,25 Mio. interaktive Ivy-Einheiten und 250.000 Automationseinheiten pro Platz; Automationen teilen einen Pool. ASR pro Platz, Speicher gemeinsam. Plätze ändern keine Zugriffsrechte. Bis zu 2 kostenlose Organisationen mit je 5 Mitgliedern teilen den Kontospeicher des Gründers.",
     "lifecycle": "Cloud-Audio: standardmäßig 30 Tage; Free 7/14/30, bezahlt auch 90. Papierkorb: 30 Tage. Kündigung löscht keine Inhalte; bezahlte Rechte bis Periodenende. Bei Überschreitung nach Downgrade: Lesen/Export und 90 Tage Schutz. Audio vor Ablauf exportieren.",
     "docs": "Pläne und Abrechnung · englische Dokumentation",
     "comparison": "Pläne vergleichen",
@@ -532,7 +532,7 @@ content.meta.features.description = content.pricing.lead + ' ' + content.offer.l
 content.meta.privacy.description = content.offer.privacy
 content.meta.pricing.title = 'IndexOne — Free / Personal / Team'
 content.meta.pricing.description = content.pricing.lead + ' 49 PLN / 75 PLN. ' + content.offer.status
-content.faq.items[0] = { question: "Was bleibt nach der Testphase im Free-Plan enthalten?", answer: content.offer.after }
+content.faq.items[0] = { question: "Was ist in Free enthalten?", answer: content.offer.after }
 content.faq.items.push(
   { question: content.offer.trialTitle, answer: content.offer.trial },
   { question: content.offer.meterTitle, answer: content.offer.meter },

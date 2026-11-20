@@ -325,17 +325,17 @@ const content: SiteContent = {
   },
   offer: {
     "web": "Abrir aplicación web",
-    "status": "Los planes en la nube ya están a la venta. Inicia sesión en la app web para comprar un plan, activar la prueba o gestionar tu suscripción. Las funciones locales de Mac siguen disponibles.",
+    "status": "Los planes en la nube ya están a la venta. Inicia sesión en la app web para comprar un plan o gestionar tu suscripción. Las funciones locales de Mac siguen disponibles.",
     "monthly": "Mensual, en PLN",
     "tax": "Personal incluye impuestos. Team sin impuestos: mínimo 2 plazas = 150 PLN netos/mes. Con IVA del 23%: 184,50 PLN en total (92,25 por plaza). El impuesto puede variar; la aplicación debe mostrar el total antes de comprar.",
-    "trialTitle": "Una prueba de nube",
-    "trial": "Activa expresamente una única prueba sin tarjeta por cuenta personal verificada: 60 minutos facturados de transcripción en la nube y 100.000 unidades de Ivy, válidos durante 30 días. Cada grabación puede durar hasta 30 minutos.",
+    "trialTitle": "Gratis cada mes",
+    "trial": "Cada cuenta personal gratuita recibe cada mes natural (UTC) 200.000 unidades de Ivy y 2 horas de transcripción en la nube, sin tarjeta. Las funciones locales de Mac no tienen límite de plan.",
     "meterTitle": "Cómo se cuenta la transcripción",
     "meter": "La transcripción en la nube cuenta al menos 20 minutos por grabación, por lo que treinta grabaciones de 2 minutos consumen las diez horas de Personal. La transcripción local y las transcripciones existentes no consumen esta cuota.",
     "privacyTitle": "Local y nube",
     "privacy": "El procesamiento local de Mac permanece en el Mac. La nube estándar almacena y procesa contenido en servidores legibles por el operador, sin cifrado de extremo a extremo. Enmascarar patrones no es anonimización completa. Un plan no concede acceso a espacios privados.",
-    "after": "Después de la prueba, notas, edición, búsqueda normal, sincronización, lectura y exportación siguen en Free dentro del almacenamiento. Solo nuevas tareas costosas de IA y ASR en nube necesitan presupuesto.",
-    "team": "Personal y cada organización tienen suscripciones y saldos separados. Team: 2,25 millones de unidades Ivy interactivas y 250.000 de automatización por plaza, estas últimas en un fondo común. ASR por plaza, almacenamiento compartido. La plaza no cambia permisos. Hasta 2 organizaciones gratuitas de 5 miembros comparten el almacenamiento de la cuenta fundadora, sin otra prueba.",
+    "after": "Free incluye notas básicas, edición, búsqueda normal, sincronización, lectura y exportación dentro de 1 GB, además de la cuota mensual en la nube. Los planes de pago añaden más IA, transcripción y almacenamiento en la nube.",
+    "team": "Personal y cada organización tienen suscripciones y saldos separados. Team: 2,25 millones de unidades Ivy interactivas y 250.000 de automatización por plaza, estas últimas en un fondo común. ASR por plaza, almacenamiento compartido. La plaza no cambia permisos. Hasta 2 organizaciones gratuitas de 5 miembros comparten el almacenamiento de la cuenta fundadora.",
     "lifecycle": "Audio en nube: 30 días por defecto; Free 7/14/30, planes de pago también 90. Papelera: 30 días. Cancelar no borra contenido; derechos de pago hasta fin del período. Al bajar y exceder cuota: lectura/exportación y 90 días de protección. Exporta audio antes de vencer.",
     "docs": "Planes y facturación · documentación en inglés",
     "comparison": "Comparar planes",
@@ -532,7 +532,7 @@ content.meta.features.description = content.pricing.lead + ' ' + content.offer.l
 content.meta.privacy.description = content.offer.privacy
 content.meta.pricing.title = 'IndexOne — Free / Personal / Team'
 content.meta.pricing.description = content.pricing.lead + ' 49 PLN / 75 PLN. ' + content.offer.status
-content.faq.items[0] = { question: "¿Qué sigue incluido en Free después de la prueba?", answer: content.offer.after }
+content.faq.items[0] = { question: "¿Qué incluye Free?", answer: content.offer.after }
 content.faq.items.push(
   { question: content.offer.trialTitle, answer: content.offer.trial },
   { question: content.offer.meterTitle, answer: content.offer.meter },
