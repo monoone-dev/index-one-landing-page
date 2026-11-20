@@ -378,7 +378,8 @@ const content: SiteContent = {
                 "Mac 本地工具",
                 "基础云端笔记与同步",
                 "20 GB",
-                "1.2M Ivy · 10 h ASR"
+                "1.2M Ivy · 10 h ASR",
+                "云端录屏"
             ],
             "cta": "在网页版购买"
         },
@@ -392,7 +393,9 @@ const content: SiteContent = {
                 "Mac 本地工具",
                 "基础云端笔记与同步",
                 "50 GB · 每席位",
-                "2.5M Ivy · 15 h ASR"
+                "2.5M Ivy · 15 h ASR",
+                "Google Meet 机器人",
+                "云端录屏"
             ],
             "cta": "在网页版购买"
         }

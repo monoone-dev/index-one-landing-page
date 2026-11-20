@@ -95,7 +95,7 @@
       "automationIvyUnitsPerSeat": 250000,
       "localFree": true,
       "basicCloud": true,
-      "meetBotAvailable": false,
+      "meetBotAvailable": true,
       "audioRetentionDays": [
         7,
         14,

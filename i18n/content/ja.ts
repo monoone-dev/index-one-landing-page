@@ -378,7 +378,8 @@ const content: SiteContent = {
                 "Mac のローカルツール",
                 "基本クラウドノートと同期",
                 "20 GB",
-                "1.2M Ivy · 10 h ASR"
+                "1.2M Ivy · 10 h ASR",
+                "クラウドの画面録画"
             ],
             "cta": "Webアプリで購入"
         },
@@ -392,7 +393,9 @@ const content: SiteContent = {
                 "Mac のローカルツール",
                 "基本クラウドノートと同期",
                 "50 GB · 1 席あたり",
-                "2.5M Ivy · 15 h ASR"
+                "2.5M Ivy · 15 h ASR",
+                "Google Meetボット",
+                "クラウドの画面録画"
             ],
             "cta": "Webアプリで購入"
         }
