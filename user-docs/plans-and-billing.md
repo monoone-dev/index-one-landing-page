@@ -15,8 +15,10 @@ The cloud plans below follow catalog **2026-11-15.v1**. Buy a plan and manage yo
 | Cloud Ivy | 200,000 units/month | 1.2 million units/month | 2.5 million units/seat/month |
 | Billed cloud transcription | 2 hours/month | 10 hours/month | 15 hours/seat/month |
 | Cloud storage | 1 GB | 20 GB | 50 GB × paid seats, shared |
+| Google Meet bot | — | — | Included |
+| Screen recordings in the cloud | — | Included | Included |
 
-Team starts at 150 PLN net per month. At an illustrative 23% VAT rate, this is 92.25 PLN per seat and 184.50 PLN for two. Your applicable tax can differ. The application must show seats, tax and the final total before any purchase. No annual plans, other currencies, paid add-ons or meeting bot are offered at launch.
+Team starts at 150 PLN net per month. At an illustrative 23% VAT rate, this is 92.25 PLN per seat and 184.50 PLN for two. Your applicable tax can differ. The application must show seats, tax and the final total before any purchase. No annual plans, other currencies or paid add-ons are offered at launch. Recording the screen on a Mac is free; saving screen recordings to the cloud needs Personal or Team.
 
 Ivy units measure a processing budget, not raw model tokens or a guaranteed number of answers. Team splits each seat's grant into 2.25 million interactive units and 250,000 units for a shared automation pool. ASR is per seat. Rotating a seat does not reset its spent allowance. Allowance periods are calendar months in UTC; payment dates and allowance periods can differ. GB means one billion bytes.
 

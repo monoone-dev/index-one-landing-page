@@ -378,7 +378,8 @@ const content: SiteContent = {
                 "Strumenti Mac locali",
                 "Note cloud e sincronizzazione",
                 "20 GB",
-                "1.2M Ivy · 10 h ASR"
+                "1.2M Ivy · 10 h ASR",
+                "Registrazioni dello schermo nel cloud"
             ],
             "cta": "Acquista nell’app web"
         },
@@ -392,7 +393,9 @@ const content: SiteContent = {
                 "Strumenti Mac locali",
                 "Note cloud e sincronizzazione",
                 "50 GB · per posto",
-                "2.5M Ivy · 15 h ASR"
+                "2.5M Ivy · 15 h ASR",
+                "Bot Google Meet",
+                "Registrazioni dello schermo nel cloud"
             ],
             "cta": "Acquista nell’app web"
         }
