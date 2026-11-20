@@ -325,17 +325,17 @@ const content: SiteContent = {
   },
   offer: {
     "web": "Abrir aplicação web",
-    "status": "Os planos na nuvem estão à venda. Entre no app web para comprar um plano, ativar o teste ou gerenciar sua assinatura. Os recursos locais do Mac continuam disponíveis.",
+    "status": "Os planos na nuvem estão à venda. Entre no app web para comprar um plano ou gerenciar sua assinatura. Os recursos locais do Mac continuam disponíveis.",
     "monthly": "Mensal, em PLN",
     "tax": "Personal inclui impostos. Team sem impostos: mínimo 2 lugares = 150 PLN líquidos/mês. Com IVA de 23%: 184,50 PLN no total (92,25 por lugar). O imposto pode variar; a aplicação deve mostrar o total antes da compra.",
-    "trialTitle": "Uma avaliação da nuvem",
-    "trial": "Ative explicitamente um único teste sem cartão por conta pessoal verificada: 60 minutos faturados de transcrição na nuvem e 100.000 unidades Ivy, válidos por 30 dias. Cada gravação pode durar até 30 minutos.",
+    "trialTitle": "Grátis todo mês",
+    "trial": "Cada conta pessoal gratuita recebe a cada mês civil (UTC) 200.000 unidades Ivy e 2 horas de transcrição na nuvem, sem cartão. Os recursos locais do Mac não têm limite de plano.",
     "meterTitle": "Como a transcrição é contada",
     "meter": "A transcrição na nuvem conta pelo menos 20 minutos por gravação, pelo que trinta gravações de 2 minutos consomem as dez horas de Personal. A transcrição local e as transcrições existentes não consomem esta quota.",
     "privacyTitle": "Local e nuvem",
     "privacy": "O processamento local do Mac fica no Mac. A nuvem padrão armazena e processa conteúdo em servidores legíveis pelo operador, sem criptografia de ponta a ponta. Mascarar padrões não é anonimização completa. Um plano não concede acesso a espaços privados.",
-    "after": "Após a avaliação, notas, edição, busca comum, sincronização, leitura e exportação continuam Free dentro do limite de armazenamento. Só novas tarefas caras de IA e ASR na nuvem exigem orçamento.",
-    "team": "Personal e cada organização têm assinaturas e saldos separados. Team: 2,25 milhões de unidades Ivy interativas e 250.000 de automação por lugar; automações usam um fundo comum. ASR por lugar, armazenamento compartilhado. Lugares não alteram permissões. Até 2 organizações gratuitas de 5 membros compartilham o armazenamento da conta fundadora, sem nova avaliação.",
+    "after": "O Free inclui notas básicas, edição, pesquisa comum, sincronização, leitura e exportação até 1 GB, além da cota mensal na nuvem. Os planos pagos acrescentam mais IA, transcrição e armazenamento na nuvem.",
+    "team": "Personal e cada organização têm assinaturas e saldos separados. Team: 2,25 milhões de unidades Ivy interativas e 250.000 de automação por lugar; automações usam um fundo comum. ASR por lugar, armazenamento compartilhado. Lugares não alteram permissões. Até 2 organizações gratuitas de 5 membros compartilham o armazenamento da conta fundadora.",
     "lifecycle": "Áudio na nuvem: padrão de 30 dias; Free 7/14/30, pagos também 90. Lixeira: 30 dias. Cancelar não apaga conteúdo; direitos pagos até o fim do período. Redução acima da cota: leitura/exportação e 90 dias de proteção. Exporte áudio antes de expirar.",
     "docs": "Planos e cobrança · documentação em inglês",
     "comparison": "Comparar planos",
@@ -532,7 +532,7 @@ content.meta.features.description = content.pricing.lead + ' ' + content.offer.l
 content.meta.privacy.description = content.offer.privacy
 content.meta.pricing.title = 'IndexOne — Free / Personal / Team'
 content.meta.pricing.description = content.pricing.lead + ' 49 PLN / 75 PLN. ' + content.offer.status
-content.faq.items[0] = { question: "O que continua incluído no Free após o período de teste?", answer: content.offer.after }
+content.faq.items[0] = { question: "O que o Free inclui?", answer: content.offer.after }
 content.faq.items.push(
   { question: content.offer.trialTitle, answer: content.offer.trial },
   { question: content.offer.meterTitle, answer: content.offer.meter },

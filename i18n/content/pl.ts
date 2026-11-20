@@ -325,17 +325,17 @@ const content: SiteContent = {
   },
   offer: {
     "web": "Otwórz web",
-    "status": "Plany chmurowe są w sprzedaży. Zaloguj się w aplikacji web, aby kupić plan, uruchomić próbę lub zarządzać subskrypcją. Lokalne funkcje Mac pozostają dostępne.",
+    "status": "Plany chmurowe są w sprzedaży. Zaloguj się w aplikacji web, aby kupić plan lub zarządzać subskrypcją. Lokalne funkcje Mac pozostają dostępne.",
     "monthly": "Miesięcznie, w PLN",
     "tax": "Personal zawiera podatek. Team: cena netto, minimum 2 miejsca = 150 PLN netto/mies. Przy VAT 23%: 184,50 PLN razem (92,25 za miejsce). Podatek może być inny; aplikacja musi pokazać końcową kwotę przed zakupem.",
-    "trialTitle": "Jedna próba chmury",
-    "trial": "Świadomie aktywuj jedną próbę bez karty na zweryfikowane konto osobiste: 60 naliczanych minut transkrypcji w chmurze i 100 000 jednostek Ivy, ważne 30 dni. Każde nagranie może trwać do 30 minut.",
+    "trialTitle": "Free co miesiąc",
+    "trial": "Każde darmowe konto osobiste dostaje co miesiąc kalendarzowy (UTC) 200 000 jednostek Ivy i 2 godziny transkrypcji w chmurze, bez karty. Lokalne funkcje Mac nie mają limitu planu.",
     "meterTitle": "Jak liczymy transkrypcję",
     "meter": "Transkrypcja w chmurze nalicza minimum 20 minut na nagranie, więc trzydzieści nagrań po 2 minuty zużywa całe dziesięć godzin Personal. Lokalna transkrypcja i gotowe transkrypcje nie zużywają tego limitu.",
     "privacyTitle": "Lokalnie i w chmurze",
     "privacy": "Lokalne przetwarzanie Mac zostaje na Macu. Standardowa chmura konta zapisuje i przetwarza treść na serwerach dostępnych operatorowi; nie jest szyfrowana end-to-end. Maskowanie wzorców nie oznacza pełnej anonimizacji. Plan nie daje dostępu do prywatnych przestrzeni.",
-    "after": "Po próbie podstawowe notatki, edycja, zwykłe wyszukiwanie, sync, odczyt i eksport pozostają Free w limicie miejsca. Tylko nowe kosztowne AI i ASR w chmurze wymagają budżetu.",
-    "team": "Personal i każda organizacja mają osobne abonamenty i salda. Team: 2,25 mln interaktywnych jednostek Ivy i 250 tys. jednostek automatów na miejsce; automaty mają wspólną pulę. ASR na miejsce, storage wspólny. Miejsce nie zmienia praw dostępu. Do 2 darmowych organizacji po 5 członków dzieli storage konta założyciela, bez dodatkowej próby.",
+    "after": "Free obejmuje podstawowe notatki, edycję, zwykłe wyszukiwanie, synchronizację, odczyt i eksport w ramach 1 GB oraz miesięczny limit w chmurze. Płatne plany dają więcej AI, transkrypcji i miejsca w chmurze.",
+    "team": "Personal i każda organizacja mają osobne abonamenty i salda. Team: 2,25 mln interaktywnych jednostek Ivy i 250 tys. jednostek automatów na miejsce; automaty mają wspólną pulę. ASR na miejsce, storage wspólny. Miejsce nie zmienia praw dostępu. Do 2 darmowych organizacji po 5 członków dzieli storage konta założyciela.",
     "lifecycle": "Audio w chmurze: domyślnie 30 dni; Free: 7/14/30 dni, płatne także 90. Kosz: 30 dni. Anulowanie nie kasuje treści; uprawnienia płatne do końca okresu. Po obniżeniu planu i przekroczeniu kwoty: odczyt/eksport i 90 dni ochrony. Eksportuj audio przed końcem retencji.",
     "docs": "Plany i rozliczenia · dokumentacja po angielsku",
     "comparison": "Porównaj plany",
@@ -532,7 +532,7 @@ content.meta.features.description = content.pricing.lead + ' ' + content.offer.l
 content.meta.privacy.description = content.offer.privacy
 content.meta.pricing.title = 'IndexOne — Free / Personal / Team'
 content.meta.pricing.description = content.pricing.lead + ' 49 PLN / 75 PLN. ' + content.offer.status
-content.faq.items[0] = { question: "Co pozostaje w planie Free po okresie próbnym?", answer: content.offer.after }
+content.faq.items[0] = { question: "Co obejmuje plan Free?", answer: content.offer.after }
 content.faq.items.push(
   { question: content.offer.trialTitle, answer: content.offer.trial },
   { question: content.offer.meterTitle, answer: content.offer.meter },

@@ -325,17 +325,17 @@ const content: SiteContent = {
   },
   offer: {
     "web": "Apri app web",
-    "status": "I piani cloud sono disponibili. Accedi all’app web per acquistare un piano, attivare la prova o gestire l’abbonamento. Le funzioni locali su Mac restano disponibili.",
+    "status": "I piani cloud sono disponibili. Accedi all’app web per acquistare un piano o gestire l’abbonamento. Le funzioni locali su Mac restano disponibili.",
     "monthly": "Mensile, in PLN",
     "tax": "Personal include le imposte. Team al netto: minimo 2 posti = 150 PLN netti/mese. Con IVA al 23%: 184,50 PLN totali (92,25 per posto). Le imposte possono variare; l’app deve mostrare il totale prima dell’acquisto.",
-    "trialTitle": "Una prova cloud",
-    "trial": "Attiva esplicitamente una sola prova senza carta per account personale verificato: 60 minuti fatturati di trascrizione cloud e 100.000 unità Ivy, validi per 30 giorni. Ogni registrazione può durare fino a 30 minuti.",
+    "trialTitle": "Gratis ogni mese",
+    "trial": "Ogni account personale gratuito riceve ogni mese di calendario (UTC) 200.000 unità Ivy e 2 ore di trascrizione cloud, senza carta. Le funzioni locali su Mac non hanno limiti di piano.",
     "meterTitle": "Calcolo della trascrizione",
     "meter": "La trascrizione cloud conta almeno 20 minuti per registrazione, quindi trenta registrazioni da 2 minuti consumano tutte le dieci ore di Personal. La trascrizione locale e le trascrizioni esistenti non consumano questa quota.",
     "privacyTitle": "Locale e cloud",
     "privacy": "L’elaborazione locale Mac resta sul Mac. Il cloud standard memorizza ed elabora contenuti su server leggibili dall’operatore, senza crittografia end-to-end. Mascherare schemi non è anonimizzazione completa. Un piano non concede accesso a spazi privati.",
-    "after": "Dopo la prova, note, modifica, ricerca ordinaria, sync, lettura ed esportazione restano Free entro lo spazio disponibile. Solo nuove attività costose IA e ASR cloud richiedono budget.",
-    "team": "Personal e ogni organizzazione hanno abbonamenti e saldi separati. Team: 2,25 milioni di unità Ivy interattive e 250.000 per automazioni a posto; le seconde in un fondo comune. ASR per posto, spazio condiviso. Un posto non cambia i permessi. Fino a 2 organizzazioni gratuite da 5 membri condividono lo spazio dell’account fondatore, senza altra prova.",
+    "after": "Free include note di base, modifica, ricerca ordinaria, sincronizzazione, lettura ed esportazione entro 1 GB, più la quota cloud mensile. I piani a pagamento aggiungono più IA, trascrizione e spazio nel cloud.",
+    "team": "Personal e ogni organizzazione hanno abbonamenti e saldi separati. Team: 2,25 milioni di unità Ivy interattive e 250.000 per automazioni a posto; le seconde in un fondo comune. ASR per posto, spazio condiviso. Un posto non cambia i permessi. Fino a 2 organizzazioni gratuite da 5 membri condividono lo spazio dell’account fondatore.",
     "lifecycle": "Audio cloud: 30 giorni predefiniti; Free 7/14/30, a pagamento anche 90. Cestino: 30 giorni. Disdire non elimina contenuti; diritti pagati fino a fine periodo. Dopo riduzione oltre quota: lettura/export e 90 giorni di protezione. Esporta l’audio prima della scadenza.",
     "docs": "Piani e fatturazione · documentazione inglese",
     "comparison": "Confronta i piani",
@@ -532,7 +532,7 @@ content.meta.features.description = content.pricing.lead + ' ' + content.offer.l
 content.meta.privacy.description = content.offer.privacy
 content.meta.pricing.title = 'IndexOne — Free / Personal / Team'
 content.meta.pricing.description = content.pricing.lead + ' 49 PLN / 75 PLN. ' + content.offer.status
-content.faq.items[0] = { question: "Cosa resta incluso in Free dopo la prova?", answer: content.offer.after }
+content.faq.items[0] = { question: "Cosa include Free?", answer: content.offer.after }
 content.faq.items.push(
   { question: content.offer.trialTitle, answer: content.offer.trial },
   { question: content.offer.meterTitle, answer: content.offer.meter },

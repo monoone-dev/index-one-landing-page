@@ -325,17 +325,17 @@ const content: SiteContent = {
   },
   offer: {
     "web": "打开网页版",
-    "status": "云端方案现已开售。登录网页版即可购买方案、开始试用或管理订阅。Mac 本地功能仍可使用。",
+    "status": "云端方案现已开售。登录网页版即可购买方案或管理订阅。Mac 本地功能仍可使用。",
     "monthly": "按月，以 PLN 计价",
     "tax": "Personal 含税。Team 不含税：至少 2 个席位，每月共 150 PLN（税前）。按 23% 增值税计算，总计 184.50 PLN（每席位 92.25）。实际税率可能不同；购买前应用必须显示最终总额。",
-    "trialTitle": "一次云端试用",
-    "trial": "每个已验证的个人账户可主动激活一次免绑卡试用：60 分钟云端转写计费时长和 100,000 个 Ivy 单位，有效期为 30 天。每段录音最长可达 30 分钟。",
+    "trialTitle": "每月免费",
+    "trial": "每个免费个人账户每个日历月（UTC）可获得 200,000 Ivy 单位和 2 小时云端转写，无需绑卡。Mac 本地功能没有方案限制。",
     "meterTitle": "转写如何计费",
     "meter": "云端转写每段录音至少计费 20 分钟，因此三十段 2 分钟的录音会用完 Personal 的全部十小时额度。本地转写和已有的转写文本不消耗此额度。",
     "privacyTitle": "本地与云端",
     "privacy": "Mac 本地处理留在 Mac 上。标准账户云端在运营方可读取的服务器上存储和处理内容，并非端到端加密。模式遮蔽不等于完全匿名化。付费方案不会授予私人空间访问权。",
-    "after": "试用结束后，在存储配额内，基础笔记、编辑、普通搜索、同步、读取和导出仍属于 Free。只有新的高成本云端 AI 和 ASR 任务需要预算。",
-    "team": "Personal 与每个组织的订阅和余额独立。Team 每席位含 225 万交互 Ivy 单位和 25 万自动化单位；自动化共用单位池。ASR 按席位，存储由组织共享。席位不改变权限。最多 2 个免费组织，每个 5 名成员，共享创建者账户存储，不增加试用。",
+    "after": "Free 包含 1 GB 内的基础笔记、编辑、普通搜索、同步、阅读和导出，以及每月云端额度。付费方案提供更多云端 AI、转写和存储空间。",
+    "team": "Personal 与每个组织的订阅和余额独立。Team 每席位含 225 万交互 Ivy 单位和 25 万自动化单位；自动化共用单位池。ASR 按席位，存储由组织共享。席位不改变权限。最多 2 个免费组织，每个 5 名成员，共享创建者账户存储。",
     "lifecycle": "云端音频默认保留 30 天；Free 可选 7/14/30 天，付费还可选 90 天。回收站保留 30 天。取消不删除内容；付费权限持续至周期结束。降级后超额仍可读取和导出，并有 90 天保护期。请在音频保留期结束前导出。",
     "docs": "方案与计费 · 英文文档",
     "comparison": "比较方案",
@@ -532,7 +532,7 @@ content.meta.features.description = content.pricing.lead + ' ' + content.offer.l
 content.meta.privacy.description = content.offer.privacy
 content.meta.pricing.title = 'IndexOne — Free / Personal / Team'
 content.meta.pricing.description = content.pricing.lead + ' 49 PLN / 75 PLN. ' + content.offer.status
-content.faq.items[0] = { question: "试用结束后，Free 仍包含哪些功能？", answer: content.offer.after }
+content.faq.items[0] = { question: "Free 包含哪些内容？", answer: content.offer.after }
 content.faq.items.push(
   { question: content.offer.trialTitle, answer: content.offer.trial },
   { question: content.offer.meterTitle, answer: content.offer.meter },

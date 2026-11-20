@@ -325,17 +325,17 @@ const content: SiteContent = {
   },
   offer: {
     "web": "Web アプリを開く",
-    "status": "クラウドプランを販売中です。プランの購入、トライアルの開始、サブスクリプションの管理はWebアプリにサインインして行えます。Macのローカル機能は引き続き利用できます。",
+    "status": "クラウドプランを販売中です。プランの購入やサブスクリプションの管理はWebアプリにサインインして行えます。Macのローカル機能は引き続き利用できます。",
     "monthly": "月額・PLN 表示",
     "tax": "Personal は税込。Team は税別で最低 2 席、月額合計 150 PLN（税別）。VAT 23% の場合は合計 184.50 PLN（1 席 92.25）。税率は異なる場合があり、購入前にアプリで最終金額を表示する必要があります。",
-    "trialTitle": "クラウドを一度試す",
-    "trial": "認証済みの個人アカウントごとに、カード不要の試用を一度だけ明示的に開始できます。内容はクラウド文字起こしの課金対象時間60分とIvyユニット100,000、有効期間は30日で、各録音は最長30分です。",
+    "trialTitle": "毎月無料",
+    "trial": "無料の個人アカウントには、毎暦月（UTC）200,000 Ivyユニットと2時間のクラウド文字起こしがカード不要で付与されます。Macのローカル機能にはプランの上限がありません。",
     "meterTitle": "文字起こしの計上方法",
     "meter": "クラウド文字起こしは録音ごとに最低20分を計上するため、2分の録音30件でPersonalの10時間分を使い切ります。ローカル文字起こしと既存の文字起こし文は、この枠を消費しません。",
     "privacyTitle": "ローカルとクラウド",
     "privacy": "Mac のローカル処理は Mac 内で完結。標準クラウドでは運営者が読めるサーバーで内容を保存・処理し、エンドツーエンド暗号化ではありません。パターンのマスキングは完全な匿名化ではありません。有料プランでも非公開スペースへの権限は付与されません。",
-    "after": "試用後も保存容量内の基本ノート、編集、通常検索、同期、閲覧、書き出しは Free のままです。新たな高コストのクラウド AI・ASR のみ予算が必要です。",
-    "team": "Personal と各組織の契約・残高は別です。Team は 1 席あたり対話用 Ivy 225 万単位と自動処理用 25 万単位を含み、自動処理分を共同プールにします。ASR は席別、容量は共有。席はアクセス権を変えません。無料組織は最大 2、各 5 人で作成者のアカウント容量を共有し、試用は増えません。",
+    "after": "Freeには、1 GBの範囲での基本的なノート、編集、通常の検索、同期、閲覧、エクスポートと、毎月のクラウド枠が含まれます。有料プランではクラウドAI、文字起こし、ストレージが増えます。",
+    "team": "Personal と各組織の契約・残高は別です。Team は 1 席あたり対話用 Ivy 225 万単位と自動処理用 25 万単位を含み、自動処理分を共同プールにします。ASR は席別、容量は共有。席はアクセス権を変えません。無料組織は最大 2、各 5 人で作成者のアカウント容量を共有します。",
     "lifecycle": "クラウド音声は既定で 30 日。Free は 7/14/30 日、有料は 90 日も選択可能。ごみ箱は 30 日。解約で内容は削除されず、有料権限は期間末まで有効。ダウングレード後の容量超過でも閲覧・書き出しと 90 日の保護期間があります。保持期限前に音声を書き出してください。",
     "docs": "プランと請求 · 英語の文書",
     "comparison": "プラン比較",
@@ -532,7 +532,7 @@ content.meta.features.description = content.pricing.lead + ' ' + content.offer.l
 content.meta.privacy.description = content.offer.privacy
 content.meta.pricing.title = 'IndexOne — Free / Personal / Team'
 content.meta.pricing.description = content.pricing.lead + ' 49 PLN / 75 PLN. ' + content.offer.status
-content.faq.items[0] = { question: "試用期間終了後もFreeで使える機能は？", answer: content.offer.after }
+content.faq.items[0] = { question: "Freeには何が含まれますか？", answer: content.offer.after }
 content.faq.items.push(
   { question: content.offer.trialTitle, answer: content.offer.trial },
   { question: content.offer.meterTitle, answer: content.offer.meter },

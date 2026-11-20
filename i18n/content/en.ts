@@ -325,17 +325,17 @@ const content: SiteContent = {
   },
   offer: {
     "web": "Open web app",
-    "status": "Cloud plans are on sale. Sign in to the web app to buy a plan, start the trial or manage your subscription. Local Mac features remain available.",
+    "status": "Cloud plans are on sale. Sign in to the web app to buy a plan or manage your subscription. Local Mac features remain available.",
     "monthly": "Monthly, in PLN",
     "tax": "Personal includes tax. Team excludes tax: minimum 2 seats = 150 PLN net/month. At 23% VAT: 184.50 PLN total (92.25 per seat). Your tax may differ; the app must show the final total before purchase.",
-    "trialTitle": "One cloud trial",
-    "trial": "Explicitly activate one card-free trial per verified personal account: 60 billed minutes of cloud transcription and 100,000 Ivy units, valid for 30 days. Each recording can be up to 30 minutes long.",
+    "trialTitle": "Free every month",
+    "trial": "Every free personal account gets 200,000 Ivy units and 2 hours of cloud transcription each calendar month (UTC), without a card. Local Mac features have no plan limit.",
     "meterTitle": "How transcription is counted",
     "meter": "Cloud transcription counts at least 20 minutes per recording, so thirty 2-minute recordings use all ten hours of Personal. Local transcription and existing transcripts use none of this allowance.",
     "privacyTitle": "Local and cloud are different",
     "privacy": "Local Mac processing stays on your Mac. Standard account cloud stores and processes content on servers readable by the operator; it is not end-to-end encrypted. Pattern masking is not full anonymization. Paid plans never grant access to private spaces.",
-    "after": "After the trial, basic notes, editing, ordinary search, sync, reading and export remain Free within storage limits. Only new costly cloud AI and ASR need a budget.",
-    "team": "Personal and each organization have separate subscriptions and balances. Team has 2.25 million interactive Ivy units plus 250,000 automation units per seat; automation units form a shared pool. ASR is per seat; storage is shared. A seat does not change access rights. Free organizations: up to 2 with 5 members each, sharing the founder’s account storage, without an extra trial.",
+    "after": "Free includes basic notes, editing, ordinary search, sync, reading and export within 1 GB, plus the monthly cloud allowance. Paid plans add more cloud AI, transcription and storage.",
+    "team": "Personal and each organization have separate subscriptions and balances. Team has 2.25 million interactive Ivy units plus 250,000 automation units per seat; automation units form a shared pool. ASR is per seat; storage is shared. A seat does not change access rights. Free organizations: up to 2 with 5 members each, sharing the founder’s account storage.",
     "lifecycle": "Cloud audio: 30 days by default; Free can choose 7/14/30 days, paid plans also 90. Trash: 30 days. Canceling does not delete content; paid rights last to period end. Over-quota downgrades preserve reading/export with 90 days of protection. Export audio before its retention expires.",
     "docs": "Plans and billing · English docs",
     "comparison": "Compare the plans",
@@ -532,7 +532,7 @@ content.meta.features.description = content.pricing.lead + ' ' + content.offer.l
 content.meta.privacy.description = content.offer.privacy
 content.meta.pricing.title = 'IndexOne — Free / Personal / Team'
 content.meta.pricing.description = content.pricing.lead + ' 49 PLN / 75 PLN. ' + content.offer.status
-content.faq.items[0] = { question: "What stays Free after the trial?", answer: content.offer.after }
+content.faq.items[0] = { question: "What does Free include?", answer: content.offer.after }
 content.faq.items.push(
   { question: content.offer.trialTitle, answer: content.offer.trial },
   { question: content.offer.meterTitle, answer: content.offer.meter },
