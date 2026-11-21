@@ -19,7 +19,7 @@ const content: SiteContent = {
     pricing: {
       breadcrumb: '料金',
       title: 'IndexOneの料金とObsidian・Notionなどとの比較',
-      description: 'IndexOneはアーリーアクセス期間中は無料です。録音、文字起こし、デバイス上のAI、Markdownの観点で、Obsidian、Notion、Evernote、Bear、Amieと比較できます。',
+      description: 'IndexOneはMacでは無料です。オプションのクラウドプランは月額49 PLNから。録音、文字起こし、デバイス上のAI、Markdownの観点で、Obsidian、Notion、Evernote、Bear、Amieと比較できます。',
     },
     changelog: {
       breadcrumb: '更新履歴',
@@ -171,6 +171,23 @@ const content: SiteContent = {
     seeAll: 'すべての機能を見る',
   },
   privacy: {
+    lifecycle: {
+      "title": "データのライフサイクル · クラウドプラン",
+      "items": [
+        {
+          "title": "データはいつまで保存されますか？",
+          "body": "クラウド音声は標準で30日間保存され、PersonalとTeamではストレージ上限内で最大90日間の保存を予定しています。ノート、文字起こし、通常のファイルは、ストレージ上限内で所有者が削除するまで保持されます。"
+        },
+        {
+          "title": "プランを下げるとどうなりますか？",
+          "body": "解約は支払い済み期間の終了時に適用されます。アクセス権があれば閲覧、エクスポート、削除は引き続き利用できます。"
+        },
+        {
+          "title": "組織を離れた後、データは誰が保持しますか？",
+          "body": "組織のコンテンツは組織に残ります。脱退やアクセス権の取り消し後は閲覧もエクスポートもできません。"
+        }
+      ]
+    },
     eyebrow: 'セキュリティとプライバシー',
     title: 'プライバシーは設定ではなく、設計そのものです。',
     leadHtml: 'On this Macスペースでは、文字起こし、検索、Ivy on this Macが<b>ネットワークに一切つながらずに</b>動作します。必要なのは、初期設定で外部と通信する2つの機能、つまり起動時の新バージョン確認と1日1回の利用状況メッセージをオフにすることだけです。Claude CodeやCodexを選んだ場合も、その送信の手前には同意と墨消しファイアウォールが置かれます。',
@@ -341,60 +358,84 @@ const content: SiteContent = {
       },
     },
   },
+  offer: {
+    "web": "Web アプリを開く",
+    "status": "クラウドプランを販売中です。プランの購入やサブスクリプションの管理はWebアプリにサインインして行えます。Macのローカル機能は引き続き利用できます。",
+    "monthly": "月額・PLN 表示",
+    "tax": "Personal は税込。Team は税別で最低 2 席、月額合計 150 PLN（税別）。VAT 23% の場合は合計 184.50 PLN（1 席 92.25）。税率は異なる場合があり、購入前にアプリで最終金額を表示する必要があります。",
+    "trialTitle": "毎月無料",
+    "trial": "無料の個人アカウントには、毎暦月（UTC）200,000 Ivyユニットと2時間のクラウド文字起こしがカード不要で付与されます。Macのローカル機能にはプランの上限がありません。",
+    "meterTitle": "文字起こしの計上方法",
+    "meter": "クラウド文字起こしは録音ごとに最低20分を計上するため、2分の録音30件でPersonalの10時間分を使い切ります。ローカル文字起こしと既存の文字起こし文は、この枠を消費しません。",
+    "privacyTitle": "ローカルとクラウド",
+    "privacy": "Mac のローカル処理は Mac 内で完結。標準クラウドでは運営者が読めるサーバーで内容を保存・処理し、エンドツーエンド暗号化ではありません。パターンのマスキングは完全な匿名化ではありません。有料プランでも非公開スペースへの権限は付与されません。",
+    "after": "Freeには、1 GBの範囲での基本的なノート、編集、通常の検索、同期、閲覧、エクスポートと、毎月のクラウド枠が含まれます。有料プランではクラウドAI、文字起こし、ストレージが増えます。",
+    "team": "Personal と各組織の契約・残高は別です。Team は 1 席あたり対話用 Ivy 225 万単位と自動処理用 25 万単位を含み、自動処理分を共同プールにします。ASR は席別、容量は共有。席はアクセス権を変えません。無料組織は最大 2、各 5 人で作成者のアカウント容量を共有します。",
+    "lifecycle": "クラウド音声は既定で 30 日。Free は 7/14/30 日、有料は 90 日も選択可能。ごみ箱は 30 日。解約で内容は削除されず、有料権限は期間末まで有効。ダウングレード後の容量超過でも閲覧・書き出しと 90 日の保護期間があります。保持期限前に音声を書き出してください。",
+    "docs": "プランと請求 · 英語の文書",
+    "comparison": "プラン比較",
+    "local": "Mac のローカルツール",
+    "basics": "基本クラウドノートと同期",
+    "ivy": "クラウド Ivy 単位 / 月",
+    "asr": "クラウド ASR 計上時間 / 月",
+    "storage": "クラウド容量",
+    "included": "含まれます",
+    "once": "一度の試用",
+    "seat": "1 席あたり",
+    "unit": "Ivy 単位は処理予算で、モデルの生トークンや回答回数の保証ではありません。GB は 10 億バイトです。"
+},
   pricing: {
-    eyebrow: '料金',
-    title: 'アーリーアクセス期間中は無料。',
-    lead: 'ローカルでの録音、文字起こし、ノート、Markdownエクスポートには、アカウントも支払いも必要ありません。アーリーアクセス終了後の料金と提供内容は、別途お知らせします。',
-    plans: {
-      free: {
-        name: 'Free',
-        badge: '提供中',
-        price: '$0',
-        per: '/ アーリーアクセス',
-        tagline: 'ローカルでの録音、文字起こし、ノート、エクスポート。',
-        points: [
-          'デバイス上での録音と文字起こしが無制限',
-          '会議中のIvyと、保管庫への質問',
-          'セマンティック検索と自動ナレッジグラフ',
-          'Ivyがサポートするエディターで書く単独のノート',
-          'Web版IndexOneと共通のPersonalスペースと組織スペース。直接録音でき、ノートをフォルダーで整理でき、Mac上に暗号化されたコピーを保持（アカウントが必要）',
-          'Workspaces、組み立て式プロジェクト、Notion / Obsidian / Apple Notes / Markdownのオフラインインポート',
-          'Workspaceごと・フォルダーごとのTouch IDロックとAES-256暗号化',
-          '画面共有時の自動再ロック',
-          'ローカルMCPサーバーとMarkdownエクスポート',
-          'LanguagesやIvy skillsなどのプラグインを、必要な場所にインストール（アカウントが必要）',
-        ],
-        cta: 'macOS版をダウンロード',
-      },
-      pro: {
-        name: 'Pro',
-        badge: '近日公開',
-        price: '予定',
-        tagline: '料金と提供時期は今後発表します。',
-        points: [
-          'Freeのすべての機能',
-          '複数のMacとiPhone間でのエンドツーエンド暗号化同期',
-          '暗号化されたクラウドバックアップ',
-          'オプションで低遅延のマネージドIvy（墨消し済み）',
-          'カスタムレシピと自動化',
-        ],
-        cta: 'GitHubでフォロー',
-      },
-      team: {
-        name: 'Team',
-        badge: '近日公開',
-        price: '予定',
-        tagline: '料金と提供時期は今後発表します。',
-        points: [
-          'Proのすべての機能',
-          'SSOとSCIMによるプロビジョニング',
-          'セキュリティポリシー、保持期間、監査ログ',
-          '優先サポートとSLA',
-        ],
-        cta: 'お問い合わせ',
-      },
-    },
-  },
+    "eyebrow": "月額・PLN 表示",
+    "title": "作業場所を選びましょう。",
+    "lead": "Mac で Free。明確な上限のオプションクラウド。",
+    "plans": {
+        "free": {
+            "name": "Free",
+            "badge": "Mac で利用可能",
+            "price": "0 PLN",
+            "per": "月額・PLN 表示",
+            "tagline": "ローカル作業にプラン上限はありません。ハードウェアの制約はあります。",
+            "points": [
+                "Mac のローカルツール",
+                "基本クラウドノートと同期",
+                "1 GB",
+                "200k Ivy · 2 h ASR"
+            ],
+            "cta": ""
+        },
+        "personal": {
+            "name": "Personal",
+            "badge": "提供中",
+            "price": "49 PLN",
+            "per": "税込 / 月",
+            "tagline": "個人のクラウドスペース向け。",
+            "points": [
+                "Mac のローカルツール",
+                "基本クラウドノートと同期",
+                "20 GB",
+                "1.2M Ivy · 10 h ASR",
+                "クラウドの画面録画"
+            ],
+            "cta": "Webアプリで購入"
+        },
+        "team": {
+            "name": "Team",
+            "badge": "提供中",
+            "price": "75 PLN",
+            "per": "税別 / 席 / 月",
+            "tagline": "組織向け、最低 2 席から。",
+            "points": [
+                "Mac のローカルツール",
+                "基本クラウドノートと同期",
+                "50 GB · 1 席あたり",
+                "2.5M Ivy · 15 h ASR",
+                "Google Meetボット",
+                "クラウドの画面録画"
+            ],
+            "cta": "Webアプリで購入"
+        }
+    }
+},
   compare: {
     eyebrow: '他社との比較',
     title: 'IndexOneと他のアプリの比較。',
@@ -439,7 +480,7 @@ const content: SiteContent = {
       },
       'price': {
         criterion: '料金',
-        cells: ['アーリーアクセス期間中は無料', '無料。Syncは年払いで月額$4から', '無料。AIと会議メモにはBusinessが必要（年払いで月額$20）', '50ノートまで無料。Starterは年額$99', '無料。Proは年額$29.99', '25ノートクレジット付きで無料。Proは年払いで月額€20から'],
+        cells: ['Macでは無料。クラウドPersonalは月額49 PLN、Teamは1席あたり税抜75 PLN', '無料。Syncは年払いで月額$4から', '無料。AIと会議メモにはBusinessが必要（年払いで月額$20）', '50ノートまで無料。Starterは年額$99', '無料。Proは年額$29.99', '25ノートクレジット付きで無料。Proは年払いで月額€20から'],
       },
     },
   },
@@ -450,7 +491,7 @@ const content: SiteContent = {
     items: [
       {
         question: 'IndexOneは無料ですか？',
-        answer: 'はい、アーリーアクセス期間中は無料です。ローカルでの録音、文字起こし、ノート、エクスポートには、アカウントも支払いも必要ありません。アーリーアクセス終了後の料金は別途お知らせします。',
+        answer: 'はい、Macでは無料です。ローカルでの録音、文字起こし、ノート、エクスポートには、アカウントも支払いも必要ありません。オプションのクラウドプラン（Personal 月額49 PLN、Team 1席あたり税抜75 PLN）で、クラウド文字起こし、クラウドのIvy、追加ストレージを利用できます。',
       },
       {
         question: '音声はクラウドに送られますか？',
@@ -514,5 +555,29 @@ const content: SiteContent = {
     legalHtml: 'macOSファースト · デバイス上のIvy · ローカルファースト · Tauri、Angular、Rustで開発 · macOS版は無料 · © {year} <a href="{authors}">MonoOne</a> · テキストは<a href="{license}">CC BY 4.0</a>',
   },
 }
+
+// The published offer is a preview; release history remains unchanged.
+content.pricing.plans.free.cta = content.hero.download
+content.hero.subHtml = content.pricing.lead + ' ' + content.pricing.plans.free.tagline
+content.unique.eyebrow = content.nav.features
+content.unique.title = content.features.title
+content.unique.lead = content.pricing.lead
+content.features.lead = content.pricing.lead
+content.cta.compare = content.offer.comparison
+content.cta.lead = content.pricing.lead
+content.meta.home.description = content.pricing.lead
+content.meta.features.description = content.pricing.lead + ' ' + content.offer.local
+content.meta.privacy.description = content.offer.privacy
+content.meta.pricing.title = 'IndexOne — Free / Personal / Team'
+content.meta.pricing.description = content.pricing.lead + ' 49 PLN / 75 PLN. ' + content.offer.status
+content.faq.items[0] = { question: "Freeには何が含まれますか？", answer: content.offer.after }
+content.faq.items.push(
+  { question: content.offer.trialTitle, answer: content.offer.trial },
+  { question: content.offer.meterTitle, answer: content.offer.meter },
+  { question: content.offer.privacyTitle, answer: content.offer.privacy },
+  { question: "Teamの料金は誰が支払いますか？", answer: content.offer.team },
+  ...content.privacy.lifecycle.items.map(item => ({ question: item.title, answer: item.body })),
+)
+content.compare.rows.price.cells[0] = 'Free · Personal 49 PLN · Team 75 PLN'
 
 export default content

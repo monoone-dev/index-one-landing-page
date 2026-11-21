@@ -13,7 +13,7 @@ const legacy = computed(() => fill(c.value.cta.legacyHtml, { download: site.link
         <h2 id="cta-title">{{ c.cta.title }}</h2>
         <p>
           {{ c.cta.lead }}
-          <NuxtLink :to="to('/pricing#compare')" class="cta__compare">{{ c.cta.compare }}</NuxtLink>
+          <NuxtLink :to="to('/pricing#comparison')" class="cta__compare">{{ c.cta.compare }}</NuxtLink>
         </p>
         <div class="cta__actions">
           <UButton :to="site.links.download" external size="xl" icon="i-lucide-arrow-down-to-line" :label="c.cta.download" />

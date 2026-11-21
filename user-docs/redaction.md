@@ -6,6 +6,9 @@ keywords: redaction, cloud processing, consent, name masking, emails, phone numb
 
 Before text goes to a cloud AI, IndexOne removes personal details from it and puts them back in your notes afterwards. Nothing goes to Claude Code or Codex until you allow cloud processing once, and every call is listed in Analytics.
 
+
+For the forthcoming cloud offer, see [Plans and billing](/docs/plans-and-billing/). Standard cloud content is stored and processed on servers readable by the operator, not end-to-end encrypted. Local Mac locks do not change that boundary. Pattern masking is not complete anonymization.
+
 ## When redaction applies
 
 Redaction runs on this Mac before text is sent to:

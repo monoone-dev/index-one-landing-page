@@ -6,6 +6,9 @@ keywords: privacy, data flow, network, update check, usage statistics, telemetry
 
 IndexOne is built to work on your Mac first. This page lists every kind of network traffic in IndexOne 3.19: what never leaves, the two small messages sent by default, and everything that leaves only after you choose it.
 
+
+For the forthcoming cloud offer, see [Plans and billing](/docs/plans-and-billing/). Standard cloud content is stored and processed on servers readable by the operator, not end-to-end encrypted. Local Mac locks do not change that boundary. Pattern masking is not complete anonymization.
+
 ## Stays on this Mac
 
 As long as you work in **On this Mac** with **Ivy on this Mac** as the AI, your content does not leave the Mac:

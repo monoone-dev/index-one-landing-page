@@ -6,6 +6,9 @@ keywords: storage, disk space, storage limit, free up space, recordings to recov
 
 IndexOne has two kinds of storage. Settings › Storage is about the disk on this Mac. Settings › Cloud storage is about what you keep in your IndexOne account. Notes and transcripts are never deleted by either; only recording files and other files count.
 
+
+For the forthcoming cloud offer, see [Plans and billing](/docs/plans-and-billing/). Standard cloud content is stored and processed on servers readable by the operator, not end-to-end encrypted. Local Mac locks do not change that boundary. Pattern masking is not complete anonymization.
+
 ## Storage on this Mac
 
 Settings › Storage shows how much disk your recordings use, split into audio and screen video, with **Reveal in Finder**.

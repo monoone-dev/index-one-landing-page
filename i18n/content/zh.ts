@@ -19,7 +19,7 @@ const content: SiteContent = {
     pricing: {
       breadcrumb: '价格',
       title: 'IndexOne 价格，以及与 Obsidian、Notion 等的对比',
-      description: 'IndexOne 在抢先体验期间免费。从录音、转写、设备端 AI 和 Markdown 等方面，将它与 Obsidian、Notion、Evernote、Bear 和 Amie 逐项对比。',
+      description: 'IndexOne 在 Mac 上免费；可选云端套餐每月 49 PLN 起。从录音、转写、设备端 AI 和 Markdown 等方面，将它与 Obsidian、Notion、Evernote、Bear 和 Amie 逐项对比。',
     },
     changelog: {
       breadcrumb: '更新日志',
@@ -171,6 +171,23 @@ const content: SiteContent = {
     seeAll: '查看全部功能',
   },
   privacy: {
+    lifecycle: {
+      "title": "数据生命周期 · 云端方案",
+      "items": [
+        {
+          "title": "数据会保留多久？",
+          "body": "云端音频默认保留30天，Personal和Team计划提供存储限额内最长90天的选项。笔记、转录和普通文件在存储限额内保留，直到所有者删除。"
+        },
+        {
+          "title": "降级方案后会怎样？",
+          "body": "取消在已付费周期结束时生效。有访问权限时仍可读取、导出和删除。"
+        },
+        {
+          "title": "离开组织后谁保留数据？",
+          "body": "组织内容留在组织内。离开或被撤销访问权限后，你将无法读取或导出这些内容。"
+        }
+      ]
+    },
     eyebrow: '安全与隐私',
     title: '隐私不是一个开关，而是整个架构。',
     leadHtml: '在 On this Mac 空间中，转写、搜索和 Ivy on this Mac 可以<b>完全不联网</b>运行——只要关掉默认会主动联网的两项功能：启动时检查新版本，以及每天一次的使用统计。如果你选择 Claude Code 或 Codex，数据外发之前还有同意确认和脱敏防火墙两道关卡。',
@@ -341,60 +358,84 @@ const content: SiteContent = {
       },
     },
   },
+  offer: {
+    "web": "打开网页版",
+    "status": "云端方案现已开售。登录网页版即可购买方案或管理订阅。Mac 本地功能仍可使用。",
+    "monthly": "按月，以 PLN 计价",
+    "tax": "Personal 含税。Team 不含税：至少 2 个席位，每月共 150 PLN（税前）。按 23% 增值税计算，总计 184.50 PLN（每席位 92.25）。实际税率可能不同；购买前应用必须显示最终总额。",
+    "trialTitle": "每月免费",
+    "trial": "每个免费个人账户每个日历月（UTC）可获得 200,000 Ivy 单位和 2 小时云端转写，无需绑卡。Mac 本地功能没有方案限制。",
+    "meterTitle": "转写如何计费",
+    "meter": "云端转写每段录音至少计费 20 分钟，因此三十段 2 分钟的录音会用完 Personal 的全部十小时额度。本地转写和已有的转写文本不消耗此额度。",
+    "privacyTitle": "本地与云端",
+    "privacy": "Mac 本地处理留在 Mac 上。标准账户云端在运营方可读取的服务器上存储和处理内容，并非端到端加密。模式遮蔽不等于完全匿名化。付费方案不会授予私人空间访问权。",
+    "after": "Free 包含 1 GB 内的基础笔记、编辑、普通搜索、同步、阅读和导出，以及每月云端额度。付费方案提供更多云端 AI、转写和存储空间。",
+    "team": "Personal 与每个组织的订阅和余额独立。Team 每席位含 225 万交互 Ivy 单位和 25 万自动化单位；自动化共用单位池。ASR 按席位，存储由组织共享。席位不改变权限。最多 2 个免费组织，每个 5 名成员，共享创建者账户存储。",
+    "lifecycle": "云端音频默认保留 30 天；Free 可选 7/14/30 天，付费还可选 90 天。回收站保留 30 天。取消不删除内容；付费权限持续至周期结束。降级后超额仍可读取和导出，并有 90 天保护期。请在音频保留期结束前导出。",
+    "docs": "方案与计费 · 英文文档",
+    "comparison": "比较方案",
+    "local": "Mac 本地工具",
+    "basics": "基础云端笔记与同步",
+    "ivy": "云端 Ivy 单位 / 月",
+    "asr": "云端 ASR 计费时长 / 月",
+    "storage": "云端存储",
+    "included": "包含",
+    "once": "一次试用",
+    "seat": "每席位",
+    "unit": "Ivy 单位是处理预算，不是原始模型 token，也不保证回答次数。GB = 十亿字节。"
+},
   pricing: {
-    eyebrow: '价格',
-    title: '抢先体验期间免费。',
-    lead: '本地录音、转写、笔记和 Markdown 导出，无需账号，也无需付费。抢先体验期结束后的价格与供应情况将另行公布。',
-    plans: {
-      free: {
-        name: 'Free',
-        badge: '现已推出',
-        price: '$0',
-        per: '/ 抢先体验期',
-        tagline: '本地录音、转写、笔记与导出。',
-        points: [
-          '不限次数的设备端录音与转写',
-          '会中 Ivy，以及向知识库提问',
-          '语义搜索与自动生成的知识图谱',
-          '独立笔记，配备 Ivy 辅助编辑器',
-          '与网页版 IndexOne 共用的 Personal 空间和组织空间：可直接录音到其中、用文件夹整理笔记，并在你的 Mac 上保留加密副本（需要账号）',
-          'Workspaces、可组合的项目，以及离线导入 Notion / Obsidian / Apple Notes / Markdown',
-          '按 Workspace 和文件夹设置 Touch ID 锁，采用 AES-256 加密',
-          '屏幕共享时自动重新锁定',
-          '本地 MCP 服务器与 Markdown 导出',
-          'Languages、Ivy skills 等插件，安装在你需要的地方（需要账号）',
-        ],
-        cta: '下载 macOS 版',
-      },
-      pro: {
-        name: 'Pro',
-        badge: '即将推出',
-        price: '规划中',
-        tagline: '价格与供应情况待公布。',
-        points: [
-          '包含 Free 版的全部功能',
-          '在你的多台 Mac 和 iPhone 之间端到端加密同步',
-          '加密云备份',
-          '可选的低延迟托管 Ivy（经脱敏）',
-          '自定义配方与自动化',
-        ],
-        cta: '在 GitHub 上关注',
-      },
-      team: {
-        name: 'Team',
-        badge: '即将推出',
-        price: '规划中',
-        tagline: '价格与供应情况待公布。',
-        points: [
-          '包含 Pro 版的全部功能',
-          'SSO 与 SCIM 用户配置',
-          '安全策略、数据保留与审计日志',
-          '优先支持与 SLA',
-        ],
-        cta: '联系我们',
-      },
-    },
-  },
+    "eyebrow": "按月，以 PLN 计价",
+    "title": "选择工作内容存放的位置。",
+    "lead": "Mac 上的 Free。可选云端，限额清晰。",
+    "plans": {
+        "free": {
+            "name": "Free",
+            "badge": "Mac 上可用",
+            "price": "0 PLN",
+            "per": "按月，以 PLN 计价",
+            "tagline": "本地工作不受方案配额限制，仍受硬件限制。",
+            "points": [
+                "Mac 本地工具",
+                "基础云端笔记与同步",
+                "1 GB",
+                "200k Ivy · 2 h ASR"
+            ],
+            "cta": ""
+        },
+        "personal": {
+            "name": "Personal",
+            "badge": "现已推出",
+            "price": "49 PLN",
+            "per": "含税 / 月",
+            "tagline": "适用于个人云端空间。",
+            "points": [
+                "Mac 本地工具",
+                "基础云端笔记与同步",
+                "20 GB",
+                "1.2M Ivy · 10 h ASR",
+                "云端录屏"
+            ],
+            "cta": "在网页版购买"
+        },
+        "team": {
+            "name": "Team",
+            "badge": "现已推出",
+            "price": "75 PLN",
+            "per": "税前 / 席位 / 月",
+            "tagline": "适用于组织，至少两个席位。",
+            "points": [
+                "Mac 本地工具",
+                "基础云端笔记与同步",
+                "50 GB · 每席位",
+                "2.5M Ivy · 15 h ASR",
+                "Google Meet 机器人",
+                "云端录屏"
+            ],
+            "cta": "在网页版购买"
+        }
+    }
+},
   compare: {
     eyebrow: '竞品对比',
     title: 'IndexOne 与其他产品的对比。',
@@ -439,7 +480,7 @@ const content: SiteContent = {
       },
       'price': {
         criterion: '价格',
-        cells: ['抢先体验期间免费', '免费；Sync 按年付费 $4/月起', '免费；AI 与会议笔记需 Business 套餐，按年付费 $20/月', '免费版最多 50 条笔记；Starter 版 $99/年', '免费；Pro 版 $29.99/年', '免费版含 25 次笔记额度；Pro 版按年付费 €20/月起'],
+        cells: ['Mac 上免费；云端 Personal 每月 49 PLN，Team 每席位 75 PLN（不含税）', '免费；Sync 按年付费 $4/月起', '免费；AI 与会议笔记需 Business 套餐，按年付费 $20/月', '免费版最多 50 条笔记；Starter 版 $99/年', '免费；Pro 版 $29.99/年', '免费版含 25 次笔记额度；Pro 版按年付费 €20/月起'],
       },
     },
   },
@@ -450,7 +491,7 @@ const content: SiteContent = {
     items: [
       {
         question: 'IndexOne 免费吗？',
-        answer: '是的，在抢先体验期间免费。本地录音、转写、笔记和导出，无需账号，也无需付费。抢先体验期结束后的价格将另行公布。',
+        answer: '是的，在 Mac 上免费。本地录音、转写、笔记和导出，无需账号，也无需付费。可选云端套餐（Personal 每月 49 PLN，Team 每席位 75 PLN 不含税）提供云端转写、云端 Ivy 和更多存储空间。',
       },
       {
         question: '我的音频会上传到云端吗？',
@@ -514,5 +555,29 @@ const content: SiteContent = {
     legalHtml: 'macOS 优先 · 设备端 Ivy · 本地优先 · 基于 Tauri、Angular 和 Rust 构建 · macOS 版免费 · © {year} <a href="{authors}">MonoOne</a> · 文字内容采用 <a href="{license}">CC BY 4.0</a> 许可',
   },
 }
+
+// The published offer is a preview; release history remains unchanged.
+content.pricing.plans.free.cta = content.hero.download
+content.hero.subHtml = content.pricing.lead + ' ' + content.pricing.plans.free.tagline
+content.unique.eyebrow = content.nav.features
+content.unique.title = content.features.title
+content.unique.lead = content.pricing.lead
+content.features.lead = content.pricing.lead
+content.cta.compare = content.offer.comparison
+content.cta.lead = content.pricing.lead
+content.meta.home.description = content.pricing.lead
+content.meta.features.description = content.pricing.lead + ' ' + content.offer.local
+content.meta.privacy.description = content.offer.privacy
+content.meta.pricing.title = 'IndexOne — Free / Personal / Team'
+content.meta.pricing.description = content.pricing.lead + ' 49 PLN / 75 PLN. ' + content.offer.status
+content.faq.items[0] = { question: "Free 包含哪些内容？", answer: content.offer.after }
+content.faq.items.push(
+  { question: content.offer.trialTitle, answer: content.offer.trial },
+  { question: content.offer.meterTitle, answer: content.offer.meter },
+  { question: content.offer.privacyTitle, answer: content.offer.privacy },
+  { question: "谁为Team付费？", answer: content.offer.team },
+  ...content.privacy.lifecycle.items.map(item => ({ question: item.title, answer: item.body })),
+)
+content.compare.rows.price.cells[0] = 'Free · Personal 49 PLN · Team 75 PLN'
 
 export default content

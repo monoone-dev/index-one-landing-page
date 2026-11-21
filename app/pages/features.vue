@@ -13,6 +13,7 @@ usePageSeo({
 <template>
   <main id="main">
     <FeatureList :level="1" />
+    <OfferContext />
     <CtaSection />
   </main>
 </template>

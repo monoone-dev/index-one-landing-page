@@ -33,6 +33,7 @@ usePageSeo({
     <UniqueSection />
     <SecurityBand />
     <WhatsNew />
+    <OfferContext />
     <CtaSection />
   </main>
 </template>

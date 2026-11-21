@@ -1,0 +1,107 @@
+{
+  "catalogVersion": "2026-11-15.v1",
+  "ratesVersion": "2026-11-15.v1",
+  "effectiveFrom": "2026-11-15T00:00:00Z",
+  "periodPolicy": "calendar_month_utc",
+  "asrMinimumMs": 1200000,
+  "freeOrganizationsPerAccount": 2,
+  "freeOrganizationMembers": 5,
+  "personalGuestDailyIvyUnits": 50000,
+  "defaultAudioRetentionDays": 30,
+  "trashRetentionDays": 30,
+  "downgradeProtectionDays": 90,
+  "billingDeletesContent": false,
+  "trial": {
+    "asrMs": 3600000,
+    "ivyUnits": 100000,
+    "validityDays": 30,
+    "maxRecordingMs": 1800000,
+    "explicitActivation": true,
+    "oncePerVerifiedAccount": true
+  },
+  "offers": [
+    {
+      "id": "free",
+      "planVersion": "2026-11-15.v1",
+      "payerKind": "account",
+      "price": {
+        "priceKey": "free-pln-month-v1",
+        "currency": "PLN",
+        "amountMinor": 0,
+        "taxBehavior": "inclusive",
+        "interval": "month"
+      },
+      "minSeats": 1,
+      "limits": {
+        "ivyUnits": 200000,
+        "asrMs": 7200000,
+        "storageBytes": 1000000000
+      },
+      "automationIvyUnitsPerSeat": 0,
+      "localFree": true,
+      "basicCloud": true,
+      "meetBotAvailable": false,
+      "audioRetentionDays": [
+        7,
+        14,
+        30
+      ]
+    },
+    {
+      "id": "personal",
+      "planVersion": "2026-11-15.v1",
+      "payerKind": "account",
+      "price": {
+        "priceKey": "personal-pln-month-v1",
+        "currency": "PLN",
+        "amountMinor": 4900,
+        "taxBehavior": "inclusive",
+        "interval": "month"
+      },
+      "minSeats": 1,
+      "limits": {
+        "ivyUnits": 1200000,
+        "asrMs": 36000000,
+        "storageBytes": 20000000000
+      },
+      "automationIvyUnitsPerSeat": 0,
+      "localFree": true,
+      "basicCloud": true,
+      "meetBotAvailable": false,
+      "audioRetentionDays": [
+        7,
+        14,
+        30,
+        90
+      ]
+    },
+    {
+      "id": "team",
+      "planVersion": "2026-11-15.v1",
+      "payerKind": "workspace",
+      "price": {
+        "priceKey": "team-pln-month-v1",
+        "currency": "PLN",
+        "amountMinor": 7500,
+        "taxBehavior": "exclusive",
+        "interval": "month"
+      },
+      "minSeats": 2,
+      "limits": {
+        "ivyUnits": 2500000,
+        "asrMs": 54000000,
+        "storageBytes": 50000000000
+      },
+      "automationIvyUnitsPerSeat": 250000,
+      "localFree": true,
+      "basicCloud": true,
+      "meetBotAvailable": true,
+      "audioRetentionDays": [
+        7,
+        14,
+        30,
+        90
+      ]
+    }
+  ]
+}
