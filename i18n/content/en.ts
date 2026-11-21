@@ -71,6 +71,63 @@ const content: SiteContent = {
     videoLabel: 'A 90-second tour of IndexOne: a meeting being recorded while a note is typed alongside it, the note written afterwards and the items it pulls out, the speaker timeline, a question asked of Ivy across the whole vault and answered with sources, the knowledge graph, the Workspaces rail and on-device search, a project, People, and a Workspace refusing to open because it is sealed',
     play: 'Watch the 90-second tour',
   },
+  home: {
+    announce: { badge: 'New', text: 'IndexOne {version} is out — see what changed' },
+    pillars: {
+      eyebrow: 'Why IndexOne',
+      title: 'Your meetings, remembered. Your Mac, in charge.',
+      lead: 'Three things IndexOne does with every call, and where each of them runs.',
+      items: {
+        capture: {
+          title: 'Hears both sides of the call',
+          body: 'Your mic and the other participants\' audio are recorded as two streams and transcribed on your Mac by Whisper.',
+          link: 'Capture and transcription',
+        },
+        ivy: {
+          title: 'Ask Ivy, live or later',
+          body: 'Ask mid-meeting without stopping the recording, or across months of calls. Every answer cites the meetings it came from.',
+          link: 'How Ivy works',
+        },
+        privacy: {
+          title: 'Sealed with Touch ID',
+          body: 'An encrypted library, plus AES-256 locks for any Workspace or folder. A locked folder is invisible to search, the graph and MCP.',
+          link: 'How privacy works',
+        },
+      },
+      mock: {
+        question: 'What did we decide about the launch date?',
+        answer: 'Launch moves to 3 March, once QA signs off.',
+        sources: '2 sources',
+        folders: ['Board', 'Hiring', '1:1s'],
+      },
+    },
+    stats: {
+      aria: 'IndexOne in numbers',
+      labels: [
+        'audio streams per call: you and everyone else',
+        'accounts needed to record and transcribe',
+        'Touch ID locks for any folder',
+        'Ivy actions in the note editor',
+        'one-click artifacts from any meeting',
+        'import sources, entirely offline',
+      ],
+    },
+    showcase: {
+      eyebrow: 'See it in the app',
+      title: 'From the call to the answer, in one app.',
+      lead: 'Record the meeting, ask about it, keep it as Markdown. Pick a step to see it.',
+      tabsLabel: 'Product tour',
+      tabs: { record: 'Record', ask: 'Ask', export: 'Keep' },
+    },
+    security: { more: 'Read the privacy model' },
+    news: {
+      eyebrow: 'What\'s new',
+      title: 'Shipped lately.',
+      lead: 'IndexOne ships often. These are the latest releases; release notes are in English.',
+      read: 'Read the notes',
+      all: 'All releases',
+    },
+  },
   trust: {
     aria: 'At a glance',
     items: ['On-device transcription', 'Touch ID lock at rest', 'No cloud required', 'Plain Markdown you own'],
@@ -112,28 +169,6 @@ const content: SiteContent = {
       },
     },
     seeAll: 'See every feature',
-  },
-  how: {
-    eyebrow: 'How it works',
-    title: 'Record → understand → ask. Local-first by design.',
-    lead: 'One local-first pipeline turns a live call into searchable memory. Transcription stays on your Mac; Ivy can run locally or, with explicit consent, use redacted cloud processing.',
-    steps: [
-      {
-        label: '01 · Record',
-        title: 'Hears the whole call',
-        body: 'Your mic <b>and</b> the other side\'s system audio, captured and transcribed separately, then merged into a clean <b>Me / Others</b> transcript by on-device Whisper.',
-      },
-      {
-        label: '02 · Understand',
-        title: 'Ivy, on your Mac',
-        body: 'A reasoning model runs locally over a semantic index of everything you\'ve recorded — writing a structured note and keeping the memory searchable forever.',
-      },
-      {
-        label: '03 · Ask',
-        title: 'Answers, live and cited',
-        body: 'Ask Ivy mid-meeting and get a grounded answer with <b>sources</b> — or ask across months of calls afterwards. The recording never stops.',
-      },
-    ],
   },
   privacy: {
     eyebrow: 'Security & Privacy',

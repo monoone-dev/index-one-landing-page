@@ -71,6 +71,63 @@ const content: SiteContent = {
     videoLabel: 'Eine 90-Sekunden-Tour durch IndexOne: ein Meeting wird aufgenommen, während daneben eine Notiz entsteht, die danach geschriebene Notiz und die Punkte, die sie herauszieht, die Sprecher-Zeitleiste, eine Frage an Ivy über den ganzen Vault mit Antwort samt Quellen, der Wissensgraph, die Workspaces-Leiste und die Suche auf dem Gerät, ein Projekt, People und ein Workspace, der sich nicht öffnet, weil er versiegelt ist',
     play: 'Die 90-Sekunden-Tour ansehen',
   },
+  home: {
+    announce: { badge: 'Neu', text: 'IndexOne {version} ist da — sieh dir die Änderungen an' },
+    pillars: {
+      eyebrow: 'Warum IndexOne',
+      title: 'Deine Meetings, festgehalten. Dein Mac hat die Kontrolle.',
+      lead: 'Drei Dinge, die IndexOne mit jedem Anruf macht, und wo jedes davon läuft.',
+      items: {
+        capture: {
+          title: 'Hört beide Seiten des Anrufs',
+          body: 'Dein Mikrofon und der Ton der anderen Teilnehmenden werden als zwei Spuren aufgenommen und von Whisper auf deinem Mac transkribiert.',
+          link: 'Aufnahme und Transkription',
+        },
+        ivy: {
+          title: 'Frag Ivy, live oder später',
+          body: 'Frag mitten im Meeting, ohne die Aufnahme zu stoppen, oder über Monate von Anrufen hinweg. Jede Antwort nennt die Meetings, aus denen sie stammt.',
+          link: 'So funktioniert Ivy',
+        },
+        privacy: {
+          title: 'Versiegelt mit Touch ID',
+          body: 'Eine verschlüsselte Bibliothek und AES-256-Sperren für jeden Workspace und jeden Ordner. Ein gesperrter Ordner ist für Suche, Graph und MCP unsichtbar.',
+          link: 'So funktioniert Datenschutz',
+        },
+      },
+      mock: {
+        question: 'Was haben wir zum Starttermin entschieden?',
+        answer: 'Der Start verschiebt sich auf den 3. März, nach der Freigabe durch QA.',
+        sources: '2 Quellen',
+        folders: ['Vorstand', 'Recruiting', '1:1s'],
+      },
+    },
+    stats: {
+      aria: 'IndexOne in Zahlen',
+      labels: [
+        'Audiospuren pro Anruf: du und alle anderen',
+        'Konten nötig zum Aufnehmen und Transkribieren',
+        'Touch-ID-Sperren für jeden Ordner',
+        'Ivy-Aktionen im Notizeditor',
+        'Ein-Klick-Dokumente aus jedem Meeting',
+        'Importquellen, komplett offline',
+      ],
+    },
+    showcase: {
+      eyebrow: 'In der App ansehen',
+      title: 'Vom Anruf zur Antwort, in einer App.',
+      lead: 'Nimm das Meeting auf, frag danach, behalte es als Markdown. Wähle einen Schritt, um ihn zu sehen.',
+      tabsLabel: 'Produkttour',
+      tabs: { record: 'Aufnehmen', ask: 'Fragen', export: 'Behalten' },
+    },
+    security: { more: 'Zum Datenschutzmodell' },
+    news: {
+      eyebrow: 'Neuigkeiten',
+      title: 'Zuletzt erschienen.',
+      lead: 'IndexOne erscheint oft. Das sind die neuesten Versionen; die Versionshinweise sind auf Englisch.',
+      read: 'Hinweise lesen',
+      all: 'Alle Versionen',
+    },
+  },
   trust: {
     aria: 'Auf einen Blick',
     items: ['Transkription auf dem Gerät', 'Touch-ID-Sperre im Ruhezustand', 'Keine Cloud nötig', 'Reines Markdown, das dir gehört'],
@@ -112,28 +169,6 @@ const content: SiteContent = {
       },
     },
     seeAll: 'Alle Funktionen ansehen',
-  },
-  how: {
-    eyebrow: 'So funktioniert es',
-    title: 'Aufnehmen → verstehen → fragen. Local-first aus Prinzip.',
-    lead: 'Eine lokale Pipeline macht aus einem Live-Call durchsuchbares Gedächtnis. Die Transkription bleibt auf deinem Mac; Ivy kann lokal laufen oder – mit deiner ausdrücklichen Zustimmung – geschwärzte Cloud-Verarbeitung nutzen.',
-    steps: [
-      {
-        label: '01 · Aufnehmen',
-        title: 'Hört den ganzen Call',
-        body: 'Dein Mikrofon <b>und</b> das Systemaudio der Gegenseite, getrennt aufgenommen und transkribiert, dann von Whisper auf dem Gerät zu einem sauberen <b>Me / Others</b>-Transkript zusammengeführt.',
-      },
-      {
-        label: '02 · Verstehen',
-        title: 'Ivy, auf deinem Mac',
-        body: 'Ein Reasoning-Modell läuft lokal über einem semantischen Index von allem, was du aufgenommen hast – es schreibt eine strukturierte Notiz und hält das Gedächtnis dauerhaft durchsuchbar.',
-      },
-      {
-        label: '03 · Fragen',
-        title: 'Antworten, live und mit Quellen',
-        body: 'Frag Ivy mitten im Meeting und erhalte eine fundierte Antwort mit <b>Quellen</b> – oder frag später über Monate von Calls hinweg. Die Aufnahme stoppt nie.',
-      },
-    ],
   },
   privacy: {
     eyebrow: 'Sicherheit & Datenschutz',

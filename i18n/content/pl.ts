@@ -71,6 +71,63 @@ const content: SiteContent = {
     videoLabel: '90-sekundowa prezentacja IndexOne: nagrywane spotkanie i notatka pisana równolegle, notatka utworzona po spotkaniu i wyciągnięte z niej punkty, oś czasu mówców, pytanie zadane Ivy o cały sejf i odpowiedź ze źródłami, graf wiedzy, pasek Workspaces i wyszukiwanie na urządzeniu, projekt, People oraz Workspace, który nie chce się otworzyć, bo jest zapieczętowany',
     play: 'Obejrzyj 90-sekundową prezentację',
   },
+  home: {
+    announce: { badge: 'Nowość', text: 'Wyszło IndexOne {version} — zobacz, co się zmieniło' },
+    pillars: {
+      eyebrow: 'Dlaczego IndexOne',
+      title: 'Twoje spotkania zapamiętane. Twój Mac decyduje.',
+      lead: 'Trzy rzeczy, które IndexOne robi z każdą rozmową — i gdzie każda z nich się dzieje.',
+      items: {
+        capture: {
+          title: 'Słyszy obie strony rozmowy',
+          body: 'Twój mikrofon i dźwięk pozostałych uczestników są nagrywane jako dwa strumienie i transkrybowane na Twoim Macu przez Whisper.',
+          link: 'Nagrywanie i transkrypcja',
+        },
+        ivy: {
+          title: 'Zapytaj Ivy — teraz albo później',
+          body: 'Pytaj w trakcie spotkania bez zatrzymywania nagrania albo w poprzek miesięcy rozmów. Każda odpowiedź wskazuje spotkania, z których pochodzi.',
+          link: 'Jak działa Ivy',
+        },
+        privacy: {
+          title: 'Zapieczętowane Touch ID',
+          body: 'Zaszyfrowana biblioteka i blokady AES-256 dla dowolnej przestrzeni roboczej lub folderu. Zablokowany folder jest niewidoczny dla wyszukiwania, grafu i MCP.',
+          link: 'Jak działa prywatność',
+        },
+      },
+      mock: {
+        question: 'Co ustaliliśmy w sprawie daty premiery?',
+        answer: 'Premiera przesuwa się na 3 marca, po akceptacji QA.',
+        sources: '2 źródła',
+        folders: ['Zarząd', 'Rekrutacja', '1:1'],
+      },
+    },
+    stats: {
+      aria: 'IndexOne w liczbach',
+      labels: [
+        'strumienie audio na rozmowę: Ty i wszyscy pozostali',
+        'kont potrzebnych do nagrywania i transkrypcji',
+        'blokady Touch ID dla dowolnego folderu',
+        'akcji Ivy w edytorze notatek',
+        'gotowych dokumentów z każdego spotkania jednym kliknięciem',
+        'źródeł importu, w pełni offline',
+      ],
+    },
+    showcase: {
+      eyebrow: 'Zobacz w aplikacji',
+      title: 'Od rozmowy do odpowiedzi — w jednej aplikacji.',
+      lead: 'Nagraj spotkanie, zapytaj o nie, zachowaj je jako Markdown. Wybierz krok, aby go zobaczyć.',
+      tabsLabel: 'Przegląd produktu',
+      tabs: { record: 'Nagraj', ask: 'Zapytaj', export: 'Zachowaj' },
+    },
+    security: { more: 'Poznaj model prywatności' },
+    news: {
+      eyebrow: 'Co nowego',
+      title: 'Ostatnio wydane.',
+      lead: 'IndexOne wychodzi często. Oto najnowsze wydania; informacje o wydaniach są po angielsku.',
+      read: 'Czytaj informacje',
+      all: 'Wszystkie wydania',
+    },
+  },
   trust: {
     aria: 'W skrócie',
     items: ['Transkrypcja na urządzeniu', 'Blokada Touch ID w spoczynku', 'Bez potrzeby chmury', 'Zwykły Markdown, na własność'],
@@ -112,28 +169,6 @@ const content: SiteContent = {
       },
     },
     seeAll: 'Zobacz wszystkie funkcje',
-  },
-  how: {
-    eyebrow: 'Jak to działa',
-    title: 'Nagraj → zrozum → zapytaj. Lokalnie z założenia.',
-    lead: 'Jeden lokalny proces zamienia rozmowę na żywo w przeszukiwalną pamięć. Transkrypcja zostaje na Twoim Macu; Ivy może działać lokalnie albo — za Twoją wyraźną zgodą — korzystać z chmury po redakcji.',
-    steps: [
-      {
-        label: '01 · Nagraj',
-        title: 'Słyszy całą rozmowę',
-        body: 'Twój mikrofon <b>i</b> dźwięk systemowy drugiej strony, nagrywane i transkrybowane osobno, a potem łączone przez Whisper na urządzeniu w czytelną transkrypcję <b>Me / Others</b>.',
-      },
-      {
-        label: '02 · Zrozum',
-        title: 'Ivy, na Twoim Macu',
-        body: 'Model rozumujący działa lokalnie na indeksie semantycznym wszystkiego, co nagrałeś — pisze uporządkowaną notatkę i na zawsze utrzymuje pamięć gotową do przeszukania.',
-      },
-      {
-        label: '03 · Zapytaj',
-        title: 'Odpowiedzi na żywo, ze źródłami',
-        body: 'Zapytaj Ivy w trakcie spotkania i dostań rzetelną odpowiedź ze <b>źródłami</b> — albo później pytaj o miesiące rozmów. Nagrywanie nigdy się nie zatrzymuje.',
-      },
-    ],
   },
   privacy: {
     eyebrow: 'Bezpieczeństwo i prywatność',

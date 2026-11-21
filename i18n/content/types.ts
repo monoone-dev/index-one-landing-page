@@ -30,6 +30,10 @@ export type PlanId = 'free' | 'pro' | 'team'
 
 export type ComparisonRowId = 'capture' | 'local-transcription' | 'local-ai' | 'ask-all' | 'local-data' | 'markdown' | 'encryption' | 'platforms' | 'price'
 
+export type PillarId = 'capture' | 'ivy' | 'privacy'
+
+export type ShowcaseTabId = 'record' | 'ask' | 'export'
+
 export interface SiteContent {
   meta: {
     home: PageMeta
@@ -78,6 +82,33 @@ export interface SiteContent {
     videoLabel: string
     play: string
   }
+  home: {
+    /** The announcement pill above the hero, with a {version} placeholder. */
+    announce: { badge: string, text: string }
+    pillars: {
+      eyebrow: string
+      title: string
+      lead: string
+      items: Record<PillarId, Card & { link: string }>
+      mock: {
+        question: string
+        answer: string
+        sources: string
+        folders: [string, string, string]
+      }
+    }
+    /** Labels for the facts band; the values live in app/data/shared.ts. */
+    stats: { aria: string, labels: [string, string, string, string, string, string] }
+    showcase: {
+      eyebrow: string
+      title: string
+      lead: string
+      tabsLabel: string
+      tabs: Record<ShowcaseTabId, string>
+    }
+    security: { more: string }
+    news: { eyebrow: string, title: string, lead: string, read: string, all: string }
+  }
   trust: {
     aria: string
     items: [string, string, string, string]
@@ -88,12 +119,6 @@ export interface SiteContent {
     lead: string
     items: Record<DifferentiatorId, Card & { link: string }>
     seeAll: string
-  }
-  how: {
-    eyebrow: string
-    title: string
-    lead: string
-    steps: [Card & { label: string }, Card & { label: string }, Card & { label: string }]
   }
   privacy: {
     eyebrow: string

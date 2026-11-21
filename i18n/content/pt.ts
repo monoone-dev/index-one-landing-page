@@ -71,6 +71,63 @@ const content: SiteContent = {
     videoLabel: 'Um tour de 90 segundos pelo IndexOne: uma reunião sendo gravada enquanto uma nota é digitada ao lado, a nota escrita depois e os itens que ela extrai, a linha do tempo de quem fala, uma pergunta feita à Ivy sobre todo o acervo e respondida com fontes, o grafo de conhecimento, a barra de Workspaces e a busca no dispositivo, um projeto, Pessoas, e um Workspace que se recusa a abrir porque está selado',
     play: 'Assista ao tour de 90 segundos',
   },
+  home: {
+    announce: { badge: 'Novo', text: 'Chegou o IndexOne {version}: veja o que mudou' },
+    pillars: {
+      eyebrow: 'Por que IndexOne',
+      title: 'Suas reuniões, lembradas. Seu Mac, no comando.',
+      lead: 'Três coisas que o IndexOne faz com cada chamada, e onde cada uma é executada.',
+      items: {
+        capture: {
+          title: 'Ouve os dois lados da chamada',
+          body: 'Seu microfone e o áudio dos outros participantes são gravados como dois fluxos e transcritos no seu Mac pelo Whisper.',
+          link: 'Captura e transcrição',
+        },
+        ivy: {
+          title: 'Pergunte à Ivy, agora ou depois',
+          body: 'Pergunte no meio da reunião sem parar a gravação, ou sobre meses de chamadas. Cada resposta cita as reuniões de onde veio.',
+          link: 'Como a Ivy funciona',
+        },
+        privacy: {
+          title: 'Selado com Touch ID',
+          body: 'Uma biblioteca criptografada e bloqueios AES-256 para qualquer Workspace ou pasta. Uma pasta bloqueada fica invisível para a busca, o grafo e o MCP.',
+          link: 'Como a privacidade funciona',
+        },
+      },
+      mock: {
+        question: 'O que decidimos sobre a data de lançamento?',
+        answer: 'O lançamento passa para 3 de março, depois da aprovação do QA.',
+        sources: '2 fontes',
+        folders: ['Diretoria', 'Contratação', '1:1'],
+      },
+    },
+    stats: {
+      aria: 'IndexOne em números',
+      labels: [
+        'fluxos de áudio por chamada: você e todos os outros',
+        'contas necessárias para gravar e transcrever',
+        'bloqueios com Touch ID para qualquer pasta',
+        'ações da Ivy no editor de notas',
+        'documentos com um clique de qualquer reunião',
+        'fontes de importação, totalmente offline',
+      ],
+    },
+    showcase: {
+      eyebrow: 'Veja no app',
+      title: 'Da chamada à resposta, em um só app.',
+      lead: 'Grave a reunião, pergunte sobre ela e guarde-a em Markdown. Escolha uma etapa para vê-la.',
+      tabsLabel: 'Tour do produto',
+      tabs: { record: 'Gravar', ask: 'Perguntar', export: 'Guardar' },
+    },
+    security: { more: 'Leia o modelo de privacidade' },
+    news: {
+      eyebrow: 'Novidades',
+      title: 'Lançado recentemente.',
+      lead: 'O IndexOne é atualizado com frequência. Estas são as versões mais recentes; as notas de versão estão em inglês.',
+      read: 'Ler as notas',
+      all: 'Todas as versões',
+    },
+  },
   trust: {
     aria: 'Em resumo',
     items: ['Transcrição no dispositivo', 'Bloqueio com Touch ID em repouso', 'Sem nuvem obrigatória', 'Markdown simples que é seu'],
@@ -112,28 +169,6 @@ const content: SiteContent = {
       },
     },
     seeAll: 'Ver todos os recursos',
-  },
-  how: {
-    eyebrow: 'Como funciona',
-    title: 'Gravar → entender → perguntar. Local-first desde a concepção.',
-    lead: 'Um único pipeline local-first transforma uma chamada ao vivo em memória pesquisável. A transcrição fica no seu Mac; a Ivy pode rodar localmente ou, com seu consentimento explícito, usar processamento na nuvem com anonimização.',
-    steps: [
-      {
-        label: '01 · Gravar',
-        title: 'Ouve a chamada inteira',
-        body: 'Seu microfone <b>e</b> o áudio do sistema do outro lado, capturados e transcritos separadamente, depois unidos pelo Whisper no dispositivo em uma transcrição limpa <b>Me / Others</b>.',
-      },
-      {
-        label: '02 · Entender',
-        title: 'A Ivy, no seu Mac',
-        body: 'Um modelo de raciocínio roda localmente sobre um índice semântico de tudo o que você gravou — escrevendo uma nota estruturada e mantendo a memória pesquisável para sempre.',
-      },
-      {
-        label: '03 · Perguntar',
-        title: 'Respostas ao vivo, com fontes',
-        body: 'Pergunte à Ivy no meio da reunião e receba uma resposta embasada, com <b>fontes</b> — ou pergunte depois sobre meses de chamadas. A gravação nunca para.',
-      },
-    ],
   },
   privacy: {
     eyebrow: 'Segurança e privacidade',
