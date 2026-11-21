@@ -161,6 +161,8 @@ export interface SiteContent {
     basics: string
     ivy: string
     asr: string
+    asrUnlimited: string
+    asrBasic: string
     storage: string
     included: string
     once: string
