@@ -1,4 +1,4 @@
-import type { ComparisonRowId, DifferentiatorId, FeatureId, PlanId, PrivacyCardId, ProviderId } from '~~/i18n/content/types'
+import type { ComparisonRowId, DifferentiatorId, FeatureId, PillarId, PlanId, PrivacyCardId, ProviderId, ShowcaseTabId } from '~~/i18n/content/types'
 import { site } from './site'
 
 export interface Screenshot {
@@ -22,6 +22,18 @@ export const differentiators: { id: DifferentiatorId, icon: string, to: string, 
   { id: 'locks', icon: 'i-lucide-fingerprint', to: '/privacy' },
   { id: 'markdown', icon: 'i-lucide-file-code', to: '/features#markdown' },
 ]
+
+export const pillars: { id: PillarId, icon: string, to: string }[] = [
+  { id: 'capture', icon: 'i-lucide-audio-lines', to: '/features#transcription' },
+  { id: 'ivy', icon: 'i-lucide-message-circle-question', to: '/features#ivy' },
+  { id: 'privacy', icon: 'i-lucide-fingerprint', to: '/privacy' },
+]
+
+/** The facts band on the home page, in the order of `home.stats.labels`. Each is a claim the app keeps. */
+export const homeStats = ['2', '0', 'AES-256', '19', '7', '5'] as const
+
+/** The privacy cards shown on the home page. */
+export const homePrivacyCards: PrivacyCardId[] = ['offline', 'at-rest', 'firewall']
 
 export const privacyCards: { id: PrivacyCardId, icon: string, tone?: 'safe', wide?: boolean }[] = [
   { id: 'offline', icon: 'i-lucide-eye-off', tone: 'safe' },
@@ -58,8 +70,6 @@ export const features: { id: FeatureId, shot: Screenshot }[] = [
 
 export const ivyFeatureIds: FeatureId[] = ['ivy', 'ask', 'notes']
 
-export const highlightedFeatureIds: FeatureId[] = ['ivy', 'receipts']
-
 export const plans: { id: PlanId, available: boolean, href: string }[] = [
   { id: 'free', available: true, href: site.links.download },
   { id: 'personal', available: true, href: site.links.web },
@@ -80,4 +90,10 @@ export const comparison: { id: ComparisonRowId, values: [Support, Support, Suppo
   { id: 'encryption', values: ['yes', 'partial', 'no', 'partial', 'partial', 'unknown'] },
   { id: 'platforms', values: ['info', 'info', 'info', 'info', 'info', 'info'] },
   { id: 'price', values: ['info', 'info', 'info', 'info', 'info', 'info'] },
+]
+
+export const showcaseTabs: { id: ShowcaseTabId, icon: string, feature: FeatureId }[] = [
+  { id: 'record', icon: 'i-lucide-mic', feature: 'transcription' },
+  { id: 'ask', icon: 'i-lucide-message-circle-question', feature: 'ask' },
+  { id: 'export', icon: 'i-lucide-file-code', feature: 'markdown' },
 ]

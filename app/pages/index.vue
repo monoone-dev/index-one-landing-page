@@ -27,8 +27,12 @@ usePageSeo({
   <main id="main">
     <HeroSection />
     <TrustStrip />
+    <PillarsSection />
+    <StatsBand />
+    <ShowcaseTabs />
     <UniqueSection />
-    <HowItWorks />
+    <SecurityBand />
+    <WhatsNew />
     <OfferContext />
     <CtaSection />
   </main>

@@ -71,6 +71,63 @@ const content: SiteContent = {
     videoLabel: 'Un tour di 90 secondi di IndexOne: una riunione registrata mentre accanto si scrive una nota, la nota redatta dopo e gli elementi che ne estrae, la timeline degli interlocutori, una domanda posta a Ivy su tutto il vault e la risposta con le fonti, il grafo della conoscenza, la barra dei Workspace e la ricerca sul dispositivo, un progetto, People, e un Workspace che si rifiuta di aprirsi perché è sigillato',
     play: 'Guarda il tour di 90 secondi',
   },
+  home: {
+    announce: { badge: 'Novità', text: 'È uscito IndexOne {version}: scopri cosa è cambiato' },
+    pillars: {
+      eyebrow: 'Perché IndexOne',
+      title: 'Le tue riunioni, ricordate. Il tuo Mac, al comando.',
+      lead: 'Tre cose che IndexOne fa con ogni chiamata, e dove viene eseguita ciascuna.',
+      items: {
+        capture: {
+          title: 'Sente entrambi i lati della chiamata',
+          body: 'Il tuo microfono e l\'audio degli altri partecipanti vengono registrati come due flussi e trascritti sul tuo Mac da Whisper.',
+          link: 'Registrazione e trascrizione',
+        },
+        ivy: {
+          title: 'Chiedi a Ivy, subito o dopo',
+          body: 'Chiedi durante la riunione senza fermare la registrazione, oppure su mesi di chiamate. Ogni risposta cita le riunioni da cui proviene.',
+          link: 'Come funziona Ivy',
+        },
+        privacy: {
+          title: 'Sigillato con Touch ID',
+          body: 'Una libreria cifrata e blocchi AES-256 per qualsiasi Workspace o cartella. Una cartella bloccata è invisibile alla ricerca, al grafo e a MCP.',
+          link: 'Come funziona la privacy',
+        },
+      },
+      mock: {
+        question: 'Cosa abbiamo deciso sulla data di lancio?',
+        answer: 'Il lancio slitta al 3 marzo, dopo l\'approvazione del QA.',
+        sources: '2 fonti',
+        folders: ['Direzione', 'Selezione', '1:1'],
+      },
+    },
+    stats: {
+      aria: 'IndexOne in numeri',
+      labels: [
+        'flussi audio per chiamata: tu e tutti gli altri',
+        'account necessari per registrare e trascrivere',
+        'blocchi Touch ID per qualsiasi cartella',
+        'azioni di Ivy nell\'editor di note',
+        'documenti in un clic da ogni riunione',
+        'fonti di importazione, completamente offline',
+      ],
+    },
+    showcase: {
+      eyebrow: 'Guardalo nell\'app',
+      title: 'Dalla chiamata alla risposta, in un\'unica app.',
+      lead: 'Registra la riunione, fai domande, conservala in Markdown. Scegli un passaggio per vederlo.',
+      tabsLabel: 'Tour del prodotto',
+      tabs: { record: 'Registra', ask: 'Chiedi', export: 'Conserva' },
+    },
+    security: { more: 'Leggi il modello di privacy' },
+    news: {
+      eyebrow: 'Novità',
+      title: 'Uscito di recente.',
+      lead: 'IndexOne esce spesso. Queste sono le versioni più recenti; le note di rilascio sono in inglese.',
+      read: 'Leggi le note',
+      all: 'Tutte le versioni',
+    },
+  },
   trust: {
     aria: 'In breve',
     items: ['Trascrizione sul dispositivo', 'Blocco con Touch ID a riposo', 'Nessun cloud necessario', 'Markdown semplice, tuo'],
@@ -112,28 +169,6 @@ const content: SiteContent = {
       },
     },
     seeAll: 'Vedi tutte le funzionalità',
-  },
-  how: {
-    eyebrow: 'Come funziona',
-    title: 'Registra → comprendi → chiedi. Local-first per scelta.',
-    lead: 'Un’unica pipeline local-first trasforma una call dal vivo in una memoria ricercabile. La trascrizione resta sul tuo Mac; Ivy può girare in locale oppure, con consenso esplicito, usare un’elaborazione cloud anonimizzata.',
-    steps: [
-      {
-        label: '01 · Registra',
-        title: 'Sente tutta la call',
-        body: 'Il tuo microfono <b>e</b> l’audio di sistema dell’altra parte, acquisiti e trascritti separatamente, poi uniti da Whisper sul dispositivo in una trascrizione <b>Me / Others</b> pulita.',
-      },
-      {
-        label: '02 · Comprendi',
-        title: 'Ivy, sul tuo Mac',
-        body: 'Un modello di ragionamento gira in locale su un indice semantico di tutto ciò che hai registrato: scrive una nota strutturata e mantiene la memoria ricercabile per sempre.',
-      },
-      {
-        label: '03 · Chiedi',
-        title: 'Risposte in diretta, con le fonti',
-        body: 'Chiedi a Ivy durante la riunione e ottieni una risposta fondata con le <b>fonti</b>, oppure interroga mesi di call in seguito. La registrazione non si ferma mai.',
-      },
-    ],
   },
   privacy: {
     lifecycle: {

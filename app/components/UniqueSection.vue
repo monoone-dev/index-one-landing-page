@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import { differentiators, features, highlightedFeatureIds } from '~/data/shared'
+import { differentiators } from '~/data/shared'
 
 const c = useContent()
 const to = useLocalLink()
-const highlighted = features.filter(f => highlightedFeatureIds.includes(f.id))
 </script>
 
 <template>
-  <section id="why" class="section" aria-labelledby="why-title">
+  <section id="only" class="section" aria-labelledby="why-title">
     <div class="wrap">
       <SectionHead id="why-title" :eyebrow="c.unique.eyebrow" :title="c.unique.title">
         {{ c.unique.lead }}
@@ -24,10 +23,6 @@ const highlighted = features.filter(f => highlightedFeatureIds.includes(f.id))
           </NuxtLink>
         </li>
       </ul>
-
-      <div class="unique__features">
-        <FeatureRow v-for="(feature, i) in highlighted" :key="feature.id" :feature-id="feature.id" :shot="feature.shot" :flip="i % 2 === 1" />
-      </div>
 
       <p v-reveal class="unique__more">
         <UButton :to="to('/features')" color="neutral" variant="outline" size="lg" trailing-icon="i-lucide-arrow-right" :label="c.unique.seeAll" />
@@ -101,10 +96,6 @@ const highlighted = features.filter(f => highlightedFeatureIds.includes(f.id))
       text-decoration: underline;
       text-underline-offset: 3px;
     }
-  }
-
-  &__features {
-    margin-top: 96px;
   }
 
   &__more {

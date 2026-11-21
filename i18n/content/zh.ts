@@ -71,6 +71,63 @@ const content: SiteContent = {
     videoLabel: 'IndexOne 90 秒导览：一边录制会议一边在旁记笔记；会后整理的笔记及从中提取的要点；发言人时间线；向 Ivy 提出跨整个知识库的问题并获得附带出处的回答；知识图谱；Workspaces 侧栏与设备端搜索；项目；People；以及一个因已加密封存而拒绝打开的 Workspace',
     play: '观看 90 秒导览',
   },
+  home: {
+    announce: { badge: '新版本', text: 'IndexOne {version} 已发布，看看有哪些变化' },
+    pillars: {
+      eyebrow: '为什么选择 IndexOne',
+      title: '会议被记住，主动权在你的 Mac。',
+      lead: 'IndexOne 对每次通话做的三件事，以及每件事在哪里运行。',
+      items: {
+        capture: {
+          title: '听到通话双方',
+          body: '你的麦克风和其他参与者的音频作为两路分别录制，并由 Whisper 在你的 Mac 上转写。',
+          link: '录制与转写',
+        },
+        ivy: {
+          title: '随时询问 Ivy',
+          body: '在会议中提问而不中断录制，或跨越数月的通话提问。每个回答都会注明来源会议。',
+          link: 'Ivy 如何工作',
+        },
+        privacy: {
+          title: '用 Touch ID 封存',
+          body: '加密的资料库，外加可用于任何工作区或文件夹的 AES-256 锁。锁定的文件夹对搜索、图谱和 MCP 不可见。',
+          link: '隐私如何运作',
+        },
+      },
+      mock: {
+        question: '关于发布日期我们是怎么决定的？',
+        answer: '发布推迟到 3 月 3 日，待 QA 通过后进行。',
+        sources: '2 个来源',
+        folders: ['董事会', '招聘', '1:1'],
+      },
+    },
+    stats: {
+      aria: 'IndexOne 数据一览',
+      labels: [
+        '每次通话的音频流：你和其他所有人',
+        '录制和转写所需的账户',
+        '可用于任何文件夹的 Touch ID 锁',
+        '笔记编辑器中的 Ivy 操作',
+        '每次会议一键生成的文档',
+        '导入来源，完全离线',
+      ],
+    },
+    showcase: {
+      eyebrow: '在应用中查看',
+      title: '从通话到答案，一个应用搞定。',
+      lead: '录制会议、就会议提问、以 Markdown 保存。选择一个步骤查看。',
+      tabsLabel: '产品导览',
+      tabs: { record: '录制', ask: '提问', export: '保存' },
+    },
+    security: { more: '阅读隐私模型' },
+    news: {
+      eyebrow: '最新动态',
+      title: '最近发布。',
+      lead: 'IndexOne 更新频繁。以下是最新版本；发布说明为英文。',
+      read: '阅读说明',
+      all: '全部版本',
+    },
+  },
   trust: {
     aria: '一览',
     items: ['设备端转写', 'Touch ID 静态加密锁', '无需云端', '属于你的纯 Markdown'],
@@ -112,28 +169,6 @@ const content: SiteContent = {
       },
     },
     seeAll: '查看全部功能',
-  },
-  how: {
-    eyebrow: '工作原理',
-    title: '录制 → 理解 → 提问。生来本地优先。',
-    lead: '一条本地优先的处理流程，把一场实时通话变成可检索的记忆。转写始终在你的 Mac 上完成；Ivy 可以在本地运行，也可以在你明确同意后使用经过脱敏的云端处理。',
-    steps: [
-      {
-        label: '01 · 录制',
-        title: '完整听见整场通话',
-        body: '你的麦克风<b>和</b>对方的系统音频分别采集、分别转写，再由设备端 Whisper 合并为清晰的 <b>Me / Others</b> 文字稿。',
-      },
-      {
-        label: '02 · 理解',
-        title: 'Ivy，就在你的 Mac 上',
-        body: '推理模型在本地运行，基于你录下的全部内容建立语义索引——撰写结构化笔记，让记忆永久可检索。',
-      },
-      {
-        label: '03 · 提问',
-        title: '实时作答，附带出处',
-        body: '会议中向 Ivy 提问，得到有据可依、附带<b>出处</b>的回答；会后也能跨越数月的通话发问。录音始终不会停止。',
-      },
-    ],
   },
   privacy: {
     lifecycle: {

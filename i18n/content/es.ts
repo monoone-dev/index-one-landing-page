@@ -71,6 +71,63 @@ const content: SiteContent = {
     videoLabel: 'Un recorrido de 90 segundos por IndexOne: una reunión grabándose mientras se escribe una nota al lado, la nota redactada después y los puntos que extrae, la línea de tiempo de los participantes, una pregunta a Ivy sobre toda la bóveda respondida con fuentes, el grafo de conocimiento, la barra de Workspaces y la búsqueda en el dispositivo, un proyecto, Personas y un Workspace que se niega a abrirse porque está sellado',
     play: 'Ver el recorrido de 90 segundos',
   },
+  home: {
+    announce: { badge: 'Nuevo', text: 'Ya está aquí IndexOne {version}: mira qué ha cambiado' },
+    pillars: {
+      eyebrow: 'Por qué IndexOne',
+      title: 'Tus reuniones, recordadas. Tu Mac, al mando.',
+      lead: 'Tres cosas que IndexOne hace con cada llamada, y dónde se ejecuta cada una.',
+      items: {
+        capture: {
+          title: 'Escucha a ambos lados de la llamada',
+          body: 'Tu micrófono y el audio de los demás participantes se graban como dos pistas y Whisper los transcribe en tu Mac.',
+          link: 'Captura y transcripción',
+        },
+        ivy: {
+          title: 'Pregunta a Ivy, ahora o después',
+          body: 'Pregunta en plena reunión sin detener la grabación, o sobre meses de llamadas. Cada respuesta cita las reuniones de las que sale.',
+          link: 'Cómo funciona Ivy',
+        },
+        privacy: {
+          title: 'Sellado con Touch ID',
+          body: 'Una biblioteca cifrada y bloqueos AES-256 para cualquier espacio de trabajo o carpeta. Una carpeta bloqueada es invisible para la búsqueda, el grafo y MCP.',
+          link: 'Cómo funciona la privacidad',
+        },
+      },
+      mock: {
+        question: '¿Qué decidimos sobre la fecha de lanzamiento?',
+        answer: 'El lanzamiento pasa al 3 de marzo, cuando QA dé el visto bueno.',
+        sources: '2 fuentes',
+        folders: ['Dirección', 'Contratación', '1:1'],
+      },
+    },
+    stats: {
+      aria: 'IndexOne en cifras',
+      labels: [
+        'pistas de audio por llamada: tú y todos los demás',
+        'cuentas necesarias para grabar y transcribir',
+        'bloqueos con Touch ID para cualquier carpeta',
+        'acciones de Ivy en el editor de notas',
+        'documentos en un clic desde cualquier reunión',
+        'fuentes de importación, totalmente sin conexión',
+      ],
+    },
+    showcase: {
+      eyebrow: 'Míralo en la app',
+      title: 'De la llamada a la respuesta, en una sola app.',
+      lead: 'Graba la reunión, pregunta sobre ella y consérvala en Markdown. Elige un paso para verlo.',
+      tabsLabel: 'Recorrido del producto',
+      tabs: { record: 'Grabar', ask: 'Preguntar', export: 'Conservar' },
+    },
+    security: { more: 'Lee el modelo de privacidad' },
+    news: {
+      eyebrow: 'Novedades',
+      title: 'Lo último publicado.',
+      lead: 'IndexOne se actualiza a menudo. Estas son las versiones más recientes; las notas de versión están en inglés.',
+      read: 'Leer las notas',
+      all: 'Todas las versiones',
+    },
+  },
   trust: {
     aria: 'De un vistazo',
     items: ['Transcripción en el dispositivo', 'Bloqueo con Touch ID en reposo', 'Sin necesidad de nube', 'Markdown plano y tuyo'],
@@ -112,28 +169,6 @@ const content: SiteContent = {
       },
     },
     seeAll: 'Ver todas las funciones',
-  },
-  how: {
-    eyebrow: 'Cómo funciona',
-    title: 'Graba → comprende → pregunta. Local-first por diseño.',
-    lead: 'Un único flujo local-first convierte una llamada en directo en memoria consultable. La transcripción se queda en tu Mac; Ivy puede ejecutarse en local o, con tu consentimiento explícito, usar procesamiento en la nube con datos anonimizados.',
-    steps: [
-      {
-        label: '01 · Grabar',
-        title: 'Escucha toda la llamada',
-        body: 'Tu micrófono <b>y</b> el audio del sistema del otro lado, capturados y transcritos por separado, y después fusionados por Whisper, en el dispositivo, en una transcripción limpia <b>Me / Others</b>.',
-      },
-      {
-        label: '02 · Comprender',
-        title: 'Ivy, en tu Mac',
-        body: 'Un modelo de razonamiento se ejecuta en local sobre un índice semántico de todo lo que has grabado: redacta una nota estructurada y mantiene la memoria consultable para siempre.',
-      },
-      {
-        label: '03 · Preguntar',
-        title: 'Respuestas en directo y con fuentes',
-        body: 'Pregúntale a Ivy en plena reunión y obtén una respuesta fundamentada con <b>fuentes</b>, o pregunta después sobre meses de llamadas. La grabación nunca se detiene.',
-      },
-    ],
   },
   privacy: {
     lifecycle: {
