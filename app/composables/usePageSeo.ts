@@ -140,7 +140,7 @@ export function softwareApplicationSchema(extra: Record<string, unknown> = {}) {
     'image': absoluteUrl(site.ogImage),
     'applicationCategory': 'BusinessApplication',
     'applicationSubCategory': 'Meeting notes and transcription',
-    'operatingSystem': `macOS ${site.minMacOS} or later`,
+    'operatingSystem': `macOS ${site.minMacOS} or later; web browser`,
     'processorRequirements': 'Apple Silicon (M1 or later)',
     'downloadUrl': site.links.download,
     'softwareVersion': latest.tag.slice(1),

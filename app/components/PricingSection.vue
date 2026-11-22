@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { plans } from '~/data/shared'
+import { site } from '~/data/site'
 import catalog from '~/data/billing-catalog.v1.json'
 const props = defineProps<{ level?: 1 | 2 }>()
 const sub = computed(() => props.level === 1 ? 'h2' : 'h3')
@@ -11,7 +12,8 @@ const quantity = (n: number) => new Intl.NumberFormat(locale.value).format(n)
 const rows = computed(() => [
   { label: c.value.offer.local, values: catalog.offers.map(() => c.value.offer.included) },
   { label: c.value.offer.basics, values: catalog.offers.map(() => c.value.offer.included) },
-  { label: c.value.offer.ivy, values: catalog.offers.map(o => quantity(o.limits.ivyUnits)) },
+  { label: c.value.offer.ivy, values: catalog.offers.map(o => `${quantity(o.limits.ivyUnits)}${o.id === 'team' ? ' · ' + c.value.offer.seat : ''}`) },
+  // Transcription hours are not published: Free has a monthly allowance and paid plans fair use, both defined in the Terms.
   { label: c.value.offer.asr, values: catalog.offers.map(o => o.id === 'free' ? c.value.offer.asrBasic : c.value.offer.asrUnlimited) },
   { label: c.value.offer.storage, values: catalog.offers.map(o => `${o.limits.storageBytes / 1e9} GB${o.id === 'team' ? ' · '+ c.value.offer.seat : ''}`) },
 ])
@@ -38,6 +40,10 @@ const rows = computed(() => [
           <UButton :to="plan.available ? plan.href : to(plan.href)" :external="plan.available" block size="lg" :color="plan.available ? 'primary' : 'neutral'" :variant="plan.available ? 'solid' : 'outline'" :label="plan.available ? c.pricing.plans[plan.id].cta : c.nav.docs" />
         </li>
       </ul>
+      <p class="offer-detail">
+        {{ c.offer.fairUse }}
+        <a :href="site.links.terms" target="_blank" rel="noopener" class="offer-link">{{ c.offer.fairUseLink }}</a>
+      </p>
       <p class="offer-detail">{{ c.offer.tax }}</p>
       <span id="compare" />
       <div id="comparison" class="comparison island">
@@ -64,6 +70,8 @@ const rows = computed(() => [
 .plan__points { flex: 1; display: grid; align-content: start; gap: 12px; padding: 0; list-style: none; font-size: 14px; }
 .plan__points li { display: flex; gap: 8px; align-items: start; }.plan__points .iconify { flex-shrink: 0; color: var(--safe-text); margin-top: 3px; }
 .offer-detail { margin: 24px 0; color: var(--text-secondary); }
+.offer-detail + .offer-detail { margin-top: -12px; }
+.offer-link { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
 .comparison { overflow-x: auto; margin-top: 32px; }
 table { width: 100%; border-collapse: collapse; font-size: 14px; }
 caption { text-align: left; padding: 24px; font-size: 22px; font-weight: 600; color: var(--text-primary); }

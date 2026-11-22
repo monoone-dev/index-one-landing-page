@@ -189,18 +189,18 @@ tekstem w `i18n/content/*.ts` (zajmuje się tym inne zadanie).
 | Komponent | Wygląd | Gdzie |
 | --- | --- | --- |
 | `SectionHead` | wyśrodkowany eyebrow + `h1`/`h2` (prop `level`) + lead w `<p>`, `v-reveal`; `tone="safe"` daje zielony eyebrow | prawie każda sekcja |
-| `HeroSection` | ogłoszenie-pigułka (szkło, plakietka `home.announce.badge` na akcencie, wersja z release notes) → `h1` w dwóch częściach → lead → dwa przyciski `xl` (Download primary, Open web app outline neutral) → notka z zielonym ptaszkiem → scena 1040 px z poświatą akcentu i `HeroVideo` | `/` |
+| `HeroSection` | ogłoszenie-pigułka (szkło, plakietka `home.announce.badge` na akcencie, wersja z release notes) → `h1` w dwóch częściach → lead → dwa przyciski `xl` (Download primary, „Create a free account” outline neutral, do strony logowania aplikacji web, gdzie każdy zakłada konto e-mailem) → notka z zielonym ptaszkiem → scena 1040 px z poświatą akcentu i `HeroVideo` | `/` |
 | `HeroVideo` | wideo 16:9 z plakatem `ThemeImage` (`/assets/promo-poster[-light].webp`) i okrągłym przyciskiem odtwarzania; `preload="none"` | hero |
-| `TrustStrip` | rząd szklanych pigułek 36 px z ikoną akcentu (lock, shield, eye-off, file-text) | pod hero |
+| `TrustStrip` | rząd szklanych pigułek 36 px z ikoną akcentu (bot-off, audio-lines, fingerprint, monitor-smartphone): bez bota, transkrypcja na urządzeniu, blokady Touch ID, platformy | pod hero |
 | `PillarsSection` | trzy wyspy z makietą narysowaną w CSS (fale „Me/Others”, czat z Ivy, foldery z zamkiem) i tekstem pod spodem | `/` |
 | `StatsBand` | pełnej szerokości pas w gradiencie akcent → ivy, przewijający się ticker liczb (34 px) z etykietami, wygaszane brzegi | `/` |
 | `ShowcaseTabs` | szklany pasek zakładek (numer 01–03, ikona, etykieta; aktywna = akcent) + panel: tekst z ptaszkami po lewej, zrzut aplikacji po prawej | `/` |
 | `UniqueSection` | siatka 3 × 2 wysp: kafelek ikony (`--accent-soft`) lub `BrandIcon` Ivy, `h3`, tekst, link z strzałką; pod spodem przycisk outline „See every feature” | `/` |
 | `SecurityBand` | jedna duża wyspa `.framed`: po lewej eyebrow safe + `h2` + przycisk do `/privacy`, po prawej trzy karty z ikonami | `/` |
 | `WhatsNew` | nagłówek po lewej (eyebrow, `h2`, lead) z przyciskiem ghost „All releases”; trzy karty-linki do changelogu (rodzaj wydania, data, wersja, streszczenie) | `/` |
-| `OfferContext` | `h2` z `pricing.lead` + trzy wyspy (Free every month / Unlimited transcription / Local and cloud are different) + opcjonalna notka o statusie sprzedaży | `/`, `/pricing`, `/privacy`, `/features` |
-| `CtaSection` | wyśrodkowana wyspa `.framed` (64/32 px): `h2`, lead, link „Compare the plans”, Download (primary `xl`) + View on GitHub (outline), drobna notka o starych wersjach | koniec każdej strony |
-| `PricingSection` | notka statusu (wyspa z lewym paskiem akcentu 3 px) → trzy plany → nota o VAT → tabela porównawcza w wyspie → link do docs | `/pricing` |
+| `OfferContext` | `h2` z `pricing.lead` (22–28 px) + trzy wyspy (Free every month / Unlimited cloud transcription z linkiem do regulaminu / Local and cloud are different) + opcjonalna notka o statusie sprzedaży z linkiem „Compare the plans” | `/`, `/pricing`, `/privacy`, `/features` |
+| `CtaSection` | wyśrodkowana wyspa `.framed` (64/32 px): `h2`, lead, link „Compare the plans”, Download (primary `xl`) + Create a free account (outline), drobna notka o starych wersjach | koniec każdej strony |
+| `PricingSection` | notka statusu (wyspa z lewym paskiem akcentu 3 px) → trzy plany → nota o uczciwym korzystaniu z linkiem do regulaminu → nota o VAT → tabela porównawcza w wyspie → link do docs. Bez liczb godzin transkrypcji: Free „miesięczny przydział”, płatne „bez limitu · uczciwe korzystanie” (limity są w regulaminie) | `/pricing` |
 | `FaqSection` | `SectionHead` + `UAccordion` (multiple) w wyspie, kolumna 780 px | `/pricing#faq` |
 | `PrivacySection` | `SectionHead` safe → siatka kart z kafelkiem ikony (zielony dla `safe`, karta `wide` na całą szerokość) → wyspa z tabelą dostawców (tagi zielony „no”/bursztynowy „yes”), zrzutem i przypisem | `/privacy` |
 | `FeatureList` / `FeatureRow` | naprzemienne wiersze: tekst (eyebrow, tytuł, opis, ptaszki) i zrzut w ramie; co drugi odwrócony | `/features` |

@@ -3,8 +3,8 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — Mac 会议笔记与转写，内置 Ivy',
-      description: '在 Mac 上录制并转写会议，向设备端 AI 助手 Ivy 提问，会中实时作答，也能跨越所有通话检索。个人或整个组织都能用，笔记始终是你的 Markdown。',
+      title: 'IndexOne — 私密的 AI 会议笔记，适用于 Mac 和网页，无需机器人',
+      description: '无需机器人即可录下通话双方，在 Mac 上转写，并向 Ivy 提问，每一行都有凭证。Mac 上免费；你的云端空间可在任何浏览器中打开。',
     },
     features: {
       breadcrumb: '功能',
@@ -14,12 +14,12 @@ const content: SiteContent = {
     privacy: {
       breadcrumb: '隐私',
       title: 'IndexOne 隐私 — 设备端 AI，以及哪些数据会离开 Mac',
-      description: '设备端转写与 AI、加密资料库、Touch ID 文件夹锁和脱敏防火墙。清楚看到每种 AI 选择会在何时发送什么，什么始终留在你的 Mac 上。',
+      description: '设备端转写与 AI、加密的笔记和文字稿、Touch ID 文件夹锁和脱敏防火墙。清楚看到每种 AI 选择会在何时发送什么，什么始终留在你的 Mac 上。',
     },
     pricing: {
       breadcrumb: '价格',
-      title: 'IndexOne 价格，以及与 Obsidian、Notion 等的对比',
-      description: 'IndexOne 在 Mac 上免费；可选云端套餐每月 49 PLN 起。从录音、转写、设备端 AI 和 Markdown 等方面，将它与 Obsidian、Notion、Evernote、Bear 和 Amie 逐项对比。',
+      title: 'IndexOne 价格 — Free、Personal 与 Team',
+      description: 'IndexOne 在 Mac 上免费。云端方案：Personal 每月 49 PLN，Team 每席位 75 PLN（不含税），均含合理使用原则下不限量的云端转写。云端方案在网页版中销售。',
     },
     changelog: {
       breadcrumb: '更新日志',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "IndexOne 会议机器人 — 致会议参与者",
       description: "你参加的会议正在由 IndexOne 机器人录制。谁对数据负责、录制什么以及为何录制、保存多久，以及如何行使你的权利。",
     },
-    ogImageAlt: 'IndexOne — Mac 会议笔记与转写，内置 Ivy',
+    ogImageAlt: 'IndexOne — 私密的 AI 会议笔记，适用于 Mac 和网页，无需机器人',
   },
   common: {
     skipToContent: '跳到正文',
@@ -63,16 +63,13 @@ const content: SiteContent = {
     modes: { light: '浅色', dark: '深色', system: '跟随系统' },
   },
   hero: {
-    badgeLocal: '本地优先 · macOS',
-    badgeIvy: '设备端 Ivy',
-    badgeStar: '在 GitHub 上加星',
     githubAria: 'GitHub 上的 IndexOne',
-    titleStrong: '有 Ivy 相伴的会议笔记——',
-    titleSoft: '在哪里运行，由你决定。',
-    subHtml: 'IndexOne 录制你的通话，并<b>在你的 Mac 上</b>完成转写。会议进行中就能实时向 Ivy 提问，也能跨越你录下的所有内容检索。AI 可以在 Mac 上或你自己的本地 AI 服务器上运行，也可以由你明确选择启用<b>经过脱敏的云端 AI</b>。在 On this Mac 空间中，你的会议档案始终留在你的 Mac 上。',
-    download: '下载 macOS 版',
-    privacyCta: '了解隐私机制',
-    note: '已签名并通过公证 · macOS 13.4+ · 支持 Apple Silicon（M1 及更新机型）· 笔记始终是属于你的 Markdown',
+    titleStrong: '会议笔记，始终留在你的 Mac 上。',
+    titleSoft: '无需机器人，每一行都有凭证。',
+    subHtml: 'IndexOne <b>无需机器人</b>即可录下通话双方，<b>在你的 Mac 上</b>完成转写，并让你向 Ivy 提问——无论是会议进行中还是数月之后——回答会链接到原话所在的那一秒。Mac 上免费，不限分钟数，也不限历史记录。你的云端空间可在任何浏览器中打开。',
+    download: '免费下载 Mac 版',
+    signup: '免费创建账户',
+    note: 'Apple Silicon（M1 及更新机型）· macOS 13.4+ · 已签名并通过公证 · 在 Mac 上使用无需账户',
     videoLabel: 'IndexOne 90 秒导览：一边录制会议一边在旁记笔记；会后整理的笔记及从中提取的要点；发言人时间线；向 Ivy 提出跨整个知识库的问题并获得附带出处的回答；知识图谱；Workspaces 侧栏与设备端搜索；项目；People；以及一个因已加密封存而拒绝打开的 Workspace',
     play: '观看 90 秒导览',
   },
@@ -95,7 +92,7 @@ const content: SiteContent = {
         },
         privacy: {
           title: '用 Touch ID 封存',
-          body: '加密的资料库，外加可用于任何工作区或文件夹的 AES-256 锁。锁定的文件夹对搜索、图谱和 MCP 不可见。',
+          body: '加密的笔记和文字稿，外加可用于任何工作区或文件夹的 AES-256 锁，通过 Touch ID 打开。锁定的文件夹对搜索、图谱和 MCP 不可见。',
           link: '隐私如何运作',
         },
       },
@@ -120,7 +117,7 @@ const content: SiteContent = {
     showcase: {
       eyebrow: '在应用中查看',
       title: '从通话到答案，一个应用搞定。',
-      lead: '录制会议、就会议提问、以 Markdown 保存。选择一个步骤查看。',
+      lead: '录制会议、就会议提问、导出为 Markdown。选择一个步骤查看。',
       tabsLabel: '产品导览',
       tabs: { record: '录制', ask: '提问', export: '保存' },
     },
@@ -135,16 +132,16 @@ const content: SiteContent = {
   },
   trust: {
     aria: '一览',
-    items: ['设备端转写', 'Touch ID 静态加密锁', '无需云端', '属于你的纯 Markdown'],
+    items: ['无会议机器人', '设备端转写', 'Touch ID 文件夹锁', 'Mac 与网页版 · iPhone 应用即将推出'],
   },
   unique: {
-    eyebrow: 'IndexOne 独有',
-    title: '其他笔记应用都做不到的会议能力。',
-    lead: '能存笔记、能转写通话的应用很多。IndexOne 在你的 Mac 上同时录下通话双方，让你在会议中向 Ivy 提问，并为它写下的每一行提供证据。',
+    eyebrow: '功能',
+    title: '真正记得住的会议工具。',
+    lead: '能存笔记、能转写通话的应用很多。IndexOne 在你的 Mac 上同时录下通话双方，让你在会议中向 Ivy 提问，并标明它写下的每一行出自何处。',
     items: {
       'live': {
         title: '会议进行中即可询问 Ivy，一切都留在你的 Mac 上',
-        body: '通话中输入或说出问题，即可获得基于你录制过的所有会议的回答，并附上可直接打开的来源；录音全程不中断。选择 Ivy on this Mac，会议文本不会离开你的 Mac；在你首次同意之前，Claude Code 和 Codex 始终保持关闭。',
+        body: '通话中输入问题——或在开启语音助手后直接说出来——即可获得基于你录制过的所有会议的回答，并附上可直接打开的来源；录音全程不中断。选择 Ivy on this Mac，会议文本不会离开你的 Mac；在你首次同意之前，Claude Code 和 Codex 始终保持关闭。',
         link: 'Ivy 如何工作',
       },
       'capture': {
@@ -159,17 +156,17 @@ const content: SiteContent = {
       },
       'security': {
         title: '在你的 Mac 上加密',
-        body: '你的整个资料库在 Mac 上使用 SQLCipher 加密。Personal 以及你所属的每个组织也会在这台 Mac 上保留一份加密副本，因此无需联网也能打开。',
+        body: '你的笔记、文字稿和搜索索引在 Mac 上使用 SQLCipher 加密；锁定一个 Workspace 或文件夹后，其中的音频、视频和文件也会一并封存。Personal 以及你所属的每个组织也会在这台 Mac 上保留一份加密副本，因此无需联网也能打开。',
         link: '安全与隐私',
       },
       'locks': {
         title: '用 Touch ID 封存文件夹',
-        body: '锁定一个 Workspace 或文件夹后，其中的笔记、文字稿和音频都会以 AES-256-GCM 加密封存。锁定期间，搜索、知识图谱、MCP 和音频播放器都看不到它。',
+        body: '锁定一个 Workspace 或文件夹后，其中的笔记、文字稿和音频都会以 AES-256-GCM 加密封存，只能通过 Touch ID 或你的 Mac 密码打开。锁定期间，搜索、知识图谱、MCP 和音频播放器都看不到它。',
         link: '锁定机制',
       },
       'markdown': {
-        title: '纯 Markdown，外加本地 MCP 服务器',
-        body: '笔记以带 wikilink 的纯 Markdown 写入你的 Obsidian 知识库；运行在 127.0.0.1 上的只读 MCP 服务器，让 Claude 和其他智能体也能查询它们。由你决定它能读取哪些空间；组织默认关闭，直到你开启。',
+        title: 'Markdown 导出，外加本地 MCP 服务器',
+        body: '任意笔记都可导出为 Markdown，也可将整个资料库备份为纯 .md 文件；运行在 127.0.0.1 上的只读 MCP 服务器，让 Claude 和其他智能体也能查询你的笔记。由你决定它能读取哪些空间；组织默认关闭，直到你开启。',
         link: 'Markdown 与 MCP',
       },
     },
@@ -181,7 +178,7 @@ const content: SiteContent = {
       "items": [
         {
           "title": "数据会保留多久？",
-          "body": "云端音频默认保留30天，Personal和Team计划提供存储限额内最长90天的选项。笔记、转录和普通文件在存储限额内保留，直到所有者删除。"
+          "body": "云端音频默认保留 30 天；Free 可选 7、14 或 30 天，Personal 和 Team 还可选 90 天。笔记、转录和普通文件在存储限额内保留，直到所有者删除。"
         },
         {
           "title": "降级方案后会怎样？",
@@ -195,15 +192,15 @@ const content: SiteContent = {
     },
     eyebrow: '安全与隐私',
     title: '隐私不是一个开关，而是整个架构。',
-    leadHtml: '在 On this Mac 空间中，转写、搜索和 Ivy on this Mac 可以<b>完全不联网</b>运行——只要关掉默认会主动联网的两项功能：启动时检查新版本，以及每天一次的使用统计。如果你选择 Claude Code 或 Codex，数据外发之前还有同意确认和脱敏防火墙两道关卡。',
+    leadHtml: '在 On this Mac 空间中，转写、搜索和 Ivy on this Mac 可以<b>完全不联网</b>运行，只需事先下载好语音模型。IndexOne 自行发送的少数几项内容不含任何会议内容，下方逐一列出。如果你选择 Claude Code 或 Codex，数据外发之前还有同意确认和脱敏防火墙两道关卡。',
     cards: {
       'offline': {
-        title: '数据不出设备',
+        title: '你的会议留在设备上',
         body: '使用 Ivy on this Mac 和只需下载一次的模型，你的音频和文字稿都不会接触网络。推理全程在你的 Mac 上进行。',
       },
       'at-rest': {
         title: '双层静态加密',
-        body: '整个数据库均经 SQLCipher 加密。在此之上，每个文件夹还可加一把 <b>AES-256-GCM</b> 锁：内容密钥由主密钥包裹，而主密钥只有通过 <b>Touch ID</b> 才能释放。',
+        body: '笔记、文字稿和搜索索引均经 SQLCipher 加密。在此之上，每个文件夹还可加一把 <b>AES-256-GCM</b> 锁，将音频、视频和文件也一并封存：内容密钥由主密钥包裹，而主密钥只有通过 <b>Touch ID</b> 或你的 Mac 密码才能释放。',
       },
       'gated': {
         title: '每次读取都要过关',
@@ -222,28 +219,28 @@ const content: SiteContent = {
         body: '如果你选择启用云端摘要服务，邮箱地址、类似银行卡号的数字和电话号码都会先被清除——而且云端外发采用<b>默认拒绝（fail-closed）</b>机制，须经一次性同意才会放行。下载可选的姓名遮蔽模型后，人名也会被替换。',
       },
       'update-check': {
-        title: '我们默认发起的两项请求',
-        body: '启动时，IndexOne 会向 GitHub 询问是否有新版本；请求中只带上你当前运行的版本号，别无其他。此外，它每天会发送一条很小的使用统计消息：随机安装 ID、应用和 macOS 版本、芯片类型、语言，以及你是否已登录——没有会议、笔记、录音或姓名。仅在你未登录时它才是匿名的；登录后，它会随你的账号一起发送。两者都可以在 <b>Settings → Privacy</b>（设置 → 隐私）中关闭。这是本页仅有的两件未经你要求就会发生的事，也正因如此，我们把它们写在这里。',
+        title: 'IndexOne 未经你要求会发送的内容',
+        body: '启动时，IndexOne 会向 GitHub 询问是否有新版本；请求中只带上你当前运行的版本号，别无其他。如果这台 Mac 上曾登录过账户，它还会在启动时及每小时向 IndexOne 服务器询问你的版本是否仍受支持，不含任何内容。它每天会发送一条很小的使用统计消息：随机安装 ID、应用和 macOS 版本、处理器架构、语言，以及你是否已登录——没有会议、笔记、录音或姓名。仅在你未登录时它才是匿名的；登录后，它会随你的账号一起发送。首次转写时，它会从 Hugging Face 下载两个小型语音模型，分别用于语音检测和说话人分离。更新检查和使用统计消息可以在 <b>Settings → Privacy</b>（设置 → 隐私）中关闭。这些是本页仅有的未经你要求就会发生的事，也正因如此，我们把它们写在这里。',
       },
     },
     tableCaption: '各 AI 服务商在哪里运行，以及会议文本是否会离开你的 Mac',
     tableHeaders: ['Ivy / 服务商', '运行位置', '会议文本会离开你的 Mac 吗？'],
     providers: {
       'on-device': { name: 'Ivy on this Mac', note: 'Bielik / Qwen', where: '完全本地' },
-      'ivy-web': { name: 'Ivy on the web', note: 'Personal 和组织', where: '网页版 IndexOne', leaves: '会——该空间本身就在网页端' },
+      'ivy-web': { name: 'Ivy on the web', note: 'Personal 和组织', where: 'IndexOne 云端，使用 Anthropic Claude 模型', leaves: '会——该空间本身就在网页端' },
       'claude-code': { name: 'Claude Code', where: '本地 CLI → 云端' },
       'codex': { name: 'Codex', note: 'OpenAI 的 CLI，以无工具模式运行', where: '本地 CLI → 云端' },
-      'local-server': { name: 'Local AI server', note: 'Ollama、LM Studio、oMLX 等', where: '你的 Mac 或你的网络', leaves: '服务器在本机时不会。网络中其他位置的服务器，须你确认其地址后才使用，且会先遮蔽人名' },
+      'local-server': { name: 'Local AI server', note: 'Ollama、LM Studio、oMLX 等', where: '你的 Mac 或你的网络', leaves: '服务器在本机时不会。网络中其他位置的服务器，须你确认其地址后才使用，且会先移除邮箱地址、银行卡号和电话号码；如果你下载了姓名遮蔽模型，人名也会被移除' },
     },
     leavesYes: '仅在你同意后，且经过脱敏防火墙处理',
     leavesNo: '不会',
     shotAlt: 'IndexOne 隐私设置：用平实的语言说明文本外发前会移除哪些内容、哪些服务商属于云端，以及云端处理是否已获允许',
-    footnote: 'IndexOne 用平实的语言告诉你，究竟有什么会离开你的 Mac——每一次云端 AI 调用都会被记录并展示给你。每个空间只有一项 AI 选择：Ivy on this Mac、Ivy on the web、Claude Code、Codex，或你自己的本地 AI 服务器。在 On this Mac 空间中，除非你选择 Claude Code、Codex 或网络中其他位置的本地 AI 服务器，会议始终留在你的 Mac 上。',
+    footnote: 'IndexOne 用平实的语言告诉你，究竟有什么会离开你的 Mac——从你的 Mac 发起的每一次云端 AI 调用都会被记录并展示给你。每个空间只有一项 AI 选择：Ivy on this Mac、Ivy on the web、Claude Code、Codex，或你自己的本地 AI 服务器。在 On this Mac 空间中，除非你选择 Claude Code、Codex 或网络中其他位置的本地 AI 服务器，会议始终留在你的 Mac 上。',
   },
   features: {
     eyebrow: '你将获得',
     title: '真正记得住的会议工具。',
-    lead: '一个加密存储，三种使用方式——应用本身、本地 MCP 服务器，以及你导出的 Markdown 文件。一棵树容纳一切，项目建立在它之上，而 Ivy 能读懂其中的全部内容。',
+    lead: '一个加密资料库，三种使用方式——应用本身、本地 MCP 服务器和 Markdown 导出。一棵树容纳一切，项目建立在它之上，而 Ivy 能读懂其中的全部内容。',
     items: {
       'workspaces': {
         eyebrow: 'Workspaces',
@@ -253,7 +250,7 @@ const content: SiteContent = {
           '录音、笔记、任务和项目都归档在同一个地方',
           '已封存的 Workspace 只显示名称——没有数量，也没有内容',
           '让 Ivy 帮你把零散的录音归档',
-          '误删了？回收站会保留 30 天——也可以自行设置，最长一年',
+          '误删了？在你的 Mac 上，回收站会保留 30 天——也可以自行设置，最长一年',
         ],
         alt: 'Workspaces 侧边栏：由 Workspaces 和文件夹组成的一棵树，收纳着录音、笔记和项目，底部是一个已锁定的 Workspace',
       },
@@ -282,7 +279,7 @@ const content: SiteContent = {
       'ivy': {
         eyebrow: 'Ivy',
         title: '会议进行中，与 Ivy 对话。',
-        body: '这正是大多数笔记工具所欠缺的。用唤醒词或轻点一下即可唤起 Ivy；它会基于你的会议记忆实时作答，并附上可直接打开的引用——录音始终不会停止。',
+        body: '这正是大多数笔记工具所欠缺的。轻点一下即可向 Ivy 提问，或在设置中开启语音助手后直接开口提问；它会基于你的会议记忆实时作答，并附上可直接打开的引用——录音始终不会停止。',
         points: [
           '通过 Metal 运行的设备端推理模型（Bielik-11B、Qwen）',
           '有据可依，而非凭空捏造——答案检索自你自己的文字稿',
@@ -310,6 +307,7 @@ const content: SiteContent = {
           '设备端 Whisper——从 tiny 到 large-v3，包括更快的 turbo 版本及量化版本',
           '双音轨区分说话人：你和其他所有人，并配有语音活动检测',
           '悬浮录音条——随处都能开始录制（⌘⇧R）',
+          'Voice + screen：随会议一起录制屏幕（macOS 14+），Mac 上免费',
         ],
         alt: '合并后的 Me / Others 文字稿，带时间索引，旁边是发言人与话题时间线',
       },
@@ -322,7 +320,7 @@ const content: SiteContent = {
           '实体档案、相关会议、每周摘要',
           '私密提醒绝不离开 Mac，每条都链接回其来源录音或笔记——Ivy 提出建议，由你决定是否采纳',
           '待办事项也可推送到 Apple 提醒事项',
-          '可导入 PDF、Office 文档、网页和图片——在设备端建立索引，供 Ivy 使用',
+          '可导入 PDF、Office 文档、已保存的网页（.html）和图片——在设备端建立索引，供 Ivy 使用',
         ],
         alt: '知识图谱——会议、笔记、文档和人员汇成一张图，彼此之间以带类型的链接相连',
       },
@@ -340,12 +338,12 @@ const content: SiteContent = {
       },
       'markdown': {
         eyebrow: '永久归你',
-        title: '纯 Markdown，不被锁定。',
-        body: '每条笔记都会同时导出为原子化的 Markdown——包含 YAML front-matter、<code>[[wikilinks]]</code>、块级深层链接，还可选择导出为画布看板。它们就是归你所有的普通文件，任何编辑器都能打开。',
+        title: 'Markdown 进，Markdown 出，不被锁定。',
+        body: '任意笔记都可导出为 Markdown，也可将整个资料库备份为纯 <code>.md</code> 文件，任何编辑器都能打开。从 Obsidian 迁移过来？一步即可导入你的知识库。',
         points: [
           '加密的 SQLite 数据库是唯一的数据来源',
           '为 Claude Desktop 和 Claude Code 提供只读的本地 MCP 服务器',
-          '导出为纯 Markdown，任何编辑器都能打开',
+          '任意笔记均可导出为 Markdown，整个资料库也可备份为纯 Markdown',
         ],
         alt: '一份结构化笔记——摘要、决策、待办事项和原话引用——旁边是它所链接的录音和笔记',
       },
@@ -369,58 +367,59 @@ const content: SiteContent = {
     "monthly": "按月，以 PLN 计价",
     "tax": "Personal 含税。Team 不含税：至少 2 个席位，每月共 150 PLN（税前）。按 23% 增值税计算，总计 184.50 PLN（每席位 92.25）。实际税率可能不同；购买前应用必须显示最终总额。",
     "trialTitle": "每月免费",
-    "trial": "每个免费个人账户每个日历月（UTC）可获得 200,000 Ivy 单位和基础云端转写，无需绑卡。Mac 本地功能没有方案限制。",
-    "meterTitle": "转写不限量",
-    "meter": "付费方案没有转写上限。转写量很大时，部分录音可能需要几个小时才能完成；适用合理使用原则。Mac 本地转写始终即时完成。",
+    "trial": "每个免费账户每个日历月（UTC）可获得 200,000 Ivy 单位和一定的云端转写额度，无需绑卡。Mac 本地功能没有方案限制。",
+    "meterTitle": "云端转写不限量",
+    "meter": "付费方案的云端转写没有上限。转写量很大时，部分录音可能需要几个小时才能完成。适用合理使用原则。Mac 上的转写始终即时完成，且不限量。",
+    "fairUse": "付费方案包含合理使用原则下不限量的云端转写；Free 额度和合理使用规则详见服务条款。",
+    "fairUseLink": "阅读服务条款（波兰语）",
     "privacyTitle": "本地与云端",
     "privacy": "Mac 本地处理留在 Mac 上。标准账户云端在运营方可读取的服务器上存储和处理内容，并非端到端加密。模式遮蔽不等于完全匿名化。付费方案不会授予私人空间访问权。",
-    "after": "Free 包含 1 GB 内的基础笔记、编辑、普通搜索、同步、阅读和导出，以及每月云端额度。付费方案提供更多云端 AI、转写和存储空间。",
     "team": "Personal 与每个组织的订阅和余额独立。Team 每席位含 225 万交互 Ivy 单位和 25 万自动化单位；自动化共用单位池。存储由组织共享。席位不改变权限。最多 2 个免费组织，每个 5 名成员，共享创建者账户存储。",
-    "lifecycle": "云端音频默认保留 30 天；Free 可选 7/14/30 天，付费还可选 90 天。回收站保留 30 天。取消不删除内容；付费权限持续至周期结束。降级后超额仍可读取和导出，并有 90 天保护期。请在音频保留期结束前导出。",
+    "lifecycle": "云端音频默认保留 30 天；Free 可选 7/14/30 天，付费还可选 90 天。云端回收站：保留至你清空为止。取消不删除内容；付费权限持续至周期结束。请在音频保留期结束前导出。",
     "docs": "方案与计费 · 英文文档",
     "comparison": "比较方案",
     "local": "Mac 本地工具",
-    "basics": "基础云端笔记与同步",
+    "basics": "浏览器中的云端笔记与同步",
     "ivy": "云端 Ivy 单位 / 月",
     "asr": "云端转写",
-    "asrUnlimited": "不限量",
-    "asrBasic": "包含",
+    "asrUnlimited": "不限量 · 合理使用",
+    "asrBasic": "每月额度",
     "storage": "云端存储",
     "included": "包含",
-    "once": "一次试用",
     "seat": "每席位",
     "unit": "Ivy 单位是处理预算，不是原始模型 token，也不保证回答次数。GB = 十亿字节。"
 },
   pricing: {
     "eyebrow": "按月，以 PLN 计价",
     "title": "选择工作内容存放的位置。",
-    "lead": "Mac 上的 Free。可选云端，限额清晰。",
+    "lead": "Mac 上免费，不限分钟数，也不限历史记录。需要时，云端方案每月 49 PLN 起。",
     "plans": {
         "free": {
             "name": "Free",
-            "badge": "Mac 上可用",
+            "badge": "Mac 与网页版",
             "price": "0 PLN",
             "per": "按月，以 PLN 计价",
-            "tagline": "本地工作不受方案配额限制，仍受硬件限制。",
+            "tagline": "在 Mac 上录制、转写并向 Ivy 提问，不受方案限制，另附免费云端账户。",
             "points": [
-                "Mac 本地工具",
-                "基础云端笔记与同步",
-                "1 GB",
-                "200k Ivy"
+                "完整的 Mac 应用，无需账户",
+                "浏览器中的云端笔记与同步",
+                "1 GB 云端存储",
+                "每月 200k Ivy 单位",
+                "每月云端转写额度"
             ],
-            "cta": ""
+            "cta": "免费下载 Mac 版"
         },
         "personal": {
             "name": "Personal",
             "badge": "现已推出",
             "price": "49 PLN",
             "per": "含税 / 月",
-            "tagline": "适用于个人云端空间。",
+            "tagline": "你自己的云端空间，在 Mac 和浏览器中都能使用。",
             "points": [
-                "Mac 本地工具",
-                "基础云端笔记与同步",
-                "20 GB",
-                "1.2M Ivy · 转写不限量",
+                "包含 Free 的全部内容",
+                "20 GB 云端存储",
+                "每月 1.2M Ivy 单位",
+                "云端转写不限量，合理使用",
                 "云端录屏"
             ],
             "cta": "在网页版购买"
@@ -432,12 +431,11 @@ const content: SiteContent = {
             "per": "税前 / 席位 / 月",
             "tagline": "适用于组织，至少两个席位。",
             "points": [
-                "Mac 本地工具",
-                "基础云端笔记与同步",
-                "50 GB · 每席位",
-                "2.5M Ivy · 转写不限量",
-                "Google Meet 机器人",
-                "云端录屏"
+                "包含 Personal 的全部内容",
+                "每席位 50 GB 云端存储，组织共享",
+                "每席位每月 2.5M Ivy 单位",
+                "云端转写不限量，合理使用",
+                "Google Meet 机器人"
             ],
             "cta": "在网页版购买"
         }
@@ -446,7 +444,7 @@ const content: SiteContent = {
   compare: {
     eyebrow: '竞品对比',
     title: 'IndexOne 与其他产品的对比。',
-    lead: 'Obsidian、Notion、Evernote、Bear 和 Amie 在各自的领域都很出色。IndexOne 则专为会议中发生的一切而打造——录制会议、在你的 Mac 上转写，并就会议内容提问——它还能把笔记写入你的 Obsidian 知识库。',
+    lead: 'Obsidian、Notion、Evernote、Bear 和 Amie 在各自的领域都很出色。IndexOne 则专为会议中发生的一切而打造——录制会议、在你的 Mac 上转写，并就会议内容提问——还能一步导入你的 Obsidian 知识库。',
     capability: '功能',
     caption: 'IndexOne 与其他笔记应用的对比',
     labels: { yes: '支持', partial: '部分支持', no: '不支持', unknown: '未知' },
@@ -471,11 +469,11 @@ const content: SiteContent = {
       },
       'local-data': {
         criterion: '数据默认留在设备上',
-        cells: ['', '本地文件', 'Notion 云端', 'Evernote 云端', '本地数据库；Pro 版可通过 iCloud 同步', 'Amie 云端'],
+        cells: ['在 On this Mac 空间中如此；云端空间位于网页端', '本地文件', 'Notion 云端', 'Evernote 云端', '本地数据库；Pro 版可通过 iCloud 同步', 'Amie 云端'],
       },
       'markdown': {
         criterion: '笔记为归你所有的纯 Markdown 文件',
-        cells: ['写入你的知识库；以加密数据库为数据源', '', '仅支持导出 Markdown', '导出为 ENEX、HTML 或 PDF', '数据库存储；支持导出 Markdown', ''],
+        cells: ['Markdown 导出与备份；以加密数据库为数据源', '', '仅支持导出 Markdown', '导出为 ENEX、HTML 或 PDF', '数据库存储；支持导出 Markdown', ''],
       },
       'encryption': {
         criterion: '由你掌控的加密',
@@ -483,11 +481,11 @@ const content: SiteContent = {
       },
       'platforms': {
         criterion: '平台',
-        cells: ['macOS', 'macOS、Windows、Linux、iOS、Android', 'macOS、Windows、网页版、iOS、Android', 'macOS、Windows、网页版、iOS、Android', 'macOS、iOS、iPadOS、网页版（测试版）', 'macOS、Windows、iOS'],
+        cells: ['macOS、网页版；iPhone 应用即将推出', 'macOS、Windows、Linux、iOS、Android', 'macOS、Windows、网页版、iOS、Android', 'macOS、Windows、网页版、iOS、Android', 'macOS、iOS、iPadOS、网页版（测试版）', 'macOS、Windows、iOS'],
       },
       'price': {
         criterion: '价格',
-        cells: ['Mac 上免费；云端 Personal 每月 49 PLN，Team 每席位 75 PLN（不含税）', '免费；Sync 按年付费 $4/月起', '免费；AI 与会议笔记需 Business 套餐，按年付费 $20/月', '免费版最多 50 条笔记；Starter 版 $99/年', '免费；Pro 版 $29.99/年', '免费版含 25 次笔记额度；Pro 版按年付费 €20/月起'],
+        cells: ['Free · Personal 49 PLN · Team 75 PLN', '免费；Sync 按年付费 $4/月起', '免费；AI 与会议笔记需 Business 套餐，按年付费 $20/月', '免费版最多 50 条笔记；Starter 版 $99/年', '免费；Pro 版 $29.99/年', '免费版含 25 次笔记额度；Pro 版按年付费 €20/月起'],
       },
     },
   },
@@ -497,12 +495,12 @@ const content: SiteContent = {
     leadHtml: '这里是简短回答；详细内容请查看<a href="/docs/">文档</a>。',
     items: [
       {
-        question: 'IndexOne 免费吗？',
-        answer: '是的，在 Mac 上免费。本地录音、转写、笔记和导出，无需账号，也无需付费。可选云端套餐（Personal 每月 49 PLN，Team 每席位 75 PLN 不含税）提供云端转写、云端 Ivy 和更多存储空间。',
+        question: 'Free 包含哪些内容？',
+        answer: '在 Mac 上，一切都包含：录音、转写、笔记、Ivy on this Mac 和导出，无需账号，也没有方案限制。免费账户还可在浏览器中使用 1 GB 以内的云端笔记、编辑、搜索、同步、阅读和导出，并获得每月的 Ivy 单位和云端转写额度。付费方案提供合理使用原则下不限量的云端转写、更多 Ivy 单位和更多存储空间。',
       },
       {
         question: '我的音频会上传到云端吗？',
-        answer: '在 On this Mac 空间中不会：转写通过 Whisper 在你的 Mac 上进行。只有文本可能外发：经过脱敏、在你同意后发送给 Claude Code 或 Codex；或在遮蔽人名、经你确认地址后，发送给你网络中的本地 AI 服务器。Personal 空间和组织空间位于网页版 IndexOne，因此它们的录音也存储在那里。',
+        answer: '在 On this Mac 空间中不会：转写通过 Whisper 在你的 Mac 上进行。只有文本可能外发：经过脱敏、在你同意后发送给 Claude Code 或 Codex；或在移除邮箱地址、银行卡号和电话号码、经你确认地址后，发送给你网络中的本地 AI 服务器。Personal 空间和组织空间位于网页版 IndexOne，因此它们的录音也存储在那里。',
       },
       {
         question: 'Ivy 是什么？',
@@ -510,7 +508,7 @@ const content: SiteContent = {
       },
       {
         question: '需要联网吗？',
-        answer: '只需联网一次，用来下载 Whisper 模型。此后，录音、转写、搜索和 Ivy on this Mac 都可离线使用。Personal 空间和组织空间可以从加密副本离线打开，并在你重新联网后发送你的修改。Ivy on the web、Claude Code、Codex 和连接器需要联网。',
+        answer: '只需联网一次，用来下载语音模型。此后，录音、转写、搜索和 Ivy on this Mac 都可离线使用。Personal 空间和组织空间可以从加密副本离线打开，并在你重新联网后发送你的修改。Ivy on the web、Claude Code、Codex 和连接器需要联网。',
       },
       {
         question: '我需要 Claude Code 吗？',
@@ -522,11 +520,15 @@ const content: SiteContent = {
       },
       {
         question: '为什么 macOS 会请求“屏幕与系统录音”权限？',
-        answer: 'macOS 正是通过这项权限，允许一个应用听到其他应用的音频——也就是通话中其他人的声音。IndexOne 只保存音频。',
+        answer: 'macOS 正是通过这项权限，允许一个应用听到其他应用的音频——也就是通话中其他人的声音。IndexOne 只保存他们的音频，除非你开启 Screen recording 插件并选择 Voice + screen。',
       },
       {
         question: '戴耳机能用吗？Intel Mac 上能用吗？',
-        answer: '戴耳机可以用：对方的音频是从系统中采集的，而不是从扬声器录制。Intel Mac 不支持：IndexOne 需要搭载 Apple Silicon（M1 及更新机型）的 Mac。',
+        answer: '戴耳机可以用：对方的音频是从系统中采集的，而不是从扬声器录制。Intel Mac 不支持：Mac 应用需要 Apple Silicon（M1 及更新机型）。在其他任何电脑上，请在浏览器中使用 IndexOne。',
+      },
+      {
+        question: 'iPhone 或 Windows 上有应用吗？',
+        answer: 'iPhone 应用即将登陆 App Store。在 Windows、Linux 或 Intel Mac 上，请在浏览器中打开 app.index-one.io 使用 IndexOne；在那里录制的内容会在云端转写，并计入你的方案用量。',
       },
       {
         question: 'IndexOne 开源吗？',
@@ -587,15 +589,15 @@ const content: SiteContent = {
     note: "本页对 IndexOne 机器人作一般性说明。派出机器人的组织可能有自己更详细的隐私声明，你可以向它索取。",
   },
   cta: {
-    title: '让 Ivy 走进你的会议——掌控权留在你的 Mac 上。',
-    lead: '本地优先的 macOS 应用。AI 可以留在本地，也可以在你选择时明确启用经过脱敏的云端 AI。',
-    compare: '看看它与 Obsidian、Notion、Evernote、Bear 和 Amie 相比如何。',
-    download: '下载 macOS 版',
-    github: '在 GitHub 上查看',
+    title: '在下一次通话中试试吧。',
+    lead: '免费下载 IndexOne，录下你的下一场会议：无需机器人、无需账户、无需绑卡。也想在浏览器中查看笔记？免费创建一个账户即可。',
+    compare: '比较方案',
+    download: '免费下载 Mac 版',
+    signup: '免费创建账户',
     legacyHtml: '还在使用 2.8.0 或更早的版本？它的更新检查已经无法连接到我们。请手动下载一次<a href="{download}">最新版本</a>，将其拖入“应用程序”文件夹替换旧版本；你的资料库、录音和设置都会原样保留。从 2.9.0 起，应用会自动发现新版本。',
   },
   footer: {
-    legalHtml: 'macOS 优先 · 设备端 Ivy · 本地优先 · 基于 Tauri、Angular 和 Rust 构建 · macOS 版免费 · © {year} <a href="{authors}">MonoOne</a> · 文字内容采用 <a href="{license}">CC BY 4.0</a> 许可',
+    legalHtml: 'Mac 应用与网页版 · iPhone 应用即将推出 · 设备端 Ivy · 基于 Tauri、Angular 和 Rust 构建 · Mac 版免费 · © {year} <a href="{authors}">MonoOne</a> · 文字内容采用 <a href="{license}">CC BY 4.0</a> 许可',
     legalNav: '法律信息',
     terms: '服务条款（PL）',
     privacyPolicy: '隐私政策（PL）',
@@ -606,21 +608,7 @@ const content: SiteContent = {
   },
 }
 
-// The published offer is a preview; release history remains unchanged.
-content.pricing.plans.free.cta = content.hero.download
-content.hero.subHtml = content.pricing.lead + ' ' + content.pricing.plans.free.tagline
-content.unique.eyebrow = content.nav.features
-content.unique.title = content.features.title
-content.unique.lead = content.pricing.lead
-content.features.lead = content.pricing.lead
-content.cta.compare = content.offer.comparison
-content.cta.lead = content.pricing.lead
-content.meta.home.description = content.pricing.lead
-content.meta.features.description = content.pricing.lead + ' ' + content.offer.local
-content.meta.privacy.description = content.offer.privacy
-content.meta.pricing.title = 'IndexOne — Free / Personal / Team'
-content.meta.pricing.description = content.pricing.lead + ' 49 PLN / 75 PLN. ' + content.offer.status
-content.faq.items[0] = { question: "Free 包含哪些内容？", answer: content.offer.after }
+// The FAQ ends with the offer details shown on the pricing page.
 content.faq.items.push(
   { question: content.offer.trialTitle, answer: content.offer.trial },
   { question: content.offer.meterTitle, answer: content.offer.meter },
@@ -628,6 +616,5 @@ content.faq.items.push(
   { question: "谁为Team付费？", answer: content.offer.team },
   ...content.privacy.lifecycle.items.map(item => ({ question: item.title, answer: item.body })),
 )
-content.compare.rows.price.cells[0] = 'Free · Personal 49 PLN · Team 75 PLN'
 
 export default content

@@ -12,7 +12,7 @@ export type Support = 'yes' | 'partial' | 'no' | 'unknown' | 'info'
 
 const shot = (name: string, width: number, height: number): Screenshot => ({ src: `/assets/screens/${name}.webp`, light: `/assets/screens/${name}-light.webp`, width, height })
 
-export const trustIcons = ['i-lucide-lock', 'i-lucide-shield', 'i-lucide-eye-off', 'i-lucide-file-text'] as const
+export const trustIcons = ['i-lucide-bot-off', 'i-lucide-audio-lines', 'i-lucide-fingerprint', 'i-lucide-monitor-smartphone'] as const
 
 export const differentiators: { id: DifferentiatorId, icon: string, to: string, ivy?: boolean }[] = [
   { id: 'live', icon: 'i-lucide-message-circle-question', to: '/features#ivy', ivy: true },
@@ -85,7 +85,7 @@ export const comparison: { id: ComparisonRowId, values: [Support, Support, Suppo
   { id: 'local-transcription', values: ['yes', 'no', 'no', 'no', 'no', 'no'] },
   { id: 'local-ai', values: ['yes', 'no', 'no', 'no', 'no', 'no'] },
   { id: 'ask-all', values: ['yes', 'no', 'yes', 'partial', 'no', 'partial'] },
-  { id: 'local-data', values: ['yes', 'yes', 'no', 'no', 'yes', 'no'] },
+  { id: 'local-data', values: ['partial', 'yes', 'no', 'no', 'yes', 'no'] },
   { id: 'markdown', values: ['yes', 'yes', 'no', 'no', 'no', 'unknown'] },
   { id: 'encryption', values: ['yes', 'partial', 'no', 'partial', 'partial', 'unknown'] },
   { id: 'platforms', values: ['info', 'info', 'info', 'info', 'info', 'info'] },

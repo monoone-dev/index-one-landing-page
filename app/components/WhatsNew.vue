@@ -9,7 +9,8 @@ const recent = notes.slice(0, 3)
 const dateFormat = computed(() => new Intl.DateTimeFormat(locale.value, { dateStyle: 'medium', timeZone: 'UTC' }))
 const formatDate = (date: string) => dateFormat.value.format(new Date(`${date}T00:00:00Z`))
 // The summary is HTML from the release note; the card shows it as plain text.
-const plain = (html: string | null) => html?.replace(/<[^>]+>/g, '') ?? ''
+const entities: Record<string, string> = { '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#39;': "'" }
+const plain = (html: string | null) => html?.replace(/<[^>]+>/g, '').replace(/&(amp|lt|gt|quot|#39);/g, m => entities[m]!) ?? ''
 </script>
 
 <template>
