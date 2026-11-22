@@ -3,23 +3,23 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — notas e transcrição de reuniões no Mac, com Ivy',
-      description: 'Grave e transcreva reuniões no seu Mac e pergunte à Ivy, a IA no dispositivo, ao vivo ou sobre todas as chamadas. Para você ou para a sua organização.',
+      title: 'IndexOne — notas de reunião privadas com IA para Mac e web, sem bot',
+      description: 'Grave os dois lados de uma chamada sem bot, transcreva no seu Mac e pergunte à Ivy, com um recibo para cada linha. Grátis no Mac; seus espaços na nuvem abrem em qualquer navegador.',
     },
     features: {
       breadcrumb: 'Recursos',
       title: 'Recursos — transcrição de reuniões, Ivy e notas no Mac',
-      description: 'Transcrição em dois canais no Mac, Ivy durante as chamadas, perguntas sobre todas as reuniões, recibos, projetos, plugins, servidores de IA locais e Markdown.',
+      description: 'Transcrição em dois canais no Mac, Ivy durante as chamadas, perguntas sobre todas as reuniões, recibos, projetos, plugins, servidores de IA locais e exportação em Markdown.',
     },
     privacy: {
       breadcrumb: 'Privacidade',
       title: 'Privacidade no IndexOne — IA local e o que sai do seu Mac',
-      description: 'Transcrição e IA no dispositivo, biblioteca criptografada, pastas bloqueadas com Touch ID e firewall de anonimização. Veja o que cada IA envia, e quando.',
+      description: 'Transcrição e IA no dispositivo, notas e transcrições criptografadas, pastas bloqueadas com Touch ID e firewall de anonimização. Veja o que cada IA envia, e quando.',
     },
     pricing: {
       breadcrumb: 'Preços',
-      title: 'Preços do IndexOne comparados a Obsidian, Notion e outros',
-      description: 'O IndexOne é gratuito no Mac; planos na nuvem opcionais a partir de 49 PLN/mês. Compare com Obsidian, Notion, Evernote, Bear e Amie em gravação, transcrição, IA no dispositivo e Markdown.',
+      title: 'Preços do IndexOne — Free, Personal e Team',
+      description: 'O IndexOne é gratuito no Mac. Planos na nuvem: Personal 49 PLN por mês, Team 75 PLN líquidos por lugar, ambos com transcrição na nuvem ilimitada sob uso razoável. Os planos na nuvem estão à venda no app web.',
     },
     changelog: {
       breadcrumb: 'Novidades',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "Bot de reuniões do IndexOne — informações para participantes",
       description: "O bot do IndexOne está gravando uma reunião da qual você participa. Quem é responsável, o que é gravado e para quê, por quanto tempo fica guardado e como exercer seus direitos.",
     },
-    ogImageAlt: 'IndexOne — notas e transcrição de reuniões no Mac, com Ivy',
+    ogImageAlt: 'IndexOne — notas de reunião privadas com IA para Mac e web, sem bot',
   },
   common: {
     skipToContent: 'Pular para o conteúdo',
@@ -63,16 +63,13 @@ const content: SiteContent = {
     modes: { light: 'Claro', dark: 'Escuro', system: 'Sistema' },
   },
   hero: {
-    badgeLocal: 'Local-first · macOS',
-    badgeIvy: 'Ivy no dispositivo',
-    badgeStar: 'Dê uma estrela no GitHub',
     githubAria: 'IndexOne no GitHub',
-    titleStrong: 'Notas de reunião com a Ivy —',
-    titleSoft: 'e você decide onde ela roda.',
-    subHtml: 'O IndexOne grava suas chamadas e as transcreve <b>no seu Mac</b>. Pergunte à Ivy ao vivo, no meio da reunião, e sobre tudo o que você já gravou. Rode a IA no Mac ou no seu próprio servidor de IA local, ou ative de forma explícita a <b>IA na nuvem com anonimização</b>. No espaço On this Mac, seu arquivo de reuniões continua no seu Mac.',
-    download: 'Baixar para macOS',
-    privacyCta: 'Veja como funciona a privacidade',
-    note: 'Assinado e notarizado · macOS 13.4+ · Apple Silicon (M1 ou posterior) · suas notas continuam em Markdown, e são suas',
+    titleStrong: 'Notas de reunião que ficam no seu Mac.',
+    titleSoft: 'Sem bot. Um recibo para cada linha.',
+    subHtml: 'O IndexOne grava os dois lados da chamada <b>sem bot</b>, transcreve <b>no seu Mac</b> e deixa você perguntar à Ivy — no meio da reunião ou meses depois — com um link para o segundo exato em que aquilo foi dito. Grátis no Mac, sem limite de minutos nem de histórico. Seus espaços na nuvem abrem em qualquer navegador.',
+    download: 'Baixar para Mac — grátis',
+    signup: 'Criar uma conta gratuita',
+    note: 'Apple Silicon (M1 ou posterior) · macOS 13.4+ · assinado e notarizado · sem necessidade de conta no Mac',
     videoLabel: 'Um tour de 90 segundos pelo IndexOne: uma reunião sendo gravada enquanto uma nota é digitada ao lado, a nota escrita depois e os itens que ela extrai, a linha do tempo de quem fala, uma pergunta feita à Ivy sobre todo o acervo e respondida com fontes, o grafo de conhecimento, a barra de Workspaces e a busca no dispositivo, um projeto, Pessoas, e um Workspace que se recusa a abrir porque está selado',
     play: 'Assista ao tour de 90 segundos',
   },
@@ -95,7 +92,7 @@ const content: SiteContent = {
         },
         privacy: {
           title: 'Selado com Touch ID',
-          body: 'Uma biblioteca criptografada e bloqueios AES-256 para qualquer Workspace ou pasta. Uma pasta bloqueada fica invisível para a busca, o grafo e o MCP.',
+          body: 'Notas e transcrições criptografadas, além de bloqueios AES-256 para qualquer Workspace ou pasta, abertos com Touch ID. Uma pasta bloqueada fica invisível para a busca, o grafo e o MCP.',
           link: 'Como a privacidade funciona',
         },
       },
@@ -120,7 +117,7 @@ const content: SiteContent = {
     showcase: {
       eyebrow: 'Veja no app',
       title: 'Da chamada à resposta, em um só app.',
-      lead: 'Grave a reunião, pergunte sobre ela e guarde-a em Markdown. Escolha uma etapa para vê-la.',
+      lead: 'Grave a reunião, pergunte sobre ela e exporte-a em Markdown. Escolha uma etapa para vê-la.',
       tabsLabel: 'Tour do produto',
       tabs: { record: 'Gravar', ask: 'Perguntar', export: 'Guardar' },
     },
@@ -135,16 +132,16 @@ const content: SiteContent = {
   },
   trust: {
     aria: 'Em resumo',
-    items: ['Transcrição no dispositivo', 'Bloqueio com Touch ID em repouso', 'Sem nuvem obrigatória', 'Markdown simples que é seu'],
+    items: ['Sem bot de reunião', 'Transcrição no dispositivo', 'Pastas bloqueadas com Touch ID', 'Mac e web · app para iPhone em breve'],
   },
   unique: {
-    eyebrow: 'Só no IndexOne',
-    title: 'O que nenhum outro app de notas faz pelas suas reuniões.',
-    lead: 'Muitos apps guardam notas ou transcrevem chamadas. O IndexOne grava os dois lados da chamada no seu Mac, deixa você perguntar à Ivy durante a reunião e comprova cada linha que escreve.',
+    eyebrow: 'Recursos',
+    title: 'Uma ferramenta de reuniões que realmente lembra.',
+    lead: 'Muitos apps guardam notas ou transcrevem chamadas. O IndexOne grava os dois lados da chamada no seu Mac, deixa você perguntar à Ivy durante a reunião e mostra de onde veio cada linha que escreve.',
     items: {
       'live': {
         title: 'Pergunte à Ivy no meio da reunião — e mantenha tudo no seu Mac',
-        body: 'Digite ou fale uma pergunta no meio da chamada e receba uma resposta baseada em todas as reuniões que você gravou, com fontes que você pode abrir; a gravação nunca pausa. Escolha Ivy on this Mac e nenhum texto de reunião sai do seu Mac; o Claude Code e o Codex ficam desligados até você consentir uma vez.',
+        body: 'Digite uma pergunta no meio da chamada — ou fale, com o assistente de voz ligado — e receba uma resposta baseada em todas as reuniões que você gravou, com fontes que você pode abrir; a gravação nunca pausa. Escolha Ivy on this Mac e nenhum texto de reunião sai do seu Mac; o Claude Code e o Codex ficam desligados até você consentir uma vez.',
         link: 'Como a Ivy funciona',
       },
       'capture': {
@@ -159,17 +156,17 @@ const content: SiteContent = {
       },
       'security': {
         title: 'Criptografado no seu Mac',
-        body: 'Toda a sua biblioteca é criptografada com SQLCipher no Mac. Personal e cada organização de que você faz parte também guardam aqui uma cópia criptografada, então abrem sem conexão de rede.',
+        body: 'Suas notas, transcrições e o índice de busca são criptografados com SQLCipher no Mac; bloqueie um Workspace ou uma pasta e os áudios, vídeos e arquivos dentro dele também são selados. Personal e cada organização de que você faz parte guardam aqui uma cópia criptografada, então abrem sem conexão de rede.',
         link: 'Segurança e privacidade',
       },
       'locks': {
         title: 'Pastas seladas com Touch ID',
-        body: 'Bloqueie um Workspace ou uma pasta e as notas, transcrições e áudios dentro dela são selados com AES-256-GCM. Enquanto estiver bloqueada, ela fica invisível para a busca, o grafo, o MCP e o player de áudio.',
+        body: 'Bloqueie um Workspace ou uma pasta e as notas, transcrições e áudios dentro dela são selados com AES-256-GCM e só se abrem com o Touch ID ou a senha do seu Mac. Enquanto estiver bloqueada, ela fica invisível para a busca, o grafo, o MCP e o player de áudio.',
         link: 'O modelo de bloqueio',
       },
       'markdown': {
-        title: 'Markdown simples e um servidor MCP local',
-        body: 'As notas vão para o seu vault do Obsidian em Markdown simples com wikilinks, e um servidor MCP somente leitura em 127.0.0.1 permite que o Claude e outros agentes as consultem. Você escolhe quais espaços ele pode ler; as organizações ficam desligadas até você ativá-las.',
+        title: 'Exportação em Markdown e um servidor MCP local',
+        body: 'Exporte qualquer nota em Markdown ou faça backup da sua biblioteca como arquivos .md simples, e um servidor MCP somente leitura em 127.0.0.1 permite que o Claude e outros agentes consultem suas notas. Você escolhe quais espaços ele pode ler; as organizações ficam desligadas até você ativá-las.',
         link: 'Markdown e MCP',
       },
     },
@@ -181,7 +178,7 @@ const content: SiteContent = {
       "items": [
         {
           "title": "Durante quanto tempo são guardados os dados?",
-          "body": "O áudio na nuvem é mantido por 30 dias por padrão, com até 90 dias previstos para Personal e Team dentro do limite de armazenamento. Notas, transcrições e arquivos comuns permanecem até que o proprietário os exclua, dentro do limite de armazenamento."
+          "body": "O áudio na nuvem é mantido por 30 dias por padrão; o Free pode escolher 7, 14 ou 30 dias, e Personal e Team também 90. Notas, transcrições e arquivos comuns permanecem até que o proprietário os exclua, dentro do limite de armazenamento."
         },
         {
           "title": "O que acontece ao mudar para um plano inferior?",
@@ -195,15 +192,15 @@ const content: SiteContent = {
     },
     eyebrow: 'Segurança e privacidade',
     title: 'Privacidade não é uma configuração. É a arquitetura.',
-    leadHtml: 'No espaço On this Mac, a transcrição, a busca e a Ivy on this Mac podem funcionar <b>sem nenhuma rede</b> — depois que você desligar as duas coisas que se conectam para fora por padrão: uma verificação de nova versão ao abrir o app e uma mensagem diária de uso. Se você escolher o Claude Code ou o Codex, o consentimento e um firewall de anonimização ficam na frente dessa saída de dados.',
+    leadHtml: 'No espaço On this Mac, a transcrição, a busca e a Ivy on this Mac podem funcionar <b>sem nenhuma rede</b> depois que os modelos de fala forem baixados. As poucas coisas que o IndexOne envia por conta própria não levam nenhum conteúdo de reunião, e cada uma está listada abaixo. Se você escolher o Claude Code ou o Codex, o consentimento e um firewall de anonimização ficam na frente dessa saída de dados.',
     cards: {
       'offline': {
-        title: 'Nada sai do dispositivo',
-        body: 'Com a Ivy on this Mac e um modelo baixado uma única vez, seus áudios e transcrições nunca tocam a rede. O raciocínio acontece no seu Mac.',
+        title: 'Suas reuniões ficam no dispositivo',
+        body: 'Com a Ivy on this Mac e modelos baixados uma única vez, seus áudios e transcrições nunca tocam a rede. O raciocínio acontece no seu Mac.',
       },
       'at-rest': {
         title: 'Duas camadas de criptografia em repouso',
-        body: 'Todo o banco de dados é criptografado com SQLCipher. Por cima, um bloqueio <b>AES-256-GCM</b> por pasta adiciona chaves de conteúdo protegidas por uma chave mestra liberada apenas pelo <b>Touch ID</b>.',
+        body: 'Notas, transcrições e o índice de busca são criptografados com SQLCipher. Por cima, um bloqueio <b>AES-256-GCM</b> por pasta também sela áudios, vídeos e arquivos, com chaves de conteúdo protegidas por uma chave mestra liberada apenas pelo <b>Touch ID</b> ou pela senha do seu Mac.',
       },
       'gated': {
         title: 'Toda leitura passa por um controle',
@@ -222,28 +219,28 @@ const content: SiteContent = {
         body: 'Se um dia você ativar um resumidor na nuvem, e-mails, números parecidos com cartões e números de telefone são removidos antes — e a saída para a nuvem é <b>fail-closed</b> (bloqueada por padrão), protegida por um consentimento único. Baixe o modelo opcional de mascaramento de nomes e os nomes das pessoas também são substituídos.',
       },
       'update-check': {
-        title: 'As duas chamadas que fazemos por padrão',
-        body: 'Ao abrir, o IndexOne pergunta ao GitHub se existe uma versão mais nova; a requisição informa qual versão você está usando, e nada mais. Uma vez por dia, ele também envia uma pequena mensagem de uso: um ID de instalação aleatório, as versões do app e do macOS, o tipo de chip, o idioma e se você está conectado — nada de reuniões, notas, gravações ou nomes. Ela só é anônima enquanto você não está conectado; quando você está conectado, é enviada com a sua conta. Você pode desligar qualquer uma delas em <b>Settings → Privacy</b>. São as únicas coisas nesta página que acontecem sem você pedir, e é exatamente por isso que elas estão nesta página.',
+        title: 'O que o IndexOne envia sem você pedir',
+        body: 'Ao abrir, o IndexOne pergunta ao GitHub se existe uma versão mais nova; a requisição informa qual versão você está usando, e nada mais. Se alguma conta já foi conectada neste Mac, ele também pergunta ao servidor do IndexOne, ao abrir e a cada hora, se a sua versão ainda é suportada, sem nenhum conteúdo. Uma vez por dia, ele envia uma pequena mensagem de uso: um ID de instalação aleatório, as versões do app e do macOS, a arquitetura do processador, o idioma e se você está conectado — nada de reuniões, notas, gravações ou nomes. Ela só é anônima enquanto você não está conectado; quando você está conectado, é enviada com a sua conta. Na primeira vez que você transcreve, ele baixa do Hugging Face dois pequenos modelos de fala, para detecção de voz e separação de falantes. Você pode desligar a verificação de atualizações e a mensagem de uso em <b>Settings → Privacy</b>. São as únicas coisas nesta página que acontecem sem você pedir, e é exatamente por isso que elas estão nesta página.',
       },
     },
     tableCaption: 'Onde cada provedor de IA roda e se o texto das reuniões sai do seu Mac',
     tableHeaders: ['Ivy / provedor', 'Onde roda', 'O texto das reuniões sai do seu Mac?'],
     providers: {
       'on-device': { name: 'Ivy on this Mac', note: 'Bielik / Qwen', where: 'Totalmente local' },
-      'ivy-web': { name: 'Ivy on the web', note: 'Personal e organizações', where: 'IndexOne na web', leaves: 'Sim — o próprio espaço fica na web' },
+      'ivy-web': { name: 'Ivy on the web', note: 'Personal e organizações', where: 'Nuvem do IndexOne, com modelos Claude da Anthropic', leaves: 'Sim — o próprio espaço fica na web' },
       'claude-code': { name: 'Claude Code', where: 'CLI local → nuvem' },
       'codex': { name: 'Codex', note: 'a CLI da OpenAI, rodando sem ferramentas', where: 'CLI local → nuvem' },
-      'local-server': { name: 'Local AI server', note: 'Ollama, LM Studio, oMLX e outros', where: 'Seu Mac ou sua rede', leaves: 'Não com um servidor neste Mac. Para um servidor em outro lugar da sua rede, só depois de você confirmar o endereço; os nomes são mascarados antes' },
+      'local-server': { name: 'Local AI server', note: 'Ollama, LM Studio, oMLX e outros', where: 'Seu Mac ou sua rede', leaves: 'Não com um servidor neste Mac. Para um servidor em outro lugar da sua rede, só depois de você confirmar o endereço; e-mails, números de cartão e de telefone são removidos antes, e também os nomes se você baixar o modelo de mascaramento de nomes' },
     },
     leavesYes: 'Só após consentimento, com o firewall de anonimização aplicado',
     leavesNo: 'Não',
     shotAlt: 'Configurações de privacidade do IndexOne, explicando em linguagem simples o que é removido antes de qualquer texto sair, quais provedores são na nuvem e se o processamento na nuvem foi permitido',
-    footnote: 'O IndexOne diz, em linguagem simples, exatamente o que sai do seu Mac — e cada chamada de IA na nuvem é registrada e mostrada para você. Cada espaço tem uma única escolha de IA: Ivy on this Mac, Ivy on the web, Claude Code, Codex ou seu próprio servidor de IA local. No espaço On this Mac, as reuniões ficam no seu Mac, a menos que você escolha o Claude Code, o Codex ou um servidor de IA local em outro lugar da sua rede.',
+    footnote: 'O IndexOne diz, em linguagem simples, exatamente o que sai do seu Mac — e cada chamada de IA na nuvem feita a partir do seu Mac é registrada e mostrada para você. Cada espaço tem uma única escolha de IA: Ivy on this Mac, Ivy on the web, Claude Code, Codex ou seu próprio servidor de IA local. No espaço On this Mac, as reuniões ficam no seu Mac, a menos que você escolha o Claude Code, o Codex ou um servidor de IA local em outro lugar da sua rede.',
   },
   features: {
     eyebrow: 'O que você ganha',
     title: 'Uma ferramenta de reuniões que realmente lembra.',
-    lead: 'Um armazenamento criptografado, três formas de usar — o app, um servidor MCP local e seus arquivos Markdown exportados. Uma árvore guarda tudo, os projetos ficam por cima dela, e a Ivy lê tudo.',
+    lead: 'Uma biblioteca criptografada, três formas de usar — o app, um servidor MCP local e a exportação em Markdown. Uma árvore guarda tudo, os projetos ficam por cima dela, e a Ivy lê tudo.',
     items: {
       'workspaces': {
         eyebrow: 'Workspaces',
@@ -253,7 +250,7 @@ const content: SiteContent = {
           'Gravações, notas, tarefas e projetos ficam guardados no mesmo lugar',
           'Um Workspace selado mostra o nome e mais nada — sem contagens, sem conteúdo',
           'Peça à Ivy para arquivar uma gravação perdida para você',
-          'Apagou sem querer? A lixeira guarda por 30 dias — ou pelo tempo que você definir, até um ano',
+          'Apagou sem querer? No seu Mac, a lixeira guarda por 30 dias — ou pelo tempo que você definir, até um ano',
         ],
         alt: 'A barra lateral de Workspaces: uma árvore de Workspaces e pastas com gravações, notas e projetos, e um Workspace bloqueado no final',
       },
@@ -282,7 +279,7 @@ const content: SiteContent = {
       'ivy': {
         eyebrow: 'Ivy',
         title: 'Converse com a Ivy — durante a reunião.',
-        body: 'É isso que a maioria dos apps de anotações não tem. Chame a Ivy com uma frase de ativação ou um único toque; ela responde a partir da memória das suas reuniões, ao vivo, com citações que você pode abrir — e a gravação nunca para.',
+        body: 'É isso que a maioria dos apps de anotações não tem. Pergunte à Ivy com um único toque, ou ative o assistente de voz em Settings e pergunte em voz alta; ela responde a partir da memória das suas reuniões, ao vivo, com citações que você pode abrir — e a gravação nunca para.',
         points: [
           'Modelo de raciocínio no dispositivo (Bielik-11B, Qwen) via Metal',
           'Embasada, não inventada — buscada nas suas próprias transcrições',
@@ -310,6 +307,7 @@ const content: SiteContent = {
           'Whisper no dispositivo — do tiny ao large-v3, incluindo a versão turbo mais rápida, além de variantes quantizadas',
           'Atribuição em dois canais: você e todos os outros, mais detecção de atividade de voz',
           'Uma barra de gravação flutuante — grave de qualquer lugar (⌘⇧R)',
+          'Voice + screen: grave sua tela junto com a reunião (macOS 14+), grátis no Mac',
         ],
         alt: 'A transcrição unificada Me / Others, indexada por tempo, ao lado da linha do tempo de quem fala e dos assuntos',
       },
@@ -322,7 +320,7 @@ const content: SiteContent = {
           'Dossiês de entidades, reuniões relacionadas, resumos semanais',
           'Lembretes privados que nunca saem do Mac, cada um ligado à gravação ou nota de onde veio — a Ivy sugere, você aceita',
           'Os próximos passos também podem ir para o Apple Reminders',
-          'Alimente com PDFs, documentos do Office, páginas web e imagens — indexados para a Ivy, no dispositivo',
+          'Alimente com PDFs, documentos do Office, páginas web salvas (.html) e imagens — indexados para a Ivy, no dispositivo',
         ],
         alt: 'O grafo de conhecimento — reuniões, notas, documentos e pessoas em um único mapa, com ligações tipadas entre eles',
       },
@@ -340,12 +338,12 @@ const content: SiteContent = {
       },
       'markdown': {
         eyebrow: 'Seu para sempre',
-        title: 'Markdown simples. Sem aprisionamento.',
-        body: 'Cada nota também é exportada como Markdown atômico — front-matter em YAML, <code>[[wikilinks]]</code>, links diretos para blocos e uma opção de quadro canvas. São só arquivos comuns que são seus e abrem em qualquer editor.',
+        title: 'Markdown na entrada, Markdown na saída. Sem aprisionamento.',
+        body: 'Exporte qualquer nota em Markdown ou faça backup de toda a sua biblioteca como arquivos <code>.md</code> simples que abrem em qualquer editor. Vem do Obsidian? Importe seu vault em uma única etapa.',
         points: [
           'Um banco de dados SQLite criptografado é a única fonte da verdade',
           'Um servidor MCP local somente leitura para o Claude Desktop e o Claude Code',
-          'Exportações em Markdown simples que abrem em qualquer editor',
+          'Exportação em Markdown de qualquer nota e um backup em Markdown simples de toda a sua biblioteca',
         ],
         alt: 'Uma nota estruturada — resumo, decisões, próximos passos e citações — ao lado das gravações e notas às quais ela se liga',
       },
@@ -369,58 +367,59 @@ const content: SiteContent = {
     "monthly": "Mensal, em PLN",
     "tax": "Personal inclui impostos. Team sem impostos: mínimo 2 lugares = 150 PLN líquidos/mês. Com IVA de 23%: 184,50 PLN no total (92,25 por lugar). O imposto pode variar; a aplicação deve mostrar o total antes da compra.",
     "trialTitle": "Grátis todo mês",
-    "trial": "Cada conta pessoal gratuita recebe a cada mês civil (UTC) 200.000 unidades Ivy e transcrição básica na nuvem, sem cartão. Os recursos locais do Mac não têm limite de plano.",
-    "meterTitle": "Transcrição ilimitada",
-    "meter": "Os planos pagos não têm limite de transcrição. Se transcrever muito, algumas gravações podem ficar prontas só após algumas horas; aplica-se uso razoável. A transcrição local no Mac é sempre imediata.",
+    "trial": "Cada conta gratuita recebe a cada mês civil (UTC) 200.000 unidades Ivy e uma cota de transcrição na nuvem, sem cartão. Os recursos locais do Mac não têm limite de plano.",
+    "meterTitle": "Transcrição na nuvem ilimitada",
+    "meter": "Os planos pagos não têm limite de transcrição na nuvem. Se você transcrever muito, algumas gravações podem levar algumas horas para ficar prontas. Aplica-se uso razoável. A transcrição no Mac é sempre imediata e ilimitada.",
+    "fairUse": "Os planos pagos incluem transcrição na nuvem ilimitada sob uso razoável; a cota do Free e as regras de uso razoável estão nos Termos de serviço.",
+    "fairUseLink": "Leia os Termos de serviço (em polonês)",
     "privacyTitle": "Local e nuvem",
     "privacy": "O processamento local do Mac fica no Mac. A nuvem padrão armazena e processa conteúdo em servidores legíveis pelo operador, sem criptografia de ponta a ponta. Mascarar padrões não é anonimização completa. Um plano não concede acesso a espaços privados.",
-    "after": "O Free inclui notas básicas, edição, pesquisa comum, sincronização, leitura e exportação até 1 GB, além da cota mensal na nuvem. Os planos pagos acrescentam mais IA, transcrição e armazenamento na nuvem.",
-    "team": "Personal e cada organização têm assinaturas e saldos separados. Team: 2,25 milhões de unidades Ivy interativas e 250.000 de automação por lugar; automações usam um fundo comum. Armazenamento compartilhado. Lugares não alteram permissões. Até 2 organizações gratuitas de 5 membros compartilham o armazenamento da conta fundadora.",
-    "lifecycle": "Áudio na nuvem: padrão de 30 dias; Free 7/14/30, pagos também 90. Lixeira: 30 dias. Cancelar não apaga conteúdo; direitos pagos até o fim do período. Redução acima da cota: leitura/exportação e 90 dias de proteção. Exporte áudio antes de expirar.",
+    "team": "Personal e cada organização têm assinaturas e saldos separados. Team: 2,25 milhões de unidades Ivy interativas e 250.000 de automação por lugar; automações usam um fundo comum. Armazenamento compartilhado pela organização. Lugares não alteram permissões. Até 2 organizações gratuitas de 5 membros compartilham o armazenamento da conta fundadora.",
+    "lifecycle": "Áudio na nuvem: padrão de 30 dias; Free 7/14/30, pagos também 90. Lixeira na nuvem: mantida até você esvaziá-la. Cancelar não apaga conteúdo; direitos pagos até o fim do período. Exporte áudio antes de expirar.",
     "docs": "Planos e cobrança · documentação em inglês",
     "comparison": "Comparar planos",
     "local": "Ferramentas locais do Mac",
-    "basics": "Notas básicas e sincronização na nuvem",
+    "basics": "Notas e sincronização na nuvem no navegador",
     "ivy": "Unidades Ivy na nuvem / mês",
     "asr": "Transcrição na nuvem",
-    "asrUnlimited": "Ilimitada",
-    "asrBasic": "Incluída",
+    "asrUnlimited": "Ilimitada · uso razoável",
+    "asrBasic": "Cota mensal",
     "storage": "Armazenamento na nuvem",
     "included": "Incluído",
-    "once": "Uma avaliação",
     "seat": "por lugar",
     "unit": "Unidades Ivy são um orçamento de processamento, não tokens brutos nem um número garantido de respostas. GB = um bilhão de bytes."
 },
   pricing: {
     "eyebrow": "Mensal, em PLN",
     "title": "Escolha onde trabalhar.",
-    "lead": "Free no Mac. Nuvem opcional com limites claros.",
+    "lead": "Grátis no seu Mac, sem limite de minutos nem de histórico. Planos na nuvem a partir de 49 PLN por mês, quando você quiser.",
     "plans": {
         "free": {
             "name": "Free",
-            "badge": "Disponível no Mac",
+            "badge": "Mac e web",
             "price": "0 PLN",
             "per": "Mensal, em PLN",
-            "tagline": "Trabalho local sem limite de plano; limites do hardware se aplicam.",
+            "tagline": "Grave, transcreva e pergunte à Ivy no seu Mac sem limite de plano, além de uma conta gratuita na nuvem.",
             "points": [
-                "Ferramentas locais do Mac",
-                "Notas básicas e sincronização na nuvem",
-                "1 GB",
-                "200k Ivy"
+                "O app completo para Mac, sem necessidade de conta",
+                "Notas e sincronização na nuvem no navegador",
+                "1 GB de armazenamento na nuvem",
+                "200k unidades Ivy por mês",
+                "Uma cota mensal de transcrição na nuvem"
             ],
-            "cta": ""
+            "cta": "Baixar para Mac — grátis"
         },
         "personal": {
             "name": "Personal",
             "badge": "Disponível",
             "price": "49 PLN",
             "per": "impostos incluídos / mês",
-            "tagline": "Para seu espaço pessoal na nuvem.",
+            "tagline": "Seu próprio espaço na nuvem, no Mac e no navegador.",
             "points": [
-                "Ferramentas locais do Mac",
-                "Notas básicas e sincronização na nuvem",
-                "20 GB",
-                "1.2M Ivy · transcrição ilimitada",
+                "Tudo do Free",
+                "20 GB de armazenamento na nuvem",
+                "1.2M unidades Ivy por mês",
+                "Transcrição na nuvem ilimitada, uso razoável",
                 "Gravações de tela na nuvem"
             ],
             "cta": "Comprar no app web"
@@ -432,12 +431,11 @@ const content: SiteContent = {
             "per": "líquidos / lugar / mês",
             "tagline": "Para organizações, a partir de dois lugares.",
             "points": [
-                "Ferramentas locais do Mac",
-                "Notas básicas e sincronização na nuvem",
-                "50 GB · por lugar",
-                "2.5M Ivy · transcrição ilimitada",
-                "Bot do Google Meet",
-                "Gravações de tela na nuvem"
+                "Tudo do Personal",
+                "50 GB de armazenamento na nuvem por lugar, compartilhado",
+                "2.5M unidades Ivy por lugar por mês",
+                "Transcrição na nuvem ilimitada, uso razoável",
+                "Bot do Google Meet"
             ],
             "cta": "Comprar no app web"
         }
@@ -446,7 +444,7 @@ const content: SiteContent = {
   compare: {
     eyebrow: 'Concorrência',
     title: 'Como o IndexOne se compara.',
-    lead: 'Obsidian, Notion, Evernote, Bear e Amie são ótimos no que fazem. O IndexOne foi feito para o que acontece em uma reunião — gravar, transcrever no seu Mac e fazer perguntas sobre ela — e também pode escrever no seu vault do Obsidian.',
+    lead: 'Obsidian, Notion, Evernote, Bear e Amie são ótimos no que fazem. O IndexOne foi feito para o que acontece em uma reunião — gravar, transcrever no seu Mac e fazer perguntas sobre ela — e importa seu vault do Obsidian em uma única etapa.',
     capability: 'Recurso',
     caption: 'IndexOne comparado com outros apps de notas',
     labels: { yes: 'Sim', partial: 'Em parte', no: 'Não', unknown: 'Desconhecido' },
@@ -471,11 +469,11 @@ const content: SiteContent = {
       },
       'local-data': {
         criterion: 'Dados ficam no seu dispositivo por padrão',
-        cells: ['', 'Arquivos locais', 'Nuvem do Notion', 'Nuvem do Evernote', 'Banco de dados local; sincronização via iCloud com Pro', 'Nuvem da Amie'],
+        cells: ['No espaço On this Mac; os espaços na nuvem ficam na web', 'Arquivos locais', 'Nuvem do Notion', 'Nuvem do Evernote', 'Banco de dados local; sincronização via iCloud com Pro', 'Nuvem da Amie'],
       },
       'markdown': {
         criterion: 'Notas como arquivos Markdown simples que são seus',
-        cells: ['Escritas no seu vault; a fonte é o banco de dados criptografado', '', 'Só exportação em Markdown', 'Exportação em ENEX, HTML ou PDF', 'Banco de dados; exportação em Markdown', ''],
+        cells: ['Exportação e backup em Markdown; a fonte é o banco de dados criptografado', '', 'Só exportação em Markdown', 'Exportação em ENEX, HTML ou PDF', 'Banco de dados; exportação em Markdown', ''],
       },
       'encryption': {
         criterion: 'Criptografia sob seu controle',
@@ -483,11 +481,11 @@ const content: SiteContent = {
       },
       'platforms': {
         criterion: 'Plataformas',
-        cells: ['macOS', 'macOS, Windows, Linux, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, iOS, iPadOS, web (beta)', 'macOS, Windows, iOS'],
+        cells: ['macOS, web; app para iPhone em breve', 'macOS, Windows, Linux, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, iOS, iPadOS, web (beta)', 'macOS, Windows, iOS'],
       },
       'price': {
         criterion: 'Preço',
-        cells: ['Grátis no Mac; nuvem Personal 49 PLN/mês, Team 75 PLN líquidos por lugar', 'Grátis; Sync a partir de $4/mês no plano anual', 'Grátis; IA e notas de reunião exigem o Business, $20/mês no plano anual', 'Grátis até 50 notas; Starter $99/ano', 'Grátis; Pro $29.99/ano', 'Grátis com 25 créditos de notas; Pro a partir de €20/mês no plano anual'],
+        cells: ['Free · Personal 49 PLN · Team 75 PLN', 'Grátis; Sync a partir de $4/mês no plano anual', 'Grátis; IA e notas de reunião exigem o Business, $20/mês no plano anual', 'Grátis até 50 notas; Starter $99/ano', 'Grátis; Pro $29.99/ano', 'Grátis com 25 créditos de notas; Pro a partir de €20/mês no plano anual'],
       },
     },
   },
@@ -497,12 +495,12 @@ const content: SiteContent = {
     leadHtml: 'Respostas curtas aqui; a <a href="/docs/">documentação</a> tem os detalhes.',
     items: [
       {
-        question: 'O IndexOne é gratuito?',
-        answer: 'Sim, no Mac. Gravação local, transcrição, notas e exportações não exigem conta nem pagamento. Planos na nuvem opcionais (Personal 49 PLN/mês, Team 75 PLN líquidos por lugar) adicionam transcrição na nuvem, Ivy na nuvem e mais armazenamento.',
+        question: 'O que o Free inclui?',
+        answer: 'No Mac, tudo: gravação, transcrição, notas, Ivy on this Mac e exportações, sem conta e sem limite de plano. Uma conta gratuita adiciona notas, edição, busca, sincronização, leitura e exportação na nuvem pelo navegador até 1 GB, além de uma cota mensal de unidades Ivy e de transcrição na nuvem. Os planos pagos adicionam transcrição na nuvem ilimitada sob uso razoável, mais unidades Ivy e mais armazenamento.',
       },
       {
         question: 'Meu áudio vai para a nuvem?',
-        answer: 'Não no espaço On this Mac: lá a transcrição roda no seu Mac com o Whisper. Só texto pode sair: anonimizado, para o Claude Code ou o Codex depois que você consentir, ou com os nomes mascarados, para um servidor de IA local na sua rede depois que você confirmar o endereço. Os espaços Personal e de organizações ficam no IndexOne na web, então as gravações deles são guardadas lá.',
+        answer: 'Não no espaço On this Mac: lá a transcrição roda no seu Mac com o Whisper. Só texto pode sair: anonimizado, para o Claude Code ou o Codex depois que você consentir, ou com e-mails, números de cartão e de telefone removidos, para um servidor de IA local na sua rede depois que você confirmar o endereço. Os espaços Personal e de organizações ficam no IndexOne na web, então as gravações deles são guardadas lá.',
       },
       {
         question: 'O que é a Ivy?',
@@ -510,7 +508,7 @@ const content: SiteContent = {
       },
       {
         question: 'Preciso de conexão com a internet?',
-        answer: 'Uma vez, para baixar um modelo do Whisper. Depois disso, gravação, transcrição, busca e a Ivy on this Mac funcionam offline. Os espaços Personal e de organizações abrem offline a partir da cópia criptografada e enviam suas edições quando você volta a ficar online. Ivy on the web, Claude Code, Codex e conectores precisam de internet.',
+        answer: 'Uma vez, para baixar os modelos de fala. Depois disso, gravação, transcrição, busca e a Ivy on this Mac funcionam offline. Os espaços Personal e de organizações abrem offline a partir da cópia criptografada e enviam suas edições quando você volta a ficar online. Ivy on the web, Claude Code, Codex e conectores precisam de internet.',
       },
       {
         question: 'Preciso do Claude Code?',
@@ -522,11 +520,15 @@ const content: SiteContent = {
       },
       {
         question: 'Por que o macOS pede permissão de Gravação de Tela e Áudio do Sistema?',
-        answer: 'É com essa permissão que o macOS deixa um app ouvir o áudio de outros apps — as outras pessoas na chamada. O IndexOne salva apenas o áudio.',
+        answer: 'É com essa permissão que o macOS deixa um app ouvir o áudio de outros apps — as outras pessoas na chamada. O IndexOne salva apenas o áudio delas, a menos que você ative o plugin Screen recording e escolha Voice + screen.',
       },
       {
         question: 'Funciona com fones de ouvido e em Macs Intel?',
-        answer: 'Com fones de ouvido, sim: o áudio do outro lado é capturado do sistema, não dos seus alto-falantes. Em Macs Intel, não: o IndexOne precisa de um Mac com Apple Silicon (M1 ou posterior).',
+        answer: 'Com fones de ouvido, sim: o áudio do outro lado é capturado do sistema, não dos seus alto-falantes. Em Macs Intel, não: o app para Mac precisa de Apple Silicon (M1 ou posterior). Em qualquer outro computador, use o IndexOne no navegador.',
+      },
+      {
+        question: 'Existe um app para iPhone ou Windows?',
+        answer: 'Um app para iPhone está a caminho da App Store. No Windows, no Linux ou em um Mac Intel, abra o IndexOne no navegador em app.index-one.io; as gravações feitas lá são transcritas na nuvem e contam para o seu plano.',
       },
       {
         question: 'O IndexOne é open source?',
@@ -587,15 +589,15 @@ const content: SiteContent = {
     note: "Esta página descreve o bot do IndexOne de forma geral. A organização que o enviou pode ter um aviso de privacidade próprio, com mais detalhes; peça a ela.",
   },
   cta: {
-    title: 'Leve a Ivy às suas reuniões — e mantenha o controle no seu Mac.',
-    lead: 'Local-first para macOS. Mantenha a IA local ou ative de forma explícita a IA na nuvem com anonimização, quando quiser.',
-    compare: 'Veja como ele se compara com Obsidian, Notion, Evernote, Bear e Amie.',
-    download: 'Baixar para macOS',
-    github: 'Ver no GitHub',
+    title: 'Experimente na sua próxima chamada.',
+    lead: 'Baixe o IndexOne de graça e grave sua próxima reunião: sem bot, sem conta, sem cartão. Quer suas notas também no navegador? Crie uma conta gratuita.',
+    compare: 'Comparar planos',
+    download: 'Baixar para Mac — grátis',
+    signup: 'Criar uma conta gratuita',
     legacyHtml: 'Usa a versão 2.8.0 ou anterior? A verificação de atualizações dela não consegue mais nos alcançar. Baixe a <a href="{download}">versão mais recente</a> uma vez e arraste para Aplicativos, substituindo a cópia antiga; sua biblioteca, gravações e configurações continuam onde estão. A partir da 2.9.0, o app encontra novas versões sozinho.',
   },
   footer: {
-    legalHtml: 'macOS em primeiro lugar · Ivy no dispositivo · local-first · feito com Tauri, Angular e Rust · grátis para macOS · © {year} <a href="{authors}">MonoOne</a> · textos <a href="{license}">CC BY 4.0</a>',
+    legalHtml: 'App para Mac e app web · app para iPhone em breve · Ivy no dispositivo · feito com Tauri, Angular e Rust · grátis no Mac · © {year} <a href="{authors}">MonoOne</a> · textos <a href="{license}">CC BY 4.0</a>',
     legalNav: 'Informações legais',
     terms: 'Termos de serviço (PL)',
     privacyPolicy: 'Política de privacidade (PL)',
@@ -606,21 +608,7 @@ const content: SiteContent = {
   },
 }
 
-// The published offer is a preview; release history remains unchanged.
-content.pricing.plans.free.cta = content.hero.download
-content.hero.subHtml = content.pricing.lead + ' ' + content.pricing.plans.free.tagline
-content.unique.eyebrow = content.nav.features
-content.unique.title = content.features.title
-content.unique.lead = content.pricing.lead
-content.features.lead = content.pricing.lead
-content.cta.compare = content.offer.comparison
-content.cta.lead = content.pricing.lead
-content.meta.home.description = content.pricing.lead
-content.meta.features.description = content.pricing.lead + ' ' + content.offer.local
-content.meta.privacy.description = content.offer.privacy
-content.meta.pricing.title = 'IndexOne — Free / Personal / Team'
-content.meta.pricing.description = content.pricing.lead + ' 49 PLN / 75 PLN. ' + content.offer.status
-content.faq.items[0] = { question: "O que o Free inclui?", answer: content.offer.after }
+// The FAQ ends with the offer details shown on the pricing page.
 content.faq.items.push(
   { question: content.offer.trialTitle, answer: content.offer.trial },
   { question: content.offer.meterTitle, answer: content.offer.meter },
@@ -628,6 +616,5 @@ content.faq.items.push(
   { question: "Quem paga Team?", answer: content.offer.team },
   ...content.privacy.lifecycle.items.map(item => ({ question: item.title, answer: item.body })),
 )
-content.compare.rows.price.cells[0] = 'Free · Personal 49 PLN · Team 75 PLN'
 
 export default content

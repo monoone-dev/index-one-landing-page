@@ -3,8 +3,8 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — Ivy搭載、Mac向け議事録・文字起こしアプリ',
-      description: 'Mac上で会議を録音・文字起こしし、デバイス上のAI、Ivyに会議中でも過去の通話全体についても質問できます。個人でも組織でも使え、ノートはMarkdownで残ります。',
+      title: 'IndexOne — ボットなしで使える、MacとWeb向けのプライベートなAI議事録',
+      description: 'ボットなしで通話の双方を録音し、Mac上で文字起こしして、Ivyに質問できます。すべての行に根拠リンク付き。Macでは無料で、クラウドスペースはどのブラウザーでも開けます。',
     },
     features: {
       breadcrumb: '機能',
@@ -14,12 +14,12 @@ const content: SiteContent = {
     privacy: {
       breadcrumb: 'プライバシー',
       title: 'IndexOneのプライバシー — デバイス上のAIとMacから出るもの',
-      description: 'デバイス上の文字起こしとAI、暗号化されたライブラリ、Touch IDのフォルダーロック、墨消しファイアウォール。どのAIを選ぶと何がいつ送られるかを明示します。',
+      description: 'デバイス上の文字起こしとAI、暗号化されたノートと文字起こし、Touch IDのフォルダーロック、墨消しファイアウォール。どのAIを選ぶと何がいつ送られるかを明示します。',
     },
     pricing: {
       breadcrumb: '料金',
-      title: 'IndexOneの料金とObsidian・Notionなどとの比較',
-      description: 'IndexOneはMacでは無料です。オプションのクラウドプランは月額49 PLNから。録音、文字起こし、デバイス上のAI、Markdownの観点で、Obsidian、Notion、Evernote、Bear、Amieと比較できます。',
+      title: 'IndexOneの料金 — Free、Personal、Team',
+      description: 'IndexOneはMacでは無料です。クラウドプランはPersonalが月額49 PLN、Teamが1席あたり税抜75 PLNで、どちらもフェアユースの範囲でクラウド文字起こしが無制限です。クラウドプランはWebアプリで販売中です。',
     },
     changelog: {
       breadcrumb: '更新履歴',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "IndexOne会議ボット — 会議の参加者の方へ",
       description: "ご参加の会議はIndexOneのボットが録音しています。データの責任者、録音する内容と目的、保存期間、権利の行使方法をご案内します。",
     },
-    ogImageAlt: 'IndexOne — Ivy搭載、Mac向け議事録・文字起こしアプリ',
+    ogImageAlt: 'IndexOne — ボットなしで使える、MacとWeb向けのプライベートなAI議事録',
   },
   common: {
     skipToContent: '本文へスキップ',
@@ -63,16 +63,13 @@ const content: SiteContent = {
     modes: { light: 'ライト', dark: 'ダーク', system: 'システム' },
   },
   hero: {
-    badgeLocal: 'ローカルファースト · macOS',
-    badgeIvy: 'デバイス上で動くIvy',
-    badgeStar: 'GitHubでスターする',
     githubAria: 'GitHub上のIndexOne',
-    titleStrong: 'Ivyと一緒に議事録を——',
-    titleSoft: 'どこで動かすかはあなたが決める。',
-    subHtml: 'IndexOneは通話を録音し、<b>あなたのMac上で</b>文字起こしします。会議の最中にもIvyへ質問でき、これまでに録音したすべての内容についても尋ねられます。AIはMac上や自分のローカルAIサーバーで動かすことも、明示的に選んで<b>墨消し済みのクラウドAI</b>を使うこともできます。On this Macスペースでは、会議のアーカイブはずっとあなたのMacに残ります。',
-    download: 'macOS版をダウンロード',
-    privacyCta: 'プライバシーの仕組みを見る',
-    note: '署名・公証済み · macOS 13.4以降 · Apple Silicon（M1以降）に対応 · ノートはあなたのものであるMarkdownのまま',
+    titleStrong: 'Macに残る議事録。',
+    titleSoft: 'ボットなし。すべての行に根拠を。',
+    subHtml: 'IndexOneは<b>ボットなしで</b>通話の双方を録音し、<b>あなたのMac上で</b>文字起こしします。会議の最中でも数か月後でも、Ivyに質問すれば、その発言があった秒へのリンク付きで答えます。Macでは無料で、利用分数や履歴の上限はありません。クラウドスペースはどのブラウザーでも開けます。',
+    download: 'Mac版を無料でダウンロード',
+    signup: '無料アカウントを作成',
+    note: 'Apple Silicon（M1以降） · macOS 13.4以降 · 署名・公証済み · Macではアカウント不要',
     videoLabel: 'IndexOneの90秒ツアー：ノートを横で入力しながら会議を録音する様子、会議後に書かれたノートとそこから抽出された項目、話者タイムライン、保管庫全体に対してIvyに質問し出典付きで回答を得る場面、ナレッジグラフ、Workspacesレールとデバイス上の検索、プロジェクト、People、そして封印されているため開くことを拒むWorkspace',
     play: '90秒ツアーを見る',
   },
@@ -95,7 +92,7 @@ const content: SiteContent = {
         },
         privacy: {
           title: 'Touch ID で封印',
-          body: '暗号化されたライブラリに加え、任意のワークスペースやフォルダに AES-256 のロック。ロックされたフォルダは検索、グラフ、MCP から見えません。',
+          body: '暗号化されたノートと文字起こしに加え、任意のワークスペースやフォルダに AES-256 のロック。Touch ID で開きます。ロックされたフォルダは検索、グラフ、MCP から見えません。',
           link: 'プライバシーのしくみ',
         },
       },
@@ -120,7 +117,7 @@ const content: SiteContent = {
     showcase: {
       eyebrow: 'アプリで見る',
       title: '通話から答えまで、ひとつのアプリで。',
-      lead: '会議を録音し、質問し、Markdown として残す。ステップを選んで確認できます。',
+      lead: '会議を録音し、質問し、Markdown としてエクスポート。ステップを選んで確認できます。',
       tabsLabel: '製品ツアー',
       tabs: { record: '録音', ask: '質問', export: '保存' },
     },
@@ -135,16 +132,16 @@ const content: SiteContent = {
   },
   trust: {
     aria: 'ひと目でわかるポイント',
-    items: ['デバイス上で文字起こし', '保存データをTouch IDでロック', 'クラウド不要', 'あなたのものであるプレーンなMarkdown'],
+    items: ['会議ボットなし', 'デバイス上で文字起こし', 'Touch IDのフォルダーロック', 'MacとWeb · iPhoneアプリは近日公開'],
   },
   unique: {
-    eyebrow: 'IndexOneだけの機能',
-    title: '他のノートアプリにはできない、会議のための機能。',
-    lead: 'ノートを保存するアプリも、通話を文字起こしするアプリも数多くあります。IndexOneは通話の双方の音声をMac上で録音し、会議中にIvyへ質問でき、書き出すすべての行に根拠を示します。',
+    eyebrow: '機能',
+    title: 'ちゃんと覚えている、会議のためのツール。',
+    lead: 'ノートを保存するアプリも、通話を文字起こしするアプリも数多くあります。IndexOneは通話の双方の音声をMac上で録音し、会議中にIvyへ質問でき、書き出すすべての行がどこから来たのかを示します。',
     items: {
       'live': {
         title: '会議中にIvyに質問。データはすべてMacの中に',
-        body: '通話中に質問を入力するか話しかけるだけで、これまで録音したすべての会議に基づく回答が、開ける出典付きで返ってきます。録音は止まりません。Ivy on this Macを選べば、会議のテキストがMacの外に出ることはありません。Claude CodeとCodexは、一度同意するまでオフのままです。',
+        body: '通話中に質問を入力するか、音声アシスタントをオンにして話しかけるだけで、これまで録音したすべての会議に基づく回答が、開ける出典付きで返ってきます。録音は止まりません。Ivy on this Macを選べば、会議のテキストがMacの外に出ることはありません。Claude CodeとCodexは、一度同意するまでオフのままです。',
         link: 'Ivyの仕組み',
       },
       'capture': {
@@ -159,17 +156,17 @@ const content: SiteContent = {
       },
       'security': {
         title: 'Mac上で暗号化',
-        body: 'ライブラリ全体はMac上でSQLCipherにより暗号化されています。Personalと、あなたが所属するすべての組織も、このMacに暗号化されたコピーを保持するため、ネットワークに接続しなくても開けます。',
+        body: 'ノート、文字起こし、検索インデックスはMac上でSQLCipherにより暗号化されています。Workspaceやフォルダーをロックすれば、その音声、動画、ファイルも封印されます。Personalと、あなたが所属するすべての組織も、このMacに暗号化されたコピーを保持するため、ネットワークに接続しなくても開けます。',
         link: 'セキュリティとプライバシー',
       },
       'locks': {
         title: 'Touch IDで封印するフォルダー',
-        body: 'Workspaceやフォルダーをロックすると、その中のノート、文字起こし、音声はAES-256-GCMで封印されます。ロック中は検索、グラフ、MCP、オーディオプレーヤーのいずれからも見えなくなります。',
+        body: 'Workspaceやフォルダーをロックすると、その中のノート、文字起こし、音声はAES-256-GCMで封印され、Touch IDかMacのパスワードでのみ開けます。ロック中は検索、グラフ、MCP、オーディオプレーヤーのいずれからも見えなくなります。',
         link: 'ロックの仕組み',
       },
       'markdown': {
-        title: 'プレーンなMarkdownとローカルMCPサーバー',
-        body: 'ノートはウィキリンク付きのプレーンなMarkdownとしてObsidianの保管庫に保存されます。127.0.0.1で動く読み取り専用のMCPサーバーを通じて、Claudeなどのエージェントがノートを参照できます。どのスペースを読めるかはあなたが選びます。組織はオンにするまでオフのままです。',
+        title: 'MarkdownエクスポートとローカルMCPサーバー',
+        body: 'どのノートもMarkdownとしてエクスポートでき、ライブラリ全体をプレーンな.mdファイルとしてバックアップすることもできます。127.0.0.1で動く読み取り専用のMCPサーバーを通じて、Claudeなどのエージェントがノートを参照できます。どのスペースを読めるかはあなたが選びます。組織はオンにするまでオフのままです。',
         link: 'MarkdownとMCP',
       },
     },
@@ -181,7 +178,7 @@ const content: SiteContent = {
       "items": [
         {
           "title": "データはいつまで保存されますか？",
-          "body": "クラウド音声は標準で30日間保存され、PersonalとTeamではストレージ上限内で最大90日間の保存を予定しています。ノート、文字起こし、通常のファイルは、ストレージ上限内で所有者が削除するまで保持されます。"
+          "body": "クラウド音声は標準で30日間保存されます。Freeは7日、14日、30日から選べ、PersonalとTeamでは90日も選べます。ノート、文字起こし、通常のファイルは、ストレージ上限内で所有者が削除するまで保持されます。"
         },
         {
           "title": "プランを下げるとどうなりますか？",
@@ -195,15 +192,15 @@ const content: SiteContent = {
     },
     eyebrow: 'セキュリティとプライバシー',
     title: 'プライバシーは設定ではなく、設計そのものです。',
-    leadHtml: 'On this Macスペースでは、文字起こし、検索、Ivy on this Macが<b>ネットワークに一切つながらずに</b>動作します。必要なのは、初期設定で外部と通信する2つの機能、つまり起動時の新バージョン確認と1日1回の利用状況メッセージをオフにすることだけです。Claude CodeやCodexを選んだ場合も、その送信の手前には同意と墨消しファイアウォールが置かれます。',
+    leadHtml: 'On this Macスペースでは、音声認識モデルをダウンロードした後なら、文字起こし、検索、Ivy on this Macが<b>ネットワークに一切つながらずに</b>動作します。IndexOneが自動で送信するわずかな通信には会議の内容は含まれず、そのすべてを以下に記載しています。Claude CodeやCodexを選んだ場合も、その送信の手前には同意と墨消しファイアウォールが置かれます。',
     cards: {
       'offline': {
-        title: 'デバイスの外には何も出ない',
+        title: '会議はデバイスの中にとどまる',
         body: 'Ivy on this Macと一度ダウンロードするだけのモデルを使えば、音声も文字起こしもネットワークに触れることはありません。推論はあなたのMacの中で行われます。',
       },
       'at-rest': {
         title: '保存データを二重に暗号化',
-        body: 'データベース全体がSQLCipherで暗号化されています。さらにフォルダーごとの<b>AES-256-GCM</b>ロックが、<b>Touch ID</b>でのみ解放されるマスターキーで保護されたコンテンツキーを追加します。',
+        body: 'ノート、文字起こし、検索インデックスはSQLCipherで暗号化されています。さらにフォルダーごとの<b>AES-256-GCM</b>ロックが音声、動画、ファイルも封印します。そのコンテンツキーは、<b>Touch ID</b>またはMacのパスワードでのみ解放されるマスターキーで保護されています。',
       },
       'gated': {
         title: 'すべての読み取りを制御',
@@ -222,28 +219,28 @@ const content: SiteContent = {
         body: 'クラウドの要約機能を使う場合でも、メールアドレス、カード番号のような数字、電話番号が先に取り除かれます。クラウドへの送信は一度きりの同意の後ろで<b>フェイルクローズ</b>されます。オプションの名前マスキングモデルをダウンロードすれば、人名も置き換えられます。',
       },
       'update-check': {
-        title: '初期設定で行う2つの通信',
-        body: 'IndexOneは起動時に、新しいバージョンがあるかどうかをGitHubに問い合わせます。そのリクエストに含まれるのは現在のバージョンだけです。また1日に1回、小さな利用状況メッセージを送ります。内容はランダムなインストールID、アプリとmacOSのバージョン、チップの種類、言語、サインインしているかどうかだけで、会議、ノート、録音、名前は含まれません。匿名になるのはサインアウトしているときだけで、サインイン中はあなたのアカウントとともに送信されます。どちらも<b>Settings → Privacy</b>（設定 → プライバシー）でオフにできます。このページの中で、あなたが求めなくても行われるのはこの2つだけです。だからこそ、このページに記載しています。',
+        title: 'あなたが求めなくてもIndexOneが送信するもの',
+        body: 'IndexOneは起動時に、新しいバージョンがあるかどうかをGitHubに問い合わせます。そのリクエストに含まれるのは現在のバージョンだけです。このMacで一度でもアカウントにサインインしたことがあれば、起動時と1時間ごとに、お使いのバージョンが引き続きサポートされているかをIndexOneのサーバーにも問い合わせます。内容は一切含まれません。また1日に1回、小さな利用状況メッセージを送ります。内容はランダムなインストールID、アプリとmacOSのバージョン、プロセッサーのアーキテクチャ、言語、サインインしているかどうかだけで、会議、ノート、録音、名前は含まれません。匿名になるのはサインアウトしているときだけで、サインイン中はあなたのアカウントとともに送信されます。初めて文字起こしするときには、音声検出と話者分離のための小さな音声モデル2つをHugging Faceからダウンロードします。アップデート確認と利用状況メッセージは<b>Settings → Privacy</b>（設定 → プライバシー）でオフにできます。このページの中で、あなたが求めなくても行われるのはこれらだけです。だからこそ、このページに記載しています。',
       },
     },
     tableCaption: '各AIプロバイダーの実行場所と、会議のテキストがMacの外に出るかどうか',
     tableHeaders: ['Ivy / プロバイダー', '実行場所', '会議のテキストはMacの外に出るか'],
     providers: {
       'on-device': { name: 'Ivy on this Mac', note: 'Bielik / Qwen', where: '完全にローカル' },
-      'ivy-web': { name: 'Ivy on the web', note: 'Personalと組織', where: 'Web版IndexOne', leaves: 'はい。スペース自体がWeb上にあります' },
+      'ivy-web': { name: 'Ivy on the web', note: 'Personalと組織', where: 'IndexOneのクラウド（AnthropicのClaudeモデルを使用）', leaves: 'はい。スペース自体がWeb上にあります' },
       'claude-code': { name: 'Claude Code', where: 'ローカルCLI → クラウド' },
       'codex': { name: 'Codex', note: 'OpenAIのCLI、ツールなしで実行', where: 'ローカルCLI → クラウド' },
-      'local-server': { name: 'Local AI server', note: 'Ollama、LM Studio、oMLXなど', where: 'あなたのMacまたはネットワーク', leaves: 'このMac上のサーバーなら出ません。ネットワーク上の別の場所のサーバーへは、そのアドレスを確認した後にのみ、人名を伏せて送ります' },
+      'local-server': { name: 'Local AI server', note: 'Ollama、LM Studio、oMLXなど', where: 'あなたのMacまたはネットワーク', leaves: 'このMac上のサーバーなら出ません。ネットワーク上の別の場所のサーバーへは、そのアドレスを確認した後にのみ送ります。メールアドレス、カード番号、電話番号は先に取り除かれ、名前マスキングモデルをダウンロードすれば人名も取り除かれます' },
     },
     leavesYes: '同意後のみ。墨消しファイアウォールを適用',
     leavesNo: 'いいえ',
     shotAlt: 'IndexOneのプライバシー設定。テキストが外に出る前に何が取り除かれるか、どのプロバイダーがクラウドか、そしてクラウド処理が許可されているかどうかを、わかりやすい言葉で示しています',
-    footnote: 'IndexOneは、Macから何が出ていくのかをわかりやすい言葉で正確にお伝えします。クラウドAIへの呼び出しはすべて記録され、あなたに表示されます。各スペースで選べるAIは1つで、Ivy on this Mac、Ivy on the web、Claude Code、Codex、または自分のローカルAIサーバーから選びます。On this Macスペースでは、Claude Code、Codex、またはネットワーク上の別の場所にあるローカルAIサーバーを選ばない限り、会議はMacの中にとどまります。',
+    footnote: 'IndexOneは、Macから何が出ていくのかをわかりやすい言葉で正確にお伝えします。Macから行われるクラウドAIへの呼び出しはすべて記録され、あなたに表示されます。各スペースで選べるAIは1つで、Ivy on this Mac、Ivy on the web、Claude Code、Codex、または自分のローカルAIサーバーから選びます。On this Macスペースでは、Claude Code、Codex、またはネットワーク上の別の場所にあるローカルAIサーバーを選ばない限り、会議はMacの中にとどまります。',
   },
   features: {
     eyebrow: '機能',
     title: 'ちゃんと覚えている、会議のためのツール。',
-    lead: '暗号化された1つの保存先を、アプリ、ローカルMCPサーバー、エクスポートしたMarkdownファイルの3つの方法で使えます。1つのツリーにすべてが収まり、その上にプロジェクトが載り、Ivyはそのすべてを読み取ります。',
+    lead: '暗号化された1つのライブラリを、アプリ、ローカルMCPサーバー、Markdownエクスポートの3つの方法で使えます。1つのツリーにすべてが収まり、その上にプロジェクトが載り、Ivyはそのすべてを読み取ります。',
     items: {
       'workspaces': {
         eyebrow: 'Workspaces',
@@ -253,7 +250,7 @@ const content: SiteContent = {
           '録音、ノート、タスク、プロジェクトを同じ場所に整理',
           '封印されたWorkspaceは名前だけを表示し、件数も中身も見せません',
           '行き場のない録音の整理をIvyに任せられます',
-          '誤って削除しても、ゴミ箱に30日間（設定により最長1年）保管されます',
+          '誤って削除しても、Macではゴミ箱に30日間（設定により最長1年）保管されます',
         ],
         alt: 'Workspacesサイドバー：録音、ノート、プロジェクトを収めたWorkspacesとフォルダーの1つのツリー。最下部にロックされたWorkspaceがあります',
       },
@@ -282,7 +279,7 @@ const content: SiteContent = {
       'ivy': {
         eyebrow: 'Ivy',
         title: '会議の最中に、Ivyと話す。',
-        body: 'ほとんどの議事録ツールにはない部分です。ウェイクフレーズかワンタップでIvyを呼び出すと、会議の記憶をもとに、開いて確認できる引用付きでその場で答えます。録音は止まりません。',
+        body: 'ほとんどの議事録ツールにはない部分です。ワンタップでIvyに質問するか、設定で音声アシスタントをオンにして声で尋ねれば、会議の記憶をもとに、開いて確認できる引用付きでその場で答えます。録音は止まりません。',
         points: [
           'Metalで動くデバイス上の推論モデル（Bielik-11B、Qwen）',
           'ハルシネーションではなく根拠のある回答。あなた自身の文字起こしから取得',
@@ -310,6 +307,7 @@ const content: SiteContent = {
           'デバイス上のWhisper：tinyからlarge-v3まで、高速なturboビルドや量子化版も対応',
           '2ストリームによる話者の区別（あなたとそれ以外）と音声区間検出',
           'フローティング録音バーで、どこからでも録音（⌘⇧R）',
+          'Voice + screen：会議と一緒に画面も録画（macOS 14以降）。Macでは無料',
         ],
         alt: '時刻付きで統合されたMe / Othersの文字起こしと、その横の話者・トピックのタイムライン',
       },
@@ -322,7 +320,7 @@ const content: SiteContent = {
           '人物・項目ごとの資料、関連する会議、週次ダイジェスト',
           'Macから出ることのないプライベートなリマインダー。それぞれ元の録音やノートにリンクし、Ivyが提案してあなたが承認します',
           'アクションアイテムはApple Remindersにも送れます',
-          'PDF、Officeドキュメント、Webページ、画像を取り込み、デバイス上でIvy用にインデックス化',
+          'PDF、Officeドキュメント、保存したWebページ（.html）、画像を取り込み、デバイス上でIvy用にインデックス化',
         ],
         alt: 'ナレッジグラフ：会議、ノート、ドキュメント、人物を、種類付きのリンクで結んだ1枚の地図',
       },
@@ -340,12 +338,12 @@ const content: SiteContent = {
       },
       'markdown': {
         eyebrow: 'あなたのもの',
-        title: 'プレーンなMarkdown。ロックインなし。',
-        body: 'すべてのノートは、YAMLフロントマター、<code>[[wikilinks]]</code>、ブロック単位のディープリンク、キャンバスボードのオプションを備えた、粒度の細かいMarkdownとしてもエクスポートされます。あなたが所有する普通のファイルなので、どのエディターでも開けます。',
+        title: 'Markdownで取り込み、Markdownで書き出す。ロックインなし。',
+        body: 'どのノートもMarkdownとしてエクスポートでき、ライブラリ全体を、どのエディターでも開けるプレーンな<code>.md</code>ファイルとしてバックアップすることもできます。Obsidianから乗り換えますか？保管庫をワンステップでインポートできます。',
         points: [
           '暗号化されたSQLiteデータベースが唯一の信頼できる情報源',
           'Claude DesktopとClaude Code向けの、読み取り専用ローカルMCPサーバー',
-          'どのエディターでも開けるプレーンなMarkdownエクスポート',
+          'どのノートもMarkdownでエクスポートでき、ライブラリ全体をプレーンなMarkdownでバックアップ',
         ],
         alt: '要約、決定事項、アクションアイテム、引用を含む構造化されたノートと、そのリンク先の録音やノート',
       },
@@ -369,58 +367,59 @@ const content: SiteContent = {
     "monthly": "月額・PLN 表示",
     "tax": "Personal は税込。Team は税別で最低 2 席、月額合計 150 PLN（税別）。VAT 23% の場合は合計 184.50 PLN（1 席 92.25）。税率は異なる場合があり、購入前にアプリで最終金額を表示する必要があります。",
     "trialTitle": "毎月無料",
-    "trial": "無料の個人アカウントには、毎暦月（UTC）200,000 Ivyユニットと基本的なクラウド文字起こしがカード不要で付与されます。Macのローカル機能にはプランの上限がありません。",
-    "meterTitle": "文字起こし無制限",
-    "meter": "有料プランには文字起こしの上限がありません。大量に文字起こしすると、一部の録音は完了まで数時間かかる場合があります。フェアユースが適用されます。Mac上のローカル文字起こしは常にすぐ完了します。",
+    "trial": "無料アカウントには、毎暦月（UTC）200,000 Ivy 単位とクラウド文字起こしの枠がカード不要で付与されます。Macのローカル機能にはプランの上限がありません。",
+    "meterTitle": "クラウド文字起こし無制限",
+    "meter": "有料プランにはクラウド文字起こしの上限がありません。大量に文字起こしすると、一部の録音は完了まで数時間かかる場合があります。フェアユースが適用されます。Mac上の文字起こしは常にすぐ完了し、無制限です。",
+    "fairUse": "有料プランには、フェアユースの範囲で無制限のクラウド文字起こしが含まれます。Freeの枠とフェアユースのルールは利用規約に定められています。",
+    "fairUseLink": "利用規約を読む（ポーランド語）",
     "privacyTitle": "ローカルとクラウド",
     "privacy": "Mac のローカル処理は Mac 内で完結。標準クラウドでは運営者が読めるサーバーで内容を保存・処理し、エンドツーエンド暗号化ではありません。パターンのマスキングは完全な匿名化ではありません。有料プランでも非公開スペースへの権限は付与されません。",
-    "after": "Freeには、1 GBの範囲での基本的なノート、編集、通常の検索、同期、閲覧、エクスポートと、毎月のクラウド枠が含まれます。有料プランではクラウドAI、文字起こし、ストレージが増えます。",
-    "team": "Personal と各組織の契約・残高は別です。Team は 1 席あたり対話用 Ivy 225 万単位と自動処理用 25 万単位を含み、自動処理分を共同プールにします。容量は共有。席はアクセス権を変えません。無料組織は最大 2、各 5 人で作成者のアカウント容量を共有します。",
-    "lifecycle": "クラウド音声は既定で 30 日。Free は 7/14/30 日、有料は 90 日も選択可能。ごみ箱は 30 日。解約で内容は削除されず、有料権限は期間末まで有効。ダウングレード後の容量超過でも閲覧・書き出しと 90 日の保護期間があります。保持期限前に音声を書き出してください。",
+    "team": "Personal と各組織の契約・残高は別です。Team は 1 席あたり対話用 Ivy 225 万単位と自動処理用 25 万単位を含み、自動処理分を共同プールにします。容量は組織で共有。席はアクセス権を変えません。無料組織は最大 2、各 5 人で作成者のアカウント容量を共有します。",
+    "lifecycle": "クラウド音声は既定で 30 日。Free は 7/14/30 日、有料は 90 日も選択可能。クラウドのごみ箱は空にするまで保持。解約で内容は削除されず、有料権限は期間末まで有効。保持期限前に音声を書き出してください。",
     "docs": "プランと請求 · 英語の文書",
     "comparison": "プラン比較",
     "local": "Mac のローカルツール",
-    "basics": "基本クラウドノートと同期",
+    "basics": "ブラウザーでのクラウドノートと同期",
     "ivy": "クラウド Ivy 単位 / 月",
     "asr": "クラウド文字起こし",
-    "asrUnlimited": "無制限",
-    "asrBasic": "含まれます",
+    "asrUnlimited": "無制限 · フェアユース",
+    "asrBasic": "毎月の枠",
     "storage": "クラウド容量",
     "included": "含まれます",
-    "once": "一度の試用",
     "seat": "1 席あたり",
     "unit": "Ivy 単位は処理予算で、モデルの生トークンや回答回数の保証ではありません。GB は 10 億バイトです。"
 },
   pricing: {
     "eyebrow": "月額・PLN 表示",
     "title": "作業場所を選びましょう。",
-    "lead": "Mac で Free。明確な上限のオプションクラウド。",
+    "lead": "Mac では無料で、利用分数や履歴の上限もありません。クラウドプランは必要なときに月額 49 PLN から。",
     "plans": {
         "free": {
             "name": "Free",
-            "badge": "Mac で利用可能",
+            "badge": "Mac と Web",
             "price": "0 PLN",
             "per": "月額・PLN 表示",
-            "tagline": "ローカル作業にプラン上限はありません。ハードウェアの制約はあります。",
+            "tagline": "Mac での録音、文字起こし、Ivy への質問にプラン上限はなく、無料のクラウドアカウントも付きます。",
             "points": [
-                "Mac のローカルツール",
-                "基本クラウドノートと同期",
-                "1 GB",
-                "200k Ivy"
+                "Mac アプリのすべて、アカウント不要",
+                "ブラウザーでのクラウドノートと同期",
+                "クラウド容量 1 GB",
+                "毎月 200k Ivy 単位",
+                "毎月のクラウド文字起こし枠"
             ],
-            "cta": ""
+            "cta": "Mac版を無料でダウンロード"
         },
         "personal": {
             "name": "Personal",
             "badge": "提供中",
             "price": "49 PLN",
             "per": "税込 / 月",
-            "tagline": "個人のクラウドスペース向け。",
+            "tagline": "Mac とブラウザーで使える、自分専用のクラウドスペース。",
             "points": [
-                "Mac のローカルツール",
-                "基本クラウドノートと同期",
-                "20 GB",
-                "1.2M Ivy · 文字起こし無制限",
+                "Free のすべて",
+                "クラウド容量 20 GB",
+                "毎月 1.2M Ivy 単位",
+                "クラウド文字起こし無制限、フェアユース",
                 "クラウドの画面録画"
             ],
             "cta": "Webアプリで購入"
@@ -432,12 +431,11 @@ const content: SiteContent = {
             "per": "税別 / 席 / 月",
             "tagline": "組織向け、最低 2 席から。",
             "points": [
-                "Mac のローカルツール",
-                "基本クラウドノートと同期",
-                "50 GB · 1 席あたり",
-                "2.5M Ivy · 文字起こし無制限",
-                "Google Meetボット",
-                "クラウドの画面録画"
+                "Personal のすべて",
+                "クラウド容量 1 席あたり 50 GB、組織で共有",
+                "1 席あたり毎月 2.5M Ivy 単位",
+                "クラウド文字起こし無制限、フェアユース",
+                "Google Meetボット"
             ],
             "cta": "Webアプリで購入"
         }
@@ -446,7 +444,7 @@ const content: SiteContent = {
   compare: {
     eyebrow: '他社との比較',
     title: 'IndexOneと他のアプリの比較。',
-    lead: 'Obsidian、Notion、Evernote、Bear、Amieは、それぞれの分野で優れたアプリです。IndexOneは、会議で起きることのために作られています。録音し、Mac上で文字起こしし、その内容について質問する。さらにObsidianの保管庫に書き込むこともできます。',
+    lead: 'Obsidian、Notion、Evernote、Bear、Amieは、それぞれの分野で優れたアプリです。IndexOneは、会議で起きることのために作られています。録音し、Mac上で文字起こしし、その内容について質問する。さらにObsidianの保管庫をワンステップでインポートできます。',
     capability: '機能',
     caption: 'IndexOneと他のノートアプリの比較',
     labels: { yes: 'あり', partial: '一部', no: 'なし', unknown: '不明' },
@@ -471,11 +469,11 @@ const content: SiteContent = {
       },
       'local-data': {
         criterion: 'データは初期設定でデバイス上に保存',
-        cells: ['', 'ローカルファイル', 'Notionのクラウド', 'Evernoteのクラウド', 'ローカルデータベース。ProでiCloud同期', 'Amieのクラウド'],
+        cells: ['On this Macスペースではデバイス上に。クラウドスペースはWeb上', 'ローカルファイル', 'Notionのクラウド', 'Evernoteのクラウド', 'ローカルデータベース。ProでiCloud同期', 'Amieのクラウド'],
       },
       'markdown': {
         criterion: 'ノートを自分のものとしてプレーンなMarkdownファイルで所有',
-        cells: ['保管庫に書き込み。暗号化データベースが情報源', '', 'Markdownエクスポートのみ', 'ENEX、HTML、PDFでエクスポート', 'データベース。Markdownエクスポート', ''],
+        cells: ['Markdownエクスポートとバックアップ。暗号化データベースが情報源', '', 'Markdownエクスポートのみ', 'ENEX、HTML、PDFでエクスポート', 'データベース。Markdownエクスポート', ''],
       },
       'encryption': {
         criterion: '自分で管理できる暗号化',
@@ -483,11 +481,11 @@ const content: SiteContent = {
       },
       'platforms': {
         criterion: '対応プラットフォーム',
-        cells: ['macOS', 'macOS、Windows、Linux、iOS、Android', 'macOS、Windows、Web、iOS、Android', 'macOS、Windows、Web、iOS、Android', 'macOS、iOS、iPadOS、Web（ベータ）', 'macOS、Windows、iOS'],
+        cells: ['macOS、Web。iPhoneアプリは近日公開', 'macOS、Windows、Linux、iOS、Android', 'macOS、Windows、Web、iOS、Android', 'macOS、Windows、Web、iOS、Android', 'macOS、iOS、iPadOS、Web（ベータ）', 'macOS、Windows、iOS'],
       },
       'price': {
         criterion: '料金',
-        cells: ['Macでは無料。クラウドPersonalは月額49 PLN、Teamは1席あたり税抜75 PLN', '無料。Syncは年払いで月額$4から', '無料。AIと会議メモにはBusinessが必要（年払いで月額$20）', '50ノートまで無料。Starterは年額$99', '無料。Proは年額$29.99', '25ノートクレジット付きで無料。Proは年払いで月額€20から'],
+        cells: ['Free · Personal 49 PLN · Team 75 PLN', '無料。Syncは年払いで月額$4から', '無料。AIと会議メモにはBusinessが必要（年払いで月額$20）', '50ノートまで無料。Starterは年額$99', '無料。Proは年額$29.99', '25ノートクレジット付きで無料。Proは年払いで月額€20から'],
       },
     },
   },
@@ -497,12 +495,12 @@ const content: SiteContent = {
     leadHtml: 'ここでは簡潔にお答えします。詳しくは<a href="/docs/">ドキュメント</a>をご覧ください。',
     items: [
       {
-        question: 'IndexOneは無料ですか？',
-        answer: 'はい、Macでは無料です。ローカルでの録音、文字起こし、ノート、エクスポートには、アカウントも支払いも必要ありません。オプションのクラウドプラン（Personal 月額49 PLN、Team 1席あたり税抜75 PLN）で、クラウド文字起こし、クラウドのIvy、追加ストレージを利用できます。',
+        question: 'Freeには何が含まれますか？',
+        answer: 'Macでは、すべてです。録音、文字起こし、ノート、Ivy on this Mac、エクスポートを、アカウントなし、プラン上限なしで使えます。無料アカウントを作ると、1 GBの範囲でブラウザーでのクラウドノート、編集、検索、同期、閲覧、エクスポートに加え、毎月のIvy 単位とクラウド文字起こしの枠が付きます。有料プランでは、フェアユースの範囲で無制限のクラウド文字起こし、より多くのIvy 単位、追加ストレージが加わります。',
       },
       {
         question: '音声はクラウドに送られますか？',
-        answer: 'On this Macスペースでは出ません。そこでは文字起こしはWhisperでMac上で行われます。外に出る可能性があるのはテキストだけです。墨消ししたうえで、同意後にClaude CodeかCodexへ。または人名を伏せたうえで、アドレスを確認した後にネットワーク上のローカルAIサーバーへ。PersonalスペースとWeb組織スペースはWeb版IndexOne上にあるため、その録音もWeb上に保存されます。',
+        answer: 'On this Macスペースでは出ません。そこでは文字起こしはWhisperでMac上で行われます。外に出る可能性があるのはテキストだけです。墨消ししたうえで、同意後にClaude CodeかCodexへ。またはメールアドレス、カード番号、電話番号を取り除いたうえで、アドレスを確認した後にネットワーク上のローカルAIサーバーへ。PersonalスペースとWeb組織スペースはWeb版IndexOne上にあるため、その録音もWeb上に保存されます。',
       },
       {
         question: 'Ivyとは何ですか？',
@@ -510,7 +508,7 @@ const content: SiteContent = {
       },
       {
         question: 'インターネット接続は必要ですか？',
-        answer: 'Whisperモデルをダウンロードする最初の1回だけ必要です。その後は、録音、文字起こし、検索、Ivy on this Macがオフラインで動作します。Personalスペースと組織スペースは暗号化されたコピーからオフラインで開き、オンラインに戻ったときに編集内容を送信します。Ivy on the web、Claude Code、Codex、コネクターにはインターネット接続が必要です。',
+        answer: '音声認識モデルをダウンロードする最初の1回だけ必要です。その後は、録音、文字起こし、検索、Ivy on this Macがオフラインで動作します。Personalスペースと組織スペースは暗号化されたコピーからオフラインで開き、オンラインに戻ったときに編集内容を送信します。Ivy on the web、Claude Code、Codex、コネクターにはインターネット接続が必要です。',
       },
       {
         question: 'Claude Codeは必要ですか？',
@@ -522,11 +520,15 @@ const content: SiteContent = {
       },
       {
         question: 'macOSが「画面とシステムオーディオの録音」の許可を求めるのはなぜですか？',
-        answer: 'この許可は、アプリが他のアプリの音声、つまり通話相手の声を聞くためにmacOSが用意している仕組みです。IndexOneが保存するのは音声だけです。',
+        answer: 'この許可は、アプリが他のアプリの音声、つまり通話相手の声を聞くためにmacOSが用意している仕組みです。IndexOneが保存するのは通話相手の音声だけです。ただし、Screen recordingプラグインをオンにしてVoice + screenを選んだ場合は除きます。',
       },
       {
         question: 'ヘッドフォンやIntel Macでも使えますか？',
-        answer: 'ヘッドフォンは使えます。相手側の音声はスピーカーからではなくシステムから取り込まれます。Intel Macには対応していません。IndexOneにはApple Silicon（M1以降）を搭載したMacが必要です。',
+        answer: 'ヘッドフォンは使えます。相手側の音声はスピーカーからではなくシステムから取り込まれます。Intel Macには対応していません。MacアプリにはApple Silicon（M1以降）が必要です。それ以外のコンピューターでは、ブラウザーでIndexOneを使えます。',
+      },
+      {
+        question: 'iPhoneやWindows向けのアプリはありますか？',
+        answer: 'iPhoneアプリはApp Storeで近日公開予定です。Windows、Linux、Intel Macでは、ブラウザーでapp.index-one.ioを開いてIndexOneを使えます。そこで録音したものはクラウドで文字起こしされ、プランの利用分に含まれます。',
       },
       {
         question: 'IndexOneはオープンソースですか？',
@@ -587,15 +589,15 @@ const content: SiteContent = {
     note: "このページはIndexOneのボットについての一般的な説明です。ボットを送った組織が、より詳しい独自のプライバシー通知を用意している場合があります。その組織にお尋ねください。",
   },
   cta: {
-    title: '会議にIvyを。主導権はあなたのMacに。',
-    lead: 'macOS向けのローカルファースト。AIをローカルにとどめることも、必要なときに明示的に選んで墨消し済みのクラウドAIを使うこともできます。',
-    compare: 'Obsidian、Notion、Evernote、Bear、Amieとの比較を見る。',
-    download: 'macOS版をダウンロード',
-    github: 'GitHubで見る',
+    title: '次の通話で試してみましょう。',
+    lead: 'IndexOneを無料でダウンロードして、次の会議を録音しましょう。ボットもアカウントもカードも不要です。ノートをブラウザーでも見たいなら、無料アカウントを作成してください。',
+    compare: 'プラン比較',
+    download: 'Mac版を無料でダウンロード',
+    signup: '無料アカウントを作成',
     legacyHtml: 'バージョン2.8.0以前をお使いですか？そのバージョンのアップデート確認は、もう私たちに届きません。<a href="{download}">最新リリース</a>を一度ダウンロードし、アプリケーションフォルダーにドラッグして古いものと置き換えてください。ライブラリ、録音、設定はそのまま残ります。2.9.0以降は、アプリが自動で新しいバージョンを見つけます。',
   },
   footer: {
-    legalHtml: 'macOSファースト · デバイス上のIvy · ローカルファースト · Tauri、Angular、Rustで開発 · macOS版は無料 · © {year} <a href="{authors}">MonoOne</a> · テキストは<a href="{license}">CC BY 4.0</a>',
+    legalHtml: 'MacアプリとWebアプリ · iPhoneアプリは近日公開 · デバイス上のIvy · Tauri、Angular、Rustで開発 · Macでは無料 · © {year} <a href="{authors}">MonoOne</a> · テキストは<a href="{license}">CC BY 4.0</a>',
     legalNav: '法的情報',
     terms: '利用規約（PL）',
     privacyPolicy: 'プライバシーポリシー（PL）',
@@ -606,21 +608,7 @@ const content: SiteContent = {
   },
 }
 
-// The published offer is a preview; release history remains unchanged.
-content.pricing.plans.free.cta = content.hero.download
-content.hero.subHtml = content.pricing.lead + ' ' + content.pricing.plans.free.tagline
-content.unique.eyebrow = content.nav.features
-content.unique.title = content.features.title
-content.unique.lead = content.pricing.lead
-content.features.lead = content.pricing.lead
-content.cta.compare = content.offer.comparison
-content.cta.lead = content.pricing.lead
-content.meta.home.description = content.pricing.lead
-content.meta.features.description = content.pricing.lead + ' ' + content.offer.local
-content.meta.privacy.description = content.offer.privacy
-content.meta.pricing.title = 'IndexOne — Free / Personal / Team'
-content.meta.pricing.description = content.pricing.lead + ' 49 PLN / 75 PLN. ' + content.offer.status
-content.faq.items[0] = { question: "Freeには何が含まれますか？", answer: content.offer.after }
+// The FAQ ends with the offer details shown on the pricing page.
 content.faq.items.push(
   { question: content.offer.trialTitle, answer: content.offer.trial },
   { question: content.offer.meterTitle, answer: content.offer.meter },
@@ -628,6 +616,5 @@ content.faq.items.push(
   { question: "Teamの料金は誰が支払いますか？", answer: content.offer.team },
   ...content.privacy.lifecycle.items.map(item => ({ question: item.title, answer: item.body })),
 )
-content.compare.rows.price.cells[0] = 'Free · Personal 49 PLN · Team 75 PLN'
 
 export default content

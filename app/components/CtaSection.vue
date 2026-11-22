@@ -17,7 +17,7 @@ const legacy = computed(() => fill(c.value.cta.legacyHtml, { download: site.link
         </p>
         <div class="cta__actions">
           <UButton :to="site.links.download" external size="xl" icon="i-lucide-arrow-down-to-line" :label="c.cta.download" />
-          <UButton :to="site.links.repo" external size="xl" color="neutral" variant="outline" icon="i-simple-icons-github" :label="c.cta.github" />
+          <UButton :to="site.links.signup" external size="xl" color="neutral" variant="outline" trailing-icon="i-lucide-arrow-up-right" :label="c.cta.signup" />
         </div>
         <p class="cta__legacy" v-html="legacy" />
       </div>

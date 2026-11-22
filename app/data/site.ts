@@ -6,16 +6,21 @@ export const site = {
   organization: 'MonoOne',
   organizationUrl: 'https://github.com/monoone-dev',
   url: 'https://index-one.io',
-  title: 'IndexOne — meeting notes and transcription for Mac, with Ivy',
+  title: 'IndexOne — private AI meeting notes for Mac and the web, without a bot',
   description:
-    'Record and transcribe meetings on your Mac, then ask Ivy, its on-device AI, live or across every call. For you alone or your whole organization.',
+    'Record both sides of a call without a bot, transcribe it on your Mac and ask Ivy, with a receipt for every line. Free on the Mac; your cloud spaces open in any browser.',
   ogImage: '/og-image.png',
-  ogImageAlt: 'IndexOne — meeting notes and transcription for Mac, with Ivy',
+  ogImageAlt: 'IndexOne — private AI meeting notes for Mac and the web, without a bot',
   themeColor: '#0862f6',
   minMacOS: '13.4',
   links: {
     repo,
     web: 'https://app.index-one.io/',
+    /** Anyone can create an account with an email address on the web app's sign-in page. */
+    signup: 'https://app.index-one.io/login',
+    /** The legal documents are published by the web app, in Polish only. */
+    legal: 'https://app.index-one.io/legal/',
+    terms: 'https://app.index-one.io/legal/regulamin.html',
     download: `${repo}/releases/latest`,
     releases: `${repo}/releases`,
     discussions: `${repo}/discussions`,

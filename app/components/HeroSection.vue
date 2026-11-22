@@ -23,7 +23,7 @@ const announce = computed(() => latest ? fill(c.value.home.announce.text, { vers
       <p class="hero__sub" v-html="c.hero.subHtml" />
       <div class="hero__actions">
         <UButton :to="site.links.download" external size="xl" icon="i-lucide-arrow-down-to-line" :label="c.hero.download" />
-        <UButton :to="site.links.web" external size="xl" color="neutral" variant="outline" :label="c.offer.web" trailing-icon="i-lucide-arrow-up-right" />
+        <UButton :to="site.links.signup" external size="xl" color="neutral" variant="outline" :label="c.hero.signup" trailing-icon="i-lucide-arrow-up-right" />
       </div>
       <p class="hero__note">
         <UIcon name="i-lucide-check" class="hero__note-icon" />
@@ -141,6 +141,7 @@ const announce = computed(() => latest ? fill(c.value.home.announce.text, { vers
 
   // Inline, so the check stays next to the first word however the centred line wraps.
   &__note-icon {
+    display: inline-block;
     margin-right: 6px;
     vertical-align: -2px;
     color: var(--safe-text);

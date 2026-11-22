@@ -74,15 +74,13 @@ export interface SiteContent {
     modes: Record<'light' | 'dark' | 'system', string>
   }
   hero: {
-    badgeLocal: string
-    badgeIvy: string
-    badgeStar: string
     githubAria: string
     titleStrong: string
     titleSoft: string
     subHtml: string
     download: string
-    privacyCta: string
+    /** The second hero button: create an account in the web app. */
+    signup: string
     note: string
     videoLabel: string
     play: string
@@ -155,9 +153,11 @@ export interface SiteContent {
     trial: string
     meterTitle: string
     meter: string
+    /** Under the plans: fair use of cloud transcription, followed by fairUseLink to the Terms of service. */
+    fairUse: string
+    fairUseLink: string
     privacyTitle: string
     privacy: string
-    after: string
     team: string
     lifecycle: string
     docs: string
@@ -170,7 +170,6 @@ export interface SiteContent {
     asrBasic: string
     storage: string
     included: string
-    once: string
     seat: string
     unit: string
   }
@@ -234,7 +233,7 @@ export interface SiteContent {
     lead: string
     compare: string
     download: string
-    github: string
+    signup: string
     legacyHtml: string
   }
   footer: {
