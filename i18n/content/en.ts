@@ -26,6 +26,11 @@ const content: SiteContent = {
       title: 'IndexOne changelog — release notes for the Mac app',
       description: 'Release notes for every IndexOne version for Mac, newest first: new features for Ivy, organizations and privacy, fixes, downloads and release dates.',
     },
+    meetingBot: {
+      breadcrumb: "Meeting bot",
+      title: "IndexOne meeting bot — information for meeting participants",
+      description: "A meeting you are in is being recorded by the IndexOne bot. Who is responsible, what is recorded and why, how long it is kept and how to use your rights.",
+    },
     ogImageAlt: 'IndexOne — meeting notes and transcription for Mac, with Ivy',
   },
   common: {
@@ -545,6 +550,42 @@ const content: SiteContent = {
     showOlder: 'Show older releases',
     empty: 'No releases of this kind.',
   },
+  meetingBot: {
+    eyebrow: "For meeting participants",
+    title: "The IndexOne bot is recording your meeting.",
+    lead: "You are here because the IndexOne notetaker bot joined a Google Meet call you are in. This page explains who records the meeting, what happens to the recording and what you can do about it.",
+    noticeLabel: "The message the bot posts in the meeting chat",
+    noticeNote: "The bot posts this message in English once it is let into the call. It does not record before the message is posted.",
+    cards: {
+      bot: { title: "What the bot is", body: "A notetaker that joins Google Meet as a participant, so it appears in the list of people in the call. Its name is the one chosen by the organization that sent it, usually that organization’s name, followed by “· IndexOne”, for example “Northwind · IndexOne”." },
+      controller: { title: "Who is responsible for your data", body: "The organization that sent the bot, the one shown in its name. It is the controller of your personal data. It decides to record the meeting, for what purpose, and what happens to the recording afterwards." },
+      processor: { title: "What IndexOne does", body: "IndexOne is the processor. It records, transcribes and stores the meeting on behalf of that organization and only on its instructions. The provider of IndexOne is named in the IndexOne privacy policy." },
+      recorded: { title: "What is recorded", body: "The sound of the meeting and a written transcript made from it. Whatever you say while the bot is in the call ends up in the recording and in the transcript." },
+      purpose: { title: "Why it is recorded", body: "So that the organization has notes and summaries of its meeting. The recording is kept in that organization’s IndexOne workspace, where the people it allows can open it." },
+      storage: { title: "How long it is kept", body: "The organization decides how long it keeps the recording in its workspace. How long IndexOne keeps data is set out in the IndexOne privacy policy." },
+    },
+    policyLink: "IndexOne privacy policy (in Polish)",
+    rights: {
+      eyebrow: "Your rights",
+      title: "You can object, see your data and ask for it to be deleted.",
+      lead: "These rights come from the GDPR. Use them first with the organization that sent the bot, because it decides about the recording.",
+      items: {
+        object: { title: "Object", body: "You can object to being recorded. During the call, ask the host to remove the bot, or leave the call. Afterwards, tell the organization that you object to the use of the recording." },
+        access: { title: "Access", body: "You can ask the organization whether it holds a recording or transcript that includes you, and for a copy." },
+        erasure: { title: "Deletion", body: "You can ask the organization to delete the recording or the parts of the transcript that concern you." },
+        complaint: { title: "Complaint", body: "You can lodge a complaint with a data protection supervisory authority, for example in the EU country where you live or work. In Poland, this is the President of the Personal Data Protection Office (UODO)." },
+      },
+    },
+    steps: {
+      title: "How to use your rights",
+      items: [
+        { title: "During the meeting", body: "Ask the host to remove the bot, or leave the call. You do not have to give a reason." },
+        { title: "After the meeting", body: "Write to the person who organized the meeting or to the organization shown in the bot’s name. It is responsible for answering your request." },
+        { title: "If you cannot reach them", body: "Write to IndexOne using the contact details in the IndexOne privacy policy and say which meeting it was. IndexOne will pass your request on to the organization." },
+      ],
+    },
+    note: "This page describes the IndexOne bot in general terms. The organization that sent it may have its own privacy notice with more detail; ask it for one.",
+  },
   cta: {
     title: 'Bring Ivy to your meetings — keep control on your Mac.',
     lead: 'Local-first for macOS. Keep AI local, or explicitly opt into redacted cloud AI when you choose.',
@@ -555,6 +596,13 @@ const content: SiteContent = {
   },
   footer: {
     legalHtml: 'macOS-first · on-device Ivy · local-first · built with Tauri, Angular and Rust · free for macOS · © {year} <a href="{authors}">MonoOne</a> · text <a href="{license}">CC BY 4.0</a>',
+    legalNav: 'Legal information',
+    terms: 'Terms of service (PL)',
+    privacyPolicy: 'Privacy policy (PL)',
+    withdrawal: 'Right of withdrawal (PL)',
+    dpa: 'Data processing agreement (PL)',
+    meetingBot: 'Meeting bot: information for participants',
+    contact: 'Contact',
   },
 }
 

@@ -13,7 +13,7 @@ const locales = [
   { code: 'zh', language: 'zh-CN' },
   { code: 'ja', language: 'ja-JP' },
 ]
-const pages = ['/', '/features/', '/privacy/', '/pricing/', '/changelog/']
+const pages = ['/', '/features/', '/privacy/', '/pricing/', '/changelog/', '/meeting-bot/']
 
 const docsPages = () => ['/docs/', ...docs.groups.flatMap(g => g.pages.map(slug => `/docs/${slug}/`))]
 

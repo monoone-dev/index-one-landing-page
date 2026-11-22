@@ -26,6 +26,11 @@ const content: SiteContent = {
       title: '更新日志 — IndexOne Mac 版发布说明',
       description: 'IndexOne Mac 版每个版本的发布说明，最新的在前：Ivy、组织与隐私方面的新功能、修复和下载，并注明每个版本的发布日期。',
     },
+    meetingBot: {
+      breadcrumb: "会议机器人",
+      title: "IndexOne 会议机器人 — 致会议参与者",
+      description: "你参加的会议正在由 IndexOne 机器人录制。谁对数据负责、录制什么以及为何录制、保存多久，以及如何行使你的权利。",
+    },
     ogImageAlt: 'IndexOne — Mac 会议笔记与转写，内置 Ivy',
   },
   common: {
@@ -545,6 +550,42 @@ const content: SiteContent = {
     showOlder: '显示更早的版本',
     empty: '没有此类版本。',
   },
+  meetingBot: {
+    eyebrow: "致会议参与者",
+    title: "IndexOne 机器人正在录制你的会议。",
+    lead: "你来到这里，是因为 IndexOne 笔记机器人加入了你所在的 Google Meet 通话。本页说明谁在录制会议、录音会如何处理，以及你可以怎么做。",
+    noticeLabel: "机器人在会议聊天中发送的消息",
+    noticeNote: "机器人在被允许进入通话后，会用英文发送这条消息。消息发出之前，它不会录制任何内容。",
+    cards: {
+      bot: { title: "这是什么机器人", body: "一个以参与者身份加入 Google Meet 的笔记机器人，因此会出现在通话的参与者列表中。它的名称由派出它的组织设定，通常是该组织的名称，后面跟着“· IndexOne”，例如“Northwind · IndexOne”。" },
+      controller: { title: "谁对你的数据负责", body: "派出机器人的组织，也就是机器人名称中显示的组织。它是你个人数据的控制者：由它决定是否录制会议、出于什么目的，以及之后如何处理录音。" },
+      processor: { title: "IndexOne 做什么", body: "IndexOne 是处理者。它代表该组织、并且只按照该组织的指示录制、转写和保存会议。IndexOne 的服务提供方见 IndexOne 隐私政策。" },
+      recorded: { title: "录制哪些内容", body: "会议的声音，以及据此生成的文字转写。机器人在通话中期间，你说的所有内容都会进入录音和转写。" },
+      purpose: { title: "为什么录制", body: "为了让该组织获得会议笔记和摘要。录音保存在该组织的 IndexOne 工作区中，只有它允许的人才能打开。" },
+      storage: { title: "保存多久", body: "录音在工作区中保留多久，由该组织决定。IndexOne 保存数据的期限，见 IndexOne 隐私政策。" },
+    },
+    policyLink: "IndexOne 隐私政策（波兰语）",
+    rights: {
+      eyebrow: "你的权利",
+      title: "你可以提出反对、查看你的数据，并要求删除。",
+      lead: "这些权利来自 GDPR。请先向派出机器人的组织行使，因为由它决定如何处理录音。",
+      items: {
+        object: { title: "反对", body: "你可以反对被录制。通话中，可以请主持人移除机器人，或者离开通话。会后，可以告诉该组织你反对使用这份录音。" },
+        access: { title: "查阅", body: "你可以询问该组织是否持有包含你的录音或转写，并索取副本。" },
+        erasure: { title: "删除", body: "你可以要求该组织删除录音，或删除转写中与你有关的部分。" },
+        complaint: { title: "投诉", body: "你可以向数据保护监管机构投诉，例如你居住或工作所在的欧盟国家的监管机构。在波兰，该机构是个人数据保护局（UODO）局长。" },
+      },
+    },
+    steps: {
+      title: "如何行使你的权利",
+      items: [
+        { title: "会议进行中", body: "请主持人移除机器人，或者离开通话。你无需说明理由。" },
+        { title: "会议结束后", body: "联系会议组织者，或机器人名称中显示的组织。由它负责答复你的请求。" },
+        { title: "如果联系不上他们", body: "通过 IndexOne 隐私政策中的联系方式写信给 IndexOne，并说明是哪一场会议。IndexOne 会把你的请求转交给该组织。" },
+      ],
+    },
+    note: "本页对 IndexOne 机器人作一般性说明。派出机器人的组织可能有自己更详细的隐私声明，你可以向它索取。",
+  },
   cta: {
     title: '让 Ivy 走进你的会议——掌控权留在你的 Mac 上。',
     lead: '本地优先的 macOS 应用。AI 可以留在本地，也可以在你选择时明确启用经过脱敏的云端 AI。',
@@ -555,6 +596,13 @@ const content: SiteContent = {
   },
   footer: {
     legalHtml: 'macOS 优先 · 设备端 Ivy · 本地优先 · 基于 Tauri、Angular 和 Rust 构建 · macOS 版免费 · © {year} <a href="{authors}">MonoOne</a> · 文字内容采用 <a href="{license}">CC BY 4.0</a> 许可',
+    legalNav: '法律信息',
+    terms: '服务条款（PL）',
+    privacyPolicy: '隐私政策（PL）',
+    withdrawal: '撤回权（PL）',
+    dpa: '数据处理协议（PL）',
+    meetingBot: '会议机器人：参会者须知',
+    contact: '联系我们',
   },
 }
 

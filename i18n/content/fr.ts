@@ -26,6 +26,11 @@ const content: SiteContent = {
       title: 'Nouveautés IndexOne — notes de version de l’app Mac',
       description: 'Les notes de chaque version d’IndexOne pour Mac, de la plus récente à la plus ancienne : nouveautés pour Ivy, organisations et confidentialité, correctifs.',
     },
+    meetingBot: {
+      breadcrumb: "Bot de réunion",
+      title: "Bot de réunion IndexOne — informations pour les participants",
+      description: "Le bot IndexOne enregistre une réunion à laquelle vous participez. Qui est responsable, ce qui est enregistré et pourquoi, la durée de conservation et comment exercer vos droits.",
+    },
     ogImageAlt: 'IndexOne — notes de réunion et transcription Mac, avec Ivy',
   },
   common: {
@@ -545,6 +550,42 @@ const content: SiteContent = {
     showOlder: 'Voir les versions précédentes',
     empty: 'Aucune version de ce type.',
   },
+  meetingBot: {
+    eyebrow: "Pour les participants aux réunions",
+    title: "Le bot IndexOne enregistre votre réunion.",
+    lead: "Vous êtes ici parce que le bot de prise de notes IndexOne a rejoint un appel Google Meet auquel vous participez. Cette page explique qui enregistre la réunion, ce que devient l’enregistrement et ce que vous pouvez faire.",
+    noticeLabel: "Le message que le bot publie dans le chat de la réunion",
+    noticeNote: "Le bot publie ce message en anglais dès qu’il est admis dans l’appel. Il n’enregistre rien avant de l’avoir publié.",
+    cards: {
+      bot: { title: "Ce qu’est le bot", body: "Un preneur de notes qui rejoint Google Meet comme participant : il apparaît donc dans la liste des personnes de l’appel. Son nom est celui choisi par l’organisation qui l’a envoyé, en général le nom de cette organisation, suivi de « · IndexOne », par exemple « Northwind · IndexOne »." },
+      controller: { title: "Qui est responsable de vos données", body: "L’organisation qui a envoyé le bot, celle qui figure dans son nom. Elle est responsable du traitement de vos données personnelles : elle décide d’enregistrer la réunion, dans quel but et ce que devient l’enregistrement ensuite." },
+      processor: { title: "Ce que fait IndexOne", body: "IndexOne est sous-traitant. Il enregistre, transcrit et conserve la réunion pour le compte de cette organisation et uniquement sur ses instructions. Le fournisseur d’IndexOne est indiqué dans la politique de confidentialité d’IndexOne." },
+      recorded: { title: "Ce qui est enregistré", body: "Le son de la réunion et une transcription écrite réalisée à partir de celui-ci. Tout ce que vous dites pendant que le bot est dans l’appel se retrouve dans l’enregistrement et dans la transcription." },
+      purpose: { title: "Dans quel but", body: "Pour que l’organisation dispose de notes et de résumés de sa réunion. L’enregistrement est conservé dans l’espace de travail IndexOne de cette organisation, où les personnes qu’elle autorise peuvent l’ouvrir." },
+      storage: { title: "Durée de conservation", body: "L’organisation décide combien de temps elle garde l’enregistrement dans son espace de travail. La durée pendant laquelle IndexOne conserve les données est indiquée dans la politique de confidentialité d’IndexOne." },
+    },
+    policyLink: "Politique de confidentialité d’IndexOne (en polonais)",
+    rights: {
+      eyebrow: "Vos droits",
+      title: "Vous pouvez vous opposer, consulter vos données et demander leur effacement.",
+      lead: "Ces droits vous viennent du RGPD. Exercez-les d’abord auprès de l’organisation qui a envoyé le bot, car c’est elle qui décide de l’enregistrement.",
+      items: {
+        object: { title: "Opposition", body: "Vous pouvez vous opposer à l’enregistrement. Pendant l’appel, demandez à l’organisateur de retirer le bot, ou quittez l’appel. Ensuite, dites à l’organisation que vous vous opposez à l’utilisation de l’enregistrement." },
+        access: { title: "Accès", body: "Vous pouvez demander à l’organisation si elle détient un enregistrement ou une transcription où vous apparaissez, et en obtenir une copie." },
+        erasure: { title: "Effacement", body: "Vous pouvez demander à l’organisation d’effacer l’enregistrement ou les parties de la transcription qui vous concernent." },
+        complaint: { title: "Réclamation", body: "Vous pouvez introduire une réclamation auprès d’une autorité de contrôle de la protection des données, par exemple dans le pays de l’UE où vous vivez ou travaillez. En Pologne, il s’agit du Président de l’Office de protection des données personnelles (UODO)." },
+      },
+    },
+    steps: {
+      title: "Comment exercer vos droits",
+      items: [
+        { title: "Pendant la réunion", body: "Demandez à l’organisateur de retirer le bot, ou quittez l’appel. Vous n’avez pas à vous justifier." },
+        { title: "Après la réunion", body: "Écrivez à la personne qui a organisé la réunion ou à l’organisation indiquée dans le nom du bot. C’est elle qui doit répondre à votre demande." },
+        { title: "Si vous ne parvenez pas à les joindre", body: "Écrivez à IndexOne via les coordonnées de la politique de confidentialité d’IndexOne en précisant de quelle réunion il s’agit. IndexOne transmettra votre demande à l’organisation." },
+      ],
+    },
+    note: "Cette page décrit le bot IndexOne de manière générale. L’organisation qui l’a envoyé peut avoir sa propre notice de confidentialité, plus détaillée ; demandez-la-lui.",
+  },
   cta: {
     title: 'Invitez Ivy dans vos réunions — gardez le contrôle sur votre Mac.',
     lead: 'Local d’abord, pour macOS. Gardez l’IA en local, ou activez explicitement une IA cloud anonymisée quand vous le décidez.',
@@ -555,6 +596,13 @@ const content: SiteContent = {
   },
   footer: {
     legalHtml: 'macOS d’abord · Ivy sur l’appareil · local d’abord · conçu avec Tauri, Angular et Rust · gratuit pour macOS · © {year} <a href="{authors}">MonoOne</a> · texte <a href="{license}">CC BY 4.0</a>',
+    legalNav: 'Informations légales',
+    terms: 'Conditions d’utilisation (PL)',
+    privacyPolicy: 'Politique de confidentialité (PL)',
+    withdrawal: 'Droit de rétractation (PL)',
+    dpa: 'Accord de traitement des données (PL)',
+    meetingBot: 'Bot de réunion : informations pour les participants',
+    contact: 'Contact',
   },
 }
 

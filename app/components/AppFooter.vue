@@ -18,6 +18,18 @@ const links = computed(() => [
   { label: c.value.nav.download, to: site.links.download, external: true },
 ])
 
+// The legal documents are published by the web app, in Polish only.
+const legalBase = 'https://app.index-one.io/legal/'
+
+const legalLinks = computed(() => [
+  { label: c.value.footer.terms, to: `${legalBase}regulamin.html`, external: true },
+  { label: c.value.footer.privacyPolicy, to: `${legalBase}polityka-prywatnosci.html`, external: true },
+  { label: c.value.footer.withdrawal, to: `${legalBase}odstapienie.html`, external: true },
+  { label: c.value.footer.dpa, to: `${legalBase}dpa.html`, external: true },
+  { label: c.value.footer.meetingBot, to: to('/meeting-bot') },
+  { label: c.value.footer.contact, to: `${site.links.discussions}/categories/q-a`, external: true },
+])
+
 const legal = computed(() => fill(c.value.footer.legalHtml, { year: 2026, authors: site.links.authors, license: site.links.license }))
 </script>
 
@@ -33,6 +45,11 @@ const legal = computed(() => fill(c.value.footer.legalHtml, { year: 2026, author
           </NuxtLink>
         </nav>
       </div>
+      <nav class="foot__docs" :aria-label="c.footer.legalNav">
+        <NuxtLink v-for="link in legalLinks" :key="link.label" :to="link.to" :external="link.external">
+          {{ link.label }}
+        </NuxtLink>
+      </nav>
       <p class="foot__legal"><NuxtLink to="/docs/plans-and-billing/">{{ c.offer.docs }}</NuxtLink><template v-if="!isPricing"> · {{ c.offer.status }}</template></p>
       <p class="foot__legal" v-html="legal" />
       </div>
@@ -78,6 +95,31 @@ const legal = computed(() => fill(c.value.footer.legalHtml, { year: 2026, author
 
       @include coarse-pointer {
         padding: 12px 4px;
+      }
+    }
+  }
+
+  &__docs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 20px;
+    margin-top: 22px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+
+    a {
+      padding: 6px 0;
+      color: var(--text-secondary);
+      font-size: 13.5px;
+      transition: color 0.15s;
+
+      &:hover {
+        color: var(--text-primary);
+      }
+
+      @include coarse-pointer {
+        padding: 10px 4px;
       }
     }
   }
