@@ -3,7 +3,7 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — notas de reuniones con IA privada para Mac y la web, sin bot',
+      title: 'IndexOne — notas de reuniones con IA privada en tu Mac, sin bot',
       description: 'Graba ambos lados de una llamada sin bot, transcríbela en tu Mac y pregúntale a Ivy, con un recibo para cada línea. Gratis en el Mac; tus espacios en la nube se abren en cualquier navegador.',
     },
     features: {
@@ -19,7 +19,7 @@ const content: SiteContent = {
     pricing: {
       breadcrumb: 'Precios',
       title: 'Precios de IndexOne — Free, Personal y Team',
-      description: 'IndexOne es gratis en el Mac. Planes en la nube: Personal 49 PLN al mes, Team 75 PLN netos por plaza, ambos con transcripción en la nube ilimitada bajo uso razonable. Los planes en la nube se venden en la app web.',
+      description: 'IndexOne es gratis en el Mac. Planes en la nube: Personal 49 PLN al mes, Team 75 PLN netos por plaza, cada uno con una cuota mensual de transcripción en la nube y, después, una cola más lenta. Los planes en la nube se venden en la app web.',
     },
     changelog: {
       breadcrumb: 'Novedades',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "Bot de reuniones de IndexOne — información para los participantes",
       description: "El bot de IndexOne está grabando una reunión en la que participas. Quién es responsable, qué se graba y para qué, cuánto tiempo se guarda y cómo ejercer tus derechos.",
     },
-    ogImageAlt: 'IndexOne — notas de reuniones con IA privada para Mac y la web, sin bot',
+    ogImageAlt: 'IndexOne — notas de reuniones con IA privada en tu Mac, sin bot',
   },
   common: {
     skipToContent: 'Saltar al contenido',
@@ -138,7 +138,7 @@ const content: SiteContent = {
   },
   trust: {
     aria: 'De un vistazo',
-    items: ['Sin bot de reuniones', 'Transcripción en el dispositivo', 'Bloqueo de carpetas con Touch ID', 'Mac y web · app para iPhone muy pronto'],
+    items: ['Sin bot en el Mac', 'Transcripción en el dispositivo', 'Bloqueo de carpetas con Touch ID', 'Mac y web'],
   },
   unique: {
     eyebrow: 'Funciones',
@@ -374,9 +374,9 @@ const content: SiteContent = {
     "tax": "Personal incluye impuestos. Team sin impuestos: mínimo 2 plazas = 150 PLN netos/mes. Con IVA del 23%: 184,50 PLN en total (92,25 por plaza). El impuesto puede variar; la aplicación debe mostrar el total antes de comprar.",
     "trialTitle": "Gratis cada mes",
     "trial": "Cada cuenta gratuita recibe cada mes natural (UTC) 200.000 unidades Ivy y una cuota de transcripción en la nube, sin tarjeta. Las funciones locales de Mac no tienen límite de plan.",
-    "meterTitle": "Transcripción en la nube ilimitada",
-    "meter": "Los planes de pago no tienen tope de transcripción en la nube. Si transcribes mucho, algunas grabaciones pueden tardar unas horas en estar listas. Se aplica un uso razonable. La transcripción en tu Mac es siempre inmediata e ilimitada.",
-    "fairUse": "Los planes de pago incluyen transcripción en la nube ilimitada bajo uso razonable; la cuota de Free y las reglas de uso razonable figuran en los Términos del servicio.",
+    "meterTitle": "Transcripción en la nube: rápida y luego una cola más lenta",
+    "meter": "Los planes de pago transcriben en la nube a máxima velocidad hasta una cuota mensual. Después, las nuevas grabaciones entran en una cola más lenta y pueden tardar unas horas en estar listas, durante hasta 150 horas más al mes (por plaza en Team); luego la transcripción en la nube se pausa hasta el mes siguiente. La transcripción en tu Mac es siempre inmediata e ilimitada.",
+    "fairUse": "Los planes de pago incluyen una cuota mensual de transcripción en la nube y, después, hasta 150 horas al mes en una cola más lenta; la cuota de Free y las reglas de uso razonable figuran en los Términos del servicio.",
     "fairUseLink": "Leer los Términos del servicio (en polaco)",
     "privacyTitle": "Local y nube",
     "privacy": "El procesamiento local de Mac permanece en el Mac. La nube estándar almacena y procesa contenido en servidores legibles por el operador, sin cifrado de extremo a extremo. Enmascarar patrones no es anonimización completa. Un plan no concede acceso a espacios privados.",
@@ -388,7 +388,7 @@ const content: SiteContent = {
     "basics": "Notas y sincronización en la nube, en el navegador",
     "ivy": "Unidades Ivy en nube / mes",
     "asr": "Transcripción en la nube",
-    "asrUnlimited": "Ilimitada · uso razonable",
+    "asrPaid": "Cuota y luego cola más lenta (hasta 150 h)",
     "asrBasic": "Cuota mensual",
     "storage": "Almacenamiento en nube",
     "included": "Incluido",
@@ -425,7 +425,7 @@ const content: SiteContent = {
                 "Todo lo de Free",
                 "20 GB de almacenamiento en la nube",
                 "1.2M unidades Ivy al mes",
-                "Transcripción en la nube ilimitada, uso razonable",
+                "Transcripción en la nube: cuota mensual y luego una cola más lenta",
                 "Grabaciones de pantalla en la nube"
             ],
             "cta": "Comprar en la app web"
@@ -440,7 +440,7 @@ const content: SiteContent = {
                 "Todo lo de Personal",
                 "50 GB de almacenamiento en la nube por plaza, compartido",
                 "2.5M unidades Ivy por plaza al mes",
-                "Transcripción en la nube ilimitada, uso razonable",
+                "Transcripción en la nube: cuota mensual y luego una cola más lenta",
                 "Bot de Google Meet"
             ],
             "cta": "Comprar en la app web"
@@ -487,7 +487,7 @@ const content: SiteContent = {
       },
       'platforms': {
         criterion: 'Plataformas',
-        cells: ['macOS, web; app para iPhone muy pronto', 'macOS, Windows, Linux, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, iOS, iPadOS, web (beta)', 'macOS, Windows, iOS'],
+        cells: ['macOS, web', 'macOS, Windows, Linux, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, iOS, iPadOS, web (beta)', 'macOS, Windows, iOS'],
       },
       'price': {
         criterion: 'Precio',
@@ -502,7 +502,7 @@ const content: SiteContent = {
     items: [
       {
         question: '¿Qué incluye Free?',
-        answer: 'En el Mac, todo: grabación, transcripción, notas, Ivy on this Mac y exportaciones, sin cuenta y sin límite de plan. Una cuenta gratuita añade notas, edición, búsqueda, sincronización, lectura y exportación en la nube desde el navegador dentro de 1 GB, además de una cuota mensual de unidades Ivy y de transcripción en la nube. Los planes de pago añaden transcripción en la nube ilimitada bajo uso razonable, más unidades Ivy y más almacenamiento.',
+        answer: 'En el Mac, todo: grabación, transcripción, notas, Ivy on this Mac y exportaciones, sin cuenta y sin límite de plan. Una cuenta gratuita añade notas, edición, búsqueda, sincronización, lectura y exportación en la nube desde el navegador dentro de 1 GB, además de una cuota mensual de unidades Ivy y de transcripción en la nube. Los planes de pago añaden más transcripción en la nube (una cuota mensual y, después, hasta 150 horas al mes en una cola más lenta), más unidades Ivy y más almacenamiento.',
       },
       {
         question: '¿Mi audio va a la nube?',
@@ -599,11 +599,13 @@ const content: SiteContent = {
     lead: 'Descarga IndexOne gratis y graba tu próxima reunión: sin bot, sin cuenta y sin tarjeta. ¿Quieres tus notas también en el navegador? Crea una cuenta gratuita.',
     compare: 'Comparar planes',
     download: 'Descargar para Mac — gratis',
+    brew: '¿Prefieres Homebrew?',
+    brewCopy: 'Copiar el comando',
     signup: 'Crear una cuenta gratuita',
     legacyHtml: '¿Usas la versión 2.8.0 o anterior? Su comprobación de actualizaciones ya no puede llegar a nosotros. Descarga una vez la <a href="{download}">última versión</a> y arrástrala a Aplicaciones para sustituir la copia antigua; tu biblioteca, tus grabaciones y tus ajustes se quedan donde están. A partir de la 2.9.0, la app encuentra las nuevas versiones por sí sola.',
   },
   footer: {
-    legalHtml: 'App para Mac y app web · app para iPhone muy pronto · Ivy en el dispositivo · creado con Tauri, Angular y Rust · gratis en el Mac · © {year} <a href="{authors}">MonoOne</a> · texto <a href="{license}">CC BY 4.0</a>',
+    legalHtml: 'App para Mac y app web · Ivy en el dispositivo · creado con Tauri, Angular y Rust · gratis en el Mac · © {year} <a href="{authors}">MonoOne</a> · texto <a href="{license}">CC BY 4.0</a>',
     legalNav: 'Información legal',
     terms: 'Términos del servicio (PL)',
     privacyPolicy: 'Política de privacidad (PL)',

@@ -3,7 +3,7 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — ボットなしで使える、MacとWeb向けのプライベートなAI議事録',
+      title: 'IndexOne — あなたのMacで完結する、ボット不要のプライベートなAI議事録',
       description: 'ボットなしで通話の双方を録音し、Mac上で文字起こしして、Ivyに質問できます。すべての行に根拠リンク付き。Macでは無料で、クラウドスペースはどのブラウザーでも開けます。',
     },
     features: {
@@ -19,7 +19,7 @@ const content: SiteContent = {
     pricing: {
       breadcrumb: '料金',
       title: 'IndexOneの料金 — Free、Personal、Team',
-      description: 'IndexOneはMacでは無料です。クラウドプランはPersonalが月額49 PLN、Teamが1席あたり税抜75 PLNで、どちらもフェアユースの範囲でクラウド文字起こしが無制限です。クラウドプランはWebアプリで販売中です。',
+      description: 'IndexOneはMacでは無料です。クラウドプランはPersonalが月額49 PLN、Teamが1席あたり税抜75 PLNで、どちらも毎月のクラウド文字起こし枠があり、枠を超えると低速キューで処理されます。クラウドプランはWebアプリで販売中です。',
     },
     changelog: {
       breadcrumb: '更新履歴',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "IndexOne会議ボット — 会議の参加者の方へ",
       description: "ご参加の会議はIndexOneのボットが録音しています。データの責任者、録音する内容と目的、保存期間、権利の行使方法をご案内します。",
     },
-    ogImageAlt: 'IndexOne — ボットなしで使える、MacとWeb向けのプライベートなAI議事録',
+    ogImageAlt: 'IndexOne — あなたのMacで完結する、ボット不要のプライベートなAI議事録',
   },
   common: {
     skipToContent: '本文へスキップ',
@@ -138,7 +138,7 @@ const content: SiteContent = {
   },
   trust: {
     aria: 'ひと目でわかるポイント',
-    items: ['会議ボットなし', 'デバイス上で文字起こし', 'Touch IDのフォルダーロック', 'MacとWeb · iPhoneアプリは近日公開'],
+    items: ['Macではボット不要', 'デバイス上で文字起こし', 'Touch IDのフォルダーロック', 'MacとWeb'],
   },
   unique: {
     eyebrow: '機能',
@@ -374,9 +374,9 @@ const content: SiteContent = {
     "tax": "Personal は税込。Team は税別で最低 2 席、月額合計 150 PLN（税別）。VAT 23% の場合は合計 184.50 PLN（1 席 92.25）。税率は異なる場合があり、購入前にアプリで最終金額を表示する必要があります。",
     "trialTitle": "毎月無料",
     "trial": "無料アカウントには、毎暦月（UTC）200,000 Ivy 単位とクラウド文字起こしの枠がカード不要で付与されます。Macのローカル機能にはプランの上限がありません。",
-    "meterTitle": "クラウド文字起こし無制限",
-    "meter": "有料プランにはクラウド文字起こしの上限がありません。大量に文字起こしすると、一部の録音は完了まで数時間かかる場合があります。フェアユースが適用されます。Mac上の文字起こしは常にすぐ完了し、無制限です。",
-    "fairUse": "有料プランには、フェアユースの範囲で無制限のクラウド文字起こしが含まれます。Freeの枠とフェアユースのルールは利用規約に定められています。",
+    "meterTitle": "クラウド文字起こし：まず高速、その後は低速キュー",
+    "meter": "有料プランでは、毎月の枠まではクラウド文字起こしを最高速度で行います。枠を超えると新しい録音は低速キューに入り、完了まで数時間かかることがあります。これは月にさらに最大150時間まで（Teamは1席あたり）で、その後クラウド文字起こしは翌月まで停止します。Mac上の文字起こしは常に即時で無制限です。",
+    "fairUse": "有料プランには毎月のクラウド文字起こし枠があり、枠を超えると月最大150時間まで低速キューで処理されます。Freeの枠とフェアユースのルールは利用規約に記載されています。",
     "fairUseLink": "利用規約を読む（ポーランド語）",
     "privacyTitle": "ローカルとクラウド",
     "privacy": "Mac のローカル処理は Mac 内で完結。標準クラウドでは運営者が読めるサーバーで内容を保存・処理し、エンドツーエンド暗号化ではありません。パターンのマスキングは完全な匿名化ではありません。有料プランでも非公開スペースへの権限は付与されません。",
@@ -388,7 +388,7 @@ const content: SiteContent = {
     "basics": "ブラウザーでのクラウドノートと同期",
     "ivy": "クラウド Ivy 単位 / 月",
     "asr": "クラウド文字起こし",
-    "asrUnlimited": "無制限 · フェアユース",
+    "asrPaid": "枠のあと低速キュー（最大150時間）",
     "asrBasic": "毎月の枠",
     "storage": "クラウド容量",
     "included": "含まれます",
@@ -425,7 +425,7 @@ const content: SiteContent = {
                 "Free のすべて",
                 "クラウド容量 20 GB",
                 "毎月 1.2M Ivy 単位",
-                "クラウド文字起こし無制限、フェアユース",
+                "クラウド文字起こし：毎月の枠、その後は低速キュー",
                 "クラウドの画面録画"
             ],
             "cta": "Webアプリで購入"
@@ -440,7 +440,7 @@ const content: SiteContent = {
                 "Personal のすべて",
                 "クラウド容量 1 席あたり 50 GB、組織で共有",
                 "1 席あたり毎月 2.5M Ivy 単位",
-                "クラウド文字起こし無制限、フェアユース",
+                "クラウド文字起こし：毎月の枠、その後は低速キュー",
                 "Google Meetボット"
             ],
             "cta": "Webアプリで購入"
@@ -487,7 +487,7 @@ const content: SiteContent = {
       },
       'platforms': {
         criterion: '対応プラットフォーム',
-        cells: ['macOS、Web。iPhoneアプリは近日公開', 'macOS、Windows、Linux、iOS、Android', 'macOS、Windows、Web、iOS、Android', 'macOS、Windows、Web、iOS、Android', 'macOS、iOS、iPadOS、Web（ベータ）', 'macOS、Windows、iOS'],
+        cells: ['macOS、Web', 'macOS、Windows、Linux、iOS、Android', 'macOS、Windows、Web、iOS、Android', 'macOS、Windows、Web、iOS、Android', 'macOS、iOS、iPadOS、Web（ベータ）', 'macOS、Windows、iOS'],
       },
       'price': {
         criterion: '料金',
@@ -502,7 +502,7 @@ const content: SiteContent = {
     items: [
       {
         question: 'Freeには何が含まれますか？',
-        answer: 'Macでは、すべてです。録音、文字起こし、ノート、Ivy on this Mac、エクスポートを、アカウントなし、プラン上限なしで使えます。無料アカウントを作ると、1 GBの範囲でブラウザーでのクラウドノート、編集、検索、同期、閲覧、エクスポートに加え、毎月のIvy 単位とクラウド文字起こしの枠が付きます。有料プランでは、フェアユースの範囲で無制限のクラウド文字起こし、より多くのIvy 単位、追加ストレージが加わります。',
+        answer: 'Macでは、すべてです。録音、文字起こし、ノート、Ivy on this Mac、エクスポートを、アカウントなし、プラン上限なしで使えます。無料アカウントを作ると、1 GBの範囲でブラウザーでのクラウドノート、編集、検索、同期、閲覧、エクスポートに加え、毎月のIvy 単位とクラウド文字起こしの枠が付きます。有料プランでは、より多くのクラウド文字起こし（毎月の枠と、その後の月最大150時間の低速キュー）、より多くのIvy 単位、追加ストレージが加わります。',
       },
       {
         question: '音声はクラウドに送られますか？',
@@ -599,11 +599,13 @@ const content: SiteContent = {
     lead: 'IndexOneを無料でダウンロードして、次の会議を録音しましょう。ボットもアカウントもカードも不要です。ノートをブラウザーでも見たいなら、無料アカウントを作成してください。',
     compare: 'プラン比較',
     download: 'Mac版を無料でダウンロード',
+    brew: 'Homebrewを使いますか？',
+    brewCopy: 'コマンドをコピー',
     signup: '無料アカウントを作成',
     legacyHtml: 'バージョン2.8.0以前をお使いですか？そのバージョンのアップデート確認は、もう私たちに届きません。<a href="{download}">最新リリース</a>を一度ダウンロードし、アプリケーションフォルダーにドラッグして古いものと置き換えてください。ライブラリ、録音、設定はそのまま残ります。2.9.0以降は、アプリが自動で新しいバージョンを見つけます。',
   },
   footer: {
-    legalHtml: 'MacアプリとWebアプリ · iPhoneアプリは近日公開 · デバイス上のIvy · Tauri、Angular、Rustで開発 · Macでは無料 · © {year} <a href="{authors}">MonoOne</a> · テキストは<a href="{license}">CC BY 4.0</a>',
+    legalHtml: 'MacアプリとWebアプリ · デバイス上のIvy · Tauri、Angular、Rustで開発 · Macでは無料 · © {year} <a href="{authors}">MonoOne</a> · テキストは<a href="{license}">CC BY 4.0</a>',
     legalNav: '法的情報',
     terms: '利用規約（PL）',
     privacyPolicy: 'プライバシーポリシー（PL）',

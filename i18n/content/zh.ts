@@ -3,7 +3,7 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — 私密的 AI 会议笔记，适用于 Mac 和网页，无需机器人',
+      title: 'IndexOne — 在你的 Mac 上的私密 AI 会议笔记，无需机器人',
       description: '无需机器人即可录下通话双方，在 Mac 上转写，并向 Ivy 提问，每一行都有凭证。Mac 上免费；你的云端空间可在任何浏览器中打开。',
     },
     features: {
@@ -19,7 +19,7 @@ const content: SiteContent = {
     pricing: {
       breadcrumb: '价格',
       title: 'IndexOne 价格 — Free、Personal 与 Team',
-      description: 'IndexOne 在 Mac 上免费。云端方案：Personal 每月 49 PLN，Team 每席位 75 PLN（不含税），均含合理使用原则下不限量的云端转写。云端方案在网页版中销售。',
+      description: 'IndexOne 在 Mac 上免费。云端方案：Personal 每月 49 PLN，Team 每席位 75 PLN（不含税），均含每月云端转写额度，用完后进入较慢的队列。云端方案在网页版中销售。',
     },
     changelog: {
       breadcrumb: '更新日志',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "IndexOne 会议机器人 — 致会议参与者",
       description: "你参加的会议正在由 IndexOne 机器人录制。谁对数据负责、录制什么以及为何录制、保存多久，以及如何行使你的权利。",
     },
-    ogImageAlt: 'IndexOne — 私密的 AI 会议笔记，适用于 Mac 和网页，无需机器人',
+    ogImageAlt: 'IndexOne — 在你的 Mac 上的私密 AI 会议笔记，无需机器人',
   },
   common: {
     skipToContent: '跳到正文',
@@ -138,7 +138,7 @@ const content: SiteContent = {
   },
   trust: {
     aria: '一览',
-    items: ['无会议机器人', '设备端转写', 'Touch ID 文件夹锁', 'Mac 与网页版 · iPhone 应用即将推出'],
+    items: ['Mac 上无需机器人', '设备端转写', 'Touch ID 文件夹锁', 'Mac 与网页版'],
   },
   unique: {
     eyebrow: '功能',
@@ -374,9 +374,9 @@ const content: SiteContent = {
     "tax": "Personal 含税。Team 不含税：至少 2 个席位，每月共 150 PLN（税前）。按 23% 增值税计算，总计 184.50 PLN（每席位 92.25）。实际税率可能不同；购买前应用必须显示最终总额。",
     "trialTitle": "每月免费",
     "trial": "每个免费账户每个日历月（UTC）可获得 200,000 Ivy 单位和一定的云端转写额度，无需绑卡。Mac 本地功能没有方案限制。",
-    "meterTitle": "云端转写不限量",
-    "meter": "付费方案的云端转写没有上限。转写量很大时，部分录音可能需要几个小时才能完成。适用合理使用原则。Mac 上的转写始终即时完成，且不限量。",
-    "fairUse": "付费方案包含合理使用原则下不限量的云端转写；Free 额度和合理使用规则详见服务条款。",
+    "meterTitle": "云端转写：先快速，后进入较慢队列",
+    "meter": "付费方案在每月额度内以全速进行云端转写。额度用完后，新录音进入较慢的队列，可能需要几个小时才能完成，每月最多再转写 150 小时（Team 按席位计算）；之后云端转写暂停至下个月。在 Mac 上的转写始终即时且不限量。",
+    "fairUse": "付费方案包含每月云端转写额度，用完后每月最多 150 小时在较慢的队列中转写；Free 额度和合理使用规则见服务条款。",
     "fairUseLink": "阅读服务条款（波兰语）",
     "privacyTitle": "本地与云端",
     "privacy": "Mac 本地处理留在 Mac 上。标准账户云端在运营方可读取的服务器上存储和处理内容，并非端到端加密。模式遮蔽不等于完全匿名化。付费方案不会授予私人空间访问权。",
@@ -388,7 +388,7 @@ const content: SiteContent = {
     "basics": "浏览器中的云端笔记与同步",
     "ivy": "云端 Ivy 单位 / 月",
     "asr": "云端转写",
-    "asrUnlimited": "不限量 · 合理使用",
+    "asrPaid": "额度，之后较慢队列（最多 150 小时）",
     "asrBasic": "每月额度",
     "storage": "云端存储",
     "included": "包含",
@@ -425,7 +425,7 @@ const content: SiteContent = {
                 "包含 Free 的全部内容",
                 "20 GB 云端存储",
                 "每月 1.2M Ivy 单位",
-                "云端转写不限量，合理使用",
+                "云端转写：每月额度，之后进入较慢队列",
                 "云端录屏"
             ],
             "cta": "在网页版购买"
@@ -440,7 +440,7 @@ const content: SiteContent = {
                 "包含 Personal 的全部内容",
                 "每席位 50 GB 云端存储，组织共享",
                 "每席位每月 2.5M Ivy 单位",
-                "云端转写不限量，合理使用",
+                "云端转写：每月额度，之后进入较慢队列",
                 "Google Meet 机器人"
             ],
             "cta": "在网页版购买"
@@ -487,7 +487,7 @@ const content: SiteContent = {
       },
       'platforms': {
         criterion: '平台',
-        cells: ['macOS、网页版；iPhone 应用即将推出', 'macOS、Windows、Linux、iOS、Android', 'macOS、Windows、网页版、iOS、Android', 'macOS、Windows、网页版、iOS、Android', 'macOS、iOS、iPadOS、网页版（测试版）', 'macOS、Windows、iOS'],
+        cells: ['macOS、网页版', 'macOS、Windows、Linux、iOS、Android', 'macOS、Windows、网页版、iOS、Android', 'macOS、Windows、网页版、iOS、Android', 'macOS、iOS、iPadOS、网页版（测试版）', 'macOS、Windows、iOS'],
       },
       'price': {
         criterion: '价格',
@@ -502,7 +502,7 @@ const content: SiteContent = {
     items: [
       {
         question: 'Free 包含哪些内容？',
-        answer: '在 Mac 上，一切都包含：录音、转写、笔记、Ivy on this Mac 和导出，无需账号，也没有方案限制。免费账户还可在浏览器中使用 1 GB 以内的云端笔记、编辑、搜索、同步、阅读和导出，并获得每月的 Ivy 单位和云端转写额度。付费方案提供合理使用原则下不限量的云端转写、更多 Ivy 单位和更多存储空间。',
+        answer: '在 Mac 上，一切都包含：录音、转写、笔记、Ivy on this Mac 和导出，无需账号，也没有方案限制。免费账户还可在浏览器中使用 1 GB 以内的云端笔记、编辑、搜索、同步、阅读和导出，并获得每月的 Ivy 单位和云端转写额度。付费方案提供更多云端转写（每月额度，用完后每月最多 150 小时在较慢的队列中转写）、更多 Ivy 单位和更多存储空间。',
       },
       {
         question: '我的音频会上传到云端吗？',
@@ -599,11 +599,13 @@ const content: SiteContent = {
     lead: '免费下载 IndexOne，录下你的下一场会议：无需机器人、无需账户、无需绑卡。也想在浏览器中查看笔记？免费创建一个账户即可。',
     compare: '比较方案',
     download: '免费下载 Mac 版',
+    brew: '更喜欢 Homebrew？',
+    brewCopy: '复制命令',
     signup: '免费创建账户',
     legacyHtml: '还在使用 2.8.0 或更早的版本？它的更新检查已经无法连接到我们。请手动下载一次<a href="{download}">最新版本</a>，将其拖入“应用程序”文件夹替换旧版本；你的资料库、录音和设置都会原样保留。从 2.9.0 起，应用会自动发现新版本。',
   },
   footer: {
-    legalHtml: 'Mac 应用与网页版 · iPhone 应用即将推出 · 设备端 Ivy · 基于 Tauri、Angular 和 Rust 构建 · Mac 版免费 · © {year} <a href="{authors}">MonoOne</a> · 文字内容采用 <a href="{license}">CC BY 4.0</a> 许可',
+    legalHtml: 'Mac 应用与网页版 · 设备端 Ivy · 基于 Tauri、Angular 和 Rust 构建 · Mac 版免费 · © {year} <a href="{authors}">MonoOne</a> · 文字内容采用 <a href="{license}">CC BY 4.0</a> 许可',
     legalNav: '法律信息',
     terms: '服务条款（PL）',
     privacyPolicy: '隐私政策（PL）',

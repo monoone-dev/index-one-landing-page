@@ -13,8 +13,9 @@ const rows = computed(() => [
   { label: c.value.offer.local, values: catalog.offers.map(() => c.value.offer.included) },
   { label: c.value.offer.basics, values: catalog.offers.map(() => c.value.offer.included) },
   { label: c.value.offer.ivy, values: catalog.offers.map(o => `${quantity(o.limits.ivyUnits)}${o.id === 'team' ? ' · ' + c.value.offer.seat : ''}`) },
-  // Transcription hours are not published: Free has a monthly allowance and paid plans fair use, both defined in the Terms.
-  { label: c.value.offer.asr, values: catalog.offers.map(o => o.id === 'free' ? c.value.offer.asrBasic : c.value.offer.asrUnlimited) },
+  // Fast allowance hours are not listed per plan. Paid plans continue in the slower queue for up to 150 h a month
+  // (per pool: the personal account, or each Team seat), then cloud transcription pauses until the next month.
+  { label: c.value.offer.asr, values: catalog.offers.map(o => o.id === 'free' ? c.value.offer.asrBasic : c.value.offer.asrPaid) },
   { label: c.value.offer.storage, values: catalog.offers.map(o => `${o.limits.storageBytes / 1e9} GB${o.id === 'team' ? ' · '+ c.value.offer.seat : ''}`) },
 ])
 </script>

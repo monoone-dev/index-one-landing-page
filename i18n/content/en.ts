@@ -3,7 +3,7 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — private AI meeting notes for Mac and the web, without a bot',
+      title: 'IndexOne — private AI meeting notes on your Mac, no bot needed',
       description: 'Record both sides of a call without a bot, transcribe it on your Mac and ask Ivy, with a receipt for every line. Free on the Mac; your cloud spaces open in any browser.',
     },
     features: {
@@ -19,7 +19,7 @@ const content: SiteContent = {
     pricing: {
       breadcrumb: 'Pricing',
       title: 'IndexOne pricing — Free, Personal and Team',
-      description: 'IndexOne is free on the Mac. Cloud plans: Personal 49 PLN a month, Team 75 PLN net per seat, both with unlimited cloud transcription under fair use. Cloud plans are on sale in the web app.',
+      description: 'IndexOne is free on the Mac. Cloud plans: Personal 49 PLN a month, Team 75 PLN net per seat, each with a monthly cloud transcription allowance and a slower queue after it. Cloud plans are on sale in the web app.',
     },
     changelog: {
       breadcrumb: 'Changelog',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "IndexOne meeting bot — information for meeting participants",
       description: "A meeting you are in is being recorded by the IndexOne bot. Who is responsible, what is recorded and why, how long it is kept and how to use your rights.",
     },
-    ogImageAlt: 'IndexOne — private AI meeting notes for Mac and the web, without a bot',
+    ogImageAlt: 'IndexOne — private AI meeting notes on your Mac, no bot needed',
   },
   common: {
     skipToContent: 'Skip to content',
@@ -138,7 +138,7 @@ const content: SiteContent = {
   },
   trust: {
     aria: 'At a glance',
-    items: ['No meeting bot', 'On-device transcription', 'Touch ID folder locks', 'Mac and web · iPhone app coming soon'],
+    items: ['No bot on the Mac', 'On-device transcription', 'Touch ID folder locks', 'Mac and web'],
   },
   unique: {
     eyebrow: 'Features',
@@ -374,9 +374,9 @@ const content: SiteContent = {
     "tax": "Personal includes tax. Team excludes tax: minimum 2 seats = 150 PLN net/month. At 23% VAT: 184.50 PLN total (92.25 per seat). Your tax may differ; the app must show the final total before purchase.",
     "trialTitle": "Free every month",
     "trial": "Every free account gets 200,000 Ivy units and a cloud transcription allowance each calendar month (UTC), without a card. Local Mac features have no plan limit.",
-    "meterTitle": "Unlimited cloud transcription",
-    "meter": "Paid plans have no cap on cloud transcription. When you transcribe a lot, some recordings may take a few hours to be ready. Fair use applies. Transcription on your Mac is always immediate and unlimited.",
-    "fairUse": "Paid plans include unlimited cloud transcription under fair use; the Free allowance and the fair use rules are set out in the Terms of service.",
+    "meterTitle": "Cloud transcription: fast, then a slower queue",
+    "meter": "Paid plans transcribe in the cloud at full speed up to a monthly allowance. After that, new recordings join a slower queue and may take a few hours to be ready, for up to 150 more hours a month (per seat on Team); then cloud transcription pauses until the next month. Transcription on your Mac is always immediate and unlimited.",
+    "fairUse": "Paid plans include a monthly cloud transcription allowance, then up to 150 hours a month in a slower queue; the Free allowance and the fair use rules are set out in the Terms of service.",
     "fairUseLink": "Read the Terms of service (in Polish)",
     "privacyTitle": "Local and cloud are different",
     "privacy": "Local Mac processing stays on your Mac. Standard account cloud stores and processes content on servers readable by the operator; it is not end-to-end encrypted. Pattern masking is not full anonymization. Paid plans never grant access to private spaces.",
@@ -388,7 +388,7 @@ const content: SiteContent = {
     "basics": "Cloud notes and sync in the browser",
     "ivy": "Cloud Ivy units / month",
     "asr": "Cloud transcription",
-    "asrUnlimited": "Unlimited · fair use",
+    "asrPaid": "Allowance, then a slower queue (up to 150 h)",
     "asrBasic": "Monthly allowance",
     "storage": "Cloud storage",
     "included": "Included",
@@ -425,7 +425,7 @@ const content: SiteContent = {
                 "Everything in Free",
                 "20 GB cloud storage",
                 "1.2M Ivy units a month",
-                "Unlimited cloud transcription, fair use",
+                "Cloud transcription: monthly allowance, then a slower queue",
                 "Screen recordings in the cloud"
             ],
             "cta": "Buy in the web app"
@@ -440,7 +440,7 @@ const content: SiteContent = {
                 "Everything in Personal",
                 "50 GB cloud storage per seat, shared",
                 "2.5M Ivy units per seat a month",
-                "Unlimited cloud transcription, fair use",
+                "Cloud transcription: monthly allowance, then a slower queue",
                 "Google Meet bot"
             ],
             "cta": "Buy in the web app"
@@ -487,7 +487,7 @@ const content: SiteContent = {
       },
       'platforms': {
         criterion: 'Platforms',
-        cells: ['macOS, web; iPhone app coming soon', 'macOS, Windows, Linux, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, iOS, iPadOS, web (beta)', 'macOS, Windows, iOS'],
+        cells: ['macOS, web', 'macOS, Windows, Linux, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, iOS, iPadOS, web (beta)', 'macOS, Windows, iOS'],
       },
       'price': {
         criterion: 'Price',
@@ -502,7 +502,7 @@ const content: SiteContent = {
     items: [
       {
         question: 'What does Free include?',
-        answer: 'On the Mac, everything: recording, transcription, notes, Ivy on this Mac and exports, with no account and no plan limit. A free account adds cloud notes, editing, search, sync, reading and export in the browser within 1 GB, plus a monthly allowance of Ivy units and cloud transcription. Paid plans add unlimited cloud transcription under fair use, more Ivy units and more storage.',
+        answer: 'On the Mac, everything: recording, transcription, notes, Ivy on this Mac and exports, with no account and no plan limit. A free account adds cloud notes, editing, search, sync, reading and export in the browser within 1 GB, plus a monthly allowance of Ivy units and cloud transcription. Paid plans add more cloud transcription (a monthly allowance, then up to 150 hours a month in a slower queue), more Ivy units and more storage.',
       },
       {
         question: 'Does my audio go to the cloud?',
@@ -599,11 +599,13 @@ const content: SiteContent = {
     lead: 'Download IndexOne for free and record your next meeting: no bot, no account, no card. Want your notes in the browser too? Create a free account.',
     compare: 'Compare the plans',
     download: 'Download for Mac — free',
+    brew: 'Prefer Homebrew?',
+    brewCopy: 'Copy the command',
     signup: 'Create a free account',
     legacyHtml: 'Running version 2.8.0 or earlier? Its update check can no longer reach us. Download the <a href="{download}">latest release</a> once and drag it into Applications, replacing the old copy; your library, recordings and settings stay where they are. From 2.9.0 on, the app finds new versions by itself.',
   },
   footer: {
-    legalHtml: 'Mac app and web app · iPhone app coming soon · on-device Ivy · built with Tauri, Angular and Rust · free on the Mac · © {year} <a href="{authors}">MonoOne</a> · text <a href="{license}">CC BY 4.0</a>',
+    legalHtml: 'Mac app and web app · on-device Ivy · built with Tauri, Angular and Rust · free on the Mac · © {year} <a href="{authors}">MonoOne</a> · text <a href="{license}">CC BY 4.0</a>',
     legalNav: 'Legal information',
     terms: 'Terms of service (PL)',
     privacyPolicy: 'Privacy policy (PL)',
