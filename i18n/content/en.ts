@@ -558,7 +558,7 @@ const content: SiteContent = {
     noticeNote: "The bot posts this message in English once it is let into the call. It does not record before the message is posted.",
     cards: {
       bot: { title: "What the bot is", body: "A notetaker that joins Google Meet as a participant, so it appears in the list of people in the call. Its name is the one chosen by the organization that sent it, usually that organization’s name, followed by “· IndexOne”, for example “Northwind · IndexOne”." },
-      controller: { title: "Who is responsible for your data", body: "The organization that sent the bot, the one shown in its name. It is the controller of your personal data: it decides to record the meeting, for what purpose, and what happens to the recording afterwards." },
+      controller: { title: "Who is responsible for your data", body: "The organization that sent the bot, the one shown in its name. It is the controller of your personal data. It decides to record the meeting, for what purpose, and what happens to the recording afterwards." },
       processor: { title: "What IndexOne does", body: "IndexOne is the processor. It records, transcribes and stores the meeting on behalf of that organization and only on its instructions. The provider of IndexOne is named in the IndexOne privacy policy." },
       recorded: { title: "What is recorded", body: "The sound of the meeting and a written transcript made from it. Whatever you say while the bot is in the call ends up in the recording and in the transcript." },
       purpose: { title: "Why it is recorded", body: "So that the organization has notes and summaries of its meeting. The recording is kept in that organization’s IndexOne workspace, where the people it allows can open it." },
