@@ -34,6 +34,10 @@ export type PillarId = 'capture' | 'ivy' | 'privacy'
 
 export type ShowcaseTabId = 'record' | 'ask' | 'export'
 
+export type MeetingBotCardId = 'bot' | 'controller' | 'processor' | 'recorded' | 'purpose' | 'storage'
+
+export type MeetingBotRightId = 'object' | 'access' | 'erasure' | 'complaint'
+
 export interface SiteContent {
   meta: {
     home: PageMeta
@@ -41,6 +45,7 @@ export interface SiteContent {
     privacy: PageMeta & { breadcrumb: string }
     pricing: PageMeta & { breadcrumb: string }
     changelog: PageMeta & { breadcrumb: string }
+    meetingBot: PageMeta & { breadcrumb: string }
     ogImageAlt: string
   }
   common: {
@@ -209,6 +214,21 @@ export interface SiteContent {
     showOlder: string
     empty: string
   }
+  /** /meeting-bot: the notice for people in a meeting recorded by the IndexOne Meet bot. */
+  meetingBot: {
+    eyebrow: string
+    title: string
+    lead: string
+    /** Label above the bot's chat message, which is shown verbatim in English. */
+    noticeLabel: string
+    noticeNote: string
+    cards: Record<MeetingBotCardId, Card>
+    /** Link text for the IndexOne privacy policy, which is in Polish. */
+    policyLink: string
+    rights: { eyebrow: string, title: string, lead: string, items: Record<MeetingBotRightId, Card> }
+    steps: { title: string, items: [Card, Card, Card] }
+    note: string
+  }
   cta: {
     title: string
     lead: string
@@ -219,5 +239,12 @@ export interface SiteContent {
   }
   footer: {
     legalHtml: string
+    legalNav: string
+    terms: string
+    privacyPolicy: string
+    withdrawal: string
+    dpa: string
+    meetingBot: string
+    contact: string
   }
 }

@@ -26,6 +26,11 @@ const content: SiteContent = {
       title: 'Lista zmian IndexOne — wydania aplikacji na Maca',
       description: 'Informacje o każdej wersji IndexOne na Maca, od najnowszej: nowe funkcje dla Ivy, organizacji i prywatności, poprawki, pliki do pobrania i daty wydań.',
     },
+    meetingBot: {
+      breadcrumb: "Bot spotkań",
+      title: "Bot spotkań IndexOne — informacja dla uczestników spotkań",
+      description: "Spotkanie, w którym bierzesz udział, nagrywa bot IndexOne. Kto odpowiada za dane, co i po co jest nagrywane, jak długo jest przechowywane i jak skorzystać ze swoich praw.",
+    },
     ogImageAlt: 'IndexOne — notatki i transkrypcja spotkań na Maca, z Ivy',
   },
   common: {
@@ -545,6 +550,42 @@ const content: SiteContent = {
     showOlder: 'Pokaż starsze wydania',
     empty: 'Brak wydań tego rodzaju.',
   },
+  meetingBot: {
+    eyebrow: "Dla uczestników spotkań",
+    title: "Bot IndexOne nagrywa Twoje spotkanie.",
+    lead: "Jesteś tutaj, bo do rozmowy w Google Meet, w której bierzesz udział, dołączył bot IndexOne do notatek. Ta strona wyjaśnia, kto nagrywa spotkanie, co dzieje się z nagraniem i co możesz z tym zrobić.",
+    noticeLabel: "Wiadomość, którą bot wysyła na czacie spotkania",
+    noticeNote: "Bot wysyła tę wiadomość po angielsku zaraz po wpuszczeniu do rozmowy. Zanim ją wyśle, nic nie nagrywa.",
+    cards: {
+      bot: { title: "Co to za bot", body: "Bot do notatek, który dołącza do Google Meet jako uczestnik, więc widać go na liście osób w rozmowie. Jego nazwa to nazwa wybrana przez organizację, która go wysłała, zwykle nazwa tej organizacji, a po niej „· IndexOne”, np. „Northwind · IndexOne”." },
+      controller: { title: "Kto odpowiada za Twoje dane", body: "Organizacja, która wysłała bota, czyli ta z jego nazwy. Jest administratorem Twoich danych osobowych: decyduje o nagraniu spotkania, o jego celu i o tym, co dzieje się z nagraniem potem." },
+      processor: { title: "Co robi IndexOne", body: "IndexOne jest podmiotem przetwarzającym. Nagrywa, transkrybuje i przechowuje spotkanie w imieniu tej organizacji i tylko na jej polecenie. Usługodawca IndexOne jest wskazany w polityce prywatności IndexOne." },
+      recorded: { title: "Co jest nagrywane", body: "Dźwięk spotkania i zrobiona z niego transkrypcja, czyli zapis tekstowy. Wszystko, co mówisz, gdy bot jest w rozmowie, trafia do nagrania i do transkrypcji." },
+      purpose: { title: "Po co", body: "Żeby organizacja miała notatki i podsumowania swojego spotkania. Nagranie trafia do przestrzeni roboczej tej organizacji w IndexOne, gdzie mogą je otworzyć osoby, którym na to pozwoli." },
+      storage: { title: "Jak długo jest przechowywane", body: "O tym, jak długo nagranie zostaje w przestrzeni roboczej, decyduje organizacja. Jak długo dane przechowuje IndexOne, opisuje polityka prywatności IndexOne." },
+    },
+    policyLink: "Polityka prywatności IndexOne",
+    rights: {
+      eyebrow: "Twoje prawa",
+      title: "Możesz się sprzeciwić, zobaczyć swoje dane i poprosić o ich usunięcie.",
+      lead: "Te prawa daje Ci RODO. Korzystaj z nich najpierw u organizacji, która wysłała bota, bo to ona decyduje o nagraniu.",
+      items: {
+        object: { title: "Sprzeciw", body: "Możesz sprzeciwić się nagrywaniu. W trakcie rozmowy poproś gospodarza o usunięcie bota albo opuść rozmowę. Po spotkaniu napisz organizacji, że sprzeciwiasz się wykorzystaniu nagrania." },
+        access: { title: "Dostęp", body: "Możesz zapytać organizację, czy ma nagranie lub transkrypcję z Twoim udziałem, i poprosić o kopię." },
+        erasure: { title: "Usunięcie", body: "Możesz poprosić organizację o usunięcie nagrania albo tych części transkrypcji, które Cię dotyczą." },
+        complaint: { title: "Skarga", body: "Możesz złożyć skargę do organu nadzorczego ds. ochrony danych, np. w kraju UE, w którym mieszkasz lub pracujesz. W Polsce jest to Prezes Urzędu Ochrony Danych Osobowych (UODO)." },
+      },
+    },
+    steps: {
+      title: "Jak skorzystać ze swoich praw",
+      items: [
+        { title: "W trakcie spotkania", body: "Poproś gospodarza o usunięcie bota albo opuść rozmowę. Nie musisz podawać powodu." },
+        { title: "Po spotkaniu", body: "Napisz do osoby, która zorganizowała spotkanie, albo do organizacji z nazwy bota. To ona odpowiada na Twój wniosek." },
+        { title: "Jeśli nie możesz się z nimi skontaktować", body: "Napisz do IndexOne na dane kontaktowe z polityki prywatności IndexOne i podaj, o które spotkanie chodzi. IndexOne przekaże Twój wniosek organizacji." },
+      ],
+    },
+    note: "Ta strona opisuje bota IndexOne ogólnie. Organizacja, która go wysłała, może mieć własną informację o prywatności z większą liczbą szczegółów; poproś ją o nią.",
+  },
   cta: {
     title: 'Zabierz Ivy na swoje spotkania — a kontrolę zostaw na Macu.',
     lead: 'Local-first na macOS. Zostań przy lokalnym AI albo świadomie włącz chmurowe AI z redakcją, kiedy zechcesz.',
@@ -555,6 +596,13 @@ const content: SiteContent = {
   },
   footer: {
     legalHtml: 'Najpierw macOS · Ivy na urządzeniu · local-first · zbudowane w Tauri, Angular i Rust · za darmo na macOS · © {year} <a href="{authors}">MonoOne</a> · tekst na licencji <a href="{license}">CC BY 4.0</a>',
+    legalNav: 'Informacje prawne',
+    terms: 'Regulamin',
+    privacyPolicy: 'Polityka prywatności',
+    withdrawal: 'Prawo odstąpienia',
+    dpa: 'Umowa powierzenia (DPA)',
+    meetingBot: 'Bot Meet: informacja dla uczestników',
+    contact: 'Kontakt',
   },
 }
 

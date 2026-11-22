@@ -26,6 +26,11 @@ const content: SiteContent = {
       title: 'IndexOne-Changelog — Versionshinweise der Mac-App',
       description: 'Versionshinweise zu jeder IndexOne-Version für den Mac, die neueste zuerst: Neues für Ivy, Organisationen und Datenschutz, Korrekturen und Downloads.',
     },
+    meetingBot: {
+      breadcrumb: "Meeting-Bot",
+      title: "IndexOne Meeting-Bot — Informationen für Meeting-Teilnehmende",
+      description: "Ein Meeting, an dem du teilnimmst, wird vom IndexOne-Bot aufgezeichnet. Wer verantwortlich ist, was und wozu aufgezeichnet wird, wie lange es gespeichert wird und wie du deine Rechte nutzt.",
+    },
     ogImageAlt: 'IndexOne — Meeting-Notizen und Transkription am Mac, mit Ivy',
   },
   common: {
@@ -545,6 +550,42 @@ const content: SiteContent = {
     showOlder: 'Ältere Versionen anzeigen',
     empty: 'Keine Versionen dieser Art.',
   },
+  meetingBot: {
+    eyebrow: "Für Meeting-Teilnehmende",
+    title: "Der IndexOne-Bot zeichnet dein Meeting auf.",
+    lead: "Du bist hier, weil der IndexOne-Notizbot einem Google-Meet-Anruf beigetreten ist, an dem du teilnimmst. Diese Seite erklärt, wer das Meeting aufzeichnet, was mit der Aufnahme passiert und was du dagegen tun kannst.",
+    noticeLabel: "Die Nachricht, die der Bot im Meeting-Chat postet",
+    noticeNote: "Der Bot postet diese Nachricht auf Englisch, sobald er in den Anruf gelassen wird. Bevor sie gepostet ist, nimmt er nichts auf.",
+    cards: {
+      bot: { title: "Was der Bot ist", body: "Ein Notizbot, der Google Meet als Teilnehmer beitritt und deshalb in der Liste der Personen im Anruf erscheint. Sein Name ist der, den die Organisation gewählt hat, die ihn geschickt hat, meist ihr eigener Name, gefolgt von „· IndexOne“, zum Beispiel „Northwind · IndexOne“." },
+      controller: { title: "Wer für deine Daten verantwortlich ist", body: "Die Organisation, die den Bot geschickt hat, also die in seinem Namen. Sie ist Verantwortliche für deine personenbezogenen Daten: Sie entscheidet, das Meeting aufzuzeichnen, zu welchem Zweck und was danach mit der Aufnahme geschieht." },
+      processor: { title: "Was IndexOne tut", body: "IndexOne ist Auftragsverarbeiter. Es zeichnet das Meeting im Auftrag dieser Organisation auf, transkribiert und speichert es, und zwar nur nach ihren Weisungen. Der Anbieter von IndexOne ist in der IndexOne-Datenschutzerklärung genannt." },
+      recorded: { title: "Was aufgezeichnet wird", body: "Der Ton des Meetings und ein daraus erstelltes schriftliches Transkript. Alles, was du sagst, während der Bot im Anruf ist, landet in der Aufnahme und im Transkript." },
+      purpose: { title: "Wozu", body: "Damit die Organisation Notizen und Zusammenfassungen ihres Meetings hat. Die Aufnahme liegt im IndexOne-Arbeitsbereich dieser Organisation, wo die Personen sie öffnen können, denen sie es erlaubt." },
+      storage: { title: "Wie lange es gespeichert wird", body: "Wie lange die Aufnahme in ihrem Arbeitsbereich bleibt, entscheidet die Organisation. Wie lange IndexOne Daten speichert, steht in der IndexOne-Datenschutzerklärung." },
+    },
+    policyLink: "IndexOne-Datenschutzerklärung (auf Polnisch)",
+    rights: {
+      eyebrow: "Deine Rechte",
+      title: "Du kannst widersprechen, deine Daten einsehen und ihre Löschung verlangen.",
+      lead: "Diese Rechte gibt dir die DSGVO. Mach sie zuerst bei der Organisation geltend, die den Bot geschickt hat, denn sie entscheidet über die Aufnahme.",
+      items: {
+        object: { title: "Widerspruch", body: "Du kannst der Aufzeichnung widersprechen. Bitte während des Anrufs den Host, den Bot zu entfernen, oder verlasse den Anruf. Teile der Organisation danach mit, dass du der Nutzung der Aufnahme widersprichst." },
+        access: { title: "Auskunft", body: "Du kannst die Organisation fragen, ob sie eine Aufnahme oder ein Transkript mit dir hat, und eine Kopie verlangen." },
+        erasure: { title: "Löschung", body: "Du kannst die Organisation bitten, die Aufnahme oder die Teile des Transkripts zu löschen, die dich betreffen." },
+        complaint: { title: "Beschwerde", body: "Du kannst dich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel in dem EU-Land, in dem du lebst oder arbeitest. In Polen ist das der Präsident des Amtes für den Schutz personenbezogener Daten (UODO)." },
+      },
+    },
+    steps: {
+      title: "So nutzt du deine Rechte",
+      items: [
+        { title: "Während des Meetings", body: "Bitte den Host, den Bot zu entfernen, oder verlasse den Anruf. Du musst keinen Grund nennen." },
+        { title: "Nach dem Meeting", body: "Schreib der Person, die das Meeting organisiert hat, oder der Organisation aus dem Namen des Bots. Sie ist dafür zuständig, deine Anfrage zu beantworten." },
+        { title: "Wenn du sie nicht erreichst", body: "Schreib IndexOne über die Kontaktdaten in der IndexOne-Datenschutzerklärung und nenne das Meeting. IndexOne leitet deine Anfrage an die Organisation weiter." },
+      ],
+    },
+    note: "Diese Seite beschreibt den IndexOne-Bot allgemein. Die Organisation, die ihn geschickt hat, hat vielleicht eigene Datenschutzhinweise mit mehr Details; frag sie danach.",
+  },
   cta: {
     title: 'Hol Ivy in deine Meetings – und behalte die Kontrolle auf deinem Mac.',
     lead: 'Local-first für macOS. Lass die KI lokal laufen oder entscheide dich ausdrücklich für geschwärzte Cloud-KI, wann immer du willst.',
@@ -555,6 +596,13 @@ const content: SiteContent = {
   },
   footer: {
     legalHtml: 'macOS-first · Ivy auf dem Gerät · local-first · gebaut mit Tauri, Angular und Rust · kostenlos für macOS · © {year} <a href="{authors}">MonoOne</a> · Text <a href="{license}">CC BY 4.0</a>',
+    legalNav: 'Rechtliche Hinweise',
+    terms: 'Nutzungsbedingungen (PL)',
+    privacyPolicy: 'Datenschutzerklärung (PL)',
+    withdrawal: 'Widerrufsrecht (PL)',
+    dpa: 'Auftragsverarbeitungsvertrag (PL)',
+    meetingBot: 'Meeting-Bot: Hinweise für Teilnehmende',
+    contact: 'Kontakt',
   },
 }
 
