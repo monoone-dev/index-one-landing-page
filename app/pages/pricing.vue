@@ -6,7 +6,7 @@ usePageSeo({
   path: '/pricing',
   meta: () => c.value.meta.pricing,
   schema: () => [
-    softwareApplicationSchema({ offers: undefined }),
+    softwareApplicationSchema(),
     {
       '@type': 'FAQPage',
       'mainEntity': c.value.faq.items.map(f => ({

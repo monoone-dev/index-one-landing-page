@@ -1,4 +1,5 @@
 import latest from '#release-latest'
+import catalog from '~/data/billing-catalog.v1.json'
 import { absoluteUrl, site } from '~/data/site'
 
 export interface Crumb {
@@ -130,6 +131,28 @@ function buildGraph(page: PageSeo, url: string, language: string, homeUrl: strin
   return graph
 }
 
+const planNames: Record<string, string> = { free: 'Free', personal: 'Personal', team: 'Team' }
+
+/** The plans from the billing catalog, as schema.org offers (monthly; Team is priced per seat, before tax). */
+const offers = catalog.offers.map((o) => {
+  const price = (o.price.amountMinor / 100).toFixed(2)
+  return {
+    '@type': 'Offer',
+    'name': planNames[o.id] ?? o.id,
+    'price': price,
+    'priceCurrency': o.price.currency,
+    'url': absoluteUrl('/pricing/'),
+    'priceSpecification': {
+      '@type': 'UnitPriceSpecification',
+      'price': price,
+      'priceCurrency': o.price.currency,
+      'valueAddedTaxIncluded': o.price.taxBehavior === 'inclusive',
+      'billingDuration': 'P1M',
+      ...(o.payerKind === 'workspace' ? { unitText: 'seat' } : {}),
+    },
+  }
+})
+
 export function softwareApplicationSchema(extra: Record<string, unknown> = {}) {
   return {
     '@type': 'SoftwareApplication',
@@ -149,6 +172,7 @@ export function softwareApplicationSchema(extra: Record<string, unknown> = {}) {
     'releaseNotes': absoluteUrl('/changelog/'),
     'softwareHelp': { '@type': 'CreativeWork', 'name': `${site.name} documentation`, 'url': absoluteUrl('/docs/') },
     'isAccessibleForFree': true,
+    'offers': offers,
     'publisher': { '@id': organizationId },
     ...extra,
   }
