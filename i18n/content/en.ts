@@ -3,8 +3,8 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — private AI meeting notes on your Mac, no bot needed',
-      description: 'Record both sides of a call without a bot, transcribe it on your Mac, ask Ivy and check notes against the recording. Free on the Mac; your cloud spaces open in any browser.',
+      title: 'IndexOne — private AI meeting notes on your Mac',
+      description: 'Record both sides of a call on your Mac without a bot, transcribe it on-device, ask Ivy and check notes against the recording. Free on the Mac; your cloud spaces open in any browser.',
     },
     features: {
       breadcrumb: 'Features',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "IndexOne meeting bot — information for meeting participants",
       description: "A meeting you are in is being recorded by the IndexOne bot. Who is responsible, what is recorded and why, how long it is kept and how to use your rights.",
     },
-    ogImageAlt: 'IndexOne — private AI meeting notes on your Mac, no bot needed',
+    ogImageAlt: 'IndexOne — private AI meeting notes on your Mac',
   },
   common: {
     skipToContent: 'Skip to content',
@@ -64,9 +64,9 @@ const content: SiteContent = {
   },
   hero: {
     githubAria: 'IndexOne on GitHub',
-    titleStrong: 'Meeting notes that stay on your Mac.',
-    titleSoft: 'No bot. A receipt for every line.',
-    subHtml: 'IndexOne records both sides of the call <b>without a bot</b>, transcribes it <b>on your Mac</b> and lets you ask Ivy — mid-meeting or months later — with a link to the second it was said. Free on the Mac, with no minute or history limit. Your cloud spaces open in any browser.',
+    titleStrong: 'Every meeting remembered.',
+    titleSoft: 'Every line with proof.',
+    subHtml: 'IndexOne records both sides of the call <b>on your Mac without a bot</b>, transcribes it <b>on-device</b> and lets you ask Ivy — mid-meeting or months later — with a link to the second it was said. Free on the Mac, with no minute or history limit. Your cloud spaces open in any browser.',
     download: 'Download for Mac — free',
     signup: 'Create a free account',
     note: 'Apple Silicon (M1 or later) · macOS 13.4+ · signed and notarized · no account needed on the Mac',

@@ -3,8 +3,8 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — prywatne notatki ze spotkań z AI na Twoim Macu, bez bota',
-      description: 'Nagrywaj obie strony rozmowy bez bota, transkrybuj je na Macu, pytaj Ivy i sprawdzaj notatki z nagraniem. Za darmo na Macu; przestrzenie w chmurze otworzysz w każdej przeglądarce.',
+      title: 'IndexOne — prywatne notatki ze spotkań z AI na Twoim Macu',
+      description: 'Nagrywaj obie strony rozmowy na Macu bez bota, transkrybuj je na urządzeniu, pytaj Ivy i sprawdzaj notatki z nagraniem. Za darmo na Macu; przestrzenie w chmurze otworzysz w każdej przeglądarce.',
     },
     features: {
       breadcrumb: 'Funkcje',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "Bot spotkań IndexOne — informacja dla uczestników spotkań",
       description: "Spotkanie, w którym bierzesz udział, nagrywa bot IndexOne. Kto odpowiada za dane, co i po co jest nagrywane, jak długo jest przechowywane i jak skorzystać ze swoich praw.",
     },
-    ogImageAlt: 'IndexOne — prywatne notatki ze spotkań z AI na Twoim Macu, bez bota',
+    ogImageAlt: 'IndexOne — prywatne notatki ze spotkań z AI na Twoim Macu',
   },
   common: {
     skipToContent: 'Przejdź do treści',
@@ -64,9 +64,9 @@ const content: SiteContent = {
   },
   hero: {
     githubAria: 'IndexOne na GitHubie',
-    titleStrong: 'Notatki ze spotkań, które zostają na Twoim Macu.',
-    titleSoft: 'Bez bota. Z dowodami.',
-    subHtml: 'IndexOne nagrywa obie strony rozmowy <b>bez bota</b>, transkrybuje je <b>na Twoim Macu</b> i pozwala zapytać Ivy — w trakcie spotkania albo pół roku później — z odnośnikiem do sekundy, w której to padło. Za darmo na Macu, bez limitu minut i historii. Przestrzenie w chmurze otworzysz w każdej przeglądarce.',
+    titleStrong: 'Każde spotkanie zapamiętane.',
+    titleSoft: 'Każde zdanie z dowodem.',
+    subHtml: 'IndexOne nagrywa obie strony rozmowy <b>na Macu bez bota</b>, transkrybuje je <b>na urządzeniu</b> i pozwala zapytać Ivy — w trakcie spotkania albo pół roku później — z odnośnikiem do sekundy, w której to padło. Za darmo na Macu, bez limitu minut i historii. Przestrzenie w chmurze otworzysz w każdej przeglądarce.',
     download: 'Pobierz na Maca za darmo',
     signup: 'Załóż darmowe konto',
     note: 'Apple Silicon (M1 lub nowszy) · macOS 13.4+ · podpisany i notaryzowany · na Macu bez zakładania konta',

@@ -3,8 +3,8 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — 在你的 Mac 上的私密 AI 会议笔记，无需机器人',
-      description: '无需机器人即可录下通话双方，在 Mac 上转写，向 Ivy 提问，并对照录音核对笔记。Mac 上免费；你的云端空间可在任何浏览器中打开。',
+      title: 'IndexOne — 在你的 Mac 上的私密 AI 会议笔记',
+      description: '在 Mac 上无需机器人即可录下通话双方，在 Mac 上转写，向 Ivy 提问，并对照录音核对笔记。Mac 上免费；你的云端空间可在任何浏览器中打开。',
     },
     features: {
       breadcrumb: '功能',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "IndexOne 会议机器人 — 致会议参与者",
       description: "你参加的会议正在由 IndexOne 机器人录制。谁对数据负责、录制什么以及为何录制、保存多久，以及如何行使你的权利。",
     },
-    ogImageAlt: 'IndexOne — 在你的 Mac 上的私密 AI 会议笔记，无需机器人',
+    ogImageAlt: 'IndexOne — 在你的 Mac 上的私密 AI 会议笔记',
   },
   common: {
     skipToContent: '跳到正文',
@@ -64,9 +64,9 @@ const content: SiteContent = {
   },
   hero: {
     githubAria: 'GitHub 上的 IndexOne',
-    titleStrong: '会议笔记，始终留在你的 Mac 上。',
-    titleSoft: '无需机器人，每一行都有凭证。',
-    subHtml: 'IndexOne <b>无需机器人</b>即可录下通话双方，<b>在你的 Mac 上</b>完成转写，并让你向 Ivy 提问——无论是会议进行中还是数月之后——回答会链接到原话所在的那一秒。Mac 上免费，不限分钟数，也不限历史记录。你的云端空间可在任何浏览器中打开。',
+    titleStrong: '每场会议都记得。',
+    titleSoft: '每句话都有凭据。',
+    subHtml: 'IndexOne <b>在 Mac 上无需机器人</b>即可录下通话双方，<b>在你的 Mac 上</b>完成转写，并让你向 Ivy 提问——无论是会议进行中还是数月之后——回答会链接到原话所在的那一秒。Mac 上免费，不限分钟数，也不限历史记录。你的云端空间可在任何浏览器中打开。',
     download: '免费下载 Mac 版',
     signup: '免费创建账户',
     note: 'Apple Silicon（M1 及更新机型）· macOS 13.4+ · 已签名并通过公证 · 在 Mac 上使用无需账户',

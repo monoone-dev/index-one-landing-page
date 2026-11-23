@@ -3,8 +3,8 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — notas de reuniones con IA privada en tu Mac, sin bot',
-      description: 'Graba ambos lados de una llamada sin bot, transcríbela en tu Mac, pregúntale a Ivy y contrasta las notas con la grabación. Gratis en el Mac; tus espacios en la nube se abren en cualquier navegador.',
+      title: 'IndexOne — notas de reuniones con IA privada en tu Mac',
+      description: 'Graba ambos lados de una llamada en tu Mac sin bot, transcríbela en tu Mac, pregúntale a Ivy y contrasta las notas con la grabación. Gratis en el Mac; tus espacios en la nube se abren en cualquier navegador.',
     },
     features: {
       breadcrumb: 'Funciones',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "Bot de reuniones de IndexOne — información para los participantes",
       description: "El bot de IndexOne está grabando una reunión en la que participas. Quién es responsable, qué se graba y para qué, cuánto tiempo se guarda y cómo ejercer tus derechos.",
     },
-    ogImageAlt: 'IndexOne — notas de reuniones con IA privada en tu Mac, sin bot',
+    ogImageAlt: 'IndexOne — notas de reuniones con IA privada en tu Mac',
   },
   common: {
     skipToContent: 'Saltar al contenido',
@@ -64,9 +64,9 @@ const content: SiteContent = {
   },
   hero: {
     githubAria: 'IndexOne en GitHub',
-    titleStrong: 'Notas de reuniones que se quedan en tu Mac.',
-    titleSoft: 'Sin bot. Un recibo para cada línea.',
-    subHtml: 'IndexOne graba ambos lados de la llamada <b>sin bot</b>, la transcribe <b>en tu Mac</b> y te deja preguntarle a Ivy —en plena reunión o meses después— con un enlace al segundo en que se dijo. Gratis en el Mac, sin límite de minutos ni de historial. Tus espacios en la nube se abren en cualquier navegador.',
+    titleStrong: 'Cada reunión recordada.',
+    titleSoft: 'Cada frase con pruebas.',
+    subHtml: 'IndexOne graba ambos lados de la llamada <b>en tu Mac sin bot</b>, la transcribe <b>en tu Mac</b> y te deja preguntarle a Ivy —en plena reunión o meses después— con un enlace al segundo en que se dijo. Gratis en el Mac, sin límite de minutos ni de historial. Tus espacios en la nube se abren en cualquier navegador.',
     download: 'Descargar para Mac — gratis',
     signup: 'Crear una cuenta gratuita',
     note: 'Apple Silicon (M1 o posterior) · macOS 13.4+ · firmada y notarizada · sin necesidad de cuenta en el Mac',
