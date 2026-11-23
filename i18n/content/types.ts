@@ -108,6 +108,7 @@ export interface SiteContent {
       lead: string
       tabsLabel: string
       tabs: Record<ShowcaseTabId, string>
+      iphone: { eyebrow: string, title: string, body: string, videoLabel: string }
     }
     security: { more: string }
     news: { eyebrow: string, title: string, lead: string, read: string, all: string }

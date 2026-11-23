@@ -67,6 +67,8 @@ function onKey(event: KeyboardEvent, index: number) {
           <ScreenShot :shot="shot" :alt="copy.alt" />
         </div>
       </div>
+
+      <ShowcaseIphone />
     </div>
   </section>
 </template>

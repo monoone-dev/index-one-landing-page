@@ -70,8 +70,8 @@ const content: SiteContent = {
     download: 'Pobierz na Maca za darmo',
     signup: 'Załóż darmowe konto',
     note: 'Apple Silicon (M1 lub nowszy) · macOS 13.4+ · podpisany i notaryzowany · na Macu bez zakładania konta',
-    videoLabel: '90-sekundowa prezentacja IndexOne: nagrywane spotkanie i notatka pisana równolegle, notatka utworzona po spotkaniu i wyciągnięte z niej punkty, oś czasu mówców, pytanie zadane Ivy o cały sejf i odpowiedź ze źródłami, graf wiedzy, pasek Workspaces i wyszukiwanie na urządzeniu, projekt, People oraz Workspace, który nie chce się otworzyć, bo jest zapieczętowany',
-    play: 'Obejrzyj 90-sekundową prezentację',
+    videoLabel: '47-sekundowa prezentacja IndexOne w przeglądarce: nagrywane spotkanie i notatki pisane obok, notatka od Ivy ze streszczeniem, decyzjami i zadaniami, transkrypcja pokazująca, kto co powiedział, wyszukiwanie dokładnego fragmentu, pytanie do Ivy i odpowiedź ze źródłami, Space udostępniony całemu zespołowi oraz zaproszenie nowej osoby do zespołu',
+    play: 'Obejrzyj prezentację',
   },
   home: {
     announce: { badge: 'Nowość', text: 'Wyszło IndexOne {version} — zobacz, co się zmieniło' },
@@ -120,6 +120,12 @@ const content: SiteContent = {
       lead: 'Nagraj spotkanie, zapytaj o nie, wyeksportuj je do Markdown. Wybierz krok, aby go zobaczyć.',
       tabsLabel: 'Przegląd produktu',
       tabs: { record: 'Nagraj', ask: 'Zapytaj', export: 'Zachowaj' },
+      iphone: {
+        eyebrow: 'iPhone',
+        title: 'Twoje spotkania także na iPhonie.',
+        body: 'Nagraj spotkanie telefonem albo dodaj nagranie z aplikacji Pliki. Nagranie zostaje na telefonie, dopóki go nie zatrzymasz, potem trafia do Twojej przestrzeni i jest transkrybowane w chmurze. Notatka od Ivy i pełna transkrypcja otwierają się od razu w telefonie. Aplikacja na iPhone wkrótce trafi do App Store.',
+        videoLabel: '49-sekundowa prezentacja IndexOne na iPhonie: ekran główny z ostatnimi notatkami i nagraniami, lista nagrań, notatka od Ivy z decyzjami i zadaniami, transkrypcja z podziałem na mówców, spotkanie nagrywane telefonem oraz plik audio dodany z aplikacji Pliki',
+      },
     },
     security: { more: 'Poznaj model prywatności' },
     news: {

@@ -70,8 +70,8 @@ const content: SiteContent = {
     download: 'Scarica per Mac — gratis',
     signup: 'Crea un account gratuito',
     note: 'Apple Silicon (M1 o successivi) · macOS 13.4+ · firmata e notarizzata · nessun account necessario sul Mac',
-    videoLabel: 'Un tour di 90 secondi di IndexOne: una riunione registrata mentre accanto si scrive una nota, la nota redatta dopo e gli elementi che ne estrae, la timeline degli interlocutori, una domanda posta a Ivy su tutto il vault e la risposta con le fonti, il grafo della conoscenza, la barra dei Workspace e la ricerca sul dispositivo, un progetto, People, e un Workspace che si rifiuta di aprirsi perché è sigillato',
-    play: 'Guarda il tour di 90 secondi',
+    videoLabel: 'Un tour di 47 secondi di IndexOne nel browser: una riunione registrata mentre accanto si scrivono appunti, la nota di Ivy con riepilogo, decisioni e attività, la trascrizione con chi ha detto cosa, la ricerca di un passaggio esatto, una domanda a Ivy con risposta e fonti, uno Space condiviso con tutto il team e l’invito a una nuova persona del team',
+    play: 'Guarda il tour',
   },
   home: {
     announce: { badge: 'Novità', text: 'È uscito IndexOne {version}: scopri cosa è cambiato' },
@@ -120,6 +120,12 @@ const content: SiteContent = {
       lead: 'Registra la riunione, fai domande, esportala in Markdown. Scegli un passaggio per vederlo.',
       tabsLabel: 'Tour del prodotto',
       tabs: { record: 'Registra', ask: 'Chiedi', export: 'Conserva' },
+      iphone: {
+        eyebrow: 'iPhone',
+        title: 'Le tue riunioni, anche su iPhone.',
+        body: 'Registra una riunione con il telefono o importa una registrazione dall’app File. Resta sul telefono finché non la fermi, poi viene caricata nel tuo spazio e trascritta nel cloud. La nota di Ivy e la trascrizione completa si aprono direttamente sul telefono. Un’app per iPhone è in arrivo sull’App Store.',
+        videoLabel: 'Un tour di 49 secondi di IndexOne su iPhone: la schermata iniziale con note e registrazioni recenti, l’elenco delle registrazioni, la nota di Ivy con decisioni e attività, la trascrizione divisa per interlocutore, una riunione registrata con il telefono e un file audio importato dall’app File',
+      },
     },
     security: { more: 'Leggi il modello di privacy' },
     news: {
