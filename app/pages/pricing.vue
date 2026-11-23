@@ -22,7 +22,6 @@ usePageSeo({
 <template>
   <main id="main">
     <PricingSection :level="1" />
-    <OfferContext :show-status="false" />
     <FaqSection />
     <CtaSection />
   </main>

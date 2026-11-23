@@ -1,0 +1,118 @@
+// Offer illustrations (app/components/illustrations): decorative inline SVG drawn with theme tokens
+// only, so each scene follows light and dark mode. Opaque fills come from color-mix, because
+// overlapping shapes in a translucent token would show darker seams.
+
+.art {
+  --art-tint: color-mix(in oklch, var(--accent) 14%, var(--surface-raised));
+  --art-tint-strong: color-mix(in oklch, var(--accent) 28%, var(--surface-raised));
+  --art-ivy-tint: color-mix(in oklch, var(--ivy) 18%, var(--surface-raised));
+  --art-line: color-mix(in oklch, var(--text-primary) 16%, var(--surface-raised));
+
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+
+  &__device {
+    fill: var(--surface-raised);
+    stroke: var(--border-strong);
+    stroke-width: 1.5;
+  }
+
+  &__screen {
+    fill: var(--surface-sunken);
+  }
+
+  &__panel {
+    fill: var(--surface-raised);
+    stroke: var(--border-strong);
+    stroke-width: 1.5;
+  }
+
+  &__bar {
+    fill: var(--surface-sunken);
+  }
+
+  &__dot {
+    fill: var(--art-line);
+  }
+
+  &__line {
+    fill: var(--art-line);
+  }
+
+  &__accent {
+    fill: var(--accent);
+  }
+
+  &__ivy {
+    fill: var(--ivy);
+  }
+
+  &__tint {
+    fill: var(--art-tint);
+  }
+
+  &__tint-strong {
+    fill: var(--art-tint-strong);
+  }
+
+  &__ivy-tint {
+    fill: var(--art-ivy-tint);
+  }
+
+  &__live {
+    fill: var(--live);
+  }
+
+  &__stroke {
+    fill: none;
+    stroke: var(--accent-text);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &__dash {
+    fill: none;
+    stroke: var(--accent-text);
+    stroke-width: 1.5;
+    stroke-dasharray: 3 5;
+    stroke-linecap: round;
+    opacity: 0.7;
+  }
+
+  &__badge {
+    fill: var(--safe-soft);
+    stroke: var(--safe-text);
+    stroke-width: 1.5;
+  }
+
+  &__check {
+    fill: none;
+    stroke: var(--safe-text);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &__stop-a {
+    stop-color: var(--accent);
+  }
+
+  &__stop-b {
+    stop-color: var(--ivy);
+  }
+
+  &__divider {
+    stroke: var(--surface-raised);
+    stroke-width: 2;
+    opacity: 0.55;
+  }
+
+  &__ground {
+    stroke: var(--border-strong);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+  }
+}

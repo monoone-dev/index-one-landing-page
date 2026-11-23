@@ -27,13 +27,14 @@ usePageSeo({
   <main id="main">
     <HeroSection />
     <TrustStrip />
+    <OfferContext />
     <PillarsSection />
     <StatsBand />
     <ShowcaseTabs />
     <UniqueSection />
     <SecurityBand />
     <WhatsNew />
-    <OfferContext />
+    <PricingSection compact />
     <CtaSection />
   </main>
 </template>
