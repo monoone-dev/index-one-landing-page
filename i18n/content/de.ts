@@ -3,8 +3,8 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — private KI-Meeting-Notizen für Mac und Web, ohne Bot',
-      description: 'Nimm beide Seiten eines Calls ohne Bot auf, transkribiere ihn auf deinem Mac und frag Ivy – mit einem Beleg für jede Zeile. Auf dem Mac kostenlos; deine Cloud-Bereiche öffnen sich in jedem Browser.',
+      title: 'IndexOne — private KI-Meeting-Notizen auf deinem Mac, ohne Bot',
+      description: 'Nimm beide Seiten eines Calls ohne Bot auf, transkribiere ihn auf deinem Mac, frag Ivy und prüf Notizen direkt an der Aufnahme. Auf dem Mac kostenlos; deine Cloud-Bereiche öffnen sich in jedem Browser.',
     },
     features: {
       breadcrumb: 'Funktionen',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "IndexOne Meeting-Bot — Informationen für Meeting-Teilnehmende",
       description: "Ein Meeting, an dem du teilnimmst, wird vom IndexOne-Bot aufgezeichnet. Wer verantwortlich ist, was und wozu aufgezeichnet wird, wie lange es gespeichert wird und wie du deine Rechte nutzt.",
     },
-    ogImageAlt: 'IndexOne — private KI-Meeting-Notizen für Mac und Web, ohne Bot',
+    ogImageAlt: 'IndexOne — private KI-Meeting-Notizen auf deinem Mac, ohne Bot',
   },
   common: {
     skipToContent: 'Zum Inhalt springen',
@@ -138,12 +138,12 @@ const content: SiteContent = {
   },
   trust: {
     aria: 'Auf einen Blick',
-    items: ['Kein Meeting-Bot', 'Transkription auf dem Gerät', 'Ordnersperren per Touch ID', 'Mac und Web · iPhone-App folgt bald'],
+    items: ['Auf dem Mac ohne Bot', 'Transkription auf dem Gerät', 'Ordnersperren per Touch ID', 'Mac und Web · iPhone-App folgt bald'],
   },
   unique: {
     eyebrow: 'Funktionen',
     title: 'Ein Meeting-Tool, das sich wirklich erinnert.',
-    lead: 'Viele Apps speichern Notizen oder transkribieren Calls. IndexOne nimmt beide Seiten des Calls auf deinem Mac auf, lässt dich Ivy schon während des Meetings fragen und zeigt, woher jede Zeile stammt, die es schreibt.',
+    lead: 'Viele Apps speichern Notizen oder transkribieren Calls. IndexOne nimmt beide Seiten des Calls auf deinem Mac auf, lässt dich Ivy schon während des Meetings fragen und verknüpft Aussagen in seinen Notizen, wo immer möglich, mit der Stelle in der Aufnahme.',
     items: {
       'live': {
         title: 'Frag Ivy mitten im Meeting – alles bleibt auf deinem Mac',
@@ -156,8 +156,8 @@ const content: SiteContent = {
         link: 'Aufnahme und Transkription',
       },
       'receipts': {
-        title: 'Für jede Aussage gibt es einen Beleg',
-        body: 'Jede belegte Zeile einer Notiz verlinkt auf die Sekunde Audio, aus der sie stammt – mit Sprecher. Zeilen ohne Beleg bekommen keinen, so siehst du, was verifiziert ist.',
+        title: 'Belege führen zurück zur Aufnahme',
+        body: 'Jede belegte Zeile einer Notiz verlinkt auf die Sekunde Audio, aus der sie stammt – mit Sprecher. Zeilen ohne Beleg bekommen keinen, so siehst du, welche Zeilen eine wahrscheinliche Quelle in der Aufnahme haben.',
         link: 'Belege',
       },
       'security': {
@@ -226,7 +226,7 @@ const content: SiteContent = {
       },
       'update-check': {
         title: 'Was IndexOne sendet, ohne dass du darum bittest',
-        body: 'Beim Start fragt IndexOne bei GitHub nach, ob es eine neuere Version gibt; die Anfrage nennt die Version, die du nutzt, und sonst nichts. War auf diesem Mac schon einmal ein Konto angemeldet, fragt es außerdem beim Start und jede Stunde beim IndexOne-Server nach, ob deine Version noch unterstützt wird – ohne Inhalte. Einmal am Tag sendet es eine kleine Nutzungsmeldung: eine zufällige Installations-ID, die App- und macOS-Version, die Prozessorarchitektur, die Sprache und ob du angemeldet bist – keine Meetings, Notizen, Aufnahmen oder Namen. Anonym ist sie nur, solange du abgemeldet bist; bist du angemeldet, wird sie mit deinem Konto gesendet. Beim ersten Transkribieren lädt es zwei kleine Sprachmodelle von Hugging Face herunter, für die Spracherkennung und die Sprechertrennung. Die Update-Prüfung und die Nutzungsmeldung kannst du unter <b>Settings → Privacy</b> abschalten. Es sind die einzigen Dinge auf dieser Seite, die passieren, ohne dass du darum bittest – und genau deshalb stehen sie hier.',
+        body: 'Beim Start fragt IndexOne bei GitHub nach, ob es eine neuere Version gibt; die Anfrage nennt die Version, die du nutzt, und sonst nichts. Solange die Update-Prüfung an ist (standardmäßig der Fall) oder wenn auf diesem Mac schon einmal ein Konto angemeldet war, fragt es außerdem beim Start und jede Stunde beim IndexOne-Server nach, ob deine Version noch unterstützt wird – ohne Inhalte. Einmal am Tag sendet es eine kleine Nutzungsmeldung: eine zufällige Installations-ID, die App- und macOS-Version, die Prozessorarchitektur, die Sprache und ob du angemeldet bist – keine Meetings, Notizen, Aufnahmen oder Namen. Anonym ist sie nur, solange du abgemeldet bist; bist du angemeldet, wird sie mit deinem Konto gesendet. Beim ersten Transkribieren lädt es zwei kleine Sprachmodelle von Hugging Face herunter, für die Spracherkennung und die Sprechertrennung. Die Update-Prüfung und die Nutzungsmeldung kannst du unter <b>Settings → Privacy & Security</b> abschalten. Ohne Update-Prüfung entfällt auch die Versionsabfrage, außer auf diesem Mac war schon einmal ein Konto angemeldet. Es sind die einzigen Dinge auf dieser Seite, die passieren, ohne dass du darum bittest – und genau deshalb stehen sie hier.',
       },
     },
     tableCaption: 'Wo jeder KI-Anbieter läuft und ob Meeting-Text deinen Mac verlässt',
@@ -332,8 +332,8 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Belege',
-        title: 'Jede Aussage führt zurück zur Aufnahme.',
-        body: 'Die Notizen von IndexOne verlangen kein blindes Vertrauen. Jede Zeile, die sich auf tatsächlich Gesagtes stützt, trägt einen Beleg – ein Klick springt direkt zu dieser Sekunde Audio, mit Sprecher. Umschriebene oder unbelegte Zeilen bekommen keinen, so siehst du auf einen Blick, was verifiziert ist.',
+        title: 'Belegte Aussagen führen zurück zur Aufnahme.',
+        body: 'Die Notizen von IndexOne verlangen kein blindes Vertrauen. Jede Zeile, die sich auf tatsächlich Gesagtes stützt, trägt einen Beleg – ein Klick springt direkt zu dieser Sekunde Audio, mit Sprecher. Umschriebene oder unbelegte Zeilen bekommen keinen, so siehst du auf einen Blick, welche Zeilen eine wahrscheinliche Quelle in der Aufnahme haben.',
         points: [
           'Klick auf eine Aussage und hör genau, woher sie kommt',
           'Sprecher und genaue Sekunde auf jedem Beleg',
@@ -624,6 +624,8 @@ const content: SiteContent = {
     lead: 'Lade IndexOne kostenlos herunter und nimm dein nächstes Meeting auf: kein Bot, kein Konto, keine Karte. Du willst deine Notizen auch im Browser? Erstelle ein kostenloses Konto.',
     compare: 'Pläne vergleichen',
     download: 'Für Mac laden – kostenlos',
+    brew: 'Lieber mit Homebrew?',
+    brewCopy: 'Befehl kopieren',
     signup: 'Kostenloses Konto erstellen',
     legacyHtml: 'Du nutzt Version 2.8.0 oder älter? Deren Update-Prüfung erreicht uns nicht mehr. Lade einmal die <a href="{download}">neueste Version</a> herunter und zieh sie in den Ordner „Programme“, um die alte Kopie zu ersetzen; deine Bibliothek, Aufnahmen und Einstellungen bleiben, wo sie sind. Ab 2.9.0 findet die App neue Versionen von selbst.',
   },

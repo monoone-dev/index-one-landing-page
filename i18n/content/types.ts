@@ -256,6 +256,10 @@ export interface SiteContent {
     lead: string
     compare: string
     download: string
+    /** Label before the Homebrew install command. */
+    brew: string
+    /** Accessible name of the copy button next to the Homebrew command. */
+    brewCopy: string
     signup: string
     legacyHtml: string
   }

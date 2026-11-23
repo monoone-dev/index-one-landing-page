@@ -3,8 +3,8 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — notas de reunião privadas com IA para Mac e web, sem bot',
-      description: 'Grave os dois lados de uma chamada sem bot, transcreva no seu Mac e pergunte à Ivy, com um recibo para cada linha. Grátis no Mac; seus espaços na nuvem abrem em qualquer navegador.',
+      title: 'IndexOne — notas de reunião privadas com IA no seu Mac, sem bot',
+      description: 'Grave os dois lados de uma chamada sem bot, transcreva no seu Mac, pergunte à Ivy e confira as notas com a gravação. Grátis no Mac; seus espaços na nuvem abrem em qualquer navegador.',
     },
     features: {
       breadcrumb: 'Recursos',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "Bot de reuniões do IndexOne — informações para participantes",
       description: "O bot do IndexOne está gravando uma reunião da qual você participa. Quem é responsável, o que é gravado e para quê, por quanto tempo fica guardado e como exercer seus direitos.",
     },
-    ogImageAlt: 'IndexOne — notas de reunião privadas com IA para Mac e web, sem bot',
+    ogImageAlt: 'IndexOne — notas de reunião privadas com IA no seu Mac, sem bot',
   },
   common: {
     skipToContent: 'Pular para o conteúdo',
@@ -138,12 +138,12 @@ const content: SiteContent = {
   },
   trust: {
     aria: 'Em resumo',
-    items: ['Sem bot de reunião', 'Transcrição no dispositivo', 'Pastas bloqueadas com Touch ID', 'Mac e web · app para iPhone em breve'],
+    items: ['Sem bot no Mac', 'Transcrição no dispositivo', 'Pastas bloqueadas com Touch ID', 'Mac e web · app para iPhone em breve'],
   },
   unique: {
     eyebrow: 'Recursos',
     title: 'Uma ferramenta de reuniões que realmente lembra.',
-    lead: 'Muitos apps guardam notas ou transcrevem chamadas. O IndexOne grava os dois lados da chamada no seu Mac, deixa você perguntar à Ivy durante a reunião e mostra de onde veio cada linha que escreve.',
+    lead: 'Muitos apps guardam notas ou transcrevem chamadas. O IndexOne grava os dois lados da chamada no seu Mac, deixa você perguntar à Ivy durante a reunião e, sempre que possível, liga as afirmações das notas ao momento da gravação de onde vieram.',
     items: {
       'live': {
         title: 'Pergunte à Ivy no meio da reunião — e mantenha tudo no seu Mac',
@@ -156,8 +156,8 @@ const content: SiteContent = {
         link: 'Captura e transcrição',
       },
       'receipts': {
-        title: 'Toda afirmação tem um recibo',
-        body: 'Cada linha embasada de uma nota leva ao segundo exato do áudio de onde veio, com quem falou. Linhas sem evidência ficam sem recibo, então você vê o que está verificado.',
+        title: 'Os recibos levam ao áudio',
+        body: 'Cada linha embasada de uma nota leva ao segundo exato do áudio de onde veio, com quem falou. Linhas sem evidência ficam sem recibo, então você vê quais linhas têm uma fonte provável na gravação.',
         link: 'Recibos',
       },
       'security': {
@@ -226,7 +226,7 @@ const content: SiteContent = {
       },
       'update-check': {
         title: 'O que o IndexOne envia sem você pedir',
-        body: 'Ao abrir, o IndexOne pergunta ao GitHub se existe uma versão mais nova; a requisição informa qual versão você está usando, e nada mais. Se alguma conta já foi conectada neste Mac, ele também pergunta ao servidor do IndexOne, ao abrir e a cada hora, se a sua versão ainda é suportada, sem nenhum conteúdo. Uma vez por dia, ele envia uma pequena mensagem de uso: um ID de instalação aleatório, as versões do app e do macOS, a arquitetura do processador, o idioma e se você está conectado — nada de reuniões, notas, gravações ou nomes. Ela só é anônima enquanto você não está conectado; quando você está conectado, é enviada com a sua conta. Na primeira vez que você transcreve, ele baixa do Hugging Face dois pequenos modelos de fala, para detecção de voz e separação de falantes. Você pode desligar a verificação de atualizações e a mensagem de uso em <b>Settings → Privacy</b>. São as únicas coisas nesta página que acontecem sem você pedir, e é exatamente por isso que elas estão nesta página.',
+        body: 'Ao abrir, o IndexOne pergunta ao GitHub se existe uma versão mais nova; a requisição informa qual versão você está usando, e nada mais. Enquanto a verificação de atualizações estiver ligada (ela vem ligada por padrão), ou se alguma conta já foi conectada neste Mac, ele também pergunta ao servidor do IndexOne, ao abrir e a cada hora, se a sua versão ainda é suportada, sem nenhum conteúdo. Uma vez por dia, ele envia uma pequena mensagem de uso: um ID de instalação aleatório, as versões do app e do macOS, a arquitetura do processador, o idioma e se você está conectado — nada de reuniões, notas, gravações ou nomes. Ela só é anônima enquanto você não está conectado; quando você está conectado, é enviada com a sua conta. Na primeira vez que você transcreve, ele baixa do Hugging Face dois pequenos modelos de fala, para detecção de voz e separação de falantes. Você pode desligar a verificação de atualizações e a mensagem de uso em <b>Settings → Privacy & Security</b>. Sem a verificação de atualizações, a consulta de versão também para, a menos que alguma conta já tenha sido conectada neste Mac. São as únicas coisas nesta página que acontecem sem você pedir, e é exatamente por isso que elas estão nesta página.',
       },
     },
     tableCaption: 'Onde cada provedor de IA roda e se o texto das reuniões sai do seu Mac',
@@ -332,8 +332,8 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Recibos',
-        title: 'Toda afirmação leva de volta à gravação.',
-        body: 'As notas do IndexOne não pedem que você confie nelas. Cada linha baseada no que foi realmente dito traz um recibo — clique nele para ir direto àquele segundo do áudio, com quem falou. Linhas parafraseadas ou sem embasamento ficam sem recibo, então você vê de relance o que está verificado.',
+        title: 'Afirmações fundamentadas levam de volta à gravação.',
+        body: 'As notas do IndexOne não pedem que você confie nelas. Cada linha baseada no que foi realmente dito traz um recibo — clique nele para ir direto àquele segundo do áudio, com quem falou. Linhas parafraseadas ou sem embasamento ficam sem recibo, então você vê de relance quais linhas têm uma fonte provável na gravação.',
         points: [
           'Clique em uma afirmação e ouça exatamente de onde ela veio',
           'Quem falou e o segundo exato em cada recibo',
@@ -624,6 +624,8 @@ const content: SiteContent = {
     lead: 'Baixe o IndexOne de graça e grave sua próxima reunião: sem bot, sem conta, sem cartão. Quer suas notas também no navegador? Crie uma conta gratuita.',
     compare: 'Comparar planos',
     download: 'Baixar para Mac — grátis',
+    brew: 'Prefere o Homebrew?',
+    brewCopy: 'Copiar o comando',
     signup: 'Criar uma conta gratuita',
     legacyHtml: 'Usa a versão 2.8.0 ou anterior? A verificação de atualizações dela não consegue mais nos alcançar. Baixe a <a href="{download}">versão mais recente</a> uma vez e arraste para Aplicativos, substituindo a cópia antiga; sua biblioteca, gravações e configurações continuam onde estão. A partir da 2.9.0, o app encontra novas versões sozinho.',
   },

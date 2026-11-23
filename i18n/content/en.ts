@@ -3,8 +3,8 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — private AI meeting notes for Mac and the web, without a bot',
-      description: 'Record both sides of a call without a bot, transcribe it on your Mac and ask Ivy, with a receipt for every line. Free on the Mac; your cloud spaces open in any browser.',
+      title: 'IndexOne — private AI meeting notes on your Mac, no bot needed',
+      description: 'Record both sides of a call without a bot, transcribe it on your Mac, ask Ivy and check notes against the recording. Free on the Mac; your cloud spaces open in any browser.',
     },
     features: {
       breadcrumb: 'Features',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "IndexOne meeting bot — information for meeting participants",
       description: "A meeting you are in is being recorded by the IndexOne bot. Who is responsible, what is recorded and why, how long it is kept and how to use your rights.",
     },
-    ogImageAlt: 'IndexOne — private AI meeting notes for Mac and the web, without a bot',
+    ogImageAlt: 'IndexOne — private AI meeting notes on your Mac, no bot needed',
   },
   common: {
     skipToContent: 'Skip to content',
@@ -138,12 +138,12 @@ const content: SiteContent = {
   },
   trust: {
     aria: 'At a glance',
-    items: ['No meeting bot', 'On-device transcription', 'Touch ID folder locks', 'Mac and web · iPhone app coming soon'],
+    items: ['No bot on the Mac', 'On-device transcription', 'Touch ID folder locks', 'Mac and web · iPhone app coming soon'],
   },
   unique: {
     eyebrow: 'Features',
     title: 'A meeting tool that actually remembers.',
-    lead: 'Plenty of apps store notes or transcribe calls. IndexOne records both sides of the call on your Mac, lets you ask Ivy during the meeting, and shows where every line it writes came from.',
+    lead: 'Plenty of apps store notes or transcribe calls. IndexOne records both sides of the call on your Mac, lets you ask Ivy during the meeting, and links claims in its notes back to the moment in the recording, wherever it can match them.',
     items: {
       'live': {
         title: 'Ask Ivy mid-meeting — and keep it on your Mac',
@@ -156,8 +156,8 @@ const content: SiteContent = {
         link: 'Capture and transcription',
       },
       'receipts': {
-        title: 'Every claim has a receipt',
-        body: 'Each grounded line in a note links to the second of audio it came from, with the speaker. Lines without evidence get no receipt, so you see what is verified.',
+        title: 'Receipts point back to the audio',
+        body: 'Each grounded line in a note links to the second of audio it came from, with the speaker. Lines without evidence get no receipt, so you can see which lines have a likely source in the recording.',
         link: 'Receipts',
       },
       'security': {
@@ -226,7 +226,7 @@ const content: SiteContent = {
       },
       'update-check': {
         title: 'What IndexOne sends without you asking',
-        body: 'At launch IndexOne asks GitHub whether a newer version exists; the request says which version you are running, and nothing else. If an account has ever been signed in on this Mac, it also asks the IndexOne server at launch and every hour whether your version is still supported, with no content. Once a day it sends one small usage message: a random install ID, the app and macOS versions, the processor architecture, the language and whether you are signed in — no meetings, notes, recordings or names. It is anonymous only while you are signed out; when you are signed in, it is sent with your account. The first time you transcribe, it downloads two small speech models, for voice detection and speaker separation, from Hugging Face. Switch off the update check and the usage message in <b>Settings → Privacy</b>. These are the only things on this page that happen without you asking, which is exactly why they are on this page.',
+        body: 'At launch IndexOne asks GitHub whether a newer version exists; the request says which version you are running, and nothing else. While the update check is on (it is by default), or if an account has ever been signed in on this Mac, it also asks the IndexOne server at launch and every hour whether your version is still supported, with no content. Once a day it sends one small usage message: a random install ID, the app and macOS versions, the processor architecture, the language and whether you are signed in — no meetings, notes, recordings or names. It is anonymous only while you are signed out; when you are signed in, it is sent with your account. The first time you transcribe, it downloads two small speech models, for voice detection and speaker separation, from Hugging Face. Switch off the update check and the usage message in <b>Settings → Privacy & Security</b>. With the update check off, the version question stops too, unless an account has ever been signed in on this Mac. These are the only things on this page that happen without you asking, which is exactly why they are on this page.',
       },
     },
     tableCaption: 'Where each AI provider runs, and whether meeting text leaves your Mac',
@@ -332,8 +332,8 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Receipts',
-        title: 'Every claim traces back to the tape.',
-        body: 'IndexOne\'s notes don\'t ask you to trust them. Each line that\'s grounded in what was actually said carries a receipt — click it to jump straight to that second of audio, with the speaker. Paraphrased or unsupported lines get none, so you can see at a glance what\'s verified.',
+        title: 'Grounded claims trace back to the tape.',
+        body: 'IndexOne\'s notes don\'t ask you to trust them. Each line that\'s grounded in what was actually said carries a receipt — click it to jump straight to that second of audio, with the speaker. Paraphrased or unsupported lines get none, so you can see at a glance which lines have a likely source in the recording.',
         points: [
           'Click a claim, hear exactly where it came from',
           'The speaker and the exact second on every receipt',
@@ -624,6 +624,8 @@ const content: SiteContent = {
     lead: 'Download IndexOne for free and record your next meeting: no bot, no account, no card. Want your notes in the browser too? Create a free account.',
     compare: 'Compare the plans',
     download: 'Download for Mac — free',
+    brew: 'Prefer Homebrew?',
+    brewCopy: 'Copy the command',
     signup: 'Create a free account',
     legacyHtml: 'Running version 2.8.0 or earlier? Its update check can no longer reach us. Download the <a href="{download}">latest release</a> once and drag it into Applications, replacing the old copy; your library, recordings and settings stay where they are. From 2.9.0 on, the app finds new versions by itself.',
   },

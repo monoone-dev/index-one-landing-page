@@ -14,7 +14,7 @@ during the meeting and across everything you have ever recorded.
 [Release notes](https://github.com/monoone-dev/index-one-landing-page/releases) ·
 [Support](#support)
 
-macOS 13.4+ · Apple Silicon only (M1 or later) · signed and notarized · free during early access
+macOS 13.4+ · Apple Silicon only (M1 or later) · signed and notarized · free on the Mac, optional cloud plans
 
 ## Contents
 
@@ -46,8 +46,10 @@ IndexOne's public home. The app's source code is not public and is not here.
 
 1. **Record** — press Record (or `⌘⇧R` from any app). Your microphone and the other side's audio are
    captured as two streams.
-2. **Transcribe** — both streams are transcribed on your Mac with Whisper and merged into one
-   **Me / Others** transcript. There is no cloud transcription.
+2. **Transcribe** — in the On this Mac space, both streams are transcribed on your Mac with Whisper
+   and merged into one **Me / Others** transcript, with no cloud transcription. Spaces you keep in
+   your IndexOne account (Personal or an organization) can use Ivy on the web, which transcribes on
+   IndexOne's servers.
 3. **Write the note** — when you stop, the AI you chose writes a summary, decisions, action items and
    quotes. Each grounded line links back to the second of audio it came from.
 4. **Ask Ivy** — mid-meeting without stopping the recording, or months later across every meeting,
@@ -55,17 +57,19 @@ IndexOne's public home. The app's source code is not public and is not here.
 
 Also included: Workspaces (one tree for recordings, notes, tasks and boards), composable dashboards,
 offline imports from Notion, Obsidian and Apple Notes, a Markdown editor with Ivy actions, documents
-(PDF, Office, web pages, images) indexed next to your meetings, and optional end-to-end encrypted
-sharing through Shared Ivy.
+(PDF, Office, web pages, images) indexed next to your meetings, and optional cloud spaces in your
+IndexOne account that open in any browser at [app.index-one.io](https://app.index-one.io/). Cloud
+spaces are stored on servers the operator can read; they are not end-to-end encrypted.
 
 **Where Ivy runs is your choice:**
 
 | Connection | Where it runs | Does meeting text leave your Mac? |
 | --- | --- | --- |
-| On-device Ivy (Qwen3 or Bielik, downloaded once) | Your Mac | No |
-| Ollama at a local address | Your Mac | No |
-| Claude Code (default note writer), Codex | Local CLI → provider | Only after consent; redacted first |
-| Anthropic API (your key, in the Keychain), Kong or another OpenAI-compatible gateway | Direct HTTPS | Only after consent; redacted first |
+| Ivy on this Mac (Bielik or Qwen, downloaded once) | Your Mac | No |
+| Local AI server (Ollama, LM Studio and others) on this Mac | Your Mac | No |
+| Local AI server elsewhere on your network | Your network | Only after you confirm its address; redacted first |
+| Claude Code, Codex | Local CLI → provider's cloud | Only after consent; redacted first |
+| Ivy on the web (Personal and organization spaces) | IndexOne's servers, with Anthropic Claude models | Yes — the space itself lives in your account |
 
 The full feature list is on [index-one.io](https://index-one.io/#features) and in the
 [documentation](https://index-one.io/docs/).
@@ -76,6 +80,12 @@ The full feature list is on [index-one.io](https://index-one.io/#features) and i
    [latest release](https://github.com/monoone-dev/index-one-landing-page/releases/latest).
 2. Open the DMG and drag **IndexOne** into **Applications**.
 3. Open it from Applications and confirm **Open** when macOS asks.
+
+Or install it with [Homebrew](https://brew.sh):
+
+```bash
+brew install --cask monoone-dev/tap/index-one
+```
 
 Every release is signed with an Apple Developer ID and notarized, with the ticket stapled to the DMG.
 If macOS says the app "cannot be opened" or "is damaged", don't work around it: delete the file,
@@ -102,23 +112,29 @@ Audio Recording (first recording — audio only, never your screen), Calendars, 
 Automation → Notes (Apple Notes import) and Touch ID (unlocking a locked folder). Details:
 [Your first recording](https://index-one.io/docs/first-recording/).
 
-**Updates.** At launch the app asks GitHub whether a newer release exists; the request carries only
-the app version. Turn it off in **Settings → Privacy & Integrations**. The app never installs
-anything by itself — download the new DMG and replace the old copy; your library stays put.
-Versions 2.8.0 and earlier can no longer reach the update check: download the
+**Updates.** From 3.8 on, IndexOne updates from inside the app: **Settings › About › Software
+update** downloads the new version, checks its signature and installs it when you choose **Install
+update**; nothing is installed without you. At launch the app also asks GitHub whether a newer
+release exists; the request names the app and its version, nothing else. Turn that off with **Check
+for updates on launch** in **Settings › Privacy & Security**. Versions 2.8.0 and earlier can no longer
+reach the update check: download the
 [latest release](https://github.com/monoone-dev/index-one-landing-page/releases/latest) once.
+More: [Install and update](https://index-one.io/docs/install-and-updates/).
 
 ## Privacy in one table
 
-Recording, transcription, search and on-device Ivy work with no network connection.
+In the On this Mac space, recording, transcription, search and Ivy on this Mac work with no network
+connection once the speech models are downloaded.
 
 | What can leave your Mac | When | Where it goes |
 | --- | --- | --- |
 | Update check — the app version, no content, no account | At launch (can be turned off) | `api.github.com` |
+| Usage message — a random install ID, the app and macOS versions, the processor type, the language and whether you are signed in; no content. Anonymous only while you are signed out: when signed in, it is sent with your account | Once a day (can be turned off) | IndexOne's server |
+| Version support check — whether your version is still supported; the app version, no content | At launch and every hour, while **Check for updates on launch** is on (the default) or if an account has ever been signed in on this Mac | IndexOne's server |
 | Model downloads — nothing about you | Only when you start one | Hugging Face |
 | **Redacted** meeting text | Only with a cloud AI connection **and** one-time consent | The provider you chose |
 | Redacted connector queries | Only for connectors you enabled | That service |
-| **Encrypted** notes, summaries and tasks | Only when you share, with an account | The sharing relay (ciphertext only) |
+| Meetings and notes you save to Personal or an organization space, with their recording, transcript and files | Only when you save them there, with an account | Your IndexOne account (not end-to-end encrypted) |
 
 The database is encrypted with SQLCipher. Any Workspace or folder can also be locked with
 AES-256-GCM under a key only Touch ID or your login password releases; a locked folder is invisible
@@ -130,11 +146,12 @@ to the app, search, the graph, MCP and the audio player until unlocked. More:
 
 ## Obsidian, MCP and your own agent
 
-- **Obsidian** — pick a vault folder and every note is written there as plain Markdown with YAML
-  front-matter, `[[wikilinks]]`, `obsidian://` block references and an optional `.canvas` board.
+- **Obsidian** — import a vault: `[[wikilinks]]` and front matter are already the format IndexOne
+  uses, so nothing is rewritten. Any meeting exports as Markdown or PDF. See
+  [Imports and export](https://index-one.io/docs/imports-and-export/).
 - **MCP** — a read-only [Model Context Protocol](https://modelcontextprotocol.io) server on
   `127.0.0.1:8765`, loopback-only and protected by a bearer token. Copy the real config, token
-  included, from **Settings → Privacy & Integrations → Local server for Claude → Copy config**:
+  included, from **Settings › Connectors › Local server for Claude › Copy config**:
 
   ```json
   {
@@ -157,7 +174,7 @@ to the app, search, the graph, MCP and the audio player until unlocked. More:
 | --- | --- |
 | Library, recordings, models, logs | `~/Library/Application Support/MeetNotes/` |
 | Encryption and API keys | macOS Keychain, items named `com.meetnotes.app` |
-| Exported notes | The vault folder you chose |
+| Exported notes | The folder you export to |
 
 The folder keeps the app's original internal name. Don't rename it, or the app starts with an empty
 library.
@@ -170,7 +187,7 @@ library.
    `com.meetnotes.app` items in Keychain Access.
 3. Optional: `tccutil reset All com.meetnotes.app` clears the macOS permissions.
 
-A sharing account is not deleted by uninstalling; see
+An IndexOne account is not deleted by uninstalling; see
 [SUPPORT.md](SUPPORT.md#deleting-a-sharing-account).
 
 ## Working on the website

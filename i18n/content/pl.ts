@@ -3,8 +3,8 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — prywatne notatki ze spotkań z AI na Maca i w przeglądarce, bez bota',
-      description: 'Nagrywaj obie strony rozmowy bez bota, transkrybuj je na Macu i pytaj Ivy, z dowodem przy każdym zdaniu. Za darmo na Macu; przestrzenie w chmurze otworzysz w każdej przeglądarce.',
+      title: 'IndexOne — prywatne notatki ze spotkań z AI na Twoim Macu, bez bota',
+      description: 'Nagrywaj obie strony rozmowy bez bota, transkrybuj je na Macu, pytaj Ivy i sprawdzaj notatki z nagraniem. Za darmo na Macu; przestrzenie w chmurze otworzysz w każdej przeglądarce.',
     },
     features: {
       breadcrumb: 'Funkcje',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "Bot spotkań IndexOne — informacja dla uczestników spotkań",
       description: "Spotkanie, w którym bierzesz udział, nagrywa bot IndexOne. Kto odpowiada za dane, co i po co jest nagrywane, jak długo jest przechowywane i jak skorzystać ze swoich praw.",
     },
-    ogImageAlt: 'IndexOne — prywatne notatki ze spotkań z AI na Maca i w przeglądarce, bez bota',
+    ogImageAlt: 'IndexOne — prywatne notatki ze spotkań z AI na Twoim Macu, bez bota',
   },
   common: {
     skipToContent: 'Przejdź do treści',
@@ -138,12 +138,12 @@ const content: SiteContent = {
   },
   trust: {
     aria: 'W skrócie',
-    items: ['Bez bota na spotkaniu', 'Transkrypcja na urządzeniu', 'Blokady folderów Touch ID', 'Mac i przeglądarka · wkrótce iPhone'],
+    items: ['Na Macu bez bota', 'Transkrypcja na urządzeniu', 'Blokady folderów Touch ID', 'Mac i przeglądarka · wkrótce iPhone'],
   },
   unique: {
     eyebrow: 'Funkcje',
     title: 'Narzędzie do spotkań, które naprawdę pamięta.',
-    lead: 'Wiele aplikacji przechowuje notatki albo transkrybuje rozmowy. IndexOne nagrywa obie strony rozmowy na Twoim Macu, pozwala pytać Ivy w trakcie spotkania i pokazuje, skąd pochodzi każda linijka, którą napisze.',
+    lead: 'Wiele aplikacji przechowuje notatki albo transkrybuje rozmowy. IndexOne nagrywa obie strony rozmowy na Twoim Macu, pozwala pytać Ivy w trakcie spotkania i tam, gdzie się da, łączy twierdzenia z notatki z momentem w nagraniu.',
     items: {
       'live': {
         title: 'Pytaj Ivy w trakcie spotkania — wszystko zostaje na Macu',
@@ -156,8 +156,8 @@ const content: SiteContent = {
         link: 'Nagrywanie i transkrypcja',
       },
       'receipts': {
-        title: 'Każde twierdzenie ma swój dowód',
-        body: 'Każda poparta linijka notatki prowadzi do sekundy nagrania, z której pochodzi, razem z mówcą. Linijki bez pokrycia nie dostają dowodu, więc widzisz, co jest zweryfikowane.',
+        title: 'Dowód prowadzi do nagrania',
+        body: 'Każda poparta linijka notatki prowadzi do sekundy nagrania, z której pochodzi, razem z mówcą. Linijki bez pokrycia nie dostają dowodu, więc widzisz, które linijki mają prawdopodobne źródło w nagraniu.',
         link: 'Dowody',
       },
       'security': {
@@ -226,7 +226,7 @@ const content: SiteContent = {
       },
       'update-check': {
         title: 'Co IndexOne wysyła bez Twojej prośby',
-        body: 'Przy uruchomieniu IndexOne pyta GitHub, czy jest nowsza wersja; zapytanie zawiera numer wersji, której używasz, i nic więcej. Jeśli na tym Macu kiedykolwiek zalogowano konto, pyta też serwer IndexOne przy uruchomieniu i co godzinę, czy Twoja wersja jest nadal wspierana, bez żadnej treści. Raz dziennie wysyła jedną małą wiadomość o użyciu: losowy identyfikator instalacji, wersję aplikacji i macOS, architekturę procesora, język i to, czy jesteś zalogowany — żadnych spotkań, notatek, nagrań ani nazwisk. Jest anonimowa tylko, gdy jesteś wylogowany; gdy jesteś zalogowany, jest wysyłana z Twoim kontem. Przy pierwszej transkrypcji pobiera z Hugging Face dwa małe modele mowy: do wykrywania głosu i rozdzielania mówców. Sprawdzanie aktualizacji i wiadomość o użyciu wyłączysz w <b>Settings → Privacy</b>. To jedyne rzeczy na tej stronie, które dzieją się bez Twojej prośby — i właśnie dlatego się tu znalazły.',
+        body: 'Przy uruchomieniu IndexOne pyta GitHub, czy jest nowsza wersja; zapytanie zawiera numer wersji, której używasz, i nic więcej. Gdy sprawdzanie aktualizacji jest włączone (domyślnie jest) albo jeśli na tym Macu kiedykolwiek zalogowano konto, pyta też serwer IndexOne przy uruchomieniu i co godzinę, czy Twoja wersja jest nadal wspierana, bez żadnej treści. Raz dziennie wysyła jedną małą wiadomość o użyciu: losowy identyfikator instalacji, wersję aplikacji i macOS, architekturę procesora, język i to, czy jesteś zalogowany — żadnych spotkań, notatek, nagrań ani nazwisk. Jest anonimowa tylko, gdy jesteś wylogowany; gdy jesteś zalogowany, jest wysyłana z Twoim kontem. Przy pierwszej transkrypcji pobiera z Hugging Face dwa małe modele mowy: do wykrywania głosu i rozdzielania mówców. Sprawdzanie aktualizacji i wiadomość o użyciu wyłączysz w <b>Settings → Privacy & Security</b>. Po wyłączeniu sprawdzania aktualizacji ustaje też pytanie o wersję, chyba że na tym Macu kiedykolwiek zalogowano konto. To jedyne rzeczy na tej stronie, które dzieją się bez Twojej prośby — i właśnie dlatego się tu znalazły.',
       },
     },
     tableCaption: 'Gdzie działa każdy dostawca AI i czy tekst ze spotkań opuszcza Twojego Maca',
@@ -332,8 +332,8 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Dowody',
-        title: 'Każde twierdzenie prowadzi do nagrania.',
-        body: 'Notatki IndexOne nie wymagają ślepego zaufania. Każda linijka oparta na tym, co faktycznie padło, ma swój dowód — kliknij, a przeskoczysz dokładnie do tej sekundy nagrania, z mówcą. Parafrazy i linijki bez pokrycia go nie dostają, więc od razu widzisz, co jest zweryfikowane.',
+        title: 'Twierdzenia oparte na rozmowie prowadzą do nagrania.',
+        body: 'Notatki IndexOne nie wymagają ślepego zaufania. Każda linijka oparta na tym, co faktycznie padło, ma swój dowód — kliknij, a przeskoczysz dokładnie do tej sekundy nagrania, z mówcą. Parafrazy i linijki bez pokrycia go nie dostają, więc od razu widzisz, które linijki mają prawdopodobne źródło w nagraniu.',
         points: [
           'Kliknij twierdzenie i usłysz, skąd dokładnie pochodzi',
           'Przy każdym dowodzie: kto mówił i w której dokładnie sekundzie',
@@ -624,6 +624,8 @@ const content: SiteContent = {
     lead: 'Pobierz IndexOne za darmo i nagraj najbliższe spotkanie: bez bota, bez konta, bez karty. Chcesz mieć notatki także w przeglądarce? Załóż darmowe konto.',
     compare: 'Porównaj plany',
     download: 'Pobierz na Maca za darmo',
+    brew: 'Wolisz Homebrew?',
+    brewCopy: 'Skopiuj polecenie',
     signup: 'Załóż darmowe konto',
     legacyHtml: 'Masz wersję 2.8.0 lub starszą? Jej sprawdzanie aktualizacji już do nas nie dociera. Pobierz raz <a href="{download}">najnowsze wydanie</a> i przeciągnij je do folderu Aplikacje, zastępując starą kopię; Twoja biblioteka, nagrania i ustawienia zostaną na miejscu. Od wersji 2.9.0 aplikacja sama znajduje nowe wersje.',
   },
