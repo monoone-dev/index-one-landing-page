@@ -70,8 +70,8 @@ const content: SiteContent = {
     download: 'Download for Mac — free',
     signup: 'Create a free account',
     note: 'Apple Silicon (M1 or later) · macOS 13.4+ · signed and notarized · no account needed on the Mac',
-    videoLabel: 'A 90-second tour of IndexOne: a meeting being recorded while a note is typed alongside it, the note written afterwards and the items it pulls out, the speaker timeline, a question asked of Ivy across the whole vault and answered with sources, the knowledge graph, the Workspaces rail and on-device search, a project, People, and a Workspace refusing to open because it is sealed',
-    play: 'Watch the 90-second tour',
+    videoLabel: 'A 47-second tour of IndexOne in the browser: a meeting recorded while notes are typed beside it, the note Ivy writes with a summary, decisions and action items, the transcript showing who said what, a search for an exact passage, a question to Ivy answered with sources, a Space shared with the whole team, and a teammate being invited',
+    play: 'Watch the tour',
   },
   home: {
     announce: { badge: 'New', text: 'IndexOne {version} is out — see what changed' },
@@ -120,6 +120,12 @@ const content: SiteContent = {
       lead: 'Record the meeting, ask about it, export it as Markdown. Pick a step to see it.',
       tabsLabel: 'Product tour',
       tabs: { record: 'Record', ask: 'Ask', export: 'Keep' },
+      iphone: {
+        eyebrow: 'iPhone',
+        title: 'Your meetings, on your iPhone too.',
+        body: 'Record a meeting on the phone, or bring a recording in from Files. It stays on the phone until you stop, then it is uploaded to your space and transcribed in the cloud. Ivy\'s note and the full transcript open right there. The iPhone app is coming to the App Store.',
+        videoLabel: 'A 49-second tour of IndexOne on iPhone: the home screen with recent notes and recordings, the list of recordings, Ivy\'s note with decisions and action items, the transcript split by speaker, a meeting recorded on the phone, and an audio file imported from Files',
+      },
     },
     security: { more: 'Read the privacy model' },
     news: {

@@ -70,8 +70,8 @@ const content: SiteContent = {
     download: '免费下载 Mac 版',
     signup: '免费创建账户',
     note: 'Apple Silicon（M1 及更新机型）· macOS 13.4+ · 已签名并通过公证 · 在 Mac 上使用无需账户',
-    videoLabel: 'IndexOne 90 秒导览：一边录制会议一边在旁记笔记；会后整理的笔记及从中提取的要点；发言人时间线；向 Ivy 提出跨整个知识库的问题并获得附带出处的回答；知识图谱；Workspaces 侧栏与设备端搜索；项目；People；以及一个因已加密封存而拒绝打开的 Workspace',
-    play: '观看 90 秒导览',
+    videoLabel: 'IndexOne 浏览器版 47 秒导览：一边录制会议一边在旁记笔记；Ivy 写出的笔记，含摘要、决定和待办事项；标明谁说了什么的转写；搜索确切段落；向 Ivy 提问并获得附带出处的回答；与整个团队共享的 Space；以及邀请新的团队成员',
+    play: '观看导览',
   },
   home: {
     announce: { badge: '新版本', text: 'IndexOne {version} 已发布，看看有哪些变化' },
@@ -120,6 +120,12 @@ const content: SiteContent = {
       lead: '录制会议、就会议提问、导出为 Markdown。选择一个步骤查看。',
       tabsLabel: '产品导览',
       tabs: { record: '录制', ask: '提问', export: '保存' },
+      iphone: {
+        eyebrow: 'iPhone',
+        title: '你的会议，iPhone 上也有。',
+        body: '用 iPhone 录制会议，或从“文件”应用导入录音。停止之前录音保存在手机上，停止后上传到你的空间并在云端转写。Ivy 的笔记和完整转写可直接在手机上打开。iPhone 应用即将登陆 App Store。',
+        videoLabel: 'IndexOne iPhone 版 49 秒导览：显示最近笔记和录音的主屏幕、录音列表、含决定和待办事项的 Ivy 笔记、按发言人分开的转写、用手机录制会议，以及从“文件”应用导入音频文件',
+      },
     },
     security: { more: '阅读隐私模型' },
     news: {

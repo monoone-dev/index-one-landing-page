@@ -70,8 +70,8 @@ const content: SiteContent = {
     download: 'Baixar para Mac — grátis',
     signup: 'Criar uma conta gratuita',
     note: 'Apple Silicon (M1 ou posterior) · macOS 13.4+ · assinado e notarizado · sem necessidade de conta no Mac',
-    videoLabel: 'Um tour de 90 segundos pelo IndexOne: uma reunião sendo gravada enquanto uma nota é digitada ao lado, a nota escrita depois e os itens que ela extrai, a linha do tempo de quem fala, uma pergunta feita à Ivy sobre todo o acervo e respondida com fontes, o grafo de conhecimento, a barra de Workspaces e a busca no dispositivo, um projeto, Pessoas, e um Workspace que se recusa a abrir porque está selado',
-    play: 'Assista ao tour de 90 segundos',
+    videoLabel: 'Um tour de 47 segundos pelo IndexOne no navegador: uma reunião sendo gravada enquanto notas são digitadas ao lado, a nota que a Ivy escreve com resumo, decisões e tarefas, a transcrição com quem disse o quê, a busca por um trecho exato, uma pergunta feita à Ivy e respondida com fontes, um Space compartilhado com toda a equipe e o convite a mais uma pessoa da equipe',
+    play: 'Assista ao tour',
   },
   home: {
     announce: { badge: 'Novo', text: 'Chegou o IndexOne {version}: veja o que mudou' },
@@ -120,6 +120,12 @@ const content: SiteContent = {
       lead: 'Grave a reunião, pergunte sobre ela e exporte-a em Markdown. Escolha uma etapa para vê-la.',
       tabsLabel: 'Tour do produto',
       tabs: { record: 'Gravar', ask: 'Perguntar', export: 'Guardar' },
+      iphone: {
+        eyebrow: 'iPhone',
+        title: 'Suas reuniões, também no iPhone.',
+        body: 'Grave uma reunião pelo celular ou traga uma gravação do app Arquivos. Ela fica no celular até você parar; depois é enviada ao seu espaço e transcrita na nuvem. A nota da Ivy e a transcrição completa abrem ali mesmo. Um app para iPhone está a caminho da App Store.',
+        videoLabel: 'Um tour de 49 segundos pelo IndexOne no iPhone: a tela inicial com notas e gravações recentes, a lista de gravações, a nota da Ivy com decisões e tarefas, a transcrição separada por quem fala, uma reunião gravada pelo celular e um arquivo de áudio importado do app Arquivos',
+      },
     },
     security: { more: 'Leia o modelo de privacidade' },
     news: {

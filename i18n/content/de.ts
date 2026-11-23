@@ -70,8 +70,8 @@ const content: SiteContent = {
     download: 'Für Mac laden – kostenlos',
     signup: 'Kostenloses Konto erstellen',
     note: 'Apple Silicon (M1 oder neuer) · macOS 13.4+ · signiert und notarisiert · auf dem Mac kein Konto nötig',
-    videoLabel: 'Eine 90-Sekunden-Tour durch IndexOne: ein Meeting wird aufgenommen, während daneben eine Notiz entsteht, die danach geschriebene Notiz und die Punkte, die sie herauszieht, die Sprecher-Zeitleiste, eine Frage an Ivy über den ganzen Vault mit Antwort samt Quellen, der Wissensgraph, die Workspaces-Leiste und die Suche auf dem Gerät, ein Projekt, People und ein Workspace, der sich nicht öffnet, weil er versiegelt ist',
-    play: 'Die 90-Sekunden-Tour ansehen',
+    videoLabel: 'Eine 47-Sekunden-Tour durch IndexOne im Browser: ein Meeting wird aufgenommen, während daneben Notizen entstehen, die Notiz von Ivy mit Zusammenfassung, Entscheidungen und Aufgaben, das Transkript, das zeigt, wer was gesagt hat, die Suche nach einer genauen Textstelle, eine Frage an Ivy mit Antwort samt Quellen, ein Space für das ganze Team und die Einladung einer weiteren Person ins Team',
+    play: 'Die Tour ansehen',
   },
   home: {
     announce: { badge: 'Neu', text: 'IndexOne {version} ist da — sieh dir die Änderungen an' },
@@ -120,6 +120,12 @@ const content: SiteContent = {
       lead: 'Nimm das Meeting auf, frag danach, exportiere es als Markdown. Wähle einen Schritt, um ihn zu sehen.',
       tabsLabel: 'Produkttour',
       tabs: { record: 'Aufnehmen', ask: 'Fragen', export: 'Behalten' },
+      iphone: {
+        eyebrow: 'iPhone',
+        title: 'Deine Meetings, auch auf dem iPhone.',
+        body: 'Nimm ein Meeting mit dem iPhone auf oder hol eine Aufnahme aus der Dateien-App. Sie bleibt auf dem Telefon, bis du stoppst; dann wird sie in deinen Space hochgeladen und in der Cloud transkribiert. Ivys Notiz und das vollständige Transkript öffnest du direkt auf dem iPhone. Die iPhone-App kommt bald in den App Store.',
+        videoLabel: 'Eine 49-Sekunden-Tour durch IndexOne auf dem iPhone: der Startbildschirm mit den letzten Notizen und Aufnahmen, die Liste der Aufnahmen, Ivys Notiz mit Entscheidungen und Aufgaben, das Transkript nach Sprechern getrennt, ein Meeting, das mit dem iPhone aufgenommen wird, und eine Audiodatei aus der Dateien-App',
+      },
     },
     security: { more: 'Zum Datenschutzmodell' },
     news: {

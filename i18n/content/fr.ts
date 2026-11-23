@@ -70,8 +70,8 @@ const content: SiteContent = {
     download: 'Télécharger pour Mac — gratuit',
     signup: 'Créer un compte gratuit',
     note: 'Apple Silicon (M1 ou plus récent) · macOS 13.4+ · signée et notariée · aucun compte nécessaire sur Mac',
-    videoLabel: 'Une visite de 90 secondes d’IndexOne : une réunion enregistrée pendant qu’une note est saisie à côté, la note rédigée ensuite et les éléments qu’elle en extrait, la chronologie des intervenants, une question posée à Ivy sur tout le coffre et sa réponse sourcée, le graphe de connaissances, la barre des Workspaces et la recherche sur l’appareil, un projet, la vue Personnes, et un Workspace qui refuse de s’ouvrir parce qu’il est scellé',
-    play: 'Voir la visite de 90 secondes',
+    videoLabel: 'Une visite de 47 secondes d’IndexOne dans le navigateur : une réunion enregistrée pendant que des notes sont saisies à côté, la note rédigée par Ivy avec résumé, décisions et actions, la transcription qui indique qui a dit quoi, la recherche d’un passage exact, une question posée à Ivy et sa réponse sourcée, un Space partagé avec toute l’équipe et l’invitation d’une nouvelle personne dans l’équipe',
+    play: 'Voir la visite',
   },
   home: {
     announce: { badge: 'Nouveau', text: 'IndexOne {version} est disponible : découvrez ce qui change' },
@@ -120,6 +120,12 @@ const content: SiteContent = {
       lead: 'Enregistrez la réunion, interrogez-la, exportez-la en Markdown. Choisissez une étape pour la voir.',
       tabsLabel: 'Visite du produit',
       tabs: { record: 'Enregistrer', ask: 'Demander', export: 'Garder' },
+      iphone: {
+        eyebrow: 'iPhone',
+        title: 'Vos réunions, aussi sur iPhone.',
+        body: 'Enregistrez une réunion avec le téléphone ou importez un enregistrement depuis l’app Fichiers. Il reste sur le téléphone jusqu’à ce que vous l’arrêtiez, puis il est envoyé dans votre espace et transcrit dans le cloud. La note d’Ivy et la transcription complète s’ouvrent directement sur le téléphone. Une app iPhone arrive bientôt sur l’App Store.',
+        videoLabel: 'Une visite de 49 secondes d’IndexOne sur iPhone : l’écran d’accueil avec les notes et enregistrements récents, la liste des enregistrements, la note d’Ivy avec décisions et actions, la transcription séparée par intervenant, une réunion enregistrée avec le téléphone et un fichier audio importé depuis Fichiers',
+      },
     },
     security: { more: 'Lire le modèle de confidentialité' },
     news: {

@@ -70,8 +70,8 @@ const content: SiteContent = {
     download: 'Mac版を無料でダウンロード',
     signup: '無料アカウントを作成',
     note: 'Apple Silicon（M1以降） · macOS 13.4以降 · 署名・公証済み · Macではアカウント不要',
-    videoLabel: 'IndexOneの90秒ツアー：ノートを横で入力しながら会議を録音する様子、会議後に書かれたノートとそこから抽出された項目、話者タイムライン、保管庫全体に対してIvyに質問し出典付きで回答を得る場面、ナレッジグラフ、Workspacesレールとデバイス上の検索、プロジェクト、People、そして封印されているため開くことを拒むWorkspace',
-    play: '90秒ツアーを見る',
+    videoLabel: 'ブラウザーで使うIndexOneの47秒ツアー：横でメモを取りながら会議を録音する様子、Ivyが書いた要約・決定事項・アクションアイテム付きのノート、誰が何を話したかがわかる文字起こし、正確な一節の検索、Ivyへの質問と出典付きの回答、チーム全体で共有するSpace、そしてチームメンバーの招待',
+    play: 'ツアーを見る',
   },
   home: {
     announce: { badge: '新着', text: 'IndexOne {version} をリリースしました。変更点を見る' },
@@ -120,6 +120,12 @@ const content: SiteContent = {
       lead: '会議を録音し、質問し、Markdown としてエクスポート。ステップを選んで確認できます。',
       tabsLabel: '製品ツアー',
       tabs: { record: '録音', ask: '質問', export: '保存' },
+      iphone: {
+        eyebrow: 'iPhone',
+        title: '会議を、iPhoneでも。',
+        body: 'iPhoneで会議を録音することも、「ファイル」アプリから録音を取り込むこともできます。録音は停止するまでiPhoneに保存され、停止するとあなたのスペースにアップロードされてクラウドで文字起こしされます。Ivyのノートと文字起こし全文は、そのままiPhoneで開けます。iPhoneアプリはApp Storeで近日公開予定です。',
+        videoLabel: 'iPhoneで使うIndexOneの49秒ツアー：最近のノートと録音が並ぶホーム画面、録音の一覧、決定事項とアクションアイテム付きのIvyのノート、話者ごとに分かれた文字起こし、iPhoneでの会議の録音、そして「ファイル」アプリからの音声ファイルの取り込み',
+      },
     },
     security: { more: 'プライバシーモデルを読む' },
     news: {

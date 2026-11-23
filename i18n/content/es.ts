@@ -70,8 +70,8 @@ const content: SiteContent = {
     download: 'Descargar para Mac — gratis',
     signup: 'Crear una cuenta gratuita',
     note: 'Apple Silicon (M1 o posterior) · macOS 13.4+ · firmada y notarizada · sin necesidad de cuenta en el Mac',
-    videoLabel: 'Un recorrido de 90 segundos por IndexOne: una reunión grabándose mientras se escribe una nota al lado, la nota redactada después y los puntos que extrae, la línea de tiempo de los participantes, una pregunta a Ivy sobre toda la bóveda respondida con fuentes, el grafo de conocimiento, la barra de Workspaces y la búsqueda en el dispositivo, un proyecto, Personas y un Workspace que se niega a abrirse porque está sellado',
-    play: 'Ver el recorrido de 90 segundos',
+    videoLabel: 'Un recorrido de 47 segundos por IndexOne en el navegador: una reunión grabándose mientras se escriben notas al lado, la nota que redacta Ivy con resumen, decisiones y tareas, la transcripción con quién dijo qué, la búsqueda de un fragmento exacto, una pregunta a Ivy respondida con fuentes, un Space compartido con todo el equipo y la invitación a una persona más del equipo',
+    play: 'Ver el recorrido',
   },
   home: {
     announce: { badge: 'Nuevo', text: 'Ya está aquí IndexOne {version}: mira qué ha cambiado' },
@@ -120,6 +120,12 @@ const content: SiteContent = {
       lead: 'Graba la reunión, pregunta sobre ella y expórtala a Markdown. Elige un paso para verlo.',
       tabsLabel: 'Recorrido del producto',
       tabs: { record: 'Grabar', ask: 'Preguntar', export: 'Conservar' },
+      iphone: {
+        eyebrow: 'iPhone',
+        title: 'Tus reuniones, también en el iPhone.',
+        body: 'Graba una reunión con el teléfono o trae una grabación desde la app Archivos. Se queda en el teléfono hasta que la detienes; entonces se sube a tu espacio y se transcribe en la nube. La nota de Ivy y la transcripción completa se abren ahí mismo. Una app para iPhone llegará pronto a la App Store.',
+        videoLabel: 'Un recorrido de 49 segundos por IndexOne en el iPhone: la pantalla de inicio con notas y grabaciones recientes, la lista de grabaciones, la nota de Ivy con decisiones y tareas, la transcripción separada por participante, una reunión grabada con el teléfono y un archivo de audio importado desde Archivos',
+      },
     },
     security: { more: 'Lee el modelo de privacidad' },
     news: {
