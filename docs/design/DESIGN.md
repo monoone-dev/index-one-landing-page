@@ -137,8 +137,8 @@ Wszystkie `h1`–`h3`: waga 600, `letter-spacing: -0.03em`, `text-wrap: balance`
 - Sekcja `.section`: `padding: 96px 0`, poniżej 640 px `64px 0`. Nagłówek sekcji: odstęp 56 px pod
   spodem, eyebrow → `h2` 14 px, `h2` → lead 16 px.
 - Rytm: `--gap` = 8 px. Siatki kart w nowszych sekcjach mają przerwę `var(--gap)` (prywatność,
-  filary); starsze bloki (cennik, `OfferContext`, cykl życia danych) mają 24 px.
-- Wypełnienie kart: 22–28 px (karta planu 28, karta prywatności 22, `OfferContext` 24); CTA 64/32 px.
+  filary); oferta ma 16 px, plany 24 px (16 px w jednej kolumnie), cykl życia danych 24 px.
+- Wypełnienie kart: 22–28 px (karta planu 28 / telefon 24, karta prywatności 22, `OfferContext` 8 wokół sceny + 16 tekst); CTA 64/32 px.
 - Promienie: `--radius` = 12 px (wyspy, przyciski strony, pasek nawigacji, zrzuty);
   `--round-sm/md/lg/xl` = 0.6/0.8/1/1.4 × radius; `--round-pill` = 999 px (pigułki, ogłoszenie);
   kafelek ikony 10 px; tag 6 px; kontrolki Nuxt UI 6 px.
@@ -198,9 +198,9 @@ tekstem w `i18n/content/*.ts` (zajmuje się tym inne zadanie).
 | `UniqueSection` | siatka 3 × 2 wysp: kafelek ikony (`--accent-soft`) lub `BrandIcon` Ivy, `h3`, tekst, link z strzałką; pod spodem przycisk outline „See every feature” | `/` |
 | `SecurityBand` | jedna duża wyspa `.framed`: po lewej eyebrow safe + `h2` + przycisk do `/privacy`, po prawej trzy karty z ikonami | `/` |
 | `WhatsNew` | nagłówek po lewej (eyebrow, `h2`, lead) z przyciskiem ghost „All releases”; trzy karty-linki do changelogu (rodzaj wydania, data, wersja, streszczenie) | `/` |
-| `OfferContext` | `h2` z `pricing.lead` (22–28 px) + trzy wyspy (Free every month / Unlimited cloud transcription z linkiem do regulaminu / Local and cloud are different) + opcjonalna notka o statusie sprzedaży z linkiem „Compare the plans” | `/`, `/pricing`, `/privacy`, `/features` |
+| `OfferContext` | `SectionHead` („Free to start” / „Turn meetings into answers.”) → trzy wyspy z ilustracją SVG nad tekstem (`illustrations/OfferLocal`, `OfferSync`, `OfferGrow`) → rząd CTA: Download free (primary + podpis „For Macs with Apple Silicon”), Open web app (outline), See plans (ghost) | `/` (pod `TrustStrip`), `/features` |
 | `CtaSection` | wyśrodkowana wyspa `.framed` (64/32 px): `h2`, lead, link „Compare the plans”, Download (primary `xl`) + Create a free account (outline), drobna notka o starych wersjach | koniec każdej strony |
-| `PricingSection` | notka statusu (wyspa z lewym paskiem akcentu 3 px) → trzy plany → nota o uczciwym korzystaniu z linkiem do regulaminu → nota o VAT → tabela porównawcza w wyspie → link do docs. Bez liczb godzin transkrypcji: Free „miesięczny przydział”, płatne „bez limitu · uczciwe korzystanie” (limity są w regulaminie) | `/pricing` |
+| `PricingSection` | `SectionHead` → trzy karty planów (Personal wyróżniony) → nota o uczciwym korzystaniu z linkiem do regulaminu → nota o VAT i minimum Team; prop `compact` kończy tu z linkiem do `/pricing#comparison`, pełny wariant dodaje tabelę porównania i wyspę „Plan details” z zastrzeżeniami. Bez liczb godzin transkrypcji: Free „miesięczny przydział”, płatne „bez limitu · uczciwe korzystanie” (przydział Free i zasady są tylko w regulaminie) | `/` (`compact`), `/pricing` |
 | `FaqSection` | `SectionHead` + `UAccordion` (multiple) w wyspie, kolumna 780 px | `/pricing#faq` |
 | `PrivacySection` | `SectionHead` safe → siatka kart z kafelkiem ikony (zielony dla `safe`, karta `wide` na całą szerokość) → wyspa z tabelą dostawców (tagi zielony „no”/bursztynowy „yes”), zrzutem i przypisem | `/privacy` |
 | `FeatureList` / `FeatureRow` | naprzemienne wiersze: tekst (eyebrow, tytuł, opis, ptaszki) i zrzut w ramie; co drugi odwrócony | `/features` |
@@ -232,17 +232,18 @@ końcu). Każda strona: `<main id="main">`, `usePageSeo({ path, meta, schema })`
 `c.meta.<strona>`, sekcje jako komponenty, na końcu `CtaSection`. Nowa trasa musi trafić do
 `pages` w `nuxt.config.ts` (prerender) i do `server/routes/sitemap.xml.ts`.
 
-- **Strona główna `/`** (`app/pages/index.vue`): `HeroSection` → `TrustStrip` → `PillarsSection` →
-  `StatsBand` → `ShowcaseTabs` → `UniqueSection` → `SecurityBand` → `WhatsNew` → `OfferContext` →
+- **Strona główna `/`** (`app/pages/index.vue`): `HeroSection` → `TrustStrip` → `OfferContext` → `PillarsSection` →
+  `StatsBand` → `ShowcaseTabs` → `UniqueSection` → `SecurityBand` → `WhatsNew` → `PricingSection compact` →
   `CtaSection`. JSON-LD `SoftwareApplication` z listą funkcji i zrzutami.
-- **Cennik `/pricing`**: `PricingSection :level="1"` (nagłówek strony „Choose where your work
-  lives.”, eyebrow „Monthly, in PLN”) → `OfferContext` bez statusu → `FaqSection` → `CtaSection`.
+- **Cennik `/pricing`**: `PricingSection :level="1"` (eyebrow „Pricing”, nagłówek „Start free. Make
+  room for more.”; karty → tabela → „Plan details”) → `FaqSection` → `CtaSection`.
   Plany: Free (PLN 0, przycisk Download for macOS), Personal (PLN 49, `.framed`, Buy in the web app),
   Team (PLN 75 netto / miejsce / miesiąc). Kwoty i limity z `billing-catalog.v1.json`, formatowane
   `Intl.NumberFormat` w języku strony. Na telefonie tabela porównawcza zmienia się w siatkę: nazwa
   wiersza nad trzema kolumnami wartości. JSON-LD `FAQPage`.
 - **Prywatność `/privacy`**: `PrivacySection :level="1"` (eyebrow „Security & Privacy”, nagłówek
-  „Privacy isn't a setting. It's the architecture.”) → `OfferContext` → sekcja „Data lifecycle”:
+  „Privacy isn't a setting. It's the architecture.”) → wyspa „Plan details” (zastrzeżenia, linki do
+  porównania, docs i regulaminu) → sekcja „Data lifecycle”:
   `h2` + trzy wyspy w siatce 3 → 1 (poniżej 800 px) → `CtaSection`. To strona marketingowa o
   architekturze, nie dokument prawny (polityki prywatności jako dokumentu prawnego dziś na stronie
   nie ma).
@@ -305,4 +306,198 @@ Do rozważenia przy odświeżaniu landingu; tu tylko opisane, kod niezmieniony.
 5. `DocsSidebar` i strony docs mają teksty interfejsu na sztywno po angielsku („Search docs”,
    „Previous”, „On this page”); to świadome, bo docs są tylko po angielsku, ale nagłówek i stopka
    wokół nich są w języku wybranym przez użytkownika.
-6. Stopka nie ma linków prawnych ani kontaktu (zob. `docs/launch/2026-11-22/legal-and-claims.md`, A-01).
+6. Stopka ma już linki prawne i kontakt (#77).
+
+## Oferta i plany — specyfikacja dla autora (2026-11-23)
+
+**Status: wdrożone 2026-11-23, z odstępstwami opisanymi w „Wzorce oferty i cennika” niżej.** Punkt wyjścia:
+`5ed017530a0b091a4c771e34022d8cf6b5ca4933`. Cel: odwiedzający rozumie darmowy start i wartość
+Personal, po czym pobiera aplikację albo przechodzi do zakupu w aplikacji web.
+Przejrzano kod, referencje `home-desktop.png`, `home-mobile.png`, `pricing-desktop.png` oraz
+publiczne strony poniżej w przeglądarce, przy 1440 × 1000. Nie badano ich konwersji.
+
+### Wzorce ze stron producentów
+
+Stan sprawdzenia: listopad 2026. To obserwacje interfejsu; przewidywana korzyść dla IndexOne
+jest wnioskiem projektowym, nie dowodem skuteczności sprzedażowej.
+
+| Źródło | Konkretny wzorzec | Zastosowanie w IndexOne |
+| --- | --- | --- |
+| [Linear: pricing](https://linear.app/pricing), [oferta](https://linear.app/) | Spokojne kolumny, cienkie separatory, ptaszki, CTA na wspólnej linii; duże fragmenty produktu zamiast dekoracji. Cena zajmuje mało miejsca. | Równa linia CTA i krótka lista różnic. Zachować białe wyspy, zamiast kopiować czarną skórkę. |
+| [ClickUp: pricing](https://clickup.com/pricing), [oferta](https://clickup.com/) | Business ma ciemną powierzchnię i plakietkę popularności. Duża cena, okres obok, informacja o braku karty dla Free. Ilustracje problemu i podglądy produktu na stronie głównej. | Jedno wyróżnienie Personal; własne ilustracje wyniku pracy. Plakietka „Polecany”, bez nieudowodnionego „najpopularniejszy”. |
+| [Notion: pricing](https://www.notion.com/pricing), [oferta](https://www.notion.com/) | Plany grupowane według zastosowania, Business oznaczony rekomendacją, prosta ilustracja i mocniejszy przycisk. Sekcje produktu prowadzą od czynności do wyniku. | Opis „dla kogo” nad listą korzyści, trzy sceny: nagraj → zapytaj → wróć do notatek. |
+| [Granola: pricing](https://www.granola.ai/pricing), [oferta](https://www.granola.ai/) | Trzy karty, krótki opis odbiorcy, duża cena, oliwkowe CTA i okrągłe ptaszki. Podgląd notatki obok krótkiej listy korzyści. | Konkretna notatka jako ilustracja; jeden kolor CTA z własnego motywu. |
+| [Fathom: pricing](https://www.fathom.ai/pricing), [oferta](https://www.fathom.ai/) | Oddzielone zastosowania indywidualne i zespołowe, minimum miejsc przy cenie, linia gwarancji zaraz pod CTA, kolorowe obwódki kart. | Minimum dwóch miejsc przy cenie Team. Krótka prawdziwa linia zaufania pod przyciskiem. Nie przenosić gwarancji Fathom. |
+| [tl;dv: pricing](https://tldv.io/app/pricing/), [oferta](https://tldv.io/) | Business ma tint, obwódkę i plakietkę; wielka cena i pełnoszeroki przycisk. Free pokazuje brak karty. Oferta pokazuje nagranie, notatkę i odpowiedź w miniaturze produktu. | Personal: tint + rama + podpis. Pokazać efekt użycia, bez kopiowania ich grafik, promocji i dowodów społecznych. |
+
+### Układ i język wizualny
+
+- Na `/`: przenieść `OfferContext` bezpośrednio pod `TrustStrip`, przed `PillarsSection`.
+  W dotychczasowym miejscu pod `WhatsNew` wstawić `PricingSection` w wariancie skróconym:
+  nagłówek, trzy karty, krótka informacja o podatkach i link do pełnego `/pricing#comparison`.
+  Pełna tabela i zastrzeżenia tylko na `/pricing`. Nie dublować oferty przed końcowym CTA.
+- `OfferContext`: `SectionHead` z osobnym tytułem i leadem → trzy ilustrowane wyspy → rząd CTA.
+  Bez `offer.status`, UTC, fair use i akapitów prawnych. Zachować te fakty w cenniku i prywatności.
+  Bez stałego `min-height` sekcji; padding 64 px desktop / 40 px telefon, nagłówek–karty 32 px,
+  karty–CTA 24 px. Łączny odstęp do następnej treści najwyżej 80 px, nie suma dwóch dużych paddingów.
+- Kontener 1120 px, rytm 8 px, promień `--radius`. Wyspy `--surface-raised`, tekst
+  `--text-primary/secondary`; ilustracje na `--accent-soft` lub `--surface-sunken`.
+  Własne niebo pozostaje tłem. Szkło wyłącznie jako rama; nie kłaść drobnego tekstu na gradiencie.
+- Personal: `.framed`, obwódka `--accent-ring`, delikatny tint `--accent-soft`, plakietka
+  `--accent` + `--text-on-accent`. Free i Team zwykłe `.island`, CTA neutral outline;
+  Personal primary solid. Rekomendacja także tekstem, nie samym kolorem.
+- `--ivy` tylko jako drugi koniec dekoracyjnej poświaty przy scenie Ivy. `--safe-text` dla
+  ptaszków zawartości; nie używać zamka ani zielonej tarczy jako symbolu standardowej chmury.
+
+### Trzy własne ilustracje SVG i gotowe copy
+
+Sceny dekoracyjne, `viewBox="0 0 320 160"`, responsywna szerokość i proporcje 2:1, bez rasteryzacji,
+fontów i zewnętrznych zasobów. Osobne komponenty w `app/components/illustrations/`.
+`aria-hidden="true"`, `focusable="false"`; korzyść wyjaśnia tekst obok. Bez istotnych napisów
+wewnątrz SVG; gradienty z `useId()`. Żadnych cudzych znaków, realnych nazw i treści spotkań.
+
+| Element | English | Polski | Ilustracja |
+| --- | --- | --- | --- |
+| Nagłówek | Turn meetings into answers. | Zamień spotkania w odpowiedzi. | — |
+| Lead | Record on your Mac. Ask Ivy. Keep your notes together. | Nagrywaj na Macu. Pytaj Ivy. Miej notatki w jednym miejscu. | — |
+| Korzyść 1 | Keep the conversation. | Zachowaj rozmowę. | Dwie fale audio przechodzą w kartę transkrypcji, akcent niebieski. |
+| Opis 1 | Capture both sides of the call and return to the transcript. | Nagraj obie strony rozmowy i wracaj do transkrypcji. | — |
+| Korzyść 2 | Find the answer with Ivy. | Znajdź odpowiedź z Ivy. | Dymek pytania, krótka karta odpowiedzi i znaczek odnośnika do źródła; akcent → ivy. |
+| Opis 2 | Ask about your meeting and follow the answer back to its source. | Zapytaj o spotkanie i przejdź od odpowiedzi do źródła. | — |
+| Korzyść 3 | Keep notes within reach. | Miej notatki pod ręką. | Trzy karty dokumentów w folderze, bez zamka i obietnicy E2E. |
+| Opis 3 | Organize your notes and find what matters later. | Uporządkuj notatki i wróć do ważnych ustaleń. | — |
+
+CTA pod ofertą: **Download free / Pobierz za darmo** (primary, istniejący `site.links.download`),
+**Open web app / Otwórz aplikację web** (outline, `site.links.web`),
+**See plans / Zobacz plany** (link do lokalizowanego `/pricing`).
+Nie zmieniać adresów zakupu, sposobu logowania ani zachowania pobierania. Etykieta pobierania
+zachowuje kontekst macOS, np. krótki podpis „For macOS / Na macOS”.
+
+### Karty planów
+
+Nagłówek EN: **Start free. Make room for more.** PL: **Zacznij za darmo. Zyskaj więcej możliwości.**
+Lead EN: **Local Mac tools are free. Choose a cloud plan when you need more.**
+PL: **Lokalne narzędzia na Macu są darmowe. Wybierz plan chmurowy, gdy potrzebujesz więcej.**
+
+Kolejność: plakietka (Personal „Recommended / Polecany”) → nazwa → jedno zdanie „dla kogo” →
+cena 48–56 px, okres i podatek 14 px → 3–5 korzyści z lucide-check → jeden przycisk → linia zaufania
+13–14 px. Usunąć obecną powtarzalną ilustrację nad ceną; ilustracje mają przekonać w ofercie.
+Na desktopie CTA wyrównać przez flex, bez stałej wysokości całej karty.
+
+| Plan | Cena i jednostka | Dla kogo EN / PL | Korzyści EN / PL (każda para to jeden punkt) | CTA EN / PL; linia zaufania |
+| --- | --- | --- | --- | --- |
+| Free | 0 PLN miesięcznie | Your first meeting notes. / Twoje pierwsze notatki ze spotkań. | Local Mac tools / Lokalne narzędzia na Macu; Cloud notes and sync / Notatki w chmurze i synchronizacja; 200,000 Ivy units per month / 200 000 jednostek Ivy miesięcznie; 1 GB cloud storage / 1 GB w chmurze | Download free / Pobierz za darmo; No card required / Bez karty płatniczej |
+| Personal | 49 PLN brutto miesięcznie | More room for your work. / Więcej miejsca na Twoją pracę. | Everything in Free / Wszystko z Free; Unlimited cloud transcription / Transkrypcja w chmurze bez limitu; 1,200,000 Ivy units per month / 1 200 000 jednostek Ivy miesięcznie; 20 GB cloud storage / 20 GB w chmurze | Choose Personal / Wybierz Personal; Cancel anytime / Anuluj w dowolnej chwili |
+| Team | 75 PLN netto za miejsce miesięcznie, od 2 miejsc | A shared space for your team. / Wspólna przestrzeń dla zespołu. | Shared notes and workspace / Wspólne notatki i przestrzeń zespołu; Unlimited cloud transcription / Transkrypcja w chmurze bez limitu; 2,500,000 Ivy units per seat per month / 2 500 000 jednostek Ivy na miejsce miesięcznie; 50 GB cloud storage per seat / 50 GB w chmurze na miejsce; Google Meet bot / Bot Google Meet | Choose Team / Wybierz Team; Manage your plan in the web app / Zarządzaj planem w aplikacji web |
+
+Kwoty w tabeli są opisem aktualnego katalogu, nie wartościami do przepisania do tłumaczeń.
+W UI wszystkie ceny, Ivy, GB, minimum miejsc oraz łączny koszt minimum wyliczać z
+`billing-catalog.v1.json` i formatować przez `Intl.NumberFormat(locale)`; dopisać do typu treści
+etykiety i placeholdery, bez drugiego źródła liczb w `points`. Zastąpić stare `pricing.plans.*.price`,
+nie używać ich do renderowania. Team: łączny budżet zawiera pulę automatyzacji; nie obiecywać
+2,5 mln jednostek interaktywnych. Szczegóły podziału zostawić pod porównaniem / w dokumentacji.
+Nie wyświetlać godzin ani przeliczać `asrMs`; komunikat bez limitu zachować zgodnie z briefem.
+
+Pod kartami także na stronie głównej zachować zwięzłą informację: Personal zawiera VAT,
+Team od 2 miejsc — łącznie 150 PLN netto miesięcznie; podatki i końcowa cena w aplikacji przed zakupem.
+Nie ukrywać minimum i netto w przypisie. Nie dodawać przełącznika rocznego, rabatu, checkoutu
+na landingu ani ogólnej obietnicy 14 dni zwrotu bez potwierdzenia warunków dokumentu prawnego.
+
+### Zastrzeżenia i współdzielenie komponentu
+
+Na `/pricing` bez drugiego `OfferContext`; pod tabelą porównania zwięzły blok „Plan details /
+Szczegóły planów”, a na `/privacy` odpowiadający blok przed cyklem życia danych.
+Treść EN: **Paid transcription has no plan limit; fair use applies and heavy use may take longer.
+Monthly cloud allowances renew by calendar month in UTC. Standard account cloud is not end-to-end
+encrypted: the operator can read stored and processed content. Pattern masking is not full
+anonymization. Local processing on your Mac stays on your Mac.**
+PL: **Płatna transkrypcja nie ma limitu planu; obowiązuje uczciwe użycie, a intensywne korzystanie
+może wydłużyć oczekiwanie. Miesięczne pule chmurowe odnawiają się według miesięcy kalendarzowych
+w UTC. Standardowa chmura konta nie jest szyfrowana end-to-end: operator może odczytać przechowywane
+i przetwarzane treści. Maskowanie wzorców nie jest pełną anonimizacją. Lokalne przetwarzanie na
+Macu pozostaje na Macu.**
+
+Linki: lokalizowany `/privacy`, istniejące `/docs/plans-and-billing/` (oznaczyć English),
+`https://app.index-one.io/legal/regulamin.html` (oznaczyć PL, jak w obecnym `AppFooter.vue`).
+To zwykłe linki, bez pobierania dokumentów w tle. Zachować pozostałe fakty o dostępie, retencji
+i rozliczeniach w FAQ / dokumentacji. `OfferContext` występuje też na `/features`: nowy wariant
+ma tam pozostać sensowny, bez powielania identyfikatorów, a zastrzeżenia muszą nadal być osiągalne.
+Historyczna uwaga nr 6 wyżej opisuje starszy stan; aktualny kod stopki już ma linki prawne.
+
+### Stany, dostępność i odbiór implementacji
+
+- Treść i katalog są statyczne: render SSR od razu, bez skeletonu, pustej karty lub wywołania API.
+  Nie ma tu stanu zalogowania, płatności, spinnera zakupu ani błędu checkoutu — te obsługuje web app.
+  Błąd lub brak wpisu katalogu nie może oznaczać ceny 0; ma zatrzymać generowanie strony.
+  Brak ilustracji nie może ukryć tekstu lub CTA. Wszystkie nazwy CTA niepuste (obecnie Free ma pusty tekst).
+- `section` z unikalnym `aria-labelledby`; h2 na stronie głównej, h1 cennika, nazwy planów o poziom niżej.
+  Linki i `UButton`, bez klikalnych całych kart. Tab w kolejności wizualnej, Enter aktywuje link;
+  focus 2 px `--accent`, offset 3 px, nieucięty przez ramę. Cele dotykowe co najmniej 44 px.
+- Tekst co najmniej 4,5:1, duża cena 3:1; sprawdzić rzeczywiste złożenie tokenów w obu motywach.
+  Nie używać `--ivy` jako drobnego tekstu. Brak automatycznej animacji SVG; respektować reduced motion.
+- 1440 px: trzy kolumny korzyści i planów. 768 px: trzy korzyści z tekstem pod ilustracją,
+  plany zgodnie z obecnym progiem 940 px w jednej kolumnie do 520 px. 390 px: wszystko w jednej
+  kolumnie, CTA oferty pełnej szerokości, odstępy między kartami 16 px, padding kart 24 px.
+  Zachować kolejność Free → Personal → Team także na telefonie, bez karuzeli.
+- Wszystkie dziewięć języków w jednej zmianie: en, pl, es, it, fr, pt, de, zh, ja oraz `types.ts`.
+  Bez stałych wysokości tekstu, ellipsis i ręcznych `<br>`; `min-width: 0`, zawijanie przycisków.
+  Sprawdzić PL/DE oraz CJK, powiększenie tekstu 200%, długie jednostki przy cenie i brak overflow
+  przy 390/768/1440 px. Utrzymać semantykę tabeli i nazwy kolumn na telefonie.
+- Autor implementacji uruchamia istniejące sprawdzenia zgodności tłumaczeń, typów i generowania
+  przez zatwierdzone kontrole hosta; nie dodaje testów ani bibliotek. Późniejszy etap workflow
+  wykonuje odbiór runtime. Statyczny landing nie potrzebuje backendu do cen; nie przedstawiać
+  jego zrzutu jako dowodu zakupu ani działania płatności.
+- Dowody implementacji: PNG całego viewportu 1440 × 900 oraz 390 × 844, oba motywy, `/`
+  przewinięte osobno do oferty i do planów oraz `/pricing` do kart; dodatkowo `/privacy` do
+  zmienionego bloku. Pełna strona może być dodatkiem, nie zamiennikiem czytelnego viewportu.
+  Sprawdzić 768 px i porównanie/zastrzeżenia przez przewinięcie. Zapisać do `design/` w folderze
+  dowodów autora, z `design/screens.json` (`file`, `screen`, `place` według briefu). Serwer dev
+  uruchomić tylko na czas weryfikacji i zatrzymać. Ten etap dostarcza specyfikację, bez zmian ekranów.
+
+## Wzorce oferty i cennika (wdrożone 2026-11-23)
+
+Krótko, co dodała implementacja specyfikacji wyżej; szczegóły w kodzie.
+
+- **Ilustracja oferty** (`app/components/illustrations/Offer*.vue`, style w
+  `app/assets/scss/_illustrations.scss`): inline SVG `viewBox="0 0 320 160"`, `aria-hidden`, bez
+  tekstu, kolory wyłącznie z tokenów przez klasy `.art__*`. Nieprzezroczyste wypełnienia liczone
+  `color-mix(…, var(--surface-raised))`, żeby nachodzące kształty nie dawały ciemniejszych szwów.
+  Gradient tylko akcent → ivy, z `useId()`. Scena leży na „scenie” karty: `--surface-sunken` z
+  radialną poświatą akcentu (sync: akcent + teal, grow: akcent + ivy), promień `radius − 4px`,
+  karta z wewnętrznym marginesem `--gap`.
+- **Sekcja oferty**: `padding: 64px 0 0` (telefon 40), nagłówek → karty 32 px, karty → CTA 24 px;
+  odstęp w dół daje górny padding następnej sekcji, bez sumy dwóch paddingów. Drobny tekst na niebie
+  (podpis pod CTA) w `--text-secondary`, bo `--text-muted` na jasnym niebie ma ok. 3,6:1.
+- **Karta planu**: nagłówek (nazwa + plakietka „Recommended” na `--accent`) → zdanie „dla kogo” →
+  cena: liczba 52 px (telefon 46), waluta 22 px w kolejności z `Intl.NumberFormat.formatToParts`,
+  okres 14 px, linia pod ceną → punkty z ptaszkiem w kółku 20 px (`--safe-soft`; w Personal
+  `--accent-soft`) → jeden `UButton` `xl` `block` (Personal primary, reszta outline neutral) →
+  linia zaufania 13,5 px z ikoną. Personal: tint 7% akcentu od góry, obwódka `--accent-ring` +
+  rama `.framed`. Kolejność Free → Personal → Team na każdej szerokości.
+- **Skrót Personal nad kartami** (`.peek`, tylko poniżej 940 px): na telefonie pierwsze miejsce
+  zajmuje karta Free, więc między nagłówkiem a kartami stoi jedna wyspa: „✦ Personal” w
+  `--accent-text`, cena 20 px z katalogu + okres z `pricing.plans.personal.period`, korzyść
+  `pricing.peek.benefit` z ptaszkiem i podkreślony link `pricing.peek.link` do `#plan-card-personal`.
+  Tło: `--accent-soft` na nieprzezroczystym `--surface-raised` (na jasnym niebie przezroczysty tint
+  dawał linkowi poniżej 4,5:1), obwódka `--accent-ring`, promień 16 px. Dwa wiersze `flex-wrap`,
+  bez przycisku, żeby nie konkurować z CTA kart. Na desktopie ukryty, bo trzy karty mieszczą się
+  w pierwszym widoku.
+- **Liczby w copy**: placeholdery `{ivy}`, `{storage}`, `{seats}`, `{total}` w `pricing.*`
+  wypełniane z `billing-catalog.v1.json`; brak wpisu w katalogu przerywa render. Jednostka GB w
+  tabeli z `offer.gb` (francuski „Go”).
+- **Tabela porównania**: kolumna Personal z tintem 5% akcentu i nagłówkiem w `--accent-text`;
+  wiersz Google Meet bot z `meetBotAvailable`. Na telefonie nazwa wiersza nad trzema wartościami,
+  pierwsza komórka nagłówka ukryta.
+- **Wyspa „Plan details”**: lewy pasek akcentu 3 px, `h2` 17 px z ikoną info, akapit zastrzeżeń,
+  `<details>` „More billing details” (Free, Team, retencja, jednostki Ivy), linki podkreślone
+  w `--accent-text`. Na `/pricing` pod tabelą, na `/privacy` przed cyklem życia danych.
+- **Odstępstwo od copy ze specyfikacji**: trzy korzyści oferty mówią o tym, co się dostaje
+  (za darmo na Macu / w przeglądarce / więcej miejsca w planie płatnym), a nie o nagrywaniu, Ivy i
+  notatkach, bo te trzy tematy pokazuje `PillarsSection` tuż pod ofertą. Klucze `offer.trial*`,
+  `meter*`, `privacy*` zostały, bo budują pytania FAQ.
+- **Połączenie z `main` (2026-11-23)**: hero, meta, leady sekcji, CTA, FAQ i twierdzenia o planach
+  pochodzą z `main` (#78), więc `offer.summary` i `offer.localNote` usunięto. Teksty `offer.trial`,
+  `meter*`, `team`, `lifecycle`, `basics`, `asrUnlimited` („Unlimited · fair use”) i `asrBasic`
+  („Monthly allowance”) są w brzmieniu z #78. Pod kartami, przed notą o VAT, stoi zdanie
+  `offer.fairUse` z linkiem `offer.fairUseLink` do regulaminu (styl `.pricing__note`), na `/` i na
+  `/pricing`: „bez limitu” zawsze z uczciwym korzystaniem, przydział Free tylko w regulaminie.

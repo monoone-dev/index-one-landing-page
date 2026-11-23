@@ -6,7 +6,7 @@ Facts, as published on index-one.io:
 
 - Platform: macOS 13.4 or later, Apple Silicon only (M1 or later). Intel Macs and Windows can use the web app at https://app.index-one.io/. An iPhone app is coming to the App Store.
 - Price: the Mac app is free, with no account needed. Cloud plans are sold in the web app, priced in PLN: Free (0 PLN), Personal (49 PLN a month, tax included) and Team (75 PLN net per seat a month, from two seats).
-- Cloud transcription on paid plans: a monthly allowance at full speed, then up to 150 more hours a month in a slower queue. Transcription on the Mac has no limit.
+- Cloud transcription on paid plans: unlimited under fair use; heavy use may take longer. Transcription on the Mac has no limit.
 - Privacy: in the On this Mac space, recording, transcription, search and Ivy on this Mac run without a network once the models are downloaded. Cloud spaces in an IndexOne account are not end-to-end encrypted. Claude Code and Codex send redacted text to their provider only after consent.
 - Local AI: Ivy on this Mac (Bielik or Qwen models) or your own local AI server such as Ollama or LM Studio.
 - Agents: a read-only MCP server, off until you turn it on, listens only on 127.0.0.1 and lets AI apps on your Mac read the workspaces you choose; meetings in locked folders stay hidden. What an AI app reads is sent to that app's own model provider.
