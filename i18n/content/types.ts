@@ -27,6 +27,7 @@ export type PrivacyCardId = 'offline' | 'at-rest' | 'gated' | 'seals' | 'screen-
 export type ProviderId = 'on-device' | 'ivy-web' | 'claude-code' | 'codex' | 'local-server'
 
 export type PlanId = 'free' | 'personal' | 'team'
+export type OfferBenefitId = 'local' | 'sync' | 'grow'
 
 export type ComparisonRowId = 'capture' | 'local-transcription' | 'local-ai' | 'ask-all' | 'local-data' | 'markdown' | 'encryption' | 'platforms' | 'price'
 
@@ -146,10 +147,15 @@ export interface SiteContent {
     items: Record<FeatureId, FeatureCopy>
   }
   offer: {
+    eyebrow: string
+    title: string
+    lead: string
+    benefits: Record<OfferBenefitId, { title: string, body: string }>
+    download: string
+    forMac: string
+    plans: string
     web: string
     status: string
-    monthly: string
-    tax: string
     trialTitle: string
     trial: string
     meterTitle: string
@@ -159,10 +165,15 @@ export interface SiteContent {
     fairUseLink: string
     privacyTitle: string
     privacy: string
+    detailsTitle: string
+    details: string
+    more: string
+    after: string
     team: string
     lifecycle: string
     docs: string
     comparison: string
+    feature: string
     local: string
     basics: string
     ivy: string
@@ -170,7 +181,11 @@ export interface SiteContent {
     asrUnlimited: string
     asrBasic: string
     storage: string
+    /** Gigabyte unit in the comparison table ("GB", in French "Go"). */
+    gb: string
+    meetBot: string
     included: string
+    notIncluded: string
     seat: string
     unit: string
   }
@@ -178,7 +193,14 @@ export interface SiteContent {
     eyebrow: string
     title: string
     lead: string
-    plans: Record<PlanId, { name: string, badge: string, price: string, per?: string, tagline: string, points: string[], cta: string }>
+    recommended: string
+    /** Under the plan cards, with {seats} and {total} from the billing catalog. */
+    note: string
+    compareLink: string
+    /** Phones only: a one-line Personal summary above the cards, with a link down to its card. */
+    peek: { benefit: string, link: string }
+    /** `period` may use {seats}; `points` may use {ivy} and {storage}, all from the billing catalog. */
+    plans: Record<PlanId, { name: string, audience: string, period: string, points: string[], cta: string, trust: string }>
   }
   compare: {
     eyebrow: string
