@@ -12,7 +12,7 @@ export const site = {
   url: 'https://index-one.io',
   title: 'IndexOne — private AI meeting notes on your Mac, no bot needed',
   description:
-    'Record both sides of a call without a bot, transcribe it on your Mac and ask Ivy, with a receipt for every line. Free on the Mac; your cloud spaces open in any browser.',
+    'Record both sides of a call without a bot, transcribe it on your Mac, ask Ivy and check notes against the recording. Free on the Mac; your cloud spaces open in any browser.',
   ogImage: '/og-image.png',
   ogImageAlt: 'IndexOne — private AI meeting notes on your Mac, no bot needed',
   themeColor: '#0862f6',

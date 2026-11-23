@@ -4,7 +4,7 @@ const content: SiteContent = {
   meta: {
     home: {
       title: 'IndexOne — notes de réunion IA privées sur votre Mac, sans bot',
-      description: 'Enregistrez les deux côtés d’un appel sans bot, transcrivez-le sur votre Mac et interrogez Ivy, avec une preuve pour chaque ligne. Gratuit sur Mac ; vos espaces cloud s’ouvrent dans n’importe quel navigateur.',
+      description: 'Enregistrez les deux côtés d’un appel sans bot, transcrivez-le sur votre Mac, interrogez Ivy et vérifiez vos notes avec l’enregistrement. Gratuit sur Mac ; vos espaces cloud s’ouvrent dans n’importe quel navigateur.',
     },
     features: {
       breadcrumb: 'Fonctionnalités',
@@ -143,7 +143,7 @@ const content: SiteContent = {
   unique: {
     eyebrow: 'Fonctionnalités',
     title: 'Un outil de réunion qui se souvient vraiment.',
-    lead: 'Beaucoup d’apps stockent des notes ou transcrivent des appels. IndexOne enregistre les deux côtés de l’appel sur votre Mac, vous laisse interroger Ivy pendant la réunion et montre d’où vient chaque ligne qu’elle écrit.',
+    lead: 'Beaucoup d’apps stockent des notes ou transcrivent des appels. IndexOne enregistre les deux côtés de l’appel sur votre Mac, vous laisse interroger Ivy pendant la réunion et relie, dès que possible, les affirmations de ses notes au moment de l’enregistrement d’où elles viennent.',
     items: {
       'live': {
         title: 'Interrogez Ivy en pleine réunion — tout reste sur votre Mac',
@@ -156,7 +156,7 @@ const content: SiteContent = {
         link: 'Capture et transcription',
       },
       'receipts': {
-        title: 'Chaque affirmation a sa preuve',
+        title: 'Les preuves renvoient à l’audio',
         body: 'Chaque ligne étayée d’une note renvoie à la seconde d’audio dont elle provient, avec l’intervenant. Les lignes sans preuve n’en reçoivent pas : vous voyez ce qui est vérifié.',
         link: 'Les preuves',
       },
@@ -332,7 +332,7 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Preuves',
-        title: 'Chaque affirmation remonte à l’enregistrement.',
+        title: 'Les affirmations étayées remontent à l’enregistrement.',
         body: 'Les notes d’IndexOne ne vous demandent pas de leur faire confiance. Chaque ligne fondée sur ce qui a réellement été dit porte une preuve — cliquez dessus pour aller directement à la seconde d’audio correspondante, avec l’intervenant. Les lignes paraphrasées ou non étayées n’en ont pas : vous voyez d’un coup d’œil ce qui est vérifié.',
         points: [
           'Cliquez sur une affirmation, écoutez exactement d’où elle vient',
@@ -375,7 +375,7 @@ const content: SiteContent = {
     "trialTitle": "Gratuit chaque mois",
     "trial": "Chaque compte gratuit reçoit chaque mois civil (UTC) 200 000 unités Ivy et un quota de transcription cloud, sans carte. Les fonctions locales sur Mac n’ont pas de limite d’offre.",
     "meterTitle": "Transcription cloud : rapide, puis une file plus lente",
-    "meter": "Les offres payantes transcrivent dans le cloud à pleine vitesse jusqu’à un quota mensuel. Ensuite, les nouveaux enregistrements rejoignent une file plus lente et peuvent prendre quelques heures, pour 150 heures de plus par mois au maximum (par place pour Team) ; la transcription cloud est ensuite suspendue jusqu’au mois suivant. La transcription sur votre Mac est toujours immédiate et illimitée.",
+    "meter": "Les offres payantes transcrivent dans le cloud à pleine vitesse jusqu’à un quota mensuel. Ensuite, les nouveaux enregistrements rejoignent une file plus lente et peuvent prendre quelques heures, pour 150 heures de plus par mois au maximum (par place pour Team) ; la transcription cloud est ensuite suspendue jusqu’au mois suivant. La transcription sur votre Mac n’a ni limite ni file d’attente.",
     "fairUse": "Les offres payantes incluent un quota mensuel de transcription cloud, puis jusqu’à 150 heures par mois dans une file plus lente ; le quota Free et les règles d’utilisation raisonnable figurent dans les Conditions d’utilisation.",
     "fairUseLink": "Lire les Conditions d’utilisation (en polonais)",
     "privacyTitle": "Local et cloud",

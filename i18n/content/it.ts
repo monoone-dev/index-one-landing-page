@@ -4,7 +4,7 @@ const content: SiteContent = {
   meta: {
     home: {
       title: 'IndexOne — note delle riunioni con AI privata sul tuo Mac, senza bot',
-      description: 'Registra entrambi i lati di una call senza bot, trascrivila sul tuo Mac e chiedi a Ivy, con una prova per ogni riga. Gratis sul Mac; i tuoi spazi cloud si aprono in qualsiasi browser.',
+      description: 'Registra entrambi i lati di una call senza bot, trascrivila sul tuo Mac, chiedi a Ivy e verifica le note sulla registrazione. Gratis sul Mac; i tuoi spazi cloud si aprono in qualsiasi browser.',
     },
     features: {
       breadcrumb: 'Funzionalità',
@@ -143,7 +143,7 @@ const content: SiteContent = {
   unique: {
     eyebrow: 'Funzionalità',
     title: 'Uno strumento per le riunioni che ricorda davvero.',
-    lead: 'Tante app archiviano note o trascrivono call. IndexOne registra entrambi i lati della call sul tuo Mac, ti permette di interrogare Ivy durante la riunione e mostra da dove viene ogni riga che scrive.',
+    lead: 'Tante app archiviano note o trascrivono call. IndexOne registra entrambi i lati della call sul tuo Mac, ti permette di interrogare Ivy durante la riunione e, quando può, collega le affermazioni delle note al momento della registrazione da cui vengono.',
     items: {
       'live': {
         title: 'Chiedi a Ivy durante la riunione, e tieni tutto sul Mac',
@@ -156,7 +156,7 @@ const content: SiteContent = {
         link: 'Acquisizione e trascrizione',
       },
       'receipts': {
-        title: 'Ogni affermazione ha la sua prova',
+        title: 'Le prove riportano all’audio',
         body: 'Ogni riga fondata di una nota rimanda al secondo esatto dell’audio da cui proviene, con l’interlocutore. Le righe senza riscontro non hanno prova, così vedi cosa è verificato.',
         link: 'Le prove',
       },
@@ -332,7 +332,7 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Prove',
-        title: 'Ogni affermazione risale alla registrazione.',
+        title: 'Le affermazioni fondate risalgono alla registrazione.',
         body: 'Le note di IndexOne non ti chiedono di fidarti. Ogni riga basata su ciò che è stato detto davvero porta con sé una prova: cliccala per saltare a quel secondo esatto dell’audio, con l’interlocutore. Le righe parafrasate o senza riscontro non ne hanno, così vedi a colpo d’occhio cosa è verificato.',
         points: [
           'Clicca un’affermazione e ascolta esattamente da dove viene',
@@ -375,7 +375,7 @@ const content: SiteContent = {
     "trialTitle": "Gratis ogni mese",
     "trial": "Ogni account gratuito riceve ogni mese di calendario (UTC) 200.000 unità Ivy e una quota di trascrizione cloud, senza carta. Le funzioni locali su Mac non hanno limiti di piano.",
     "meterTitle": "Trascrizione cloud: veloce, poi una coda più lenta",
-    "meter": "I piani a pagamento trascrivono nel cloud alla massima velocità fino a una quota mensile. Dopo, le nuove registrazioni entrano in una coda più lenta e possono essere pronte dopo alcune ore, per un massimo di altre 150 ore al mese (per posto in Team); poi la trascrizione cloud si ferma fino al mese successivo. La trascrizione sul Mac è sempre immediata e illimitata.",
+    "meter": "I piani a pagamento trascrivono nel cloud alla massima velocità fino a una quota mensile. Dopo, le nuove registrazioni entrano in una coda più lenta e possono essere pronte dopo alcune ore, per un massimo di altre 150 ore al mese (per posto in Team); poi la trascrizione cloud si ferma fino al mese successivo. La trascrizione sul Mac non ha limiti né code.",
     "fairUse": "I piani a pagamento includono una quota mensile di trascrizione cloud e, dopo, fino a 150 ore al mese in una coda più lenta; la quota Free e le regole di uso equo sono nei Termini di servizio.",
     "fairUseLink": "Leggi i Termini di servizio (in polacco)",
     "privacyTitle": "Locale e cloud",

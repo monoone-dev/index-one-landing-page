@@ -4,7 +4,7 @@ const content: SiteContent = {
   meta: {
     home: {
       title: 'IndexOne — prywatne notatki ze spotkań z AI na Twoim Macu, bez bota',
-      description: 'Nagrywaj obie strony rozmowy bez bota, transkrybuj je na Macu i pytaj Ivy, z dowodem przy każdym zdaniu. Za darmo na Macu; przestrzenie w chmurze otworzysz w każdej przeglądarce.',
+      description: 'Nagrywaj obie strony rozmowy bez bota, transkrybuj je na Macu, pytaj Ivy i sprawdzaj notatki z nagraniem. Za darmo na Macu; przestrzenie w chmurze otworzysz w każdej przeglądarce.',
     },
     features: {
       breadcrumb: 'Funkcje',
@@ -143,7 +143,7 @@ const content: SiteContent = {
   unique: {
     eyebrow: 'Funkcje',
     title: 'Narzędzie do spotkań, które naprawdę pamięta.',
-    lead: 'Wiele aplikacji przechowuje notatki albo transkrybuje rozmowy. IndexOne nagrywa obie strony rozmowy na Twoim Macu, pozwala pytać Ivy w trakcie spotkania i pokazuje, skąd pochodzi każda linijka, którą napisze.',
+    lead: 'Wiele aplikacji przechowuje notatki albo transkrybuje rozmowy. IndexOne nagrywa obie strony rozmowy na Twoim Macu, pozwala pytać Ivy w trakcie spotkania i tam, gdzie się da, łączy twierdzenia z notatki z momentem w nagraniu.',
     items: {
       'live': {
         title: 'Pytaj Ivy w trakcie spotkania — wszystko zostaje na Macu',
@@ -156,7 +156,7 @@ const content: SiteContent = {
         link: 'Nagrywanie i transkrypcja',
       },
       'receipts': {
-        title: 'Każde twierdzenie ma swój dowód',
+        title: 'Dowód prowadzi do nagrania',
         body: 'Każda poparta linijka notatki prowadzi do sekundy nagrania, z której pochodzi, razem z mówcą. Linijki bez pokrycia nie dostają dowodu, więc widzisz, co jest zweryfikowane.',
         link: 'Dowody',
       },
@@ -332,7 +332,7 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Dowody',
-        title: 'Każde twierdzenie prowadzi do nagrania.',
+        title: 'Twierdzenia oparte na rozmowie prowadzą do nagrania.',
         body: 'Notatki IndexOne nie wymagają ślepego zaufania. Każda linijka oparta na tym, co faktycznie padło, ma swój dowód — kliknij, a przeskoczysz dokładnie do tej sekundy nagrania, z mówcą. Parafrazy i linijki bez pokrycia go nie dostają, więc od razu widzisz, co jest zweryfikowane.',
         points: [
           'Kliknij twierdzenie i usłysz, skąd dokładnie pochodzi',
@@ -375,7 +375,7 @@ const content: SiteContent = {
     "trialTitle": "Free co miesiąc",
     "trial": "Każde darmowe konto dostaje co miesiąc kalendarzowy (UTC) 200 000 jednostek Ivy i przydział transkrypcji w chmurze, bez karty. Lokalne funkcje Mac nie mają limitu planu.",
     "meterTitle": "Transkrypcja w chmurze: najpierw szybko, potem wolniejsza kolejka",
-    "meter": "Płatne plany transkrybują w chmurze z pełną szybkością do miesięcznego przydziału. Potem nowe nagrania trafiają do wolniejszej kolejki i mogą być gotowe dopiero po kilku godzinach, przez maksymalnie 150 kolejnych godzin w miesiącu (w Team na każde miejsce); potem transkrypcja w chmurze wstrzymuje się do następnego miesiąca. Transkrypcja na Macu jest zawsze od razu i bez limitu.",
+    "meter": "Płatne plany transkrybują w chmurze z pełną szybkością do miesięcznego przydziału. Potem nowe nagrania trafiają do wolniejszej kolejki i mogą być gotowe dopiero po kilku godzinach, przez maksymalnie 150 kolejnych godzin w miesiącu (w Team na każde miejsce); potem transkrypcja w chmurze wstrzymuje się do następnego miesiąca. Transkrypcja na Macu nie ma limitu ani kolejki.",
     "fairUse": "Płatne plany obejmują miesięczny przydział transkrypcji w chmurze, a po nim do 150 godzin w miesiącu w wolniejszej kolejce; przydział w Free i zasady uczciwego korzystania określa regulamin.",
     "fairUseLink": "Przeczytaj regulamin",
     "privacyTitle": "Lokalnie i w chmurze",

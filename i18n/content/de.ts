@@ -4,7 +4,7 @@ const content: SiteContent = {
   meta: {
     home: {
       title: 'IndexOne — private KI-Meeting-Notizen auf deinem Mac, ohne Bot',
-      description: 'Nimm beide Seiten eines Calls ohne Bot auf, transkribiere ihn auf deinem Mac und frag Ivy – mit einem Beleg für jede Zeile. Auf dem Mac kostenlos; deine Cloud-Bereiche öffnen sich in jedem Browser.',
+      description: 'Nimm beide Seiten eines Calls ohne Bot auf, transkribiere ihn auf deinem Mac, frag Ivy und prüf Notizen direkt an der Aufnahme. Auf dem Mac kostenlos; deine Cloud-Bereiche öffnen sich in jedem Browser.',
     },
     features: {
       breadcrumb: 'Funktionen',
@@ -143,7 +143,7 @@ const content: SiteContent = {
   unique: {
     eyebrow: 'Funktionen',
     title: 'Ein Meeting-Tool, das sich wirklich erinnert.',
-    lead: 'Viele Apps speichern Notizen oder transkribieren Calls. IndexOne nimmt beide Seiten des Calls auf deinem Mac auf, lässt dich Ivy schon während des Meetings fragen und zeigt, woher jede Zeile stammt, die es schreibt.',
+    lead: 'Viele Apps speichern Notizen oder transkribieren Calls. IndexOne nimmt beide Seiten des Calls auf deinem Mac auf, lässt dich Ivy schon während des Meetings fragen und verknüpft Aussagen in seinen Notizen, wo immer möglich, mit der Stelle in der Aufnahme.',
     items: {
       'live': {
         title: 'Frag Ivy mitten im Meeting – alles bleibt auf deinem Mac',
@@ -156,7 +156,7 @@ const content: SiteContent = {
         link: 'Aufnahme und Transkription',
       },
       'receipts': {
-        title: 'Für jede Aussage gibt es einen Beleg',
+        title: 'Belege führen zurück zur Aufnahme',
         body: 'Jede belegte Zeile einer Notiz verlinkt auf die Sekunde Audio, aus der sie stammt – mit Sprecher. Zeilen ohne Beleg bekommen keinen, so siehst du, was verifiziert ist.',
         link: 'Belege',
       },
@@ -332,7 +332,7 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Belege',
-        title: 'Jede Aussage führt zurück zur Aufnahme.',
+        title: 'Belegte Aussagen führen zurück zur Aufnahme.',
         body: 'Die Notizen von IndexOne verlangen kein blindes Vertrauen. Jede Zeile, die sich auf tatsächlich Gesagtes stützt, trägt einen Beleg – ein Klick springt direkt zu dieser Sekunde Audio, mit Sprecher. Umschriebene oder unbelegte Zeilen bekommen keinen, so siehst du auf einen Blick, was verifiziert ist.',
         points: [
           'Klick auf eine Aussage und hör genau, woher sie kommt',
@@ -375,7 +375,7 @@ const content: SiteContent = {
     "trialTitle": "Jeden Monat kostenlos",
     "trial": "Jedes kostenlose Konto erhält pro Kalendermonat (UTC) 200.000 Ivy-Einheiten und ein Kontingent für Cloud-Transkription, ohne Karte. Lokale Mac-Funktionen haben kein Planlimit.",
     "meterTitle": "Cloud-Transkription: erst schnell, dann langsamere Warteschlange",
-    "meter": "Bezahlte Pläne transkribieren in der Cloud mit voller Geschwindigkeit bis zu einem monatlichen Kontingent. Danach kommen neue Aufnahmen in eine langsamere Warteschlange und können erst nach einigen Stunden fertig sein, für bis zu 150 weitere Stunden im Monat (bei Team pro Platz); danach pausiert die Cloud-Transkription bis zum nächsten Monat. Transkription auf dem Mac erfolgt immer sofort und unbegrenzt.",
+    "meter": "Bezahlte Pläne transkribieren in der Cloud mit voller Geschwindigkeit bis zu einem monatlichen Kontingent. Danach kommen neue Aufnahmen in eine langsamere Warteschlange und können erst nach einigen Stunden fertig sein, für bis zu 150 weitere Stunden im Monat (bei Team pro Platz); danach pausiert die Cloud-Transkription bis zum nächsten Monat. Transkription auf dem Mac hat kein Limit und keine Warteschlange.",
     "fairUse": "Bezahlte Pläne enthalten ein monatliches Kontingent an Cloud-Transkription, danach bis zu 150 Stunden im Monat in einer langsameren Warteschlange; das Free-Kontingent und die Fair-Use-Regeln stehen in den Nutzungsbedingungen.",
     "fairUseLink": "Nutzungsbedingungen lesen (auf Polnisch)",
     "privacyTitle": "Lokal und Cloud",

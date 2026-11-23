@@ -4,7 +4,7 @@ const content: SiteContent = {
   meta: {
     home: {
       title: 'IndexOne — notas de reunião privadas com IA no seu Mac, sem bot',
-      description: 'Grave os dois lados de uma chamada sem bot, transcreva no seu Mac e pergunte à Ivy, com um recibo para cada linha. Grátis no Mac; seus espaços na nuvem abrem em qualquer navegador.',
+      description: 'Grave os dois lados de uma chamada sem bot, transcreva no seu Mac, pergunte à Ivy e confira as notas com a gravação. Grátis no Mac; seus espaços na nuvem abrem em qualquer navegador.',
     },
     features: {
       breadcrumb: 'Recursos',
@@ -143,7 +143,7 @@ const content: SiteContent = {
   unique: {
     eyebrow: 'Recursos',
     title: 'Uma ferramenta de reuniões que realmente lembra.',
-    lead: 'Muitos apps guardam notas ou transcrevem chamadas. O IndexOne grava os dois lados da chamada no seu Mac, deixa você perguntar à Ivy durante a reunião e mostra de onde veio cada linha que escreve.',
+    lead: 'Muitos apps guardam notas ou transcrevem chamadas. O IndexOne grava os dois lados da chamada no seu Mac, deixa você perguntar à Ivy durante a reunião e, sempre que possível, liga as afirmações das notas ao momento da gravação de onde vieram.',
     items: {
       'live': {
         title: 'Pergunte à Ivy no meio da reunião — e mantenha tudo no seu Mac',
@@ -156,7 +156,7 @@ const content: SiteContent = {
         link: 'Captura e transcrição',
       },
       'receipts': {
-        title: 'Toda afirmação tem um recibo',
+        title: 'Os recibos levam ao áudio',
         body: 'Cada linha embasada de uma nota leva ao segundo exato do áudio de onde veio, com quem falou. Linhas sem evidência ficam sem recibo, então você vê o que está verificado.',
         link: 'Recibos',
       },
@@ -332,7 +332,7 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Recibos',
-        title: 'Toda afirmação leva de volta à gravação.',
+        title: 'Afirmações fundamentadas levam de volta à gravação.',
         body: 'As notas do IndexOne não pedem que você confie nelas. Cada linha baseada no que foi realmente dito traz um recibo — clique nele para ir direto àquele segundo do áudio, com quem falou. Linhas parafraseadas ou sem embasamento ficam sem recibo, então você vê de relance o que está verificado.',
         points: [
           'Clique em uma afirmação e ouça exatamente de onde ela veio',
@@ -375,7 +375,7 @@ const content: SiteContent = {
     "trialTitle": "Grátis todo mês",
     "trial": "Cada conta gratuita recebe a cada mês civil (UTC) 200.000 unidades Ivy e uma cota de transcrição na nuvem, sem cartão. Os recursos locais do Mac não têm limite de plano.",
     "meterTitle": "Transcrição na nuvem: rápida, depois uma fila mais lenta",
-    "meter": "Os planos pagos transcrevem na nuvem em velocidade total até uma cota mensal. Depois disso, as novas gravações entram numa fila mais lenta e podem levar algumas horas para ficar prontas, por até mais 150 horas por mês (por lugar no Team); depois, a transcrição na nuvem pausa até o mês seguinte. A transcrição no seu Mac é sempre imediata e ilimitada.",
+    "meter": "Os planos pagos transcrevem na nuvem em velocidade total até uma cota mensal. Depois disso, as novas gravações entram numa fila mais lenta e podem levar algumas horas para ficar prontas, por até mais 150 horas por mês (por lugar no Team); depois, a transcrição na nuvem pausa até o mês seguinte. A transcrição no seu Mac não tem limite nem fila.",
     "fairUse": "Os planos pagos incluem uma cota mensal de transcrição na nuvem e, depois, até 150 horas por mês numa fila mais lenta; a cota do Free e as regras de uso razoável estão nos Termos de serviço.",
     "fairUseLink": "Leia os Termos de serviço (em polonês)",
     "privacyTitle": "Local e nuvem",

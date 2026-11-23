@@ -4,7 +4,7 @@ const content: SiteContent = {
   meta: {
     home: {
       title: 'IndexOne — private AI meeting notes on your Mac, no bot needed',
-      description: 'Record both sides of a call without a bot, transcribe it on your Mac and ask Ivy, with a receipt for every line. Free on the Mac; your cloud spaces open in any browser.',
+      description: 'Record both sides of a call without a bot, transcribe it on your Mac, ask Ivy and check notes against the recording. Free on the Mac; your cloud spaces open in any browser.',
     },
     features: {
       breadcrumb: 'Features',
@@ -143,7 +143,7 @@ const content: SiteContent = {
   unique: {
     eyebrow: 'Features',
     title: 'A meeting tool that actually remembers.',
-    lead: 'Plenty of apps store notes or transcribe calls. IndexOne records both sides of the call on your Mac, lets you ask Ivy during the meeting, and shows where every line it writes came from.',
+    lead: 'Plenty of apps store notes or transcribe calls. IndexOne records both sides of the call on your Mac, lets you ask Ivy during the meeting, and links claims in its notes back to the moment in the recording, wherever it can match them.',
     items: {
       'live': {
         title: 'Ask Ivy mid-meeting — and keep it on your Mac',
@@ -156,7 +156,7 @@ const content: SiteContent = {
         link: 'Capture and transcription',
       },
       'receipts': {
-        title: 'Every claim has a receipt',
+        title: 'Receipts point back to the audio',
         body: 'Each grounded line in a note links to the second of audio it came from, with the speaker. Lines without evidence get no receipt, so you see what is verified.',
         link: 'Receipts',
       },
@@ -332,7 +332,7 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Receipts',
-        title: 'Every claim traces back to the tape.',
+        title: 'Grounded claims trace back to the tape.',
         body: 'IndexOne\'s notes don\'t ask you to trust them. Each line that\'s grounded in what was actually said carries a receipt — click it to jump straight to that second of audio, with the speaker. Paraphrased or unsupported lines get none, so you can see at a glance what\'s verified.',
         points: [
           'Click a claim, hear exactly where it came from',
@@ -375,7 +375,7 @@ const content: SiteContent = {
     "trialTitle": "Free every month",
     "trial": "Every free account gets 200,000 Ivy units and a cloud transcription allowance each calendar month (UTC), without a card. Local Mac features have no plan limit.",
     "meterTitle": "Cloud transcription: fast, then a slower queue",
-    "meter": "Paid plans transcribe in the cloud at full speed up to a monthly allowance. After that, new recordings join a slower queue and may take a few hours to be ready, for up to 150 more hours a month (per seat on Team); then cloud transcription pauses until the next month. Transcription on your Mac is always immediate and unlimited.",
+    "meter": "Paid plans transcribe in the cloud at full speed up to a monthly allowance. After that, new recordings join a slower queue and may take a few hours to be ready, for up to 150 more hours a month (per seat on Team); then cloud transcription pauses until the next month. Transcription on your Mac has no limit and no queue.",
     "fairUse": "Paid plans include a monthly cloud transcription allowance, then up to 150 hours a month in a slower queue; the Free allowance and the fair use rules are set out in the Terms of service.",
     "fairUseLink": "Read the Terms of service (in Polish)",
     "privacyTitle": "Local and cloud are different",
