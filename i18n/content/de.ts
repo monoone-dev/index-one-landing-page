@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Belege führen zurück zur Aufnahme',
-        body: 'Jede belegte Zeile einer Notiz verlinkt auf die Sekunde Audio, aus der sie stammt – mit Sprecher. Zeilen ohne Beleg bekommen keinen, so siehst du, was die Aufnahme belegt.',
+        body: 'Jede belegte Zeile einer Notiz verlinkt auf die Sekunde Audio, aus der sie stammt – mit Sprecher. Zeilen ohne Beleg bekommen keinen, so siehst du, welche Zeilen eine wahrscheinliche Quelle in der Aufnahme haben.',
         link: 'Belege',
       },
       'security': {
@@ -226,7 +226,7 @@ const content: SiteContent = {
       },
       'update-check': {
         title: 'Was IndexOne sendet, ohne dass du darum bittest',
-        body: 'Beim Start fragt IndexOne bei GitHub nach, ob es eine neuere Version gibt; die Anfrage nennt die Version, die du nutzt, und sonst nichts. Solange die Update-Prüfung an ist (standardmäßig der Fall) oder wenn auf diesem Mac schon einmal ein Konto angemeldet war, fragt es außerdem beim Start und jede Stunde beim IndexOne-Server nach, ob deine Version noch unterstützt wird – ohne Inhalte. Einmal am Tag sendet es eine kleine Nutzungsmeldung: eine zufällige Installations-ID, die App- und macOS-Version, die Prozessorarchitektur, die Sprache und ob du angemeldet bist – keine Meetings, Notizen, Aufnahmen oder Namen. Anonym ist sie nur, solange du abgemeldet bist; bist du angemeldet, wird sie mit deinem Konto gesendet. Beim ersten Transkribieren lädt es zwei kleine Sprachmodelle von Hugging Face herunter, für die Spracherkennung und die Sprechertrennung. Die Update-Prüfung und die Nutzungsmeldung kannst du unter <b>Settings → Privacy</b> abschalten. Ohne Update-Prüfung entfällt auch die Versionsabfrage, außer auf diesem Mac war schon einmal ein Konto angemeldet. Es sind die einzigen Dinge auf dieser Seite, die passieren, ohne dass du darum bittest – und genau deshalb stehen sie hier.',
+        body: 'Beim Start fragt IndexOne bei GitHub nach, ob es eine neuere Version gibt; die Anfrage nennt die Version, die du nutzt, und sonst nichts. Solange die Update-Prüfung an ist (standardmäßig der Fall) oder wenn auf diesem Mac schon einmal ein Konto angemeldet war, fragt es außerdem beim Start und jede Stunde beim IndexOne-Server nach, ob deine Version noch unterstützt wird – ohne Inhalte. Einmal am Tag sendet es eine kleine Nutzungsmeldung: eine zufällige Installations-ID, die App- und macOS-Version, die Prozessorarchitektur, die Sprache und ob du angemeldet bist – keine Meetings, Notizen, Aufnahmen oder Namen. Anonym ist sie nur, solange du abgemeldet bist; bist du angemeldet, wird sie mit deinem Konto gesendet. Beim ersten Transkribieren lädt es zwei kleine Sprachmodelle von Hugging Face herunter, für die Spracherkennung und die Sprechertrennung. Die Update-Prüfung und die Nutzungsmeldung kannst du unter <b>Settings → Privacy & Security</b> abschalten. Ohne Update-Prüfung entfällt auch die Versionsabfrage, außer auf diesem Mac war schon einmal ein Konto angemeldet. Es sind die einzigen Dinge auf dieser Seite, die passieren, ohne dass du darum bittest – und genau deshalb stehen sie hier.',
       },
     },
     tableCaption: 'Wo jeder KI-Anbieter läuft und ob Meeting-Text deinen Mac verlässt',
@@ -333,7 +333,7 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Belege',
         title: 'Belegte Aussagen führen zurück zur Aufnahme.',
-        body: 'Die Notizen von IndexOne verlangen kein blindes Vertrauen. Jede Zeile, die sich auf tatsächlich Gesagtes stützt, trägt einen Beleg – ein Klick springt direkt zu dieser Sekunde Audio, mit Sprecher. Umschriebene oder unbelegte Zeilen bekommen keinen, so siehst du auf einen Blick, was die Aufnahme belegt.',
+        body: 'Die Notizen von IndexOne verlangen kein blindes Vertrauen. Jede Zeile, die sich auf tatsächlich Gesagtes stützt, trägt einen Beleg – ein Klick springt direkt zu dieser Sekunde Audio, mit Sprecher. Umschriebene oder unbelegte Zeilen bekommen keinen, so siehst du auf einen Blick, welche Zeilen eine wahrscheinliche Quelle in der Aufnahme haben.',
         points: [
           'Klick auf eine Aussage und hör genau, woher sie kommt',
           'Sprecher und genaue Sekunde auf jedem Beleg',

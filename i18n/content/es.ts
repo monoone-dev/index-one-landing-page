@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Los recibos llevan al audio',
-        body: 'Cada línea fundamentada de una nota enlaza con el segundo exacto del audio del que procede, con el hablante. Las líneas sin pruebas no llevan recibo, así ves qué respalda la grabación.',
+        body: 'Cada línea fundamentada de una nota enlaza con el segundo exacto del audio del que procede, con el hablante. Las líneas sin pruebas no llevan recibo, así ves qué líneas tienen una fuente probable en la grabación.',
         link: 'Recibos',
       },
       'security': {
@@ -226,7 +226,7 @@ const content: SiteContent = {
       },
       'update-check': {
         title: 'Lo que IndexOne envía sin que lo pidas',
-        body: 'Al iniciarse, IndexOne pregunta a GitHub si hay una versión más reciente; la solicitud indica qué versión usas, y nada más. Mientras la comprobación de actualizaciones esté activada (lo está de forma predeterminada), o si alguna vez se ha iniciado sesión con una cuenta en este Mac, también pregunta al servidor de IndexOne, al iniciarse y cada hora, si tu versión sigue siendo compatible, sin enviar contenido. Una vez al día envía un pequeño mensaje de uso: un identificador de instalación aleatorio, las versiones de la app y de macOS, la arquitectura del procesador, el idioma y si has iniciado sesión; ni reuniones, ni notas, ni grabaciones, ni nombres. Solo es anónimo mientras no has iniciado sesión; si has iniciado sesión, se envía con tu cuenta. La primera vez que transcribes, descarga de Hugging Face dos pequeños modelos de voz, para la detección de voz y la separación de hablantes. Puedes desactivar la comprobación de actualizaciones y el mensaje de uso en <b>Settings → Privacy</b>. Sin la comprobación de actualizaciones también se detiene la consulta de versión, salvo que alguna vez se haya iniciado sesión con una cuenta en este Mac. Son lo único de esta página que ocurre sin que lo pidas, y precisamente por eso están en esta página.',
+        body: 'Al iniciarse, IndexOne pregunta a GitHub si hay una versión más reciente; la solicitud indica qué versión usas, y nada más. Mientras la comprobación de actualizaciones esté activada (lo está de forma predeterminada), o si alguna vez se ha iniciado sesión con una cuenta en este Mac, también pregunta al servidor de IndexOne, al iniciarse y cada hora, si tu versión sigue siendo compatible, sin enviar contenido. Una vez al día envía un pequeño mensaje de uso: un identificador de instalación aleatorio, las versiones de la app y de macOS, la arquitectura del procesador, el idioma y si has iniciado sesión; ni reuniones, ni notas, ni grabaciones, ni nombres. Solo es anónimo mientras no has iniciado sesión; si has iniciado sesión, se envía con tu cuenta. La primera vez que transcribes, descarga de Hugging Face dos pequeños modelos de voz, para la detección de voz y la separación de hablantes. Puedes desactivar la comprobación de actualizaciones y el mensaje de uso en <b>Settings → Privacy & Security</b>. Sin la comprobación de actualizaciones también se detiene la consulta de versión, salvo que alguna vez se haya iniciado sesión con una cuenta en este Mac. Son lo único de esta página que ocurre sin que lo pidas, y precisamente por eso están en esta página.',
       },
     },
     tableCaption: 'Dónde se ejecuta cada proveedor de IA y si el texto de las reuniones sale de tu Mac',
@@ -333,7 +333,7 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Recibos',
         title: 'Las afirmaciones respaldadas se remontan a la grabación.',
-        body: 'Las notas de IndexOne no te piden que confíes en ellas. Cada línea basada en lo que realmente se dijo lleva un recibo: haz clic y salta directamente a ese segundo del audio, con el hablante. Las líneas parafraseadas o sin respaldo no llevan ninguno, así ves de un vistazo qué respalda la grabación.',
+        body: 'Las notas de IndexOne no te piden que confíes en ellas. Cada línea basada en lo que realmente se dijo lleva un recibo: haz clic y salta directamente a ese segundo del audio, con el hablante. Las líneas parafraseadas o sin respaldo no llevan ninguno, así ves de un vistazo qué líneas tienen una fuente probable en la grabación.',
         points: [
           'Haz clic en una afirmación y escucha exactamente de dónde salió',
           'Hablante y segundo exacto en cada recibo',

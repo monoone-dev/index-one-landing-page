@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Receipts point back to the audio',
-        body: 'Each grounded line in a note links to the second of audio it came from, with the speaker. Lines without evidence get no receipt, so you see what\'s backed by the recording.',
+        body: 'Each grounded line in a note links to the second of audio it came from, with the speaker. Lines without evidence get no receipt, so you can see which lines have a likely source in the recording.',
         link: 'Receipts',
       },
       'security': {
@@ -226,7 +226,7 @@ const content: SiteContent = {
       },
       'update-check': {
         title: 'What IndexOne sends without you asking',
-        body: 'At launch IndexOne asks GitHub whether a newer version exists; the request says which version you are running, and nothing else. While the update check is on (it is by default), or if an account has ever been signed in on this Mac, it also asks the IndexOne server at launch and every hour whether your version is still supported, with no content. Once a day it sends one small usage message: a random install ID, the app and macOS versions, the processor architecture, the language and whether you are signed in — no meetings, notes, recordings or names. It is anonymous only while you are signed out; when you are signed in, it is sent with your account. The first time you transcribe, it downloads two small speech models, for voice detection and speaker separation, from Hugging Face. Switch off the update check and the usage message in <b>Settings → Privacy</b>. With the update check off, the version question stops too, unless an account has ever been signed in on this Mac. These are the only things on this page that happen without you asking, which is exactly why they are on this page.',
+        body: 'At launch IndexOne asks GitHub whether a newer version exists; the request says which version you are running, and nothing else. While the update check is on (it is by default), or if an account has ever been signed in on this Mac, it also asks the IndexOne server at launch and every hour whether your version is still supported, with no content. Once a day it sends one small usage message: a random install ID, the app and macOS versions, the processor architecture, the language and whether you are signed in — no meetings, notes, recordings or names. It is anonymous only while you are signed out; when you are signed in, it is sent with your account. The first time you transcribe, it downloads two small speech models, for voice detection and speaker separation, from Hugging Face. Switch off the update check and the usage message in <b>Settings → Privacy & Security</b>. With the update check off, the version question stops too, unless an account has ever been signed in on this Mac. These are the only things on this page that happen without you asking, which is exactly why they are on this page.',
       },
     },
     tableCaption: 'Where each AI provider runs, and whether meeting text leaves your Mac',
@@ -333,7 +333,7 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Receipts',
         title: 'Grounded claims trace back to the tape.',
-        body: 'IndexOne\'s notes don\'t ask you to trust them. Each line that\'s grounded in what was actually said carries a receipt — click it to jump straight to that second of audio, with the speaker. Paraphrased or unsupported lines get none, so you can see at a glance what\'s backed by the recording.',
+        body: 'IndexOne\'s notes don\'t ask you to trust them. Each line that\'s grounded in what was actually said carries a receipt — click it to jump straight to that second of audio, with the speaker. Paraphrased or unsupported lines get none, so you can see at a glance which lines have a likely source in the recording.',
         points: [
           'Click a claim, hear exactly where it came from',
           'The speaker and the exact second on every receipt',

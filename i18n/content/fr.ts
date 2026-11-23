@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Les preuves renvoient à l’audio',
-        body: 'Chaque ligne étayée d’une note renvoie à la seconde d’audio dont elle provient, avec l’intervenant. Les lignes sans preuve n’en reçoivent pas : vous voyez ce qui s’appuie sur l’enregistrement.',
+        body: 'Chaque ligne étayée d’une note renvoie à la seconde d’audio dont elle provient, avec l’intervenant. Les lignes sans preuve n’en reçoivent pas : vous voyez quelles lignes ont une source probable dans l’enregistrement.',
         link: 'Les preuves',
       },
       'security': {
@@ -226,7 +226,7 @@ const content: SiteContent = {
       },
       'update-check': {
         title: 'Ce qu’IndexOne envoie sans que vous le demandiez',
-        body: 'Au lancement, IndexOne demande à GitHub s’il existe une version plus récente ; la requête indique la version que vous utilisez, et rien d’autre. Tant que la vérification des mises à jour est activée (c’est le cas par défaut), ou si un compte s’est déjà connecté sur ce Mac, il demande aussi au serveur IndexOne, au lancement puis toutes les heures, si votre version est toujours prise en charge, sans aucun contenu. Une fois par jour, il envoie un petit message d’usage : un identifiant d’installation aléatoire, les versions de l’app et de macOS, l’architecture du processeur, la langue et si vous êtes connecté — pas de réunions, de notes, d’enregistrements ni de noms. Il n’est anonyme que si vous êtes déconnecté ; si vous êtes connecté, il est envoyé avec votre compte. La première fois que vous transcrivez, il télécharge depuis Hugging Face deux petits modèles vocaux, pour la détection de la voix et la séparation des intervenants. Vous pouvez désactiver la vérification des mises à jour et le message d’usage dans <b>Settings → Privacy</b>. Sans la vérification des mises à jour, la question sur la version s’arrête aussi, sauf si un compte s’est déjà connecté sur ce Mac. Ce sont les seules choses sur cette page qui se produisent sans que vous le demandiez, et c’est justement pour ça qu’elles y figurent.',
+        body: 'Au lancement, IndexOne demande à GitHub s’il existe une version plus récente ; la requête indique la version que vous utilisez, et rien d’autre. Tant que la vérification des mises à jour est activée (c’est le cas par défaut), ou si un compte s’est déjà connecté sur ce Mac, il demande aussi au serveur IndexOne, au lancement puis toutes les heures, si votre version est toujours prise en charge, sans aucun contenu. Une fois par jour, il envoie un petit message d’usage : un identifiant d’installation aléatoire, les versions de l’app et de macOS, l’architecture du processeur, la langue et si vous êtes connecté — pas de réunions, de notes, d’enregistrements ni de noms. Il n’est anonyme que si vous êtes déconnecté ; si vous êtes connecté, il est envoyé avec votre compte. La première fois que vous transcrivez, il télécharge depuis Hugging Face deux petits modèles vocaux, pour la détection de la voix et la séparation des intervenants. Vous pouvez désactiver la vérification des mises à jour et le message d’usage dans <b>Settings → Privacy & Security</b>. Sans la vérification des mises à jour, la question sur la version s’arrête aussi, sauf si un compte s’est déjà connecté sur ce Mac. Ce sont les seules choses sur cette page qui se produisent sans que vous le demandiez, et c’est justement pour ça qu’elles y figurent.',
       },
     },
     tableCaption: 'Où tourne chaque fournisseur d’IA, et si le texte des réunions quitte votre Mac',
@@ -333,7 +333,7 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Preuves',
         title: 'Les affirmations étayées remontent à l’enregistrement.',
-        body: 'Les notes d’IndexOne ne vous demandent pas de leur faire confiance. Chaque ligne fondée sur ce qui a réellement été dit porte une preuve — cliquez dessus pour aller directement à la seconde d’audio correspondante, avec l’intervenant. Les lignes paraphrasées ou non étayées n’en ont pas : vous voyez d’un coup d’œil ce qui s’appuie sur l’enregistrement.',
+        body: 'Les notes d’IndexOne ne vous demandent pas de leur faire confiance. Chaque ligne fondée sur ce qui a réellement été dit porte une preuve — cliquez dessus pour aller directement à la seconde d’audio correspondante, avec l’intervenant. Les lignes paraphrasées ou non étayées n’en ont pas : vous voyez d’un coup d’œil quelles lignes ont une source probable dans l’enregistrement.',
         points: [
           'Cliquez sur une affirmation, écoutez exactement d’où elle vient',
           'Intervenant et seconde exacte sur chaque preuve',

@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Dowód prowadzi do nagrania',
-        body: 'Każda poparta linijka notatki prowadzi do sekundy nagrania, z której pochodzi, razem z mówcą. Linijki bez pokrycia nie dostają dowodu, więc widzisz, co ma pokrycie w nagraniu.',
+        body: 'Każda poparta linijka notatki prowadzi do sekundy nagrania, z której pochodzi, razem z mówcą. Linijki bez pokrycia nie dostają dowodu, więc widzisz, które linijki mają prawdopodobne źródło w nagraniu.',
         link: 'Dowody',
       },
       'security': {
@@ -226,7 +226,7 @@ const content: SiteContent = {
       },
       'update-check': {
         title: 'Co IndexOne wysyła bez Twojej prośby',
-        body: 'Przy uruchomieniu IndexOne pyta GitHub, czy jest nowsza wersja; zapytanie zawiera numer wersji, której używasz, i nic więcej. Gdy sprawdzanie aktualizacji jest włączone (domyślnie jest) albo jeśli na tym Macu kiedykolwiek zalogowano konto, pyta też serwer IndexOne przy uruchomieniu i co godzinę, czy Twoja wersja jest nadal wspierana, bez żadnej treści. Raz dziennie wysyła jedną małą wiadomość o użyciu: losowy identyfikator instalacji, wersję aplikacji i macOS, architekturę procesora, język i to, czy jesteś zalogowany — żadnych spotkań, notatek, nagrań ani nazwisk. Jest anonimowa tylko, gdy jesteś wylogowany; gdy jesteś zalogowany, jest wysyłana z Twoim kontem. Przy pierwszej transkrypcji pobiera z Hugging Face dwa małe modele mowy: do wykrywania głosu i rozdzielania mówców. Sprawdzanie aktualizacji i wiadomość o użyciu wyłączysz w <b>Settings → Privacy</b>. Po wyłączeniu sprawdzania aktualizacji ustaje też pytanie o wersję, chyba że na tym Macu kiedykolwiek zalogowano konto. To jedyne rzeczy na tej stronie, które dzieją się bez Twojej prośby — i właśnie dlatego się tu znalazły.',
+        body: 'Przy uruchomieniu IndexOne pyta GitHub, czy jest nowsza wersja; zapytanie zawiera numer wersji, której używasz, i nic więcej. Gdy sprawdzanie aktualizacji jest włączone (domyślnie jest) albo jeśli na tym Macu kiedykolwiek zalogowano konto, pyta też serwer IndexOne przy uruchomieniu i co godzinę, czy Twoja wersja jest nadal wspierana, bez żadnej treści. Raz dziennie wysyła jedną małą wiadomość o użyciu: losowy identyfikator instalacji, wersję aplikacji i macOS, architekturę procesora, język i to, czy jesteś zalogowany — żadnych spotkań, notatek, nagrań ani nazwisk. Jest anonimowa tylko, gdy jesteś wylogowany; gdy jesteś zalogowany, jest wysyłana z Twoim kontem. Przy pierwszej transkrypcji pobiera z Hugging Face dwa małe modele mowy: do wykrywania głosu i rozdzielania mówców. Sprawdzanie aktualizacji i wiadomość o użyciu wyłączysz w <b>Settings → Privacy & Security</b>. Po wyłączeniu sprawdzania aktualizacji ustaje też pytanie o wersję, chyba że na tym Macu kiedykolwiek zalogowano konto. To jedyne rzeczy na tej stronie, które dzieją się bez Twojej prośby — i właśnie dlatego się tu znalazły.',
       },
     },
     tableCaption: 'Gdzie działa każdy dostawca AI i czy tekst ze spotkań opuszcza Twojego Maca',
@@ -333,7 +333,7 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Dowody',
         title: 'Twierdzenia oparte na rozmowie prowadzą do nagrania.',
-        body: 'Notatki IndexOne nie wymagają ślepego zaufania. Każda linijka oparta na tym, co faktycznie padło, ma swój dowód — kliknij, a przeskoczysz dokładnie do tej sekundy nagrania, z mówcą. Parafrazy i linijki bez pokrycia go nie dostają, więc od razu widzisz, co ma pokrycie w nagraniu.',
+        body: 'Notatki IndexOne nie wymagają ślepego zaufania. Każda linijka oparta na tym, co faktycznie padło, ma swój dowód — kliknij, a przeskoczysz dokładnie do tej sekundy nagrania, z mówcą. Parafrazy i linijki bez pokrycia go nie dostają, więc od razu widzisz, które linijki mają prawdopodobne źródło w nagraniu.',
         points: [
           'Kliknij twierdzenie i usłysz, skąd dokładnie pochodzi',
           'Przy każdym dowodzie: kto mówił i w której dokładnie sekundzie',
