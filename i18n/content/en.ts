@@ -138,7 +138,7 @@ const content: SiteContent = {
   },
   trust: {
     aria: 'At a glance',
-    items: ['No bot on the Mac', 'On-device transcription', 'Touch ID folder locks', 'Mac and web'],
+    items: ['No bot on the Mac', 'On-device transcription', 'Touch ID folder locks', 'Mac and web · iPhone app coming soon'],
   },
   unique: {
     eyebrow: 'Features',
@@ -487,7 +487,7 @@ const content: SiteContent = {
       },
       'platforms': {
         criterion: 'Platforms',
-        cells: ['macOS, web', 'macOS, Windows, Linux, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, iOS, iPadOS, web (beta)', 'macOS, Windows, iOS'],
+        cells: ['macOS, web; iPhone app coming soon', 'macOS, Windows, Linux, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, iOS, iPadOS, web (beta)', 'macOS, Windows, iOS'],
       },
       'price': {
         criterion: 'Price',
@@ -605,7 +605,7 @@ const content: SiteContent = {
     legacyHtml: 'Running version 2.8.0 or earlier? Its update check can no longer reach us. Download the <a href="{download}">latest release</a> once and drag it into Applications, replacing the old copy; your library, recordings and settings stay where they are. From 2.9.0 on, the app finds new versions by itself.',
   },
   footer: {
-    legalHtml: 'Mac app and web app · on-device Ivy · built with Tauri, Angular and Rust · free on the Mac · © {year} <a href="{authors}">MonoOne</a> · text <a href="{license}">CC BY 4.0</a>',
+    legalHtml: 'Mac app and web app · iPhone app coming soon · on-device Ivy · built with Tauri, Angular and Rust · free on the Mac · © {year} <a href="{authors}">MonoOne</a> · text <a href="{license}">CC BY 4.0</a>',
     legalNav: 'Legal information',
     terms: 'Terms of service (PL)',
     privacyPolicy: 'Privacy policy (PL)',

@@ -138,7 +138,7 @@ const content: SiteContent = {
   },
   trust: {
     aria: '一览',
-    items: ['Mac 上无需机器人', '设备端转写', 'Touch ID 文件夹锁', 'Mac 与网页版'],
+    items: ['Mac 上无需机器人', '设备端转写', 'Touch ID 文件夹锁', 'Mac 与网页版 · iPhone 应用即将推出'],
   },
   unique: {
     eyebrow: '功能',
@@ -487,7 +487,7 @@ const content: SiteContent = {
       },
       'platforms': {
         criterion: '平台',
-        cells: ['macOS、网页版', 'macOS、Windows、Linux、iOS、Android', 'macOS、Windows、网页版、iOS、Android', 'macOS、Windows、网页版、iOS、Android', 'macOS、iOS、iPadOS、网页版（测试版）', 'macOS、Windows、iOS'],
+        cells: ['macOS、网页版；iPhone 应用即将推出', 'macOS、Windows、Linux、iOS、Android', 'macOS、Windows、网页版、iOS、Android', 'macOS、Windows、网页版、iOS、Android', 'macOS、iOS、iPadOS、网页版（测试版）', 'macOS、Windows、iOS'],
       },
       'price': {
         criterion: '价格',
@@ -605,7 +605,7 @@ const content: SiteContent = {
     legacyHtml: '还在使用 2.8.0 或更早的版本？它的更新检查已经无法连接到我们。请手动下载一次<a href="{download}">最新版本</a>，将其拖入“应用程序”文件夹替换旧版本；你的资料库、录音和设置都会原样保留。从 2.9.0 起，应用会自动发现新版本。',
   },
   footer: {
-    legalHtml: 'Mac 应用与网页版 · 设备端 Ivy · 基于 Tauri、Angular 和 Rust 构建 · Mac 版免费 · © {year} <a href="{authors}">MonoOne</a> · 文字内容采用 <a href="{license}">CC BY 4.0</a> 许可',
+    legalHtml: 'Mac 应用与网页版 · iPhone 应用即将推出 · 设备端 Ivy · 基于 Tauri、Angular 和 Rust 构建 · Mac 版免费 · © {year} <a href="{authors}">MonoOne</a> · 文字内容采用 <a href="{license}">CC BY 4.0</a> 许可',
     legalNav: '法律信息',
     terms: '服务条款（PL）',
     privacyPolicy: '隐私政策（PL）',

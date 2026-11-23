@@ -138,7 +138,7 @@ const content: SiteContent = {
   },
   trust: {
     aria: 'In breve',
-    items: ['Nessun bot sul Mac', 'Trascrizione sul dispositivo', 'Cartelle bloccate con Touch ID', 'Mac e web'],
+    items: ['Nessun bot sul Mac', 'Trascrizione sul dispositivo', 'Cartelle bloccate con Touch ID', 'Mac e web · app per iPhone in arrivo'],
   },
   unique: {
     eyebrow: 'Funzionalità',
@@ -487,7 +487,7 @@ const content: SiteContent = {
       },
       'platforms': {
         criterion: 'Piattaforme',
-        cells: ['macOS, web', 'macOS, Windows, Linux, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, iOS, iPadOS, web (beta)', 'macOS, Windows, iOS'],
+        cells: ['macOS, web; app per iPhone in arrivo', 'macOS, Windows, Linux, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, iOS, iPadOS, web (beta)', 'macOS, Windows, iOS'],
       },
       'price': {
         criterion: 'Prezzo',
@@ -605,7 +605,7 @@ const content: SiteContent = {
     legacyHtml: 'Usi la versione 2.8.0 o precedente? Il suo controllo degli aggiornamenti non riesce più a raggiungerci. Scarica una volta l’<a href="{download}">ultima versione</a> e trascinala in Applicazioni, sostituendo la vecchia copia; libreria, registrazioni e impostazioni restano dove sono. Dalla 2.9.0 in poi, l’app trova da sola le nuove versioni.',
   },
   footer: {
-    legalHtml: 'App per Mac e app web · Ivy sul dispositivo · realizzato con Tauri, Angular e Rust · gratuito sul Mac · © {year} <a href="{authors}">MonoOne</a> · testi <a href="{license}">CC BY 4.0</a>',
+    legalHtml: 'App per Mac e app web · app per iPhone in arrivo · Ivy sul dispositivo · realizzato con Tauri, Angular e Rust · gratuito sul Mac · © {year} <a href="{authors}">MonoOne</a> · testi <a href="{license}">CC BY 4.0</a>',
     legalNav: 'Informazioni legali',
     terms: 'Termini di servizio (PL)',
     privacyPolicy: 'Informativa sulla privacy (PL)',

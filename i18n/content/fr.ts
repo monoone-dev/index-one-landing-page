@@ -138,7 +138,7 @@ const content: SiteContent = {
   },
   trust: {
     aria: 'En un coup d’œil',
-    items: ['Aucun bot sur Mac', 'Transcription sur l’appareil', 'Verrous Touch ID par dossier', 'Mac et web'],
+    items: ['Aucun bot sur Mac', 'Transcription sur l’appareil', 'Verrous Touch ID par dossier', 'Mac et web · app iPhone bientôt disponible'],
   },
   unique: {
     eyebrow: 'Fonctionnalités',
@@ -487,7 +487,7 @@ const content: SiteContent = {
       },
       'platforms': {
         criterion: 'Plateformes',
-        cells: ['macOS, web', 'macOS, Windows, Linux, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, iOS, iPadOS, web (bêta)', 'macOS, Windows, iOS'],
+        cells: ['macOS, web ; app iPhone bientôt disponible', 'macOS, Windows, Linux, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, iOS, iPadOS, web (bêta)', 'macOS, Windows, iOS'],
       },
       'price': {
         criterion: 'Prix',
@@ -605,7 +605,7 @@ const content: SiteContent = {
     legacyHtml: 'Vous utilisez la version 2.8.0 ou antérieure ? Sa vérification des mises à jour ne peut plus nous joindre. Téléchargez une fois la <a href="{download}">dernière version</a> et faites-la glisser dans Applications pour remplacer l’ancienne copie ; votre bibliothèque, vos enregistrements et vos réglages restent en place. À partir de la 2.9.0, l’app trouve elle-même les nouvelles versions.',
   },
   footer: {
-    legalHtml: 'App Mac et app web · Ivy sur l’appareil · conçu avec Tauri, Angular et Rust · gratuit sur Mac · © {year} <a href="{authors}">MonoOne</a> · texte <a href="{license}">CC BY 4.0</a>',
+    legalHtml: 'App Mac et app web · app iPhone bientôt disponible · Ivy sur l’appareil · conçu avec Tauri, Angular et Rust · gratuit sur Mac · © {year} <a href="{authors}">MonoOne</a> · texte <a href="{license}">CC BY 4.0</a>',
     legalNav: 'Informations légales',
     terms: 'Conditions d’utilisation (PL)',
     privacyPolicy: 'Politique de confidentialité (PL)',

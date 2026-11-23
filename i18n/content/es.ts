@@ -138,7 +138,7 @@ const content: SiteContent = {
   },
   trust: {
     aria: 'De un vistazo',
-    items: ['Sin bot en el Mac', 'Transcripción en el dispositivo', 'Bloqueo de carpetas con Touch ID', 'Mac y web'],
+    items: ['Sin bot en el Mac', 'Transcripción en el dispositivo', 'Bloqueo de carpetas con Touch ID', 'Mac y web · app para iPhone muy pronto'],
   },
   unique: {
     eyebrow: 'Funciones',
@@ -487,7 +487,7 @@ const content: SiteContent = {
       },
       'platforms': {
         criterion: 'Plataformas',
-        cells: ['macOS, web', 'macOS, Windows, Linux, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, iOS, iPadOS, web (beta)', 'macOS, Windows, iOS'],
+        cells: ['macOS, web; app para iPhone muy pronto', 'macOS, Windows, Linux, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, Windows, web, iOS, Android', 'macOS, iOS, iPadOS, web (beta)', 'macOS, Windows, iOS'],
       },
       'price': {
         criterion: 'Precio',
@@ -605,7 +605,7 @@ const content: SiteContent = {
     legacyHtml: '¿Usas la versión 2.8.0 o anterior? Su comprobación de actualizaciones ya no puede llegar a nosotros. Descarga una vez la <a href="{download}">última versión</a> y arrástrala a Aplicaciones para sustituir la copia antigua; tu biblioteca, tus grabaciones y tus ajustes se quedan donde están. A partir de la 2.9.0, la app encuentra las nuevas versiones por sí sola.',
   },
   footer: {
-    legalHtml: 'App para Mac y app web · Ivy en el dispositivo · creado con Tauri, Angular y Rust · gratis en el Mac · © {year} <a href="{authors}">MonoOne</a> · texto <a href="{license}">CC BY 4.0</a>',
+    legalHtml: 'App para Mac y app web · app para iPhone muy pronto · Ivy en el dispositivo · creado con Tauri, Angular y Rust · gratis en el Mac · © {year} <a href="{authors}">MonoOne</a> · texto <a href="{license}">CC BY 4.0</a>',
     legalNav: 'Información legal',
     terms: 'Términos del servicio (PL)',
     privacyPolicy: 'Política de privacidad (PL)',

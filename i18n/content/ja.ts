@@ -138,7 +138,7 @@ const content: SiteContent = {
   },
   trust: {
     aria: 'ひと目でわかるポイント',
-    items: ['Macではボット不要', 'デバイス上で文字起こし', 'Touch IDのフォルダーロック', 'MacとWeb'],
+    items: ['Macではボット不要', 'デバイス上で文字起こし', 'Touch IDのフォルダーロック', 'MacとWeb · iPhoneアプリは近日公開'],
   },
   unique: {
     eyebrow: '機能',
@@ -487,7 +487,7 @@ const content: SiteContent = {
       },
       'platforms': {
         criterion: '対応プラットフォーム',
-        cells: ['macOS、Web', 'macOS、Windows、Linux、iOS、Android', 'macOS、Windows、Web、iOS、Android', 'macOS、Windows、Web、iOS、Android', 'macOS、iOS、iPadOS、Web（ベータ）', 'macOS、Windows、iOS'],
+        cells: ['macOS、Web。iPhoneアプリは近日公開', 'macOS、Windows、Linux、iOS、Android', 'macOS、Windows、Web、iOS、Android', 'macOS、Windows、Web、iOS、Android', 'macOS、iOS、iPadOS、Web（ベータ）', 'macOS、Windows、iOS'],
       },
       'price': {
         criterion: '料金',
@@ -605,7 +605,7 @@ const content: SiteContent = {
     legacyHtml: 'バージョン2.8.0以前をお使いですか？そのバージョンのアップデート確認は、もう私たちに届きません。<a href="{download}">最新リリース</a>を一度ダウンロードし、アプリケーションフォルダーにドラッグして古いものと置き換えてください。ライブラリ、録音、設定はそのまま残ります。2.9.0以降は、アプリが自動で新しいバージョンを見つけます。',
   },
   footer: {
-    legalHtml: 'MacアプリとWebアプリ · デバイス上のIvy · Tauri、Angular、Rustで開発 · Macでは無料 · © {year} <a href="{authors}">MonoOne</a> · テキストは<a href="{license}">CC BY 4.0</a>',
+    legalHtml: 'MacアプリとWebアプリ · iPhoneアプリは近日公開 · デバイス上のIvy · Tauri、Angular、Rustで開発 · Macでは無料 · © {year} <a href="{authors}">MonoOne</a> · テキストは<a href="{license}">CC BY 4.0</a>',
     legalNav: '法的情報',
     terms: '利用規約（PL）',
     privacyPolicy: 'プライバシーポリシー（PL）',
