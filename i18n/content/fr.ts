@@ -3,8 +3,8 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — notes de réunion IA privées sur votre Mac, sans bot',
-      description: 'Enregistrez les deux côtés d’un appel sans bot, transcrivez-le sur votre Mac, interrogez Ivy et vérifiez vos notes avec l’enregistrement. Gratuit sur Mac ; vos espaces cloud s’ouvrent dans n’importe quel navigateur.',
+      title: 'IndexOne — notes de réunion IA privées sur votre Mac',
+      description: 'Enregistrez les deux côtés d’un appel sur votre Mac sans bot, transcrivez-le sur votre Mac, interrogez Ivy et vérifiez vos notes avec l’enregistrement. Gratuit sur Mac ; vos espaces cloud s’ouvrent dans n’importe quel navigateur.',
     },
     features: {
       breadcrumb: 'Fonctionnalités',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "Bot de réunion IndexOne — informations pour les participants",
       description: "Le bot IndexOne enregistre une réunion à laquelle vous participez. Qui est responsable, ce qui est enregistré et pourquoi, la durée de conservation et comment exercer vos droits.",
     },
-    ogImageAlt: 'IndexOne — notes de réunion IA privées sur votre Mac, sans bot',
+    ogImageAlt: 'IndexOne — notes de réunion IA privées sur votre Mac',
   },
   common: {
     skipToContent: 'Aller au contenu',
@@ -64,9 +64,9 @@ const content: SiteContent = {
   },
   hero: {
     githubAria: 'IndexOne sur GitHub',
-    titleStrong: 'Des notes de réunion qui restent sur votre Mac.',
-    titleSoft: 'Sans bot. Une preuve pour chaque ligne.',
-    subHtml: 'IndexOne enregistre les deux côtés de l’appel <b>sans bot</b>, le transcrit <b>sur votre Mac</b> et vous laisse interroger Ivy — en pleine réunion ou des mois plus tard — avec un lien vers la seconde où cela a été dit. Gratuit sur Mac, sans limite de minutes ni d’historique. Vos espaces cloud s’ouvrent dans n’importe quel navigateur.',
+    titleStrong: 'Chaque réunion en mémoire.',
+    titleSoft: 'Chaque phrase avec sa preuve.',
+    subHtml: 'IndexOne enregistre les deux côtés de l’appel <b>sur votre Mac sans bot</b>, le transcrit <b>sur votre Mac</b> et vous laisse interroger Ivy — en pleine réunion ou des mois plus tard — avec un lien vers la seconde où cela a été dit. Gratuit sur Mac, sans limite de minutes ni d’historique. Vos espaces cloud s’ouvrent dans n’importe quel navigateur.',
     download: 'Télécharger pour Mac — gratuit',
     signup: 'Créer un compte gratuit',
     note: 'Apple Silicon (M1 ou plus récent) · macOS 13.4+ · signée et notariée · aucun compte nécessaire sur Mac',

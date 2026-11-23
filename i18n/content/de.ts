@@ -3,8 +3,8 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — private KI-Meeting-Notizen auf deinem Mac, ohne Bot',
-      description: 'Nimm beide Seiten eines Calls ohne Bot auf, transkribiere ihn auf deinem Mac, frag Ivy und prüf Notizen direkt an der Aufnahme. Auf dem Mac kostenlos; deine Cloud-Bereiche öffnen sich in jedem Browser.',
+      title: 'IndexOne — private KI-Meeting-Notizen auf deinem Mac',
+      description: 'Nimm auf deinem Mac beide Seiten eines Calls ohne Bot auf, transkribiere ihn auf deinem Mac, frag Ivy und prüf Notizen direkt an der Aufnahme. Auf dem Mac kostenlos; deine Cloud-Bereiche öffnen sich in jedem Browser.',
     },
     features: {
       breadcrumb: 'Funktionen',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "IndexOne Meeting-Bot — Informationen für Meeting-Teilnehmende",
       description: "Ein Meeting, an dem du teilnimmst, wird vom IndexOne-Bot aufgezeichnet. Wer verantwortlich ist, was und wozu aufgezeichnet wird, wie lange es gespeichert wird und wie du deine Rechte nutzt.",
     },
-    ogImageAlt: 'IndexOne — private KI-Meeting-Notizen auf deinem Mac, ohne Bot',
+    ogImageAlt: 'IndexOne — private KI-Meeting-Notizen auf deinem Mac',
   },
   common: {
     skipToContent: 'Zum Inhalt springen',
@@ -64,9 +64,9 @@ const content: SiteContent = {
   },
   hero: {
     githubAria: 'IndexOne auf GitHub',
-    titleStrong: 'Meeting-Notizen, die auf deinem Mac bleiben.',
-    titleSoft: 'Kein Bot. Ein Beleg für jede Zeile.',
-    subHtml: 'IndexOne nimmt beide Seiten des Calls <b>ohne Bot</b> auf, transkribiert ihn <b>auf deinem Mac</b> und lässt dich Ivy fragen – mitten im Meeting oder Monate später –, mit einem Link auf die Sekunde, in der es gesagt wurde. Kostenlos auf dem Mac, ohne Minuten- oder Verlaufslimit. Deine Cloud-Bereiche öffnen sich in jedem Browser.',
+    titleStrong: 'Jedes Meeting im Gedächtnis.',
+    titleSoft: 'Jeder Satz mit Beleg.',
+    subHtml: 'IndexOne nimmt beide Seiten des Calls <b>auf deinem Mac ohne Bot</b> auf, transkribiert ihn <b>auf deinem Mac</b> und lässt dich Ivy fragen – mitten im Meeting oder Monate später –, mit einem Link auf die Sekunde, in der es gesagt wurde. Kostenlos auf dem Mac, ohne Minuten- oder Verlaufslimit. Deine Cloud-Bereiche öffnen sich in jedem Browser.',
     download: 'Für Mac laden – kostenlos',
     signup: 'Kostenloses Konto erstellen',
     note: 'Apple Silicon (M1 oder neuer) · macOS 13.4+ · signiert und notarisiert · auf dem Mac kein Konto nötig',

@@ -3,8 +3,8 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — notas de reunião privadas com IA no seu Mac, sem bot',
-      description: 'Grave os dois lados de uma chamada sem bot, transcreva no seu Mac, pergunte à Ivy e confira as notas com a gravação. Grátis no Mac; seus espaços na nuvem abrem em qualquer navegador.',
+      title: 'IndexOne — notas de reunião privadas com IA no seu Mac',
+      description: 'Grave os dois lados de uma chamada no seu Mac sem bot, transcreva no seu Mac, pergunte à Ivy e confira as notas com a gravação. Grátis no Mac; seus espaços na nuvem abrem em qualquer navegador.',
     },
     features: {
       breadcrumb: 'Recursos',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "Bot de reuniões do IndexOne — informações para participantes",
       description: "O bot do IndexOne está gravando uma reunião da qual você participa. Quem é responsável, o que é gravado e para quê, por quanto tempo fica guardado e como exercer seus direitos.",
     },
-    ogImageAlt: 'IndexOne — notas de reunião privadas com IA no seu Mac, sem bot',
+    ogImageAlt: 'IndexOne — notas de reunião privadas com IA no seu Mac',
   },
   common: {
     skipToContent: 'Pular para o conteúdo',
@@ -64,9 +64,9 @@ const content: SiteContent = {
   },
   hero: {
     githubAria: 'IndexOne no GitHub',
-    titleStrong: 'Notas de reunião que ficam no seu Mac.',
-    titleSoft: 'Sem bot. Um recibo para cada linha.',
-    subHtml: 'O IndexOne grava os dois lados da chamada <b>sem bot</b>, transcreve <b>no seu Mac</b> e deixa você perguntar à Ivy — no meio da reunião ou meses depois — com um link para o segundo exato em que aquilo foi dito. Grátis no Mac, sem limite de minutos nem de histórico. Seus espaços na nuvem abrem em qualquer navegador.',
+    titleStrong: 'Cada reunião lembrada.',
+    titleSoft: 'Cada frase com uma prova.',
+    subHtml: 'O IndexOne grava os dois lados da chamada <b>no seu Mac sem bot</b>, transcreve <b>no seu Mac</b> e deixa você perguntar à Ivy — no meio da reunião ou meses depois — com um link para o segundo exato em que aquilo foi dito. Grátis no Mac, sem limite de minutos nem de histórico. Seus espaços na nuvem abrem em qualquer navegador.',
     download: 'Baixar para Mac — grátis',
     signup: 'Criar uma conta gratuita',
     note: 'Apple Silicon (M1 ou posterior) · macOS 13.4+ · assinado e notarizado · sem necessidade de conta no Mac',

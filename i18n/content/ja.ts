@@ -3,8 +3,8 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — あなたのMacで完結する、ボット不要のプライベートなAI議事録',
-      description: 'ボットなしで通話の双方を録音し、Mac上で文字起こしして、Ivyに質問できます。ノートの内容は録音と照らし合わせて確認できます。Macでは無料で、クラウドスペースはどのブラウザーでも開けます。',
+      title: 'IndexOne — あなたのMacで完結する、プライベートなAI議事録',
+      description: 'Mac上でボットなしで通話の双方を録音し、Mac上で文字起こしして、Ivyに質問できます。ノートの内容は録音と照らし合わせて確認できます。Macでは無料で、クラウドスペースはどのブラウザーでも開けます。',
     },
     features: {
       breadcrumb: '機能',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "IndexOne会議ボット — 会議の参加者の方へ",
       description: "ご参加の会議はIndexOneのボットが録音しています。データの責任者、録音する内容と目的、保存期間、権利の行使方法をご案内します。",
     },
-    ogImageAlt: 'IndexOne — あなたのMacで完結する、ボット不要のプライベートなAI議事録',
+    ogImageAlt: 'IndexOne — あなたのMacで完結する、プライベートなAI議事録',
   },
   common: {
     skipToContent: '本文へスキップ',
@@ -64,9 +64,9 @@ const content: SiteContent = {
   },
   hero: {
     githubAria: 'GitHub上のIndexOne',
-    titleStrong: 'Macに残る議事録。',
-    titleSoft: 'ボットなし。すべての行に根拠を。',
-    subHtml: 'IndexOneは<b>ボットなしで</b>通話の双方を録音し、<b>あなたのMac上で</b>文字起こしします。会議の最中でも数か月後でも、Ivyに質問すれば、その発言があった秒へのリンク付きで答えます。Macでは無料で、利用分数や履歴の上限はありません。クラウドスペースはどのブラウザーでも開けます。',
+    titleStrong: 'すべての会議を記憶。',
+    titleSoft: 'すべての発言に根拠を。',
+    subHtml: 'IndexOneは<b>Mac上でボットなしで</b>通話の双方を録音し、<b>あなたのMac上で</b>文字起こしします。会議の最中でも数か月後でも、Ivyに質問すれば、その発言があった秒へのリンク付きで答えます。Macでは無料で、利用分数や履歴の上限はありません。クラウドスペースはどのブラウザーでも開けます。',
     download: 'Mac版を無料でダウンロード',
     signup: '無料アカウントを作成',
     note: 'Apple Silicon（M1以降） · macOS 13.4以降 · 署名・公証済み · Macではアカウント不要',

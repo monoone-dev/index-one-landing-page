@@ -3,8 +3,8 @@ import type { SiteContent } from './types'
 const content: SiteContent = {
   meta: {
     home: {
-      title: 'IndexOne — note delle riunioni con AI privata sul tuo Mac, senza bot',
-      description: 'Registra entrambi i lati di una call senza bot, trascrivila sul tuo Mac, chiedi a Ivy e verifica le note sulla registrazione. Gratis sul Mac; i tuoi spazi cloud si aprono in qualsiasi browser.',
+      title: 'IndexOne — note delle riunioni con AI privata sul tuo Mac',
+      description: 'Registra entrambi i lati di una call sul tuo Mac senza bot, trascrivila sul tuo Mac, chiedi a Ivy e verifica le note sulla registrazione. Gratis sul Mac; i tuoi spazi cloud si aprono in qualsiasi browser.',
     },
     features: {
       breadcrumb: 'Funzionalità',
@@ -31,7 +31,7 @@ const content: SiteContent = {
       title: "Bot delle riunioni IndexOne — informazioni per i partecipanti",
       description: "Il bot di IndexOne sta registrando una riunione a cui partecipi. Chi è responsabile, cosa viene registrato e perché, per quanto tempo viene conservato e come esercitare i tuoi diritti.",
     },
-    ogImageAlt: 'IndexOne — note delle riunioni con AI privata sul tuo Mac, senza bot',
+    ogImageAlt: 'IndexOne — note delle riunioni con AI privata sul tuo Mac',
   },
   common: {
     skipToContent: 'Vai al contenuto',
@@ -64,9 +64,9 @@ const content: SiteContent = {
   },
   hero: {
     githubAria: 'IndexOne su GitHub',
-    titleStrong: 'Note delle riunioni che restano sul tuo Mac.',
-    titleSoft: 'Nessun bot. Una prova per ogni riga.',
-    subHtml: 'IndexOne registra entrambi i lati della call <b>senza bot</b>, la trascrive <b>sul tuo Mac</b> e ti permette di chiedere a Ivy — durante la riunione o mesi dopo — con un link al secondo esatto in cui è stato detto. Gratis sul Mac, senza limiti di minuti o di cronologia. I tuoi spazi cloud si aprono in qualsiasi browser.',
+    titleStrong: 'Ogni riunione ricordata.',
+    titleSoft: 'Ogni frase con una prova.',
+    subHtml: 'IndexOne registra entrambi i lati della call <b>sul tuo Mac senza bot</b>, la trascrive <b>sul tuo Mac</b> e ti permette di chiedere a Ivy — durante la riunione o mesi dopo — con un link al secondo esatto in cui è stato detto. Gratis sul Mac, senza limiti di minuti o di cronologia. I tuoi spazi cloud si aprono in qualsiasi browser.',
     download: 'Scarica per Mac — gratis',
     signup: 'Crea un account gratuito',
     note: 'Apple Silicon (M1 o successivi) · macOS 13.4+ · firmata e notarizzata · nessun account necessario sul Mac',
