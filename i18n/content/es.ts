@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Los recibos llevan al audio',
-        body: 'Cada línea fundamentada de una nota enlaza con el segundo exacto del audio del que procede, con el hablante. Las líneas sin pruebas no llevan recibo, así ves qué está verificado.',
+        body: 'Cada línea fundamentada de una nota enlaza con el segundo exacto del audio del que procede, con el hablante. Las líneas sin pruebas no llevan recibo, así ves qué respalda la grabación.',
         link: 'Recibos',
       },
       'security': {
@@ -226,7 +226,7 @@ const content: SiteContent = {
       },
       'update-check': {
         title: 'Lo que IndexOne envía sin que lo pidas',
-        body: 'Al iniciarse, IndexOne pregunta a GitHub si hay una versión más reciente; la solicitud indica qué versión usas, y nada más. Si alguna vez se ha iniciado sesión con una cuenta en este Mac, también pregunta al servidor de IndexOne, al iniciarse y cada hora, si tu versión sigue siendo compatible, sin enviar contenido. Una vez al día envía un pequeño mensaje de uso: un identificador de instalación aleatorio, las versiones de la app y de macOS, la arquitectura del procesador, el idioma y si has iniciado sesión; ni reuniones, ni notas, ni grabaciones, ni nombres. Solo es anónimo mientras no has iniciado sesión; si has iniciado sesión, se envía con tu cuenta. La primera vez que transcribes, descarga de Hugging Face dos pequeños modelos de voz, para la detección de voz y la separación de hablantes. Puedes desactivar la comprobación de actualizaciones y el mensaje de uso en <b>Settings → Privacy</b>. Son lo único de esta página que ocurre sin que lo pidas, y precisamente por eso están en esta página.',
+        body: 'Al iniciarse, IndexOne pregunta a GitHub si hay una versión más reciente; la solicitud indica qué versión usas, y nada más. Mientras la comprobación de actualizaciones esté activada (lo está de forma predeterminada), o si alguna vez se ha iniciado sesión con una cuenta en este Mac, también pregunta al servidor de IndexOne, al iniciarse y cada hora, si tu versión sigue siendo compatible, sin enviar contenido. Una vez al día envía un pequeño mensaje de uso: un identificador de instalación aleatorio, las versiones de la app y de macOS, la arquitectura del procesador, el idioma y si has iniciado sesión; ni reuniones, ni notas, ni grabaciones, ni nombres. Solo es anónimo mientras no has iniciado sesión; si has iniciado sesión, se envía con tu cuenta. La primera vez que transcribes, descarga de Hugging Face dos pequeños modelos de voz, para la detección de voz y la separación de hablantes. Puedes desactivar la comprobación de actualizaciones y el mensaje de uso en <b>Settings → Privacy</b>. Sin la comprobación de actualizaciones también se detiene la consulta de versión, salvo que alguna vez se haya iniciado sesión con una cuenta en este Mac. Son lo único de esta página que ocurre sin que lo pidas, y precisamente por eso están en esta página.',
       },
     },
     tableCaption: 'Dónde se ejecuta cada proveedor de IA y si el texto de las reuniones sale de tu Mac',
@@ -333,7 +333,7 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Recibos',
         title: 'Las afirmaciones respaldadas se remontan a la grabación.',
-        body: 'Las notas de IndexOne no te piden que confíes en ellas. Cada línea basada en lo que realmente se dijo lleva un recibo: haz clic y salta directamente a ese segundo del audio, con el hablante. Las líneas parafraseadas o sin respaldo no llevan ninguno, así ves de un vistazo qué está verificado.',
+        body: 'Las notas de IndexOne no te piden que confíes en ellas. Cada línea basada en lo que realmente se dijo lleva un recibo: haz clic y salta directamente a ese segundo del audio, con el hablante. Las líneas parafraseadas o sin respaldo no llevan ninguno, así ves de un vistazo qué respalda la grabación.',
         points: [
           'Haz clic en una afirmación y escucha exactamente de dónde salió',
           'Hablante y segundo exacto en cada recibo',
@@ -376,7 +376,7 @@ const content: SiteContent = {
     "trial": "Cada cuenta gratuita recibe cada mes natural (UTC) 200.000 unidades Ivy y una cuota de transcripción en la nube, sin tarjeta. Las funciones locales de Mac no tienen límite de plan.",
     "meterTitle": "Transcripción en la nube: rápida y luego una cola más lenta",
     "meter": "Los planes de pago transcriben en la nube a máxima velocidad hasta una cuota mensual. Después, las nuevas grabaciones entran en una cola más lenta y pueden tardar unas horas en estar listas, durante hasta 150 horas más al mes (por plaza en Team); luego la transcripción en la nube se pausa hasta el mes siguiente. La transcripción en tu Mac no tiene límite ni cola.",
-    "fairUse": "Los planes de pago incluyen una cuota mensual de transcripción en la nube y, después, hasta 150 horas al mes en una cola más lenta; la cuota de Free y las reglas de uso razonable figuran en los Términos del servicio.",
+    "fairUse": "Los planes de pago incluyen una cuota mensual de transcripción en la nube y, después, hasta 150 horas al mes en una cola más lenta. Las reglas de los planes figuran en los Términos del servicio (en polaco).",
     "fairUseLink": "Leer los Términos del servicio (en polaco)",
     "privacyTitle": "Local y nube",
     "privacy": "El procesamiento local de Mac permanece en el Mac. La nube estándar almacena y procesa contenido en servidores legibles por el operador, sin cifrado de extremo a extremo. Enmascarar patrones no es anonimización completa. Un plan no concede acceso a espacios privados.",

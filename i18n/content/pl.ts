@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Dowód prowadzi do nagrania',
-        body: 'Każda poparta linijka notatki prowadzi do sekundy nagrania, z której pochodzi, razem z mówcą. Linijki bez pokrycia nie dostają dowodu, więc widzisz, co jest zweryfikowane.',
+        body: 'Każda poparta linijka notatki prowadzi do sekundy nagrania, z której pochodzi, razem z mówcą. Linijki bez pokrycia nie dostają dowodu, więc widzisz, co ma pokrycie w nagraniu.',
         link: 'Dowody',
       },
       'security': {
@@ -226,7 +226,7 @@ const content: SiteContent = {
       },
       'update-check': {
         title: 'Co IndexOne wysyła bez Twojej prośby',
-        body: 'Przy uruchomieniu IndexOne pyta GitHub, czy jest nowsza wersja; zapytanie zawiera numer wersji, której używasz, i nic więcej. Jeśli na tym Macu kiedykolwiek zalogowano konto, pyta też serwer IndexOne przy uruchomieniu i co godzinę, czy Twoja wersja jest nadal wspierana, bez żadnej treści. Raz dziennie wysyła jedną małą wiadomość o użyciu: losowy identyfikator instalacji, wersję aplikacji i macOS, architekturę procesora, język i to, czy jesteś zalogowany — żadnych spotkań, notatek, nagrań ani nazwisk. Jest anonimowa tylko, gdy jesteś wylogowany; gdy jesteś zalogowany, jest wysyłana z Twoim kontem. Przy pierwszej transkrypcji pobiera z Hugging Face dwa małe modele mowy: do wykrywania głosu i rozdzielania mówców. Sprawdzanie aktualizacji i wiadomość o użyciu wyłączysz w <b>Settings → Privacy</b>. To jedyne rzeczy na tej stronie, które dzieją się bez Twojej prośby — i właśnie dlatego się tu znalazły.',
+        body: 'Przy uruchomieniu IndexOne pyta GitHub, czy jest nowsza wersja; zapytanie zawiera numer wersji, której używasz, i nic więcej. Gdy sprawdzanie aktualizacji jest włączone (domyślnie jest) albo jeśli na tym Macu kiedykolwiek zalogowano konto, pyta też serwer IndexOne przy uruchomieniu i co godzinę, czy Twoja wersja jest nadal wspierana, bez żadnej treści. Raz dziennie wysyła jedną małą wiadomość o użyciu: losowy identyfikator instalacji, wersję aplikacji i macOS, architekturę procesora, język i to, czy jesteś zalogowany — żadnych spotkań, notatek, nagrań ani nazwisk. Jest anonimowa tylko, gdy jesteś wylogowany; gdy jesteś zalogowany, jest wysyłana z Twoim kontem. Przy pierwszej transkrypcji pobiera z Hugging Face dwa małe modele mowy: do wykrywania głosu i rozdzielania mówców. Sprawdzanie aktualizacji i wiadomość o użyciu wyłączysz w <b>Settings → Privacy</b>. Po wyłączeniu sprawdzania aktualizacji ustaje też pytanie o wersję, chyba że na tym Macu kiedykolwiek zalogowano konto. To jedyne rzeczy na tej stronie, które dzieją się bez Twojej prośby — i właśnie dlatego się tu znalazły.',
       },
     },
     tableCaption: 'Gdzie działa każdy dostawca AI i czy tekst ze spotkań opuszcza Twojego Maca',
@@ -333,7 +333,7 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Dowody',
         title: 'Twierdzenia oparte na rozmowie prowadzą do nagrania.',
-        body: 'Notatki IndexOne nie wymagają ślepego zaufania. Każda linijka oparta na tym, co faktycznie padło, ma swój dowód — kliknij, a przeskoczysz dokładnie do tej sekundy nagrania, z mówcą. Parafrazy i linijki bez pokrycia go nie dostają, więc od razu widzisz, co jest zweryfikowane.',
+        body: 'Notatki IndexOne nie wymagają ślepego zaufania. Każda linijka oparta na tym, co faktycznie padło, ma swój dowód — kliknij, a przeskoczysz dokładnie do tej sekundy nagrania, z mówcą. Parafrazy i linijki bez pokrycia go nie dostają, więc od razu widzisz, co ma pokrycie w nagraniu.',
         points: [
           'Kliknij twierdzenie i usłysz, skąd dokładnie pochodzi',
           'Przy każdym dowodzie: kto mówił i w której dokładnie sekundzie',
@@ -376,7 +376,7 @@ const content: SiteContent = {
     "trial": "Każde darmowe konto dostaje co miesiąc kalendarzowy (UTC) 200 000 jednostek Ivy i przydział transkrypcji w chmurze, bez karty. Lokalne funkcje Mac nie mają limitu planu.",
     "meterTitle": "Transkrypcja w chmurze: najpierw szybko, potem wolniejsza kolejka",
     "meter": "Płatne plany transkrybują w chmurze z pełną szybkością do miesięcznego przydziału. Potem nowe nagrania trafiają do wolniejszej kolejki i mogą być gotowe dopiero po kilku godzinach, przez maksymalnie 150 kolejnych godzin w miesiącu (w Team na każde miejsce); potem transkrypcja w chmurze wstrzymuje się do następnego miesiąca. Transkrypcja na Macu nie ma limitu ani kolejki.",
-    "fairUse": "Płatne plany obejmują miesięczny przydział transkrypcji w chmurze, a po nim do 150 godzin w miesiącu w wolniejszej kolejce; przydział w Free i zasady uczciwego korzystania określa regulamin.",
+    "fairUse": "Płatne plany obejmują miesięczny przydział transkrypcji w chmurze, a po nim do 150 godzin w miesiącu w wolniejszej kolejce. Zasady planów określa regulamin.",
     "fairUseLink": "Przeczytaj regulamin",
     "privacyTitle": "Lokalnie i w chmurze",
     "privacy": "Lokalne przetwarzanie Mac zostaje na Macu. Standardowa chmura konta zapisuje i przetwarza treść na serwerach dostępnych operatorowi; nie jest szyfrowana end-to-end. Maskowanie wzorców nie oznacza pełnej anonimizacji. Plan nie daje dostępu do prywatnych przestrzeni.",

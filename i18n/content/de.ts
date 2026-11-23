@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Belege führen zurück zur Aufnahme',
-        body: 'Jede belegte Zeile einer Notiz verlinkt auf die Sekunde Audio, aus der sie stammt – mit Sprecher. Zeilen ohne Beleg bekommen keinen, so siehst du, was verifiziert ist.',
+        body: 'Jede belegte Zeile einer Notiz verlinkt auf die Sekunde Audio, aus der sie stammt – mit Sprecher. Zeilen ohne Beleg bekommen keinen, so siehst du, was die Aufnahme belegt.',
         link: 'Belege',
       },
       'security': {
@@ -226,7 +226,7 @@ const content: SiteContent = {
       },
       'update-check': {
         title: 'Was IndexOne sendet, ohne dass du darum bittest',
-        body: 'Beim Start fragt IndexOne bei GitHub nach, ob es eine neuere Version gibt; die Anfrage nennt die Version, die du nutzt, und sonst nichts. War auf diesem Mac schon einmal ein Konto angemeldet, fragt es außerdem beim Start und jede Stunde beim IndexOne-Server nach, ob deine Version noch unterstützt wird – ohne Inhalte. Einmal am Tag sendet es eine kleine Nutzungsmeldung: eine zufällige Installations-ID, die App- und macOS-Version, die Prozessorarchitektur, die Sprache und ob du angemeldet bist – keine Meetings, Notizen, Aufnahmen oder Namen. Anonym ist sie nur, solange du abgemeldet bist; bist du angemeldet, wird sie mit deinem Konto gesendet. Beim ersten Transkribieren lädt es zwei kleine Sprachmodelle von Hugging Face herunter, für die Spracherkennung und die Sprechertrennung. Die Update-Prüfung und die Nutzungsmeldung kannst du unter <b>Settings → Privacy</b> abschalten. Es sind die einzigen Dinge auf dieser Seite, die passieren, ohne dass du darum bittest – und genau deshalb stehen sie hier.',
+        body: 'Beim Start fragt IndexOne bei GitHub nach, ob es eine neuere Version gibt; die Anfrage nennt die Version, die du nutzt, und sonst nichts. Solange die Update-Prüfung an ist (standardmäßig der Fall) oder wenn auf diesem Mac schon einmal ein Konto angemeldet war, fragt es außerdem beim Start und jede Stunde beim IndexOne-Server nach, ob deine Version noch unterstützt wird – ohne Inhalte. Einmal am Tag sendet es eine kleine Nutzungsmeldung: eine zufällige Installations-ID, die App- und macOS-Version, die Prozessorarchitektur, die Sprache und ob du angemeldet bist – keine Meetings, Notizen, Aufnahmen oder Namen. Anonym ist sie nur, solange du abgemeldet bist; bist du angemeldet, wird sie mit deinem Konto gesendet. Beim ersten Transkribieren lädt es zwei kleine Sprachmodelle von Hugging Face herunter, für die Spracherkennung und die Sprechertrennung. Die Update-Prüfung und die Nutzungsmeldung kannst du unter <b>Settings → Privacy</b> abschalten. Ohne Update-Prüfung entfällt auch die Versionsabfrage, außer auf diesem Mac war schon einmal ein Konto angemeldet. Es sind die einzigen Dinge auf dieser Seite, die passieren, ohne dass du darum bittest – und genau deshalb stehen sie hier.',
       },
     },
     tableCaption: 'Wo jeder KI-Anbieter läuft und ob Meeting-Text deinen Mac verlässt',
@@ -333,7 +333,7 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Belege',
         title: 'Belegte Aussagen führen zurück zur Aufnahme.',
-        body: 'Die Notizen von IndexOne verlangen kein blindes Vertrauen. Jede Zeile, die sich auf tatsächlich Gesagtes stützt, trägt einen Beleg – ein Klick springt direkt zu dieser Sekunde Audio, mit Sprecher. Umschriebene oder unbelegte Zeilen bekommen keinen, so siehst du auf einen Blick, was verifiziert ist.',
+        body: 'Die Notizen von IndexOne verlangen kein blindes Vertrauen. Jede Zeile, die sich auf tatsächlich Gesagtes stützt, trägt einen Beleg – ein Klick springt direkt zu dieser Sekunde Audio, mit Sprecher. Umschriebene oder unbelegte Zeilen bekommen keinen, so siehst du auf einen Blick, was die Aufnahme belegt.',
         points: [
           'Klick auf eine Aussage und hör genau, woher sie kommt',
           'Sprecher und genaue Sekunde auf jedem Beleg',
@@ -376,7 +376,7 @@ const content: SiteContent = {
     "trial": "Jedes kostenlose Konto erhält pro Kalendermonat (UTC) 200.000 Ivy-Einheiten und ein Kontingent für Cloud-Transkription, ohne Karte. Lokale Mac-Funktionen haben kein Planlimit.",
     "meterTitle": "Cloud-Transkription: erst schnell, dann langsamere Warteschlange",
     "meter": "Bezahlte Pläne transkribieren in der Cloud mit voller Geschwindigkeit bis zu einem monatlichen Kontingent. Danach kommen neue Aufnahmen in eine langsamere Warteschlange und können erst nach einigen Stunden fertig sein, für bis zu 150 weitere Stunden im Monat (bei Team pro Platz); danach pausiert die Cloud-Transkription bis zum nächsten Monat. Transkription auf dem Mac hat kein Limit und keine Warteschlange.",
-    "fairUse": "Bezahlte Pläne enthalten ein monatliches Kontingent an Cloud-Transkription, danach bis zu 150 Stunden im Monat in einer langsameren Warteschlange; das Free-Kontingent und die Fair-Use-Regeln stehen in den Nutzungsbedingungen.",
+    "fairUse": "Bezahlte Pläne enthalten ein monatliches Kontingent an Cloud-Transkription, danach bis zu 150 Stunden im Monat in einer langsameren Warteschlange. Die Regeln der Pläne stehen in den Nutzungsbedingungen (auf Polnisch).",
     "fairUseLink": "Nutzungsbedingungen lesen (auf Polnisch)",
     "privacyTitle": "Lokal und Cloud",
     "privacy": "Lokale Mac-Verarbeitung bleibt auf dem Mac. Standard-Cloud speichert und verarbeitet Inhalte auf für den Betreiber lesbaren Servern, ohne Ende-zu-Ende-Verschlüsselung. Mustermaskierung ist keine vollständige Anonymisierung. Ein Plan gewährt keinen Zugriff auf private Bereiche.",

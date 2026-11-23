@@ -1,10 +1,10 @@
 ---
 title: What leaves your Mac
-description: What IndexOne keeps on your Mac, the two small messages it sends by default, and what leaves only when you choose it, with how to turn each one off.
+description: What IndexOne keeps on your Mac, the three small messages it sends by default, and what leaves only when you choose it, with how to turn each one off.
 keywords: privacy, data flow, network, update check, usage statistics, telemetry, sign in, cloud, offline, what leaves this mac
 ---
 
-IndexOne is built to work on your Mac first. This page lists every kind of network traffic in IndexOne 3.19: what never leaves, the two small messages sent by default, and everything that leaves only after you choose it.
+IndexOne is built to work on your Mac first. This page lists every kind of network traffic in IndexOne 3.19: what never leaves, the three small messages sent by default, and everything that leaves only after you choose it.
 
 
 For the forthcoming cloud offer, see [Plans and billing](/docs/plans-and-billing/). Standard cloud content is stored and processed on servers readable by the operator, not end-to-end encrypted. Local Mac locks do not change that boundary. Pattern masking is not complete anonymization.
@@ -23,14 +23,15 @@ The local MCP server that lets AI apps on your Mac read IndexOne also runs on th
 
 ## Leaves by default
 
-Two small messages are sent without you doing anything. Neither one carries meetings, notes, transcripts or recordings, and you can turn both off.
+Three small messages are sent without you doing anything. None of them carries meetings, notes, transcripts or recordings, and you can turn off the update check and the usage statistics. The version check stops with the update check, unless an account has ever been signed in on this Mac.
 
 | What | Where it goes | What it sends | How to turn it off |
 | --- | --- | --- | --- |
 | Update check | GitHub, where IndexOne is published | A request for the latest version of IndexOne. No meetings, notes or account details | Settings › Privacy & Security › Update check › **Check for updates on launch** |
+| Version check | IndexOne's server | At launch, then every hour: a question whether your version is still supported, with the app version. No meetings, notes or account details | Runs while **Check for updates on launch** is on. If an account has ever been signed in on this Mac, it keeps running with the switch off |
 | Usage statistics | IndexOne's server | Once a day: a random install ID, the app version, the macOS version, the processor type, the system language and whether you are signed in | Settings › Privacy & Security › Usage statistics › **Send anonymous usage statistics** |
 
-The update check runs once at launch. With it off, **Check for updates** in Settings › About still works, because pressing it is you asking. When you agree to an update, IndexOne downloads it from the public release page on GitHub and checks its signature before it installs it. See [Install and updates](/docs/install-and-updates/).
+The update check runs once at launch. The version check runs at launch and then every hour, and asks IndexOne's server only whether the version you are running is still supported. With the update check off, **Check for updates** in Settings › About still works, because pressing it is you asking. When you agree to an update, IndexOne downloads it from the public release page on GitHub and checks its signature before it installs it. See [Install and updates](/docs/install-and-updates/).
 
 The usage statistics are sent for the first time shortly after launch, then at most once a day. When the switch is off, nothing is sent.
 

@@ -130,7 +130,7 @@ connection once the speech models are downloaded.
 | --- | --- | --- |
 | Update check — the app version, no content, no account | At launch (can be turned off) | `api.github.com` |
 | Usage message — a random install ID, the app and macOS versions, the processor type, the language and whether you are signed in; no content. Anonymous only while you are signed out: when signed in, it is sent with your account | Once a day (can be turned off) | IndexOne's server |
-| Version support check — whether your version is still supported, no content | At launch and every hour, only if an account has ever been signed in on this Mac | IndexOne's server |
+| Version support check — whether your version is still supported; the app version, no content | At launch and every hour, while **Check for updates on launch** is on (the default) or if an account has ever been signed in on this Mac | IndexOne's server |
 | Model downloads — nothing about you | Only when you start one | Hugging Face |
 | **Redacted** meeting text | Only with a cloud AI connection **and** one-time consent | The provider you chose |
 | Redacted connector queries | Only for connectors you enabled | That service |
