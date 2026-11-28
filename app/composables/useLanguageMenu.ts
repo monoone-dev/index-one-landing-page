@@ -5,11 +5,15 @@ export function useLanguageMenu() {
   const { locale, locales, setLocale } = useI18n()
   const route = useRoute()
   const localePath = useLocalePath()
+  const picked = useLanguagePreference()
 
   // The documentation is English only, so another language there opens that language's home page.
-  const choose = (code: typeof locale.value) => route.path.startsWith('/docs/') && code !== 'en'
-    ? navigateTo(localePath('/', code))
-    : setLocale(code)
+  const choose = (code: typeof locale.value) => {
+    picked.value = code
+    return route.path.startsWith('/docs/') && code !== 'en'
+      ? navigateTo(localePath('/', code))
+      : setLocale(code)
+  }
 
   const items = computed<DropdownMenuItem[]>(() =>
     locales.value.map(l => ({
