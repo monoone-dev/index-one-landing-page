@@ -126,6 +126,8 @@ export interface SiteContent {
     seeAll: string
   }
   privacy: {
+    /** Privacy page only: where the servers are, always with what leaves the EEA. */
+    hosting: { title: string, body: string, policyLink: string }
     lifecycle: { title: string; items: [Card, Card, Card] }
     eyebrow: string
     title: string
@@ -178,7 +180,7 @@ export interface SiteContent {
     basics: string
     ivy: string
     asr: string
-    asrUnlimited: string
+    asrPaid: string
     asrBasic: string
     storage: string
     /** Gigabyte unit in the comparison table ("GB", in French "Go"). */

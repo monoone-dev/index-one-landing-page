@@ -64,7 +64,7 @@ const rows = computed(() => {
   return [
     { label: o.local, values: catalog.offers.map(() => o.included) },
     { label: o.basics, values: catalog.offers.map(() => o.included) },
-    { label: o.asr, values: catalog.offers.map(x => x.id === 'free' ? o.asrBasic : o.asrUnlimited) },
+    { label: o.asr, values: catalog.offers.map(x => x.id === 'free' ? o.asrBasic : o.asrPaid) },
     { label: o.ivy, values: catalog.offers.map(x => `${quantity(x.limits.ivyUnits)}${x.payerKind === 'workspace' ? ` · ${o.seat}` : ''}`) },
     { label: o.storage, values: catalog.offers.map(x => `${gigabytes(x.limits.storageBytes)} ${o.gb}${x.payerKind === 'workspace' ? ` · ${o.seat}` : ''}`) },
     { label: o.meetBot, values: catalog.offers.map(x => x.meetBotAvailable ? o.included : o.notIncluded) },
@@ -122,7 +122,7 @@ const rows = computed(() => {
         </li>
       </ul>
 
-      <!-- Unlimited cloud transcription is always shown with fair use; the Free allowance is only in the Terms. -->
+      <!-- Paid transcription is never called unlimited: heavy use goes to a slower queue, and that has limits too. -->
       <p class="pricing__note">
         {{ c.offer.fairUse }}
         <a :href="legal.terms" target="_blank" rel="noopener" class="pricing__more">{{ c.offer.fairUseLink }}<UIcon name="i-lucide-arrow-up-right" /></a>

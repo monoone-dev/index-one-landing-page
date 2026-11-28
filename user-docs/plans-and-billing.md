@@ -13,14 +13,20 @@ The cloud plans below follow catalog **2026-11-15.v1**. Buy a plan and manage yo
 | Monthly price | 0 PLN | 49 PLN including tax | 75 PLN excluding tax per seat, minimum 2 |
 | Basic cloud notes, editing, search, sync, reading and export | Included | Included | Included, subject to access rights |
 | Cloud Ivy | 200,000 units/month | 1.2 million units/month | 2.5 million units/seat/month |
-| Billed cloud transcription | 2 hours/month | 10 hours/month | 15 hours/seat/month |
+| Billed cloud transcription | 2 hours per calendar month | 10 hours per billing period in fast mode, then economy mode | 15 hours per seat per billing period in fast mode, then economy mode |
 | Cloud storage | 1 GB | 20 GB | 50 GB × paid seats, shared |
 | Google Meet bot | — | — | Included |
 | Screen recordings in the cloud | — | Included | Included |
 
 Team starts at 150 PLN net per month. At an illustrative 23% VAT rate, this is 92.25 PLN per seat and 184.50 PLN for two. Your applicable tax can differ. The application must show seats, tax and the final total before any purchase. No annual plans, other currencies or paid add-ons are offered at launch. Recording the screen on a Mac is free; saving screen recordings to the cloud needs Personal or Team.
 
-Ivy units measure a processing budget, not raw model tokens or a guaranteed number of answers. Team splits each seat's grant into 2.25 million interactive units and 250,000 units for a shared automation pool. ASR is per seat. Rotating a seat does not reset its spent allowance. Allowance periods are calendar months in UTC; payment dates and allowance periods can differ. GB means one billion bytes.
+Ivy units measure a processing budget, not raw model tokens or a guaranteed number of answers. Team splits each seat's grant into 2.25 million interactive units and 250,000 units for a shared automation pool. ASR is per seat. Rotating a seat does not reset its spent allowance. The Free allowance renews at the start of each calendar month in UTC. Personal and Team allowances renew at the start of each billing period. GB means one billion bytes.
+
+## Cloud transcription on paid plans
+
+Personal and Team include cloud transcription. With heavy use, new recordings may go into a slower queue. Limits and fair-use rules are set out in the [Terms of Service](https://app.index-one.io/legal/en/terms.html). On-device transcription on your Mac is not subject to plan quotas.
+
+Recordings that do not fit in the remaining fast allowance may go into the slower economy queue. When a recording does not fit in the remaining economy allowance, the service does not accept it for transcription. You can submit it again after the allowance renews. The Terms of Service set out how use is counted and how large each allowance is.
 
 ## Free every month
 
@@ -28,7 +34,7 @@ Every free personal account gets 200,000 Ivy units and 2 hours of cloud transcri
 
 ## Minimum transcription charge
 
-Each distinct cloud ASR recording/job bills at least **20 minutes**, then actual duration in seconds. A 2-minute recording uses 20 minutes; a 21-minute recording uses 21. Thirty separate 2-minute files consume all ten hours of Personal.
+Each distinct cloud ASR recording/job bills at least **20 minutes**, then actual duration in seconds. A 2-minute recording uses 20 minutes; a 21-minute recording uses 21. Thirty separate 2-minute files use up the ten fast-mode hours of Personal; six use up the two hours of Free.
 
 Retries of the same job do not bill the minimum again. Deliberately reprocessing with another model is a new job requiring confirmation. Local transcription and uploading a completed transcript do not consume cloud ASR.
 

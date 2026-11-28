@@ -19,7 +19,7 @@ const content: SiteContent = {
     pricing: {
       breadcrumb: 'Preise',
       title: 'IndexOne-Preise — Free, Personal und Team',
-      description: 'IndexOne ist auf dem Mac kostenlos. Cloud-Pläne: Personal 49 PLN im Monat, Team 75 PLN netto pro Platz, beide mit unbegrenzter Cloud-Transkription gemäß Fair-Use-Regel. Cloud-Pläne gibt es in der Web-App zu kaufen.',
+      description: 'IndexOne ist auf dem Mac kostenlos. Cloud-Pläne: Personal 49 PLN im Monat, Team 75 PLN netto pro Platz, beide mit Cloud-Transkription innerhalb der Limits. Cloud-Pläne gibt es in der Web-App zu kaufen.',
     },
     changelog: {
       breadcrumb: 'Änderungen',
@@ -123,7 +123,7 @@ const content: SiteContent = {
       iphone: {
         eyebrow: 'iPhone',
         title: 'Deine Meetings, auch auf dem iPhone.',
-        body: 'Nimm ein Meeting mit dem iPhone auf oder hol eine Aufnahme aus der Dateien-App. Sie bleibt auf dem Telefon, bis du stoppst; dann wird sie in deinen Space hochgeladen und in der Cloud transkribiert. Ivys Notiz und das vollständige Transkript öffnest du direkt auf dem iPhone. Die iPhone-App kommt bald in den App Store.',
+        body: 'Nimm ein Meeting mit dem iPhone auf oder hol eine Aufnahme aus der Dateien-App. Sie bleibt auf dem Telefon, bis du stoppst; dann wird sie in deinen Space hochgeladen und in der Cloud transkribiert. Ivys Notiz und das vollständige Transkript öffnest du direkt auf dem iPhone. Die iPhone-App kommt in den App Store.',
         videoLabel: 'Eine 49-Sekunden-Tour durch IndexOne auf dem iPhone: der Startbildschirm mit den letzten Notizen und Aufnahmen, die Liste der Aufnahmen, Ivys Notiz mit Entscheidungen und Aufgaben, das Transkript nach Sprechern getrennt, ein Meeting, das mit dem iPhone aufgenommen wird, und eine Audiodatei aus der Dateien-App',
       },
     },
@@ -179,6 +179,11 @@ const content: SiteContent = {
     seeAll: 'Alle Funktionen ansehen',
   },
   privacy: {
+    hosting: {
+      title: 'Server und Datenbank',
+      body: 'Die Server und die Datenbank von IndexOne betreiben wir in der Europäischen Union (AWS, Schweden). Im Standardmodus von Ivy in der Cloud geht der für die Aufgabe nötige Text an Anthropic, das ihn außerhalb des EWR verarbeiten kann. Details stehen in der Datenschutzerklärung.',
+      policyLink: 'Datenschutzerklärung (auf Englisch)',
+    },
     lifecycle: {
       "title": "Datenlebenszyklus · Cloud-Pläne",
       "items": [
@@ -382,7 +387,7 @@ const content: SiteContent = {
       },
       grow: {
         title: "Mehr Platz, wenn du ihn brauchst",
-        body: "Bezahlte Pläne bringen unbegrenzte Cloud-Transkription, mehr Ivy und mehr Speicher. Team bringt einen gemeinsamen Arbeitsbereich.",
+        body: "Bezahlte Pläne bringen mehr Cloud-Transkription, mehr Ivy und mehr Speicher. Team bringt einen gemeinsamen Arbeitsbereich.",
       },
     },
     download: "Kostenlos laden",
@@ -392,14 +397,14 @@ const content: SiteContent = {
     status: "Cloud-Pläne sind erhältlich. Melde dich in der Web-App an, um einen Plan zu kaufen oder dein Abo zu verwalten. Lokale Mac-Funktionen bleiben verfügbar.",
     trialTitle: "Jeden Monat kostenlos",
     trial: "Jedes kostenlose Konto erhält pro Kalendermonat (UTC) 200.000 Ivy-Einheiten und ein Kontingent für Cloud-Transkription, ohne Karte. Lokale Mac-Funktionen haben kein Planlimit.",
-    meterTitle: "Unbegrenzte Cloud-Transkription",
-    meter: "Bezahlte Pläne haben keine Obergrenze für Cloud-Transkription. Wenn du sehr viel transkribierst, können manche Aufnahmen erst nach einigen Stunden fertig sein. Es gilt eine Fair-Use-Regel. Transkription auf dem Mac erfolgt immer sofort und unbegrenzt.",
-    fairUse: "Bezahlte Pläne enthalten unbegrenzte Cloud-Transkription gemäß Fair-Use-Regel; das Free-Kontingent und die Fair-Use-Regeln stehen in den Nutzungsbedingungen.",
+    meterTitle: "Cloud-Transkription in bezahlten Plänen",
+    meter: "Personal und Team enthalten Cloud-Transkription. Bei intensiver Nutzung können neue Aufnahmen in eine langsamere Warteschlange kommen. Limits und Fair-Use-Regeln stehen in den Nutzungsbedingungen. Die lokale Transkription auf deinem Mac unterliegt keinen Kontingenten deines Tarifs.",
+    fairUse: "Personal und Team enthalten Cloud-Transkription. Bei intensiver Nutzung können neue Aufnahmen in eine langsamere Warteschlange kommen. Limits und Fair-Use-Regeln stehen in den Nutzungsbedingungen. Die lokale Transkription auf deinem Mac unterliegt keinen Kontingenten deines Tarifs.",
     fairUseLink: "Nutzungsbedingungen lesen (auf Englisch)",
     privacyTitle: "Lokal und Cloud",
     privacy: "Lokale Mac-Verarbeitung bleibt auf dem Mac. Standard-Cloud speichert und verarbeitet Inhalte auf für den Betreiber lesbaren Servern, ohne Ende-zu-Ende-Verschlüsselung. Mustermaskierung ist keine vollständige Anonymisierung. Ein Plan gewährt keinen Zugriff auf private Bereiche.",
     detailsTitle: "Details zu den Plänen",
-    details: "Bezahlte Transkription hat kein Plan-Limit; es gilt faire Nutzung, und bei intensiver Nutzung kann es länger dauern. Monatliche Cloud-Kontingente erneuern sich pro Kalendermonat in UTC. Die Standard-Cloud des Kontos ist nicht Ende-zu-Ende-verschlüsselt: Der Betreiber kann gespeicherte und verarbeitete Inhalte lesen. Musterbasiertes Maskieren ist keine vollständige Anonymisierung. Lokale Verarbeitung auf deinem Mac bleibt auf deinem Mac. Bezahlte Pläne geben nie Zugriff auf private Bereiche.",
+    details: "Das Free-Kontingent erneuert sich zu Beginn jedes Kalendermonats (UTC). Die Kontingente von Personal und Team erneuern sich zu Beginn jedes Abrechnungszeitraums. Aufnahmen, die nicht mehr in das verbleibende Schnellkontingent passen, können in die langsamere Spar-Warteschlange kommen. Passt eine Aufnahme nicht in das verbleibende Sparkontingent, nimmt der Dienst sie nicht zur Transkription an. Du kannst sie nach der Erneuerung des Kontingents erneut einreichen. Wie gezählt wird und wie groß die Kontingente sind, steht in den Nutzungsbedingungen. Die Standard-Cloud des Kontos ist nicht Ende-zu-Ende-verschlüsselt: Der Betreiber kann gespeicherte und verarbeitete Inhalte lesen. Musterbasiertes Maskieren ist keine vollständige Anonymisierung. Lokale Verarbeitung auf deinem Mac bleibt auf deinem Mac. Bezahlte Pläne geben nie Zugriff auf private Bereiche.",
     more: "Mehr zur Abrechnung",
     after: "Free umfasst einfache Notizen, Bearbeitung, normale Suche, Synchronisierung, Lesen und Export innerhalb von 1 GB sowie das monatliche Cloud-Kontingent. Bezahlte Pläne bieten mehr Cloud-KI, Transkription und Speicher.",
     team: "Personal und jede Organisation haben eigene Abos und Guthaben. Team: 2,25 Mio. interaktive Ivy-Einheiten und 250.000 Automationseinheiten pro Platz; Automationen teilen einen Pool. Den Speicher teilt sich die Organisation. Plätze ändern keine Zugriffsrechte. Bis zu 2 kostenlose Organisationen mit je 5 Mitgliedern teilen den Kontospeicher des Gründers.",
@@ -411,7 +416,7 @@ const content: SiteContent = {
     basics: "Cloud-Notizen und Sync im Browser",
     ivy: "Cloud-Ivy-Einheiten / Monat",
     asr: "Cloud-Transkription",
-    asrUnlimited: "Unbegrenzt · Fair Use",
+    asrPaid: "Enthalten · mit Limits",
     asrBasic: "Monatliches Kontingent",
     storage: "Cloud-Speicher",
     gb: "GB",
@@ -428,7 +433,7 @@ const content: SiteContent = {
     recommended: "Empfohlen",
     note: "Personal enthält die MwSt. Team ab {seats} Plätzen: insgesamt {total} netto pro Monat. Steuern und Endpreis siehst du vor dem Kauf in der Web-App.",
     compareLink: "Alle Details vergleichen",
-    peek: { benefit: "Unbegrenzte Cloud-Transkription", link: "Personal-Plan ansehen" },
+    peek: { benefit: "Mehr Cloud-Transkription", link: "Personal-Plan ansehen" },
     plans: {
       free: {
         name: "Free",
@@ -449,7 +454,7 @@ const content: SiteContent = {
         period: "pro Monat, inkl. MwSt.",
         points: [
           "Alles aus Free",
-          "Unbegrenzte Cloud-Transkription",
+          "Mehr Cloud-Transkription",
           "{ivy} Ivy-Einheiten pro Monat",
           "{storage} GB Cloud-Speicher",
         ],
@@ -462,7 +467,7 @@ const content: SiteContent = {
         period: "netto pro Platz und Monat, ab {seats} Plätzen",
         points: [
           "Gemeinsame Notizen und Arbeitsbereich",
-          "Unbegrenzte Cloud-Transkription",
+          "Cloud-Transkription für jeden Platz",
           "{ivy} Ivy-Einheiten pro Platz und Monat",
           "{storage} GB Cloud-Speicher pro Platz",
           "Google-Meet-Bot",
@@ -527,7 +532,7 @@ const content: SiteContent = {
     items: [
       {
         question: 'Was ist in Free enthalten?',
-        answer: 'Auf dem Mac alles: Aufnahme, Transkription, Notizen, Ivy on this Mac und Exporte, ohne Konto und ohne Planlimit. Ein kostenloses Konto bringt Cloud-Notizen, Bearbeitung, Suche, Sync, Lesen und Export im Browser innerhalb von 1 GB, dazu ein monatliches Kontingent an Ivy-Einheiten und Cloud-Transkription. Bezahlte Pläne bieten unbegrenzte Cloud-Transkription gemäß Fair-Use-Regel, mehr Ivy-Einheiten und mehr Speicher.',
+        answer: 'Auf dem Mac alles: Aufnahme, Transkription, Notizen, Ivy on this Mac und Exporte, ohne Konto und ohne Planlimit. Ein kostenloses Konto bringt Cloud-Notizen, Bearbeitung, Suche, Sync, Lesen und Export im Browser innerhalb von 1 GB, dazu ein monatliches Kontingent an Ivy-Einheiten und Cloud-Transkription. Bezahlte Pläne bieten mehr Cloud-Transkription, mehr Ivy-Einheiten und mehr Speicher. Bei intensiver Nutzung können neue Aufnahmen in eine langsamere Warteschlange kommen; Limits und Fair-Use-Regeln stehen in den Nutzungsbedingungen.',
       },
       {
         question: 'Geht mein Audio in die Cloud?',

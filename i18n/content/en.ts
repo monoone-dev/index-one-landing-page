@@ -19,7 +19,7 @@ const content: SiteContent = {
     pricing: {
       breadcrumb: 'Pricing',
       title: 'IndexOne pricing — Free, Personal and Team',
-      description: 'IndexOne is free on the Mac. Cloud plans: Personal 49 PLN a month, Team 75 PLN net per seat, both with unlimited cloud transcription under fair use. Cloud plans are on sale in the web app.',
+      description: 'IndexOne is free on the Mac. Cloud plans: Personal 49 PLN a month, Team 75 PLN net per seat, both with cloud transcription, subject to limits. Cloud plans are on sale in the web app.',
     },
     changelog: {
       breadcrumb: 'Changelog',
@@ -179,6 +179,11 @@ const content: SiteContent = {
     seeAll: 'See every feature',
   },
   privacy: {
+    hosting: {
+      title: 'Servers and database',
+      body: 'We host IndexOne’s servers and database in the European Union (AWS, Sweden). In the default cloud Ivy mode, the text needed for a task goes to Anthropic, which may process it outside the EEA. See the Privacy Policy for details.',
+      policyLink: 'Privacy Policy',
+    },
     lifecycle: {
       "title": "Data lifecycle · cloud plans",
       "items": [
@@ -382,7 +387,7 @@ const content: SiteContent = {
       },
       grow: {
         title: "More room when you need it",
-        body: "Paid plans add unlimited cloud transcription, more Ivy and more storage. Team adds a shared workspace.",
+        body: "Paid plans add more cloud transcription, more Ivy and more storage. Team adds a shared workspace.",
       },
     },
     download: "Download free",
@@ -392,16 +397,16 @@ const content: SiteContent = {
     status: "Cloud plans are on sale. Sign in to the web app to buy a plan or manage your subscription. Local Mac features remain available.",
     trialTitle: "Free every month",
     trial: "Every free account gets 200,000 Ivy units and a cloud transcription allowance each calendar month (UTC), without a card. Local Mac features have no plan limit.",
-    meterTitle: "Unlimited cloud transcription",
-    meter: "Paid plans have no cap on cloud transcription. When you transcribe a lot, some recordings may take a few hours to be ready. Fair use applies. Transcription on your Mac is always immediate and unlimited.",
-    fairUse: "Paid plans include unlimited cloud transcription under fair use; the Free allowance and the fair use rules are set out in the Terms of service.",
+    meterTitle: "Cloud transcription on paid plans",
+    meter: "Personal and Team include cloud transcription. With heavy use, new recordings may go into a slower queue. Limits and fair-use rules are set out in the Terms of Service. On-device transcription on your Mac is not subject to plan quotas.",
+    fairUse: "Personal and Team include cloud transcription. With heavy use, new recordings may go into a slower queue. Limits and fair-use rules are set out in the Terms of Service. On-device transcription on your Mac is not subject to plan quotas.",
     fairUseLink: "Read the Terms of service",
     privacyTitle: "Local and cloud are different",
     privacy: "Local Mac processing stays on your Mac. Standard account cloud stores and processes content on servers readable by the operator; it is not end-to-end encrypted. Pattern masking is not full anonymization. Paid plans never grant access to private spaces.",
     detailsTitle: "Plan details",
-    details: "Paid transcription has no plan limit; fair use applies and heavy use may take longer. Monthly cloud allowances renew by calendar month in UTC. Standard account cloud is not end-to-end encrypted: the operator can read stored and processed content. Pattern masking is not full anonymization. Local processing on your Mac stays on your Mac. Paid plans never grant access to private spaces.",
+    details: "The Free allowance renews at the start of each calendar month in UTC. Personal and Team allowances renew at the start of each billing period. Recordings that do not fit in the remaining fast allowance may go into the slower economy queue. When a recording does not fit in the remaining economy allowance, the service does not accept it for transcription. You can submit it again after the allowance renews. The Terms of Service set out how use is counted and how large each allowance is. Standard account cloud is not end-to-end encrypted: the operator can read stored and processed content. Pattern masking is not full anonymization. Local processing on your Mac stays on your Mac. Paid plans never grant access to private spaces.",
     more: "More billing details",
-    after: "Free includes basic notes, editing, ordinary search, sync, reading and export within 1 GB, plus the monthly cloud allowance. Paid plans add unlimited transcription, more cloud AI and more storage.",
+    after: "Free includes basic notes, editing, ordinary search, sync, reading and export within 1 GB, plus the monthly cloud allowance. Paid plans add more transcription, more cloud AI and more storage.",
     team: "Personal and each organization have separate subscriptions and balances. Team has 2.25 million interactive Ivy units plus 250,000 automation units per seat; automation units form a shared pool. Storage is shared by the organization. A seat does not change access rights. Free organizations: up to 2 with 5 members each, sharing the founder’s account storage.",
     lifecycle: "Cloud audio: 30 days by default; Free can choose 7/14/30 days, paid plans also 90. Cloud trash: kept until you empty it. Canceling does not delete content; paid rights last to period end. Export audio before its retention expires.",
     docs: "Plans and billing · English docs",
@@ -411,7 +416,7 @@ const content: SiteContent = {
     basics: "Cloud notes and sync in the browser",
     ivy: "Cloud Ivy units / month",
     asr: "Cloud transcription",
-    asrUnlimited: "Unlimited · fair use",
+    asrPaid: "Included · limits apply",
     asrBasic: "Monthly allowance",
     storage: "Cloud storage",
     gb: "GB",
@@ -428,7 +433,7 @@ const content: SiteContent = {
     recommended: "Recommended",
     note: "Personal includes VAT. Team starts at {seats} seats: {total} net per month in total. Taxes and the final price are shown in the web app before you buy.",
     compareLink: "Compare every plan detail",
-    peek: { benefit: "Unlimited cloud transcription", link: "See the Personal plan" },
+    peek: { benefit: "More cloud transcription", link: "See the Personal plan" },
     plans: {
       free: {
         name: "Free",
@@ -449,7 +454,7 @@ const content: SiteContent = {
         period: "per month, VAT included",
         points: [
           "Everything in Free",
-          "Unlimited cloud transcription",
+          "More cloud transcription",
           "{ivy} Ivy units per month",
           "{storage} GB cloud storage",
         ],
@@ -462,7 +467,7 @@ const content: SiteContent = {
         period: "net per seat per month, from {seats} seats",
         points: [
           "Shared notes and workspace",
-          "Unlimited cloud transcription",
+          "Cloud transcription for every seat",
           "{ivy} Ivy units per seat per month",
           "{storage} GB cloud storage per seat",
           "Google Meet bot",
@@ -527,7 +532,7 @@ const content: SiteContent = {
     items: [
       {
         question: 'What does Free include?',
-        answer: 'On the Mac, everything: recording, transcription, notes, Ivy on this Mac and exports, with no account and no plan limit. A free account adds cloud notes, editing, search, sync, reading and export in the browser within 1 GB, plus a monthly allowance of Ivy units and cloud transcription. Paid plans add unlimited cloud transcription under fair use, more Ivy units and more storage.',
+        answer: 'On the Mac, everything: recording, transcription, notes, Ivy on this Mac and exports, with no account and no plan limit. A free account adds cloud notes, editing, search, sync, reading and export in the browser within 1 GB, plus a monthly allowance of Ivy units and cloud transcription. Paid plans add more cloud transcription, more Ivy units and more storage. With heavy use, new recordings may go into a slower queue; limits and fair-use rules are set out in the Terms of Service.',
       },
       {
         question: 'Does my audio go to the cloud?',

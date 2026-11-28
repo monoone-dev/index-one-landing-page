@@ -19,7 +19,7 @@ const content: SiteContent = {
     pricing: {
       breadcrumb: 'Tarifs',
       title: 'Tarifs IndexOne — Free, Personal et Team',
-      description: 'IndexOne est gratuit sur Mac. Offres cloud : Personal 49 PLN par mois, Team 75 PLN HT par place, toutes deux avec transcription cloud illimitée dans le cadre d’une utilisation raisonnable. Les offres cloud sont en vente dans l’app web.',
+      description: 'IndexOne est gratuit sur Mac. Offres cloud : Personal 49 PLN par mois, Team 75 PLN HT par place, toutes deux avec transcription cloud soumise à des limites. Les offres cloud sont en vente dans l’app web.',
     },
     changelog: {
       breadcrumb: 'Nouveautés',
@@ -123,7 +123,7 @@ const content: SiteContent = {
       iphone: {
         eyebrow: 'iPhone',
         title: 'Vos réunions, aussi sur iPhone.',
-        body: 'Enregistrez une réunion avec le téléphone ou importez un enregistrement depuis l’app Fichiers. Il reste sur le téléphone jusqu’à ce que vous l’arrêtiez, puis il est envoyé dans votre espace et transcrit dans le cloud. La note d’Ivy et la transcription complète s’ouvrent directement sur le téléphone. Une app iPhone arrive bientôt sur l’App Store.',
+        body: 'Enregistrez une réunion avec le téléphone ou importez un enregistrement depuis l’app Fichiers. Il reste sur le téléphone jusqu’à ce que vous l’arrêtiez, puis il est envoyé dans votre espace et transcrit dans le cloud. La note d’Ivy et la transcription complète s’ouvrent directement sur le téléphone. Une app iPhone arrive sur l’App Store.',
         videoLabel: 'Une visite de 49 secondes d’IndexOne sur iPhone : l’écran d’accueil avec les notes et enregistrements récents, la liste des enregistrements, la note d’Ivy avec décisions et actions, la transcription séparée par intervenant, une réunion enregistrée avec le téléphone et un fichier audio importé depuis Fichiers',
       },
     },
@@ -179,6 +179,11 @@ const content: SiteContent = {
     seeAll: 'Voir toutes les fonctionnalités',
   },
   privacy: {
+    hosting: {
+      title: 'Serveurs et base de données',
+      body: 'Nous hébergeons les serveurs et la base de données d’IndexOne dans l’Union européenne (AWS, Suède). Dans le mode par défaut d’Ivy dans le cloud, le texte nécessaire à la tâche est envoyé à Anthropic, qui peut le traiter en dehors de l’EEE. Les détails figurent dans la politique de confidentialité.',
+      policyLink: 'Politique de confidentialité (en anglais)',
+    },
     lifecycle: {
       "title": "Cycle de vie des données · offres cloud",
       "items": [
@@ -382,7 +387,7 @@ const content: SiteContent = {
       },
       grow: {
         title: "Plus d’espace quand il le faut",
-        body: "Les offres payantes ajoutent la transcription cloud illimitée, plus d’Ivy et plus de stockage. Team ajoute un espace partagé.",
+        body: "Les offres payantes ajoutent plus de transcription cloud, plus d’Ivy et plus de stockage. Team ajoute un espace partagé.",
       },
     },
     download: "Télécharger gratuitement",
@@ -392,14 +397,14 @@ const content: SiteContent = {
     status: "Les offres cloud sont disponibles. Connectez-vous à l’app web pour acheter une offre ou gérer votre abonnement. Les fonctions locales sur Mac restent disponibles.",
     trialTitle: "Gratuit chaque mois",
     trial: "Chaque compte gratuit reçoit chaque mois civil (UTC) 200 000 unités Ivy et un quota de transcription cloud, sans carte. Les fonctions locales sur Mac n’ont pas de limite d’offre.",
-    meterTitle: "Transcription cloud illimitée",
-    meter: "Les offres payantes n’ont pas de plafond de transcription cloud. Si vous transcrivez beaucoup, certains enregistrements peuvent être prêts après quelques heures. Une utilisation raisonnable s’applique. La transcription sur votre Mac est toujours immédiate et illimitée.",
-    fairUse: "Les offres payantes incluent la transcription cloud illimitée dans le cadre d’une utilisation raisonnable ; le quota Free et les règles d’utilisation raisonnable figurent dans les Conditions d’utilisation.",
+    meterTitle: "Transcription cloud dans les offres payantes",
+    meter: "Personal et Team comprennent la transcription cloud. En cas d’usage intensif, les nouveaux enregistrements peuvent passer dans une file d’attente plus lente. Les limites et les règles d’utilisation raisonnable figurent dans les Conditions d’utilisation. La transcription effectuée sur votre Mac n’est pas soumise aux quotas de l’offre.",
+    fairUse: "Personal et Team comprennent la transcription cloud. En cas d’usage intensif, les nouveaux enregistrements peuvent passer dans une file d’attente plus lente. Les limites et les règles d’utilisation raisonnable figurent dans les Conditions d’utilisation. La transcription effectuée sur votre Mac n’est pas soumise aux quotas de l’offre.",
     fairUseLink: "Lire les Conditions d’utilisation (en anglais)",
     privacyTitle: "Local et cloud",
     privacy: "Le traitement local Mac reste sur le Mac. Le cloud standard stocke et traite les contenus sur des serveurs lisibles par l’opérateur, sans chiffrement de bout en bout. Le masquage de motifs n’est pas une anonymisation complète. Un abonnement ne donne pas accès aux espaces privés.",
     detailsTitle: "Détails des offres",
-    details: "La transcription payante n’a pas de limite d’offre ; un usage raisonnable s’applique et un usage intensif peut prendre plus de temps. Les quotas cloud mensuels se renouvellent par mois civil en UTC. Le cloud standard du compte n’est pas chiffré de bout en bout : l’opérateur peut lire le contenu stocké et traité. Le masquage de motifs n’est pas une anonymisation complète. Le traitement local sur votre Mac reste sur votre Mac. Une offre payante ne donne jamais accès aux espaces privés.",
+    details: "Le quota Free se renouvelle au début de chaque mois civil (UTC). Les quotas Personal et Team se renouvellent au début de chaque période de facturation. Les enregistrements qui ne tiennent pas dans le quota rapide restant peuvent passer dans la file économique, plus lente. Quand un enregistrement ne tient pas dans le quota économique restant, le service ne l’accepte pas en transcription. Vous pouvez l’envoyer à nouveau après le renouvellement du quota. Les Conditions d’utilisation précisent le mode de décompte et la taille des quotas. Le cloud standard du compte n’est pas chiffré de bout en bout : l’opérateur peut lire le contenu stocké et traité. Le masquage de motifs n’est pas une anonymisation complète. Le traitement local sur votre Mac reste sur votre Mac. Une offre payante ne donne jamais accès aux espaces privés.",
     more: "Plus de détails sur la facturation",
     after: "Free comprend les notes de base, l’édition, la recherche ordinaire, la synchronisation, la lecture et l’export dans la limite de 1 Go, ainsi que le quota cloud mensuel. Les offres payantes ajoutent plus d’IA, de transcription et de stockage cloud.",
     team: "Personal et chaque organisation ont des abonnements et soldes distincts. Team : 2,25 millions d’unités Ivy interactives et 250 000 d’automatisation par place, ces dernières dans un pool commun. Stockage partagé par l’organisation. Une place ne change pas les droits. Jusqu’à 2 organisations gratuites de 5 membres partagent le stockage du compte fondateur.",
@@ -411,7 +416,7 @@ const content: SiteContent = {
     basics: "Notes cloud et synchronisation dans le navigateur",
     ivy: "Unités Ivy cloud / mois",
     asr: "Transcription cloud",
-    asrUnlimited: "Illimitée · utilisation raisonnable",
+    asrPaid: "Incluse · avec limites",
     asrBasic: "Quota mensuel",
     storage: "Stockage cloud",
     gb: "Go",
@@ -428,7 +433,7 @@ const content: SiteContent = {
     recommended: "Recommandé",
     note: "Personal inclut la TVA. Team à partir de {seats} places : {total} HT par mois au total. Les taxes et le prix final s’affichent dans l’app web avant l’achat.",
     compareLink: "Comparer tous les détails",
-    peek: { benefit: "Transcription cloud illimitée", link: "Voir le plan Personal" },
+    peek: { benefit: "Plus de transcription cloud", link: "Voir le plan Personal" },
     plans: {
       free: {
         name: "Free",
@@ -449,7 +454,7 @@ const content: SiteContent = {
         period: "par mois, TVA incluse",
         points: [
           "Tout ce qu’offre Free",
-          "Transcription cloud illimitée",
+          "Plus de transcription cloud",
           "{ivy} unités Ivy par mois",
           "{storage} Go de stockage cloud",
         ],
@@ -462,7 +467,7 @@ const content: SiteContent = {
         period: "HT par place et par mois, dès {seats} places",
         points: [
           "Notes et espace d’équipe partagés",
-          "Transcription cloud illimitée",
+          "Transcription cloud pour chaque place",
           "{ivy} unités Ivy par place et par mois",
           "{storage} Go de stockage cloud par place",
           "Bot Google Meet",
@@ -527,7 +532,7 @@ const content: SiteContent = {
     items: [
       {
         question: 'Que comprend Free ?',
-        answer: 'Sur Mac, tout : enregistrement, transcription, notes, Ivy on this Mac et exports, sans compte et sans limite d’offre. Un compte gratuit ajoute les notes cloud, l’édition, la recherche, la synchronisation, la lecture et l’export dans le navigateur dans la limite de 1 GB, ainsi qu’un quota mensuel d’unités Ivy et de transcription cloud. Les offres payantes ajoutent la transcription cloud illimitée dans le cadre d’une utilisation raisonnable, plus d’unités Ivy et plus de stockage.',
+        answer: 'Sur Mac, tout : enregistrement, transcription, notes, Ivy on this Mac et exports, sans compte et sans limite d’offre. Un compte gratuit ajoute les notes cloud, l’édition, la recherche, la synchronisation, la lecture et l’export dans le navigateur dans la limite de 1 GB, ainsi qu’un quota mensuel d’unités Ivy et de transcription cloud. Les offres payantes ajoutent plus de transcription cloud, plus d’unités Ivy et plus de stockage. En cas d’usage intensif, les nouveaux enregistrements peuvent passer dans une file d’attente plus lente ; les limites et les règles d’utilisation raisonnable figurent dans les Conditions d’utilisation.',
       },
       {
         question: 'Mon audio part-il dans le cloud ?',

@@ -19,7 +19,7 @@ const content: SiteContent = {
     pricing: {
       breadcrumb: 'Cennik',
       title: 'Cennik IndexOne — Free, Personal i Team',
-      description: 'IndexOne jest darmowy na Macu. Plany w chmurze: Personal 49 zł miesięcznie, Team 75 zł netto za miejsce, oba z transkrypcją w chmurze bez limitu w ramach uczciwego korzystania. Plany kupisz w aplikacji web.',
+      description: 'IndexOne jest darmowy na Macu. Plany w chmurze: Personal 49 zł miesięcznie, Team 75 zł netto za miejsce, oba z transkrypcją w chmurze w ramach limitów. Plany kupisz w aplikacji web.',
     },
     changelog: {
       breadcrumb: 'Lista zmian',
@@ -123,7 +123,7 @@ const content: SiteContent = {
       iphone: {
         eyebrow: 'iPhone',
         title: 'Twoje spotkania także na iPhonie.',
-        body: 'Nagraj spotkanie telefonem albo dodaj nagranie z aplikacji Pliki. Nagranie zostaje na telefonie, dopóki go nie zatrzymasz, potem trafia do Twojej przestrzeni i jest transkrybowane w chmurze. Notatka od Ivy i pełna transkrypcja otwierają się od razu w telefonie. Aplikacja na iPhone wkrótce trafi do App Store.',
+        body: 'Nagraj spotkanie telefonem albo dodaj nagranie z aplikacji Pliki. Nagranie zostaje na telefonie, dopóki go nie zatrzymasz, potem trafia do Twojej przestrzeni i jest transkrybowane w chmurze. Notatka od Ivy i pełna transkrypcja otwierają się w telefonie. Aplikacja na iPhone trafi do App Store.',
         videoLabel: '49-sekundowa prezentacja IndexOne na iPhonie: ekran główny z ostatnimi notatkami i nagraniami, lista nagrań, notatka od Ivy z decyzjami i zadaniami, transkrypcja z podziałem na mówców, spotkanie nagrywane telefonem oraz plik audio dodany z aplikacji Pliki',
       },
     },
@@ -179,6 +179,11 @@ const content: SiteContent = {
     seeAll: 'Zobacz wszystkie funkcje',
   },
   privacy: {
+    hosting: {
+      title: 'Serwery i baza danych',
+      body: 'Serwery i bazę danych IndexOne utrzymujemy w Unii Europejskiej (AWS, Szwecja). W domyślnym trybie Ivy w chmurze tekst potrzebny do wykonania zadania trafia do Anthropic, który może przetwarzać go poza EOG. Szczegóły znajdziesz w polityce prywatności.',
+      policyLink: 'Polityka prywatności',
+    },
     lifecycle: {
       "title": "Cykl życia danych · plany chmurowe",
       "items": [
@@ -382,7 +387,7 @@ const content: SiteContent = {
       },
       grow: {
         title: "Więcej miejsca, gdy go potrzebujesz",
-        body: "Płatne plany dają transkrypcję w chmurze bez limitu, więcej Ivy i więcej miejsca. Team dodaje wspólną przestrzeń.",
+        body: "Płatne plany dają więcej transkrypcji w chmurze, więcej Ivy i więcej miejsca. Team dodaje wspólną przestrzeń.",
       },
     },
     download: "Pobierz za darmo",
@@ -392,16 +397,16 @@ const content: SiteContent = {
     status: "Plany chmurowe są w sprzedaży. Zaloguj się w aplikacji web, aby kupić plan lub zarządzać subskrypcją. Lokalne funkcje Mac pozostają dostępne.",
     trialTitle: "Free co miesiąc",
     trial: "Każde darmowe konto dostaje co miesiąc kalendarzowy (UTC) 200 000 jednostek Ivy i przydział transkrypcji w chmurze, bez karty. Lokalne funkcje Mac nie mają limitu planu.",
-    meterTitle: "Transkrypcja w chmurze bez limitu",
-    meter: "Płatne plany nie mają limitu transkrypcji w chmurze. Przy dużej liczbie nagrań część z nich może być gotowa dopiero po kilku godzinach. Obowiązują zasady uczciwego korzystania. Transkrypcja na Macu jest zawsze od razu i bez limitu.",
-    fairUse: "Płatne plany obejmują transkrypcję w chmurze bez limitu w ramach uczciwego korzystania; przydział w Free i zasady uczciwego korzystania określa regulamin.",
+    meterTitle: "Transkrypcja w chmurze w płatnych planach",
+    meter: "Plany Personal i Team obejmują transkrypcję w chmurze. Przy intensywnym użyciu kolejne nagrania mogą trafić do wolniejszej kolejki. Obowiązują limity i zasady uczciwego korzystania opisane w regulaminie. Transkrypcja wykonywana lokalnie na Macu nie podlega limitom planu.",
+    fairUse: "Plany Personal i Team obejmują transkrypcję w chmurze. Przy intensywnym użyciu kolejne nagrania mogą trafić do wolniejszej kolejki. Obowiązują limity i zasady uczciwego korzystania opisane w regulaminie. Transkrypcja wykonywana lokalnie na Macu nie podlega limitom planu.",
     fairUseLink: "Przeczytaj regulamin",
     privacyTitle: "Lokalnie i w chmurze",
     privacy: "Lokalne przetwarzanie Mac zostaje na Macu. Standardowa chmura konta zapisuje i przetwarza treść na serwerach dostępnych operatorowi; nie jest szyfrowana end-to-end. Maskowanie wzorców nie oznacza pełnej anonimizacji. Plan nie daje dostępu do prywatnych przestrzeni.",
     detailsTitle: "Szczegóły planów",
-    details: "Płatna transkrypcja nie ma limitu planu; obowiązuje uczciwe użycie, a intensywne korzystanie może wydłużyć oczekiwanie. Miesięczne pule chmurowe odnawiają się według miesięcy kalendarzowych w UTC. Standardowa chmura konta nie jest szyfrowana end-to-end: operator może odczytać przechowywane i przetwarzane treści. Maskowanie wzorców nie jest pełną anonimizacją. Lokalne przetwarzanie na Macu pozostaje na Macu. Płatny plan nigdy nie daje dostępu do prywatnych przestrzeni.",
+    details: "Pula Free odnawia się z początkiem miesiąca kalendarzowego w UTC. W planach Personal i Team pule odnawiają się z początkiem okresu rozliczeniowego. Nagrania, które nie mieszczą się w pozostałej puli szybkiej, mogą trafić do wolniejszej kolejki w trybie ekonomicznym. Gdy nagranie nie mieści się w pozostałej puli ekonomicznej, serwis odmawia przyjęcia go do transkrypcji. Możesz zgłosić je ponownie po odnowieniu puli. Szczegóły naliczania i wartości pul podaje regulamin. Standardowa chmura konta nie jest szyfrowana end-to-end: operator może odczytać przechowywane i przetwarzane treści. Maskowanie wzorców nie jest pełną anonimizacją. Lokalne przetwarzanie na Macu pozostaje na Macu. Płatny plan nigdy nie daje dostępu do prywatnych przestrzeni.",
     more: "Więcej o rozliczeniach",
-    after: "Free obejmuje podstawowe notatki, edycję, zwykłe wyszukiwanie, synchronizację, odczyt i eksport w ramach 1 GB oraz miesięczny limit w chmurze. Płatne plany dają transkrypcję bez limitu oraz więcej AI i miejsca w chmurze.",
+    after: "Free obejmuje podstawowe notatki, edycję, zwykłe wyszukiwanie, synchronizację, odczyt i eksport w ramach 1 GB oraz miesięczny limit w chmurze. Płatne plany dają więcej transkrypcji oraz więcej AI i miejsca w chmurze.",
     team: "Personal i każda organizacja mają osobne abonamenty i salda. Team: 2,25 mln interaktywnych jednostek Ivy i 250 tys. jednostek automatów na miejsce; automaty mają wspólną pulę. Przestrzeń dyskowa jest wspólna dla organizacji. Miejsce nie zmienia praw dostępu. Do 2 darmowych organizacji po 5 członków dzieli storage konta założyciela.",
     lifecycle: "Audio w chmurze: domyślnie 30 dni; Free: 7/14/30 dni, płatne także 90. Kosz w chmurze: do czasu opróżnienia. Anulowanie nie kasuje treści; uprawnienia płatne do końca okresu. Eksportuj audio przed końcem retencji.",
     docs: "Plany i rozliczenia · dokumentacja po angielsku",
@@ -411,7 +416,7 @@ const content: SiteContent = {
     basics: "Notatki i synchronizacja w przeglądarce",
     ivy: "Jednostki Ivy w chmurze / mies.",
     asr: "Transkrypcja w chmurze",
-    asrUnlimited: "Bez limitu · uczciwe korzystanie",
+    asrPaid: "W cenie · obowiązują limity",
     asrBasic: "Miesięczny przydział",
     storage: "Miejsce w chmurze",
     gb: "GB",
@@ -428,7 +433,7 @@ const content: SiteContent = {
     recommended: "Polecany",
     note: "Personal zawiera VAT. Team od {seats} miejsc: łącznie {total} netto miesięcznie. Podatki i końcową cenę zobaczysz w aplikacji web przed zakupem.",
     compareLink: "Porównaj wszystkie szczegóły",
-    peek: { benefit: "Transkrypcja w chmurze bez limitu", link: "Zobacz plan Personal" },
+    peek: { benefit: "Więcej transkrypcji w chmurze", link: "Zobacz plan Personal" },
     plans: {
       free: {
         name: "Free",
@@ -449,7 +454,7 @@ const content: SiteContent = {
         period: "miesięcznie, z VAT",
         points: [
           "Wszystko z Free",
-          "Transkrypcja w chmurze bez limitu",
+          "Więcej transkrypcji w chmurze",
           "{ivy} jednostek Ivy miesięcznie",
           "{storage} GB w chmurze",
         ],
@@ -462,7 +467,7 @@ const content: SiteContent = {
         period: "netto za miejsce miesięcznie, od {seats} miejsc",
         points: [
           "Wspólne notatki i przestrzeń zespołu",
-          "Transkrypcja w chmurze bez limitu",
+          "Transkrypcja w chmurze dla każdego miejsca",
           "{ivy} jednostek Ivy na miejsce miesięcznie",
           "{storage} GB w chmurze na miejsce",
           "Bot Google Meet",
@@ -527,7 +532,7 @@ const content: SiteContent = {
     items: [
       {
         question: 'Co obejmuje plan Free?',
-        answer: 'Na Macu wszystko: nagrywanie, transkrypcję, notatki, Ivy on this Mac i eksport, bez konta i bez limitu planu. Darmowe konto dodaje notatki, edycję, wyszukiwanie, synchronizację, odczyt i eksport w przeglądarce w ramach 1 GB oraz miesięczny przydział jednostek Ivy i transkrypcji w chmurze. Płatne plany dają transkrypcję w chmurze bez limitu w ramach uczciwego korzystania, więcej jednostek Ivy i więcej przestrzeni.',
+        answer: 'Na Macu wszystko: nagrywanie, transkrypcję, notatki, Ivy on this Mac i eksport, bez konta i bez limitu planu. Darmowe konto dodaje notatki, edycję, wyszukiwanie, synchronizację, odczyt i eksport w przeglądarce w ramach 1 GB oraz miesięczny przydział jednostek Ivy i transkrypcji w chmurze. Płatne plany dają więcej transkrypcji w chmurze, więcej jednostek Ivy i więcej przestrzeni. Przy intensywnym użyciu kolejne nagrania mogą trafić do wolniejszej kolejki; limity i zasady uczciwego korzystania opisuje regulamin.',
       },
       {
         question: 'Czy moje nagrania trafiają do chmury?',
