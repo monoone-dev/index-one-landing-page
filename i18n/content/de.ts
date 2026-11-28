@@ -65,7 +65,7 @@ const content: SiteContent = {
   hero: {
     githubAria: 'IndexOne auf GitHub',
     titleStrong: 'Jedes Meeting im Gedächtnis.',
-    titleSoft: 'Jeder Satz mit Beleg.',
+    titleSoft: 'Notizen, an der Aufnahme prüfbar.',
     subHtml: 'Nimm <b>ohne Bot</b> auf und transkribiere <b>auf deinem Mac</b>. Um die anderen Teilnehmenden aufzunehmen, aktiviere die Systemaudio-Erfassung und erteile die macOS-Berechtigung. Kostenlos auf dem Mac. Im Bereich „Auf diesem Mac“ kann eine Aufnahme bis zu vier Stunden dauern.',
     download: 'Für Mac laden – kostenlos',
     signup: 'Kostenloses Konto erstellen',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Hört beide Seiten des Anrufs',
-          body: 'Dein Mikrofon und der Ton der anderen Teilnehmenden werden als zwei Spuren aufgenommen und von Whisper auf deinem Mac transkribiert.',
+          body: 'Nimmt dein Mikrofon auf und bei aktivierter Systemaudio-Erfassung und erteilter macOS-Berechtigung auch die anderen in Zoom, Teams, Google Meet und anderen Apps. Erfordert einen Mac mit Apple Silicon (macOS 13.4+). Nach dem Laden der Sprachmodelle kannst du im Bereich „Auf diesem Mac“ ohne Internet aufnehmen und transkribieren.',
           link: 'Aufnahme und Transkription',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Belege führen zurück zur Aufnahme',
-        body: 'Jede belegte Zeile einer Notiz verlinkt auf die Sekunde Audio, aus der sie stammt – mit Sprecher. Zeilen ohne Beleg bekommen keinen, so siehst du, welche Zeilen eine wahrscheinliche Quelle in der Aufnahme haben.',
+        body: 'Auf dem Mac wählst du, wenn die Aufnahme verfügbar ist, einen Eintrag auf der Karte „Belege“ unter der Notiz aus. IndexOne öffnet den Tab „Audio“ und markiert die wahrscheinliche Stelle im Transkript. Eine Sprecherangabe erscheint, wenn sie verfügbar ist.',
         link: 'Belege',
       },
       'security': {
@@ -279,7 +279,7 @@ const content: SiteContent = {
       'imports': {
         eyebrow: 'Importe',
         title: 'Bring deine bestehenden Notizen mit',
-        body: 'Settings → Imports holt einen <b>Notion-Export</b>, einen <b>Obsidian-Vault</b>, <b>Apple Notes</b>, einen Ordner mit <b>Markdown-Dateien</b> oder ein <b>IndexOne-Backup</b> herein. Komplett offline – kein Konto, kein Schlüssel, keine Netzwerkanfrage. Jeder Import läuft zuerst als Probelauf, damit du siehst, was er schreiben würde, bevor er irgendetwas schreibt.',
+        body: 'Settings → Imports holt einen <b>Notion-Export</b>, einen <b>Obsidian-Vault</b>, <b>Apple Notes</b>, einen Ordner mit <b>Markdown-Dateien</b> oder ein <b>IndexOne-Backup</b> herein. Komplett offline – kein Konto, kein Schlüssel, keine Netzwerkanfrage. Der Import dieser Notizen läuft zuerst als Probelauf, damit du siehst, was er schreiben würde, bevor er irgendetwas schreibt.<br><br>Auf dem Mac kannst du außerdem eine unterstützte Transkriptdatei aus Teams, Zoom oder Google Meet als neues Meeting laden. Der Import kann Zeiten und Sprecherangaben übernehmen, die in der Datei stehen. Hat die Datei keine Zeiten, schätzt die App sie. Danach versucht die App, eine Notiz zu erzeugen. Cloud-KI braucht eine Internetverbindung. Formate: VTT, SRT, TXT und unterstützte DOCX-Exporte.',
         points: [
           'Fünf Quellen: ein Notion-Export, ein Obsidian-Vault, Apple Notes, ein Ordner mit Markdown-Dateien, ein IndexOne-Backup',
           'Erst der Probelauf – geschrieben wird erst, wenn du es sagst',
@@ -337,15 +337,15 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Belege',
-        title: 'Belegte Aussagen führen zurück zur Aufnahme.',
-        body: 'Die Notizen von IndexOne verlangen kein blindes Vertrauen. Jede Zeile, die sich auf tatsächlich Gesagtes stützt, trägt einen Beleg – ein Klick springt direkt zu dieser Sekunde Audio, mit Sprecher. Umschriebene oder unbelegte Zeilen bekommen keinen, so siehst du auf einen Blick, welche Zeilen eine wahrscheinliche Quelle in der Aufnahme haben.',
+        title: 'Zugeordnete Punkte zeigen ihre wahrscheinliche Quelle.',
+        body: 'Auf dem Mac wählst du, wenn die Aufnahme verfügbar ist, einen Eintrag auf der Karte „Belege“ unter der Notiz aus. IndexOne öffnet den Tab „Audio“ und markiert die wahrscheinliche Stelle im Transkript. Eine Sprecherangabe erscheint, wenn sie verfügbar ist. Punkte ohne Beleg solltest du selbst prüfen.',
         points: [
-          'Klick auf eine Aussage und hör genau, woher sie kommt',
-          'Sprecher und genaue Sekunde auf jedem Beleg',
+          'Auf dem Mac: die wahrscheinliche Quelle, im Transkript markiert',
+          'Zeitpunkt der Quelle und Sprecherangabe, wenn verfügbar',
           'Sieben Ein-Klick-Ergebnisse aus jedem Meeting – Follow-up-Mail, Entscheidungsprotokoll, Ticket, 1:1-Rückblick, Standup, Sales-Rückblick, Interview-Notizen',
           'Versiegelte Ordner verraten nie Zeitpunkte oder Sprecher',
         ],
-        alt: 'Die Belege einer generierten Notiz: eine Zeile pro belegter Aussage, jeweils mit Sprecher und der Sekunde Audio, aus der sie stammt',
+        alt: 'Belegliste mit Aufnahmezeiten und sichtbaren Sprecherangaben',
       },
       'markdown': {
         eyebrow: 'Gehört dir',
@@ -400,7 +400,7 @@ const content: SiteContent = {
     meterTitle: "Cloud-Transkription in bezahlten Plänen",
     meter: "Personal und Team enthalten Cloud-Transkription. Bei intensiver Nutzung können neue Aufnahmen in eine langsamere Warteschlange kommen. Limits und Fair-Use-Regeln stehen in den Nutzungsbedingungen. Die lokale Transkription auf deinem Mac unterliegt keinen Kontingenten deines Tarifs.",
     fairUse: "Personal und Team enthalten Cloud-Transkription. Bei intensiver Nutzung können neue Aufnahmen in eine langsamere Warteschlange kommen. Limits und Fair-Use-Regeln stehen in den Nutzungsbedingungen. Die lokale Transkription auf deinem Mac unterliegt keinen Kontingenten deines Tarifs.",
-    fairUseLink: "Nutzungsbedingungen lesen (auf Polnisch)",
+    fairUseLink: "Nutzungsbedingungen lesen (auf Englisch)",
     privacyTitle: "Lokal und Cloud",
     privacy: "Lokale Mac-Verarbeitung bleibt auf dem Mac. Standard-Cloud speichert und verarbeitet Inhalte auf für den Betreiber lesbaren Servern, ohne Ende-zu-Ende-Verschlüsselung. Mustermaskierung ist keine vollständige Anonymisierung. Ein Plan gewährt keinen Zugriff auf private Bereiche.",
     detailsTitle: "Details zu den Plänen",
@@ -602,7 +602,7 @@ const content: SiteContent = {
       purpose: { title: "Wozu", body: "Damit die Organisation Notizen und Zusammenfassungen ihres Meetings hat. Die Aufnahme liegt im IndexOne-Arbeitsbereich dieser Organisation, wo die Personen sie öffnen können, denen sie es erlaubt." },
       storage: { title: "Wie lange es gespeichert wird", body: "Wie lange die Aufnahme in ihrem Arbeitsbereich bleibt, entscheidet die Organisation. Wie lange IndexOne Daten speichert, steht in der IndexOne-Datenschutzerklärung." },
     },
-    policyLink: "IndexOne-Datenschutzerklärung (auf Polnisch)",
+    policyLink: "IndexOne-Datenschutzerklärung (auf Englisch)",
     rights: {
       eyebrow: "Deine Rechte",
       title: "Du kannst widersprechen, deine Daten einsehen und ihre Löschung verlangen.",
@@ -637,10 +637,10 @@ const content: SiteContent = {
   footer: {
     legalHtml: 'Mac-App und Web-App · iPhone-App folgt bald · Ivy auf dem Gerät · gebaut mit Tauri, Angular und Rust · kostenlos auf dem Mac · © {year} <a href="{authors}">MonoOne</a> · Text <a href="{license}">CC BY 4.0</a>',
     legalNav: 'Rechtliche Hinweise',
-    terms: 'Nutzungsbedingungen (PL)',
-    privacyPolicy: 'Datenschutzerklärung (PL)',
-    withdrawal: 'Widerrufsrecht (PL)',
-    dpa: 'Auftragsverarbeitungsvertrag (PL)',
+    terms: 'Nutzungsbedingungen (EN)',
+    privacyPolicy: 'Datenschutzerklärung (EN)',
+    withdrawal: 'Widerrufsrecht (EN)',
+    dpa: 'Auftragsverarbeitungsvertrag (EN)',
     meetingBot: 'Meeting-Bot: Hinweise für Teilnehmende',
     contact: 'Kontakt',
   },

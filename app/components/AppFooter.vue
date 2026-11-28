@@ -18,13 +18,13 @@ const links = computed(() => [
   { label: c.value.nav.download, to: site.links.download, external: true },
 ])
 
-const legalBase = site.links.legal
+const docs = useLegalDocs()
 
 const legalLinks = computed(() => [
-  { label: c.value.footer.terms, to: site.links.terms, external: true },
-  { label: c.value.footer.privacyPolicy, to: `${legalBase}polityka-prywatnosci.html`, external: true },
-  { label: c.value.footer.withdrawal, to: `${legalBase}odstapienie.html`, external: true },
-  { label: c.value.footer.dpa, to: `${legalBase}dpa.html`, external: true },
+  { label: c.value.footer.terms, to: docs.value.terms, external: true },
+  { label: c.value.footer.privacyPolicy, to: docs.value.privacy, external: true },
+  { label: c.value.footer.withdrawal, to: docs.value.withdrawal, external: true },
+  { label: c.value.footer.dpa, to: docs.value.dpa, external: true },
   { label: c.value.footer.meetingBot, to: to('/meeting-bot') },
   { label: c.value.footer.contact, to: `${site.links.discussions}/categories/q-a`, external: true },
 ])

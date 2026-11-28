@@ -65,7 +65,7 @@ const content: SiteContent = {
   hero: {
     githubAria: 'IndexOne en GitHub',
     titleStrong: 'Cada reunión recordada.',
-    titleSoft: 'Cada frase con pruebas.',
+    titleSoft: 'Notas que puedes comprobar en la grabación.',
     subHtml: 'Graba <b>sin bot</b> y transcribe <b>en tu Mac</b>. Para grabar a las demás personas, activa la captura del audio del sistema y concede el permiso de macOS. Gratis en el Mac. En el espacio «En este Mac», una grabación puede durar hasta cuatro horas.',
     download: 'Descargar para Mac — gratis',
     signup: 'Crear una cuenta gratuita',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Escucha a ambos lados de la llamada',
-          body: 'Tu micrófono y el audio de los demás participantes se graban como dos pistas y Whisper los transcribe en tu Mac.',
+          body: 'Graba tu micrófono y, con la captura del audio del sistema activada y el permiso de macOS concedido, también a las demás personas en Zoom, Teams, Google Meet y otras apps. Requiere un Mac con Apple Silicon (macOS 13.4+). Después de descargar los modelos de voz, puedes grabar y transcribir sin internet en el espacio «En este Mac».',
           link: 'Captura y transcripción',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Los recibos llevan al audio',
-        body: 'Cada línea fundamentada de una nota enlaza con el segundo exacto del audio del que procede, con el hablante. Las líneas sin pruebas no llevan recibo, así ves qué líneas tienen una fuente probable en la grabación.',
+        body: 'En el Mac, cuando la grabación está disponible, selecciona una entrada de la tarjeta «Recibos», debajo de la nota. IndexOne abre la pestaña «Audio» y resalta el fragmento probable en la transcripción. La etiqueta del hablante aparece cuando está disponible.',
         link: 'Recibos',
       },
       'security': {
@@ -279,7 +279,7 @@ const content: SiteContent = {
       'imports': {
         eyebrow: 'Importación',
         title: 'Trae tus notas de siempre',
-        body: 'Settings → Imports importa una <b>exportación de Notion</b>, una <b>bóveda de Obsidian</b>, <b>Apple Notes</b>, una carpeta de <b>archivos Markdown</b> o una <b>copia de seguridad de IndexOne</b>. Totalmente sin conexión: sin cuenta, sin clave y sin llamadas de red. Cada importación empieza con una simulación, para que veas lo que escribiría antes de que escriba nada.',
+        body: 'Settings → Imports importa una <b>exportación de Notion</b>, una <b>bóveda de Obsidian</b>, <b>Apple Notes</b>, una carpeta de <b>archivos Markdown</b> o una <b>copia de seguridad de IndexOne</b>. Totalmente sin conexión: sin cuenta, sin clave y sin llamadas de red. La importación de estas notas empieza con una simulación, para que veas lo que escribiría antes de que escriba nada.<br><br>En el Mac, también puedes importar como reunión nueva un archivo de transcripción compatible de Teams, Zoom o Google Meet. La importación puede conservar los tiempos y las etiquetas de hablantes que figuran en el archivo. Si el archivo no tiene tiempos, la app los estima. Después, la app intenta generar una nota. La IA en la nube necesita conexión a internet. Formatos: VTT, SRT, TXT y exportaciones DOCX compatibles.',
         points: [
           'Cinco orígenes: una exportación de Notion, una bóveda de Obsidian, Apple Notes, una carpeta de archivos Markdown y una copia de seguridad de IndexOne',
           'Primero una simulación: no se escribe nada hasta que tú lo digas',
@@ -337,15 +337,15 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Recibos',
-        title: 'Las afirmaciones respaldadas se remontan a la grabación.',
-        body: 'Las notas de IndexOne no te piden que confíes en ellas. Cada línea basada en lo que realmente se dijo lleva un recibo: haz clic y salta directamente a ese segundo del audio, con el hablante. Las líneas parafraseadas o sin respaldo no llevan ninguno, así ves de un vistazo qué líneas tienen una fuente probable en la grabación.',
+        title: 'Los puntos asociados señalan su fuente probable.',
+        body: 'En el Mac, cuando la grabación está disponible, selecciona una entrada de la tarjeta «Recibos», debajo de la nota. IndexOne abre la pestaña «Audio» y resalta el fragmento probable en la transcripción. La etiqueta del hablante aparece cuando está disponible. Conviene comprobar los puntos sin recibo.',
         points: [
-          'Haz clic en una afirmación y escucha exactamente de dónde salió',
-          'Hablante y segundo exacto en cada recibo',
+          'En el Mac, la fuente probable resaltada en la transcripción',
+          'Momento de la fuente y etiqueta del hablante, cuando está disponible',
           'Siete documentos en un clic a partir de cualquier reunión: correo de seguimiento, registro de decisiones, ticket de trabajo, resumen de 1:1, standup, resumen de ventas y notas de entrevista',
           'Las carpetas selladas nunca revelan tiempos ni hablantes',
         ],
-        alt: 'Los recibos de una nota generada: una fila por cada afirmación fundamentada, cada una con el hablante y el segundo del audio del que procede',
+        alt: 'Lista de recibos con los tiempos de la grabación y etiquetas de hablantes visibles',
       },
       'markdown': {
         eyebrow: 'Tuyo para siempre',
@@ -400,7 +400,7 @@ const content: SiteContent = {
     meterTitle: "Transcripción en la nube en los planes de pago",
     meter: "Personal y Team incluyen transcripción en la nube. Con un uso intensivo, las grabaciones nuevas pueden pasar a una cola más lenta. Los límites y las reglas de uso razonable figuran en los Términos del servicio. La transcripción local en tu Mac no está sujeta a las cuotas del plan.",
     fairUse: "Personal y Team incluyen transcripción en la nube. Con un uso intensivo, las grabaciones nuevas pueden pasar a una cola más lenta. Los límites y las reglas de uso razonable figuran en los Términos del servicio. La transcripción local en tu Mac no está sujeta a las cuotas del plan.",
-    fairUseLink: "Leer los Términos del servicio (en polaco)",
+    fairUseLink: "Leer los Términos del servicio (en inglés)",
     privacyTitle: "Local y nube",
     privacy: "El procesamiento local de Mac permanece en el Mac. La nube estándar almacena y procesa contenido en servidores legibles por el operador, sin cifrado de extremo a extremo. Enmascarar patrones no es anonimización completa. Un plan no concede acceso a espacios privados.",
     detailsTitle: "Detalles de los planes",
@@ -602,7 +602,7 @@ const content: SiteContent = {
       purpose: { title: "Para qué se graba", body: "Para que la organización tenga notas y resúmenes de su reunión. La grabación se guarda en el espacio de trabajo de IndexOne de esa organización, donde pueden abrirla las personas a las que ella lo permita." },
       storage: { title: "Cuánto tiempo se guarda", body: "La organización decide cuánto tiempo conserva la grabación en su espacio de trabajo. Cuánto tiempo guarda IndexOne los datos se explica en la política de privacidad de IndexOne." },
     },
-    policyLink: "Política de privacidad de IndexOne (en polaco)",
+    policyLink: "Política de privacidad de IndexOne (en inglés)",
     rights: {
       eyebrow: "Tus derechos",
       title: "Puedes oponerte, ver tus datos y pedir que se borren.",
@@ -637,10 +637,10 @@ const content: SiteContent = {
   footer: {
     legalHtml: 'App para Mac y app web · app para iPhone muy pronto · Ivy en el dispositivo · creado con Tauri, Angular y Rust · gratis en el Mac · © {year} <a href="{authors}">MonoOne</a> · texto <a href="{license}">CC BY 4.0</a>',
     legalNav: 'Información legal',
-    terms: 'Términos del servicio (PL)',
-    privacyPolicy: 'Política de privacidad (PL)',
-    withdrawal: 'Derecho de desistimiento (PL)',
-    dpa: 'Acuerdo de tratamiento de datos (PL)',
+    terms: 'Términos del servicio (EN)',
+    privacyPolicy: 'Política de privacidad (EN)',
+    withdrawal: 'Derecho de desistimiento (EN)',
+    dpa: 'Acuerdo de tratamiento de datos (EN)',
     meetingBot: 'Bot de reuniones: información para participantes',
     contact: 'Contacto',
   },

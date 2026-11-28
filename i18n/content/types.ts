@@ -247,7 +247,7 @@ export interface SiteContent {
     noticeLabel: string
     noticeNote: string
     cards: Record<MeetingBotCardId, Card>
-    /** Link text for the IndexOne privacy policy, which is in Polish. */
+    /** Link text for the IndexOne privacy policy: the Polish document for pl, the English one otherwise. */
     policyLink: string
     rights: { eyebrow: string, title: string, lead: string, items: Record<MeetingBotRightId, Card> }
     steps: { title: string, items: [Card, Card, Card] }

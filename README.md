@@ -51,7 +51,7 @@ IndexOne's public home. The app's source code is not public and is not here.
    your IndexOne account (Personal or an organization) can use Ivy on the web, which transcribes on
    IndexOne's servers.
 3. **Write the note** — when you stop, the AI you chose writes a summary, decisions, action items and
-   quotes. Each grounded line links back to the second of audio it came from.
+   quotes. Matched note points show their likely source in the transcript.
 4. **Ask Ivy** — mid-meeting without stopping the recording, or months later across every meeting,
    note and document. Every answer lists its sources.
 
@@ -196,8 +196,9 @@ The website is a [Nuxt](https://nuxt.com) 4 app in TypeScript with [Nuxt UI](htt
 [Nuxt i18n](https://i18n.nuxtjs.org) and SCSS, generated to static HTML so every word is in the
 served markup. It is published in English (`/`), Polish (`/pl/`), Spanish (`/es/`), Italian
 (`/it/`), French (`/fr/`), Portuguese (`/pt/`), German (`/de/`), Simplified Chinese (`/zh/`) and
-Japanese (`/ja/`); the first visit follows the
-browser's language and the choice is kept in a first-party cookie. The colour mode follows the
+Japanese (`/ja/`). A page opens in the language of
+its address; only the bare home page address follows the language picked in the menu, otherwise the
+browser's. The picked language is kept in a first-party cookie. The colour mode follows the
 system until the visitor picks one.
 
 ```bash

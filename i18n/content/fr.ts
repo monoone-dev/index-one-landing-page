@@ -65,7 +65,7 @@ const content: SiteContent = {
   hero: {
     githubAria: 'IndexOne sur GitHub',
     titleStrong: 'Chaque réunion en mémoire.',
-    titleSoft: 'Chaque phrase avec sa preuve.',
+    titleSoft: 'Des notes vérifiables sur l’enregistrement.',
     subHtml: 'Enregistrez <b>sans bot</b> et transcrivez <b>sur votre Mac</b>. Pour enregistrer vos interlocuteurs, activez la capture du son système et accordez l’autorisation macOS. Gratuit sur Mac. Dans l’espace « Sur ce Mac », un enregistrement peut durer jusqu’à quatre heures.',
     download: 'Télécharger pour Mac — gratuit',
     signup: 'Créer un compte gratuit',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Entend les deux côtés de l\'appel',
-          body: 'Votre micro et l\'audio des autres participants sont enregistrés en deux flux et transcrits sur votre Mac par Whisper.',
+          body: 'Enregistre votre micro et, avec la capture du son système activée et l’autorisation macOS accordée, aussi vos interlocuteurs sur Zoom, Teams, Google Meet et d’autres apps. Nécessite un Mac avec Apple Silicon (macOS 13.4+). Après le téléchargement des modèles vocaux, vous pouvez enregistrer et transcrire sans internet dans l’espace « Sur ce Mac ».',
           link: 'Capture et transcription',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Les preuves renvoient à l’audio',
-        body: 'Chaque ligne étayée d’une note renvoie à la seconde d’audio dont elle provient, avec l’intervenant. Les lignes sans preuve n’en reçoivent pas : vous voyez quelles lignes ont une source probable dans l’enregistrement.',
+        body: 'Sur Mac, quand l’enregistrement est disponible, sélectionnez une entrée dans la carte « Preuves » sous la note. IndexOne ouvre l’onglet « Audio » et surligne le passage probable dans la transcription. L’étiquette de l’intervenant apparaît quand elle est disponible.',
         link: 'Les preuves',
       },
       'security': {
@@ -279,7 +279,7 @@ const content: SiteContent = {
       'imports': {
         eyebrow: 'Imports',
         title: 'Apportez vos notes existantes',
-        body: 'Settings → Imports récupère un <b>export Notion</b>, un <b>coffre Obsidian</b>, <b>Apple Notes</b>, un dossier de <b>fichiers Markdown</b> ou une <b>sauvegarde IndexOne</b>. Entièrement hors ligne — sans compte, sans clé, sans appel réseau. Chaque import commence par une simulation, pour voir ce qu’il écrirait avant qu’il n’écrive quoi que ce soit.',
+        body: 'Settings → Imports récupère un <b>export Notion</b>, un <b>coffre Obsidian</b>, <b>Apple Notes</b>, un dossier de <b>fichiers Markdown</b> ou une <b>sauvegarde IndexOne</b>. Entièrement hors ligne — sans compte, sans clé, sans appel réseau. L’import de ces notes commence par une simulation, pour voir ce qu’il écrirait avant qu’il n’écrive quoi que ce soit.<br><br>Sur Mac, vous pouvez aussi importer comme nouvelle réunion un fichier de transcription pris en charge de Teams, Zoom ou Google Meet. L’import peut conserver les horodatages et les étiquettes d’intervenants présents dans le fichier. Si le fichier n’a pas d’horodatage, l’app les estime. L’app essaie ensuite de générer une note. L’IA dans le cloud nécessite une connexion internet. Formats : VTT, SRT, TXT et exports DOCX pris en charge.',
         points: [
           'Cinq sources : un export Notion, un coffre Obsidian, Apple Notes, un dossier de fichiers Markdown, une sauvegarde IndexOne',
           'Simulation d’abord — rien n’est écrit tant que vous ne validez pas',
@@ -337,15 +337,15 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Preuves',
-        title: 'Les affirmations étayées remontent à l’enregistrement.',
-        body: 'Les notes d’IndexOne ne vous demandent pas de leur faire confiance. Chaque ligne fondée sur ce qui a réellement été dit porte une preuve — cliquez dessus pour aller directement à la seconde d’audio correspondante, avec l’intervenant. Les lignes paraphrasées ou non étayées n’en ont pas : vous voyez d’un coup d’œil quelles lignes ont une source probable dans l’enregistrement.',
+        title: 'Les points rapprochés indiquent leur source probable.',
+        body: 'Sur Mac, quand l’enregistrement est disponible, sélectionnez une entrée dans la carte « Preuves » sous la note. IndexOne ouvre l’onglet « Audio » et surligne le passage probable dans la transcription. L’étiquette de l’intervenant apparaît quand elle est disponible. Les points sans preuve méritent d’être vérifiés.',
         points: [
-          'Cliquez sur une affirmation, écoutez exactement d’où elle vient',
-          'Intervenant et seconde exacte sur chaque preuve',
+          'Sur Mac, la source probable surlignée dans la transcription',
+          'Horodatage de la source et étiquette de l’intervenant, si disponible',
           'Sept documents en un clic à partir de n’importe quelle réunion — e-mail de suivi, journal des décisions, ticket, compte rendu de 1:1, standup, récap commercial, notes d’entretien',
           'Les dossiers scellés ne laissent jamais fuiter ni horodatage ni intervenant',
         ],
-        alt: 'Les preuves d’une note générée : une ligne par affirmation étayée, chacune avec l’intervenant et la seconde d’audio d’origine',
+        alt: 'Liste de preuves avec les temps de l’enregistrement et les étiquettes d’intervenants visibles',
       },
       'markdown': {
         eyebrow: 'À vous pour de bon',
@@ -400,7 +400,7 @@ const content: SiteContent = {
     meterTitle: "Transcription cloud dans les offres payantes",
     meter: "Personal et Team comprennent la transcription cloud. En cas d’usage intensif, les nouveaux enregistrements peuvent passer dans une file d’attente plus lente. Les limites et les règles d’utilisation raisonnable figurent dans les Conditions d’utilisation. La transcription effectuée sur votre Mac n’est pas soumise aux quotas de l’offre.",
     fairUse: "Personal et Team comprennent la transcription cloud. En cas d’usage intensif, les nouveaux enregistrements peuvent passer dans une file d’attente plus lente. Les limites et les règles d’utilisation raisonnable figurent dans les Conditions d’utilisation. La transcription effectuée sur votre Mac n’est pas soumise aux quotas de l’offre.",
-    fairUseLink: "Lire les Conditions d’utilisation (en polonais)",
+    fairUseLink: "Lire les Conditions d’utilisation (en anglais)",
     privacyTitle: "Local et cloud",
     privacy: "Le traitement local Mac reste sur le Mac. Le cloud standard stocke et traite les contenus sur des serveurs lisibles par l’opérateur, sans chiffrement de bout en bout. Le masquage de motifs n’est pas une anonymisation complète. Un abonnement ne donne pas accès aux espaces privés.",
     detailsTitle: "Détails des offres",
@@ -602,7 +602,7 @@ const content: SiteContent = {
       purpose: { title: "Dans quel but", body: "Pour que l’organisation dispose de notes et de résumés de sa réunion. L’enregistrement est conservé dans l’espace de travail IndexOne de cette organisation, où les personnes qu’elle autorise peuvent l’ouvrir." },
       storage: { title: "Durée de conservation", body: "L’organisation décide combien de temps elle garde l’enregistrement dans son espace de travail. La durée pendant laquelle IndexOne conserve les données est indiquée dans la politique de confidentialité d’IndexOne." },
     },
-    policyLink: "Politique de confidentialité d’IndexOne (en polonais)",
+    policyLink: "Politique de confidentialité d’IndexOne (en anglais)",
     rights: {
       eyebrow: "Vos droits",
       title: "Vous pouvez vous opposer, consulter vos données et demander leur effacement.",
@@ -637,10 +637,10 @@ const content: SiteContent = {
   footer: {
     legalHtml: 'App Mac et app web · app iPhone bientôt disponible · Ivy sur l’appareil · conçu avec Tauri, Angular et Rust · gratuit sur Mac · © {year} <a href="{authors}">MonoOne</a> · texte <a href="{license}">CC BY 4.0</a>',
     legalNav: 'Informations légales',
-    terms: 'Conditions d’utilisation (PL)',
-    privacyPolicy: 'Politique de confidentialité (PL)',
-    withdrawal: 'Droit de rétractation (PL)',
-    dpa: 'Accord de traitement des données (PL)',
+    terms: 'Conditions d’utilisation (EN)',
+    privacyPolicy: 'Politique de confidentialité (EN)',
+    withdrawal: 'Droit de rétractation (EN)',
+    dpa: 'Accord de traitement des données (EN)',
     meetingBot: 'Bot de réunion : informations pour les participants',
     contact: 'Contact',
   },

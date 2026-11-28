@@ -65,7 +65,7 @@ const content: SiteContent = {
   hero: {
     githubAria: 'IndexOne no GitHub',
     titleStrong: 'Cada reunião lembrada.',
-    titleSoft: 'Cada frase com uma prova.',
+    titleSoft: 'Notas que você confere na gravação.',
     subHtml: 'Grave <b>sem bot</b> e transcreva <b>no seu Mac</b>. Para gravar as outras pessoas, ative a captura do áudio do sistema e conceda a permissão do macOS. Grátis no Mac. No espaço «Neste Mac», uma gravação pode durar até quatro horas.',
     download: 'Baixar para Mac — grátis',
     signup: 'Criar uma conta gratuita',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Ouve os dois lados da chamada',
-          body: 'Seu microfone e o áudio dos outros participantes são gravados como dois fluxos e transcritos no seu Mac pelo Whisper.',
+          body: 'Grava o seu microfone e, com a captura do áudio do sistema ativada e a permissão do macOS concedida, também as outras pessoas no Zoom, Teams, Google Meet e outros apps. Requer um Mac com Apple Silicon (macOS 13.4+). Depois de baixar os modelos de fala, você pode gravar e transcrever sem internet no espaço «Neste Mac».',
           link: 'Captura e transcrição',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Os recibos levam ao áudio',
-        body: 'Cada linha embasada de uma nota leva ao segundo exato do áudio de onde veio, com quem falou. Linhas sem evidência ficam sem recibo, então você vê quais linhas têm uma fonte provável na gravação.',
+        body: 'No Mac, quando a gravação está disponível, selecione um item no cartão «Recibos», abaixo da nota. O IndexOne abre a aba «Áudio» e destaca o trecho provável na transcrição. O rótulo de quem falou aparece quando está disponível.',
         link: 'Recibos',
       },
       'security': {
@@ -279,7 +279,7 @@ const content: SiteContent = {
       'imports': {
         eyebrow: 'Importações',
         title: 'Traga as notas que você já tem',
-        body: 'Settings → Imports traz uma <b>exportação do Notion</b>, um <b>vault do Obsidian</b>, o <b>Apple Notes</b>, uma pasta de <b>arquivos Markdown</b> ou um <b>backup do IndexOne</b>. Tudo offline — sem conta, sem chave, sem chamada de rede. Toda importação começa como simulação, para você ver o que ela gravaria antes de gravar qualquer coisa.',
+        body: 'Settings → Imports traz uma <b>exportação do Notion</b>, um <b>vault do Obsidian</b>, o <b>Apple Notes</b>, uma pasta de <b>arquivos Markdown</b> ou um <b>backup do IndexOne</b>. Tudo offline — sem conta, sem chave, sem chamada de rede. A importação dessas notas começa como simulação, para você ver o que ela gravaria antes de gravar qualquer coisa.<br><br>No Mac, você também pode importar como nova reunião um arquivo de transcrição compatível do Teams, Zoom ou Google Meet. A importação pode manter os tempos e os rótulos de quem falou presentes no arquivo. Se o arquivo não tiver tempos, o app os estima. Depois, o app tenta gerar uma nota. A IA na nuvem exige conexão com a internet. Formatos: VTT, SRT, TXT e exportações DOCX compatíveis.',
         points: [
           'Cinco fontes: uma exportação do Notion, um vault do Obsidian, o Apple Notes, uma pasta de arquivos Markdown e um backup do IndexOne',
           'Simulação primeiro — nada é gravado até você confirmar',
@@ -337,15 +337,15 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Recibos',
-        title: 'Afirmações fundamentadas levam de volta à gravação.',
-        body: 'As notas do IndexOne não pedem que você confie nelas. Cada linha baseada no que foi realmente dito traz um recibo — clique nele para ir direto àquele segundo do áudio, com quem falou. Linhas parafraseadas ou sem embasamento ficam sem recibo, então você vê de relance quais linhas têm uma fonte provável na gravação.',
+        title: 'Os pontos associados indicam a fonte provável.',
+        body: 'No Mac, quando a gravação está disponível, selecione um item no cartão «Recibos», abaixo da nota. O IndexOne abre a aba «Áudio» e destaca o trecho provável na transcrição. O rótulo de quem falou aparece quando está disponível. Vale a pena conferir os pontos sem recibo.',
         points: [
-          'Clique em uma afirmação e ouça exatamente de onde ela veio',
-          'Quem falou e o segundo exato em cada recibo',
+          'No Mac, a fonte provável destacada na transcrição',
+          'Momento da fonte e rótulo de quem falou, quando disponível',
           'Sete documentos com um clique a partir de qualquer reunião — e-mail de follow-up, registro de decisões, ticket de trabalho, resumo de 1:1, standup, resumo de vendas, notas de entrevista',
           'Pastas seladas nunca vazam horários nem quem falou',
         ],
-        alt: 'Os recibos de uma nota gerada: uma linha por afirmação embasada, cada uma com quem falou e o segundo do áudio de onde veio',
+        alt: 'Lista de recibos com os tempos da gravação e rótulos de quem falou visíveis',
       },
       'markdown': {
         eyebrow: 'Seu para sempre',
@@ -400,7 +400,7 @@ const content: SiteContent = {
     meterTitle: "Transcrição na nuvem nos planos pagos",
     meter: "Personal e Team incluem transcrição na nuvem. Com uso intenso, novas gravações podem entrar em uma fila mais lenta. Os limites e as regras de uso razoável estão nos Termos de serviço. A transcrição feita no seu Mac não está sujeita às cotas do plano.",
     fairUse: "Personal e Team incluem transcrição na nuvem. Com uso intenso, novas gravações podem entrar em uma fila mais lenta. Os limites e as regras de uso razoável estão nos Termos de serviço. A transcrição feita no seu Mac não está sujeita às cotas do plano.",
-    fairUseLink: "Leia os Termos de serviço (em polonês)",
+    fairUseLink: "Leia os Termos de serviço (em inglês)",
     privacyTitle: "Local e nuvem",
     privacy: "O processamento local do Mac fica no Mac. A nuvem padrão armazena e processa conteúdo em servidores legíveis pelo operador, sem criptografia de ponta a ponta. Mascarar padrões não é anonimização completa. Um plano não concede acesso a espaços privados.",
     detailsTitle: "Detalhes dos planos",
@@ -602,7 +602,7 @@ const content: SiteContent = {
       purpose: { title: "Para que é gravado", body: "Para que a organização tenha notas e resumos da reunião dela. A gravação fica no espaço de trabalho do IndexOne dessa organização, onde as pessoas que ela autorizar podem abri-la." },
       storage: { title: "Por quanto tempo fica guardado", body: "A organização decide por quanto tempo mantém a gravação no espaço de trabalho dela. Por quanto tempo o IndexOne guarda os dados está descrito na política de privacidade do IndexOne." },
     },
-    policyLink: "Política de privacidade do IndexOne (em polonês)",
+    policyLink: "Política de privacidade do IndexOne (em inglês)",
     rights: {
       eyebrow: "Seus direitos",
       title: "Você pode se opor, ver seus dados e pedir que sejam apagados.",
@@ -637,10 +637,10 @@ const content: SiteContent = {
   footer: {
     legalHtml: 'App para Mac e app web · app para iPhone em breve · Ivy no dispositivo · feito com Tauri, Angular e Rust · grátis no Mac · © {year} <a href="{authors}">MonoOne</a> · textos <a href="{license}">CC BY 4.0</a>',
     legalNav: 'Informações legais',
-    terms: 'Termos de serviço (PL)',
-    privacyPolicy: 'Política de privacidade (PL)',
-    withdrawal: 'Direito de arrependimento (PL)',
-    dpa: 'Acordo de tratamento de dados (PL)',
+    terms: 'Termos de serviço (EN)',
+    privacyPolicy: 'Política de privacidade (EN)',
+    withdrawal: 'Direito de arrependimento (EN)',
+    dpa: 'Acordo de tratamento de dados (EN)',
     meetingBot: 'Bot de reuniões: informações para participantes',
     contact: 'Contato',
   },

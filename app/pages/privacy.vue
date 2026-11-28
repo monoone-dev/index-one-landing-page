@@ -1,16 +1,13 @@
 <script setup lang="ts">
-import { site } from '~/data/site'
-
 const c = useContent()
 const to = useLocalLink()
-const { locale } = useI18n()
-// The policy is published in Polish and in English; every other language gets the English one.
-const policy = computed(() => `${site.links.legal}${locale.value === 'pl' ? 'polityka-prywatnosci.html' : 'en/privacy-policy.html'}`)
 
 usePageSeo({
   path: '/privacy',
   meta: () => c.value.meta.privacy,
 })
+
+const legal = useLegalDocs()
 </script>
 
 <template>
@@ -22,7 +19,7 @@ usePageSeo({
           <h2 id="hosting-title"><UIcon name="i-lucide-server" />{{ c.privacy.hosting.title }}</h2>
           <p>{{ c.privacy.hosting.body }}</p>
           <p class="plan-details__links">
-            <a :href="policy" target="_blank" rel="noopener">{{ c.privacy.hosting.policyLink }}</a>
+            <a :href="legal.privacy" :hreflang="legal.lang" target="_blank" rel="noopener">{{ c.privacy.hosting.policyLink }}</a>
           </p>
         </aside>
         <aside class="plan-details__card island">
@@ -31,7 +28,7 @@ usePageSeo({
           <p class="plan-details__links">
             <NuxtLink :to="to('/pricing#comparison')">{{ c.offer.comparison }}</NuxtLink>
             <NuxtLink to="/docs/plans-and-billing/">{{ c.offer.docs }}</NuxtLink>
-            <NuxtLink :to="site.links.terms" external>{{ c.footer.terms }}</NuxtLink>
+            <NuxtLink :to="legal.terms" external>{{ c.footer.terms }}</NuxtLink>
           </p>
         </aside>
       </div>

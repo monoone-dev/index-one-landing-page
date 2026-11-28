@@ -65,7 +65,7 @@ const content: SiteContent = {
   hero: {
     githubAria: 'IndexOne na GitHubie',
     titleStrong: 'Każde spotkanie zapamiętane.',
-    titleSoft: 'Każde zdanie z dowodem.',
+    titleSoft: 'Notatki, które sprawdzisz w nagraniu.',
     subHtml: 'Nagrywaj <b>bez bota</b> i transkrybuj <b>na Macu</b>. Aby nagrać rozmówców, włącz dźwięk systemowy i zezwól na jego przechwytywanie w macOS. Za darmo na Macu. W przestrzeni «Na tym Macu» nagranie może trwać do 4 godzin.',
     download: 'Pobierz na Maca za darmo',
     signup: 'Załóż darmowe konto',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Słyszy obie strony rozmowy',
-          body: 'Twój mikrofon i dźwięk pozostałych uczestników są nagrywane jako dwa strumienie i transkrybowane na Twoim Macu przez Whisper.',
+          body: 'Nagrywa Twój mikrofon, a przy włączonym przechwytywaniu dźwięku systemowego i udzielonym uprawnieniu w macOS także rozmówców z Zooma, Teams, Google Meet i innych aplikacji. Wymaga Maca z Apple Silicon (macOS 13.4+). Po pobraniu modeli mowy możesz nagrywać i transkrybować na Macu bez internetu w przestrzeni «Na tym Macu».',
           link: 'Nagrywanie i transkrypcja',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Dowód prowadzi do nagrania',
-        body: 'Każda poparta linijka notatki prowadzi do sekundy nagrania, z której pochodzi, razem z mówcą. Linijki bez pokrycia nie dostają dowodu, więc widzisz, które linijki mają prawdopodobne źródło w nagraniu.',
+        body: 'Na Macu, gdy nagranie jest dostępne, wybierz wpis na karcie «Dowody» pod notatką. IndexOne otworzy zakładkę «Dźwięk» i podświetli prawdopodobny fragment transkrypcji. Etykietę mówcy zobaczysz, gdy jest dostępna.',
         link: 'Dowody',
       },
       'security': {
@@ -279,7 +279,7 @@ const content: SiteContent = {
       'imports': {
         eyebrow: 'Importy',
         title: 'Przenieś swoje dotychczasowe notatki',
-        body: 'Settings → Imports wczytuje <b>eksport z Notion</b>, <b>sejf Obsidian</b>, <b>Apple Notes</b>, folder <b>plików Markdown</b> albo <b>kopię zapasową IndexOne</b>. Całkowicie offline — bez konta, bez klucza, bez połączenia z siecią. Każdy import zaczyna się od próby na sucho, więc widzisz, co zostanie zapisane, zanim cokolwiek się zapisze.',
+        body: 'Settings → Imports wczytuje <b>eksport z Notion</b>, <b>sejf Obsidian</b>, <b>Apple Notes</b>, folder <b>plików Markdown</b> albo <b>kopię zapasową IndexOne</b>. Całkowicie offline — bez konta, bez klucza, bez połączenia z siecią. Import tych notatek zaczyna się od próby na sucho, więc widzisz, co zostanie zapisane, zanim cokolwiek się zapisze.<br><br>Na Macu możesz też wczytać obsługiwany plik transkryptu z Teams, Zooma lub Google Meet jako nowe spotkanie. Import może zachować czasy i etykiety mówców zapisane w pliku. Gdy plik nie zawiera czasów, aplikacja je szacuje. Po imporcie aplikacja próbuje wygenerować notatkę. Użycie AI w chmurze wymaga internetu. Formaty: VTT, SRT, TXT i obsługiwane eksporty DOCX.',
         points: [
           'Pięć źródeł: eksport z Notion, sejf Obsidian, Apple Notes, folder plików Markdown, kopia zapasowa IndexOne',
           'Najpierw próba na sucho — nic nie jest zapisywane, dopóki nie dasz znaku',
@@ -337,15 +337,15 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Dowody',
-        title: 'Twierdzenia oparte na rozmowie prowadzą do nagrania.',
-        body: 'Notatki IndexOne nie wymagają ślepego zaufania. Każda linijka oparta na tym, co faktycznie padło, ma swój dowód — kliknij, a przeskoczysz dokładnie do tej sekundy nagrania, z mówcą. Parafrazy i linijki bez pokrycia go nie dostają, więc od razu widzisz, które linijki mają prawdopodobne źródło w nagraniu.',
+        title: 'Dopasowane punkty wskazują prawdopodobne źródło.',
+        body: 'Na Macu, gdy nagranie jest dostępne, wybierz wpis na karcie «Dowody» pod notatką. IndexOne otworzy zakładkę «Dźwięk» i podświetli prawdopodobny fragment transkrypcji. Etykietę mówcy zobaczysz, gdy jest dostępna. Punkty bez odnośnika warto sprawdzić.',
         points: [
-          'Kliknij twierdzenie i usłysz, skąd dokładnie pochodzi',
-          'Przy każdym dowodzie: kto mówił i w której dokładnie sekundzie',
+          'Na Macu: prawdopodobne źródło podświetlone w transkrypcji',
+          'Czas źródła i etykieta mówcy, gdy jest dostępna',
           'Siedem gotowych dokumentów z każdego spotkania jednym kliknięciem — e-mail z podsumowaniem, rejestr decyzji, zgłoszenie, podsumowanie 1:1, standup, podsumowanie sprzedażowe, notatki z rekrutacji',
           'Zapieczętowane foldery nigdy nie zdradzają czasu ani mówcy',
         ],
-        alt: 'Dowody wygenerowanej notatki: jeden wiersz na każde poparte twierdzenie, z mówcą i sekundą nagrania, z której pochodzi',
+        alt: 'Lista dowodów z czasami nagrania i widocznymi etykietami mówców',
       },
       'markdown': {
         eyebrow: 'Na własność',

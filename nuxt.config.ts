@@ -42,14 +42,9 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default',
     trailingSlash: true,
     locales,
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'index-one-locale',
-      cookieCrossOrigin: false,
-      redirectOn: 'all',
-      alwaysRedirect: false,
-      fallbackLocale: 'en',
-    },
+    // The module would record every visited page as the visitor's choice and redirect by it. The
+    // site does this itself: app/plugins/root-language.client.ts and the language menu.
+    detectBrowserLanguage: false,
   },
 
   colorMode: {
