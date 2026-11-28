@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Les preuves renvoient à l’audio',
-        body: 'Sur Mac, quand l’enregistrement est disponible, sélectionnez une preuve à côté d’un point de la note rapproché. IndexOne ouvre l’onglet de l’enregistrement et surligne le passage probable dans la transcription. L’étiquette de l’intervenant apparaît quand elle est disponible.',
+        body: 'Sur Mac, quand l’enregistrement est disponible, sélectionnez une entrée dans la carte « Preuves » sous la note. IndexOne ouvre l’onglet « Audio » et surligne le passage probable dans la transcription. L’étiquette de l’intervenant apparaît quand elle est disponible.',
         link: 'Les preuves',
       },
       'security': {
@@ -333,7 +333,7 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Preuves',
         title: 'Les points rapprochés indiquent leur source probable.',
-        body: 'Sur Mac, quand l’enregistrement est disponible, sélectionnez une preuve à côté d’un point de la note rapproché. IndexOne ouvre l’onglet de l’enregistrement et surligne le passage probable dans la transcription. L’étiquette de l’intervenant apparaît quand elle est disponible. Les points sans preuve méritent d’être vérifiés.',
+        body: 'Sur Mac, quand l’enregistrement est disponible, sélectionnez une entrée dans la carte « Preuves » sous la note. IndexOne ouvre l’onglet « Audio » et surligne le passage probable dans la transcription. L’étiquette de l’intervenant apparaît quand elle est disponible. Les points sans preuve méritent d’être vérifiés.',
         points: [
           'Sur Mac, la source probable surlignée dans la transcription',
           'Horodatage de la source et étiquette de l’intervenant, si disponible',

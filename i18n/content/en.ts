@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Receipts point back to the audio',
-        body: 'On Mac, when the recording is available, select a receipt next to a matched note point. IndexOne opens the recording tab and highlights the likely passage in the transcript. A speaker label appears when available.',
+        body: 'On Mac, when the recording is available, select an entry in the Receipts card below the note. IndexOne opens the Audio tab and highlights the likely passage in the transcript. A speaker label appears when available.',
         link: 'Receipts',
       },
       'security': {
@@ -333,7 +333,7 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Receipts',
         title: 'Matched points show their likely source.',
-        body: 'On Mac, when the recording is available, select a receipt next to a matched note point. IndexOne opens the recording tab and highlights the likely passage in the transcript. A speaker label appears when available. Points without a receipt are worth checking.',
+        body: 'On Mac, when the recording is available, select an entry in the Receipts card below the note. IndexOne opens the Audio tab and highlights the likely passage in the transcript. A speaker label appears when available. Points without a receipt are worth checking.',
         points: [
           'On Mac, the likely source highlighted in the transcript',
           'Source time and a speaker label when available',

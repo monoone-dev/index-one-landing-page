@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Dowód prowadzi do nagrania',
-        body: 'Na Macu, gdy nagranie jest dostępne, kliknij dowód przy dopasowanym punkcie notatki. Otworzy się zakładka z nagraniem i podświetli się prawdopodobny fragment transkrypcji. Etykieta mówcy pojawia się, gdy jest dostępna.',
+        body: 'Na Macu, gdy nagranie jest dostępne, wybierz wpis na karcie «Dowody» pod notatką. IndexOne otworzy zakładkę «Dźwięk» i podświetli prawdopodobny fragment transkrypcji. Etykietę mówcy zobaczysz, gdy jest dostępna.',
         link: 'Dowody',
       },
       'security': {
@@ -333,7 +333,7 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Dowody',
         title: 'Dopasowane punkty wskazują prawdopodobne źródło.',
-        body: 'Na Macu, gdy nagranie jest dostępne, kliknij dowód przy dopasowanym punkcie notatki. Otworzy się zakładka z nagraniem i podświetli się prawdopodobny fragment transkrypcji. Etykieta mówcy pojawia się, gdy jest dostępna. Punkty bez odnośnika warto sprawdzić.',
+        body: 'Na Macu, gdy nagranie jest dostępne, wybierz wpis na karcie «Dowody» pod notatką. IndexOne otworzy zakładkę «Dźwięk» i podświetli prawdopodobny fragment transkrypcji. Etykietę mówcy zobaczysz, gdy jest dostępna. Punkty bez odnośnika warto sprawdzić.',
         points: [
           'Na Macu: prawdopodobne źródło podświetlone w transkrypcji',
           'Czas źródła i etykieta mówcy, gdy jest dostępna',

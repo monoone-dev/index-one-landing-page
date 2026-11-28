@@ -1,6 +1,6 @@
 # IndexOne
 
-> IndexOne is a meeting notes app for macOS, made by MonoOne. IndexOne records your microphone without a bot. With system audio capture enabled and macOS permission granted, it can also record other participants. It transcribes the recording on your Mac in the On this Mac space, writes a structured note and lets you ask Ivy, its AI assistant, about your meetings. On Mac, when the recording is available, select a receipt next to a matched note point. IndexOne opens the recording tab and highlights the likely passage in the transcript. A speaker label appears when available. Optional cloud spaces open in any browser.
+> IndexOne is a meeting notes app for macOS, made by MonoOne. IndexOne records your microphone without a bot. With system audio capture enabled and macOS permission granted, it can also record other participants. It transcribes the recording on your Mac in the On this Mac space, writes a structured note and lets you ask Ivy, its AI assistant, about your meetings. On Mac, when the recording is available, select an entry in the Receipts card below the note. IndexOne opens the Audio tab and highlights the likely passage in the transcript. A speaker label appears when available. Optional cloud spaces open in any browser.
 
 Facts, as published on index-one.io:
 

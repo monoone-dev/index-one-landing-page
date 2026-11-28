@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Os recibos levam ao áudio',
-        body: 'No Mac, quando a gravação está disponível, selecione um recibo ao lado de um ponto da nota associado. O IndexOne abre a aba da gravação e destaca o trecho provável na transcrição. O rótulo de quem falou aparece quando está disponível.',
+        body: 'No Mac, quando a gravação está disponível, selecione um item no cartão «Recibos», abaixo da nota. O IndexOne abre a aba «Áudio» e destaca o trecho provável na transcrição. O rótulo de quem falou aparece quando está disponível.',
         link: 'Recibos',
       },
       'security': {
@@ -333,7 +333,7 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Recibos',
         title: 'Os pontos associados indicam a fonte provável.',
-        body: 'No Mac, quando a gravação está disponível, selecione um recibo ao lado de um ponto da nota associado. O IndexOne abre a aba da gravação e destaca o trecho provável na transcrição. O rótulo de quem falou aparece quando está disponível. Vale a pena conferir os pontos sem recibo.',
+        body: 'No Mac, quando a gravação está disponível, selecione um item no cartão «Recibos», abaixo da nota. O IndexOne abre a aba «Áudio» e destaca o trecho provável na transcrição. O rótulo de quem falou aparece quando está disponível. Vale a pena conferir os pontos sem recibo.',
         points: [
           'No Mac, a fonte provável destacada na transcrição',
           'Momento da fonte e rótulo de quem falou, quando disponível',

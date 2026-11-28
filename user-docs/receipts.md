@@ -4,7 +4,7 @@ description: Receipts link claims in a meeting note to their likely source in th
 keywords: receipts, citations, sources, claims, audio, speaker, timestamp, confidence, grounded, unsupported claims, trust
 ---
 
-A note is only useful if you can trust it. Receipts let you check: claims in a meeting note that can be traced to a specific part of the transcript get a receipt. On Mac, when the recording is available, select a receipt next to a matched note point. IndexOne opens the recording tab and highlights the likely passage in the transcript. A speaker label appears when available.
+A note is only useful if you can trust it. Receipts let you check: claims in a meeting note that can be traced to a specific part of the transcript get a receipt. On Mac, when the recording is available, select an entry in the **Receipts** card below the note. IndexOne opens the **Audio** tab and highlights the likely passage in the transcript. A speaker label appears when available.
 
 ![A meeting note with a Receipts list of claims, with recording times and visible speaker labels](shot:detail-receipts "Receipts with recording times and visible speaker labels")
 
@@ -16,7 +16,7 @@ Below a meeting's note, the **Receipts** card lists every claim IndexOne could m
 - a speaker label, such as **Me** or **Others**, when available,
 - the time in the recording.
 
-On Mac, when the recording is available, select a receipt next to a matched note point. IndexOne opens the recording tab and highlights the likely passage in the transcript. A speaker label appears when available.
+On Mac, when the recording is available, select an entry in the **Receipts** card below the note. IndexOne opens the **Audio** tab and highlights the likely passage in the transcript. A speaker label appears when available. For a meeting with a screen recording, that tab is called **Recording**.
 
 ## Reading a receipt
 

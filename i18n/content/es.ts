@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Los recibos llevan al audio',
-        body: 'En el Mac, cuando la grabación está disponible, selecciona un recibo junto a un punto de la nota asociado. IndexOne abre la pestaña de la grabación y resalta el fragmento probable en la transcripción. La etiqueta del hablante aparece cuando está disponible.',
+        body: 'En el Mac, cuando la grabación está disponible, selecciona una entrada de la tarjeta «Recibos», debajo de la nota. IndexOne abre la pestaña «Audio» y resalta el fragmento probable en la transcripción. La etiqueta del hablante aparece cuando está disponible.',
         link: 'Recibos',
       },
       'security': {
@@ -333,7 +333,7 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Recibos',
         title: 'Los puntos asociados señalan su fuente probable.',
-        body: 'En el Mac, cuando la grabación está disponible, selecciona un recibo junto a un punto de la nota asociado. IndexOne abre la pestaña de la grabación y resalta el fragmento probable en la transcripción. La etiqueta del hablante aparece cuando está disponible. Conviene comprobar los puntos sin recibo.',
+        body: 'En el Mac, cuando la grabación está disponible, selecciona una entrada de la tarjeta «Recibos», debajo de la nota. IndexOne abre la pestaña «Audio» y resalta el fragmento probable en la transcripción. La etiqueta del hablante aparece cuando está disponible. Conviene comprobar los puntos sin recibo.',
         points: [
           'En el Mac, la fuente probable resaltada en la transcripción',
           'Momento de la fuente y etiqueta del hablante, cuando está disponible',

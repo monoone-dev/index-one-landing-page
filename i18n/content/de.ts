@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Belege führen zurück zur Aufnahme',
-        body: 'Auf dem Mac wählst du, wenn die Aufnahme verfügbar ist, einen Beleg neben einem zugeordneten Notizpunkt aus. IndexOne öffnet den Tab mit der Aufnahme und markiert die wahrscheinliche Stelle im Transkript. Eine Sprecherangabe erscheint, wenn sie verfügbar ist.',
+        body: 'Auf dem Mac wählst du, wenn die Aufnahme verfügbar ist, einen Eintrag auf der Karte „Belege“ unter der Notiz aus. IndexOne öffnet den Tab „Audio“ und markiert die wahrscheinliche Stelle im Transkript. Eine Sprecherangabe erscheint, wenn sie verfügbar ist.',
         link: 'Belege',
       },
       'security': {
@@ -333,7 +333,7 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Belege',
         title: 'Zugeordnete Punkte zeigen ihre wahrscheinliche Quelle.',
-        body: 'Auf dem Mac wählst du, wenn die Aufnahme verfügbar ist, einen Beleg neben einem zugeordneten Notizpunkt aus. IndexOne öffnet den Tab mit der Aufnahme und markiert die wahrscheinliche Stelle im Transkript. Eine Sprecherangabe erscheint, wenn sie verfügbar ist. Punkte ohne Beleg solltest du selbst prüfen.',
+        body: 'Auf dem Mac wählst du, wenn die Aufnahme verfügbar ist, einen Eintrag auf der Karte „Belege“ unter der Notiz aus. IndexOne öffnet den Tab „Audio“ und markiert die wahrscheinliche Stelle im Transkript. Eine Sprecherangabe erscheint, wenn sie verfügbar ist. Punkte ohne Beleg solltest du selbst prüfen.',
         points: [
           'Auf dem Mac: die wahrscheinliche Quelle, im Transkript markiert',
           'Zeitpunkt der Quelle und Sprecherangabe, wenn verfügbar',

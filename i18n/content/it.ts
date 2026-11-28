@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Le prove riportano all’audio',
-        body: 'Sul Mac, quando la registrazione è disponibile, seleziona una prova accanto a un punto della nota abbinato. IndexOne apre la scheda della registrazione ed evidenzia il passaggio probabile nella trascrizione. L’etichetta dell’interlocutore compare quando è disponibile.',
+        body: 'Sul Mac, quando la registrazione è disponibile, seleziona una voce nel riquadro «Prove» sotto la nota. IndexOne apre la scheda «Audio» ed evidenzia il passaggio probabile nella trascrizione. L’etichetta dell’interlocutore compare quando è disponibile.',
         link: 'Le prove',
       },
       'security': {
@@ -333,7 +333,7 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Prove',
         title: 'I punti abbinati indicano la fonte probabile.',
-        body: 'Sul Mac, quando la registrazione è disponibile, seleziona una prova accanto a un punto della nota abbinato. IndexOne apre la scheda della registrazione ed evidenzia il passaggio probabile nella trascrizione. L’etichetta dell’interlocutore compare quando è disponibile. Vale la pena controllare i punti senza prova.',
+        body: 'Sul Mac, quando la registrazione è disponibile, seleziona una voce nel riquadro «Prove» sotto la nota. IndexOne apre la scheda «Audio» ed evidenzia il passaggio probabile nella trascrizione. L’etichetta dell’interlocutore compare quando è disponibile. Vale la pena controllare i punti senza prova.',
         points: [
           'Sul Mac, la fonte probabile evidenziata nella trascrizione',
           'Momento della fonte ed etichetta dell’interlocutore, quando disponibile',
