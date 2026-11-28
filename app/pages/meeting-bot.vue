@@ -3,8 +3,8 @@ import type { MeetingBotCardId, MeetingBotRightId } from '~~/i18n/content/types'
 
 const c = useContent()
 
-// The IndexOne privacy policy (Polish only). It names the provider, the contact and how long data is kept.
-const policyUrl = 'https://app.index-one.io/legal/polityka-prywatnosci.html'
+// The IndexOne privacy policy names the provider, the contact and how long data is kept.
+const legal = useLegalDocs()
 
 // The fixed chat notice the bot posts after it is admitted (meet-chat-notice-v1). Shown verbatim, in English,
 // so a participant recognizes the message that brought them here.
@@ -54,7 +54,7 @@ usePageSeo({
             <span class="card__icon" aria-hidden="true"><UIcon :name="card.icon" /></span>
             <h2 class="card__title">{{ c.meetingBot.cards[card.id].title }}</h2>
             <p>{{ c.meetingBot.cards[card.id].body }}</p>
-            <a v-if="card.id === 'storage' || card.id === 'processor'" class="card__link" :href="policyUrl" hreflang="pl">
+            <a v-if="card.id === 'storage' || card.id === 'processor'" class="card__link" :href="legal.privacy" :hreflang="legal.lang">
               {{ c.meetingBot.policyLink }}
               <UIcon name="i-lucide-arrow-up-right" aria-hidden="true" />
             </a>
@@ -85,7 +85,7 @@ usePageSeo({
               <div>
                 <h4>{{ step.title }}</h4>
                 <p>{{ step.body }}</p>
-                <a v-if="index === 2" class="card__link" :href="policyUrl" hreflang="pl">
+                <a v-if="index === 2" class="card__link" :href="legal.privacy" :hreflang="legal.lang">
                   {{ c.meetingBot.policyLink }}
                   <UIcon name="i-lucide-arrow-up-right" aria-hidden="true" />
                 </a>

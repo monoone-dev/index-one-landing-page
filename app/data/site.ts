@@ -24,9 +24,8 @@ export const site = {
     web: 'https://app.index-one.io/',
     /** Anyone can create an account with an email address on the web app's sign-in page. */
     signup: 'https://app.index-one.io/login',
-    /** The legal documents are published by the web app, in Polish only. */
+    /** The web app publishes the legal documents in Polish (binding) and English: `useLegalDocs`. */
     legal: 'https://app.index-one.io/legal/',
-    terms: 'https://app.index-one.io/legal/regulamin.html',
     /** The DMG itself, not the release page with its five files (same URL pattern as the Homebrew cask). */
     download: `${repo}/releases/download/v${version}/IndexOne-${version}.dmg`,
     /** The release page, for the checksums and the other files. */

@@ -196,8 +196,9 @@ The website is a [Nuxt](https://nuxt.com) 4 app in TypeScript with [Nuxt UI](htt
 [Nuxt i18n](https://i18n.nuxtjs.org) and SCSS, generated to static HTML so every word is in the
 served markup. It is published in English (`/`), Polish (`/pl/`), Spanish (`/es/`), Italian
 (`/it/`), French (`/fr/`), Portuguese (`/pt/`), German (`/de/`), Simplified Chinese (`/zh/`) and
-Japanese (`/ja/`); the first visit follows the
-browser's language and the choice is kept in a first-party cookie. The colour mode follows the
+Japanese (`/ja/`). A page opens in the language of
+its address; only the bare home page address follows the language picked in the menu, otherwise the
+browser's. The picked language is kept in a first-party cookie. The colour mode follows the
 system until the visitor picks one.
 
 ```bash

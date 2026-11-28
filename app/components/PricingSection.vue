@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { plans } from '~/data/shared'
-import { site } from '~/data/site'
 import catalog from '~/data/billing-catalog.v1.json'
 import type { PlanId } from '~~/i18n/content/types'
 
@@ -14,6 +13,7 @@ const sub = computed(() => props.level === 1 ? 'h2' : 'h3')
 const c = useContent()
 const to = useLocalLink()
 const { locale } = useI18n()
+const legal = useLegalDocs()
 
 // Every amount, allowance and seat minimum comes from the billing catalog. A plan missing from it
 // must stop the build, never render as a price of zero.
@@ -125,7 +125,7 @@ const rows = computed(() => {
       <!-- Unlimited cloud transcription is always shown with fair use; the Free allowance is only in the Terms. -->
       <p class="pricing__note">
         {{ c.offer.fairUse }}
-        <a :href="site.links.terms" target="_blank" rel="noopener" class="pricing__more">{{ c.offer.fairUseLink }}<UIcon name="i-lucide-arrow-up-right" /></a>
+        <a :href="legal.terms" target="_blank" rel="noopener" class="pricing__more">{{ c.offer.fairUseLink }}<UIcon name="i-lucide-arrow-up-right" /></a>
       </p>
       <p class="pricing__note">
         {{ note }}
@@ -165,7 +165,7 @@ const rows = computed(() => {
           <p class="details__links">
             <NuxtLink :to="to('/privacy')">{{ c.nav.privacy }}</NuxtLink>
             <NuxtLink to="/docs/plans-and-billing/">{{ c.offer.docs }}</NuxtLink>
-            <NuxtLink :to="site.links.terms" external>{{ c.footer.terms }}</NuxtLink>
+            <NuxtLink :to="legal.terms" external>{{ c.footer.terms }}</NuxtLink>
           </p>
         </aside>
       </template>
