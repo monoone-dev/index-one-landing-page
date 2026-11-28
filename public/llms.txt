@@ -1,12 +1,12 @@
 # IndexOne
 
-> IndexOne is a meeting notes app for macOS, made by MonoOne. It records both sides of a call without a bot joining the meeting, transcribes it on your Mac in the On this Mac space, writes a structured note and lets you ask Ivy, its AI assistant, about your meetings. Matched note points show the likely source. When the recording is available, select a receipt to play that part. A speaker label appears when available. Optional cloud spaces open in any browser.
+> IndexOne is a meeting notes app for macOS, made by MonoOne. IndexOne records your microphone without a bot. With system audio capture enabled, it can also record other participants. It transcribes the recording on your Mac in the On this Mac space, writes a structured note and lets you ask Ivy, its AI assistant, about your meetings. Matched note points show the likely source. When the recording is available, selecting a receipt opens the recording tab and highlights that passage in the transcript. A speaker label appears when available. Optional cloud spaces open in any browser.
 
 Facts, as published on index-one.io:
 
 - Platform: macOS 13.4 or later, Apple Silicon only (M1 or later). Intel Macs and Windows can use the web app at https://app.index-one.io/. An iPhone app is coming to the App Store.
 - Price: the Mac app is free, with no account needed. Cloud plans are sold in the web app, priced in PLN: Free (0 PLN), Personal (49 PLN a month, tax included) and Team (75 PLN net per seat a month, from two seats).
-- Cloud transcription on paid plans: unlimited under fair use; heavy use may take longer. Transcription on the Mac has no limit.
+- Personal and Team include cloud transcription, subject to plan limits. On-device transcription is not subject to plan quotas. Each recording can last up to four hours.
 - Privacy: in the On this Mac space, recording, transcription, search and Ivy on this Mac run without a network once the models are downloaded. Cloud spaces in an IndexOne account are not end-to-end encrypted. Claude Code and Codex send redacted text to their provider only after consent.
 - Local AI: Ivy on this Mac (Bielik or Qwen models) or your own local AI server such as Ollama or LM Studio.
 - Agents: a read-only MCP server, off until you turn it on, listens only on 127.0.0.1 and lets AI apps on your Mac read the workspaces you choose; meetings in locked folders stay hidden. What an AI app reads is sent to that app's own model provider.

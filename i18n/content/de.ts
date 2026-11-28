@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne auf GitHub',
     titleStrong: 'Jedes Meeting im Gedächtnis.',
     titleSoft: 'Notizen, an der Aufnahme prüfbar.',
-    subHtml: 'IndexOne nimmt beide Seiten des Calls <b>auf deinem Mac ohne Bot</b> auf, transkribiert ihn <b>auf deinem Mac</b> und lässt dich Ivy fragen – mitten im Meeting oder Monate später. Zugeordnete Notizpunkte zeigen die wahrscheinliche Quelle. Kostenlos auf dem Mac. Die lokale Transkription auf deinem Mac unterliegt keinen Kontingenten deines Tarifs. Jede Aufnahme kann bis zu vier Stunden dauern. Deine Cloud-Bereiche öffnen sich in jedem Browser.',
+    subHtml: 'Nimm <b>ohne Bot</b> auf und transkribiere <b>auf deinem Mac</b>. Um die anderen Teilnehmenden aufzunehmen, aktiviere die Systemaudio-Erfassung. Kostenlos auf dem Mac, bis zu vier Stunden pro Aufnahme.',
     download: 'Für Mac laden – kostenlos',
     signup: 'Kostenloses Konto erstellen',
     note: 'Apple Silicon (M1 oder neuer) · macOS 13.4+ · signiert und notarisiert · auf dem Mac kein Konto nötig',
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Belege führen zurück zur Aufnahme',
-        body: 'Zugeordnete Notizpunkte zeigen die wahrscheinliche Quelle. Ist die Aufnahme verfügbar, wähle einen Beleg, um diese Stelle zu hören. Eine Sprecherangabe erscheint, wenn sie verfügbar ist.',
+        body: 'Zugeordnete Notizpunkte zeigen die wahrscheinliche Quelle. Ist die Aufnahme verfügbar, wähle einen Beleg, um diese Stelle im Transkript markiert zu sehen. Eine Sprecherangabe erscheint, wenn sie verfügbar ist.',
         link: 'Belege',
       },
       'security': {
@@ -333,9 +333,9 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Belege',
         title: 'Zugeordnete Punkte zeigen ihre wahrscheinliche Quelle.',
-        body: 'Zugeordnete Notizpunkte zeigen die wahrscheinliche Quelle. Ist die Aufnahme verfügbar, wähle einen Beleg, um diese Stelle zu hören. Eine Sprecherangabe erscheint, wenn sie verfügbar ist. Punkte ohne Beleg solltest du selbst prüfen.',
+        body: 'Ist die Aufnahme verfügbar, öffnet die Auswahl des Belegs eines zugeordneten Notizpunkts den Tab mit der Aufnahme und markiert die wahrscheinliche Stelle im Transkript. Eine Sprecherangabe erscheint, wenn sie verfügbar ist. Punkte ohne Beleg solltest du selbst prüfen.',
         points: [
-          'Die wahrscheinliche Quelle anhören, wenn die Aufnahme verfügbar ist',
+          'Wahrscheinliche Quelle, im Transkript markiert',
           'Zeitpunkt der Quelle und Sprecherangabe, wenn verfügbar',
           'Sieben Ein-Klick-Ergebnisse aus jedem Meeting – Follow-up-Mail, Entscheidungsprotokoll, Ticket, 1:1-Rückblick, Standup, Sales-Rückblick, Interview-Notizen',
           'Versiegelte Ordner verraten nie Zeitpunkte oder Sprecher',

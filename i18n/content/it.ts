@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne su GitHub',
     titleStrong: 'Ogni riunione ricordata.',
     titleSoft: 'Note che puoi verificare nella registrazione.',
-    subHtml: 'IndexOne registra entrambi i lati della call <b>sul tuo Mac senza bot</b>, la trascrive <b>sul tuo Mac</b> e ti permette di chiedere a Ivy — durante la riunione o mesi dopo. I punti della nota abbinati indicano la fonte probabile. Gratis sul Mac. La trascrizione sul dispositivo non è soggetta alle quote del piano. Ogni registrazione può durare fino a quattro ore. I tuoi spazi cloud si aprono in qualsiasi browser.',
+    subHtml: 'Registra <b>senza bot</b> e trascrivi <b>sul tuo Mac</b>. Per registrare gli altri partecipanti, attiva la cattura dell’audio di sistema. Gratis sul Mac, fino a quattro ore per registrazione.',
     download: 'Scarica per Mac — gratis',
     signup: 'Crea un account gratuito',
     note: 'Apple Silicon (M1 o successivi) · macOS 13.4+ · firmata e notarizzata · nessun account necessario sul Mac',
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Le prove riportano all’audio',
-        body: 'I punti della nota abbinati indicano la fonte probabile. Quando la registrazione è disponibile, seleziona una prova per ascoltare quel passaggio. L’etichetta dell’interlocutore compare quando è disponibile.',
+        body: 'I punti della nota abbinati indicano la fonte probabile. Quando la registrazione è disponibile, seleziona una prova per vedere quel passaggio evidenziato nella trascrizione. L’etichetta dell’interlocutore compare quando è disponibile.',
         link: 'Le prove',
       },
       'security': {
@@ -333,9 +333,9 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Prove',
         title: 'I punti abbinati indicano la fonte probabile.',
-        body: 'I punti della nota abbinati indicano la fonte probabile. Quando la registrazione è disponibile, seleziona una prova per ascoltare quel passaggio. L’etichetta dell’interlocutore compare quando è disponibile. Vale la pena controllare i punti senza prova.',
+        body: 'Quando la registrazione è disponibile, selezionando la prova di un punto della nota abbinato si apre la scheda della registrazione e si evidenzia il passaggio probabile nella trascrizione. L’etichetta dell’interlocutore compare quando è disponibile. Vale la pena controllare i punti senza prova.',
         points: [
-          'Ascolta la fonte probabile quando la registrazione è disponibile',
+          'La fonte probabile, evidenziata nella trascrizione',
           'Momento della fonte ed etichetta dell’interlocutore, quando disponibile',
           'Sette documenti con un clic da qualsiasi riunione: email di follow-up, registro delle decisioni, ticket di lavoro, riepilogo 1:1, standup, riepilogo commerciale, note di colloquio',
           'Le cartelle sigillate non rivelano mai tempi né interlocutori',

@@ -1,22 +1,22 @@
 ---
 title: Receipts
-description: Receipts link the claims in a meeting note to the moment in the recording they came from, with the speaker, the time and how clear the audio was.
-keywords: receipts, citations, sources, claims, audio, jump to moment, speaker, timestamp, confidence, grounded, unsupported claims, trust
+description: Receipts link claims in a meeting note to their likely source in the transcript, with the time and, when available, a speaker label and audio clarity.
+keywords: receipts, citations, sources, claims, audio, speaker, timestamp, confidence, grounded, unsupported claims, trust
 ---
 
-A note is only useful if you can trust it. Receipts let you check: claims in a meeting note that can be traced to a specific part of the transcript get a receipt, and one click plays the recording from that moment.
+A note is only useful if you can trust it. Receipts let you check: claims in a meeting note that can be traced to a specific part of the transcript get a receipt. Click it to open the recording tab with the likely passage highlighted in the transcript.
 
 ![A meeting note with a Receipts list of claims, each with a speaker badge and a time](shot:detail-receipts "Each receipt shows the claim, who said it and when")
 
 ## Where receipts appear
 
-Below a meeting's note, the **Receipts** card lists every claim IndexOne could match to the audio, with a count and the hint "Jump to the likely source in the audio". Each row shows:
+Below a meeting's note, the **Receipts** card lists every claim IndexOne could match to the audio, with a count. Each row shows:
 
 - the claim, shortened to one line,
 - the speaker, such as **Me** or **Others**,
 - the time in the recording.
 
-Click a row and IndexOne seeks the recording to that moment, so you can hear it for yourself instead of searching through the whole meeting.
+Click a row and IndexOne opens the recording tab and highlights the likely passage in the transcript.
 
 ## Reading a receipt
 
@@ -26,7 +26,7 @@ A receipt points to the *likely* source: the part of the transcript that best ma
 
 ## Receipts elsewhere
 
-- **People and projects.** In a person's or project's details in the graph, the change history links each entry to its source meeting, and opens the recording at the moment when a receipt matches. See [Graph, people and analytics](/docs/graph-and-analytics/).
+- **People and projects.** A person's or project's details in the graph include a change history. Each entry links to its source meeting. See [Graph, people and analytics](/docs/graph-and-analytics/).
 - **Ask Ivy.** Answers list their **Sources**, the meetings and notes they came from. See [Meet Ivy](/docs/ivy/).
 
 ## Flag unsupported claims

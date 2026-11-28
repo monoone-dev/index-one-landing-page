@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne no GitHub',
     titleStrong: 'Cada reunião lembrada.',
     titleSoft: 'Notas que você confere na gravação.',
-    subHtml: 'O IndexOne grava os dois lados da chamada <b>no seu Mac sem bot</b>, transcreve <b>no seu Mac</b> e deixa você perguntar à Ivy — no meio da reunião ou meses depois. Os pontos da nota associados indicam a fonte provável. Grátis no Mac. A transcrição no dispositivo não está sujeita às cotas do plano. Cada gravação pode durar até quatro horas. Seus espaços na nuvem abrem em qualquer navegador.',
+    subHtml: 'Grave <b>sem bot</b> e transcreva <b>no seu Mac</b>. Para gravar as outras pessoas, ative a captura do áudio do sistema. Grátis no Mac, até quatro horas por gravação.',
     download: 'Baixar para Mac — grátis',
     signup: 'Criar uma conta gratuita',
     note: 'Apple Silicon (M1 ou posterior) · macOS 13.4+ · assinado e notarizado · sem necessidade de conta no Mac',
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Os recibos levam ao áudio',
-        body: 'Os pontos da nota associados indicam a fonte provável. Quando a gravação está disponível, selecione um recibo para ouvir esse trecho. O rótulo de quem falou aparece quando está disponível.',
+        body: 'Os pontos da nota associados indicam a fonte provável. Quando a gravação está disponível, selecione um recibo para ver esse trecho destacado na transcrição. O rótulo de quem falou aparece quando está disponível.',
         link: 'Recibos',
       },
       'security': {
@@ -333,9 +333,9 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Recibos',
         title: 'Os pontos associados indicam a fonte provável.',
-        body: 'Os pontos da nota associados indicam a fonte provável. Quando a gravação está disponível, selecione um recibo para ouvir esse trecho. O rótulo de quem falou aparece quando está disponível. Vale a pena conferir os pontos sem recibo.',
+        body: 'Quando a gravação está disponível, selecionar o recibo de um ponto da nota associado abre a aba da gravação e destaca o trecho provável na transcrição. O rótulo de quem falou aparece quando está disponível. Vale a pena conferir os pontos sem recibo.',
         points: [
-          'Ouça a fonte provável quando a gravação está disponível',
+          'A fonte provável, destacada na transcrição',
           'Momento da fonte e rótulo de quem falou, quando disponível',
           'Sete documentos com um clique a partir de qualquer reunião — e-mail de follow-up, registro de decisões, ticket de trabalho, resumo de 1:1, standup, resumo de vendas, notas de entrevista',
           'Pastas seladas nunca vazam horários nem quem falou',

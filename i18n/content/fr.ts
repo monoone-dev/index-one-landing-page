@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne sur GitHub',
     titleStrong: 'Chaque réunion en mémoire.',
     titleSoft: 'Des notes vérifiables sur l’enregistrement.',
-    subHtml: 'IndexOne enregistre les deux côtés de l’appel <b>sur votre Mac sans bot</b>, le transcrit <b>sur votre Mac</b> et vous laisse interroger Ivy — en pleine réunion ou des mois plus tard. Les points de la note rapprochés indiquent la source probable. Gratuit sur Mac. La transcription sur l’appareil n’est pas soumise aux quotas de l’offre. Chaque enregistrement peut durer jusqu’à quatre heures. Vos espaces cloud s’ouvrent dans n’importe quel navigateur.',
+    subHtml: 'Enregistrez <b>sans bot</b> et transcrivez <b>sur votre Mac</b>. Pour enregistrer vos interlocuteurs, activez la capture du son système. Gratuit sur Mac, jusqu’à quatre heures par enregistrement.',
     download: 'Télécharger pour Mac — gratuit',
     signup: 'Créer un compte gratuit',
     note: 'Apple Silicon (M1 ou plus récent) · macOS 13.4+ · signée et notariée · aucun compte nécessaire sur Mac',
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Les preuves renvoient à l’audio',
-        body: 'Les points de la note rapprochés indiquent la source probable. Quand l’enregistrement est disponible, sélectionnez une preuve pour écouter ce passage. L’étiquette de l’intervenant apparaît quand elle est disponible.',
+        body: 'Les points de la note rapprochés indiquent la source probable. Quand l’enregistrement est disponible, sélectionnez une preuve pour voir ce passage surligné dans la transcription. L’étiquette de l’intervenant apparaît quand elle est disponible.',
         link: 'Les preuves',
       },
       'security': {
@@ -333,9 +333,9 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Preuves',
         title: 'Les points rapprochés indiquent leur source probable.',
-        body: 'Les points de la note rapprochés indiquent la source probable. Quand l’enregistrement est disponible, sélectionnez une preuve pour écouter ce passage. L’étiquette de l’intervenant apparaît quand elle est disponible. Les points sans preuve méritent d’être vérifiés.',
+        body: 'Quand l’enregistrement est disponible, sélectionner la preuve d’un point de la note rapproché ouvre l’onglet de l’enregistrement et surligne le passage probable dans la transcription. L’étiquette de l’intervenant apparaît quand elle est disponible. Les points sans preuve méritent d’être vérifiés.',
         points: [
-          'Écoute de la source probable quand l’enregistrement est disponible',
+          'La source probable, surlignée dans la transcription',
           'Horodatage de la source et étiquette de l’intervenant, si disponible',
           'Sept documents en un clic à partir de n’importe quelle réunion — e-mail de suivi, journal des décisions, ticket, compte rendu de 1:1, standup, récap commercial, notes d’entretien',
           'Les dossiers scellés ne laissent jamais fuiter ni horodatage ni intervenant',

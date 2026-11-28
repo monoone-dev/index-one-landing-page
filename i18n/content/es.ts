@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne en GitHub',
     titleStrong: 'Cada reunión recordada.',
     titleSoft: 'Notas que puedes comprobar en la grabación.',
-    subHtml: 'IndexOne graba ambos lados de la llamada <b>en tu Mac sin bot</b>, la transcribe <b>en tu Mac</b> y te deja preguntarle a Ivy, en plena reunión o meses después. Los puntos de la nota asociados señalan la fuente probable. Gratis en el Mac. La transcripción en el dispositivo no está sujeta a las cuotas del plan. Cada grabación puede durar hasta cuatro horas. Tus espacios en la nube se abren en cualquier navegador.',
+    subHtml: 'Graba <b>sin bot</b> y transcribe <b>en tu Mac</b>. Para grabar a las demás personas, activa la captura del audio del sistema. Gratis en el Mac, hasta cuatro horas por grabación.',
     download: 'Descargar para Mac — gratis',
     signup: 'Crear una cuenta gratuita',
     note: 'Apple Silicon (M1 o posterior) · macOS 13.4+ · firmada y notarizada · sin necesidad de cuenta en el Mac',
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Los recibos llevan al audio',
-        body: 'Los puntos de la nota asociados señalan la fuente probable. Cuando la grabación está disponible, selecciona un recibo para escuchar ese fragmento. La etiqueta del hablante aparece cuando está disponible.',
+        body: 'Los puntos de la nota asociados señalan la fuente probable. Cuando la grabación está disponible, selecciona un recibo para ver ese fragmento resaltado en la transcripción. La etiqueta del hablante aparece cuando está disponible.',
         link: 'Recibos',
       },
       'security': {
@@ -333,9 +333,9 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Recibos',
         title: 'Los puntos asociados señalan su fuente probable.',
-        body: 'Los puntos de la nota asociados señalan la fuente probable. Cuando la grabación está disponible, selecciona un recibo para escuchar ese fragmento. La etiqueta del hablante aparece cuando está disponible. Conviene comprobar los puntos sin recibo.',
+        body: 'Cuando la grabación está disponible, al seleccionar el recibo de un punto de la nota asociado se abre la pestaña de la grabación y se resalta el fragmento probable en la transcripción. La etiqueta del hablante aparece cuando está disponible. Conviene comprobar los puntos sin recibo.',
         points: [
-          'Escucha la fuente probable cuando la grabación está disponible',
+          'La fuente probable, resaltada en la transcripción',
           'Momento de la fuente y etiqueta del hablante, cuando está disponible',
           'Siete documentos en un clic a partir de cualquier reunión: correo de seguimiento, registro de decisiones, ticket de trabajo, resumen de 1:1, standup, resumen de ventas y notas de entrevista',
           'Las carpetas selladas nunca revelan tiempos ni hablantes',

@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne na GitHubie',
     titleStrong: 'Każde spotkanie zapamiętane.',
     titleSoft: 'Notatki, które sprawdzisz w nagraniu.',
-    subHtml: 'IndexOne nagrywa obie strony rozmowy <b>na Macu bez bota</b>, transkrybuje je <b>na urządzeniu</b> i pozwala zapytać Ivy — w trakcie spotkania albo pół roku później. Punkty dopasowane do nagrania wskazują jego prawdopodobny fragment. Za darmo na Macu. Lokalna transkrypcja nie podlega limitom planu. Pojedyncze nagranie trwa do 4 godzin. Przestrzenie w chmurze otworzysz w każdej przeglądarce.',
+    subHtml: 'Nagrywaj <b>bez bota</b> i transkrybuj <b>na Macu</b>. Aby nagrać rozmówców, włącz przechwytywanie dźwięku systemowego. Za darmo na Macu, do 4 godzin na nagranie.',
     download: 'Pobierz na Maca za darmo',
     signup: 'Załóż darmowe konto',
     note: 'Apple Silicon (M1 lub nowszy) · macOS 13.4+ · podpisany i notaryzowany · na Macu bez zakładania konta',
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Dowód prowadzi do nagrania',
-        body: 'Punkty dopasowane do nagrania wskazują jego prawdopodobny fragment. Gdy nagranie jest dostępne, kliknij dowód, aby odsłuchać fragment. Gdy etykieta mówcy jest dostępna, aplikacja ją pokazuje.',
+        body: 'Punkty dopasowane do nagrania wskazują jego prawdopodobny fragment. Gdy nagranie jest dostępne, kliknij dowód, aby zobaczyć ten fragment podświetlony w transkrypcji. Gdy etykieta mówcy jest dostępna, aplikacja ją pokazuje.',
         link: 'Dowody',
       },
       'security': {
@@ -333,9 +333,9 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Dowody',
         title: 'Dopasowane punkty wskazują prawdopodobne źródło.',
-        body: 'Punkty dopasowane do nagrania wskazują jego prawdopodobny fragment. Gdy nagranie jest dostępne, kliknij dowód, aby odsłuchać fragment. Gdy etykieta mówcy jest dostępna, aplikacja ją pokazuje. Punkty bez odnośnika warto sprawdzić.',
+        body: 'Gdy nagranie jest dostępne, kliknięcie dowodu przy dopasowanym punkcie notatki otwiera zakładkę z nagraniem i podświetla prawdopodobny fragment transkrypcji. Aplikacja pokazuje etykietę mówcy, gdy jest dostępna. Punkty bez odnośnika warto sprawdzić.',
         points: [
-          'Odsłuch prawdopodobnego źródła, gdy nagranie jest dostępne',
+          'Prawdopodobne źródło podświetlone w transkrypcji',
           'Czas źródła i etykieta mówcy, gdy jest dostępna',
           'Siedem gotowych dokumentów z każdego spotkania jednym kliknięciem — e-mail z podsumowaniem, rejestr decyzji, zgłoszenie, podsumowanie 1:1, standup, podsumowanie sprzedażowe, notatki z rekrutacji',
           'Zapieczętowane foldery nigdy nie zdradzają czasu ani mówcy',
