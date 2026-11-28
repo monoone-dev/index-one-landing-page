@@ -65,8 +65,8 @@ const content: SiteContent = {
   hero: {
     githubAria: 'IndexOne en GitHub',
     titleStrong: 'Cada reunión recordada.',
-    titleSoft: 'Cada frase con pruebas.',
-    subHtml: 'IndexOne graba ambos lados de la llamada <b>en tu Mac sin bot</b>, la transcribe <b>en tu Mac</b> y te deja preguntarle a Ivy —en plena reunión o meses después— con un enlace al segundo en que se dijo. Gratis en el Mac, sin límite de minutos ni de historial. Tus espacios en la nube se abren en cualquier navegador.',
+    titleSoft: 'Notas que puedes comprobar en la grabación.',
+    subHtml: 'IndexOne graba ambos lados de la llamada <b>en tu Mac sin bot</b>, la transcribe <b>en tu Mac</b> y te deja preguntarle a Ivy, en plena reunión o meses después. Los puntos de la nota que se asocian a la grabación enlazan con el momento probable. Gratis en el Mac, sin límite de minutos ni de historial. Tus espacios en la nube se abren en cualquier navegador.',
     download: 'Descargar para Mac — gratis',
     signup: 'Crear una cuenta gratuita',
     note: 'Apple Silicon (M1 o posterior) · macOS 13.4+ · firmada y notarizada · sin necesidad de cuenta en el Mac',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Escucha a ambos lados de la llamada',
-          body: 'Tu micrófono y el audio de los demás participantes se graban como dos pistas y Whisper los transcribe en tu Mac.',
+          body: 'Graba el audio de llamadas de Zoom, Teams, Meet y otras apps en un Mac con Apple Silicon (macOS 13.4+). Tu micrófono y el audio de los demás participantes se graban como dos pistas y Whisper los transcribe en tu Mac. Una vez descargados los modelos de voz, la grabación y la transcripción en tu Mac funcionan sin internet.',
           link: 'Captura y transcripción',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Los recibos llevan al audio',
-        body: 'Cada línea fundamentada de una nota enlaza con el segundo exacto del audio del que procede, con el hablante. Las líneas sin pruebas no llevan recibo, así ves qué líneas tienen una fuente probable en la grabación.',
+        body: 'Las líneas que IndexOne puede asociar a la grabación enlazan con el momento del que probablemente proceden, con el hablante. Las líneas sin recibo conviene comprobarlas.',
         link: 'Recibos',
       },
       'security': {
@@ -274,7 +274,7 @@ const content: SiteContent = {
       'imports': {
         eyebrow: 'Importación',
         title: 'Trae tus notas de siempre',
-        body: 'Settings → Imports importa una <b>exportación de Notion</b>, una <b>bóveda de Obsidian</b>, <b>Apple Notes</b>, una carpeta de <b>archivos Markdown</b> o una <b>copia de seguridad de IndexOne</b>. Totalmente sin conexión: sin cuenta, sin clave y sin llamadas de red. Cada importación empieza con una simulación, para que veas lo que escribiría antes de que escriba nada.',
+        body: 'Settings → Imports importa una <b>exportación de Notion</b>, una <b>bóveda de Obsidian</b>, <b>Apple Notes</b>, una carpeta de <b>archivos Markdown</b> o una <b>copia de seguridad de IndexOne</b>. Totalmente sin conexión: sin cuenta, sin clave y sin llamadas de red. Cada importación empieza con una simulación, para que veas lo que escribiría antes de que escriba nada.<br><br>Además de notas, en el Mac puedes importar como reunión nueva una transcripción de Teams, Zoom o Google Meet, un archivo VTT o SRT, o un archivo de texto. Si el archivo tiene marcas de tiempo y hablantes, la importación puede conservarlos; en un texto sin tiempos, la app los estima. Después intenta redactar una nota con la IA elegida para el espacio (con una IA en la nube, ese paso usa la red).',
         points: [
           'Cinco orígenes: una exportación de Notion, una bóveda de Obsidian, Apple Notes, una carpeta de archivos Markdown y una copia de seguridad de IndexOne',
           'Primero una simulación: no se escribe nada hasta que tú lo digas',
@@ -332,15 +332,15 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Recibos',
-        title: 'Las afirmaciones respaldadas se remontan a la grabación.',
-        body: 'Las notas de IndexOne no te piden que confíes en ellas. Cada línea basada en lo que realmente se dijo lleva un recibo: haz clic y salta directamente a ese segundo del audio, con el hablante. Las líneas parafraseadas o sin respaldo no llevan ninguno, así ves de un vistazo qué líneas tienen una fuente probable en la grabación.',
+        title: 'Las afirmaciones asociadas se remontan a la grabación.',
+        body: 'Las notas de IndexOne no te piden que confíes en ellas. Haz clic en una afirmación de la nota y la app reproduce el momento de la grabación del que probablemente procede y muestra quién hablaba. Cuando una frase no tiene enlace, por ejemplo porque resume varios fragmentos, sabes que conviene comprobarla.',
         points: [
-          'Haz clic en una afirmación y escucha exactamente de dónde salió',
-          'Hablante y segundo exacto en cada recibo',
+          'Haz clic en una afirmación con recibo y escucha su origen probable',
+          'Hablante y momento en cada recibo',
           'Siete documentos en un clic a partir de cualquier reunión: correo de seguimiento, registro de decisiones, ticket de trabajo, resumen de 1:1, standup, resumen de ventas y notas de entrevista',
           'Las carpetas selladas nunca revelan tiempos ni hablantes',
         ],
-        alt: 'Los recibos de una nota generada: una fila por cada afirmación fundamentada, cada una con el hablante y el segundo del audio del que procede',
+        alt: 'Los recibos de una nota generada: una fila por cada afirmación asociada, cada una con el hablante y el momento probable del audio del que procede',
       },
       'markdown': {
         eyebrow: 'Tuyo para siempre',

@@ -65,8 +65,8 @@ const content: SiteContent = {
   hero: {
     githubAria: 'IndexOne na GitHubie',
     titleStrong: 'Każde spotkanie zapamiętane.',
-    titleSoft: 'Każde zdanie z dowodem.',
-    subHtml: 'IndexOne nagrywa obie strony rozmowy <b>na Macu bez bota</b>, transkrybuje je <b>na urządzeniu</b> i pozwala zapytać Ivy — w trakcie spotkania albo pół roku później — z odnośnikiem do sekundy, w której to padło. Za darmo na Macu, bez limitu minut i historii. Przestrzenie w chmurze otworzysz w każdej przeglądarce.',
+    titleSoft: 'Notatki, które sprawdzisz w nagraniu.',
+    subHtml: 'IndexOne nagrywa obie strony rozmowy <b>na Macu bez bota</b>, transkrybuje je <b>na urządzeniu</b> i pozwala zapytać Ivy — w trakcie spotkania albo pół roku później. Punkty notatki dopasowane do nagrania mają odnośnik do prawdopodobnego momentu. Za darmo na Macu, bez limitu minut i historii. Przestrzenie w chmurze otworzysz w każdej przeglądarce.',
     download: 'Pobierz na Maca za darmo',
     signup: 'Załóż darmowe konto',
     note: 'Apple Silicon (M1 lub nowszy) · macOS 13.4+ · podpisany i notaryzowany · na Macu bez zakładania konta',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Słyszy obie strony rozmowy',
-          body: 'Twój mikrofon i dźwięk pozostałych uczestników są nagrywane jako dwa strumienie i transkrybowane na Twoim Macu przez Whisper.',
+          body: 'Nagrywa dźwięk rozmowy z Zooma, Teams, Meet i innych aplikacji na Macu z Apple Silicon (macOS 13.4+). Twój mikrofon i dźwięk pozostałych uczestników są nagrywane jako dwa strumienie i transkrybowane na Twoim Macu przez Whisper. Po jednorazowym pobraniu modeli mowy nagrywanie i transkrypcja na Macu działają bez internetu.',
           link: 'Nagrywanie i transkrypcja',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Dowód prowadzi do nagrania',
-        body: 'Każda poparta linijka notatki prowadzi do sekundy nagrania, z której pochodzi, razem z mówcą. Linijki bez pokrycia nie dostają dowodu, więc widzisz, które linijki mają prawdopodobne źródło w nagraniu.',
+        body: 'Linijki notatki, które IndexOne dopasuje do nagrania, prowadzą do momentu, z którego najpewniej pochodzą, razem z mówcą. Linijki bez dowodu warto sprawdzić.',
         link: 'Dowody',
       },
       'security': {
@@ -274,7 +274,7 @@ const content: SiteContent = {
       'imports': {
         eyebrow: 'Importy',
         title: 'Przenieś swoje dotychczasowe notatki',
-        body: 'Settings → Imports wczytuje <b>eksport z Notion</b>, <b>sejf Obsidian</b>, <b>Apple Notes</b>, folder <b>plików Markdown</b> albo <b>kopię zapasową IndexOne</b>. Całkowicie offline — bez konta, bez klucza, bez połączenia z siecią. Każdy import zaczyna się od próby na sucho, więc widzisz, co zostanie zapisane, zanim cokolwiek się zapisze.',
+        body: 'Settings → Imports wczytuje <b>eksport z Notion</b>, <b>sejf Obsidian</b>, <b>Apple Notes</b>, folder <b>plików Markdown</b> albo <b>kopię zapasową IndexOne</b>. Całkowicie offline — bez konta, bez klucza, bez połączenia z siecią. Każdy import zaczyna się od próby na sucho, więc widzisz, co zostanie zapisane, zanim cokolwiek się zapisze.<br><br>Poza notatkami zaimportujesz na Macu transkrypt spotkania z Teams, Zoom lub Google Meet, plik VTT lub SRT albo plik tekstowy jako nowe spotkanie. Gdy plik zawiera czasy i oznaczenia mówców, import może je zachować; przy tekście bez czasów aplikacja je szacuje. Potem próbuje wygenerować notatkę z AI wybraną dla przestrzeni (przy AI w chmurze ten krok korzysta z sieci).',
         points: [
           'Pięć źródeł: eksport z Notion, sejf Obsidian, Apple Notes, folder plików Markdown, kopia zapasowa IndexOne',
           'Najpierw próba na sucho — nic nie jest zapisywane, dopóki nie dasz znaku',
@@ -332,15 +332,15 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Dowody',
-        title: 'Twierdzenia oparte na rozmowie prowadzą do nagrania.',
-        body: 'Notatki IndexOne nie wymagają ślepego zaufania. Każda linijka oparta na tym, co faktycznie padło, ma swój dowód — kliknij, a przeskoczysz dokładnie do tej sekundy nagrania, z mówcą. Parafrazy i linijki bez pokrycia go nie dostają, więc od razu widzisz, które linijki mają prawdopodobne źródło w nagraniu.',
+        title: 'Dopasowane twierdzenia prowadzą do nagrania.',
+        body: 'Notatki IndexOne nie wymagają ślepego zaufania. Kliknij twierdzenie w notatce, a aplikacja odtworzy moment nagrania, z którego najpewniej pochodzi, i pokaże, kto mówił. Gdy zdanie nie ma odnośnika, bo np. streszcza kilka fragmentów, wiesz, że warto je sprawdzić.',
         points: [
-          'Kliknij twierdzenie i usłysz, skąd dokładnie pochodzi',
-          'Przy każdym dowodzie: kto mówił i w której dokładnie sekundzie',
+          'Kliknij twierdzenie z dowodem i usłysz jego prawdopodobne źródło',
+          'Przy każdym dowodzie: kto mówił i w której chwili nagrania',
           'Siedem gotowych dokumentów z każdego spotkania jednym kliknięciem — e-mail z podsumowaniem, rejestr decyzji, zgłoszenie, podsumowanie 1:1, standup, podsumowanie sprzedażowe, notatki z rekrutacji',
           'Zapieczętowane foldery nigdy nie zdradzają czasu ani mówcy',
         ],
-        alt: 'Dowody wygenerowanej notatki: jeden wiersz na każde poparte twierdzenie, z mówcą i sekundą nagrania, z której pochodzi',
+        alt: 'Dowody wygenerowanej notatki: jeden wiersz na każde dopasowane twierdzenie, z mówcą i prawdopodobnym momentem nagrania, z którego pochodzi',
       },
       'markdown': {
         eyebrow: 'Na własność',
