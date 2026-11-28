@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne auf GitHub',
     titleStrong: 'Jedes Meeting im Gedächtnis.',
     titleSoft: 'Jeder Satz mit Beleg.',
-    subHtml: 'Nimm <b>ohne Bot</b> auf und transkribiere <b>auf deinem Mac</b>. Um die anderen Teilnehmenden aufzunehmen, aktiviere die Systemaudio-Erfassung. Kostenlos auf dem Mac, bis zu vier Stunden pro Aufnahme.',
+    subHtml: 'Nimm <b>ohne Bot</b> auf und transkribiere <b>auf deinem Mac</b>. Um die anderen Teilnehmenden aufzunehmen, aktiviere die Systemaudio-Erfassung und erteile die macOS-Berechtigung. Kostenlos auf dem Mac. Im Bereich „Auf diesem Mac“ kann eine Aufnahme bis zu vier Stunden dauern.',
     download: 'Für Mac laden – kostenlos',
     signup: 'Kostenloses Konto erstellen',
     note: 'Apple Silicon (M1 oder neuer) · macOS 13.4+ · signiert und notarisiert · auf dem Mac kein Konto nötig',

@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne no GitHub',
     titleStrong: 'Cada reunião lembrada.',
     titleSoft: 'Cada frase com uma prova.',
-    subHtml: 'Grave <b>sem bot</b> e transcreva <b>no seu Mac</b>. Para gravar as outras pessoas, ative a captura do áudio do sistema. Grátis no Mac, até quatro horas por gravação.',
+    subHtml: 'Grave <b>sem bot</b> e transcreva <b>no seu Mac</b>. Para gravar as outras pessoas, ative a captura do áudio do sistema e conceda a permissão do macOS. Grátis no Mac. No espaço «Neste Mac», uma gravação pode durar até quatro horas.',
     download: 'Baixar para Mac — grátis',
     signup: 'Criar uma conta gratuita',
     note: 'Apple Silicon (M1 ou posterior) · macOS 13.4+ · assinado e notarizado · sem necessidade de conta no Mac',

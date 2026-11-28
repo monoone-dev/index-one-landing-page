@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne na GitHubie',
     titleStrong: 'Każde spotkanie zapamiętane.',
     titleSoft: 'Każde zdanie z dowodem.',
-    subHtml: 'Nagrywaj <b>bez bota</b> i transkrybuj <b>na Macu</b>. Aby nagrać rozmówców, włącz przechwytywanie dźwięku systemowego. Za darmo na Macu, do 4 godzin na nagranie.',
+    subHtml: 'Nagrywaj <b>bez bota</b> i transkrybuj <b>na Macu</b>. Aby nagrać rozmówców, włącz dźwięk systemowy i zezwól na jego przechwytywanie w macOS. Za darmo na Macu. W przestrzeni «Na tym Macu» nagranie może trwać do 4 godzin.',
     download: 'Pobierz na Maca za darmo',
     signup: 'Załóż darmowe konto',
     note: 'Apple Silicon (M1 lub nowszy) · macOS 13.4+ · podpisany i notaryzowany · na Macu bez zakładania konta',

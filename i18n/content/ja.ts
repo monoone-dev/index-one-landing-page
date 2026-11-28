@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'GitHub上のIndexOne',
     titleStrong: 'すべての会議を記憶。',
     titleSoft: 'すべての発言に根拠を。',
-    subHtml: '<b>ボットなし</b>で録音し、<b>Mac上で</b>文字起こしします。相手の声を録音するには、システム音声の取り込みをオンにしてください。Macでは無料で、1回の録音は最長4時間です。',
+    subHtml: '<b>ボットなし</b>で録音し、<b>Mac上で</b>文字起こしします。相手の声を録音するには、システム音声の取り込みをオンにして、macOSの許可を与えてください。Macでは無料です。「このMac上」のスペースでは、録音は最長4時間です。',
     download: 'Mac版を無料でダウンロード',
     signup: '無料アカウントを作成',
     note: 'Apple Silicon（M1以降） · macOS 13.4以降 · 署名・公証済み · Macではアカウント不要',
