@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'GitHub上のIndexOne',
     titleStrong: 'すべての会議を記憶。',
     titleSoft: 'すべての発言に根拠を。',
-    subHtml: 'IndexOneは<b>Mac上でボットなしで</b>通話の双方を録音し、<b>あなたのMac上で</b>文字起こしします。会議の最中でも数か月後でも、Ivyに質問すれば、その発言があった秒へのリンク付きで答えます。Macでは無料です。端末上の文字起こしはプランの利用枠の対象外です。1回の録音は最長4時間です。クラウドスペースはどのブラウザーでも開けます。',
+    subHtml: '<b>ボットなし</b>で録音し、<b>Mac上で</b>文字起こしします。相手の声を録音するには、システム音声の取り込みをオンにしてください。Macでは無料で、1回の録音は最長4時間です。',
     download: 'Mac版を無料でダウンロード',
     signup: '無料アカウントを作成',
     note: 'Apple Silicon（M1以降） · macOS 13.4以降 · 署名・公証済み · Macではアカウント不要',

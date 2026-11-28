@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne no GitHub',
     titleStrong: 'Cada reunião lembrada.',
     titleSoft: 'Cada frase com uma prova.',
-    subHtml: 'O IndexOne grava os dois lados da chamada <b>no seu Mac sem bot</b>, transcreve <b>no seu Mac</b> e deixa você perguntar à Ivy — no meio da reunião ou meses depois — com um link para o segundo exato em que aquilo foi dito. Grátis no Mac. A transcrição no dispositivo não está sujeita às cotas do plano. Cada gravação pode durar até quatro horas. Seus espaços na nuvem abrem em qualquer navegador.',
+    subHtml: 'Grave <b>sem bot</b> e transcreva <b>no seu Mac</b>. Para gravar as outras pessoas, ative a captura do áudio do sistema. Grátis no Mac, até quatro horas por gravação.',
     download: 'Baixar para Mac — grátis',
     signup: 'Criar uma conta gratuita',
     note: 'Apple Silicon (M1 ou posterior) · macOS 13.4+ · assinado e notarizado · sem necessidade de conta no Mac',

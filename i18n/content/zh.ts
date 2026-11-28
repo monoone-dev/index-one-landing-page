@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'GitHub 上的 IndexOne',
     titleStrong: '每场会议都记得。',
     titleSoft: '每句话都有凭据。',
-    subHtml: 'IndexOne <b>在 Mac 上无需机器人</b>即可录下通话双方，<b>在你的 Mac 上</b>完成转写，并让你向 Ivy 提问——无论是会议进行中还是数月之后——回答会链接到原话所在的那一秒。Mac 上免费。本地转写不受方案额度限制。单次录音最长 4 小时。你的云端空间可在任何浏览器中打开。',
+    subHtml: '<b>无需机器人</b>即可录音，并<b>在你的 Mac 上</b>转写。如需录下其他参与者，请开启系统音频采集。Mac 上免费，每次录音最长 4 小时。',
     download: '免费下载 Mac 版',
     signup: '免费创建账户',
     note: 'Apple Silicon（M1 及更新机型）· macOS 13.4+ · 已签名并通过公证 · 在 Mac 上使用无需账户',
