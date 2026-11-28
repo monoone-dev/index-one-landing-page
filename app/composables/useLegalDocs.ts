@@ -4,9 +4,12 @@ import { site } from '~/data/site'
 export function useLegalDocs() {
   const { locale } = useI18n()
   return computed(() => {
+    const lang = locale.value === 'pl' ? 'pl' : 'en'
     const url = (polish: string, english: string) =>
-      `${site.links.legal}${locale.value === 'pl' ? polish : `en/${english}`}.html`
+      `${site.links.legal}${lang === 'pl' ? polish : `en/${english}`}.html`
     return {
+      /** The language of the linked documents, for `hreflang`. */
+      lang,
       terms: url('regulamin', 'terms'),
       privacy: url('polityka-prywatnosci', 'privacy-policy'),
       withdrawal: url('odstapienie', 'withdrawal'),
