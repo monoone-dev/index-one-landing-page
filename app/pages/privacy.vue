@@ -8,6 +8,8 @@ usePageSeo({
   path: '/privacy',
   meta: () => c.value.meta.privacy,
 })
+
+const legal = useLegalDocs()
 </script>
 
 <template>
@@ -21,7 +23,7 @@ usePageSeo({
           <p class="plan-details__links">
             <NuxtLink :to="to('/pricing#comparison')">{{ c.offer.comparison }}</NuxtLink>
             <NuxtLink to="/docs/plans-and-billing/">{{ c.offer.docs }}</NuxtLink>
-            <NuxtLink :to="site.links.terms" external>{{ c.footer.terms }}</NuxtLink>
+            <NuxtLink :to="legal.terms" external>{{ c.footer.terms }}</NuxtLink>
           </p>
         </aside>
       </div>
