@@ -46,7 +46,8 @@ export default defineNuxtConfig({
       useCookie: true,
       cookieKey: 'index-one-locale',
       cookieCrossOrigin: false,
-      redirectOn: 'all',
+      // A link opens the page it names; only the bare "/" picks a language for the visitor.
+      redirectOn: 'root',
       alwaysRedirect: false,
       fallbackLocale: 'en',
     },
