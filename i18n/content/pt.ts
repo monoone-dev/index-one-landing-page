@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne no GitHub',
     titleStrong: 'Cada reunião lembrada.',
     titleSoft: 'Notas que você confere na gravação.',
-    subHtml: 'O IndexOne grava os dois lados da chamada <b>no seu Mac sem bot</b>, transcreve <b>no seu Mac</b> e deixa você perguntar à Ivy — no meio da reunião ou meses depois. Os pontos da nota associados à gravação levam ao momento provável. Grátis no Mac, sem limite de minutos nem de histórico. Seus espaços na nuvem abrem em qualquer navegador.',
+    subHtml: 'O IndexOne grava os dois lados da chamada <b>no seu Mac sem bot</b>, transcreve <b>no seu Mac</b> e deixa você perguntar à Ivy — no meio da reunião ou meses depois. Os pontos da nota associados indicam a fonte provável. Grátis no Mac. A transcrição no dispositivo não está sujeita às cotas do plano. Cada gravação pode durar até quatro horas. Seus espaços na nuvem abrem em qualquer navegador.',
     download: 'Baixar para Mac — grátis',
     signup: 'Criar uma conta gratuita',
     note: 'Apple Silicon (M1 ou posterior) · macOS 13.4+ · assinado e notarizado · sem necessidade de conta no Mac',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Ouve os dois lados da chamada',
-          body: 'Grava o áudio de chamadas do Zoom, Teams, Meet e outros apps em um Mac com Apple Silicon (macOS 13.4+). Seu microfone e o áudio dos outros participantes são gravados como dois fluxos e transcritos no seu Mac pelo Whisper. Depois de baixar os modelos de fala, a gravação e a transcrição no Mac funcionam sem internet.',
+          body: 'Grava o seu microfone e, com a captura do áudio do sistema ativada, também as outras pessoas no Zoom, Teams, Google Meet e outros apps. Requer um Mac com Apple Silicon (macOS 13.4+). Depois de baixar os modelos de fala, você pode gravar e transcrever sem internet no espaço «Neste Mac».',
           link: 'Captura e transcrição',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Os recibos levam ao áudio',
-        body: 'As linhas que o IndexOne consegue associar à gravação levam ao momento de onde provavelmente vieram, com quem falou. Vale a pena conferir as linhas sem recibo.',
+        body: 'Os pontos da nota associados indicam a fonte provável. Quando a gravação está disponível, selecione um recibo para ouvir esse trecho. O rótulo de quem falou aparece quando está disponível.',
         link: 'Recibos',
       },
       'security': {
@@ -274,7 +274,7 @@ const content: SiteContent = {
       'imports': {
         eyebrow: 'Importações',
         title: 'Traga as notas que você já tem',
-        body: 'Settings → Imports traz uma <b>exportação do Notion</b>, um <b>vault do Obsidian</b>, o <b>Apple Notes</b>, uma pasta de <b>arquivos Markdown</b> ou um <b>backup do IndexOne</b>. Tudo offline — sem conta, sem chave, sem chamada de rede. Toda importação começa como simulação, para você ver o que ela gravaria antes de gravar qualquer coisa.<br><br>Além de notas, no Mac você pode importar como nova reunião uma transcrição do Teams, Zoom ou Google Meet, um arquivo VTT ou SRT, ou um arquivo de texto. Quando o arquivo tem marcações de tempo e nomes de quem falou, a importação pode mantê-los; em um texto sem tempos, o app os estima. Depois ele tenta escrever uma nota com a IA escolhida para o espaço (com uma IA na nuvem, essa etapa usa a rede).',
+        body: 'Settings → Imports traz uma <b>exportação do Notion</b>, um <b>vault do Obsidian</b>, o <b>Apple Notes</b>, uma pasta de <b>arquivos Markdown</b> ou um <b>backup do IndexOne</b>. Tudo offline — sem conta, sem chave, sem chamada de rede. A importação dessas notas começa como simulação, para você ver o que ela gravaria antes de gravar qualquer coisa.<br><br>No Mac, você também pode importar como nova reunião um arquivo de transcrição compatível do Teams, Zoom ou Google Meet. A importação pode manter os tempos e os rótulos de quem falou presentes no arquivo. Se o arquivo não tiver tempos, o app os estima. Depois, o app tenta gerar uma nota. A IA na nuvem exige conexão com a internet. Formatos: VTT, SRT, TXT e exportações DOCX compatíveis.',
         points: [
           'Cinco fontes: uma exportação do Notion, um vault do Obsidian, o Apple Notes, uma pasta de arquivos Markdown e um backup do IndexOne',
           'Simulação primeiro — nada é gravado até você confirmar',
@@ -332,15 +332,15 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Recibos',
-        title: 'Afirmações associadas levam de volta à gravação.',
-        body: 'As notas do IndexOne não pedem que você confie nelas. Clique em uma afirmação da nota e o app toca o momento da gravação de onde ela provavelmente veio e mostra quem estava falando. Quando uma frase não tem link, por exemplo porque resume vários trechos, você sabe que vale a pena conferir.',
+        title: 'Os pontos associados indicam a fonte provável.',
+        body: 'Os pontos da nota associados indicam a fonte provável. Quando a gravação está disponível, selecione um recibo para ouvir esse trecho. O rótulo de quem falou aparece quando está disponível. Vale a pena conferir os pontos sem recibo.',
         points: [
-          'Clique em uma afirmação com recibo e ouça a fonte provável',
-          'Quem falou e o momento em cada recibo',
+          'Ouça a fonte provável quando a gravação está disponível',
+          'Momento da fonte e rótulo de quem falou, quando disponível',
           'Sete documentos com um clique a partir de qualquer reunião — e-mail de follow-up, registro de decisões, ticket de trabalho, resumo de 1:1, standup, resumo de vendas, notas de entrevista',
           'Pastas seladas nunca vazam horários nem quem falou',
         ],
-        alt: 'Os recibos de uma nota gerada: uma linha por afirmação associada, cada uma com quem falou e o momento provável do áudio de onde veio',
+        alt: 'Lista de recibos com os tempos da gravação e rótulos de quem falou visíveis',
       },
       'markdown': {
         eyebrow: 'Seu para sempre',

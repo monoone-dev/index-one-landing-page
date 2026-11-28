@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne na GitHubie',
     titleStrong: 'Każde spotkanie zapamiętane.',
     titleSoft: 'Notatki, które sprawdzisz w nagraniu.',
-    subHtml: 'IndexOne nagrywa obie strony rozmowy <b>na Macu bez bota</b>, transkrybuje je <b>na urządzeniu</b> i pozwala zapytać Ivy — w trakcie spotkania albo pół roku później. Punkty notatki dopasowane do nagrania mają odnośnik do prawdopodobnego momentu. Za darmo na Macu, bez limitu minut i historii. Przestrzenie w chmurze otworzysz w każdej przeglądarce.',
+    subHtml: 'IndexOne nagrywa obie strony rozmowy <b>na Macu bez bota</b>, transkrybuje je <b>na urządzeniu</b> i pozwala zapytać Ivy — w trakcie spotkania albo pół roku później. Punkty dopasowane do nagrania wskazują jego prawdopodobny fragment. Za darmo na Macu. Lokalna transkrypcja nie podlega limitom planu. Pojedyncze nagranie trwa do 4 godzin. Przestrzenie w chmurze otworzysz w każdej przeglądarce.',
     download: 'Pobierz na Maca za darmo',
     signup: 'Załóż darmowe konto',
     note: 'Apple Silicon (M1 lub nowszy) · macOS 13.4+ · podpisany i notaryzowany · na Macu bez zakładania konta',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Słyszy obie strony rozmowy',
-          body: 'Nagrywa dźwięk rozmowy z Zooma, Teams, Meet i innych aplikacji na Macu z Apple Silicon (macOS 13.4+). Twój mikrofon i dźwięk pozostałych uczestników są nagrywane jako dwa strumienie i transkrybowane na Twoim Macu przez Whisper. Po jednorazowym pobraniu modeli mowy nagrywanie i transkrypcja na Macu działają bez internetu.',
+          body: 'Nagrywa Twój mikrofon, a przy włączonym przechwytywaniu dźwięku systemowego także rozmówców z Zooma, Teams, Google Meet i innych aplikacji. Wymaga Maca z Apple Silicon (macOS 13.4+). Po pobraniu modeli mowy możesz nagrywać i transkrybować na Macu bez internetu w przestrzeni «Na tym Macu».',
           link: 'Nagrywanie i transkrypcja',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Dowód prowadzi do nagrania',
-        body: 'Linijki notatki, które IndexOne dopasuje do nagrania, prowadzą do momentu, z którego najpewniej pochodzą, razem z mówcą. Linijki bez dowodu warto sprawdzić.',
+        body: 'Punkty dopasowane do nagrania wskazują jego prawdopodobny fragment. Gdy nagranie jest dostępne, kliknij dowód, aby odsłuchać fragment. Gdy etykieta mówcy jest dostępna, aplikacja ją pokazuje.',
         link: 'Dowody',
       },
       'security': {
@@ -274,7 +274,7 @@ const content: SiteContent = {
       'imports': {
         eyebrow: 'Importy',
         title: 'Przenieś swoje dotychczasowe notatki',
-        body: 'Settings → Imports wczytuje <b>eksport z Notion</b>, <b>sejf Obsidian</b>, <b>Apple Notes</b>, folder <b>plików Markdown</b> albo <b>kopię zapasową IndexOne</b>. Całkowicie offline — bez konta, bez klucza, bez połączenia z siecią. Każdy import zaczyna się od próby na sucho, więc widzisz, co zostanie zapisane, zanim cokolwiek się zapisze.<br><br>Poza notatkami zaimportujesz na Macu transkrypt spotkania z Teams, Zoom lub Google Meet, plik VTT lub SRT albo plik tekstowy jako nowe spotkanie. Gdy plik zawiera czasy i oznaczenia mówców, import może je zachować; przy tekście bez czasów aplikacja je szacuje. Potem próbuje wygenerować notatkę z AI wybraną dla przestrzeni (przy AI w chmurze ten krok korzysta z sieci).',
+        body: 'Settings → Imports wczytuje <b>eksport z Notion</b>, <b>sejf Obsidian</b>, <b>Apple Notes</b>, folder <b>plików Markdown</b> albo <b>kopię zapasową IndexOne</b>. Całkowicie offline — bez konta, bez klucza, bez połączenia z siecią. Import tych notatek zaczyna się od próby na sucho, więc widzisz, co zostanie zapisane, zanim cokolwiek się zapisze.<br><br>Na Macu możesz też wczytać obsługiwany plik transkryptu z Teams, Zooma lub Google Meet jako nowe spotkanie. Import może zachować czasy i etykiety mówców zapisane w pliku. Gdy plik nie zawiera czasów, aplikacja je szacuje. Po imporcie aplikacja próbuje wygenerować notatkę. Użycie AI w chmurze wymaga internetu. Formaty: VTT, SRT, TXT i obsługiwane eksporty DOCX.',
         points: [
           'Pięć źródeł: eksport z Notion, sejf Obsidian, Apple Notes, folder plików Markdown, kopia zapasowa IndexOne',
           'Najpierw próba na sucho — nic nie jest zapisywane, dopóki nie dasz znaku',
@@ -332,15 +332,15 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Dowody',
-        title: 'Dopasowane twierdzenia prowadzą do nagrania.',
-        body: 'Notatki IndexOne nie wymagają ślepego zaufania. Kliknij twierdzenie w notatce, a aplikacja odtworzy moment nagrania, z którego najpewniej pochodzi, i pokaże, kto mówił. Gdy zdanie nie ma odnośnika, bo np. streszcza kilka fragmentów, wiesz, że warto je sprawdzić.',
+        title: 'Dopasowane punkty wskazują prawdopodobne źródło.',
+        body: 'Punkty dopasowane do nagrania wskazują jego prawdopodobny fragment. Gdy nagranie jest dostępne, kliknij dowód, aby odsłuchać fragment. Gdy etykieta mówcy jest dostępna, aplikacja ją pokazuje. Punkty bez odnośnika warto sprawdzić.',
         points: [
-          'Kliknij twierdzenie z dowodem i usłysz jego prawdopodobne źródło',
-          'Przy każdym dowodzie: kto mówił i w której chwili nagrania',
+          'Odsłuch prawdopodobnego źródła, gdy nagranie jest dostępne',
+          'Czas źródła i etykieta mówcy, gdy jest dostępna',
           'Siedem gotowych dokumentów z każdego spotkania jednym kliknięciem — e-mail z podsumowaniem, rejestr decyzji, zgłoszenie, podsumowanie 1:1, standup, podsumowanie sprzedażowe, notatki z rekrutacji',
           'Zapieczętowane foldery nigdy nie zdradzają czasu ani mówcy',
         ],
-        alt: 'Dowody wygenerowanej notatki: jeden wiersz na każde dopasowane twierdzenie, z mówcą i prawdopodobnym momentem nagrania, z którego pochodzi',
+        alt: 'Lista dowodów z czasami nagrania i widocznymi etykietami mówców',
       },
       'markdown': {
         eyebrow: 'Na własność',

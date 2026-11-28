@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne su GitHub',
     titleStrong: 'Ogni riunione ricordata.',
     titleSoft: 'Note che puoi verificare nella registrazione.',
-    subHtml: 'IndexOne registra entrambi i lati della call <b>sul tuo Mac senza bot</b>, la trascrive <b>sul tuo Mac</b> e ti permette di chiedere a Ivy — durante la riunione o mesi dopo. I punti della nota abbinati alla registrazione rimandano al momento probabile. Gratis sul Mac, senza limiti di minuti o di cronologia. I tuoi spazi cloud si aprono in qualsiasi browser.',
+    subHtml: 'IndexOne registra entrambi i lati della call <b>sul tuo Mac senza bot</b>, la trascrive <b>sul tuo Mac</b> e ti permette di chiedere a Ivy — durante la riunione o mesi dopo. I punti della nota abbinati indicano la fonte probabile. Gratis sul Mac. La trascrizione sul dispositivo non è soggetta alle quote del piano. Ogni registrazione può durare fino a quattro ore. I tuoi spazi cloud si aprono in qualsiasi browser.',
     download: 'Scarica per Mac — gratis',
     signup: 'Crea un account gratuito',
     note: 'Apple Silicon (M1 o successivi) · macOS 13.4+ · firmata e notarizzata · nessun account necessario sul Mac',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Sente entrambi i lati della chiamata',
-          body: 'Registra l’audio delle chiamate di Zoom, Teams, Meet e altre app su un Mac con Apple Silicon (macOS 13.4+). Il tuo microfono e l\'audio degli altri partecipanti vengono registrati come due flussi e trascritti sul tuo Mac da Whisper. Dopo aver scaricato i modelli vocali, registrazione e trascrizione sul Mac funzionano senza internet.',
+          body: 'Registra il tuo microfono e, con la cattura dell’audio di sistema attiva, anche gli altri partecipanti su Zoom, Teams, Google Meet e altre app. Richiede un Mac con Apple Silicon (macOS 13.4+). Dopo aver scaricato i modelli vocali, puoi registrare e trascrivere senza internet nello spazio «Su questo Mac».',
           link: 'Registrazione e trascrizione',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Le prove riportano all’audio',
-        body: 'Le righe che IndexOne riesce ad abbinare alla registrazione rimandano al momento da cui probabilmente provengono, con l’interlocutore. Le righe senza prova meritano un controllo.',
+        body: 'I punti della nota abbinati indicano la fonte probabile. Quando la registrazione è disponibile, seleziona una prova per ascoltare quel passaggio. L’etichetta dell’interlocutore compare quando è disponibile.',
         link: 'Le prove',
       },
       'security': {
@@ -274,7 +274,7 @@ const content: SiteContent = {
       'imports': {
         eyebrow: 'Importazioni',
         title: 'Porta con te le note che hai già',
-        body: 'Settings → Imports importa un <b>export di Notion</b>, un <b>vault di Obsidian</b>, <b>Apple Notes</b>, una cartella di <b>file Markdown</b> o un <b>backup di IndexOne</b>. Tutto offline: niente account, niente chiave, nessuna chiamata di rete. Ogni importazione parte da una simulazione, così vedi cosa scriverebbe prima che scriva qualsiasi cosa.<br><br>Oltre alle note, sul Mac puoi importare come nuova riunione una trascrizione di Teams, Zoom o Google Meet, un file VTT o SRT, oppure un file di testo. Se il file contiene orari e nomi dei parlanti, l’importazione può conservarli; per un testo senza orari, l’app li stima. Poi prova a scrivere una nota con l’IA scelta per lo spazio (con un’IA nel cloud, questo passaggio usa la rete).',
+        body: 'Settings → Imports importa un <b>export di Notion</b>, un <b>vault di Obsidian</b>, <b>Apple Notes</b>, una cartella di <b>file Markdown</b> o un <b>backup di IndexOne</b>. Tutto offline: niente account, niente chiave, nessuna chiamata di rete. L’importazione di queste note parte da una simulazione, così vedi cosa scriverebbe prima che scriva qualsiasi cosa.<br><br>Sul Mac puoi anche importare come nuova riunione un file di trascrizione supportato di Teams, Zoom o Google Meet. L’importazione può conservare gli orari e le etichette degli interlocutori presenti nel file. Se il file non ha orari, l’app li stima. Poi l’app prova a generare una nota. L’IA nel cloud richiede una connessione a internet. Formati: VTT, SRT, TXT ed esportazioni DOCX supportate.',
         points: [
           'Cinque sorgenti: un export di Notion, un vault di Obsidian, Apple Notes, una cartella di file Markdown, un backup di IndexOne',
           'Prima la simulazione: non viene scritto nulla finché non lo dici tu',
@@ -332,15 +332,15 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Prove',
-        title: 'Le affermazioni abbinate risalgono alla registrazione.',
-        body: 'Le note di IndexOne non ti chiedono di fidarti. Clicca un’affermazione nella nota e l’app riproduce il momento della registrazione da cui probabilmente proviene e mostra chi parlava. Quando una frase non ha il link, per esempio perché riassume più passaggi, sai che conviene controllarla.',
+        title: 'I punti abbinati indicano la fonte probabile.',
+        body: 'I punti della nota abbinati indicano la fonte probabile. Quando la registrazione è disponibile, seleziona una prova per ascoltare quel passaggio. L’etichetta dell’interlocutore compare quando è disponibile. Vale la pena controllare i punti senza prova.',
         points: [
-          'Clicca un’affermazione con prova e ascolta la sua fonte probabile',
-          'Interlocutore e momento su ogni prova',
+          'Ascolta la fonte probabile quando la registrazione è disponibile',
+          'Momento della fonte ed etichetta dell’interlocutore, quando disponibile',
           'Sette documenti con un clic da qualsiasi riunione: email di follow-up, registro delle decisioni, ticket di lavoro, riepilogo 1:1, standup, riepilogo commerciale, note di colloquio',
           'Le cartelle sigillate non rivelano mai tempi né interlocutori',
         ],
-        alt: 'Le prove di una nota generata: una riga per ogni affermazione abbinata, ciascuna con l’interlocutore e il momento probabile dell’audio da cui proviene',
+        alt: 'Elenco delle prove con i tempi della registrazione e le etichette degli interlocutori visibili',
       },
       'markdown': {
         eyebrow: 'Tuo per sempre',

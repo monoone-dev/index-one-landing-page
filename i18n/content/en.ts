@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne on GitHub',
     titleStrong: 'Every meeting remembered.',
     titleSoft: 'Notes you can check against the recording.',
-    subHtml: 'IndexOne records both sides of the call <b>on your Mac without a bot</b>, transcribes it <b>on-device</b> and lets you ask Ivy — mid-meeting or months later. Note points matched to the recording link to the likely moment. Free on the Mac, with no minute or history limit. Your cloud spaces open in any browser.',
+    subHtml: 'IndexOne records both sides of the call <b>on your Mac without a bot</b>, transcribes it <b>on-device</b> and lets you ask Ivy — mid-meeting or months later. Matched note points show the likely source. Free on Mac. On-device transcription is not subject to plan quotas. Each recording can last up to four hours. Your cloud spaces open in any browser.',
     download: 'Download for Mac — free',
     signup: 'Create a free account',
     note: 'Apple Silicon (M1 or later) · macOS 13.4+ · signed and notarized · no account needed on the Mac',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Hears both sides of the call',
-          body: 'It records call audio from Zoom, Teams, Meet and other apps on a Mac with Apple Silicon (macOS 13.4+). Your mic and the other participants\' audio are recorded as two streams and transcribed on your Mac by Whisper. Once the speech models are downloaded, recording and transcription on your Mac work without the internet.',
+          body: 'It records your mic and, with system audio capture on, the other people on Zoom, Teams, Google Meet and other apps. Requires a Mac with Apple Silicon (macOS 13.4+). After downloading the speech models, you can record and transcribe offline in the On this Mac space.',
           link: 'Capture and transcription',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Receipts point back to the audio',
-        body: 'Lines IndexOne can match to the recording link to the moment they most likely came from, with the speaker. Lines without a receipt are worth checking yourself.',
+        body: 'Matched note points show the likely source. When the recording is available, select a receipt to play that part. A speaker label appears when available.',
         link: 'Receipts',
       },
       'security': {
@@ -274,7 +274,7 @@ const content: SiteContent = {
       'imports': {
         eyebrow: 'Imports',
         title: 'Bring your existing notes',
-        body: 'Settings → Imports pulls in a <b>Notion export</b>, an <b>Obsidian vault</b>, <b>Apple Notes</b>, a folder of <b>Markdown files</b>, or an <b>IndexOne backup</b>. Entirely offline — no account, no key, no network call. Every import is a dry run first, so you see what it would write before it writes anything.<br><br>Besides notes, on the Mac you can import a meeting transcript from Teams, Zoom or Google Meet, a VTT or SRT file, or a text file as a new meeting. When the file has timestamps and speaker labels, the import can keep them; for text without times, the app estimates them. It then tries to write a note with the AI chosen for that space (with a cloud AI, that step uses the network).',
+        body: 'Settings → Imports pulls in a <b>Notion export</b>, an <b>Obsidian vault</b>, <b>Apple Notes</b>, a folder of <b>Markdown files</b>, or an <b>IndexOne backup</b>. Entirely offline — no account, no key, no network call. Importing these notes starts with a dry run, so you see what it would write before it writes anything.<br><br>On Mac, import a supported transcript file from Teams, Zoom or Google Meet as a new meeting. Import can keep times and speaker labels that are present in the file. If the file has no times, the app estimates them. The app then tries to generate a note. Cloud AI requires an internet connection. Formats: VTT, SRT, TXT and supported DOCX exports.',
         points: [
           'Five sources: a Notion export, an Obsidian vault, Apple Notes, a folder of Markdown files, an IndexOne backup',
           'Dry run first — nothing is written until you say so',
@@ -332,15 +332,15 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Receipts',
-        title: 'Matched claims trace back to the tape.',
-        body: 'IndexOne’s notes don’t ask you to trust them. Click a claim in the note and the app plays the moment of the recording it most likely came from, and shows who was speaking. When a sentence has no link, for example because it sums up several parts, you know it is worth checking.',
+        title: 'Matched points show their likely source.',
+        body: 'Matched note points show the likely source. When the recording is available, select a receipt to play that part. A speaker label appears when available. Points without a receipt are worth checking.',
         points: [
-          'Click a claim with a receipt, hear its likely source',
-          'The speaker and the time on every receipt',
+          'Play the likely source when the recording is available',
+          'Source time and a speaker label when available',
           'Seven one-click artifacts from any meeting — follow-up email, decision log, work ticket, 1:1 recap, standup, sales recap, interview notes',
           'Sealed folders leak no timing or speaker, ever',
         ],
-        alt: 'A generated note’s receipts: one row per matched claim, each with the speaker and the likely moment of audio it came from',
+        alt: 'Receipts list with recording times and visible speaker labels',
       },
       'markdown': {
         eyebrow: 'Yours to keep',

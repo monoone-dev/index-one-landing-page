@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne auf GitHub',
     titleStrong: 'Jedes Meeting im Gedächtnis.',
     titleSoft: 'Notizen, an der Aufnahme prüfbar.',
-    subHtml: 'IndexOne nimmt beide Seiten des Calls <b>auf deinem Mac ohne Bot</b> auf, transkribiert ihn <b>auf deinem Mac</b> und lässt dich Ivy fragen – mitten im Meeting oder Monate später. Notizpunkte, die sich der Aufnahme zuordnen lassen, verlinken auf den wahrscheinlichen Moment. Kostenlos auf dem Mac, ohne Minuten- oder Verlaufslimit. Deine Cloud-Bereiche öffnen sich in jedem Browser.',
+    subHtml: 'IndexOne nimmt beide Seiten des Calls <b>auf deinem Mac ohne Bot</b> auf, transkribiert ihn <b>auf deinem Mac</b> und lässt dich Ivy fragen – mitten im Meeting oder Monate später. Zugeordnete Notizpunkte zeigen die wahrscheinliche Quelle. Kostenlos auf dem Mac. Die lokale Transkription auf deinem Mac unterliegt keinen Kontingenten deines Tarifs. Jede Aufnahme kann bis zu vier Stunden dauern. Deine Cloud-Bereiche öffnen sich in jedem Browser.',
     download: 'Für Mac laden – kostenlos',
     signup: 'Kostenloses Konto erstellen',
     note: 'Apple Silicon (M1 oder neuer) · macOS 13.4+ · signiert und notarisiert · auf dem Mac kein Konto nötig',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Hört beide Seiten des Anrufs',
-          body: 'Nimmt den Ton von Calls aus Zoom, Teams, Meet und anderen Apps auf einem Mac mit Apple Silicon auf (macOS 13.4+). Dein Mikrofon und der Ton der anderen Teilnehmenden werden als zwei Spuren aufgenommen und von Whisper auf deinem Mac transkribiert. Sind die Sprachmodelle einmal geladen, funktionieren Aufnahme und Transkription auf dem Mac ohne Internet.',
+          body: 'Nimmt dein Mikrofon auf und bei aktivierter Systemaudio-Erfassung auch die anderen in Zoom, Teams, Google Meet und anderen Apps. Erfordert einen Mac mit Apple Silicon (macOS 13.4+). Nach dem Laden der Sprachmodelle kannst du im Bereich „Auf diesem Mac“ ohne Internet aufnehmen und transkribieren.',
           link: 'Aufnahme und Transkription',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Belege führen zurück zur Aufnahme',
-        body: 'Zeilen, die IndexOne der Aufnahme zuordnen kann, verlinken auf den Moment, aus dem sie am wahrscheinlichsten stammen – mit Sprecher. Zeilen ohne Beleg solltest du selbst prüfen.',
+        body: 'Zugeordnete Notizpunkte zeigen die wahrscheinliche Quelle. Ist die Aufnahme verfügbar, wähle einen Beleg, um diese Stelle zu hören. Eine Sprecherangabe erscheint, wenn sie verfügbar ist.',
         link: 'Belege',
       },
       'security': {
@@ -274,7 +274,7 @@ const content: SiteContent = {
       'imports': {
         eyebrow: 'Importe',
         title: 'Bring deine bestehenden Notizen mit',
-        body: 'Settings → Imports holt einen <b>Notion-Export</b>, einen <b>Obsidian-Vault</b>, <b>Apple Notes</b>, einen Ordner mit <b>Markdown-Dateien</b> oder ein <b>IndexOne-Backup</b> herein. Komplett offline – kein Konto, kein Schlüssel, keine Netzwerkanfrage. Jeder Import läuft zuerst als Probelauf, damit du siehst, was er schreiben würde, bevor er irgendetwas schreibt.<br><br>Neben Notizen kannst du auf dem Mac ein Meeting-Transkript aus Teams, Zoom oder Google Meet, eine VTT- oder SRT-Datei oder eine Textdatei als neues Meeting importieren. Enthält die Datei Zeitstempel und Sprecher, kann der Import sie behalten; bei Text ohne Zeiten schätzt die App sie. Danach versucht sie, mit der für den Bereich gewählten KI eine Notiz zu schreiben (bei einer Cloud-KI nutzt dieser Schritt das Netz).',
+        body: 'Settings → Imports holt einen <b>Notion-Export</b>, einen <b>Obsidian-Vault</b>, <b>Apple Notes</b>, einen Ordner mit <b>Markdown-Dateien</b> oder ein <b>IndexOne-Backup</b> herein. Komplett offline – kein Konto, kein Schlüssel, keine Netzwerkanfrage. Der Import dieser Notizen läuft zuerst als Probelauf, damit du siehst, was er schreiben würde, bevor er irgendetwas schreibt.<br><br>Auf dem Mac kannst du außerdem eine unterstützte Transkriptdatei aus Teams, Zoom oder Google Meet als neues Meeting laden. Der Import kann Zeiten und Sprecherangaben übernehmen, die in der Datei stehen. Hat die Datei keine Zeiten, schätzt die App sie. Danach versucht die App, eine Notiz zu erzeugen. Cloud-KI braucht eine Internetverbindung. Formate: VTT, SRT, TXT und unterstützte DOCX-Exporte.',
         points: [
           'Fünf Quellen: ein Notion-Export, ein Obsidian-Vault, Apple Notes, ein Ordner mit Markdown-Dateien, ein IndexOne-Backup',
           'Erst der Probelauf – geschrieben wird erst, wenn du es sagst',
@@ -332,15 +332,15 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Belege',
-        title: 'Zugeordnete Aussagen führen zurück zur Aufnahme.',
-        body: 'Die Notizen von IndexOne verlangen kein blindes Vertrauen. Klick auf eine Aussage in der Notiz, und die App spielt den Moment der Aufnahme ab, aus dem sie am wahrscheinlichsten stammt, und zeigt, wer gesprochen hat. Hat ein Satz keinen Link, etwa weil er mehrere Stellen zusammenfasst, weißt du, dass sich Nachprüfen lohnt.',
+        title: 'Zugeordnete Punkte zeigen ihre wahrscheinliche Quelle.',
+        body: 'Zugeordnete Notizpunkte zeigen die wahrscheinliche Quelle. Ist die Aufnahme verfügbar, wähle einen Beleg, um diese Stelle zu hören. Eine Sprecherangabe erscheint, wenn sie verfügbar ist. Punkte ohne Beleg solltest du selbst prüfen.',
         points: [
-          'Klick auf eine Aussage mit Beleg und hör die wahrscheinliche Quelle',
-          'Sprecher und Zeitpunkt auf jedem Beleg',
+          'Die wahrscheinliche Quelle anhören, wenn die Aufnahme verfügbar ist',
+          'Zeitpunkt der Quelle und Sprecherangabe, wenn verfügbar',
           'Sieben Ein-Klick-Ergebnisse aus jedem Meeting – Follow-up-Mail, Entscheidungsprotokoll, Ticket, 1:1-Rückblick, Standup, Sales-Rückblick, Interview-Notizen',
           'Versiegelte Ordner verraten nie Zeitpunkte oder Sprecher',
         ],
-        alt: 'Die Belege einer generierten Notiz: eine Zeile pro zugeordneter Aussage, jeweils mit Sprecher und dem wahrscheinlichen Moment der Aufnahme, aus dem sie stammt',
+        alt: 'Belegliste mit Aufnahmezeiten und sichtbaren Sprecherangaben',
       },
       'markdown': {
         eyebrow: 'Gehört dir',
