@@ -408,16 +408,18 @@ na landingu ani ogólnej obietnicy 14 dni zwrotu bez potwierdzenia warunków dok
 Na `/pricing` bez drugiego `OfferContext`; pod tabelą porównania zwięzły blok „Plan details /
 Szczegóły planów”, a na `/privacy` odpowiadający blok przed cyklem życia danych.
 Treść EN: **The Free allowance renews at the start of each calendar month in UTC. Personal and Team
-allowances renew at the start of each billing period. A recording that does not fit in a paid plan’s
-remaining fast allowance may go to economy mode. If the economy mode allowance has no room left
-either, a new recording can be submitted for transcription after the allowance renews. The Terms of
+allowances renew at the start of each billing period. Recordings that do not fit in the remaining
+fast allowance may go into the slower economy queue. When a recording does not fit in the remaining
+economy allowance, the service does not accept it for transcription. You can submit it again after
+the allowance renews. The Terms of
 Service set out how use is counted and how large each allowance is. Standard account cloud is not
 end-to-end encrypted: the operator can read stored and processed content. Pattern masking is not
 full anonymization. Local processing on your Mac stays on your Mac.**
 PL: **Pula Free odnawia się z początkiem miesiąca kalendarzowego w UTC. W planach Personal i Team
-pule odnawiają się z początkiem okresu rozliczeniowego. Nagranie, które nie mieści się w pozostałej
-puli szybkiej planu płatnego, może trafić do trybu ekonomicznego. Jeśli zabraknie miejsca również
-w tej puli, nowe nagranie można zgłosić do transkrypcji po odnowieniu puli. Szczegóły naliczania
+pule odnawiają się z początkiem okresu rozliczeniowego. Nagrania, które nie mieszczą się w
+pozostałej puli szybkiej, mogą trafić do wolniejszej kolejki w trybie ekonomicznym. Gdy nagranie nie
+mieści się w pozostałej puli ekonomicznej, serwis odmawia przyjęcia go do transkrypcji. Możesz
+zgłosić je ponownie po odnowieniu puli. Szczegóły naliczania
 i wartości pul podaje regulamin. Standardowa chmura konta nie jest szyfrowana end-to-end: operator
 może odczytać przechowywane i przetwarzane treści. Maskowanie wzorców nie jest pełną anonimizacją.
 Lokalne przetwarzanie na Macu pozostaje na Macu.**

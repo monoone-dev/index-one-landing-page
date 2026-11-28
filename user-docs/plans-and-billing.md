@@ -26,7 +26,7 @@ Ivy units measure a processing budget, not raw model tokens or a guaranteed numb
 
 Personal and Team include cloud transcription. With heavy use, new recordings may go into a slower queue. Limits and fair-use rules are set out in the [Terms of Service](https://app.index-one.io/legal/en/terms.html). On-device transcription on your Mac is not subject to plan quotas.
 
-A recording that does not fit in a paid plan's remaining fast allowance may go to economy mode, which is that slower queue. If economy mode has no room left either, a new recording can be submitted for transcription after the allowance renews. The Terms of Service set out how use is counted and how large each allowance is.
+Recordings that do not fit in the remaining fast allowance may go into the slower economy queue. When a recording does not fit in the remaining economy allowance, the service does not accept it for transcription. You can submit it again after the allowance renews. The Terms of Service set out how use is counted and how large each allowance is.
 
 ## Free every month
 
