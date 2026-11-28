@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne sur GitHub',
     titleStrong: 'Chaque réunion en mémoire.',
     titleSoft: 'Des notes vérifiables sur l’enregistrement.',
-    subHtml: 'Enregistrez <b>sans bot</b> et transcrivez <b>sur votre Mac</b>. Pour enregistrer vos interlocuteurs, activez la capture du son système. Gratuit sur Mac, jusqu’à quatre heures par enregistrement.',
+    subHtml: 'Enregistrez <b>sans bot</b> et transcrivez <b>sur votre Mac</b>. Pour enregistrer vos interlocuteurs, activez la capture du son système et accordez l’autorisation macOS. Gratuit sur Mac. Dans l’espace « Sur ce Mac », un enregistrement peut durer jusqu’à quatre heures.',
     download: 'Télécharger pour Mac — gratuit',
     signup: 'Créer un compte gratuit',
     note: 'Apple Silicon (M1 ou plus récent) · macOS 13.4+ · signée et notariée · aucun compte nécessaire sur Mac',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Entend les deux côtés de l\'appel',
-          body: 'Enregistre votre micro et, avec la capture du son système activée, aussi vos interlocuteurs sur Zoom, Teams, Google Meet et d’autres apps. Nécessite un Mac avec Apple Silicon (macOS 13.4+). Après le téléchargement des modèles vocaux, vous pouvez enregistrer et transcrire sans internet dans l’espace « Sur ce Mac ».',
+          body: 'Enregistre votre micro et, avec la capture du son système activée et l’autorisation macOS accordée, aussi vos interlocuteurs sur Zoom, Teams, Google Meet et d’autres apps. Nécessite un Mac avec Apple Silicon (macOS 13.4+). Après le téléchargement des modèles vocaux, vous pouvez enregistrer et transcrire sans internet dans l’espace « Sur ce Mac ».',
           link: 'Capture et transcription',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Les preuves renvoient à l’audio',
-        body: 'Les points de la note rapprochés indiquent la source probable. Quand l’enregistrement est disponible, sélectionnez une preuve pour voir ce passage surligné dans la transcription. L’étiquette de l’intervenant apparaît quand elle est disponible.',
+        body: 'Sur Mac, quand l’enregistrement est disponible, sélectionnez une preuve à côté d’un point de la note rapproché. IndexOne ouvre l’onglet de l’enregistrement et surligne le passage probable dans la transcription. L’étiquette de l’intervenant apparaît quand elle est disponible.',
         link: 'Les preuves',
       },
       'security': {
@@ -333,9 +333,9 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Preuves',
         title: 'Les points rapprochés indiquent leur source probable.',
-        body: 'Quand l’enregistrement est disponible, sélectionner la preuve d’un point de la note rapproché ouvre l’onglet de l’enregistrement et surligne le passage probable dans la transcription. L’étiquette de l’intervenant apparaît quand elle est disponible. Les points sans preuve méritent d’être vérifiés.',
+        body: 'Sur Mac, quand l’enregistrement est disponible, sélectionnez une preuve à côté d’un point de la note rapproché. IndexOne ouvre l’onglet de l’enregistrement et surligne le passage probable dans la transcription. L’étiquette de l’intervenant apparaît quand elle est disponible. Les points sans preuve méritent d’être vérifiés.',
         points: [
-          'La source probable, surlignée dans la transcription',
+          'Sur Mac, la source probable surlignée dans la transcription',
           'Horodatage de la source et étiquette de l’intervenant, si disponible',
           'Sept documents en un clic à partir de n’importe quelle réunion — e-mail de suivi, journal des décisions, ticket, compte rendu de 1:1, standup, récap commercial, notes d’entretien',
           'Les dossiers scellés ne laissent jamais fuiter ni horodatage ni intervenant',

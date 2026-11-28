@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne auf GitHub',
     titleStrong: 'Jedes Meeting im Gedächtnis.',
     titleSoft: 'Notizen, an der Aufnahme prüfbar.',
-    subHtml: 'Nimm <b>ohne Bot</b> auf und transkribiere <b>auf deinem Mac</b>. Um die anderen Teilnehmenden aufzunehmen, aktiviere die Systemaudio-Erfassung. Kostenlos auf dem Mac, bis zu vier Stunden pro Aufnahme.',
+    subHtml: 'Nimm <b>ohne Bot</b> auf und transkribiere <b>auf deinem Mac</b>. Um die anderen Teilnehmenden aufzunehmen, aktiviere die Systemaudio-Erfassung und erteile die macOS-Berechtigung. Kostenlos auf dem Mac. Im Bereich „Auf diesem Mac“ kann eine Aufnahme bis zu vier Stunden dauern.',
     download: 'Für Mac laden – kostenlos',
     signup: 'Kostenloses Konto erstellen',
     note: 'Apple Silicon (M1 oder neuer) · macOS 13.4+ · signiert und notarisiert · auf dem Mac kein Konto nötig',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Hört beide Seiten des Anrufs',
-          body: 'Nimmt dein Mikrofon auf und bei aktivierter Systemaudio-Erfassung auch die anderen in Zoom, Teams, Google Meet und anderen Apps. Erfordert einen Mac mit Apple Silicon (macOS 13.4+). Nach dem Laden der Sprachmodelle kannst du im Bereich „Auf diesem Mac“ ohne Internet aufnehmen und transkribieren.',
+          body: 'Nimmt dein Mikrofon auf und bei aktivierter Systemaudio-Erfassung und erteilter macOS-Berechtigung auch die anderen in Zoom, Teams, Google Meet und anderen Apps. Erfordert einen Mac mit Apple Silicon (macOS 13.4+). Nach dem Laden der Sprachmodelle kannst du im Bereich „Auf diesem Mac“ ohne Internet aufnehmen und transkribieren.',
           link: 'Aufnahme und Transkription',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Belege führen zurück zur Aufnahme',
-        body: 'Zugeordnete Notizpunkte zeigen die wahrscheinliche Quelle. Ist die Aufnahme verfügbar, wähle einen Beleg, um diese Stelle im Transkript markiert zu sehen. Eine Sprecherangabe erscheint, wenn sie verfügbar ist.',
+        body: 'Auf dem Mac wählst du, wenn die Aufnahme verfügbar ist, einen Beleg neben einem zugeordneten Notizpunkt aus. IndexOne öffnet den Tab mit der Aufnahme und markiert die wahrscheinliche Stelle im Transkript. Eine Sprecherangabe erscheint, wenn sie verfügbar ist.',
         link: 'Belege',
       },
       'security': {
@@ -333,9 +333,9 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Belege',
         title: 'Zugeordnete Punkte zeigen ihre wahrscheinliche Quelle.',
-        body: 'Ist die Aufnahme verfügbar, öffnet die Auswahl des Belegs eines zugeordneten Notizpunkts den Tab mit der Aufnahme und markiert die wahrscheinliche Stelle im Transkript. Eine Sprecherangabe erscheint, wenn sie verfügbar ist. Punkte ohne Beleg solltest du selbst prüfen.',
+        body: 'Auf dem Mac wählst du, wenn die Aufnahme verfügbar ist, einen Beleg neben einem zugeordneten Notizpunkt aus. IndexOne öffnet den Tab mit der Aufnahme und markiert die wahrscheinliche Stelle im Transkript. Eine Sprecherangabe erscheint, wenn sie verfügbar ist. Punkte ohne Beleg solltest du selbst prüfen.',
         points: [
-          'Wahrscheinliche Quelle, im Transkript markiert',
+          'Auf dem Mac: die wahrscheinliche Quelle, im Transkript markiert',
           'Zeitpunkt der Quelle und Sprecherangabe, wenn verfügbar',
           'Sieben Ein-Klick-Ergebnisse aus jedem Meeting – Follow-up-Mail, Entscheidungsprotokoll, Ticket, 1:1-Rückblick, Standup, Sales-Rückblick, Interview-Notizen',
           'Versiegelte Ordner verraten nie Zeitpunkte oder Sprecher',

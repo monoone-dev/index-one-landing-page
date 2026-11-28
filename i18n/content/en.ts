@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne on GitHub',
     titleStrong: 'Every meeting remembered.',
     titleSoft: 'Notes you can check against the recording.',
-    subHtml: 'Record <b>without a bot</b> and transcribe <b>on your Mac</b>. To record other participants, enable system audio capture. Free on Mac, up to four hours per recording.',
+    subHtml: 'Record <b>without a bot</b> and transcribe <b>on your Mac</b>. To record other participants, enable system audio capture and grant macOS permission. Free on Mac. In the On this Mac space, recordings can last up to four hours.',
     download: 'Download for Mac — free',
     signup: 'Create a free account',
     note: 'Apple Silicon (M1 or later) · macOS 13.4+ · signed and notarized · no account needed on the Mac',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Hears both sides of the call',
-          body: 'It records your mic and, with system audio capture on, the other people on Zoom, Teams, Google Meet and other apps. Requires a Mac with Apple Silicon (macOS 13.4+). After downloading the speech models, you can record and transcribe offline in the On this Mac space.',
+          body: 'It records your mic and, with system audio capture on and macOS permission granted, the other people on Zoom, Teams, Google Meet and other apps. Requires a Mac with Apple Silicon (macOS 13.4+). After downloading the speech models, you can record and transcribe offline in the On this Mac space.',
           link: 'Capture and transcription',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Receipts point back to the audio',
-        body: 'Matched note points show the likely source. When the recording is available, select a receipt to see that passage highlighted in the transcript. A speaker label appears when available.',
+        body: 'On Mac, when the recording is available, select a receipt next to a matched note point. IndexOne opens the recording tab and highlights the likely passage in the transcript. A speaker label appears when available.',
         link: 'Receipts',
       },
       'security': {
@@ -333,9 +333,9 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Receipts',
         title: 'Matched points show their likely source.',
-        body: 'When the recording is available, selecting the receipt of a matched note point opens the recording tab and highlights the likely passage in the transcript. A speaker label appears when available. Points without a receipt are worth checking.',
+        body: 'On Mac, when the recording is available, select a receipt next to a matched note point. IndexOne opens the recording tab and highlights the likely passage in the transcript. A speaker label appears when available. Points without a receipt are worth checking.',
         points: [
-          'The likely source, highlighted in the transcript',
+          'On Mac, the likely source highlighted in the transcript',
           'Source time and a speaker label when available',
           'Seven one-click artifacts from any meeting — follow-up email, decision log, work ticket, 1:1 recap, standup, sales recap, interview notes',
           'Sealed folders leak no timing or speaker, ever',

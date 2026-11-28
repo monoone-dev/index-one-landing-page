@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne no GitHub',
     titleStrong: 'Cada reunião lembrada.',
     titleSoft: 'Notas que você confere na gravação.',
-    subHtml: 'Grave <b>sem bot</b> e transcreva <b>no seu Mac</b>. Para gravar as outras pessoas, ative a captura do áudio do sistema. Grátis no Mac, até quatro horas por gravação.',
+    subHtml: 'Grave <b>sem bot</b> e transcreva <b>no seu Mac</b>. Para gravar as outras pessoas, ative a captura do áudio do sistema e conceda a permissão do macOS. Grátis no Mac. No espaço «Neste Mac», uma gravação pode durar até quatro horas.',
     download: 'Baixar para Mac — grátis',
     signup: 'Criar uma conta gratuita',
     note: 'Apple Silicon (M1 ou posterior) · macOS 13.4+ · assinado e notarizado · sem necessidade de conta no Mac',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Ouve os dois lados da chamada',
-          body: 'Grava o seu microfone e, com a captura do áudio do sistema ativada, também as outras pessoas no Zoom, Teams, Google Meet e outros apps. Requer um Mac com Apple Silicon (macOS 13.4+). Depois de baixar os modelos de fala, você pode gravar e transcrever sem internet no espaço «Neste Mac».',
+          body: 'Grava o seu microfone e, com a captura do áudio do sistema ativada e a permissão do macOS concedida, também as outras pessoas no Zoom, Teams, Google Meet e outros apps. Requer um Mac com Apple Silicon (macOS 13.4+). Depois de baixar os modelos de fala, você pode gravar e transcrever sem internet no espaço «Neste Mac».',
           link: 'Captura e transcrição',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Os recibos levam ao áudio',
-        body: 'Os pontos da nota associados indicam a fonte provável. Quando a gravação está disponível, selecione um recibo para ver esse trecho destacado na transcrição. O rótulo de quem falou aparece quando está disponível.',
+        body: 'No Mac, quando a gravação está disponível, selecione um recibo ao lado de um ponto da nota associado. O IndexOne abre a aba da gravação e destaca o trecho provável na transcrição. O rótulo de quem falou aparece quando está disponível.',
         link: 'Recibos',
       },
       'security': {
@@ -333,9 +333,9 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Recibos',
         title: 'Os pontos associados indicam a fonte provável.',
-        body: 'Quando a gravação está disponível, selecionar o recibo de um ponto da nota associado abre a aba da gravação e destaca o trecho provável na transcrição. O rótulo de quem falou aparece quando está disponível. Vale a pena conferir os pontos sem recibo.',
+        body: 'No Mac, quando a gravação está disponível, selecione um recibo ao lado de um ponto da nota associado. O IndexOne abre a aba da gravação e destaca o trecho provável na transcrição. O rótulo de quem falou aparece quando está disponível. Vale a pena conferir os pontos sem recibo.',
         points: [
-          'A fonte provável, destacada na transcrição',
+          'No Mac, a fonte provável destacada na transcrição',
           'Momento da fonte e rótulo de quem falou, quando disponível',
           'Sete documentos com um clique a partir de qualquer reunião — e-mail de follow-up, registro de decisões, ticket de trabalho, resumo de 1:1, standup, resumo de vendas, notas de entrevista',
           'Pastas seladas nunca vazam horários nem quem falou',

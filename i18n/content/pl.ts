@@ -66,7 +66,7 @@ const content: SiteContent = {
     githubAria: 'IndexOne na GitHubie',
     titleStrong: 'Każde spotkanie zapamiętane.',
     titleSoft: 'Notatki, które sprawdzisz w nagraniu.',
-    subHtml: 'Nagrywaj <b>bez bota</b> i transkrybuj <b>na Macu</b>. Aby nagrać rozmówców, włącz przechwytywanie dźwięku systemowego. Za darmo na Macu, do 4 godzin na nagranie.',
+    subHtml: 'Nagrywaj <b>bez bota</b> i transkrybuj <b>na Macu</b>. Aby nagrać rozmówców, włącz dźwięk systemowy i zezwól na jego przechwytywanie w macOS. Za darmo na Macu. W przestrzeni «Na tym Macu» nagranie może trwać do 4 godzin.',
     download: 'Pobierz na Maca za darmo',
     signup: 'Załóż darmowe konto',
     note: 'Apple Silicon (M1 lub nowszy) · macOS 13.4+ · podpisany i notaryzowany · na Macu bez zakładania konta',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Słyszy obie strony rozmowy',
-          body: 'Nagrywa Twój mikrofon, a przy włączonym przechwytywaniu dźwięku systemowego także rozmówców z Zooma, Teams, Google Meet i innych aplikacji. Wymaga Maca z Apple Silicon (macOS 13.4+). Po pobraniu modeli mowy możesz nagrywać i transkrybować na Macu bez internetu w przestrzeni «Na tym Macu».',
+          body: 'Nagrywa Twój mikrofon, a przy włączonym przechwytywaniu dźwięku systemowego i udzielonym uprawnieniu w macOS także rozmówców z Zooma, Teams, Google Meet i innych aplikacji. Wymaga Maca z Apple Silicon (macOS 13.4+). Po pobraniu modeli mowy możesz nagrywać i transkrybować na Macu bez internetu w przestrzeni «Na tym Macu».',
           link: 'Nagrywanie i transkrypcja',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Dowód prowadzi do nagrania',
-        body: 'Punkty dopasowane do nagrania wskazują jego prawdopodobny fragment. Gdy nagranie jest dostępne, kliknij dowód, aby zobaczyć ten fragment podświetlony w transkrypcji. Gdy etykieta mówcy jest dostępna, aplikacja ją pokazuje.',
+        body: 'Na Macu, gdy nagranie jest dostępne, kliknij dowód przy dopasowanym punkcie notatki. Otworzy się zakładka z nagraniem i podświetli się prawdopodobny fragment transkrypcji. Etykieta mówcy pojawia się, gdy jest dostępna.',
         link: 'Dowody',
       },
       'security': {
@@ -333,9 +333,9 @@ const content: SiteContent = {
       'receipts': {
         eyebrow: 'Dowody',
         title: 'Dopasowane punkty wskazują prawdopodobne źródło.',
-        body: 'Gdy nagranie jest dostępne, kliknięcie dowodu przy dopasowanym punkcie notatki otwiera zakładkę z nagraniem i podświetla prawdopodobny fragment transkrypcji. Aplikacja pokazuje etykietę mówcy, gdy jest dostępna. Punkty bez odnośnika warto sprawdzić.',
+        body: 'Na Macu, gdy nagranie jest dostępne, kliknij dowód przy dopasowanym punkcie notatki. Otworzy się zakładka z nagraniem i podświetli się prawdopodobny fragment transkrypcji. Etykieta mówcy pojawia się, gdy jest dostępna. Punkty bez odnośnika warto sprawdzić.',
         points: [
-          'Prawdopodobne źródło podświetlone w transkrypcji',
+          'Na Macu: prawdopodobne źródło podświetlone w transkrypcji',
           'Czas źródła i etykieta mówcy, gdy jest dostępna',
           'Siedem gotowych dokumentów z każdego spotkania jednym kliknięciem — e-mail z podsumowaniem, rejestr decyzji, zgłoszenie, podsumowanie 1:1, standup, podsumowanie sprzedażowe, notatki z rekrutacji',
           'Zapieczętowane foldery nigdy nie zdradzają czasu ani mówcy',
