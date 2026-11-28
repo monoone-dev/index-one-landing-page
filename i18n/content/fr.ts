@@ -65,8 +65,8 @@ const content: SiteContent = {
   hero: {
     githubAria: 'IndexOne sur GitHub',
     titleStrong: 'Chaque réunion en mémoire.',
-    titleSoft: 'Chaque phrase avec sa preuve.',
-    subHtml: 'IndexOne enregistre les deux côtés de l’appel <b>sur votre Mac sans bot</b>, le transcrit <b>sur votre Mac</b> et vous laisse interroger Ivy — en pleine réunion ou des mois plus tard — avec un lien vers la seconde où cela a été dit. Gratuit sur Mac, sans limite de minutes ni d’historique. Vos espaces cloud s’ouvrent dans n’importe quel navigateur.',
+    titleSoft: 'Des notes vérifiables sur l’enregistrement.',
+    subHtml: 'Enregistrez <b>sans bot</b> et transcrivez <b>sur votre Mac</b>. Pour enregistrer vos interlocuteurs, activez la capture du son système et accordez l’autorisation macOS. Gratuit sur Mac. Dans l’espace « Sur ce Mac », un enregistrement peut durer jusqu’à quatre heures.',
     download: 'Télécharger pour Mac — gratuit',
     signup: 'Créer un compte gratuit',
     note: 'Apple Silicon (M1 ou plus récent) · macOS 13.4+ · signée et notariée · aucun compte nécessaire sur Mac',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Entend les deux côtés de l\'appel',
-          body: 'Votre micro et l\'audio des autres participants sont enregistrés en deux flux et transcrits sur votre Mac par Whisper.',
+          body: 'Enregistre votre micro et, avec la capture du son système activée et l’autorisation macOS accordée, aussi vos interlocuteurs sur Zoom, Teams, Google Meet et d’autres apps. Nécessite un Mac avec Apple Silicon (macOS 13.4+). Après le téléchargement des modèles vocaux, vous pouvez enregistrer et transcrire sans internet dans l’espace « Sur ce Mac ».',
           link: 'Capture et transcription',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Les preuves renvoient à l’audio',
-        body: 'Chaque ligne étayée d’une note renvoie à la seconde d’audio dont elle provient, avec l’intervenant. Les lignes sans preuve n’en reçoivent pas : vous voyez quelles lignes ont une source probable dans l’enregistrement.',
+        body: 'Sur Mac, quand l’enregistrement est disponible, sélectionnez une entrée dans la carte « Preuves » sous la note. IndexOne ouvre l’onglet « Audio » et surligne le passage probable dans la transcription. L’étiquette de l’intervenant apparaît quand elle est disponible.',
         link: 'Les preuves',
       },
       'security': {
@@ -274,7 +274,7 @@ const content: SiteContent = {
       'imports': {
         eyebrow: 'Imports',
         title: 'Apportez vos notes existantes',
-        body: 'Settings → Imports récupère un <b>export Notion</b>, un <b>coffre Obsidian</b>, <b>Apple Notes</b>, un dossier de <b>fichiers Markdown</b> ou une <b>sauvegarde IndexOne</b>. Entièrement hors ligne — sans compte, sans clé, sans appel réseau. Chaque import commence par une simulation, pour voir ce qu’il écrirait avant qu’il n’écrive quoi que ce soit.',
+        body: 'Settings → Imports récupère un <b>export Notion</b>, un <b>coffre Obsidian</b>, <b>Apple Notes</b>, un dossier de <b>fichiers Markdown</b> ou une <b>sauvegarde IndexOne</b>. Entièrement hors ligne — sans compte, sans clé, sans appel réseau. L’import de ces notes commence par une simulation, pour voir ce qu’il écrirait avant qu’il n’écrive quoi que ce soit.<br><br>Sur Mac, vous pouvez aussi importer comme nouvelle réunion un fichier de transcription pris en charge de Teams, Zoom ou Google Meet. L’import peut conserver les horodatages et les étiquettes d’intervenants présents dans le fichier. Si le fichier n’a pas d’horodatage, l’app les estime. L’app essaie ensuite de générer une note. L’IA dans le cloud nécessite une connexion internet. Formats : VTT, SRT, TXT et exports DOCX pris en charge.',
         points: [
           'Cinq sources : un export Notion, un coffre Obsidian, Apple Notes, un dossier de fichiers Markdown, une sauvegarde IndexOne',
           'Simulation d’abord — rien n’est écrit tant que vous ne validez pas',
@@ -332,15 +332,15 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Preuves',
-        title: 'Les affirmations étayées remontent à l’enregistrement.',
-        body: 'Les notes d’IndexOne ne vous demandent pas de leur faire confiance. Chaque ligne fondée sur ce qui a réellement été dit porte une preuve — cliquez dessus pour aller directement à la seconde d’audio correspondante, avec l’intervenant. Les lignes paraphrasées ou non étayées n’en ont pas : vous voyez d’un coup d’œil quelles lignes ont une source probable dans l’enregistrement.',
+        title: 'Les points rapprochés indiquent leur source probable.',
+        body: 'Sur Mac, quand l’enregistrement est disponible, sélectionnez une entrée dans la carte « Preuves » sous la note. IndexOne ouvre l’onglet « Audio » et surligne le passage probable dans la transcription. L’étiquette de l’intervenant apparaît quand elle est disponible. Les points sans preuve méritent d’être vérifiés.',
         points: [
-          'Cliquez sur une affirmation, écoutez exactement d’où elle vient',
-          'Intervenant et seconde exacte sur chaque preuve',
+          'Sur Mac, la source probable surlignée dans la transcription',
+          'Horodatage de la source et étiquette de l’intervenant, si disponible',
           'Sept documents en un clic à partir de n’importe quelle réunion — e-mail de suivi, journal des décisions, ticket, compte rendu de 1:1, standup, récap commercial, notes d’entretien',
           'Les dossiers scellés ne laissent jamais fuiter ni horodatage ni intervenant',
         ],
-        alt: 'Les preuves d’une note générée : une ligne par affirmation étayée, chacune avec l’intervenant et la seconde d’audio d’origine',
+        alt: 'Liste de preuves avec les temps de l’enregistrement et les étiquettes d’intervenants visibles',
       },
       'markdown': {
         eyebrow: 'À vous pour de bon',

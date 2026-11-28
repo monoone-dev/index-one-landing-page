@@ -22,7 +22,7 @@ Browse › **Graph** lists the people and projects across your meetings, with ho
 - **All**, **People** and **Projects** filter by kind.
 - **Sort** by **Most mentioned** or **Name**.
 
-Open one to see its details: the meetings it is **Mentioned in**, the entities it appears with, and a decision ledger of **Changes** over the last 90 days or all time. Each change links to its source meeting and opens the recording at the moment a receipt matches. See [Receipts](/docs/receipts/).
+Open one to see its details: the meetings it is **Mentioned in**, the entities it appears with, and a decision ledger of **Changes** over the last 90 days or all time. Each entry links to its source meeting. See [Receipts](/docs/receipts/).
 
 ## People
 

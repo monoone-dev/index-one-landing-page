@@ -65,8 +65,8 @@ const content: SiteContent = {
   hero: {
     githubAria: 'IndexOne on GitHub',
     titleStrong: 'Every meeting remembered.',
-    titleSoft: 'Every line with proof.',
-    subHtml: 'IndexOne records both sides of the call <b>on your Mac without a bot</b>, transcribes it <b>on-device</b> and lets you ask Ivy — mid-meeting or months later — with a link to the second it was said. Free on the Mac, with no minute or history limit. Your cloud spaces open in any browser.',
+    titleSoft: 'Notes you can check against the recording.',
+    subHtml: 'Record <b>without a bot</b> and transcribe <b>on your Mac</b>. To record other participants, enable system audio capture and grant macOS permission. Free on Mac. In the On this Mac space, recordings can last up to four hours.',
     download: 'Download for Mac — free',
     signup: 'Create a free account',
     note: 'Apple Silicon (M1 or later) · macOS 13.4+ · signed and notarized · no account needed on the Mac',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: 'Hears both sides of the call',
-          body: 'Your mic and the other participants\' audio are recorded as two streams and transcribed on your Mac by Whisper.',
+          body: 'It records your mic and, with system audio capture on and macOS permission granted, the other people on Zoom, Teams, Google Meet and other apps. Requires a Mac with Apple Silicon (macOS 13.4+). After downloading the speech models, you can record and transcribe offline in the On this Mac space.',
           link: 'Capture and transcription',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: 'Receipts point back to the audio',
-        body: 'Each grounded line in a note links to the second of audio it came from, with the speaker. Lines without evidence get no receipt, so you can see which lines have a likely source in the recording.',
+        body: 'On Mac, when the recording is available, select an entry in the Receipts card below the note. IndexOne opens the Audio tab and highlights the likely passage in the transcript. A speaker label appears when available.',
         link: 'Receipts',
       },
       'security': {
@@ -274,7 +274,7 @@ const content: SiteContent = {
       'imports': {
         eyebrow: 'Imports',
         title: 'Bring your existing notes',
-        body: 'Settings → Imports pulls in a <b>Notion export</b>, an <b>Obsidian vault</b>, <b>Apple Notes</b>, a folder of <b>Markdown files</b>, or an <b>IndexOne backup</b>. Entirely offline — no account, no key, no network call. Every import is a dry run first, so you see what it would write before it writes anything.',
+        body: 'Settings → Imports pulls in a <b>Notion export</b>, an <b>Obsidian vault</b>, <b>Apple Notes</b>, a folder of <b>Markdown files</b>, or an <b>IndexOne backup</b>. Entirely offline — no account, no key, no network call. Importing these notes starts with a dry run, so you see what it would write before it writes anything.<br><br>On Mac, import a supported transcript file from Teams, Zoom or Google Meet as a new meeting. Import can keep times and speaker labels that are present in the file. If the file has no times, the app estimates them. The app then tries to generate a note. Cloud AI requires an internet connection. Formats: VTT, SRT, TXT and supported DOCX exports.',
         points: [
           'Five sources: a Notion export, an Obsidian vault, Apple Notes, a folder of Markdown files, an IndexOne backup',
           'Dry run first — nothing is written until you say so',
@@ -332,15 +332,15 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: 'Receipts',
-        title: 'Grounded claims trace back to the tape.',
-        body: 'IndexOne\'s notes don\'t ask you to trust them. Each line that\'s grounded in what was actually said carries a receipt — click it to jump straight to that second of audio, with the speaker. Paraphrased or unsupported lines get none, so you can see at a glance which lines have a likely source in the recording.',
+        title: 'Matched points show their likely source.',
+        body: 'On Mac, when the recording is available, select an entry in the Receipts card below the note. IndexOne opens the Audio tab and highlights the likely passage in the transcript. A speaker label appears when available. Points without a receipt are worth checking.',
         points: [
-          'Click a claim, hear exactly where it came from',
-          'The speaker and the exact second on every receipt',
+          'On Mac, the likely source highlighted in the transcript',
+          'Source time and a speaker label when available',
           'Seven one-click artifacts from any meeting — follow-up email, decision log, work ticket, 1:1 recap, standup, sales recap, interview notes',
           'Sealed folders leak no timing or speaker, ever',
         ],
-        alt: 'A generated note\'s receipts: one row per grounded claim, each carrying the speaker and the second of audio it came from',
+        alt: 'Receipts list with recording times and visible speaker labels',
       },
       'markdown': {
         eyebrow: 'Yours to keep',

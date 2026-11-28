@@ -65,8 +65,8 @@ const content: SiteContent = {
   hero: {
     githubAria: 'GitHub 上的 IndexOne',
     titleStrong: '每场会议都记得。',
-    titleSoft: '每句话都有凭据。',
-    subHtml: 'IndexOne <b>在 Mac 上无需机器人</b>即可录下通话双方，<b>在你的 Mac 上</b>完成转写，并让你向 Ivy 提问——无论是会议进行中还是数月之后——回答会链接到原话所在的那一秒。Mac 上免费，不限分钟数，也不限历史记录。你的云端空间可在任何浏览器中打开。',
+    titleSoft: '笔记可对照录音核实。',
+    subHtml: '<b>无需机器人</b>即可录音，并<b>在你的 Mac 上</b>转写。如需录下其他参与者，请开启系统音频采集并授予 macOS 权限。Mac 上免费。在“在这台 Mac 上”空间中，单次录音最长 4 小时。',
     download: '免费下载 Mac 版',
     signup: '免费创建账户',
     note: 'Apple Silicon（M1 及更新机型）· macOS 13.4+ · 已签名并通过公证 · 在 Mac 上使用无需账户',
@@ -82,7 +82,7 @@ const content: SiteContent = {
       items: {
         capture: {
           title: '听到通话双方',
-          body: '你的麦克风和其他参与者的音频作为两路分别录制，并由 Whisper 在你的 Mac 上转写。',
+          body: '录制你的麦克风；开启系统音频采集并授予 macOS 权限后，还会录下 Zoom、Teams、Google Meet 及其他应用中对方的声音。需要搭载 Apple 芯片的 Mac（macOS 13.4+）。下载语音模型后，你可以在“在这台 Mac 上”空间中离线录音和转写。',
           link: '录制与转写',
         },
         ivy: {
@@ -157,7 +157,7 @@ const content: SiteContent = {
       },
       'receipts': {
         title: '凭证直通原始录音',
-        body: '笔记中每一行有据可查的内容，都链接到它所对应的那一秒音频，并标明发言人。缺乏证据的内容不会获得凭证，哪些行在录音中有可能的出处，一目了然。',
+        body: '在 Mac 上，当录音可用时，选择笔记下方“凭证”卡片中的一个条目。IndexOne 会打开“音频”标签页，并在转写文本中高亮可能的片段。有发言人标签时会一并显示。',
         link: '出处凭证',
       },
       'security': {
@@ -274,7 +274,7 @@ const content: SiteContent = {
       'imports': {
         eyebrow: '导入',
         title: '带上你已有的笔记',
-        body: '在 Settings → Imports（设置 → 导入）中，可导入 <b>Notion 导出文件</b>、<b>Obsidian 知识库</b>、<b>Apple Notes</b>、<b>Markdown 文件</b>文件夹或 <b>IndexOne 备份</b>。全程离线——无需账号，无需密钥，不发起任何网络请求。每次导入都会先进行一次试运行，让你在写入任何内容之前就看到它将写入什么。',
+        body: '在 Settings → Imports（设置 → 导入）中，可导入 <b>Notion 导出文件</b>、<b>Obsidian 知识库</b>、<b>Apple Notes</b>、<b>Markdown 文件</b>文件夹或 <b>IndexOne 备份</b>。全程离线——无需账号，无需密钥，不发起任何网络请求。导入这些笔记时会先进行一次试运行，让你在写入任何内容之前就看到它将写入什么。<br><br>在 Mac 上，你还可以把受支持的 Teams、Zoom 或 Google Meet 转写文件载入为一场新会议。导入时可以保留文件中已有的时间和发言人标签。如果文件没有时间，应用会估算。随后应用会尝试生成笔记。使用云端 AI 需要联网。格式：VTT、SRT、TXT 以及受支持的 DOCX 导出文件。',
         points: [
           '五种来源：Notion 导出文件、Obsidian 知识库、Apple Notes、Markdown 文件夹、IndexOne 备份',
           '先试运行——在你确认之前，不会写入任何内容',
@@ -332,15 +332,15 @@ const content: SiteContent = {
       },
       'receipts': {
         eyebrow: '出处凭证',
-        title: '有据可依的结论都能追溯到原始录音。',
-        body: 'IndexOne 的笔记不要求你盲目信任。凡是基于实际发言内容的每一行，都带有一条凭证——点击即可直接跳到那一秒的音频，并显示发言人。转述或缺乏依据的内容不会获得凭证，哪些行在录音中有可能的出处，一眼便知。',
+        title: '匹配到的要点会标出可能的出处。',
+        body: '在 Mac 上，当录音可用时，选择笔记下方“凭证”卡片中的一个条目。IndexOne 会打开“音频”标签页，并在转写文本中高亮可能的片段。有发言人标签时会一并显示。没有凭证的要点值得自行核对。',
         points: [
-          '点击一条结论，就能听到它的确切出处',
-          '每条凭证都标有发言人和精确到秒的时间',
+          '在 Mac 上，在转写文本中高亮可能的出处',
+          '出处时间，以及可用时的发言人标签',
           '任何会议都可一键生成七种成果——跟进邮件、决策日志、工作工单、一对一回顾、站会纪要、销售回顾、面试记录',
           '已封存的文件夹绝不会泄露任何时间或发言人信息',
         ],
-        alt: '生成笔记的出处凭证：每条有据可查的结论占一行，各自标明发言人和对应的音频时刻',
+        alt: '凭证列表，带录音时间和可见的发言人标签',
       },
       'markdown': {
         eyebrow: '永久归你',

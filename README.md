@@ -51,7 +51,7 @@ IndexOne's public home. The app's source code is not public and is not here.
    your IndexOne account (Personal or an organization) can use Ivy on the web, which transcribes on
    IndexOne's servers.
 3. **Write the note** — when you stop, the AI you chose writes a summary, decisions, action items and
-   quotes. Each grounded line links back to the second of audio it came from.
+   quotes. Matched note points show their likely source in the transcript.
 4. **Ask Ivy** — mid-meeting without stopping the recording, or months later across every meeting,
    note and document. Every answer lists its sources.
 
