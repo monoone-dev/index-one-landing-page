@@ -19,7 +19,7 @@ const content: SiteContent = {
     pricing: {
       breadcrumb: '价格',
       title: 'IndexOne 价格 — Free、Personal 与 Team',
-      description: 'IndexOne 在 Mac 上免费。云端方案：Personal 每月 49 PLN，Team 每席位 75 PLN（不含税），均含合理使用原则下不限量的云端转写。云端方案在网页版中销售。',
+      description: 'IndexOne 在 Mac 上免费。云端方案：Personal 每月 49 PLN，Team 每席位 75 PLN（不含税），均包含有额度限制的云端转写。云端方案在网页版中销售。',
     },
     changelog: {
       breadcrumb: '更新日志',
@@ -179,6 +179,11 @@ const content: SiteContent = {
     seeAll: '查看全部功能',
   },
   privacy: {
+    hosting: {
+      title: '服务器与数据库',
+      body: 'IndexOne 的服务器和数据库位于欧盟（AWS，瑞典）。在云端 Ivy 的默认模式下，完成任务所需的文本会发送给 Anthropic，后者可能在欧洲经济区（EEA）之外处理这些文本。详情见隐私政策。',
+      policyLink: '隐私政策（英文）',
+    },
     lifecycle: {
       "title": "数据生命周期 · 云端方案",
       "items": [
@@ -382,7 +387,7 @@ const content: SiteContent = {
       },
       grow: {
         title: "需要时获得更多空间",
-        body: "付费方案提供不限量的云端转写、更多 Ivy 用量和更多存储空间。Team 还提供共享工作区。",
+        body: "付费方案提供更多云端转写、更多 Ivy 用量和更多存储空间。Team 还提供共享工作区。",
       },
     },
     download: "免费下载",
@@ -392,14 +397,14 @@ const content: SiteContent = {
     status: "云端方案现已开售。登录网页版即可购买方案或管理订阅。Mac 本地功能仍可使用。",
     trialTitle: "每月免费",
     trial: "每个免费账户每个日历月（UTC）可获得 200,000 Ivy 单位和一定的云端转写额度，无需绑卡。Mac 本地功能没有方案限制。",
-    meterTitle: "云端转写不限量",
-    meter: "付费方案的云端转写没有上限。转写量很大时，部分录音可能需要几个小时才能完成。适用合理使用原则。Mac 上的转写始终即时完成，且不限量。",
-    fairUse: "付费方案包含合理使用原则下不限量的云端转写；Free 额度和合理使用规则详见服务条款。",
+    meterTitle: "付费方案的云端转写",
+    meter: "Personal 和 Team 包含云端转写。使用量很大时，之后的录音可能进入较慢的队列。额度限制和合理使用规则详见服务条款。在你的 Mac 上本地完成的转写不受方案额度限制。",
+    fairUse: "Personal 和 Team 包含云端转写。使用量很大时，之后的录音可能进入较慢的队列。额度限制和合理使用规则详见服务条款。在你的 Mac 上本地完成的转写不受方案额度限制。",
     fairUseLink: "阅读服务条款（波兰语）",
     privacyTitle: "本地与云端",
     privacy: "Mac 本地处理留在 Mac 上。标准账户云端在运营方可读取的服务器上存储和处理内容，并非端到端加密。模式遮蔽不等于完全匿名化。付费方案不会授予私人空间访问权。",
     detailsTitle: "方案详情",
-    details: "付费转写没有方案上限；适用合理使用原则，大量使用时可能需要更长时间。每月云端额度按 UTC 自然月重置。账户的标准云端未采用端到端加密：运营方可以读取存储和处理的内容。模式遮盖并非完全匿名化。在你的 Mac 上进行的本地处理留在你的 Mac 上。付费方案从不授予对私密空间的访问权限。",
+    details: "Free 额度在每个 UTC 自然月开始时重置。Personal 和 Team 的额度在每个计费周期开始时重置。如果付费方案剩余的快速额度容不下某段录音，它可能转入经济模式。如果经济模式的额度也不够，可以在额度重置后再提交新的录音进行转写。计费方式和各项额度大小详见服务条款。账户的标准云端未采用端到端加密：运营方可以读取存储和处理的内容。模式遮盖并非完全匿名化。在你的 Mac 上进行的本地处理留在你的 Mac 上。付费方案从不授予对私密空间的访问权限。",
     more: "更多计费详情",
     after: "Free 包含 1 GB 内的基础笔记、编辑、普通搜索、同步、阅读和导出，以及每月云端额度。付费方案提供更多云端 AI、转写和存储空间。",
     team: "Personal 与每个组织的订阅和余额独立。Team 每席位含 225 万交互 Ivy 单位和 25 万自动化单位；自动化共用单位池。存储由组织共享。席位不改变权限。最多 2 个免费组织，每个 5 名成员，共享创建者账户存储。",
@@ -411,7 +416,7 @@ const content: SiteContent = {
     basics: "浏览器中的云端笔记与同步",
     ivy: "云端 Ivy 单位 / 月",
     asr: "云端转写",
-    asrUnlimited: "不限量 · 合理使用",
+    asrPaid: "包含 · 有额度限制",
     asrBasic: "每月额度",
     storage: "云端存储",
     gb: "GB",
@@ -428,7 +433,7 @@ const content: SiteContent = {
     recommended: "推荐",
     note: "Personal 已含增值税。Team 至少 {seats} 个席位：每月合计 {total}（不含税）。购买前，网页版会显示税费和最终价格。",
     compareLink: "比较全部方案详情",
-    peek: { benefit: "不限量云端转写", link: "查看 Personal 方案" },
+    peek: { benefit: "更多云端转写", link: "查看 Personal 方案" },
     plans: {
       free: {
         name: "Free",
@@ -449,7 +454,7 @@ const content: SiteContent = {
         period: "每月，含增值税",
         points: [
           "包含 Free 的全部内容",
-          "不限量云端转写",
+          "更多云端转写",
           "每月 {ivy} Ivy 单位",
           "{storage} GB 云端存储",
         ],
@@ -462,7 +467,7 @@ const content: SiteContent = {
         period: "每席位每月（不含税），至少 {seats} 个席位",
         points: [
           "共享笔记与团队工作区",
-          "不限量云端转写",
+          "每个席位均含云端转写",
           "每席位每月 {ivy} Ivy 单位",
           "每席位 {storage} GB 云端存储",
           "Google Meet 机器人",
@@ -527,7 +532,7 @@ const content: SiteContent = {
     items: [
       {
         question: 'Free 包含哪些内容？',
-        answer: '在 Mac 上，一切都包含：录音、转写、笔记、Ivy on this Mac 和导出，无需账号，也没有方案限制。免费账户还可在浏览器中使用 1 GB 以内的云端笔记、编辑、搜索、同步、阅读和导出，并获得每月的 Ivy 单位和云端转写额度。付费方案提供合理使用原则下不限量的云端转写、更多 Ivy 单位和更多存储空间。',
+        answer: '在 Mac 上，一切都包含：录音、转写、笔记、Ivy on this Mac 和导出，无需账号，也没有方案限制。免费账户还可在浏览器中使用 1 GB 以内的云端笔记、编辑、搜索、同步、阅读和导出，并获得每月的 Ivy 单位和云端转写额度。付费方案提供更多云端转写、更多 Ivy 单位和更多存储空间。使用量很大时，之后的录音可能进入较慢的队列；额度限制和合理使用规则详见服务条款。',
       },
       {
         question: '我的音频会上传到云端吗？',

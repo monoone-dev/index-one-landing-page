@@ -3,6 +3,9 @@ import { site } from '~/data/site'
 
 const c = useContent()
 const to = useLocalLink()
+const { locale } = useI18n()
+// The policy is published in Polish and in English; every other language gets the English one.
+const policy = computed(() => `${site.links.legal}${locale.value === 'pl' ? 'polityka-prywatnosci.html' : 'en/privacy-policy.html'}`)
 
 usePageSeo({
   path: '/privacy',
@@ -15,6 +18,13 @@ usePageSeo({
     <PrivacySection :level="1" />
     <section class="section plan-details" aria-labelledby="plan-details-title">
       <div class="wrap">
+        <aside class="plan-details__card island" aria-labelledby="hosting-title">
+          <h2 id="hosting-title"><UIcon name="i-lucide-server" />{{ c.privacy.hosting.title }}</h2>
+          <p>{{ c.privacy.hosting.body }}</p>
+          <p class="plan-details__links">
+            <a :href="policy" target="_blank" rel="noopener">{{ c.privacy.hosting.policyLink }}</a>
+          </p>
+        </aside>
         <aside class="plan-details__card island">
           <h2 id="plan-details-title"><UIcon name="i-lucide-info" />{{ c.offer.detailsTitle }}</h2>
           <p>{{ c.offer.details }}</p>
@@ -43,6 +53,7 @@ usePageSeo({
 
 <style scoped>
 .plan-details { padding-block: 0; }
+.plan-details__card + .plan-details__card { margin-top: 24px; }
 .plan-details__card { padding: 24px 28px; border-left: 3px solid var(--accent); color: var(--text-secondary); font-size: 14.5px; }
 .plan-details__card p { margin-top: 0; }
 .plan-details h2 { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-size: 17px; letter-spacing: -0.01em; }

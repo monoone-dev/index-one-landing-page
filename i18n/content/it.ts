@@ -19,7 +19,7 @@ const content: SiteContent = {
     pricing: {
       breadcrumb: 'Prezzi',
       title: 'Prezzi di IndexOne — Free, Personal e Team',
-      description: 'IndexOne è gratuito su Mac. Piani cloud: Personal 49 PLN al mese, Team 75 PLN netti per posto, entrambi con trascrizione cloud illimitata secondo l’uso equo. I piani cloud si acquistano nell’app web.',
+      description: 'IndexOne è gratuito su Mac. Piani cloud: Personal 49 PLN al mese, Team 75 PLN netti per posto, entrambi con trascrizione cloud soggetta a limiti. I piani cloud si acquistano nell’app web.',
     },
     changelog: {
       breadcrumb: 'Novità',
@@ -179,6 +179,11 @@ const content: SiteContent = {
     seeAll: 'Vedi tutte le funzionalità',
   },
   privacy: {
+    hosting: {
+      title: 'Server e database',
+      body: 'I server e il database di IndexOne si trovano nell’Unione europea (AWS, Svezia). Nella modalità predefinita di Ivy nel cloud, il testo necessario per l’attività viene inviato ad Anthropic, che può trattarlo al di fuori del SEE. I dettagli sono nell’informativa sulla privacy.',
+      policyLink: 'Informativa sulla privacy (in inglese)',
+    },
     lifecycle: {
       "title": "Ciclo di vita dei dati · piani cloud",
       "items": [
@@ -382,7 +387,7 @@ const content: SiteContent = {
       },
       grow: {
         title: "Più spazio quando serve",
-        body: "I piani a pagamento aggiungono trascrizione cloud illimitata, più Ivy e più spazio. Team aggiunge uno spazio condiviso.",
+        body: "I piani a pagamento aggiungono più trascrizione cloud, più Ivy e più spazio. Team aggiunge uno spazio condiviso.",
       },
     },
     download: "Scarica gratis",
@@ -392,14 +397,14 @@ const content: SiteContent = {
     status: "I piani cloud sono disponibili. Accedi all’app web per acquistare un piano o gestire l’abbonamento. Le funzioni locali su Mac restano disponibili.",
     trialTitle: "Gratis ogni mese",
     trial: "Ogni account gratuito riceve ogni mese di calendario (UTC) 200.000 unità Ivy e una quota di trascrizione cloud, senza carta. Le funzioni locali su Mac non hanno limiti di piano.",
-    meterTitle: "Trascrizione cloud illimitata",
-    meter: "I piani a pagamento non hanno limiti alla trascrizione cloud. Se trascrivi molto, alcune registrazioni possono essere pronte dopo qualche ora. Si applica l’uso equo. La trascrizione sul Mac è sempre immediata e illimitata.",
-    fairUse: "I piani a pagamento includono la trascrizione cloud illimitata secondo l’uso equo; la quota Free e le regole di uso equo sono descritte nei Termini di servizio.",
+    meterTitle: "Trascrizione cloud nei piani a pagamento",
+    meter: "Personal e Team includono la trascrizione cloud. Con un uso intenso, le nuove registrazioni possono finire in una coda più lenta. Limiti e regole di uso equo sono descritti nei Termini di servizio. La trascrizione in locale sul tuo Mac non è soggetta alle quote del piano.",
+    fairUse: "Personal e Team includono la trascrizione cloud. Con un uso intenso, le nuove registrazioni possono finire in una coda più lenta. Limiti e regole di uso equo sono descritti nei Termini di servizio. La trascrizione in locale sul tuo Mac non è soggetta alle quote del piano.",
     fairUseLink: "Leggi i Termini di servizio (in polacco)",
     privacyTitle: "Locale e cloud",
     privacy: "L’elaborazione locale Mac resta sul Mac. Il cloud standard memorizza ed elabora contenuti su server leggibili dall’operatore, senza crittografia end-to-end. Mascherare schemi non è anonimizzazione completa. Un piano non concede accesso a spazi privati.",
     detailsTitle: "Dettagli dei piani",
-    details: "La trascrizione a pagamento non ha limiti di piano; vale l’uso corretto e un uso intenso può richiedere più tempo. Le quote cloud mensili si rinnovano per mese di calendario in UTC. Il cloud standard dell’account non è crittografato end-to-end: l’operatore può leggere i contenuti archiviati ed elaborati. Il mascheramento dei pattern non è un’anonimizzazione completa. L’elaborazione locale sul tuo Mac resta sul tuo Mac. I piani a pagamento non danno mai accesso agli spazi privati.",
+    details: "La quota Free si rinnova all’inizio di ogni mese di calendario (UTC). Le quote Personal e Team si rinnovano all’inizio di ogni periodo di fatturazione. Una registrazione che non rientra nella quota rapida residua di un piano a pagamento può passare in modalità economica. Se anche nella quota della modalità economica non c’è più spazio, una nuova registrazione può essere inviata alla trascrizione dopo il rinnovo della quota. I Termini di servizio spiegano come viene conteggiato l’uso e quanto sono grandi le quote. Il cloud standard dell’account non è crittografato end-to-end: l’operatore può leggere i contenuti archiviati ed elaborati. Il mascheramento dei pattern non è un’anonimizzazione completa. L’elaborazione locale sul tuo Mac resta sul tuo Mac. I piani a pagamento non danno mai accesso agli spazi privati.",
     more: "Altri dettagli sulla fatturazione",
     after: "Free include note di base, modifica, ricerca ordinaria, sincronizzazione, lettura ed esportazione entro 1 GB, più la quota cloud mensile. I piani a pagamento aggiungono più IA, trascrizione e spazio nel cloud.",
     team: "Personal e ogni organizzazione hanno abbonamenti e saldi separati. Team: 2,25 milioni di unità Ivy interattive e 250.000 per automazioni a posto; le seconde in un fondo comune. Spazio condiviso dall’organizzazione. Un posto non cambia i permessi. Fino a 2 organizzazioni gratuite da 5 membri condividono lo spazio dell’account fondatore.",
@@ -411,7 +416,7 @@ const content: SiteContent = {
     basics: "Note cloud e sincronizzazione nel browser",
     ivy: "Unità Ivy cloud / mese",
     asr: "Trascrizione cloud",
-    asrUnlimited: "Illimitata · uso equo",
+    asrPaid: "Inclusa · con limiti",
     asrBasic: "Quota mensile",
     storage: "Spazio cloud",
     gb: "GB",
@@ -428,7 +433,7 @@ const content: SiteContent = {
     recommended: "Consigliato",
     note: "Personal include l’IVA. Team da {seats} posti: in totale {total} netti al mese. Tasse e prezzo finale sono indicati nell’app web prima dell’acquisto.",
     compareLink: "Confronta tutti i dettagli",
-    peek: { benefit: "Trascrizione cloud illimitata", link: "Vedi il piano Personal" },
+    peek: { benefit: "Più trascrizione cloud", link: "Vedi il piano Personal" },
     plans: {
       free: {
         name: "Free",
@@ -449,7 +454,7 @@ const content: SiteContent = {
         period: "al mese, IVA inclusa",
         points: [
           "Tutto di Free",
-          "Trascrizione cloud illimitata",
+          "Più trascrizione cloud",
           "{ivy} unità Ivy al mese",
           "{storage} GB nel cloud",
         ],
@@ -462,7 +467,7 @@ const content: SiteContent = {
         period: "netti per posto al mese, da {seats} posti",
         points: [
           "Note e spazio di team condivisi",
-          "Trascrizione cloud illimitata",
+          "Trascrizione cloud per ogni posto",
           "{ivy} unità Ivy per posto al mese",
           "{storage} GB nel cloud per posto",
           "Bot Google Meet",
@@ -527,7 +532,7 @@ const content: SiteContent = {
     items: [
       {
         question: 'Cosa include Free?',
-        answer: 'Sul Mac, tutto: registrazione, trascrizione, note, Ivy on this Mac ed export, senza account e senza limiti di piano. Un account gratuito aggiunge note cloud, modifica, ricerca, sincronizzazione, lettura ed export nel browser entro 1 GB, più una quota mensile di unità Ivy e di trascrizione cloud. I piani a pagamento aggiungono la trascrizione cloud illimitata secondo l’uso equo, più unità Ivy e più spazio.',
+        answer: 'Sul Mac, tutto: registrazione, trascrizione, note, Ivy on this Mac ed export, senza account e senza limiti di piano. Un account gratuito aggiunge note cloud, modifica, ricerca, sincronizzazione, lettura ed export nel browser entro 1 GB, più una quota mensile di unità Ivy e di trascrizione cloud. I piani a pagamento aggiungono più trascrizione cloud, più unità Ivy e più spazio. Con un uso intenso, le nuove registrazioni possono finire in una coda più lenta; limiti e regole di uso equo sono descritti nei Termini di servizio.',
       },
       {
         question: 'Il mio audio finisce nel cloud?',

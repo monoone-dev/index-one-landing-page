@@ -2,7 +2,7 @@
   "$comment": "The docs' table of contents, in reading order. `version` and `released` name the IndexOne release every page was checked against; bump them only after checking the pages against that release. `updated` is the day the pages were last revised.",
   "version": "3.19.0",
   "released": "2026-11-14",
-  "updated": "2026-11-15",
+  "updated": "2026-11-28",
   "groups": [
     {
       "title": "Getting started",

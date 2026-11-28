@@ -19,7 +19,7 @@ const content: SiteContent = {
     pricing: {
       breadcrumb: 'Precios',
       title: 'Precios de IndexOne — Free, Personal y Team',
-      description: 'IndexOne es gratis en el Mac. Planes en la nube: Personal 49 PLN al mes, Team 75 PLN netos por plaza, ambos con transcripción en la nube ilimitada bajo uso razonable. Los planes en la nube se venden en la app web.',
+      description: 'IndexOne es gratis en el Mac. Planes en la nube: Personal 49 PLN al mes, Team 75 PLN netos por plaza, ambos con transcripción en la nube sujeta a límites. Los planes en la nube se venden en la app web.',
     },
     changelog: {
       breadcrumb: 'Novedades',
@@ -179,6 +179,11 @@ const content: SiteContent = {
     seeAll: 'Ver todas las funciones',
   },
   privacy: {
+    hosting: {
+      title: 'Servidores y base de datos',
+      body: 'Alojamos los servidores y la base de datos de IndexOne en la Unión Europea (AWS, Suecia). En el modo predeterminado de Ivy en la nube, el texto necesario para la tarea se envía a Anthropic, que puede tratarlo fuera del EEE. Encontrarás los detalles en la política de privacidad.',
+      policyLink: 'Política de privacidad (en inglés)',
+    },
     lifecycle: {
       "title": "Ciclo de vida de los datos · planes en la nube",
       "items": [
@@ -382,7 +387,7 @@ const content: SiteContent = {
       },
       grow: {
         title: "Más espacio cuando lo necesites",
-        body: "Los planes de pago añaden transcripción en la nube sin límite, más Ivy y más almacenamiento. Team añade un espacio compartido.",
+        body: "Los planes de pago añaden más transcripción en la nube, más Ivy y más almacenamiento. Team añade un espacio compartido.",
       },
     },
     download: "Descargar gratis",
@@ -392,14 +397,14 @@ const content: SiteContent = {
     status: "Los planes en la nube ya están a la venta. Inicia sesión en la app web para comprar un plan o gestionar tu suscripción. Las funciones locales de Mac siguen disponibles.",
     trialTitle: "Gratis cada mes",
     trial: "Cada cuenta gratuita recibe cada mes natural (UTC) 200.000 unidades Ivy y una cuota de transcripción en la nube, sin tarjeta. Las funciones locales de Mac no tienen límite de plan.",
-    meterTitle: "Transcripción en la nube ilimitada",
-    meter: "Los planes de pago no tienen tope de transcripción en la nube. Si transcribes mucho, algunas grabaciones pueden tardar unas horas en estar listas. Se aplica un uso razonable. La transcripción en tu Mac es siempre inmediata e ilimitada.",
-    fairUse: "Los planes de pago incluyen transcripción en la nube ilimitada bajo uso razonable; la cuota de Free y las reglas de uso razonable figuran en los Términos del servicio.",
+    meterTitle: "Transcripción en la nube en los planes de pago",
+    meter: "Personal y Team incluyen transcripción en la nube. Con un uso intensivo, las grabaciones nuevas pueden pasar a una cola más lenta. Los límites y las reglas de uso razonable figuran en los Términos del servicio. La transcripción local en tu Mac no está sujeta a las cuotas del plan.",
+    fairUse: "Personal y Team incluyen transcripción en la nube. Con un uso intensivo, las grabaciones nuevas pueden pasar a una cola más lenta. Los límites y las reglas de uso razonable figuran en los Términos del servicio. La transcripción local en tu Mac no está sujeta a las cuotas del plan.",
     fairUseLink: "Leer los Términos del servicio (en polaco)",
     privacyTitle: "Local y nube",
     privacy: "El procesamiento local de Mac permanece en el Mac. La nube estándar almacena y procesa contenido en servidores legibles por el operador, sin cifrado de extremo a extremo. Enmascarar patrones no es anonimización completa. Un plan no concede acceso a espacios privados.",
     detailsTitle: "Detalles de los planes",
-    details: "La transcripción de pago no tiene límite de plan; se aplica un uso razonable y el uso intensivo puede tardar más. Los cupos mensuales en la nube se renuevan por mes natural en UTC. La nube estándar de la cuenta no tiene cifrado de extremo a extremo: el operador puede leer el contenido almacenado y procesado. El enmascaramiento de patrones no es una anonimización completa. El procesamiento local en tu Mac se queda en tu Mac. Los planes de pago nunca dan acceso a espacios privados.",
+    details: "La cuota de Free se renueva al comienzo de cada mes natural (UTC). Las cuotas de Personal y Team se renuevan al comienzo de cada periodo de facturación. Una grabación que no quepa en la cuota rápida restante de un plan de pago puede pasar al modo económico. Si tampoco queda espacio en la cuota del modo económico, se puede enviar a transcribir una grabación nueva cuando la cuota se renueve. Los Términos del servicio detallan cómo se calcula el consumo y el tamaño de cada cuota. La nube estándar de la cuenta no tiene cifrado de extremo a extremo: el operador puede leer el contenido almacenado y procesado. El enmascaramiento de patrones no es una anonimización completa. El procesamiento local en tu Mac se queda en tu Mac. Los planes de pago nunca dan acceso a espacios privados.",
     more: "Más detalles de facturación",
     after: "Free incluye notas básicas, edición, búsqueda normal, sincronización, lectura y exportación dentro de 1 GB, además de la cuota mensual en la nube. Los planes de pago añaden más IA, transcripción y almacenamiento en la nube.",
     team: "Personal y cada organización tienen suscripciones y saldos separados. Team: 2,25 millones de unidades Ivy interactivas y 250.000 de automatización por plaza, estas últimas en un fondo común. Almacenamiento compartido por la organización. La plaza no cambia permisos. Hasta 2 organizaciones gratuitas de 5 miembros comparten el almacenamiento de la cuenta fundadora.",
@@ -411,7 +416,7 @@ const content: SiteContent = {
     basics: "Notas y sincronización en la nube, en el navegador",
     ivy: "Unidades Ivy en nube / mes",
     asr: "Transcripción en la nube",
-    asrUnlimited: "Ilimitada · uso razonable",
+    asrPaid: "Incluida · con límites",
     asrBasic: "Cuota mensual",
     storage: "Almacenamiento en nube",
     gb: "GB",
@@ -428,7 +433,7 @@ const content: SiteContent = {
     recommended: "Recomendado",
     note: "Personal incluye IVA. Team desde {seats} plazas: {total} netos al mes en total. Los impuestos y el precio final se muestran en la app web antes de comprar.",
     compareLink: "Comparar todos los detalles",
-    peek: { benefit: "Transcripción en la nube sin límite", link: "Ver el plan Personal" },
+    peek: { benefit: "Más transcripción en la nube", link: "Ver el plan Personal" },
     plans: {
       free: {
         name: "Free",
@@ -449,7 +454,7 @@ const content: SiteContent = {
         period: "al mes, IVA incluido",
         points: [
           "Todo lo de Free",
-          "Transcripción en la nube sin límite",
+          "Más transcripción en la nube",
           "{ivy} unidades Ivy al mes",
           "{storage} GB en la nube",
         ],
@@ -462,7 +467,7 @@ const content: SiteContent = {
         period: "netos por plaza al mes, desde {seats} plazas",
         points: [
           "Notas y espacio de equipo compartidos",
-          "Transcripción en la nube sin límite",
+          "Transcripción en la nube para cada plaza",
           "{ivy} unidades Ivy por plaza al mes",
           "{storage} GB en la nube por plaza",
           "Bot de Google Meet",
@@ -527,7 +532,7 @@ const content: SiteContent = {
     items: [
       {
         question: '¿Qué incluye Free?',
-        answer: 'En el Mac, todo: grabación, transcripción, notas, Ivy on this Mac y exportaciones, sin cuenta y sin límite de plan. Una cuenta gratuita añade notas, edición, búsqueda, sincronización, lectura y exportación en la nube desde el navegador dentro de 1 GB, además de una cuota mensual de unidades Ivy y de transcripción en la nube. Los planes de pago añaden transcripción en la nube ilimitada bajo uso razonable, más unidades Ivy y más almacenamiento.',
+        answer: 'En el Mac, todo: grabación, transcripción, notas, Ivy on this Mac y exportaciones, sin cuenta y sin límite de plan. Una cuenta gratuita añade notas, edición, búsqueda, sincronización, lectura y exportación en la nube desde el navegador dentro de 1 GB, además de una cuota mensual de unidades Ivy y de transcripción en la nube. Los planes de pago añaden más transcripción en la nube, más unidades Ivy y más almacenamiento. Con un uso intensivo, las grabaciones nuevas pueden pasar a una cola más lenta; los límites y las reglas de uso razonable figuran en los Términos del servicio.',
       },
       {
         question: '¿Mi audio va a la nube?',

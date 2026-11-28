@@ -200,7 +200,7 @@ tekstem w `i18n/content/*.ts` (zajmuje się tym inne zadanie).
 | `WhatsNew` | nagłówek po lewej (eyebrow, `h2`, lead) z przyciskiem ghost „All releases”; trzy karty-linki do changelogu (rodzaj wydania, data, wersja, streszczenie) | `/` |
 | `OfferContext` | `SectionHead` („Free to start” / „Turn meetings into answers.”) → trzy wyspy z ilustracją SVG nad tekstem (`illustrations/OfferLocal`, `OfferSync`, `OfferGrow`) → rząd CTA: Download free (primary + podpis „For Macs with Apple Silicon”), Open web app (outline), See plans (ghost) | `/` (pod `TrustStrip`), `/features` |
 | `CtaSection` | wyśrodkowana wyspa `.framed` (64/32 px): `h2`, lead, link „Compare the plans”, Download (primary `xl`) + Create a free account (outline), drobna notka o starych wersjach | koniec każdej strony |
-| `PricingSection` | `SectionHead` → trzy karty planów (Personal wyróżniony) → nota o uczciwym korzystaniu z linkiem do regulaminu → nota o VAT i minimum Team; prop `compact` kończy tu z linkiem do `/pricing#comparison`, pełny wariant dodaje tabelę porównania i wyspę „Plan details” z zastrzeżeniami. Bez liczb godzin transkrypcji: Free „miesięczny przydział”, płatne „bez limitu · uczciwe korzystanie” (przydział Free i zasady są tylko w regulaminie) | `/` (`compact`), `/pricing` |
+| `PricingSection` | `SectionHead` → trzy karty planów (Personal wyróżniony) → nota o uczciwym korzystaniu z linkiem do regulaminu → nota o VAT i minimum Team; prop `compact` kończy tu z linkiem do `/pricing#comparison`, pełny wariant dodaje tabelę porównania i wyspę „Plan details” z zastrzeżeniami. Bez liczb godzin transkrypcji: Free „miesięczny przydział”, płatne „w cenie · obowiązują limity” (wartości pul podaje regulamin i strona dokumentacji o planach) | `/` (`compact`), `/pricing` |
 | `FaqSection` | `SectionHead` + `UAccordion` (multiple) w wyspie, kolumna 780 px | `/pricing#faq` |
 | `PrivacySection` | `SectionHead` safe → siatka kart z kafelkiem ikony (zielony dla `safe`, karta `wide` na całą szerokość) → wyspa z tabelą dostawców (tagi zielony „no”/bursztynowy „yes”), zrzutem i przypisem | `/privacy` |
 | `FeatureList` / `FeatureRow` | naprzemienne wiersze: tekst (eyebrow, tytuł, opis, ptaszki) i zrzut w ramie; co drugi odwrócony | `/features` |
@@ -387,8 +387,8 @@ Na desktopie CTA wyrównać przez flex, bez stałej wysokości całej karty.
 | Plan | Cena i jednostka | Dla kogo EN / PL | Korzyści EN / PL (każda para to jeden punkt) | CTA EN / PL; linia zaufania |
 | --- | --- | --- | --- | --- |
 | Free | 0 PLN miesięcznie | Your first meeting notes. / Twoje pierwsze notatki ze spotkań. | Local Mac tools / Lokalne narzędzia na Macu; Cloud notes and sync / Notatki w chmurze i synchronizacja; 200,000 Ivy units per month / 200 000 jednostek Ivy miesięcznie; 1 GB cloud storage / 1 GB w chmurze | Download free / Pobierz za darmo; No card required / Bez karty płatniczej |
-| Personal | 49 PLN brutto miesięcznie | More room for your work. / Więcej miejsca na Twoją pracę. | Everything in Free / Wszystko z Free; Unlimited cloud transcription / Transkrypcja w chmurze bez limitu; 1,200,000 Ivy units per month / 1 200 000 jednostek Ivy miesięcznie; 20 GB cloud storage / 20 GB w chmurze | Choose Personal / Wybierz Personal; Cancel anytime / Anuluj w dowolnej chwili |
-| Team | 75 PLN netto za miejsce miesięcznie, od 2 miejsc | A shared space for your team. / Wspólna przestrzeń dla zespołu. | Shared notes and workspace / Wspólne notatki i przestrzeń zespołu; Unlimited cloud transcription / Transkrypcja w chmurze bez limitu; 2,500,000 Ivy units per seat per month / 2 500 000 jednostek Ivy na miejsce miesięcznie; 50 GB cloud storage per seat / 50 GB w chmurze na miejsce; Google Meet bot / Bot Google Meet | Choose Team / Wybierz Team; Manage your plan in the web app / Zarządzaj planem w aplikacji web |
+| Personal | 49 PLN brutto miesięcznie | More room for your work. / Więcej miejsca na Twoją pracę. | Everything in Free / Wszystko z Free; More cloud transcription / Więcej transkrypcji w chmurze; 1,200,000 Ivy units per month / 1 200 000 jednostek Ivy miesięcznie; 20 GB cloud storage / 20 GB w chmurze | Choose Personal / Wybierz Personal; Cancel anytime / Anuluj w dowolnej chwili |
+| Team | 75 PLN netto za miejsce miesięcznie, od 2 miejsc | A shared space for your team. / Wspólna przestrzeń dla zespołu. | Shared notes and workspace / Wspólne notatki i przestrzeń zespołu; Cloud transcription for every seat / Transkrypcja w chmurze dla każdego miejsca; 2,500,000 Ivy units per seat per month / 2 500 000 jednostek Ivy na miejsce miesięcznie; 50 GB cloud storage per seat / 50 GB w chmurze na miejsce; Google Meet bot / Bot Google Meet | Choose Team / Wybierz Team; Manage your plan in the web app / Zarządzaj planem w aplikacji web |
 
 Kwoty w tabeli są opisem aktualnego katalogu, nie wartościami do przepisania do tłumaczeń.
 W UI wszystkie ceny, Ivy, GB, minimum miejsc oraz łączny koszt minimum wyliczać z
@@ -396,7 +396,7 @@ W UI wszystkie ceny, Ivy, GB, minimum miejsc oraz łączny koszt minimum wylicza
 etykiety i placeholdery, bez drugiego źródła liczb w `points`. Zastąpić stare `pricing.plans.*.price`,
 nie używać ich do renderowania. Team: łączny budżet zawiera pulę automatyzacji; nie obiecywać
 2,5 mln jednostek interaktywnych. Szczegóły podziału zostawić pod porównaniem / w dokumentacji.
-Nie wyświetlać godzin ani przeliczać `asrMs`; komunikat bez limitu zachować zgodnie z briefem.
+Nie wyświetlać godzin ani przeliczać `asrMs`; nie pisać o transkrypcji „bez limitu” (tryb ekonomiczny też ma pułap).
 
 Pod kartami także na stronie głównej zachować zwięzłą informację: Personal zawiera VAT,
 Team od 2 miejsc — łącznie 150 PLN netto miesięcznie; podatki i końcowa cena w aplikacji przed zakupem.
@@ -407,15 +407,20 @@ na landingu ani ogólnej obietnicy 14 dni zwrotu bez potwierdzenia warunków dok
 
 Na `/pricing` bez drugiego `OfferContext`; pod tabelą porównania zwięzły blok „Plan details /
 Szczegóły planów”, a na `/privacy` odpowiadający blok przed cyklem życia danych.
-Treść EN: **Paid transcription has no plan limit; fair use applies and heavy use may take longer.
-Monthly cloud allowances renew by calendar month in UTC. Standard account cloud is not end-to-end
-encrypted: the operator can read stored and processed content. Pattern masking is not full
-anonymization. Local processing on your Mac stays on your Mac.**
-PL: **Płatna transkrypcja nie ma limitu planu; obowiązuje uczciwe użycie, a intensywne korzystanie
-może wydłużyć oczekiwanie. Miesięczne pule chmurowe odnawiają się według miesięcy kalendarzowych
-w UTC. Standardowa chmura konta nie jest szyfrowana end-to-end: operator może odczytać przechowywane
-i przetwarzane treści. Maskowanie wzorców nie jest pełną anonimizacją. Lokalne przetwarzanie na
-Macu pozostaje na Macu.**
+Treść EN: **The Free allowance renews at the start of each calendar month in UTC. Personal and Team
+allowances renew at the start of each billing period. A recording that does not fit in a paid plan’s
+remaining fast allowance may go to economy mode. If the economy mode allowance has no room left
+either, a new recording can be submitted for transcription after the allowance renews. The Terms of
+Service set out how use is counted and how large each allowance is. Standard account cloud is not
+end-to-end encrypted: the operator can read stored and processed content. Pattern masking is not
+full anonymization. Local processing on your Mac stays on your Mac.**
+PL: **Pula Free odnawia się z początkiem miesiąca kalendarzowego w UTC. W planach Personal i Team
+pule odnawiają się z początkiem okresu rozliczeniowego. Nagranie, które nie mieści się w pozostałej
+puli szybkiej planu płatnego, może trafić do trybu ekonomicznego. Jeśli zabraknie miejsca również
+w tej puli, nowe nagranie można zgłosić do transkrypcji po odnowieniu puli. Szczegóły naliczania
+i wartości pul podaje regulamin. Standardowa chmura konta nie jest szyfrowana end-to-end: operator
+może odczytać przechowywane i przetwarzane treści. Maskowanie wzorców nie jest pełną anonimizacją.
+Lokalne przetwarzanie na Macu pozostaje na Macu.**
 
 Linki: lokalizowany `/privacy`, istniejące `/docs/plans-and-billing/` (oznaczyć English),
 `https://app.index-one.io/legal/regulamin.html` (oznaczyć PL, jak w obecnym `AppFooter.vue`).
@@ -501,3 +506,8 @@ Krótko, co dodała implementacja specyfikacji wyżej; szczegóły w kodzie.
   („Monthly allowance”) są w brzmieniu z #78. Pod kartami, przed notą o VAT, stoi zdanie
   `offer.fairUse` z linkiem `offer.fairUseLink` do regulaminu (styl `.pricing__note`), na `/` i na
   `/pricing`: „bez limitu” zawsze z uczciwym korzystaniem, przydział Free tylko w regulaminie.
+- **Fakty o limitach i serwerach (2026-11-28)**: zastępuje zdanie wyżej. Strona nie pisze o
+  transkrypcji „bez limitu” ani nie obiecuje natychmiastowości; `offer.fairUse` mówi o wolniejszej
+  kolejce i limitach z regulaminu, klucz `asrUnlimited` to teraz `asrPaid`. Na `/privacy` blok
+  `privacy.hosting` stoi przed „Plan details”: lokalizacja serwerów i bazy zawsze w jednym akapicie
+  z informacją, że domyślna Ivy w chmurze może przetwarzać tekst poza EOG.

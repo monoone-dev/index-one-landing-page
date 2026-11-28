@@ -61,6 +61,10 @@ The space switcher at the top of the sidebar has **On this Mac**, **Personal** a
 
 Personal and every organization you belong to also keep an encrypted copy on this Mac, so they open without a network connection. Edits made offline are sent when you are back online. To take a recording out of its organization, choose **Move to On this Mac** in the meeting's menu; it then stays only on this Mac.
 
+### Where cloud spaces run
+
+We host IndexOne's servers and database in the European Union (AWS, Sweden). In the default cloud Ivy mode, the text needed for a task goes to Anthropic, which may process it outside the EEA. See the [Privacy Policy](https://app.index-one.io/legal/en/privacy-policy.html) for details.
+
 ### Cloud AI
 
 Each workspace has one AI setting in Settings › AI Models › AI in this workspace. **Ivy on this Mac**, and a Local AI server on this Mac, keep everything here. These choices send text off the Mac:

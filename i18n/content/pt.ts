@@ -19,7 +19,7 @@ const content: SiteContent = {
     pricing: {
       breadcrumb: 'Preços',
       title: 'Preços do IndexOne — Free, Personal e Team',
-      description: 'O IndexOne é gratuito no Mac. Planos na nuvem: Personal 49 PLN por mês, Team 75 PLN líquidos por lugar, ambos com transcrição na nuvem ilimitada sob uso razoável. Os planos na nuvem estão à venda no app web.',
+      description: 'O IndexOne é gratuito no Mac. Planos na nuvem: Personal 49 PLN por mês, Team 75 PLN líquidos por lugar, ambos com transcrição na nuvem sujeita a limites. Os planos na nuvem estão à venda no app web.',
     },
     changelog: {
       breadcrumb: 'Novidades',
@@ -179,6 +179,11 @@ const content: SiteContent = {
     seeAll: 'Ver todos os recursos',
   },
   privacy: {
+    hosting: {
+      title: 'Servidores e banco de dados',
+      body: 'Mantemos os servidores e o banco de dados do IndexOne na União Europeia (AWS, Suécia). No modo padrão da Ivy na nuvem, o texto necessário para a tarefa é enviado à Anthropic, que pode processá-lo fora do EEE. Os detalhes estão na política de privacidade.',
+      policyLink: 'Política de privacidade (em inglês)',
+    },
     lifecycle: {
       "title": "Ciclo de vida dos dados · planos na nuvem",
       "items": [
@@ -382,7 +387,7 @@ const content: SiteContent = {
       },
       grow: {
         title: "Mais espaço quando precisar",
-        body: "Os planos pagos adicionam transcrição na nuvem sem limite, mais Ivy e mais armazenamento. O Team adiciona um espaço compartilhado.",
+        body: "Os planos pagos adicionam mais transcrição na nuvem, mais Ivy e mais armazenamento. O Team adiciona um espaço compartilhado.",
       },
     },
     download: "Baixar grátis",
@@ -392,14 +397,14 @@ const content: SiteContent = {
     status: "Os planos na nuvem estão à venda. Entre no app web para comprar um plano ou gerenciar sua assinatura. Os recursos locais do Mac continuam disponíveis.",
     trialTitle: "Grátis todo mês",
     trial: "Cada conta gratuita recebe a cada mês civil (UTC) 200.000 unidades Ivy e uma cota de transcrição na nuvem, sem cartão. Os recursos locais do Mac não têm limite de plano.",
-    meterTitle: "Transcrição na nuvem ilimitada",
-    meter: "Os planos pagos não têm limite de transcrição na nuvem. Se você transcrever muito, algumas gravações podem levar algumas horas para ficar prontas. Aplica-se uso razoável. A transcrição no Mac é sempre imediata e ilimitada.",
-    fairUse: "Os planos pagos incluem transcrição na nuvem ilimitada sob uso razoável; a cota do Free e as regras de uso razoável estão nos Termos de serviço.",
+    meterTitle: "Transcrição na nuvem nos planos pagos",
+    meter: "Personal e Team incluem transcrição na nuvem. Com uso intenso, novas gravações podem entrar em uma fila mais lenta. Os limites e as regras de uso razoável estão nos Termos de serviço. A transcrição feita no seu Mac não está sujeita às cotas do plano.",
+    fairUse: "Personal e Team incluem transcrição na nuvem. Com uso intenso, novas gravações podem entrar em uma fila mais lenta. Os limites e as regras de uso razoável estão nos Termos de serviço. A transcrição feita no seu Mac não está sujeita às cotas do plano.",
     fairUseLink: "Leia os Termos de serviço (em polonês)",
     privacyTitle: "Local e nuvem",
     privacy: "O processamento local do Mac fica no Mac. A nuvem padrão armazena e processa conteúdo em servidores legíveis pelo operador, sem criptografia de ponta a ponta. Mascarar padrões não é anonimização completa. Um plano não concede acesso a espaços privados.",
     detailsTitle: "Detalhes dos planos",
-    details: "A transcrição paga não tem limite de plano; vale o uso justo e o uso intenso pode demorar mais. As cotas mensais na nuvem são renovadas por mês civil em UTC. A nuvem padrão da conta não tem criptografia de ponta a ponta: o operador pode ler o conteúdo armazenado e processado. O mascaramento de padrões não é anonimização completa. O processamento local no seu Mac fica no seu Mac. Planos pagos nunca dão acesso a espaços privados.",
+    details: "A cota do Free é renovada no início de cada mês civil (UTC). As cotas de Personal e Team são renovadas no início de cada período de cobrança. Uma gravação que não caiba na cota rápida restante de um plano pago pode ir para o modo econômico. Se também não houver mais espaço na cota do modo econômico, uma nova gravação pode ser enviada para transcrição depois que a cota for renovada. Os Termos de serviço detalham como o uso é contado e o tamanho das cotas. A nuvem padrão da conta não tem criptografia de ponta a ponta: o operador pode ler o conteúdo armazenado e processado. O mascaramento de padrões não é anonimização completa. O processamento local no seu Mac fica no seu Mac. Planos pagos nunca dão acesso a espaços privados.",
     more: "Mais detalhes de cobrança",
     after: "O Free inclui notas básicas, edição, pesquisa comum, sincronização, leitura e exportação até 1 GB, além da cota mensal na nuvem. Os planos pagos acrescentam mais IA, transcrição e armazenamento na nuvem.",
     team: "Personal e cada organização têm assinaturas e saldos separados. Team: 2,25 milhões de unidades Ivy interativas e 250.000 de automação por lugar; automações usam um fundo comum. Armazenamento compartilhado pela organização. Lugares não alteram permissões. Até 2 organizações gratuitas de 5 membros compartilham o armazenamento da conta fundadora.",
@@ -411,7 +416,7 @@ const content: SiteContent = {
     basics: "Notas e sincronização na nuvem no navegador",
     ivy: "Unidades Ivy na nuvem / mês",
     asr: "Transcrição na nuvem",
-    asrUnlimited: "Ilimitada · uso razoável",
+    asrPaid: "Incluída · com limites",
     asrBasic: "Cota mensal",
     storage: "Armazenamento na nuvem",
     gb: "GB",
@@ -428,7 +433,7 @@ const content: SiteContent = {
     recommended: "Recomendado",
     note: "O Personal inclui impostos. O Team começa em {seats} lugares: {total} líquidos por mês no total. Os impostos e o preço final aparecem no app web antes da compra.",
     compareLink: "Comparar todos os detalhes",
-    peek: { benefit: "Transcrição na nuvem sem limite", link: "Ver o plano Personal" },
+    peek: { benefit: "Mais transcrição na nuvem", link: "Ver o plano Personal" },
     plans: {
       free: {
         name: "Free",
@@ -449,7 +454,7 @@ const content: SiteContent = {
         period: "por mês, impostos incluídos",
         points: [
           "Tudo do Free",
-          "Transcrição na nuvem sem limite",
+          "Mais transcrição na nuvem",
           "{ivy} unidades Ivy por mês",
           "{storage} GB na nuvem",
         ],
@@ -462,7 +467,7 @@ const content: SiteContent = {
         period: "líquido por lugar ao mês, a partir de {seats} lugares",
         points: [
           "Notas e espaço de equipe compartilhados",
-          "Transcrição na nuvem sem limite",
+          "Transcrição na nuvem para cada lugar",
           "{ivy} unidades Ivy por lugar ao mês",
           "{storage} GB na nuvem por lugar",
           "Bot do Google Meet",
@@ -527,7 +532,7 @@ const content: SiteContent = {
     items: [
       {
         question: 'O que o Free inclui?',
-        answer: 'No Mac, tudo: gravação, transcrição, notas, Ivy on this Mac e exportações, sem conta e sem limite de plano. Uma conta gratuita adiciona notas, edição, busca, sincronização, leitura e exportação na nuvem pelo navegador até 1 GB, além de uma cota mensal de unidades Ivy e de transcrição na nuvem. Os planos pagos adicionam transcrição na nuvem ilimitada sob uso razoável, mais unidades Ivy e mais armazenamento.',
+        answer: 'No Mac, tudo: gravação, transcrição, notas, Ivy on this Mac e exportações, sem conta e sem limite de plano. Uma conta gratuita adiciona notas, edição, busca, sincronização, leitura e exportação na nuvem pelo navegador até 1 GB, além de uma cota mensal de unidades Ivy e de transcrição na nuvem. Os planos pagos adicionam mais transcrição na nuvem, mais unidades Ivy e mais armazenamento. Com uso intenso, novas gravações podem entrar em uma fila mais lenta; os limites e as regras de uso razoável estão nos Termos de serviço.',
       },
       {
         question: 'Meu áudio vai para a nuvem?',
